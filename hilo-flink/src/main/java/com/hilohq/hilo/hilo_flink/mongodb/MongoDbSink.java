@@ -39,12 +39,10 @@ public final class MongoDbSink<T> extends RichSinkFunction<T> {
 
   @Override
   public void open(final Configuration parameters) throws Exception {
-    System.out.println("ATTEMPT TO OPEN CONNECTION");
     final ConnectionString connString = new ConnectionString(mongoUrl);
     final MongoClientSettings settings =
         MongoClientSettings.builder().applyConnectionString(connString).retryWrites(true).build();
     mongo = MongoClients.create(settings);
-    System.out.println("CONNECTION CREATED");
   }
 
   @Override
@@ -54,10 +52,8 @@ public final class MongoDbSink<T> extends RichSinkFunction<T> {
 
   @Override
   public void invoke(final T input, final Context context) throws Exception {
-    System.out.println("SINK RECEIVED " + input);
     final var collectionName = collectionSupplier.supply(input);
     final var conn = mongo.getDatabase(database);
-//    conn.createCollection(collectionName);
 
     final var s = new String(schema.serialize(input), StandardCharsets.UTF_8);
     final var document = Document.parse(s);

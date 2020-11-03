@@ -1,39 +1,19 @@
 package com.hilohq.hilo.structure_learning.parsing.json.entity;
 
-import com.hilohq.hilo.protobufs.parsing.Json;
-import com.hilohq.hilo.structure_learning.parsing.json.JsonSchema;
+import com.hilohq.hilo.protobufs.schema.Json;
 
 public final class ProtobufMapper {
 
   private ProtobufMapper() {}
 
-  public static Json.JsonSchema toProtobuf(final JsonSchema schema) {
-    final var builder = Json.JsonSchema.newBuilder();
-    for (final var field : schema.fields()) {
-      builder.addFields(field);
-    }
-    return builder.build();
-  }
-
-  public static JsonSchema fromProtobuf(final Json.JsonSchema schema) {
-    final JsonSchema result = new JsonSchema();
-    for (final var field : schema.getFieldsList()) {
-      result.put(field);
-    }
-    return result;
-  }
-
   public static Json.JsonFieldStats toProtobuf(final JsonFieldStats field) {
     return Json.JsonFieldStats.newBuilder()
-        .setName(field.name())
-        .setPath(field.path())
         .setTypeHistogram(toProtobuf(field.typeHistogram()))
         .build();
   }
 
   public static JsonFieldStats fromProtobuf(final Json.JsonFieldStats field) {
-    return new JsonFieldStats(
-        field.getPath(), field.getName(), fromProtobuf(field.getTypeHistogram()));
+    return new JsonFieldStats(fromProtobuf(field.getTypeHistogram()));
   }
 
   public static Json.JsonTypeHistogram toProtobuf(final JsonTypeHistogram histogram) {

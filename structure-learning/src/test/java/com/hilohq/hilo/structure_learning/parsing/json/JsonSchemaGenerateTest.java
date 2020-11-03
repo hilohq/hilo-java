@@ -1,10 +1,10 @@
 package com.hilohq.hilo.structure_learning.parsing.json;
 
-import static com.hilohq.hilo.protobufs.parsing.Schema.*;
+import static com.hilohq.hilo.protobufs.schema.Schema.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import com.hilohq.hilo.protobufs.parsing.Json;
+import com.hilohq.hilo.protobufs.schema.Json;
 import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +15,8 @@ public final class JsonSchemaGenerateTest {
 
   private SchemaEvent eventWithFieldStats(final List<SchemaEvent> events, final String fieldName) {
     for (final var event : events) {
-      if (event.getData().hasFieldStats()
-          && event
-              .getData()
-              .getFieldStats()
-              .getFieldStats()
-              .getJson()
-              .getName()
-              .equals(fieldName)) {
+      if (event.getJson().hasFieldStats()
+          && event.getJson().getFieldStats().getName().equals(fieldName)) {
         return event;
       }
     }
@@ -30,19 +24,13 @@ public final class JsonSchemaGenerateTest {
     throw new IllegalArgumentException("no event with field create");
   }
 
-  private static SchemaEventData createSchemaEventData(
+  private static Json.JsonSchemaEvent createJsonEvent(
       final String name, final Json.JsonTypeHistogram histogram) {
-    return SchemaEventData.newBuilder()
+    return Json.JsonSchemaEvent.newBuilder()
         .setFieldStats(
-            SchemaEventData.SchemaEventFieldStats.newBuilder()
-                .setFieldStats(
-                    SchemaFieldStats.newBuilder()
-                        .setJson(
-                            Json.JsonFieldStats.newBuilder()
-                                .setName(name)
-                                .setTypeHistogram(histogram)
-                                .build())
-                        .build())
+            Json.JsonSchemaEvent.FieldStats.newBuilder()
+                .setName(name)
+                .setFieldStats(Json.JsonFieldStats.newBuilder().setTypeHistogram(histogram).build())
                 .build())
         .build();
   }
@@ -60,20 +48,21 @@ public final class JsonSchemaGenerateTest {
 
     assertEquals(3, events.size());
     assertEquals(
-        eventWithFieldStats(events, "integer").getData(),
-        createSchemaEventData(
-            "integer", Json.JsonTypeHistogram.newBuilder().setIntegerCount(2).build()));
+        eventWithFieldStats(events, "integer").getJson(),
+        createJsonEvent("integer", Json.JsonTypeHistogram.newBuilder().setIntegerCount(2).build()));
     assertEquals(
-        eventWithFieldStats(events, "string").getData(),
-        createSchemaEventData(
-            "string", Json.JsonTypeHistogram.newBuilder().setStringCount(2).build()));
+        eventWithFieldStats(events, "string").getJson(),
+        createJsonEvent("string", Json.JsonTypeHistogram.newBuilder().setStringCount(2).build()));
     assertEquals(
-        events.get(2).getData(),
-        SchemaEventData.newBuilder()
+        events.get(2).getJson(),
+        Json.JsonSchemaEvent.newBuilder()
             .setParseStats(
-                SchemaEventData.SchemaEventParseStats.newBuilder()
-                    .setParseAttemptCount(2)
-                    .setParseSuccessCount(2)
+                Json.JsonSchemaEvent.ParseStats.newBuilder()
+                    .addStats(
+                        Json.JsonParseStats.newBuilder()
+                            .setParseAttemptCount(2)
+                            .setParseSuccessCount(2)
+                            .build())
                     .build())
             .build());
   }
@@ -89,13 +78,13 @@ public final class JsonSchemaGenerateTest {
 
     assertEquals(2, events.size());
     assertEquals(
-        events.get(0).getData().getParseErrors().getParseErrors(0).getContent(), "not a json");
+        events.get(0).getJson().getParseErrors().getParseErrors(0).getContent(), "not a json");
     assertEquals(
-        events.get(0).getData().getParseErrors().getParseErrors(0).getReason(), "Invalid JSON");
+        events.get(0).getJson().getParseErrors().getParseErrors(0).getReason(), "Invalid JSON");
     assertTrue(
         events
             .get(0)
-            .getData()
+            .getJson()
             .getParseErrors()
             .getParseErrors(0)
             .getDescription()
@@ -119,21 +108,23 @@ public final class JsonSchemaGenerateTest {
     assertEquals(3, events.size());
 
     assertEquals(
-        eventWithFieldStats(events, "integer").getData(),
-        createSchemaEventData(
+        eventWithFieldStats(events, "integer").getJson(),
+        createJsonEvent(
             "integer",
             Json.JsonTypeHistogram.newBuilder().setIntegerCount(2).setBooleanCount(2).build()));
     assertEquals(
-        eventWithFieldStats(events, "string").getData(),
-        createSchemaEventData(
-            "string", Json.JsonTypeHistogram.newBuilder().setStringCount(4).build()));
+        eventWithFieldStats(events, "string").getJson(),
+        createJsonEvent("string", Json.JsonTypeHistogram.newBuilder().setStringCount(4).build()));
     assertEquals(
-        events.get(2).getData(),
-        SchemaEventData.newBuilder()
+        events.get(2).getJson(),
+        Json.JsonSchemaEvent.newBuilder()
             .setParseStats(
-                SchemaEventData.SchemaEventParseStats.newBuilder()
-                    .setParseAttemptCount(4)
-                    .setParseSuccessCount(4)
+                Json.JsonSchemaEvent.ParseStats.newBuilder()
+                    .addStats(
+                        Json.JsonParseStats.newBuilder()
+                            .setParseAttemptCount(4)
+                            .setParseSuccessCount(4)
+                            .build())
                     .build())
             .build());
   }

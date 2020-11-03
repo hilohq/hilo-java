@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package hilo.protobufs.schema;
+
+option java_package = "com.hilohq.hilo.protobufs.schema";
+
+import "com/hilohq/hilo/protobufs/schema/json.proto";
+
+message SchemaMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message SchemaEvent {
+  SchemaMetadata metadata = 1;
+
+  oneof update {
+    JsonSchemaEvent json = 16;
+  }
+}
+
+message SchemaUpdate {
+  SchemaMetadata metadata = 1;
+
+  oneof update {
+    JsonSchemaUpdate json = 16;
+  }
+}
+
+message SchemaModel {
+  SchemaMetadata metadata = 1;
+
+  oneof schema {
+    JsonSchemaModel json = 16;
+  }
+}
+
+message SchemaFieldLogsModel {
+  SchemaMetadata metadata = 1;
+  oneof logs {
+    JsonLogsModel json = 16;
+  }
+}
+
+message SchemaParseErrorsModel {
+  SchemaMetadata metadata = 1;
+  oneof logs {
+    JsonParseErrorsModel json = 16;
+  }
+}

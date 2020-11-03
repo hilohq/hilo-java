@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 public final class JsonUtils {
   private JsonUtils() {}
 
-  public static String fieldFullName(final String path, final String name) {
+  public static String fullname(final String path, final String name) {
     if (StringUtils.isEmpty(path)) {
       return name;
 

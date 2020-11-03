@@ -1,25 +1,27 @@
 package com.hilohq.hilo.structure_learning.parsing.json;
 
-import com.hilohq.hilo.protobufs.parsing.Json;
-import com.hilohq.hilo.protobufs.parsing.Schema;
+import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.fullname;
+
+import com.hilohq.hilo.protobufs.schema.Json;
+import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent;
+import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel;
+import com.hilohq.hilo.protobufs.schema.Schema;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
-import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonSchemaStats;
+import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonParseStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.ProtobufMapper;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
+import java.util.*;
+
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 
 public final class JsonSchemaFieldsAggregator
     extends ProcessFunction<Schema.SchemaEvent, Schema.SchemaUpdate> {
 
-  private final JsonSchemaStats schemaStats;
-  private final JsonSchema schema;
+  private final Map<String, Json.JsonFieldModel> fields;
 
   public JsonSchemaFieldsAggregator() {
-    this.schemaStats = new JsonSchemaStats();
-    this.schema = new JsonSchema();
+    this.fields = new HashMap<>();
   }
 
   private static Json.JsonType calculateType(final JsonFieldStats stats) {
@@ -35,66 +37,80 @@ public final class JsonSchemaFieldsAggregator
     return maxType;
   }
 
-  private List<Schema.SchemaUpdateData> createNewField(final Json.JsonFieldStats stats) {
+  private List<Json.JsonSchemaUpdate> createNewField(final JsonSchemaEvent.FieldStats stats) {
     final var path = stats.getPath();
     final var name = stats.getName();
-    schemaStats.put(ProtobufMapper.fromProtobuf(stats));
-    final var type = calculateType(schemaStats.get(path, name));
-    schema.put(path, name, type);
-    final var field = schema.get(path, name);
+    final var key = fullname(path, name);
+    final var type = calculateType(ProtobufMapper.fromProtobuf(stats.getFieldStats()));
+    final var field = Json.JsonField.newBuilder().setPath(path).setName(name).setType(type).build();
+    fields.put(key, Json.JsonFieldModel.newBuilder()
+            .setStats(stats.getFieldStats())
+            .setField(field)
+            .build());
+
+    final var fieldModel =
+        Json.JsonFieldModel.newBuilder().setField(field).setStats(stats.getFieldStats()).build();
 
     return Arrays.asList(
-        Schema.SchemaUpdateData.newBuilder()
-            .setFields(
-                Schema.SchemaFields.newBuilder()
-                    .setJson(Json.JsonSchema.newBuilder().addFields(field).build()))
-            .build(),
-        Schema.SchemaUpdateData.newBuilder()
-            .setParseUpdates(
-                Schema.SchemaParseUpdates.newBuilder()
-                    .setFieldCreate(
-                        Schema.SchemaParseUpdates.SchemaFieldCreate.newBuilder()
-                            .setField(Schema.SchemaField.newBuilder().setJson(field).build())
+        Json.JsonSchemaUpdate.newBuilder()
+            .setFieldLogs(
+                Json.JsonSchemaUpdate.FieldLogs.newBuilder()
+                    .setFieldLogs(
+                        Json.JsonLogsModel.newBuilder()
+                            .setFieldCreate(
+                                Json.JsonFieldCreateModel.newBuilder().setField(field).build())
                             .build())
+                    .build())
+            .build(),
+        Json.JsonSchemaUpdate.newBuilder()
+            .setSchemaUpdate(
+                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
+                    .setSchema(JsonSchemaModel.newBuilder().putFields(key, fieldModel))
                     .build())
             .build());
   }
 
-  private List<Schema.SchemaUpdateData> updateExistingField(final Json.JsonFieldStats stats) {
+  private List<Json.JsonSchemaUpdate> updateExistingField(final JsonSchemaEvent.FieldStats stats) {
     final var path = stats.getPath();
     final var name = stats.getName();
-    final var oldType = schema.get(path, name).getType();
-    schemaStats.put(ProtobufMapper.fromProtobuf(stats));
-    final var newType = calculateType(schemaStats.get(path, name));
-    if (oldType == newType) {
-      return Collections.emptyList();
+    final var key = fullname(path, name);
+    final var oldField = fields.get(key);
+    final var newType = calculateType(ProtobufMapper.fromProtobuf(stats.getFieldStats()));
+    final var updates = new ArrayList<Json.JsonSchemaUpdate>();
+    final var newField =
+        oldField.toBuilder().setField(oldField.getField().toBuilder().setType(newType)).build();
+    fields.put(key, newField);
+
+    if (oldField.getField().getType() != newType) {
+      updates.add(
+          Json.JsonSchemaUpdate.newBuilder()
+              .setFieldLogs(
+                  Json.JsonSchemaUpdate.FieldLogs.newBuilder()
+                      .setFieldLogs(
+                          Json.JsonLogsModel.newBuilder()
+                              .setFieldUpdate(
+                                  Json.JsonFieldUpdateModel.newBuilder()
+                                      .setFieldOld(oldField.getField())
+                                      .setFieldNew(newField.getField())
+                                      .build())
+                              .build())
+                      .build())
+              .build());
     }
 
-    final var oldField = schema.get(path, name);
-    final var newField = oldField.toBuilder().setType(newType).build();
-    schema.put(newField);
-
-    return Arrays.asList(
-        Schema.SchemaUpdateData.newBuilder()
-            .setFields(
-                Schema.SchemaFields.newBuilder()
-                    .setJson(Json.JsonSchema.newBuilder().addFields(newField).build()))
-            .build(),
-        Schema.SchemaUpdateData.newBuilder()
-            .setParseUpdates(
-                Schema.SchemaParseUpdates.newBuilder()
-                    .setFieldUpdate(
-                        Schema.SchemaParseUpdates.SchemaFieldUpdate.newBuilder()
-                            .setPreviousField(
-                                Schema.SchemaField.newBuilder().setJson(oldField).build())
-                            .setNextField(Schema.SchemaField.newBuilder().setJson(newField).build())
-                            .build())
+    updates.add(
+        Json.JsonSchemaUpdate.newBuilder()
+            .setSchemaUpdate(
+                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
+                    .setSchema(JsonSchemaModel.newBuilder().putFields(key, newField))
                     .build())
             .build());
+    return updates;
   }
 
-  private List<Schema.SchemaUpdateData> processField(final Json.JsonFieldStats stats) {
-    if (schema.containsKey(stats.getPath(), stats.getName())) {
+  private List<Json.JsonSchemaUpdate> processField(final JsonSchemaEvent.FieldStats stats) {
+    final var key = fullname(stats.getPath(), stats.getName());
+    if (fields.containsKey(key)) {
       return updateExistingField(stats);
     } else {
       return createNewField(stats);
@@ -105,19 +121,19 @@ public final class JsonSchemaFieldsAggregator
   public void processElement(
       final Schema.SchemaEvent event, final Context ctx, final Collector<Schema.SchemaUpdate> out)
       throws Exception {
-    if (!event.getData().hasFieldStats()
-        || !event.getData().getFieldStats().getFieldStats().hasJson()) {
+    System.out.println("RECEIVED " + event);
+    if (!event.hasJson()) {
       return;
     }
 
-    System.out.println("RECEIVED EVENT " + event);
-    final var stats = event.getData().getFieldStats().getFieldStats().getJson();
+    final var stats = event.getJson().getFieldStats();
     final var updates = processField(stats);
     for (final var update : updates) {
+      System.out.println("SERIALIZE " + updates);
       out.collect(
           Schema.SchemaUpdate.newBuilder()
               .setMetadata(event.getMetadata())
-              //.setData(update)
+              .setJson(update)
               .build());
     }
   }

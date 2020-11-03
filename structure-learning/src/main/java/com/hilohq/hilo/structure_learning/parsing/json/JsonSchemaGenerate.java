@@ -1,15 +1,18 @@
 package com.hilohq.hilo.structure_learning.parsing.json;
 
-import static com.hilohq.hilo.protobufs.parsing.Schema.*;
-import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.fieldFullName;
+import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.fullname;
 
-import com.hilohq.hilo.protobufs.parsing.Json;
+import com.hilohq.hilo.protobufs.schema.Json;
+import com.hilohq.hilo.protobufs.schema.Schema;
+import com.hilohq.hilo.protobufs.schema.Schema.SchemaEvent;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonParseStats;
-import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonSchemaStats;
+import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonPropertyPath;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.ProtobufMapper;
 import com.hilohq.hilo.structure_learning.parsing.schema.SchemaGenerate;
 import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import org.apache.flink.shaded.jackson2.com.fasterxml.jackson.core.JsonProcessingException;
 import org.apache.flink.shaded.jackson2.com.fasterxml.jackson.databind.JsonNode;
@@ -17,32 +20,41 @@ import org.apache.flink.shaded.jackson2.com.fasterxml.jackson.databind.ObjectMap
 import org.apache.flink.util.Collector;
 
 public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
-  private final String projectId;
-  private final String sourceId;
-  private final String schemaId;
   private final ObjectMapper jsonMapper;
+  private final Schema.SchemaMetadata metadata;
 
   public JsonSchemaGenerate() {
     this(UUID.randomUUID().toString(), UUID.randomUUID().toString());
   }
 
   public JsonSchemaGenerate(final String projectId, final String sourceId) {
-    this.projectId = projectId;
-    this.sourceId = sourceId;
-    this.schemaId = UUID.randomUUID().toString();
     this.jsonMapper = new ObjectMapper();
+    this.metadata =
+        Schema.SchemaMetadata.newBuilder()
+            .setProjectId(projectId)
+            .setSourceId(sourceId)
+            .setSchemaId(UUID.randomUUID().toString())
+            .build();
   }
 
   private static void updateNodeType(
       final String path,
       final String name,
       final Json.JsonType type,
-      final JsonSchemaStats schema) {
-    schema.put(path, name, type);
+      final Map<JsonPropertyPath, JsonFieldStats> schema) {
+    final var key = new JsonPropertyPath(path, name);
+    if (!schema.containsKey(key)) {
+      schema.put(key, new JsonFieldStats());
+    }
+
+    schema.get(key).observe(type);
   }
 
   private static void updateSchemaValueNode(
-      final String path, final String name, final JsonNode node, final JsonSchemaStats schema) {
+      final String path,
+      final String name,
+      final JsonNode node,
+      final Map<JsonPropertyPath, JsonFieldStats> schema) {
     if (!node.isValueNode()) {
       throw new IllegalArgumentException("expected value node");
     }
@@ -68,7 +80,10 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
   }
 
   private static void updateSchemaObjectNode(
-      final String path, final String name, final JsonNode node, final JsonSchemaStats schema) {
+      final String path,
+      final String name,
+      final JsonNode node,
+      final Map<JsonPropertyPath, JsonFieldStats> schema) {
     if (!node.isObject()) {
       throw new IllegalArgumentException("expected object node");
     }
@@ -76,17 +91,23 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
     final var fieldEntriesIt = node.fields();
     while (fieldEntriesIt.hasNext()) {
       final var fieldEntry = fieldEntriesIt.next();
-      updateSchema(fieldFullName(path, name), fieldEntry.getKey(), fieldEntry.getValue(), schema);
+      updateSchema(fullname(path, name), fieldEntry.getKey(), fieldEntry.getValue(), schema);
     }
   }
 
   private static void updateSchemaArrayNode(
-      final String path, final String name, final JsonNode node, final JsonSchemaStats schema) {
+      final String path,
+      final String name,
+      final JsonNode node,
+      final Map<JsonPropertyPath, JsonFieldStats> schema) {
     updateNodeType(path, name, Json.JsonType.ARRAY, schema);
   }
 
   private static void updateSchema(
-      final String path, final String name, final JsonNode node, final JsonSchemaStats schema) {
+      final String path,
+      final String name,
+      final JsonNode node,
+      final Map<JsonPropertyPath, JsonFieldStats> schema) {
     if (!node.isContainerNode()) {
       updateSchemaValueNode(path, name, node, schema);
 
@@ -101,47 +122,50 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
     }
   }
 
-  private static void updateSchema(final JsonNode node, final JsonSchemaStats schema) {
+  private static void updateSchema(
+      final JsonNode node, final Map<JsonPropertyPath, JsonFieldStats> schema) {
     updateSchema("", "", node, schema);
   }
 
-  private SchemaEvent fieldUpdateEvent(final JsonFieldStats field) {
-    final var fieldBuilder =
-        SchemaFieldStats.newBuilder().setJson(ProtobufMapper.toProtobuf(field));
-    final var statsBuilder =
-        SchemaEventData.SchemaEventFieldStats.newBuilder().setFieldStats(fieldBuilder);
-    return SchemaEvent.newBuilder()
-        .setData(SchemaEventData.newBuilder().setFieldStats(statsBuilder).build())
-        .setMetadata(
-            SchemaMetadata.newBuilder()
-                .setProjectId(projectId)
-                .setSchemaId(schemaId)
-                .setSourceId(sourceId)
-                .build())
-        .build();
+  private SchemaEvent fieldUpdateEvent(
+      final String path, final String name, final JsonFieldStats field) {
+    final var jsonStats =
+        Json.JsonSchemaEvent.FieldStats.newBuilder()
+            .setFieldStats(ProtobufMapper.toProtobuf(field))
+            .setName(name)
+            .setPath(path)
+            .build();
+    final var jsonEvent = Json.JsonSchemaEvent.newBuilder().setFieldStats(jsonStats).build();
+    return SchemaEvent.newBuilder().setJson(jsonEvent).setMetadata(metadata).build();
   }
 
   private SchemaEvent parseErrorEvent(
       final String content, final String reason, final String description) {
-    final var errorsBuilder =
-        SchemaEventData.SchemaEventParseErrors.newBuilder()
+    final var parseErrors =
+        Json.JsonSchemaEvent.ParseErrors.newBuilder()
             .addParseErrors(
-                SchemaParseError.newBuilder()
+                Json.JsonParseError.newBuilder()
                     .setContent(content)
                     .setReason(reason)
                     .setDescription(description)
                     .build())
             .build();
+    final var jsonEvent = Json.JsonSchemaEvent.newBuilder().setParseErrors(parseErrors).build();
+    return SchemaEvent.newBuilder().setJson(jsonEvent).setMetadata(metadata).build();
+  }
 
-    return SchemaEvent.newBuilder()
-        .setData(SchemaEventData.newBuilder().setParseErrors(errorsBuilder).build())
-        .setMetadata(
-            SchemaMetadata.newBuilder()
-                .setProjectId(projectId)
-                .setSchemaId(schemaId)
-                .setSourceId(sourceId)
-                .build())
-        .build();
+  private SchemaEvent parseStatsEvent(final JsonParseStats stats) {
+    final var parseStats =
+        Json.JsonSchemaEvent.ParseStats.newBuilder()
+            .addStats(
+                Json.JsonParseStats.newBuilder()
+                    .setParseAttemptCount(stats.parseAttemptCount())
+                    .setParseErrorCount(stats.parseErrorCount())
+                    .setParseSuccessCount(stats.parseSuccessCount())
+                    .build())
+            .build();
+    final var jsonEvent = Json.JsonSchemaEvent.newBuilder().setParseStats(parseStats).build();
+    return SchemaEvent.newBuilder().setJson(jsonEvent).setMetadata(metadata).build();
   }
 
   @Override
@@ -149,7 +173,7 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
       final TextLineBatch batch, final Context ctx, final Collector<SchemaEvent> out)
       throws Exception {
     final JsonParseStats parseStats = new JsonParseStats();
-    final JsonSchemaStats schemaStats = new JsonSchemaStats();
+    final var schemaStats = new HashMap<JsonPropertyPath, JsonFieldStats>();
     for (final var line : batch.lines()) {
       try {
         parseStats.incrParseAttemptCount();
@@ -163,26 +187,13 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
       }
     }
 
-    for (final var field : schemaStats.fields().values()) {
-      out.collect(fieldUpdateEvent(field));
+    for (final var fieldEntry : schemaStats.entrySet()) {
+      final var event =
+          fieldUpdateEvent(
+              fieldEntry.getKey().path(), fieldEntry.getKey().name(), fieldEntry.getValue());
+      out.collect(event);
     }
 
-    out.collect(
-        SchemaEvent.newBuilder()
-            .setData(
-                SchemaEventData.newBuilder()
-                    .setParseStats(
-                        SchemaEventData.SchemaEventParseStats.newBuilder()
-                            .setParseAttemptCount(parseStats.parseAttemptCount())
-                            .setParseErrorCount(parseStats.parseErrorCount())
-                            .setParseSuccessCount(parseStats.parseSuccessCount())
-                            .build()))
-            .setMetadata(
-                SchemaMetadata.newBuilder()
-                    .setProjectId(projectId)
-                    .setSchemaId(schemaId)
-                    .setSourceId(sourceId)
-                    .build())
-            .build());
+    out.collect(parseStatsEvent(parseStats));
   }
 }
