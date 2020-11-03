@@ -1,0 +1,6 @@
+rootProject.name = 'hilo'
+
+include 'protobufs'
+include 'hilo-flink'
+include 'structure-learning'
+include 'structure-learning-integration-tests'

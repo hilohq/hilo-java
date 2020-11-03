@@ -1,0 +1,32 @@
+plugins {
+    id 'com.google.protobuf' version '0.8.12'
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.12.1'
+    }
+
+    generateProtoTasks {
+        all()*.plugins {}
+    }
+
+    generatedFilesBaseDir = "$projectDir/src"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir("src/main/java")
+            srcDir("src/main/grpc")
+        }
+    }
+}
+
+dependencies {
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.12.1'
+    compile 'io.grpc:grpc-netty-shaded:1.31.1'
+    compile 'io.grpc:grpc-protobuf:1.31.1'
+    compile 'io.grpc:grpc-stub:1.31.1'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
+}
