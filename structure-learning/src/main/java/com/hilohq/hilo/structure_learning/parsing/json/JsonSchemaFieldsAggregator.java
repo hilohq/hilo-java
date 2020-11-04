@@ -7,9 +7,7 @@ import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent;
 import com.hilohq.hilo.protobufs.schema.Schema;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.ProtobufMapper;
-
 import java.util.*;
-
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 
@@ -41,10 +39,9 @@ public final class JsonSchemaFieldsAggregator
     final var key = fullname(path, name);
     final var type = calculateType(ProtobufMapper.fromProtobuf(stats.getFieldStats()));
     final var field = Json.JsonField.newBuilder().setPath(path).setName(name).setType(type).build();
-    fields.put(key, Json.JsonFieldModel.newBuilder()
-            .setStats(stats.getFieldStats())
-            .setField(field)
-            .build());
+    fields.put(
+        key,
+        Json.JsonFieldModel.newBuilder().setStats(stats.getFieldStats()).setField(field).build());
 
     final var fieldModel =
         Json.JsonFieldModel.newBuilder().setField(field).setStats(stats.getFieldStats()).build();
@@ -62,9 +59,7 @@ public final class JsonSchemaFieldsAggregator
             .build(),
         Json.JsonSchemaUpdate.newBuilder()
             .setSchemaUpdate(
-                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
-                        .addFields(fieldModel)
-                    .build())
+                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder().addFields(fieldModel).build())
             .build());
   }
 
@@ -96,11 +91,11 @@ public final class JsonSchemaFieldsAggregator
               .build());
     }
 
-    final var update = Json.JsonSchemaUpdate.newBuilder()
+    final var update =
+        Json.JsonSchemaUpdate.newBuilder()
             .setSchemaUpdate(
-                    Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
-                            .addFields(newField)
-                            .build()).build();
+                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder().addFields(newField).build())
+            .build();
     updates.add(update);
     return updates;
   }
@@ -120,20 +115,23 @@ public final class JsonSchemaFieldsAggregator
       return processField(stats);
 
     } else if (event.hasParseErrors()) {
-      final var errors = Json.JsonParseErrorsModel.newBuilder()
-              .addAllParseErrors(event.getParseErrors().getParseErrorsList()).build();
-      return Collections.singletonList(Json.JsonSchemaUpdate.newBuilder()
+      final var errors =
+          Json.JsonParseErrorsModel.newBuilder()
+              .addAllParseErrors(event.getParseErrors().getParseErrorsList())
+              .build();
+      return Collections.singletonList(
+          Json.JsonSchemaUpdate.newBuilder()
               .setParseErrors(
-                      Json.JsonSchemaUpdate.ParseErrors.newBuilder()
-                      .setParseErrors(errors).build())
+                  Json.JsonSchemaUpdate.ParseErrors.newBuilder().setParseErrors(errors).build())
               .build());
 
     } else if (event.hasParseStats()) {
-      final var stats = Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
-              .setStats(event.getParseStats().getStats()).build();
-      return Collections.singletonList(Json.JsonSchemaUpdate.newBuilder()
-              .setSchemaUpdate(stats)
-              .build());
+      final var stats =
+          Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
+              .setStats(event.getParseStats().getStats())
+              .build();
+      return Collections.singletonList(
+          Json.JsonSchemaUpdate.newBuilder().setSchemaUpdate(stats).build());
 
     } else {
       return Collections.emptyList();

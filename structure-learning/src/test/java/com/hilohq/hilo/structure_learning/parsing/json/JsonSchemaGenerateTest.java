@@ -58,7 +58,7 @@ public final class JsonSchemaGenerateTest {
         Json.JsonSchemaEvent.newBuilder()
             .setParseStats(
                 Json.JsonSchemaEvent.ParseStats.newBuilder()
-                        .setStats(
+                    .setStats(
                         Json.JsonParseStats.newBuilder()
                             .setParseAttemptCount(2)
                             .setParseSuccessCount(2)

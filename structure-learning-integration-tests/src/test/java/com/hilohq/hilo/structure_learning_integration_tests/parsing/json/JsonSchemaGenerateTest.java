@@ -1,13 +1,6 @@
 package com.hilohq.hilo.structure_learning_integration_tests.parsing.json;
 
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.Serializer;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
-import com.esotericsoftware.kryo.util.DefaultInstantiatorStrategy;
-import com.google.protobuf.UnknownFieldSet;
-import com.hilohq.hilo.hilo_flink.mongodb.MongoDbSink;
-import com.hilohq.hilo.protobufs.schema.Json;
+import com.hilohq.hilo.connector.flink.mongodb.MongoSink;
 import com.hilohq.hilo.protobufs.schema.Schema;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaFieldsAggregator;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaGenerate;
@@ -15,18 +8,15 @@ import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
 import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.*;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
 import de.javakaffee.kryoserializers.protobuf.ProtobufSerializer;
+import java.util.Collections;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 import org.junit.Test;
-import org.objenesis.strategy.StdInstantiatorStrategy;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
-import java.util.TreeMap;
-import java.util.concurrent.TimeUnit;
 
 public final class JsonSchemaGenerateTest {
 
@@ -41,12 +31,10 @@ public final class JsonSchemaGenerateTest {
         executionEnvironment.addSource(new TextLineBatchSource(batches)).name("source");
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");
     executionEnvironment
-            .getConfig()
-            .addDefaultKryoSerializer(unmodColl, UnmodifiableCollectionsSerializer.class);
+        .getConfig()
+        .addDefaultKryoSerializer(unmodColl, UnmodifiableCollectionsSerializer.class);
     final Class<?> type = Class.forName("com.google.protobuf.MapEntry");
-    executionEnvironment
-            .getConfig()
-            .registerTypeWithKryoSerializer(type, ProtobufSerializer.class);
+    executionEnvironment.getConfig().registerTypeWithKryoSerializer(type, ProtobufSerializer.class);
 
     final var producer =
         new FlinkKafkaProducer<Schema.SchemaEvent>(
@@ -81,12 +69,10 @@ public final class JsonSchemaGenerateTest {
     final var events = executionEnvironment.addSource(consumer);
     final var updates = events.process(new JsonSchemaFieldsAggregator());
     final var sink =
-        new MongoDbSink<>(
+        new MongoSink<>(
             "mongodb://root:example@mongodb:27017/admin",
-                new JsonSchemaUpdateQueryGenerator(),
             "test",
-            new JsonSchemaCollectionSupplier(),
-                new JsonSchemaUpdateFilterSupplier());
+            new JsonSchemaUpdateCommandGenerator());
     updates.addSink(sink);
 
     final var client = executionEnvironment.executeAsync("UpdateLoading");
@@ -103,5 +89,4 @@ public final class JsonSchemaGenerateTest {
                 "{\"integer\": 2, \"string\": \"bye\"}")));
     storeSchema();
   }
-
 }
