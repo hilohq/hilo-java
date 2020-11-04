@@ -4,10 +4,8 @@ import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.f
 
 import com.hilohq.hilo.protobufs.schema.Json;
 import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent;
-import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel;
 import com.hilohq.hilo.protobufs.schema.Schema;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
-import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonParseStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.ProtobufMapper;
 
 import java.util.*;
@@ -65,7 +63,7 @@ public final class JsonSchemaFieldsAggregator
         Json.JsonSchemaUpdate.newBuilder()
             .setSchemaUpdate(
                 Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
-                    .setSchema(JsonSchemaModel.newBuilder().putFields(key, fieldModel))
+                        .addFields(fieldModel)
                     .build())
             .build());
   }
@@ -98,13 +96,12 @@ public final class JsonSchemaFieldsAggregator
               .build());
     }
 
-    updates.add(
-        Json.JsonSchemaUpdate.newBuilder()
+    final var update = Json.JsonSchemaUpdate.newBuilder()
             .setSchemaUpdate(
-                Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
-                    .setSchema(JsonSchemaModel.newBuilder().putFields(key, newField))
-                    .build())
-            .build());
+                    Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
+                            .addFields(newField)
+                            .build()).build();
+    updates.add(update);
     return updates;
   }
 
@@ -117,6 +114,32 @@ public final class JsonSchemaFieldsAggregator
     }
   }
 
+  private List<Json.JsonSchemaUpdate> processEvent(final JsonSchemaEvent event) {
+    if (event.hasFieldStats()) {
+      final var stats = event.getFieldStats();
+      return processField(stats);
+
+    } else if (event.hasParseErrors()) {
+      final var errors = Json.JsonParseErrorsModel.newBuilder()
+              .addAllParseErrors(event.getParseErrors().getParseErrorsList()).build();
+      return Collections.singletonList(Json.JsonSchemaUpdate.newBuilder()
+              .setParseErrors(
+                      Json.JsonSchemaUpdate.ParseErrors.newBuilder()
+                      .setParseErrors(errors).build())
+              .build());
+
+    } else if (event.hasParseStats()) {
+      final var stats = Json.JsonSchemaUpdate.SchemaUpdate.newBuilder()
+              .setStats(event.getParseStats().getStats()).build();
+      return Collections.singletonList(Json.JsonSchemaUpdate.newBuilder()
+              .setSchemaUpdate(stats)
+              .build());
+
+    } else {
+      return Collections.emptyList();
+    }
+  }
+
   @Override
   public void processElement(
       final Schema.SchemaEvent event, final Context ctx, final Collector<Schema.SchemaUpdate> out)
@@ -126,10 +149,9 @@ public final class JsonSchemaFieldsAggregator
       return;
     }
 
-    final var stats = event.getJson().getFieldStats();
-    final var updates = processField(stats);
+    final var updates = processEvent(event.getJson());
     for (final var update : updates) {
-      System.out.println("SERIALIZE " + updates);
+      System.out.println("SERIALIZE " + update);
       out.collect(
           Schema.SchemaUpdate.newBuilder()
               .setMetadata(event.getMetadata())

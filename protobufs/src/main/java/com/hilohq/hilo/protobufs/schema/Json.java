@@ -5969,28 +5969,19 @@ public final class Json {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return Whether the stats field is set.
        */
-      java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> 
-          getStatsList();
+      boolean hasStats();
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return The stats.
        */
-      com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats(int index);
+      com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats();
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
        */
-      int getStatsCount();
-      /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-       */
-      java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> 
-          getStatsOrBuilderList();
-      /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-       */
-      com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder(
-          int index);
+      com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder();
     }
     /**
      * Protobuf type {@code hilo.protobufs.schema.JsonSchemaEvent.ParseStats}
@@ -6005,7 +5996,6 @@ public final class Json {
         super(builder);
       }
       private ParseStats() {
-        stats_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -6028,7 +6018,6 @@ public final class Json {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -6040,12 +6029,16 @@ public final class Json {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  stats_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats>();
-                  mutable_bitField0_ |= 0x00000001;
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder subBuilder = null;
+                if (stats_ != null) {
+                  subBuilder = stats_.toBuilder();
                 }
-                stats_.add(
-                    input.readMessage(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.parser(), extensionRegistry));
+                stats_ = input.readMessage(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(stats_);
+                  stats_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -6063,9 +6056,6 @@ public final class Json {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            stats_ = java.util.Collections.unmodifiableList(stats_);
-          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -6084,43 +6074,29 @@ public final class Json {
       }
 
       public static final int STATS_FIELD_NUMBER = 1;
-      private java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> stats_;
+      private com.hilohq.hilo.protobufs.schema.Json.JsonParseStats stats_;
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return Whether the stats field is set.
        */
       @java.lang.Override
-      public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> getStatsList() {
-        return stats_;
+      public boolean hasStats() {
+        return stats_ != null;
       }
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return The stats.
        */
       @java.lang.Override
-      public java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> 
-          getStatsOrBuilderList() {
-        return stats_;
+      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats() {
+        return stats_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
       }
       /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
        */
       @java.lang.Override
-      public int getStatsCount() {
-        return stats_.size();
-      }
-      /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats(int index) {
-        return stats_.get(index);
-      }
-      /**
-       * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder(
-          int index) {
-        return stats_.get(index);
+      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder() {
+        return getStats();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6137,8 +6113,8 @@ public final class Json {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        for (int i = 0; i < stats_.size(); i++) {
-          output.writeMessage(1, stats_.get(i));
+        if (stats_ != null) {
+          output.writeMessage(1, getStats());
         }
         unknownFields.writeTo(output);
       }
@@ -6149,9 +6125,9 @@ public final class Json {
         if (size != -1) return size;
 
         size = 0;
-        for (int i = 0; i < stats_.size(); i++) {
+        if (stats_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, stats_.get(i));
+            .computeMessageSize(1, getStats());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6168,8 +6144,11 @@ public final class Json {
         }
         com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats other = (com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats) obj;
 
-        if (!getStatsList()
-            .equals(other.getStatsList())) return false;
+        if (hasStats() != other.hasStats()) return false;
+        if (hasStats()) {
+          if (!getStats()
+              .equals(other.getStats())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -6181,9 +6160,9 @@ public final class Json {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (getStatsCount() > 0) {
+        if (hasStats()) {
           hash = (37 * hash) + STATS_FIELD_NUMBER;
-          hash = (53 * hash) + getStatsList().hashCode();
+          hash = (53 * hash) + getStats().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -6313,17 +6292,16 @@ public final class Json {
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessageV3
                   .alwaysUseFieldBuilders) {
-            getStatsFieldBuilder();
           }
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
           if (statsBuilder_ == null) {
-            stats_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            stats_ = null;
           } else {
-            statsBuilder_.clear();
+            stats_ = null;
+            statsBuilder_ = null;
           }
           return this;
         }
@@ -6351,12 +6329,7 @@ public final class Json {
         @java.lang.Override
         public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats buildPartial() {
           com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats result = new com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats(this);
-          int from_bitField0_ = bitField0_;
           if (statsBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0)) {
-              stats_ = java.util.Collections.unmodifiableList(stats_);
-              bitField0_ = (bitField0_ & ~0x00000001);
-            }
             result.stats_ = stats_;
           } else {
             result.stats_ = statsBuilder_.build();
@@ -6409,31 +6382,8 @@ public final class Json {
 
         public Builder mergeFrom(com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats other) {
           if (other == com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent.ParseStats.getDefaultInstance()) return this;
-          if (statsBuilder_ == null) {
-            if (!other.stats_.isEmpty()) {
-              if (stats_.isEmpty()) {
-                stats_ = other.stats_;
-                bitField0_ = (bitField0_ & ~0x00000001);
-              } else {
-                ensureStatsIsMutable();
-                stats_.addAll(other.stats_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.stats_.isEmpty()) {
-              if (statsBuilder_.isEmpty()) {
-                statsBuilder_.dispose();
-                statsBuilder_ = null;
-                stats_ = other.stats_;
-                bitField0_ = (bitField0_ & ~0x00000001);
-                statsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getStatsFieldBuilder() : null;
-              } else {
-                statsBuilder_.addAllMessages(other.stats_);
-              }
-            }
+          if (other.hasStats()) {
+            mergeStats(other.getStats());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -6463,241 +6413,119 @@ public final class Json {
           }
           return this;
         }
-        private int bitField0_;
 
-        private java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> stats_ =
-          java.util.Collections.emptyList();
-        private void ensureStatsIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
-            stats_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats>(stats_);
-            bitField0_ |= 0x00000001;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
+        private com.hilohq.hilo.protobufs.schema.Json.JsonParseStats stats_;
+        private com.google.protobuf.SingleFieldBuilderV3<
             com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> statsBuilder_;
+        /**
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * @return Whether the stats field is set.
+         */
+        public boolean hasStats() {
+          return statsBuilder_ != null || stats_ != null;
+        }
+        /**
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * @return The stats.
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats() {
+          if (statsBuilder_ == null) {
+            return stats_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
+          } else {
+            return statsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         */
+        public Builder setStats(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
+          if (statsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            stats_ = value;
+            onChanged();
+          } else {
+            statsBuilder_.setMessage(value);
+          }
 
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> getStatsList() {
-          if (statsBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(stats_);
-          } else {
-            return statsBuilder_.getMessageList();
-          }
+          return this;
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public int getStatsCount() {
-          if (statsBuilder_ == null) {
-            return stats_.size();
-          } else {
-            return statsBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats(int index) {
-          if (statsBuilder_ == null) {
-            return stats_.get(index);
-          } else {
-            return statsBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
         public Builder setStats(
-            int index, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
-          if (statsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureStatsIsMutable();
-            stats_.set(index, value);
-            onChanged();
-          } else {
-            statsBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public Builder setStats(
-            int index, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder builderForValue) {
-          if (statsBuilder_ == null) {
-            ensureStatsIsMutable();
-            stats_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            statsBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public Builder addStats(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
-          if (statsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureStatsIsMutable();
-            stats_.add(value);
-            onChanged();
-          } else {
-            statsBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public Builder addStats(
-            int index, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
-          if (statsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureStatsIsMutable();
-            stats_.add(index, value);
-            onChanged();
-          } else {
-            statsBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public Builder addStats(
             com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder builderForValue) {
           if (statsBuilder_ == null) {
-            ensureStatsIsMutable();
-            stats_.add(builderForValue.build());
+            stats_ = builderForValue.build();
             onChanged();
           } else {
-            statsBuilder_.addMessage(builderForValue.build());
+            statsBuilder_.setMessage(builderForValue.build());
           }
+
           return this;
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder addStats(
-            int index, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder builderForValue) {
+        public Builder mergeStats(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
           if (statsBuilder_ == null) {
-            ensureStatsIsMutable();
-            stats_.add(index, builderForValue.build());
+            if (stats_ != null) {
+              stats_ =
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.newBuilder(stats_).mergeFrom(value).buildPartial();
+            } else {
+              stats_ = value;
+            }
             onChanged();
           } else {
-            statsBuilder_.addMessage(index, builderForValue.build());
+            statsBuilder_.mergeFrom(value);
           }
+
           return this;
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public Builder addAllStats(
-            java.lang.Iterable<? extends com.hilohq.hilo.protobufs.schema.Json.JsonParseStats> values) {
-          if (statsBuilder_ == null) {
-            ensureStatsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, stats_);
-            onChanged();
-          } else {
-            statsBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
         public Builder clearStats() {
           if (statsBuilder_ == null) {
-            stats_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            stats_ = null;
             onChanged();
           } else {
-            statsBuilder_.clear();
+            stats_ = null;
+            statsBuilder_ = null;
           }
+
           return this;
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder removeStats(int index) {
-          if (statsBuilder_ == null) {
-            ensureStatsIsMutable();
-            stats_.remove(index);
-            onChanged();
-          } else {
-            statsBuilder_.remove(index);
-          }
-          return this;
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder getStatsBuilder() {
+          
+          onChanged();
+          return getStatsFieldBuilder().getBuilder();
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder getStatsBuilder(
-            int index) {
-          return getStatsFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder(
-            int index) {
-          if (statsBuilder_ == null) {
-            return stats_.get(index);  } else {
-            return statsBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> 
-             getStatsOrBuilderList() {
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder() {
           if (statsBuilder_ != null) {
-            return statsBuilder_.getMessageOrBuilderList();
+            return statsBuilder_.getMessageOrBuilder();
           } else {
-            return java.util.Collections.unmodifiableList(stats_);
+            return stats_ == null ?
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
           }
         }
         /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder addStatsBuilder() {
-          return getStatsFieldBuilder().addBuilder(
-              com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder addStatsBuilder(
-            int index) {
-          return getStatsFieldBuilder().addBuilder(
-              index, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .hilo.protobufs.schema.JsonParseStats stats = 1;</code>
-         */
-        public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder> 
-             getStatsBuilderList() {
-          return getStatsFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
+        private com.google.protobuf.SingleFieldBuilderV3<
             com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> 
             getStatsFieldBuilder() {
           if (statsBuilder_ == null) {
-            statsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            statsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder>(
-                    stats_,
-                    ((bitField0_ & 0x00000001) != 0),
+                    getStats(),
                     getParentForChildren(),
                     isClean());
             stats_ = null;
@@ -13286,19 +13114,43 @@ public final class Json {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-       * @return Whether the schema field is set.
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return Whether the stats field is set.
        */
-      boolean hasSchema();
+      boolean hasStats();
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-       * @return The schema.
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return The stats.
        */
-      com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel getSchema();
+      com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats();
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
        */
-      com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder getSchemaOrBuilder();
+      com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder();
+
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> 
+          getFieldsList();
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel getFields(int index);
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      int getFieldsCount();
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder> 
+          getFieldsOrBuilderList();
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder getFieldsOrBuilder(
+          int index);
     }
     /**
      * Protobuf type {@code hilo.protobufs.schema.JsonSchemaUpdate.SchemaUpdate}
@@ -13313,6 +13165,7 @@ public final class Json {
         super(builder);
       }
       private SchemaUpdate() {
+        fields_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -13335,6 +13188,7 @@ public final class Json {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -13346,16 +13200,25 @@ public final class Json {
                 done = true;
                 break;
               case 10: {
-                com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder subBuilder = null;
-                if (schema_ != null) {
-                  subBuilder = schema_.toBuilder();
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder subBuilder = null;
+                if (stats_ != null) {
+                  subBuilder = stats_.toBuilder();
                 }
-                schema_ = input.readMessage(com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.parser(), extensionRegistry);
+                stats_ = input.readMessage(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(schema_);
-                  schema_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(stats_);
+                  stats_ = subBuilder.buildPartial();
                 }
 
+                break;
+              }
+              case 18: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  fields_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                fields_.add(
+                    input.readMessage(com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.parser(), extensionRegistry));
                 break;
               }
               default: {
@@ -13373,6 +13236,9 @@ public final class Json {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            fields_ = java.util.Collections.unmodifiableList(fields_);
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
@@ -13390,30 +13256,70 @@ public final class Json {
                 com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate.class, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate.Builder.class);
       }
 
-      public static final int SCHEMA_FIELD_NUMBER = 1;
-      private com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel schema_;
+      public static final int STATS_FIELD_NUMBER = 1;
+      private com.hilohq.hilo.protobufs.schema.Json.JsonParseStats stats_;
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-       * @return Whether the schema field is set.
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return Whether the stats field is set.
        */
       @java.lang.Override
-      public boolean hasSchema() {
-        return schema_ != null;
+      public boolean hasStats() {
+        return stats_ != null;
       }
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-       * @return The schema.
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+       * @return The stats.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel getSchema() {
-        return schema_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.getDefaultInstance() : schema_;
+      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats() {
+        return stats_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
       }
       /**
-       * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+       * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder getSchemaOrBuilder() {
-        return getSchema();
+      public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder() {
+        return getStats();
+      }
+
+      public static final int FIELDS_FIELD_NUMBER = 2;
+      private java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> fields_;
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> getFieldsList() {
+        return fields_;
+      }
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder> 
+          getFieldsOrBuilderList() {
+        return fields_;
+      }
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      @java.lang.Override
+      public int getFieldsCount() {
+        return fields_.size();
+      }
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel getFields(int index) {
+        return fields_.get(index);
+      }
+      /**
+       * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder getFieldsOrBuilder(
+          int index) {
+        return fields_.get(index);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -13430,8 +13336,11 @@ public final class Json {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (schema_ != null) {
-          output.writeMessage(1, getSchema());
+        if (stats_ != null) {
+          output.writeMessage(1, getStats());
+        }
+        for (int i = 0; i < fields_.size(); i++) {
+          output.writeMessage(2, fields_.get(i));
         }
         unknownFields.writeTo(output);
       }
@@ -13442,9 +13351,13 @@ public final class Json {
         if (size != -1) return size;
 
         size = 0;
-        if (schema_ != null) {
+        if (stats_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getSchema());
+            .computeMessageSize(1, getStats());
+        }
+        for (int i = 0; i < fields_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, fields_.get(i));
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13461,11 +13374,13 @@ public final class Json {
         }
         com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate other = (com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate) obj;
 
-        if (hasSchema() != other.hasSchema()) return false;
-        if (hasSchema()) {
-          if (!getSchema()
-              .equals(other.getSchema())) return false;
+        if (hasStats() != other.hasStats()) return false;
+        if (hasStats()) {
+          if (!getStats()
+              .equals(other.getStats())) return false;
         }
+        if (!getFieldsList()
+            .equals(other.getFieldsList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -13477,9 +13392,13 @@ public final class Json {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasSchema()) {
-          hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
-          hash = (53 * hash) + getSchema().hashCode();
+        if (hasStats()) {
+          hash = (37 * hash) + STATS_FIELD_NUMBER;
+          hash = (53 * hash) + getStats().hashCode();
+        }
+        if (getFieldsCount() > 0) {
+          hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+          hash = (53 * hash) + getFieldsList().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -13609,16 +13528,23 @@ public final class Json {
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessageV3
                   .alwaysUseFieldBuilders) {
+            getFieldsFieldBuilder();
           }
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          if (schemaBuilder_ == null) {
-            schema_ = null;
+          if (statsBuilder_ == null) {
+            stats_ = null;
           } else {
-            schema_ = null;
-            schemaBuilder_ = null;
+            stats_ = null;
+            statsBuilder_ = null;
+          }
+          if (fieldsBuilder_ == null) {
+            fields_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            fieldsBuilder_.clear();
           }
           return this;
         }
@@ -13646,10 +13572,20 @@ public final class Json {
         @java.lang.Override
         public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate buildPartial() {
           com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate result = new com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate(this);
-          if (schemaBuilder_ == null) {
-            result.schema_ = schema_;
+          int from_bitField0_ = bitField0_;
+          if (statsBuilder_ == null) {
+            result.stats_ = stats_;
           } else {
-            result.schema_ = schemaBuilder_.build();
+            result.stats_ = statsBuilder_.build();
+          }
+          if (fieldsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              fields_ = java.util.Collections.unmodifiableList(fields_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.fields_ = fields_;
+          } else {
+            result.fields_ = fieldsBuilder_.build();
           }
           onBuilt();
           return result;
@@ -13699,8 +13635,34 @@ public final class Json {
 
         public Builder mergeFrom(com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate other) {
           if (other == com.hilohq.hilo.protobufs.schema.Json.JsonSchemaUpdate.SchemaUpdate.getDefaultInstance()) return this;
-          if (other.hasSchema()) {
-            mergeSchema(other.getSchema());
+          if (other.hasStats()) {
+            mergeStats(other.getStats());
+          }
+          if (fieldsBuilder_ == null) {
+            if (!other.fields_.isEmpty()) {
+              if (fields_.isEmpty()) {
+                fields_ = other.fields_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureFieldsIsMutable();
+                fields_.addAll(other.fields_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.fields_.isEmpty()) {
+              if (fieldsBuilder_.isEmpty()) {
+                fieldsBuilder_.dispose();
+                fieldsBuilder_ = null;
+                fields_ = other.fields_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                fieldsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getFieldsFieldBuilder() : null;
+              } else {
+                fieldsBuilder_.addAllMessages(other.fields_);
+              }
+            }
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -13730,124 +13692,365 @@ public final class Json {
           }
           return this;
         }
+        private int bitField0_;
 
-        private com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel schema_;
+        private com.hilohq.hilo.protobufs.schema.Json.JsonParseStats stats_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder> schemaBuilder_;
+            com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> statsBuilder_;
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-         * @return Whether the schema field is set.
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * @return Whether the stats field is set.
          */
-        public boolean hasSchema() {
-          return schemaBuilder_ != null || schema_ != null;
+        public boolean hasStats() {
+          return statsBuilder_ != null || stats_ != null;
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
-         * @return The schema.
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
+         * @return The stats.
          */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel getSchema() {
-          if (schemaBuilder_ == null) {
-            return schema_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.getDefaultInstance() : schema_;
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats getStats() {
+          if (statsBuilder_ == null) {
+            return stats_ == null ? com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
           } else {
-            return schemaBuilder_.getMessage();
+            return statsBuilder_.getMessage();
           }
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder setSchema(com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel value) {
-          if (schemaBuilder_ == null) {
+        public Builder setStats(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
+          if (statsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            schema_ = value;
+            stats_ = value;
             onChanged();
           } else {
-            schemaBuilder_.setMessage(value);
+            statsBuilder_.setMessage(value);
           }
 
           return this;
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder setSchema(
-            com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder builderForValue) {
-          if (schemaBuilder_ == null) {
-            schema_ = builderForValue.build();
+        public Builder setStats(
+            com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder builderForValue) {
+          if (statsBuilder_ == null) {
+            stats_ = builderForValue.build();
             onChanged();
           } else {
-            schemaBuilder_.setMessage(builderForValue.build());
+            statsBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder mergeSchema(com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel value) {
-          if (schemaBuilder_ == null) {
-            if (schema_ != null) {
-              schema_ =
-                com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.newBuilder(schema_).mergeFrom(value).buildPartial();
+        public Builder mergeStats(com.hilohq.hilo.protobufs.schema.Json.JsonParseStats value) {
+          if (statsBuilder_ == null) {
+            if (stats_ != null) {
+              stats_ =
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.newBuilder(stats_).mergeFrom(value).buildPartial();
             } else {
-              schema_ = value;
+              stats_ = value;
             }
             onChanged();
           } else {
-            schemaBuilder_.mergeFrom(value);
+            statsBuilder_.mergeFrom(value);
           }
 
           return this;
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public Builder clearSchema() {
-          if (schemaBuilder_ == null) {
-            schema_ = null;
+        public Builder clearStats() {
+          if (statsBuilder_ == null) {
+            stats_ = null;
             onChanged();
           } else {
-            schema_ = null;
-            schemaBuilder_ = null;
+            stats_ = null;
+            statsBuilder_ = null;
           }
 
           return this;
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder getSchemaBuilder() {
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder getStatsBuilder() {
           
           onChanged();
-          return getSchemaFieldBuilder().getBuilder();
+          return getStatsFieldBuilder().getBuilder();
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
-        public com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder getSchemaOrBuilder() {
-          if (schemaBuilder_ != null) {
-            return schemaBuilder_.getMessageOrBuilder();
+        public com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder() {
+          if (statsBuilder_ != null) {
+            return statsBuilder_.getMessageOrBuilder();
           } else {
-            return schema_ == null ?
-                com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.getDefaultInstance() : schema_;
+            return stats_ == null ?
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.getDefaultInstance() : stats_;
           }
         }
         /**
-         * <code>.hilo.protobufs.schema.JsonSchemaModel schema = 1;</code>
+         * <code>.hilo.protobufs.schema.JsonParseStats stats = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder> 
-            getSchemaFieldBuilder() {
-          if (schemaBuilder_ == null) {
-            schemaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonSchemaModelOrBuilder>(
-                    getSchema(),
+            com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder> 
+            getStatsFieldBuilder() {
+          if (statsBuilder_ == null) {
+            statsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.hilohq.hilo.protobufs.schema.Json.JsonParseStats, com.hilohq.hilo.protobufs.schema.Json.JsonParseStats.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder>(
+                    getStats(),
                     getParentForChildren(),
                     isClean());
-            schema_ = null;
+            stats_ = null;
           }
-          return schemaBuilder_;
+          return statsBuilder_;
+        }
+
+        private java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> fields_ =
+          java.util.Collections.emptyList();
+        private void ensureFieldsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            fields_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel>(fields_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder> fieldsBuilder_;
+
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> getFieldsList() {
+          if (fieldsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(fields_);
+          } else {
+            return fieldsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public int getFieldsCount() {
+          if (fieldsBuilder_ == null) {
+            return fields_.size();
+          } else {
+            return fieldsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel getFields(int index) {
+          if (fieldsBuilder_ == null) {
+            return fields_.get(index);
+          } else {
+            return fieldsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder setFields(
+            int index, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel value) {
+          if (fieldsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureFieldsIsMutable();
+            fields_.set(index, value);
+            onChanged();
+          } else {
+            fieldsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder setFields(
+            int index, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder builderForValue) {
+          if (fieldsBuilder_ == null) {
+            ensureFieldsIsMutable();
+            fields_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            fieldsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder addFields(com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel value) {
+          if (fieldsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureFieldsIsMutable();
+            fields_.add(value);
+            onChanged();
+          } else {
+            fieldsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder addFields(
+            int index, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel value) {
+          if (fieldsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureFieldsIsMutable();
+            fields_.add(index, value);
+            onChanged();
+          } else {
+            fieldsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder addFields(
+            com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder builderForValue) {
+          if (fieldsBuilder_ == null) {
+            ensureFieldsIsMutable();
+            fields_.add(builderForValue.build());
+            onChanged();
+          } else {
+            fieldsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder addFields(
+            int index, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder builderForValue) {
+          if (fieldsBuilder_ == null) {
+            ensureFieldsIsMutable();
+            fields_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            fieldsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder addAllFields(
+            java.lang.Iterable<? extends com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> values) {
+          if (fieldsBuilder_ == null) {
+            ensureFieldsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, fields_);
+            onChanged();
+          } else {
+            fieldsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder clearFields() {
+          if (fieldsBuilder_ == null) {
+            fields_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            fieldsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public Builder removeFields(int index) {
+          if (fieldsBuilder_ == null) {
+            ensureFieldsIsMutable();
+            fields_.remove(index);
+            onChanged();
+          } else {
+            fieldsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder getFieldsBuilder(
+            int index) {
+          return getFieldsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder getFieldsOrBuilder(
+            int index) {
+          if (fieldsBuilder_ == null) {
+            return fields_.get(index);  } else {
+            return fieldsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public java.util.List<? extends com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder> 
+             getFieldsOrBuilderList() {
+          if (fieldsBuilder_ != null) {
+            return fieldsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(fields_);
+          }
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder addFieldsBuilder() {
+          return getFieldsFieldBuilder().addBuilder(
+              com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder addFieldsBuilder(
+            int index) {
+          return getFieldsFieldBuilder().addBuilder(
+              index, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .hilo.protobufs.schema.JsonFieldModel fields = 2;</code>
+         */
+        public java.util.List<com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder> 
+             getFieldsBuilderList() {
+          return getFieldsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder> 
+            getFieldsFieldBuilder() {
+          if (fieldsBuilder_ == null) {
+            fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel.Builder, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModelOrBuilder>(
+                    fields_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            fields_ = null;
+          }
+          return fieldsBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -14928,11 +15131,11 @@ public final class Json {
     com.hilohq.hilo.protobufs.schema.Json.JsonParseStatsOrBuilder getStatsOrBuilder();
 
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     int getFieldsCount();
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     boolean containsFields(
         java.lang.String key);
@@ -14943,19 +15146,19 @@ public final class Json {
     java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel>
     getFields();
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel>
     getFieldsMap();
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
 
     com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel getFieldsOrDefault(
         java.lang.String key,
         com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel defaultValue);
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
 
     com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel getFieldsOrThrow(
@@ -15020,7 +15223,7 @@ public final class Json {
 
               break;
             }
-            case 130: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fields_ = com.google.protobuf.MapField.newMapField(
                     FieldsDefaultEntryHolder.defaultEntry);
@@ -15062,7 +15265,7 @@ public final class Json {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 16:
+        case 2:
           return internalGetFields();
         default:
           throw new RuntimeException(
@@ -15103,7 +15306,7 @@ public final class Json {
       return getStats();
     }
 
-    public static final int FIELDS_FIELD_NUMBER = 16;
+    public static final int FIELDS_FIELD_NUMBER = 2;
     private static final class FieldsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, com.hilohq.hilo.protobufs.schema.Json.JsonFieldModel> defaultEntry =
@@ -15130,7 +15333,7 @@ public final class Json {
       return internalGetFields().getMap().size();
     }
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
 
     @java.lang.Override
@@ -15148,7 +15351,7 @@ public final class Json {
       return getFieldsMap();
     }
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     @java.lang.Override
 
@@ -15156,7 +15359,7 @@ public final class Json {
       return internalGetFields().getMap();
     }
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     @java.lang.Override
 
@@ -15169,7 +15372,7 @@ public final class Json {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+     * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
      */
     @java.lang.Override
 
@@ -15206,7 +15409,7 @@ public final class Json {
           output,
           internalGetFields(),
           FieldsDefaultEntryHolder.defaultEntry,
-          16);
+          2);
       unknownFields.writeTo(output);
     }
 
@@ -15228,7 +15431,7 @@ public final class Json {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(16, fields__);
+            .computeMessageSize(2, fields__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15382,7 +15585,7 @@ public final class Json {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 16:
+          case 2:
             return internalGetFields();
           default:
             throw new RuntimeException(
@@ -15393,7 +15596,7 @@ public final class Json {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 16:
+          case 2:
             return internalGetMutableFields();
           default:
             throw new RuntimeException(
@@ -15696,7 +15899,7 @@ public final class Json {
         return internalGetFields().getMap().size();
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
 
       @java.lang.Override
@@ -15714,7 +15917,7 @@ public final class Json {
         return getFieldsMap();
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
       @java.lang.Override
 
@@ -15722,7 +15925,7 @@ public final class Json {
         return internalGetFields().getMap();
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
       @java.lang.Override
 
@@ -15735,7 +15938,7 @@ public final class Json {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
       @java.lang.Override
 
@@ -15756,7 +15959,7 @@ public final class Json {
         return this;
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
 
       public Builder removeFields(
@@ -15775,7 +15978,7 @@ public final class Json {
         return internalGetMutableFields().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
       public Builder putFields(
           java.lang.String key,
@@ -15787,7 +15990,7 @@ public final class Json {
         return this;
       }
       /**
-       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 16;</code>
+       * <code>map&lt;string, .hilo.protobufs.schema.JsonFieldModel&gt; fields = 2;</code>
        */
 
       public Builder putAllFields(
@@ -15985,7 +16188,7 @@ public final class Json {
       "emaEvent.ParseStatsH\000\022J\n\014parse_errors\030\003 " +
       "\001(\01322.hilo.protobufs.schema.JsonSchemaEv" +
       "ent.ParseErrorsH\000\032B\n\nParseStats\0224\n\005stats" +
-      "\030\001 \003(\0132%.hilo.protobufs.schema.JsonParse" +
+      "\030\001 \001(\0132%.hilo.protobufs.schema.JsonParse" +
       "Stats\032J\n\013ParseErrors\022;\n\014parse_errors\030\001 \003" +
       "(\0132%.hilo.protobufs.schema.JsonParseErro" +
       "r\032d\n\nFieldStats\022\014\n\004path\030\001 \001(\t\022\014\n\004name\030\002 " +
@@ -16000,7 +16203,7 @@ public final class Json {
       "ilo.protobufs.schema.JsonFieldCreateMode" +
       "lH\000\022C\n\014field_update\030\002 \001(\0132+.hilo.protobu" +
       "fs.schema.JsonFieldUpdateModelH\000B\006\n\004logs" +
-      "\"\342\003\n\020JsonSchemaUpdate\022G\n\nfield_logs\030\001 \001(" +
+      "\"\227\004\n\020JsonSchemaUpdate\022G\n\nfield_logs\030\001 \001(" +
       "\01321.hilo.protobufs.schema.JsonSchemaUpda" +
       "te.FieldLogsH\000\022K\n\014parse_errors\030\002 \001(\01323.h" +
       "ilo.protobufs.schema.JsonSchemaUpdate.Pa" +
@@ -16010,18 +16213,19 @@ public final class Json {
       "\001(\0132$.hilo.protobufs.schema.JsonLogsMode" +
       "l\032P\n\013ParseErrors\022A\n\014parse_errors\030\001 \001(\0132+" +
       ".hilo.protobufs.schema.JsonParseErrorsMo" +
-      "del\032F\n\014SchemaUpdate\0226\n\006schema\030\001 \001(\0132&.hi" +
-      "lo.protobufs.schema.JsonSchemaModelB\010\n\006u" +
-      "pdate\"\341\001\n\017JsonSchemaModel\0224\n\005stats\030\001 \001(\013" +
-      "2%.hilo.protobufs.schema.JsonParseStats\022" +
-      "B\n\006fields\030\020 \003(\01322.hilo.protobufs.schema." +
-      "JsonSchemaModel.FieldsEntry\032T\n\013FieldsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 \001(\0132%.hilo.pr" +
-      "otobufs.schema.JsonFieldModel:\0028\001*\\\n\010Jso" +
-      "nType\022\013\n\007BOOLEAN\020\000\022\013\n\007INTEGER\020\001\022\t\n\005FLOAT" +
-      "\020\002\022\n\n\006STRING\020\003\022\t\n\005ARRAY\020\004\022\010\n\004NULL\020\005\022\n\n\006O" +
-      "BJECT\020\006B\"\n com.hilohq.hilo.protobufs.sch" +
-      "emab\006proto3"
+      "del\032{\n\014SchemaUpdate\0224\n\005stats\030\001 \001(\0132%.hil" +
+      "o.protobufs.schema.JsonParseStats\0225\n\006fie" +
+      "lds\030\002 \003(\0132%.hilo.protobufs.schema.JsonFi" +
+      "eldModelB\010\n\006update\"\341\001\n\017JsonSchemaModel\0224" +
+      "\n\005stats\030\001 \001(\0132%.hilo.protobufs.schema.Js" +
+      "onParseStats\022B\n\006fields\030\002 \003(\01322.hilo.prot" +
+      "obufs.schema.JsonSchemaModel.FieldsEntry" +
+      "\032T\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 " +
+      "\001(\0132%.hilo.protobufs.schema.JsonFieldMod" +
+      "el:\0028\001*\\\n\010JsonType\022\013\n\007BOOLEAN\020\000\022\013\n\007INTEG" +
+      "ER\020\001\022\t\n\005FLOAT\020\002\022\n\n\006STRING\020\003\022\t\n\005ARRAY\020\004\022\010" +
+      "\n\004NULL\020\005\022\n\n\006OBJECT\020\006B\"\n com.hilohq.hilo." +
+      "protobufs.schemab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16134,7 +16338,7 @@ public final class Json {
     internal_static_hilo_protobufs_schema_JsonSchemaUpdate_SchemaUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_JsonSchemaUpdate_SchemaUpdate_descriptor,
-        new java.lang.String[] { "Schema", });
+        new java.lang.String[] { "Stats", "Fields", });
     internal_static_hilo_protobufs_schema_JsonSchemaModel_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_hilo_protobufs_schema_JsonSchemaModel_fieldAccessorTable = new

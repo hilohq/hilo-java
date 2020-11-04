@@ -1,30 +1,34 @@
 package com.hilohq.hilo.structure_learning_integration_tests.parsing.json;
 
-import com.google.protobuf.Message;
+import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.Serializer;
+import com.esotericsoftware.kryo.io.Input;
+import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.util.DefaultInstantiatorStrategy;
+import com.google.protobuf.UnknownFieldSet;
 import com.hilohq.hilo.hilo_flink.mongodb.MongoDbSink;
 import com.hilohq.hilo.protobufs.schema.Json;
 import com.hilohq.hilo.protobufs.schema.Schema;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaFieldsAggregator;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaGenerate;
 import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
-import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.JsonSerializationSchema;
-import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.ProtobufDeserializationSchema;
-import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.ProtobufSerializationSchema;
-import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.TextLineBatchSource;
+import com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers.*;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import de.javakaffee.kryoserializers.protobuf.ProtobufSerializer;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 import org.junit.Test;
+import org.objenesis.strategy.StdInstantiatorStrategy;
 
-public final class JsonSchemaGenerateCopyTest {
+import java.util.Collections;
+import java.util.List;
+import java.util.Properties;
+import java.util.TreeMap;
+import java.util.concurrent.TimeUnit;
+
+public final class JsonSchemaGenerateTest {
 
   private void generateSchema(final List<TextLineBatch> batches) throws Exception {
     final var executionEnvironment =
@@ -39,6 +43,10 @@ public final class JsonSchemaGenerateCopyTest {
     executionEnvironment
             .getConfig()
             .addDefaultKryoSerializer(unmodColl, UnmodifiableCollectionsSerializer.class);
+    final Class<?> type = Class.forName("com.google.protobuf.MapEntry");
+    executionEnvironment
+            .getConfig()
+            .registerTypeWithKryoSerializer(type, ProtobufSerializer.class);
 
     final var producer =
         new FlinkKafkaProducer<Schema.SchemaEvent>(
@@ -73,11 +81,12 @@ public final class JsonSchemaGenerateCopyTest {
     final var events = executionEnvironment.addSource(consumer);
     final var updates = events.process(new JsonSchemaFieldsAggregator());
     final var sink =
-        new MongoDbSink<Schema.SchemaUpdate>(
+        new MongoDbSink<>(
             "mongodb://root:example@mongodb:27017/admin",
-            new JsonSerializationSchema<>(),
+                new JsonSchemaUpdateQueryGenerator(),
             "test",
-            "example");
+            new JsonSchemaCollectionSupplier(),
+                new JsonSchemaUpdateFilterSupplier());
     updates.addSink(sink);
 
     final var client = executionEnvironment.executeAsync("UpdateLoading");
@@ -87,11 +96,12 @@ public final class JsonSchemaGenerateCopyTest {
 
   @Test
   public void testGenerateSchemaOneBatchCreateEvents() throws Exception {
-//    generateSchema(
-//        Collections.singletonList(
-//            TextLineBatch.fromLines(
-//                "{\"integer\": 1, \"string\": \"hello\"}",
-//                "{\"integer\": 2, \"string\": \"bye\"}")));
+    generateSchema(
+        Collections.singletonList(
+            TextLineBatch.fromLines(
+                "{\"integer\": 1, \"string\": \"hello\"}",
+                "{\"integer\": 2, \"string\": \"bye\"}")));
     storeSchema();
   }
+
 }

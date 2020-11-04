@@ -5,6 +5,8 @@ import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import java.nio.charset.StandardCharsets;
+
+import com.mongodb.client.model.UpdateOptions;
 import org.apache.flink.api.common.serialization.SerializationSchema;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
@@ -13,28 +15,32 @@ import org.bson.Document;
 public final class MongoDbSink<T> extends RichSinkFunction<T> {
 
   private final String mongoUrl;
-  private final SerializationSchema<T> schema;
+  private final MongoQueryGenerator<T> queryGenerator;
   private final CollectionSupplier<T> collectionSupplier;
+  private final FilterSupplier<T> filterSupplier;
   private final String database;
   private transient MongoClient mongo;
 
   public MongoDbSink(
       final String mongoUrl,
-      final SerializationSchema<T> schema,
+      final MongoQueryGenerator<T> queryGenerator,
       final String database,
-      final String collection) {
-    this(mongoUrl, schema, database, new SingleCollectionSupplier<>(collection));
+      final String collection,
+      final FilterSupplier<T> filterSupplier) {
+    this(mongoUrl, queryGenerator, database, new SingleCollectionSupplier<>(collection), filterSupplier);
   }
 
   public MongoDbSink(
       final String mongoUrl,
-      final SerializationSchema<T> schema,
+      final MongoQueryGenerator<T> queryGenerator,
       final String database,
-      final CollectionSupplier<T> collectionSupplier) {
+      final CollectionSupplier<T> collectionSupplier,
+      final FilterSupplier<T> filterSupplier) {
     this.mongoUrl = mongoUrl;
-    this.schema = schema;
+    this.queryGenerator = queryGenerator;
     this.database = database;
     this.collectionSupplier = collectionSupplier;
+    this.filterSupplier = filterSupplier;
   }
 
   @Override
@@ -55,9 +61,19 @@ public final class MongoDbSink<T> extends RichSinkFunction<T> {
     final var collectionName = collectionSupplier.supply(input);
     final var conn = mongo.getDatabase(database);
 
-    final var s = new String(schema.serialize(input), StandardCharsets.UTF_8);
-    final var document = Document.parse(s);
+    final var query = queryGenerator.query(input);
     final var collection = conn.getCollection(collectionName);
-    collection.insertOne(document);
+
+    System.out.println("QUERY " + collectionName + " " + query.document());
+    if (query.action().equals(Query.Action.insert)) {
+      collection.insertOne(query.document());
+
+    } else if (query.action().equals(Query.Action.update)) {
+      final var options = new UpdateOptions();
+      final var filter = filterSupplier.supply(input);
+      options.upsert(true);
+
+      collection.updateOne(filter, query.document(), options);
+    }
   }
 }

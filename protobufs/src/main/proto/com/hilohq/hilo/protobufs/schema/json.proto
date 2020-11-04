@@ -58,7 +58,7 @@ message JsonParseErrorsModel {
 
 message JsonSchemaEvent {
   message ParseStats {
-    repeated JsonParseStats stats = 1;
+    JsonParseStats stats = 1;
   }
 
   message ParseErrors {
@@ -104,7 +104,8 @@ message JsonSchemaUpdate {
   }
 
   message SchemaUpdate {
-    JsonSchemaModel schema = 1;
+      JsonParseStats stats = 1;
+      repeated JsonFieldModel fields = 2;
   }
 
   oneof update {
@@ -116,5 +117,5 @@ message JsonSchemaUpdate {
 
 message JsonSchemaModel {
   JsonParseStats stats = 1;
-  map<string, JsonFieldModel> fields = 16;
+  map<string, JsonFieldModel> fields = 2;
 }

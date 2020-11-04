@@ -157,7 +157,7 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
   private SchemaEvent parseStatsEvent(final JsonParseStats stats) {
     final var parseStats =
         Json.JsonSchemaEvent.ParseStats.newBuilder()
-            .addStats(
+            .setStats(
                 Json.JsonParseStats.newBuilder()
                     .setParseAttemptCount(stats.parseAttemptCount())
                     .setParseErrorCount(stats.parseErrorCount())
