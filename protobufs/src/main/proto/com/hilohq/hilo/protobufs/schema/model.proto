@@ -36,16 +36,24 @@ message SchemaModel {
   }
 }
 
+message SchemaFieldLog {
+  oneof logs {
+    JsonLogsModel json = 1;
+  }
+}
+
 message SchemaFieldLogsModel {
   SchemaMetadata metadata = 1;
+  SchemaFieldLog log = 2;
+}
+
+message SchemaParseError {
   oneof logs {
-    JsonLogsModel json = 16;
+    JsonParseErrorsModel json = 1;
   }
 }
 
 message SchemaParseErrorsModel {
   SchemaMetadata metadata = 1;
-  oneof logs {
-    JsonParseErrorsModel json = 16;
-  }
+  SchemaParseError error = 2;
 }

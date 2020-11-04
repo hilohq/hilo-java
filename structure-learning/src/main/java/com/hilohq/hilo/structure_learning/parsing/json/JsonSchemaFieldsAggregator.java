@@ -4,7 +4,7 @@ import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.f
 
 import com.hilohq.hilo.protobufs.schema.Json;
 import com.hilohq.hilo.protobufs.schema.Json.JsonSchemaEvent;
-import com.hilohq.hilo.protobufs.schema.Schema;
+import com.hilohq.hilo.protobufs.schema.Model;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.ProtobufMapper;
 import java.util.*;
@@ -12,7 +12,7 @@ import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 
 public final class JsonSchemaFieldsAggregator
-    extends ProcessFunction<Schema.SchemaEvent, Schema.SchemaUpdate> {
+    extends ProcessFunction<Model.SchemaEvent, Model.SchemaUpdate> {
 
   private final Map<String, Json.JsonFieldModel> fields;
 
@@ -140,9 +140,8 @@ public final class JsonSchemaFieldsAggregator
 
   @Override
   public void processElement(
-      final Schema.SchemaEvent event, final Context ctx, final Collector<Schema.SchemaUpdate> out)
+      final Model.SchemaEvent event, final Context ctx, final Collector<Model.SchemaUpdate> out)
       throws Exception {
-    System.out.println("RECEIVED " + event);
     if (!event.hasJson()) {
       return;
     }
@@ -151,7 +150,7 @@ public final class JsonSchemaFieldsAggregator
     for (final var update : updates) {
       System.out.println("SERIALIZE " + update);
       out.collect(
-          Schema.SchemaUpdate.newBuilder()
+          Model.SchemaUpdate.newBuilder()
               .setMetadata(event.getMetadata())
               .setJson(update)
               .build());

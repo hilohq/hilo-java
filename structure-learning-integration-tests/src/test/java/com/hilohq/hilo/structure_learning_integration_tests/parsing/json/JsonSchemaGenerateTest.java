@@ -1,7 +1,7 @@
 package com.hilohq.hilo.structure_learning_integration_tests.parsing.json;
 
 import com.hilohq.hilo.connector.flink.mongodb.MongoSink;
-import com.hilohq.hilo.protobufs.schema.Schema;
+import com.hilohq.hilo.protobufs.schema.Model;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaFieldsAggregator;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaGenerate;
 import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
@@ -37,9 +37,9 @@ public final class JsonSchemaGenerateTest {
     executionEnvironment.getConfig().registerTypeWithKryoSerializer(type, ProtobufSerializer.class);
 
     final var producer =
-        new FlinkKafkaProducer<Schema.SchemaEvent>(
+        new FlinkKafkaProducer<Model.SchemaEvent>(
             "kafka:9092", "SchemaEvent", new ProtobufSerializationSchema<>());
-    final DataStream<Schema.SchemaEvent> events =
+    final DataStream<Model.SchemaEvent> events =
         records.process(new JsonSchemaGenerate()).name("generate-schema");
 
     events.addSink(producer).name("sink");
@@ -63,7 +63,7 @@ public final class JsonSchemaGenerateTest {
     final var consumer =
         new FlinkKafkaConsumer<>(
                 "SchemaEvent",
-                new ProtobufDeserializationSchema<>(Schema.SchemaEvent.newBuilder().build()),
+                new ProtobufDeserializationSchema<>(Model.SchemaEvent.newBuilder().build()),
                 props)
             .setStartFromEarliest();
     final var events = executionEnvironment.addSource(consumer);

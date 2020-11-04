@@ -6,15 +6,17 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
 import com.hilohq.hilo.protobufs.schema.Json;
-import com.hilohq.hilo.protobufs.schema.Schema;
+
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.hilohq.hilo.protobufs.schema.Model;
 import org.apache.flink.api.common.serialization.SerializationSchema;
 
 public class JsonSchemaUpdateSerializationSchema
-    implements SerializationSchema<Schema.SchemaUpdate> {
+    implements SerializationSchema<Model.SchemaUpdate> {
   private Map<String, Json.JsonFieldModel> listToMap(final List<Json.JsonFieldModel> fields) {
     final var result = new HashMap<String, Json.JsonFieldModel>();
     for (final var field : fields) {
@@ -24,8 +26,8 @@ public class JsonSchemaUpdateSerializationSchema
     return result;
   }
 
-  private Message schemaUpdateToSchemaModel(final Schema.SchemaUpdate update) {
-    return Schema.SchemaModel.newBuilder()
+  private Message schemaUpdateToSchemaModel(final Model.SchemaUpdate update) {
+    return Model.SchemaModel.newBuilder()
         .setMetadata(update.getMetadata())
         .setJson(
             Json.JsonSchemaModel.newBuilder()
@@ -34,7 +36,7 @@ public class JsonSchemaUpdateSerializationSchema
         .build();
   }
 
-  private Message messageToSerialize(final Schema.SchemaUpdate element) {
+  private Message messageToSerialize(final Model.SchemaUpdate element) {
     if (element.getJson().hasSchemaUpdate()) {
       return schemaUpdateToSchemaModel(element);
     } else {
@@ -43,7 +45,7 @@ public class JsonSchemaUpdateSerializationSchema
   }
 
   @Override
-  public byte[] serialize(final Schema.SchemaUpdate element) {
+  public byte[] serialize(final Model.SchemaUpdate element) {
     if (!element.hasJson()) {
       throw new IllegalArgumentException("JsonSchemaUpdateSerializationSchema only supports JSON");
     }

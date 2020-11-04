@@ -1,6 +1,6 @@
 package com.hilohq.hilo.structure_learning.parsing.json;
 
-import static com.hilohq.hilo.protobufs.schema.Schema.*;
+import static com.hilohq.hilo.protobufs.schema.Model.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

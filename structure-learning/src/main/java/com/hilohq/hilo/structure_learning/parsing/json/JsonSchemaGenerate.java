@@ -3,8 +3,8 @@ package com.hilohq.hilo.structure_learning.parsing.json;
 import static com.hilohq.hilo.structure_learning.parsing.json.entity.JsonUtils.fullname;
 
 import com.hilohq.hilo.protobufs.schema.Json;
-import com.hilohq.hilo.protobufs.schema.Schema;
-import com.hilohq.hilo.protobufs.schema.Schema.SchemaEvent;
+import com.hilohq.hilo.protobufs.schema.Model;
+import com.hilohq.hilo.protobufs.schema.Model.SchemaEvent;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonFieldStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonParseStats;
 import com.hilohq.hilo.structure_learning.parsing.json.entity.JsonPropertyPath;
@@ -21,7 +21,7 @@ import org.apache.flink.util.Collector;
 
 public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
   private final ObjectMapper jsonMapper;
-  private final Schema.SchemaMetadata metadata;
+  private final Model.SchemaMetadata metadata;
 
   public JsonSchemaGenerate() {
     this(UUID.randomUUID().toString(), UUID.randomUUID().toString());
@@ -30,7 +30,7 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
   public JsonSchemaGenerate(final String projectId, final String sourceId) {
     this.jsonMapper = new ObjectMapper();
     this.metadata =
-        Schema.SchemaMetadata.newBuilder()
+        Model.SchemaMetadata.newBuilder()
             .setProjectId(projectId)
             .setSourceId(sourceId)
             .setSchemaId(UUID.randomUUID().toString())
