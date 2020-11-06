@@ -1,4 +1,4 @@
-package com.hilohq.hilo.connector.flink.mongodb;
+package com.hilohq.hilo.connector.mongodb.flink;
 
 import java.io.Serializable;
 import org.bson.Document;

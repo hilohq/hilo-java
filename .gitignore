@@ -29,3 +29,6 @@ gradle/
 
 # IDE files
 .idea/
+
+# Text files
+*.txt

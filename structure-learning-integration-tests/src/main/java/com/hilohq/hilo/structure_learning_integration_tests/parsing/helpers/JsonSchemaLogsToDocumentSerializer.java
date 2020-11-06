@@ -1,6 +1,6 @@
 package com.hilohq.hilo.structure_learning_integration_tests.parsing.helpers;
 
-import com.hilohq.hilo.connector.flink.mongodb.MongoIntoDocumentSerializer;
+import com.hilohq.hilo.connector.mongodb.flink.MongoIntoDocumentSerializer;
 import com.hilohq.hilo.protobufs.schema.Model;
 import org.bson.Document;
 

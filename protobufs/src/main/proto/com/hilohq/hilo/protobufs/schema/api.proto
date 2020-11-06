@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package hilo.protobufs.schema;
+
+option java_package = "com.hilohq.hilo.protobufs.schema";
+
+import "com/hilohq/hilo/protobufs/schema/model.proto";
+
+message GetSchemaRequest {
+  string sourceId = 1;
+}
+
+message GetSchemaResponse {
+  repeated SchemaMetadata schemas = 1;
+}
+
+message GetSchemaFieldsRequest {
+  string schemaId = 1;
+}
+
+message GetSchemaFieldsResponse {
+  SchemaModel schema = 1;
+}
+
+message GetSchemaParseErrorsRequest {
+  string schemaId = 1;
+}
+
+message GetSchemaParseErrorsResponse {
+  repeated SchemaParseError errors = 1;
+}
+
+message GetSchemaLogsRequest {
+  string schemaId = 1;
+}
+
+message GetSchemaLogsResponse {
+  repeated SchemaFieldLog logs = 1;
+}
+
+service Schema {
+  rpc GetSchema(GetSchemaRequest) returns (GetSchemaResponse) { }
+  rpc GetSchemaFields(GetSchemaFieldsRequest) returns (GetSchemaFieldsResponse) {}
+  rpc GetSchemaLogs(GetSchemaLogsRequest) returns (GetSchemaLogsResponse) {}
+  rpc GetSchemaParseErrors(GetSchemaParseErrorsRequest) returns (GetSchemaParseErrorsResponse) {}
+}

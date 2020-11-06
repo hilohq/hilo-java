@@ -7,8 +7,16 @@ protobuf {
         artifact = 'com.google.protobuf:protoc:3.12.1'
     }
 
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:1.31.1"
+        }
+    }
+
     generateProtoTasks {
-        all()*.plugins {}
+        all()*.plugins {
+            grpc {}
+        }
     }
 
     generatedFilesBaseDir = "$projectDir/src"

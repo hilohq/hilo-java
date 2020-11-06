@@ -882,6 +882,627 @@ public final class Model {
 
   }
 
+  public interface SchemaMetadataModelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.schema.SchemaMetadataModel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata getMetadata();
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.schema.SchemaMetadataModel}
+   */
+  public static final class SchemaMetadataModel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.schema.SchemaMetadataModel)
+      SchemaMetadataModelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SchemaMetadataModel.newBuilder() to construct.
+    private SchemaMetadataModel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SchemaMetadataModel() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SchemaMetadataModel();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SchemaMetadataModel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.schema.Model.internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.schema.Model.internal_static_hilo_protobufs_schema_SchemaMetadataModel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.class, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.Builder.class);
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata metadata_;
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata getMetadata() {
+      return metadata_ == null ? com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel other = (com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel) obj;
+
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.schema.SchemaMetadataModel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.schema.SchemaMetadataModel)
+        com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.schema.Model.internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.schema.Model.internal_static_hilo_protobufs_schema_SchemaMetadataModel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.class, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.schema.Model.internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel build() {
+        com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel buildPartial() {
+        com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel result = new com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel(this);
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel) {
+          return mergeFrom((com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel other) {
+        if (other == com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.schema.SchemaMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadata.Builder, com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.schema.SchemaMetadataModel)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.schema.SchemaMetadataModel)
+    private static final com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel();
+    }
+
+    public static com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SchemaMetadataModel>
+        PARSER = new com.google.protobuf.AbstractParser<SchemaMetadataModel>() {
+      @java.lang.Override
+      public SchemaMetadataModel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SchemaMetadataModel(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SchemaMetadataModel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SchemaMetadataModel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.schema.Model.SchemaMetadataModel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SchemaEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hilo.protobufs.schema.SchemaEvent)
       com.google.protobuf.MessageOrBuilder {
@@ -6735,6 +7356,11 @@ public final class Model {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_schema_SchemaMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_schema_SchemaMetadataModel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_schema_SchemaEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6782,7 +7408,9 @@ public final class Model {
       ".proto\022\025hilo.protobufs.schema\032+com/hiloh" +
       "q/hilo/protobufs/schema/json.proto\"J\n\016Sc" +
       "hemaMetadata\022\021\n\tschema_id\030\001 \001(\t\022\021\n\tsourc" +
-      "e_id\030\002 \001(\t\022\022\n\nproject_id\030\003 \001(\t\"\210\001\n\013Schem" +
+      "e_id\030\002 \001(\t\022\022\n\nproject_id\030\003 \001(\t\"N\n\023Schema" +
+      "MetadataModel\0227\n\010metadata\030\001 \001(\0132%.hilo.p" +
+      "rotobufs.schema.SchemaMetadata\"\210\001\n\013Schem" +
       "aEvent\0227\n\010metadata\030\001 \001(\0132%.hilo.protobuf" +
       "s.schema.SchemaMetadata\0226\n\004json\030\020 \001(\0132&." +
       "hilo.protobufs.schema.JsonSchemaEventH\000B" +
@@ -6818,44 +7446,50 @@ public final class Model {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaMetadata_descriptor,
         new java.lang.String[] { "SchemaId", "SourceId", "ProjectId", });
-    internal_static_hilo_protobufs_schema_SchemaEvent_descriptor =
+    internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_hilo_protobufs_schema_SchemaMetadataModel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_schema_SchemaMetadataModel_descriptor,
+        new java.lang.String[] { "Metadata", });
+    internal_static_hilo_protobufs_schema_SchemaEvent_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_hilo_protobufs_schema_SchemaEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaEvent_descriptor,
         new java.lang.String[] { "Metadata", "Json", "Update", });
     internal_static_hilo_protobufs_schema_SchemaUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_hilo_protobufs_schema_SchemaUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaUpdate_descriptor,
         new java.lang.String[] { "Metadata", "Json", "Update", });
     internal_static_hilo_protobufs_schema_SchemaModel_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_hilo_protobufs_schema_SchemaModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaModel_descriptor,
         new java.lang.String[] { "Metadata", "Json", "Schema", });
     internal_static_hilo_protobufs_schema_SchemaFieldLog_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_hilo_protobufs_schema_SchemaFieldLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaFieldLog_descriptor,
         new java.lang.String[] { "Json", "Logs", });
     internal_static_hilo_protobufs_schema_SchemaFieldLogsModel_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_hilo_protobufs_schema_SchemaFieldLogsModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaFieldLogsModel_descriptor,
         new java.lang.String[] { "Metadata", "Log", });
     internal_static_hilo_protobufs_schema_SchemaParseError_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_hilo_protobufs_schema_SchemaParseError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaParseError_descriptor,
         new java.lang.String[] { "Json", "Logs", });
     internal_static_hilo_protobufs_schema_SchemaParseErrorsModel_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_hilo_protobufs_schema_SchemaParseErrorsModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_schema_SchemaParseErrorsModel_descriptor,

@@ -12,6 +12,10 @@ message SchemaMetadata {
   string project_id = 3;
 }
 
+message SchemaMetadataModel {
+  SchemaMetadata metadata = 1;
+}
+
 message SchemaEvent {
   SchemaMetadata metadata = 1;
 

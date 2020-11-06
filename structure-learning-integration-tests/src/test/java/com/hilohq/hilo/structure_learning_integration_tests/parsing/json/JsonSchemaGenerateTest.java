@@ -1,6 +1,6 @@
 package com.hilohq.hilo.structure_learning_integration_tests.parsing.json;
 
-import com.hilohq.hilo.connector.flink.mongodb.MongoSink;
+import com.hilohq.hilo.connector.mongodb.flink.MongoSink;
 import com.hilohq.hilo.protobufs.schema.Model;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaFieldsAggregator;
 import com.hilohq.hilo.structure_learning.parsing.json.JsonSchemaGenerate;

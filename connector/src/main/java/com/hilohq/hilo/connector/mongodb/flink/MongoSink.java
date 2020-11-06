@@ -1,9 +1,9 @@
-package com.hilohq.hilo.connector.flink.mongodb;
+package com.hilohq.hilo.connector.mongodb.flink;
 
+import com.hilohq.hilo.connector.mongodb.client.MongoClient;
+import com.hilohq.hilo.connector.mongodb.client.MongoClients;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.sink.RichSinkFunction;
 
@@ -38,8 +38,7 @@ public final class MongoSink<T> extends RichSinkFunction<T> {
 
   @Override
   public void invoke(final T input, final Context context) throws Exception {
-    final var command = commandGenerator.generate(input);
-    final var conn = mongo.getDatabase(database);
-    command.execute(conn, input);
+    final var command = commandGenerator.generate(database, input);
+    command.execute(mongo, input);
   }
 }
