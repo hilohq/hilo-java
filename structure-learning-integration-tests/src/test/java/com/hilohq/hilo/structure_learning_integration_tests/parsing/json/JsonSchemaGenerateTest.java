@@ -25,7 +25,7 @@ public final class JsonSchemaGenerateTest {
         StreamExecutionEnvironment.createRemoteEnvironment(
             "127.0.0.1",
             8081,
-            "/home/eaugeas/Workspace/github.com/hilohq/hilo-java/structure-learning-integration-tests/build/libs/structure-learning-integration-tests-0.0.1-all.jar");
+            "/home/eauge/Workspace/github.com/hilohq/hilo-java/structure-learning-integration-tests/build/libs/structure-learning-integration-tests-0.0.1-all.jar");
 
     final var records =
         executionEnvironment.addSource(new TextLineBatchSource(batches)).name("source");
@@ -51,7 +51,7 @@ public final class JsonSchemaGenerateTest {
         StreamExecutionEnvironment.createRemoteEnvironment(
             "127.0.0.1",
             8081,
-            "/home/eaugeas/Workspace/github.com/hilohq/hilo-java/structure-learning-integration-tests/build/libs/structure-learning-integration-tests-0.0.1-all.jar");
+            "/home/eauge/Workspace/github.com/hilohq/hilo-java/structure-learning-integration-tests/build/libs/structure-learning-integration-tests-0.0.1-all.jar");
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");
     executionEnvironment
         .getConfig()

@@ -4,12 +4,13 @@ import com.hilohq.hilo.connector.mongodb.flink.MongoIntoDocumentSerializer;
 import com.hilohq.hilo.protobufs.schema.Model;
 import org.bson.Document;
 
-public final class JsonSchemaErrorsToDocumentSerializer  implements MongoIntoDocumentSerializer<Model.SchemaUpdate> {
-    private final ProtobufMessageToDocumentSerializer<Model.SchemaParseErrorsModel> serializer;
+public final class JsonSchemaErrorsToDocumentSerializer
+    implements MongoIntoDocumentSerializer<Model.SchemaUpdate> {
+  private final ProtobufMessageToDocumentSerializer<Model.SchemaParseErrorsModel> serializer;
 
-    public JsonSchemaErrorsToDocumentSerializer() {
-        this.serializer = new ProtobufMessageToDocumentSerializer<>();
-    }
+  public JsonSchemaErrorsToDocumentSerializer() {
+    this.serializer = new ProtobufMessageToDocumentSerializer<>();
+  }
 
   @Override
   public Document serialize(final Model.SchemaUpdate value) {
@@ -24,5 +25,5 @@ public final class JsonSchemaErrorsToDocumentSerializer  implements MongoIntoDoc
             .build();
 
     return serializer.serialize(model);
-    }
+  }
 }

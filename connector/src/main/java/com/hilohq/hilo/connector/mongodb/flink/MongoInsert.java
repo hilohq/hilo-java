@@ -1,7 +1,6 @@
 package com.hilohq.hilo.connector.mongodb.flink;
 
 import com.hilohq.hilo.connector.mongodb.client.MongoClient;
-import com.mongodb.client.MongoDatabase;
 
 public final class MongoInsert<T> implements MongoCommand<T> {
 
@@ -9,9 +8,10 @@ public final class MongoInsert<T> implements MongoCommand<T> {
   private final String collectionName;
   private final MongoIntoDocumentSerializer<T> serializer;
 
-  public MongoInsert(final String database,
-                     final String collectionName,
-                     final MongoIntoDocumentSerializer<T> serializer) {
+  public MongoInsert(
+      final String database,
+      final String collectionName,
+      final MongoIntoDocumentSerializer<T> serializer) {
     this.database = database;
     this.collectionName = collectionName;
     this.serializer = serializer;

@@ -150,10 +150,7 @@ public final class JsonSchemaFieldsAggregator
     for (final var update : updates) {
       System.out.println("SERIALIZE " + update);
       out.collect(
-          Model.SchemaUpdate.newBuilder()
-              .setMetadata(event.getMetadata())
-              .setJson(update)
-              .build());
+          Model.SchemaUpdate.newBuilder().setMetadata(event.getMetadata()).setJson(update).build());
     }
   }
 }

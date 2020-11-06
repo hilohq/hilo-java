@@ -12,10 +12,10 @@ public final class MongoUpdate<T> implements MongoCommand<T> {
   private final MongoIntoDocumentSerializer<T> serializer;
 
   public MongoUpdate(
-          final String database,
-          final String collectionName,
-          final Bson filter,
-          final MongoIntoDocumentSerializer<T> serializer) {
+      final String database,
+      final String collectionName,
+      final Bson filter,
+      final MongoIntoDocumentSerializer<T> serializer) {
     this.database = database;
     this.collectionName = collectionName;
     this.filter = filter;

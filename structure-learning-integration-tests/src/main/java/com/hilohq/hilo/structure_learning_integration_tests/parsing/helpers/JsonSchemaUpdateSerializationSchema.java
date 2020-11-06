@@ -6,13 +6,11 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
 import com.hilohq.hilo.protobufs.schema.Json;
-
+import com.hilohq.hilo.protobufs.schema.Model;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.hilohq.hilo.protobufs.schema.Model;
 import org.apache.flink.api.common.serialization.SerializationSchema;
 
 public class JsonSchemaUpdateSerializationSchema
