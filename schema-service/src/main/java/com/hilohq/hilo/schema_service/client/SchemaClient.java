@@ -3,6 +3,7 @@ package com.hilohq.hilo.schema_service.client;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.hilohq.hilo.protobufs.schema.Api;
 import com.hilohq.hilo.protobufs.schema.SchemaGrpc;
+import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import java.util.concurrent.*;
 
@@ -10,11 +11,13 @@ public final class SchemaClient {
   private final SchemaGrpc.SchemaFutureStub stub;
   private final ExecutorService executor;
 
-  public SchemaClient() {
-    stub =
-        SchemaGrpc.newFutureStub(
-            ManagedChannelBuilder.forAddress("localhost", 1234).usePlaintext().build());
+  public SchemaClient(final Channel channel) {
+    stub = SchemaGrpc.newFutureStub(channel);
     executor = Executors.newSingleThreadExecutor();
+  }
+
+  public SchemaClient() {
+    this(ManagedChannelBuilder.forAddress("localhost", 1234).usePlaintext().build());
   }
 
   public void close() {
@@ -24,15 +27,12 @@ public final class SchemaClient {
   private static <T> CompletableFuture<T> toCompletableFuture(
       final ListenableFuture<T> future, final Executor executor) {
     final var result = new CompletableFuture<T>();
-    System.out.println("toCompletableFuture");
     future.addListener(
         () -> {
           try {
-            System.out.println("runnable running");
             final T value = future.get();
             result.complete(value);
           } catch (InterruptedException | ExecutionException e) {
-            System.out.println("EXCEPTION " + e);
             result.completeExceptionally(e);
           }
         },
