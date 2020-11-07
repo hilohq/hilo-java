@@ -1,4 +1,4 @@
-package com.hilohq.hilo.schema_service.service;
+package com.hilohq.hilo.connector.mongodb.codec;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
