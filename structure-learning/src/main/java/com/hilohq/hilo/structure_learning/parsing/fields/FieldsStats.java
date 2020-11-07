@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public final class FieldsStats {
-    private final Map<String, FieldStats> stats;
+  private final Map<String, FieldStats> stats;
 
-    public FieldsStats() {
-        this.stats = new HashMap<>();
-    }
+  public FieldsStats() {
+    this.stats = new HashMap<>();
+  }
 
-    public Map<String, FieldStats> stats() {
-        return stats;
-    }
+  public Map<String, FieldStats> stats() {
+    return stats;
+  }
 }

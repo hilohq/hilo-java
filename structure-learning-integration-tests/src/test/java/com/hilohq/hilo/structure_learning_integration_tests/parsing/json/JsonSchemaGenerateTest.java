@@ -41,7 +41,6 @@ public final class JsonSchemaGenerateTest {
             8081,
             "/home/eaugeas/Workspace/github.com/hilohq/hilo-java/structure-learning-integration-tests/build/libs/structure-learning-integration-tests-0.0.1-all.jar");
 
-
     final var records =
         executionEnvironment.addSource(new FileLineSource("/tmp/logs.txt")).name("source");
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");

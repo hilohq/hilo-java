@@ -1,30 +1,24 @@
 package com.hilohq.hilo.structure_learning.parsing.json;
 
-import com.hilohq.hilo.connector.mongodb.client.MongoClient;
 import com.hilohq.hilo.connector.mongodb.client.MongoClients;
 import com.hilohq.hilo.connector.mongodb.codec.MongoProtobufCodec;
 import com.hilohq.hilo.protobufs.schema.Model;
-import com.hilohq.hilo.structure_learning.parsing.schema.Batch;
 import com.hilohq.hilo.structure_learning.parsing.schema.Samples;
 import com.hilohq.hilo.structure_learning.parsing.schema.SchemaValidate;
 import com.hilohq.hilo.structure_learning.parsing.text.TextLineBatch;
 import com.hilohq.hilo.structure_learning.parsing.value.*;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
-import org.apache.flink.api.common.state.ValueState;
-import org.apache.flink.api.common.state.ValueStateDescriptor;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.shaded.jackson2.com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.flink.util.Collector;
 import org.bson.BsonDocument;
 import org.bson.BsonString;
 import org.bson.codecs.configuration.CodecRegistries;
-import org.bson.codecs.configuration.CodecRegistry;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
 
@@ -34,9 +28,7 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
   private final ObjectMapper mapper;
   private Model.SchemaModel schema;
 
-  public JsonSchemaValidate(final String database,
-                            final String url,
-                            final String schemaId) {
+  public JsonSchemaValidate(final String database, final String url, final String schemaId) {
     this.database = database;
     this.url = url;
     this.schemaId = schemaId;
@@ -55,14 +47,16 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
     final var mongo = MongoClients.create(settings);
     final var filter = new BsonDocument();
     filter.append("metadata.schemaId", new BsonString(schemaId));
-    schema = mongo.findOne(database, "schemas", filter, Model.SchemaModel.class).get(5, TimeUnit.SECONDS);
+    schema =
+        mongo
+            .findOne(database, "schemas", filter, Model.SchemaModel.class)
+            .get(5, TimeUnit.SECONDS);
     mongo.close();
   }
 
   @Override
-  public void processElement(final TextLineBatch value,
-                             final Context ctx,
-                             final Collector<Samples> out) throws Exception {
+  public void processElement(
+      final TextLineBatch value, final Context ctx, final Collector<Samples> out) throws Exception {
     final var samples = new ArrayList<Map<String, Value>>();
     for (final var line : value.lines()) {
       final var node = mapper.readTree(line);
@@ -93,7 +87,7 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
             sample.put(field.getField().getName(), new StringValue(fieldNode.asText()));
           }
         }
-        if (!sample.isEmpty()){
+        if (!sample.isEmpty()) {
           samples.add(sample);
         }
       }
@@ -103,8 +97,5 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
   }
 
   @Override
-  public void close() {
-
-  }
-
+  public void close() {}
 }
