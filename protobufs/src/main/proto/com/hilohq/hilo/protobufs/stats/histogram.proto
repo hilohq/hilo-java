@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package hilo.protobufs.stats;
+
+option java_package = "com.hilohq.hilo.protobuf.stats";
+
+message BooleanHistogram {
+  message Bucket {
+    bool value = 1;
+    int64 count = 2;
+  }
+
+  repeated Bucket buckets = 1;
+}
+
+message NumericPercentileHistogram {
+  message Bucket {
+    double min = 1;
+    double max = 2;
+    int64 count = 3;
+    double boundary = 4;
+  }
+
+  repeated Bucket buckets = 1;
+  repeated double boundaries = 2;
+}
+
+message StringHistogram {
+  message Bucket {
+    string value = 1;
+    int64 count = 2;
+  }
+
+  repeated Bucket buckets = 2;
+}

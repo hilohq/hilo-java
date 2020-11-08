@@ -7,5 +7,4 @@ apply plugin: 'com.github.sherter.google-java-format'
 dependencies {
     compile project(":protobufs")
     compile project(":connector")
-    compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.12.1'
 }
