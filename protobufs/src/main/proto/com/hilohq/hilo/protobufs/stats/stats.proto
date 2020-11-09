@@ -26,3 +26,16 @@ message StringStats {
   int64 count = 1;
   StringHistogram histogram = 2;
 }
+
+message TypeStats {
+  oneof stats {
+    BooleanStats boolean_stats = 1;
+    NumericStats numeric_stats = 2;
+    StringStats string_stats = 3;
+  }
+}
+
+message StatsEvent {
+  string key = 1;
+  TypeStats stats = 2;
+}

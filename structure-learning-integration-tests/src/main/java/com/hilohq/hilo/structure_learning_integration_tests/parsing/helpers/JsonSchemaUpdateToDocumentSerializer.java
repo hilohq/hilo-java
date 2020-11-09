@@ -16,12 +16,12 @@ public final class JsonSchemaUpdateToDocumentSerializer
     final Document setOp = new Document();
 
     if (update.hasStats()) {
-      setOp.put("stats", Document.parse(serializedMessage(update.getStats())));
+      setOp.put("json.stats", Document.parse(serializedMessage(update.getStats())));
     }
 
     for (final var field : update.getFieldsList()) {
       setOp.put(
-          "fields.json." + field.getField().getName(), Document.parse(serializedMessage(field)));
+          "json.fields." + field.getField().getName(), Document.parse(serializedMessage(field)));
     }
 
     if (!setOp.isEmpty()) {

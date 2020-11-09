@@ -7,7 +7,12 @@ public final class StringValue implements Value {
     this.value = value;
   }
 
-  public String value() {
+  @Override
+  public String stringValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.String;
   }
 }

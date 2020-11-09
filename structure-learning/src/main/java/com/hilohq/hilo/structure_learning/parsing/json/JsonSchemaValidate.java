@@ -37,7 +37,7 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
 
   @Override
   public void open(final Configuration parameters) throws Exception {
-    final var codec = new MongoProtobufCodec<>(Model.SchemaMetadataModel.newBuilder().build());
+    final var codec = new MongoProtobufCodec<>(Model.SchemaModel.newBuilder().build());
     final var codecRegistry = CodecRegistries.fromCodecs(codec);
     final var settings =
         MongoClientSettings.builder()
@@ -52,12 +52,14 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
             .findOne(database, "schemas", filter, Model.SchemaModel.class)
             .get(5, TimeUnit.SECONDS);
     mongo.close();
+    System.out.println("SCHEMA " + schema);
   }
 
   @Override
   public void processElement(
       final TextLineBatch value, final Context ctx, final Collector<Samples> out) throws Exception {
     final var samples = new ArrayList<Map<String, Value>>();
+    System.out.println(" VALUE HAS LINES " + value.lines().size());
     for (final var line : value.lines()) {
       final var node = mapper.readTree(line);
       final var sample = new HashMap<String, Value>();
@@ -87,12 +89,14 @@ public final class JsonSchemaValidate extends SchemaValidate<TextLineBatch> {
             sample.put(field.getField().getName(), new StringValue(fieldNode.asText()));
           }
         }
-        if (!sample.isEmpty()) {
-          samples.add(sample);
-        }
+      }
+
+      if (!sample.isEmpty()) {
+        samples.add(sample);
       }
     }
 
+    System.out.println("SAMPLES " + samples.size());
     out.collect(new Samples(samples));
   }
 

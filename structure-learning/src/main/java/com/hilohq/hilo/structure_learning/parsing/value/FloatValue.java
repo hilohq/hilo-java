@@ -7,7 +7,12 @@ public final class FloatValue implements Value {
     this.value = value;
   }
 
-  public float value() {
+  @Override
+  public float floatValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.Float;
   }
 }

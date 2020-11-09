@@ -7,7 +7,12 @@ public final class LongValue implements Value {
     this.value = value;
   }
 
-  public long value() {
+  @Override
+  public long longValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.Long;
   }
 }

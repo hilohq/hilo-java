@@ -2731,6 +2731,1953 @@ public final class Stats {
 
   }
 
+  public interface TypeStatsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.stats.TypeStats)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     * @return Whether the booleanStats field is set.
+     */
+    boolean hasBooleanStats();
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     * @return The booleanStats.
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.BooleanStats getBooleanStats();
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder getBooleanStatsOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     * @return Whether the numericStats field is set.
+     */
+    boolean hasNumericStats();
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     * @return The numericStats.
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.NumericStats getNumericStats();
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder getNumericStatsOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     * @return Whether the stringStats field is set.
+     */
+    boolean hasStringStats();
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     * @return The stringStats.
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.StringStats getStringStats();
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder getStringStatsOrBuilder();
+
+    public com.hilohq.hilo.protobuf.stats.Stats.TypeStats.StatsCase getStatsCase();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.stats.TypeStats}
+   */
+  public static final class TypeStats extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.stats.TypeStats)
+      TypeStatsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TypeStats.newBuilder() to construct.
+    private TypeStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TypeStats() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TypeStats();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TypeStats(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder subBuilder = null;
+              if (statsCase_ == 1) {
+                subBuilder = ((com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_).toBuilder();
+              }
+              stats_ =
+                  input.readMessage(com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_);
+                stats_ = subBuilder.buildPartial();
+              }
+              statsCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder subBuilder = null;
+              if (statsCase_ == 2) {
+                subBuilder = ((com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_).toBuilder();
+              }
+              stats_ =
+                  input.readMessage(com.hilohq.hilo.protobuf.stats.Stats.NumericStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_);
+                stats_ = subBuilder.buildPartial();
+              }
+              statsCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder subBuilder = null;
+              if (statsCase_ == 3) {
+                subBuilder = ((com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_).toBuilder();
+              }
+              stats_ =
+                  input.readMessage(com.hilohq.hilo.protobuf.stats.Stats.StringStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_);
+                stats_ = subBuilder.buildPartial();
+              }
+              statsCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_TypeStats_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_TypeStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobuf.stats.Stats.TypeStats.class, com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder.class);
+    }
+
+    private int statsCase_ = 0;
+    private java.lang.Object stats_;
+    public enum StatsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      BOOLEAN_STATS(1),
+      NUMERIC_STATS(2),
+      STRING_STATS(3),
+      STATS_NOT_SET(0);
+      private final int value;
+      private StatsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StatsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StatsCase forNumber(int value) {
+        switch (value) {
+          case 1: return BOOLEAN_STATS;
+          case 2: return NUMERIC_STATS;
+          case 3: return STRING_STATS;
+          case 0: return STATS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StatsCase
+    getStatsCase() {
+      return StatsCase.forNumber(
+          statsCase_);
+    }
+
+    public static final int BOOLEAN_STATS_FIELD_NUMBER = 1;
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     * @return Whether the booleanStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasBooleanStats() {
+      return statsCase_ == 1;
+    }
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     * @return The booleanStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.BooleanStats getBooleanStats() {
+      if (statsCase_ == 1) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder getBooleanStatsOrBuilder() {
+      if (statsCase_ == 1) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+    }
+
+    public static final int NUMERIC_STATS_FIELD_NUMBER = 2;
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     * @return Whether the numericStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasNumericStats() {
+      return statsCase_ == 2;
+    }
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     * @return The numericStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.NumericStats getNumericStats() {
+      if (statsCase_ == 2) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder getNumericStatsOrBuilder() {
+      if (statsCase_ == 2) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+    }
+
+    public static final int STRING_STATS_FIELD_NUMBER = 3;
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     * @return Whether the stringStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasStringStats() {
+      return statsCase_ == 3;
+    }
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     * @return The stringStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.StringStats getStringStats() {
+      if (statsCase_ == 3) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder getStringStatsOrBuilder() {
+      if (statsCase_ == 3) {
+         return (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_;
+      }
+      return com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (statsCase_ == 1) {
+        output.writeMessage(1, (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_);
+      }
+      if (statsCase_ == 2) {
+        output.writeMessage(2, (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_);
+      }
+      if (statsCase_ == 3) {
+        output.writeMessage(3, (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (statsCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_);
+      }
+      if (statsCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_);
+      }
+      if (statsCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobuf.stats.Stats.TypeStats)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobuf.stats.Stats.TypeStats other = (com.hilohq.hilo.protobuf.stats.Stats.TypeStats) obj;
+
+      if (!getStatsCase().equals(other.getStatsCase())) return false;
+      switch (statsCase_) {
+        case 1:
+          if (!getBooleanStats()
+              .equals(other.getBooleanStats())) return false;
+          break;
+        case 2:
+          if (!getNumericStats()
+              .equals(other.getNumericStats())) return false;
+          break;
+        case 3:
+          if (!getStringStats()
+              .equals(other.getStringStats())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (statsCase_) {
+        case 1:
+          hash = (37 * hash) + BOOLEAN_STATS_FIELD_NUMBER;
+          hash = (53 * hash) + getBooleanStats().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + NUMERIC_STATS_FIELD_NUMBER;
+          hash = (53 * hash) + getNumericStats().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STRING_STATS_FIELD_NUMBER;
+          hash = (53 * hash) + getStringStats().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobuf.stats.Stats.TypeStats prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.stats.TypeStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.stats.TypeStats)
+        com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_TypeStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_TypeStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobuf.stats.Stats.TypeStats.class, com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobuf.stats.Stats.TypeStats.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        statsCase_ = 0;
+        stats_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_TypeStats_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStats getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobuf.stats.Stats.TypeStats.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStats build() {
+        com.hilohq.hilo.protobuf.stats.Stats.TypeStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStats buildPartial() {
+        com.hilohq.hilo.protobuf.stats.Stats.TypeStats result = new com.hilohq.hilo.protobuf.stats.Stats.TypeStats(this);
+        if (statsCase_ == 1) {
+          if (booleanStatsBuilder_ == null) {
+            result.stats_ = stats_;
+          } else {
+            result.stats_ = booleanStatsBuilder_.build();
+          }
+        }
+        if (statsCase_ == 2) {
+          if (numericStatsBuilder_ == null) {
+            result.stats_ = stats_;
+          } else {
+            result.stats_ = numericStatsBuilder_.build();
+          }
+        }
+        if (statsCase_ == 3) {
+          if (stringStatsBuilder_ == null) {
+            result.stats_ = stats_;
+          } else {
+            result.stats_ = stringStatsBuilder_.build();
+          }
+        }
+        result.statsCase_ = statsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobuf.stats.Stats.TypeStats) {
+          return mergeFrom((com.hilohq.hilo.protobuf.stats.Stats.TypeStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobuf.stats.Stats.TypeStats other) {
+        if (other == com.hilohq.hilo.protobuf.stats.Stats.TypeStats.getDefaultInstance()) return this;
+        switch (other.getStatsCase()) {
+          case BOOLEAN_STATS: {
+            mergeBooleanStats(other.getBooleanStats());
+            break;
+          }
+          case NUMERIC_STATS: {
+            mergeNumericStats(other.getNumericStats());
+            break;
+          }
+          case STRING_STATS: {
+            mergeStringStats(other.getStringStats());
+            break;
+          }
+          case STATS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobuf.stats.Stats.TypeStats parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobuf.stats.Stats.TypeStats) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int statsCase_ = 0;
+      private java.lang.Object stats_;
+      public StatsCase
+          getStatsCase() {
+        return StatsCase.forNumber(
+            statsCase_);
+      }
+
+      public Builder clearStats() {
+        statsCase_ = 0;
+        stats_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.BooleanStats, com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder> booleanStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       * @return Whether the booleanStats field is set.
+       */
+      @java.lang.Override
+      public boolean hasBooleanStats() {
+        return statsCase_ == 1;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       * @return The booleanStats.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.BooleanStats getBooleanStats() {
+        if (booleanStatsBuilder_ == null) {
+          if (statsCase_ == 1) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+        } else {
+          if (statsCase_ == 1) {
+            return booleanStatsBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      public Builder setBooleanStats(com.hilohq.hilo.protobuf.stats.Stats.BooleanStats value) {
+        if (booleanStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stats_ = value;
+          onChanged();
+        } else {
+          booleanStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      public Builder setBooleanStats(
+          com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder builderForValue) {
+        if (booleanStatsBuilder_ == null) {
+          stats_ = builderForValue.build();
+          onChanged();
+        } else {
+          booleanStatsBuilder_.setMessage(builderForValue.build());
+        }
+        statsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      public Builder mergeBooleanStats(com.hilohq.hilo.protobuf.stats.Stats.BooleanStats value) {
+        if (booleanStatsBuilder_ == null) {
+          if (statsCase_ == 1 &&
+              stats_ != com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance()) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.newBuilder((com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            stats_ = value;
+          }
+          onChanged();
+        } else {
+          if (statsCase_ == 1) {
+            booleanStatsBuilder_.mergeFrom(value);
+          }
+          booleanStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      public Builder clearBooleanStats() {
+        if (booleanStatsBuilder_ == null) {
+          if (statsCase_ == 1) {
+            statsCase_ = 0;
+            stats_ = null;
+            onChanged();
+          }
+        } else {
+          if (statsCase_ == 1) {
+            statsCase_ = 0;
+            stats_ = null;
+          }
+          booleanStatsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder getBooleanStatsBuilder() {
+        return getBooleanStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder getBooleanStatsOrBuilder() {
+        if ((statsCase_ == 1) && (booleanStatsBuilder_ != null)) {
+          return booleanStatsBuilder_.getMessageOrBuilder();
+        } else {
+          if (statsCase_ == 1) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.BooleanStats boolean_stats = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.BooleanStats, com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder> 
+          getBooleanStatsFieldBuilder() {
+        if (booleanStatsBuilder_ == null) {
+          if (!(statsCase_ == 1)) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.getDefaultInstance();
+          }
+          booleanStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobuf.stats.Stats.BooleanStats, com.hilohq.hilo.protobuf.stats.Stats.BooleanStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.BooleanStatsOrBuilder>(
+                  (com.hilohq.hilo.protobuf.stats.Stats.BooleanStats) stats_,
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        statsCase_ = 1;
+        onChanged();;
+        return booleanStatsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.NumericStats, com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder> numericStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       * @return Whether the numericStats field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumericStats() {
+        return statsCase_ == 2;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       * @return The numericStats.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.NumericStats getNumericStats() {
+        if (numericStatsBuilder_ == null) {
+          if (statsCase_ == 2) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+        } else {
+          if (statsCase_ == 2) {
+            return numericStatsBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      public Builder setNumericStats(com.hilohq.hilo.protobuf.stats.Stats.NumericStats value) {
+        if (numericStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stats_ = value;
+          onChanged();
+        } else {
+          numericStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      public Builder setNumericStats(
+          com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder builderForValue) {
+        if (numericStatsBuilder_ == null) {
+          stats_ = builderForValue.build();
+          onChanged();
+        } else {
+          numericStatsBuilder_.setMessage(builderForValue.build());
+        }
+        statsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      public Builder mergeNumericStats(com.hilohq.hilo.protobuf.stats.Stats.NumericStats value) {
+        if (numericStatsBuilder_ == null) {
+          if (statsCase_ == 2 &&
+              stats_ != com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance()) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.NumericStats.newBuilder((com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            stats_ = value;
+          }
+          onChanged();
+        } else {
+          if (statsCase_ == 2) {
+            numericStatsBuilder_.mergeFrom(value);
+          }
+          numericStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      public Builder clearNumericStats() {
+        if (numericStatsBuilder_ == null) {
+          if (statsCase_ == 2) {
+            statsCase_ = 0;
+            stats_ = null;
+            onChanged();
+          }
+        } else {
+          if (statsCase_ == 2) {
+            statsCase_ = 0;
+            stats_ = null;
+          }
+          numericStatsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder getNumericStatsBuilder() {
+        return getNumericStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder getNumericStatsOrBuilder() {
+        if ((statsCase_ == 2) && (numericStatsBuilder_ != null)) {
+          return numericStatsBuilder_.getMessageOrBuilder();
+        } else {
+          if (statsCase_ == 2) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.NumericStats numeric_stats = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.NumericStats, com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder> 
+          getNumericStatsFieldBuilder() {
+        if (numericStatsBuilder_ == null) {
+          if (!(statsCase_ == 2)) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.NumericStats.getDefaultInstance();
+          }
+          numericStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobuf.stats.Stats.NumericStats, com.hilohq.hilo.protobuf.stats.Stats.NumericStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.NumericStatsOrBuilder>(
+                  (com.hilohq.hilo.protobuf.stats.Stats.NumericStats) stats_,
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        statsCase_ = 2;
+        onChanged();;
+        return numericStatsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.StringStats, com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder> stringStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       * @return Whether the stringStats field is set.
+       */
+      @java.lang.Override
+      public boolean hasStringStats() {
+        return statsCase_ == 3;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       * @return The stringStats.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.StringStats getStringStats() {
+        if (stringStatsBuilder_ == null) {
+          if (statsCase_ == 3) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+        } else {
+          if (statsCase_ == 3) {
+            return stringStatsBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      public Builder setStringStats(com.hilohq.hilo.protobuf.stats.Stats.StringStats value) {
+        if (stringStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stats_ = value;
+          onChanged();
+        } else {
+          stringStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      public Builder setStringStats(
+          com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder builderForValue) {
+        if (stringStatsBuilder_ == null) {
+          stats_ = builderForValue.build();
+          onChanged();
+        } else {
+          stringStatsBuilder_.setMessage(builderForValue.build());
+        }
+        statsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      public Builder mergeStringStats(com.hilohq.hilo.protobuf.stats.Stats.StringStats value) {
+        if (stringStatsBuilder_ == null) {
+          if (statsCase_ == 3 &&
+              stats_ != com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance()) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.StringStats.newBuilder((com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            stats_ = value;
+          }
+          onChanged();
+        } else {
+          if (statsCase_ == 3) {
+            stringStatsBuilder_.mergeFrom(value);
+          }
+          stringStatsBuilder_.setMessage(value);
+        }
+        statsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      public Builder clearStringStats() {
+        if (stringStatsBuilder_ == null) {
+          if (statsCase_ == 3) {
+            statsCase_ = 0;
+            stats_ = null;
+            onChanged();
+          }
+        } else {
+          if (statsCase_ == 3) {
+            statsCase_ = 0;
+            stats_ = null;
+          }
+          stringStatsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder getStringStatsBuilder() {
+        return getStringStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder getStringStatsOrBuilder() {
+        if ((statsCase_ == 3) && (stringStatsBuilder_ != null)) {
+          return stringStatsBuilder_.getMessageOrBuilder();
+        } else {
+          if (statsCase_ == 3) {
+            return (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_;
+          }
+          return com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.StringStats string_stats = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.StringStats, com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder> 
+          getStringStatsFieldBuilder() {
+        if (stringStatsBuilder_ == null) {
+          if (!(statsCase_ == 3)) {
+            stats_ = com.hilohq.hilo.protobuf.stats.Stats.StringStats.getDefaultInstance();
+          }
+          stringStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobuf.stats.Stats.StringStats, com.hilohq.hilo.protobuf.stats.Stats.StringStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.StringStatsOrBuilder>(
+                  (com.hilohq.hilo.protobuf.stats.Stats.StringStats) stats_,
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        statsCase_ = 3;
+        onChanged();;
+        return stringStatsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.stats.TypeStats)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.stats.TypeStats)
+    private static final com.hilohq.hilo.protobuf.stats.Stats.TypeStats DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobuf.stats.Stats.TypeStats();
+    }
+
+    public static com.hilohq.hilo.protobuf.stats.Stats.TypeStats getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TypeStats>
+        PARSER = new com.google.protobuf.AbstractParser<TypeStats>() {
+      @java.lang.Override
+      public TypeStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TypeStats(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TypeStats> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TypeStats> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.TypeStats getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StatsEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.stats.StatsEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     * @return Whether the stats field is set.
+     */
+    boolean hasStats();
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     * @return The stats.
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.TypeStats getStats();
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     */
+    com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder getStatsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.stats.StatsEvent}
+   */
+  public static final class StatsEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.stats.StatsEvent)
+      StatsEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StatsEvent.newBuilder() to construct.
+    private StatsEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StatsEvent() {
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StatsEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StatsEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder subBuilder = null;
+              if (stats_ != null) {
+                subBuilder = stats_.toBuilder();
+              }
+              stats_ = input.readMessage(com.hilohq.hilo.protobuf.stats.Stats.TypeStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stats_);
+                stats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_StatsEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_StatsEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.class, com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobuf.stats.Stats.TypeStats stats_;
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     * @return Whether the stats field is set.
+     */
+    @java.lang.Override
+    public boolean hasStats() {
+      return stats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     * @return The stats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.TypeStats getStats() {
+      return stats_ == null ? com.hilohq.hilo.protobuf.stats.Stats.TypeStats.getDefaultInstance() : stats_;
+    }
+    /**
+     * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder getStatsOrBuilder() {
+      return getStats();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (stats_ != null) {
+        output.writeMessage(2, getStats());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (stats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStats());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobuf.stats.Stats.StatsEvent)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobuf.stats.Stats.StatsEvent other = (com.hilohq.hilo.protobuf.stats.Stats.StatsEvent) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasStats() != other.hasStats()) return false;
+      if (hasStats()) {
+        if (!getStats()
+            .equals(other.getStats())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (hasStats()) {
+        hash = (37 * hash) + STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getStats().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobuf.stats.Stats.StatsEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.stats.StatsEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.stats.StatsEvent)
+        com.hilohq.hilo.protobuf.stats.Stats.StatsEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_StatsEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_StatsEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.class, com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        if (statsBuilder_ == null) {
+          stats_ = null;
+        } else {
+          stats_ = null;
+          statsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobuf.stats.Stats.internal_static_hilo_protobufs_stats_StatsEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.StatsEvent getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.StatsEvent build() {
+        com.hilohq.hilo.protobuf.stats.Stats.StatsEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobuf.stats.Stats.StatsEvent buildPartial() {
+        com.hilohq.hilo.protobuf.stats.Stats.StatsEvent result = new com.hilohq.hilo.protobuf.stats.Stats.StatsEvent(this);
+        result.key_ = key_;
+        if (statsBuilder_ == null) {
+          result.stats_ = stats_;
+        } else {
+          result.stats_ = statsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobuf.stats.Stats.StatsEvent) {
+          return mergeFrom((com.hilohq.hilo.protobuf.stats.Stats.StatsEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobuf.stats.Stats.StatsEvent other) {
+        if (other == com.hilohq.hilo.protobuf.stats.Stats.StatsEvent.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasStats()) {
+          mergeStats(other.getStats());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobuf.stats.Stats.StatsEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobuf.stats.Stats.StatsEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.hilohq.hilo.protobuf.stats.Stats.TypeStats stats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.TypeStats, com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder> statsBuilder_;
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       * @return Whether the stats field is set.
+       */
+      public boolean hasStats() {
+        return statsBuilder_ != null || stats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       * @return The stats.
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStats getStats() {
+        if (statsBuilder_ == null) {
+          return stats_ == null ? com.hilohq.hilo.protobuf.stats.Stats.TypeStats.getDefaultInstance() : stats_;
+        } else {
+          return statsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public Builder setStats(com.hilohq.hilo.protobuf.stats.Stats.TypeStats value) {
+        if (statsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stats_ = value;
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public Builder setStats(
+          com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder builderForValue) {
+        if (statsBuilder_ == null) {
+          stats_ = builderForValue.build();
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public Builder mergeStats(com.hilohq.hilo.protobuf.stats.Stats.TypeStats value) {
+        if (statsBuilder_ == null) {
+          if (stats_ != null) {
+            stats_ =
+              com.hilohq.hilo.protobuf.stats.Stats.TypeStats.newBuilder(stats_).mergeFrom(value).buildPartial();
+          } else {
+            stats_ = value;
+          }
+          onChanged();
+        } else {
+          statsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public Builder clearStats() {
+        if (statsBuilder_ == null) {
+          stats_ = null;
+          onChanged();
+        } else {
+          stats_ = null;
+          statsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder getStatsBuilder() {
+        
+        onChanged();
+        return getStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder getStatsOrBuilder() {
+        if (statsBuilder_ != null) {
+          return statsBuilder_.getMessageOrBuilder();
+        } else {
+          return stats_ == null ?
+              com.hilohq.hilo.protobuf.stats.Stats.TypeStats.getDefaultInstance() : stats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.stats.TypeStats stats = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobuf.stats.Stats.TypeStats, com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder> 
+          getStatsFieldBuilder() {
+        if (statsBuilder_ == null) {
+          statsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobuf.stats.Stats.TypeStats, com.hilohq.hilo.protobuf.stats.Stats.TypeStats.Builder, com.hilohq.hilo.protobuf.stats.Stats.TypeStatsOrBuilder>(
+                  getStats(),
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        return statsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.stats.StatsEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.stats.StatsEvent)
+    private static final com.hilohq.hilo.protobuf.stats.Stats.StatsEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobuf.stats.Stats.StatsEvent();
+    }
+
+    public static com.hilohq.hilo.protobuf.stats.Stats.StatsEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StatsEvent>
+        PARSER = new com.google.protobuf.AbstractParser<StatsEvent>() {
+      @java.lang.Override
+      public StatsEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StatsEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StatsEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StatsEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobuf.stats.Stats.StatsEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_stats_BooleanStats_descriptor;
   private static final 
@@ -2746,6 +4693,16 @@ public final class Stats {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_stats_StringStats_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_stats_TypeStats_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_stats_TypeStats_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_stats_StatsEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_stats_StatsEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2769,8 +4726,15 @@ public final class Stats {
       "ericPercentileHistogram\022\031\n\021base64_stats_" +
       "repr\030\010 \001(\t\"V\n\013StringStats\022\r\n\005count\030\001 \001(\003" +
       "\0228\n\thistogram\030\002 \001(\0132%.hilo.protobufs.sta" +
-      "ts.StringHistogramB \n\036com.hilohq.hilo.pr" +
-      "otobuf.statsb\006proto3"
+      "ts.StringHistogram\"\311\001\n\tTypeStats\022;\n\rbool" +
+      "ean_stats\030\001 \001(\0132\".hilo.protobufs.stats.B" +
+      "ooleanStatsH\000\022;\n\rnumeric_stats\030\002 \001(\0132\".h" +
+      "ilo.protobufs.stats.NumericStatsH\000\0229\n\014st" +
+      "ring_stats\030\003 \001(\0132!.hilo.protobufs.stats." +
+      "StringStatsH\000B\007\n\005stats\"I\n\nStatsEvent\022\013\n\003" +
+      "key\030\001 \001(\t\022.\n\005stats\030\002 \001(\0132\037.hilo.protobuf" +
+      "s.stats.TypeStatsB \n\036com.hilohq.hilo.pro" +
+      "tobuf.statsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2795,6 +4759,18 @@ public final class Stats {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_stats_StringStats_descriptor,
         new java.lang.String[] { "Count", "Histogram", });
+    internal_static_hilo_protobufs_stats_TypeStats_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_hilo_protobufs_stats_TypeStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_stats_TypeStats_descriptor,
+        new java.lang.String[] { "BooleanStats", "NumericStats", "StringStats", "Stats", });
+    internal_static_hilo_protobufs_stats_StatsEvent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_hilo_protobufs_stats_StatsEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_stats_StatsEvent_descriptor,
+        new java.lang.String[] { "Key", "Stats", });
     com.hilohq.hilo.protobuf.stats.Histogram.getDescriptor();
   }
 
