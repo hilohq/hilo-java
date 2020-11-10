@@ -44,6 +44,7 @@ public final class JsonSchemaGenerateTest {
 
     final var records =
         executionEnvironment.addSource(new FileLineSource("/tmp/logs.txt")).name("source");
+
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");
     executionEnvironment
         .getConfig()
