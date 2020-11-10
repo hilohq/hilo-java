@@ -24,16 +24,16 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
   private final Model.SchemaMetadata metadata;
 
   public JsonSchemaGenerate() {
-    this(UUID.randomUUID().toString(), UUID.randomUUID().toString());
+    this(UUID.randomUUID().toString(), UUID.randomUUID().toString(), UUID.randomUUID().toString());
   }
 
-  public JsonSchemaGenerate(final String projectId, final String sourceId) {
+  public JsonSchemaGenerate(final String projectId, final String sourceId, final String schemaId) {
     this.jsonMapper = new ObjectMapper();
     this.metadata =
         Model.SchemaMetadata.newBuilder()
             .setProjectId(projectId)
             .setSourceId(sourceId)
-            .setSchemaId(UUID.randomUUID().toString())
+            .setSchemaId(schemaId)
             .build();
   }
 

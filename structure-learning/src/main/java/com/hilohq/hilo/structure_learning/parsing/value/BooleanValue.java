@@ -7,7 +7,12 @@ public final class BooleanValue implements Value {
     this.value = value;
   }
 
-  public boolean value() {
+  @Override
+  public boolean boolValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.Bool;
   }
 }

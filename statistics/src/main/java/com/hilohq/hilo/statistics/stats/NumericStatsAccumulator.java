@@ -3,7 +3,7 @@ package com.hilohq.hilo.statistics.stats;
 import com.hilohq.hilo.protobuf.stats.Stats;
 import java.util.Base64;
 
-public final class NumericStatsAccumulator implements StatsAccumulator<Double, Stats.NumericStats> {
+public final class NumericStatsAccumulator implements TypeStatsAccumulator<Double> {
   private final com.google.common.math.StatsAccumulator statsAccumulator;
   private final NumericPercentileHistogramAccumulator valueHistogramAccumulator;
   private final DifferentialPercentileHistogramAccumulator differentialHistogramAccumulator;
@@ -30,6 +30,15 @@ public final class NumericStatsAccumulator implements StatsAccumulator<Double, S
     valueHistogramAccumulator.add(value);
   }
 
+  public static NumericStatsAccumulator fromSnapshot(final Stats.TypeStats stats) {
+    if (!stats.hasNumericStats()) {
+      throw new IllegalArgumentException(
+          "NumericStatsAccumulator expects an instance of TypeStats " + "with NumericStats set");
+    }
+
+    return fromSnapshot(stats.getNumericStats());
+  }
+
   public static NumericStatsAccumulator fromSnapshot(final Stats.NumericStats stats) {
     final var valueHistogramAccumulator =
         NumericPercentileHistogramAccumulator.fromSnapshot(stats.getValueHistogram());
@@ -45,17 +54,20 @@ public final class NumericStatsAccumulator implements StatsAccumulator<Double, S
   }
 
   @Override
-  public Stats.NumericStats snapshot() {
-    return Stats.NumericStats.newBuilder()
-        .setCount(statsAccumulator.count())
-        .setMax(statsAccumulator.max())
-        .setMin(statsAccumulator.min())
-        .setMean(statsAccumulator.mean())
-        .setStandardDeviation(statsAccumulator.sampleStandardDeviation())
-        .setValueHistogram(valueHistogramAccumulator.snapshot())
-        .setDifferentialHistogram(differentialHistogramAccumulator.snapshot())
-        .setBase64StatsRepr(
-            Base64.getEncoder().encodeToString(statsAccumulator.snapshot().toByteArray()))
+  public Stats.TypeStats snapshot() {
+    return Stats.TypeStats.newBuilder()
+        .setNumericStats(
+            Stats.NumericStats.newBuilder()
+                .setCount(statsAccumulator.count())
+                .setMax(statsAccumulator.max())
+                .setMin(statsAccumulator.min())
+                .setMean(statsAccumulator.mean())
+                .setStandardDeviation(statsAccumulator.sampleStandardDeviation())
+                .setValueHistogram(valueHistogramAccumulator.snapshot())
+                .setDifferentialHistogram(differentialHistogramAccumulator.snapshot())
+                .setBase64StatsRepr(
+                    Base64.getEncoder().encodeToString(statsAccumulator.snapshot().toByteArray()))
+                .build())
         .build();
   }
 }

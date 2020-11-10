@@ -1,5 +1,6 @@
 package com.hilohq.hilo.connector.mongodb.client;
 
+import com.hilohq.hilo.connector.mongodb.exceptions.MongoFindException;
 import java.util.concurrent.CompletableFuture;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -15,6 +16,7 @@ public final class FindSingleResultSubscriber<T> implements Subscriber<T> {
   @Override
   public void onSubscribe(final Subscription subscription) {
     this.subscription = subscription;
+    this.subscription.request(1);
   }
 
   @Override
@@ -29,5 +31,7 @@ public final class FindSingleResultSubscriber<T> implements Subscriber<T> {
   }
 
   @Override
-  public void onComplete() {}
+  public void onComplete() {
+    future.completeExceptionally(new MongoFindException("no result found"));
+  }
 }

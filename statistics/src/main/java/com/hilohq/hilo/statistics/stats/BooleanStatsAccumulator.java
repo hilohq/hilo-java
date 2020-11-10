@@ -3,8 +3,7 @@ package com.hilohq.hilo.statistics.stats;
 import com.hilohq.hilo.protobuf.stats.Histogram;
 import com.hilohq.hilo.protobuf.stats.Stats;
 
-public final class BooleanStatsAccumulator
-    implements StatsAccumulator<Boolean, Stats.BooleanStats> {
+public final class BooleanStatsAccumulator implements TypeStatsAccumulator<Boolean> {
   private final BooleanHistogramAccumulator histogramAccumulator;
 
   public BooleanStatsAccumulator() {
@@ -24,8 +23,16 @@ public final class BooleanStatsAccumulator
     return new BooleanStatsAccumulator(histogramAccumulator);
   }
 
+  public static BooleanStatsAccumulator fromSnapshot(final Stats.TypeStats stats) {
+    if (!stats.hasBooleanStats()) {
+      throw new IllegalArgumentException(
+          "BooleanStatsAccumulator expects an instance of TypeStats " + "with BooleanStats set");
+    }
+    return fromSnapshot(stats.getBooleanStats());
+  }
+
   @Override
-  public Stats.BooleanStats snapshot() {
+  public Stats.TypeStats snapshot() {
     final var histogram = histogramAccumulator.snapshot();
     final var count =
         histogram
@@ -33,6 +40,9 @@ public final class BooleanStatsAccumulator
             .stream()
             .mapToLong(Histogram.BooleanHistogram.Bucket::getCount)
             .sum();
-    return Stats.BooleanStats.newBuilder().setHistogram(histogram).setCount(count).build();
+    return Stats.TypeStats.newBuilder()
+        .setBooleanStats(
+            Stats.BooleanStats.newBuilder().setHistogram(histogram).setCount(count).build())
+        .build();
   }
 }

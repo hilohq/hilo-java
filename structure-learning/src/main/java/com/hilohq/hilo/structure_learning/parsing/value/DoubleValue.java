@@ -7,7 +7,12 @@ public final class DoubleValue implements Value {
     this.value = value;
   }
 
-  public double value() {
+  @Override
+  public double doubleValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.Double;
   }
 }

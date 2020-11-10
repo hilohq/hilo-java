@@ -33,6 +33,7 @@ public final class JsonSchemaGenerateTest {
 
   private static final String PROJECT_ID = "PROJECT_ID" + UUID.randomUUID().toString();
   private static final String SOURCE_ID = "SOURCE_ID" + UUID.randomUUID().toString();
+  private static final String SCHEMA_ID = "SCHEMA_ID";
 
   private void generateSchema() throws Exception {
     final var executionEnvironment =
@@ -54,7 +55,9 @@ public final class JsonSchemaGenerateTest {
         new FlinkKafkaProducer<Model.SchemaEvent>(
             "kafka:9092", "SchemaEvent", new ProtobufSerializationSchema<>());
     final DataStream<Model.SchemaEvent> events =
-        records.process(new JsonSchemaGenerate(PROJECT_ID, SOURCE_ID)).name("generate-schema");
+        records
+            .process(new JsonSchemaGenerate(PROJECT_ID, SOURCE_ID, SCHEMA_ID))
+            .name("generate-schema");
 
     events.addSink(producer).name("sink");
     executionEnvironment.execute("EventGeneration");

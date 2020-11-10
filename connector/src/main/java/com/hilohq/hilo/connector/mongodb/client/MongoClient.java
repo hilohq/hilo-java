@@ -69,7 +69,6 @@ public final class MongoClient {
       final Bson filter,
       final Document document,
       final UpdateOptions options) {
-    System.out.println("UPDATE ONE ");
     final var future = new CompletableFuture<Void>();
     final var subscriber = new ResultSubscriber<UpdateResult>(future);
     final var publisher =

@@ -7,7 +7,12 @@ public final class IntValue implements Value {
     this.value = value;
   }
 
-  public int value() {
+  @Override
+  public int intValue() {
     return value;
+  }
+
+  public ValueType type() {
+    return ValueType.Int;
   }
 }
