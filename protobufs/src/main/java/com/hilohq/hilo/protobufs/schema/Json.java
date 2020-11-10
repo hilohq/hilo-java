@@ -20,64 +20,64 @@ public final class Json {
   public enum JsonType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>BOOLEAN = 0;</code>
+     * <code>JSON_BOOLEAN = 0;</code>
      */
-    BOOLEAN(0),
+    JSON_BOOLEAN(0),
     /**
-     * <code>INTEGER = 1;</code>
+     * <code>JSON_INTEGER = 1;</code>
      */
-    INTEGER(1),
+    JSON_INTEGER(1),
     /**
-     * <code>FLOAT = 2;</code>
+     * <code>JSON_FLOAT = 2;</code>
      */
-    FLOAT(2),
+    JSON_FLOAT(2),
     /**
-     * <code>STRING = 3;</code>
+     * <code>JSON_STRING = 3;</code>
      */
-    STRING(3),
+    JSON_STRING(3),
     /**
-     * <code>ARRAY = 4;</code>
+     * <code>JSON_ARRAY = 4;</code>
      */
-    ARRAY(4),
+    JSON_ARRAY(4),
     /**
-     * <code>NULL = 5;</code>
+     * <code>JSON_NULL = 5;</code>
      */
-    NULL(5),
+    JSON_NULL(5),
     /**
-     * <code>OBJECT = 6;</code>
+     * <code>JSON_OBJECT = 6;</code>
      */
-    OBJECT(6),
+    JSON_OBJECT(6),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>BOOLEAN = 0;</code>
+     * <code>JSON_BOOLEAN = 0;</code>
      */
-    public static final int BOOLEAN_VALUE = 0;
+    public static final int JSON_BOOLEAN_VALUE = 0;
     /**
-     * <code>INTEGER = 1;</code>
+     * <code>JSON_INTEGER = 1;</code>
      */
-    public static final int INTEGER_VALUE = 1;
+    public static final int JSON_INTEGER_VALUE = 1;
     /**
-     * <code>FLOAT = 2;</code>
+     * <code>JSON_FLOAT = 2;</code>
      */
-    public static final int FLOAT_VALUE = 2;
+    public static final int JSON_FLOAT_VALUE = 2;
     /**
-     * <code>STRING = 3;</code>
+     * <code>JSON_STRING = 3;</code>
      */
-    public static final int STRING_VALUE = 3;
+    public static final int JSON_STRING_VALUE = 3;
     /**
-     * <code>ARRAY = 4;</code>
+     * <code>JSON_ARRAY = 4;</code>
      */
-    public static final int ARRAY_VALUE = 4;
+    public static final int JSON_ARRAY_VALUE = 4;
     /**
-     * <code>NULL = 5;</code>
+     * <code>JSON_NULL = 5;</code>
      */
-    public static final int NULL_VALUE = 5;
+    public static final int JSON_NULL_VALUE = 5;
     /**
-     * <code>OBJECT = 6;</code>
+     * <code>JSON_OBJECT = 6;</code>
      */
-    public static final int OBJECT_VALUE = 6;
+    public static final int JSON_OBJECT_VALUE = 6;
 
 
     public final int getNumber() {
@@ -104,13 +104,13 @@ public final class Json {
      */
     public static JsonType forNumber(int value) {
       switch (value) {
-        case 0: return BOOLEAN;
-        case 1: return INTEGER;
-        case 2: return FLOAT;
-        case 3: return STRING;
-        case 4: return ARRAY;
-        case 5: return NULL;
-        case 6: return OBJECT;
+        case 0: return JSON_BOOLEAN;
+        case 1: return JSON_INTEGER;
+        case 2: return JSON_FLOAT;
+        case 3: return JSON_STRING;
+        case 4: return JSON_ARRAY;
+        case 5: return JSON_NULL;
+        case 6: return JSON_OBJECT;
         default: return null;
       }
     }
@@ -2015,7 +2015,7 @@ public final class Json {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.schema.Json.JsonType.BOOLEAN.getNumber()) {
+      if (type_ != com.hilohq.hilo.protobufs.schema.Json.JsonType.JSON_BOOLEAN.getNumber()) {
         output.writeEnum(4, type_);
       }
       unknownFields.writeTo(output);
@@ -2036,7 +2036,7 @@ public final class Json {
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.schema.Json.JsonType.BOOLEAN.getNumber()) {
+      if (type_ != com.hilohq.hilo.protobufs.schema.Json.JsonType.JSON_BOOLEAN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, type_);
       }
@@ -16222,10 +16222,11 @@ public final class Json {
       "obufs.schema.JsonSchemaModel.FieldsEntry" +
       "\032T\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 " +
       "\001(\0132%.hilo.protobufs.schema.JsonFieldMod" +
-      "el:\0028\001*\\\n\010JsonType\022\013\n\007BOOLEAN\020\000\022\013\n\007INTEG" +
-      "ER\020\001\022\t\n\005FLOAT\020\002\022\n\n\006STRING\020\003\022\t\n\005ARRAY\020\004\022\010" +
-      "\n\004NULL\020\005\022\n\n\006OBJECT\020\006B\"\n com.hilohq.hilo." +
-      "protobufs.schemab\006proto3"
+      "el:\0028\001*\177\n\010JsonType\022\020\n\014JSON_BOOLEAN\020\000\022\020\n\014" +
+      "JSON_INTEGER\020\001\022\016\n\nJSON_FLOAT\020\002\022\017\n\013JSON_S" +
+      "TRING\020\003\022\016\n\nJSON_ARRAY\020\004\022\r\n\tJSON_NULL\020\005\022\017" +
+      "\n\013JSON_OBJECT\020\006B\"\n com.hilohq.hilo.proto" +
+      "bufs.schemab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

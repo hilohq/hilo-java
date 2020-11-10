@@ -60,19 +60,19 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
     }
 
     if (node.isTextual()) {
-      updateNodeType(path, name, Json.JsonType.STRING, schema);
+      updateNodeType(path, name, Json.JsonType.JSON_STRING, schema);
 
     } else if (node.isIntegralNumber()) {
-      updateNodeType(path, name, Json.JsonType.INTEGER, schema);
+      updateNodeType(path, name, Json.JsonType.JSON_INTEGER, schema);
 
     } else if (node.isBoolean()) {
-      updateNodeType(path, name, Json.JsonType.BOOLEAN, schema);
+      updateNodeType(path, name, Json.JsonType.JSON_BOOLEAN, schema);
 
     } else if (node.isFloat()) {
-      updateNodeType(path, name, Json.JsonType.FLOAT, schema);
+      updateNodeType(path, name, Json.JsonType.JSON_FLOAT, schema);
 
     } else if (node.isNull()) {
-      updateNodeType(path, name, Json.JsonType.NULL, schema);
+      updateNodeType(path, name, Json.JsonType.JSON_NULL, schema);
 
     } else {
       throw new IllegalArgumentException("unexpected node type");
@@ -100,7 +100,7 @@ public final class JsonSchemaGenerate extends SchemaGenerate<TextLineBatch> {
       final String name,
       final JsonNode node,
       final Map<JsonPropertyPath, JsonFieldStats> schema) {
-    updateNodeType(path, name, Json.JsonType.ARRAY, schema);
+    updateNodeType(path, name, Json.JsonType.JSON_ARRAY, schema);
   }
 
   private static void updateSchema(

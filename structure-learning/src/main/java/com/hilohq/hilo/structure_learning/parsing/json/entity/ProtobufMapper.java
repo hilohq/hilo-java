@@ -18,26 +18,26 @@ public final class ProtobufMapper {
 
   public static Json.JsonTypeHistogram toProtobuf(final JsonTypeHistogram histogram) {
     return Json.JsonTypeHistogram.newBuilder()
-        .setArrayCount(histogram.counts(Json.JsonType.ARRAY))
-        .setBooleanCount(histogram.counts(Json.JsonType.BOOLEAN))
-        .setIntegerCount(histogram.counts(Json.JsonType.INTEGER))
-        .setFloatCount(histogram.counts(Json.JsonType.FLOAT))
-        .setStringCount(histogram.counts(Json.JsonType.STRING))
-        .setNullCount(histogram.counts(Json.JsonType.NULL))
-        .setObjectCount(histogram.counts(Json.JsonType.OBJECT))
+        .setArrayCount(histogram.counts(Json.JsonType.JSON_ARRAY))
+        .setBooleanCount(histogram.counts(Json.JsonType.JSON_BOOLEAN))
+        .setIntegerCount(histogram.counts(Json.JsonType.JSON_INTEGER))
+        .setFloatCount(histogram.counts(Json.JsonType.JSON_FLOAT))
+        .setStringCount(histogram.counts(Json.JsonType.JSON_STRING))
+        .setNullCount(histogram.counts(Json.JsonType.JSON_NULL))
+        .setObjectCount(histogram.counts(Json.JsonType.JSON_OBJECT))
         .build();
   }
 
   public static JsonTypeHistogram fromProtobuf(final Json.JsonTypeHistogram histogram) {
     final JsonTypeHistogram typeHistogram = new JsonTypeHistogram();
 
-    typeHistogram.observe(Json.JsonType.ARRAY, histogram.getArrayCount());
-    typeHistogram.observe(Json.JsonType.BOOLEAN, histogram.getBooleanCount());
-    typeHistogram.observe(Json.JsonType.INTEGER, histogram.getIntegerCount());
-    typeHistogram.observe(Json.JsonType.FLOAT, histogram.getFloatCount());
-    typeHistogram.observe(Json.JsonType.STRING, histogram.getStringCount());
-    typeHistogram.observe(Json.JsonType.NULL, histogram.getNullCount());
-    typeHistogram.observe(Json.JsonType.OBJECT, histogram.getObjectCount());
+    typeHistogram.observe(Json.JsonType.JSON_ARRAY, histogram.getArrayCount());
+    typeHistogram.observe(Json.JsonType.JSON_BOOLEAN, histogram.getBooleanCount());
+    typeHistogram.observe(Json.JsonType.JSON_INTEGER, histogram.getIntegerCount());
+    typeHistogram.observe(Json.JsonType.JSON_FLOAT, histogram.getFloatCount());
+    typeHistogram.observe(Json.JsonType.JSON_STRING, histogram.getStringCount());
+    typeHistogram.observe(Json.JsonType.JSON_NULL, histogram.getNullCount());
+    typeHistogram.observe(Json.JsonType.JSON_OBJECT, histogram.getObjectCount());
 
     return typeHistogram;
   }
