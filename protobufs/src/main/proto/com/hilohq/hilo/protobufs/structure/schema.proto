@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package hilo.protobufs.structure;
+
+option java_package = "com.hilohq.hilo.protobufs.structure";
+
+import "com/hilohq/hilo/protobufs/structure/json.proto";
+import "com/hilohq/hilo/protobufs/structure/mysql.proto";
+import "com/hilohq/hilo/protobufs/structure/text.proto";
+
+message SchemaMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message SchemaUpdate {
+  SchemaMetadata metadata = 1;
+
+  oneof update {
+    JsonUpdate json = 16;
+    TextUpdate text = 17;
+    MysqlUpdate mysql = 18;
+  }
+}
+
+message SchemaEvent {
+  SchemaMetadata metadata = 1;
+
+  oneof event {
+    JsonEvent json = 16;
+    TextEvent text = 17;
+    MysqlEvent mysql = 18;
+  }
+}
+
+message SchemaFieldsModel {
+  SchemaMetadata metadata = 1;
+
+  oneof schema {
+    JsonFields json = 16;
+    TextFields text = 17;
+    MysqlFields mysql = 18;
+  }
+}
+
+message SchemaLogsModel {
+  SchemaMetadata metadata = 1;
+
+  oneof schema {
+    JsonLogs json = 16;
+    TextLogs text = 17;
+    MysqlLogs mysql = 18;
+  }
+}

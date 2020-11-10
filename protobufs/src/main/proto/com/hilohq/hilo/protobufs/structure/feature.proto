@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package hilo.protobufs.structure;
+
+option java_package = "com.hilohq.hilo.protobufs.structure";
+
+enum FeatureType {
+  FEATURE_BOOLEAN = 0;
+  FEATURE_INTEGER = 1;
+  FEATURE_LONG = 2;
+  FEATURE_FLOAT = 3;
+  FEATURE_DOUBLE = 4;
+  FEATURE_STRING = 5;
+  FEATURE_BYTES = 6;
+}
+
+message Feature {
+  string key = 1;
+  FeatureType type = 2;
+  FeatureStats stats = 3;
+}
+
+message FeatureTypeHistogram {
+  int64 boolean_count = 1;
+  int64 float_count = 2;
+  int64 string_count = 3;
+  int64 integer_count = 4;
+}
+
+message FeatureStats {
+  FeatureTypeHistogram histogram = 1;
+}
+
+message FeaturesEvent {
+  message Stats {
+    string key = 1;
+    FeatureStats feature_stats = 2;
+  }
+
+  oneof event {
+    Stats stats = 1;
+  }
+}
+
+message FeatureCreate {
+  string key = 1;
+  FeatureType type = 2;
+}
+
+message FeatureUpdate {
+  message Feature {
+    string key = 1;
+    FeatureType type = 2;
+  }
+
+  Feature before = 1;
+  Feature after = 2;
+}
+
+message FeatureLog {
+  oneof log {
+    FeatureCreate feature_create = 1;
+    FeatureUpdate feature_update = 2;
+  }
+}
+
+message FeaturesUpdate {
+  oneof update {
+    FeatureLog log = 1;
+    Features features = 2;
+  }
+}
+
+message FeatureLogsModel {
+  FeatureLog logs = 1;
+}
+
+message Features {
+  repeated Feature feature = 1;
+}
+
+message FeaturesModel {
+  Features features = 1;
+}

@@ -22,7 +22,7 @@ public final class JsonSchemaFieldsAggregator
 
   private static Json.JsonType calculateType(final JsonFieldStats stats) {
     var maxCount = 0L;
-    var maxType = Json.JsonType.NULL;
+    var maxType = Json.JsonType.JSON_NULL;
     for (final var countEntries : stats.typeHistogram().counts().entrySet()) {
       if (countEntries.getValue() > maxCount) {
         maxCount = countEntries.getValue();

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package hilo.protobufs.structure;
+
+option java_package = "com.hilohq.hilo.protobufs.structure";
+
+message TextUpdate {
+
+}
+
+message TextEvent {
+
+}
+
+message TextFields {
+
+}
+
+message TextLogs {
+
+}
