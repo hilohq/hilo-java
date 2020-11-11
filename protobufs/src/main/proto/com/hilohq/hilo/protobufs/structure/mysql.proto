@@ -12,10 +12,10 @@ message MysqlEvent {
 
 }
 
-message MysqlFields {
+message MysqlField {
 
 }
 
-message MysqlLogs {
+message MysqlLog {
 
 }

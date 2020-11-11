@@ -850,30 +850,30 @@ public final class Mysql {
 
   }
 
-  public interface MysqlFieldsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.MysqlFields)
+  public interface MysqlFieldOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.MysqlField)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code hilo.protobufs.structure.MysqlFields}
+   * Protobuf type {@code hilo.protobufs.structure.MysqlField}
    */
-  public static final class MysqlFields extends
+  public static final class MysqlField extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.MysqlFields)
-      MysqlFieldsOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.MysqlField)
+      MysqlFieldOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MysqlFields.newBuilder() to construct.
-    private MysqlFields(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MysqlField.newBuilder() to construct.
+    private MysqlField(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MysqlFields() {
+    private MysqlField() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MysqlFields();
+      return new MysqlField();
     }
 
     @java.lang.Override
@@ -881,7 +881,7 @@ public final class Mysql {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MysqlFields(
+    private MysqlField(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -920,15 +920,15 @@ public final class Mysql {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlFields_descriptor;
+      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlField_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlFields_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlField_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder.class);
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -964,10 +964,10 @@ public final class Mysql {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlField)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields other = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) obj;
+      com.hilohq.hilo.protobufs.structure.Mysql.MysqlField other = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -985,69 +985,69 @@ public final class Mysql {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1060,7 +1060,7 @@ public final class Mysql {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Mysql.MysqlField prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1076,26 +1076,26 @@ public final class Mysql {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.structure.MysqlFields}
+     * Protobuf type {@code hilo.protobufs.structure.MysqlField}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.MysqlFields)
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.MysqlField)
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlFields_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlField_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlFields_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlField_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder.class);
+                com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1119,17 +1119,17 @@ public final class Mysql {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlFields_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlField_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields build() {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields result = buildPartial();
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField build() {
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlField result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1137,8 +1137,8 @@ public final class Mysql {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields buildPartial() {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields result = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields(this);
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField buildPartial() {
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlField result = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlField(this);
         onBuilt();
         return result;
       }
@@ -1177,16 +1177,16 @@ public final class Mysql {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) {
-          return mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields)other);
+        if (other instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlField)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields other) {
-        if (other == com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Mysql.MysqlField other) {
+        if (other == com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1202,11 +1202,11 @@ public final class Mysql {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields parsedMessage = null;
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlField parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1228,70 +1228,70 @@ public final class Mysql {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.MysqlFields)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.MysqlField)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.MysqlFields)
-    private static final com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.MysqlField)
+    private static final com.hilohq.hilo.protobufs.structure.Mysql.MysqlField DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlField();
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MysqlFields>
-        PARSER = new com.google.protobuf.AbstractParser<MysqlFields>() {
+    private static final com.google.protobuf.Parser<MysqlField>
+        PARSER = new com.google.protobuf.AbstractParser<MysqlField>() {
       @java.lang.Override
-      public MysqlFields parsePartialFrom(
+      public MysqlField parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MysqlFields(input, extensionRegistry);
+        return new MysqlField(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<MysqlFields> parser() {
+    public static com.google.protobuf.Parser<MysqlField> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MysqlFields> getParserForType() {
+    public com.google.protobuf.Parser<MysqlField> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface MysqlLogsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.MysqlLogs)
+  public interface MysqlLogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.MysqlLog)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code hilo.protobufs.structure.MysqlLogs}
+   * Protobuf type {@code hilo.protobufs.structure.MysqlLog}
    */
-  public static final class MysqlLogs extends
+  public static final class MysqlLog extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.MysqlLogs)
-      MysqlLogsOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.MysqlLog)
+      MysqlLogOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use MysqlLogs.newBuilder() to construct.
-    private MysqlLogs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MysqlLog.newBuilder() to construct.
+    private MysqlLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private MysqlLogs() {
+    private MysqlLog() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new MysqlLogs();
+      return new MysqlLog();
     }
 
     @java.lang.Override
@@ -1299,7 +1299,7 @@ public final class Mysql {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MysqlLogs(
+    private MysqlLog(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1338,15 +1338,15 @@ public final class Mysql {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLogs_descriptor;
+      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLog_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLogs_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLog_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder.class);
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1382,10 +1382,10 @@ public final class Mysql {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs other = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) obj;
+      com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog other = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1403,69 +1403,69 @@ public final class Mysql {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1478,7 +1478,7 @@ public final class Mysql {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1494,26 +1494,26 @@ public final class Mysql {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.structure.MysqlLogs}
+     * Protobuf type {@code hilo.protobufs.structure.MysqlLog}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.MysqlLogs)
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.MysqlLog)
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLogs_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLog_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLogs_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLog_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder.class);
+                com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.class, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1537,17 +1537,17 @@ public final class Mysql {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLogs_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Mysql.internal_static_hilo_protobufs_structure_MysqlLog_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs build() {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs result = buildPartial();
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog build() {
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1555,8 +1555,8 @@ public final class Mysql {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs buildPartial() {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs result = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs(this);
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog buildPartial() {
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog result = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog(this);
         onBuilt();
         return result;
       }
@@ -1595,16 +1595,16 @@ public final class Mysql {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) {
-          return mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs)other);
+        if (other instanceof com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs other) {
-        if (other == com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog other) {
+        if (other == com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1620,11 +1620,11 @@ public final class Mysql {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs parsedMessage = null;
+        com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1646,41 +1646,41 @@ public final class Mysql {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.MysqlLogs)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.MysqlLog)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.MysqlLogs)
-    private static final com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.MysqlLog)
+    private static final com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog();
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MysqlLogs>
-        PARSER = new com.google.protobuf.AbstractParser<MysqlLogs>() {
+    private static final com.google.protobuf.Parser<MysqlLog>
+        PARSER = new com.google.protobuf.AbstractParser<MysqlLog>() {
       @java.lang.Override
-      public MysqlLogs parsePartialFrom(
+      public MysqlLog parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MysqlLogs(input, extensionRegistry);
+        return new MysqlLog(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<MysqlLogs> parser() {
+    public static com.google.protobuf.Parser<MysqlLog> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MysqlLogs> getParserForType() {
+    public com.google.protobuf.Parser<MysqlLog> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1697,15 +1697,15 @@ public final class Mysql {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_MysqlEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_MysqlFields_descriptor;
+    internal_static_hilo_protobufs_structure_MysqlField_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_MysqlFields_fieldAccessorTable;
+      internal_static_hilo_protobufs_structure_MysqlField_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_MysqlLogs_descriptor;
+    internal_static_hilo_protobufs_structure_MysqlLog_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_MysqlLogs_fieldAccessorTable;
+      internal_static_hilo_protobufs_structure_MysqlLog_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1717,9 +1717,9 @@ public final class Mysql {
     java.lang.String[] descriptorData = {
       "\n/com/hilohq/hilo/protobufs/structure/my" +
       "sql.proto\022\030hilo.protobufs.structure\"\r\n\013M" +
-      "ysqlUpdate\"\014\n\nMysqlEvent\"\r\n\013MysqlFields\"" +
-      "\013\n\tMysqlLogsB%\n#com.hilohq.hilo.protobuf" +
-      "s.structureb\006proto3"
+      "ysqlUpdate\"\014\n\nMysqlEvent\"\014\n\nMysqlField\"\n" +
+      "\n\010MysqlLogB%\n#com.hilohq.hilo.protobufs." +
+      "structureb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1737,17 +1737,17 @@ public final class Mysql {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_MysqlEvent_descriptor,
         new java.lang.String[] { });
-    internal_static_hilo_protobufs_structure_MysqlFields_descriptor =
+    internal_static_hilo_protobufs_structure_MysqlField_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_hilo_protobufs_structure_MysqlFields_fieldAccessorTable = new
+    internal_static_hilo_protobufs_structure_MysqlField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_MysqlFields_descriptor,
+        internal_static_hilo_protobufs_structure_MysqlField_descriptor,
         new java.lang.String[] { });
-    internal_static_hilo_protobufs_structure_MysqlLogs_descriptor =
+    internal_static_hilo_protobufs_structure_MysqlLog_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_hilo_protobufs_structure_MysqlLogs_fieldAccessorTable = new
+    internal_static_hilo_protobufs_structure_MysqlLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_MysqlLogs_descriptor,
+        internal_static_hilo_protobufs_structure_MysqlLog_descriptor,
         new java.lang.String[] { });
   }
 

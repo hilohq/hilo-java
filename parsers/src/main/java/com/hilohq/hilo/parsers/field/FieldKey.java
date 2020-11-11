@@ -1,5 +1,7 @@
 package com.hilohq.hilo.parsers.field;
 
 public interface FieldKey {
-    String key();
+  String key();
+  boolean equals(Object o);
+  int hashCode();
 }

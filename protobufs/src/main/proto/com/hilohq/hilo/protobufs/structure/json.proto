@@ -6,12 +6,12 @@ option java_package = "com.hilohq.hilo.protobufs.structure";
 
 enum JsonType {
   JSON_BOOLEAN = 0;
-  JSON_INTEGER = 1;
-  JSON_FLOAT = 2;
-  JSON_STRING = 3;
-  JSON_ARRAY = 4;
-  JSON_NULL = 5;
-  JSON_OBJECT = 6;
+  JSON_NUMBER = 1;
+  JSON_STRING = 2;
+  JSON_ARRAY = 3;
+  JSON_NULL = 4;
+  JSON_OBJECT = 5;
+  JSON_BINARY = 6;
 }
 
 message JsonTypeHistogram {
@@ -19,9 +19,9 @@ message JsonTypeHistogram {
   int64 boolean_count = 2;
   int64 object_count = 3;
   int64 array_count = 4;
-  int64 float_count = 5;
+  int64 number_count = 5;
   int64 string_count = 6;
-  int64 integer_count = 7;
+  int64 binary_count = 7;
 }
 
 message JsonFieldStats {
@@ -81,17 +81,17 @@ message JsonFieldUpdate {
 
 message JsonUpdate {
   oneof update {
-    JsonLogs logs = 1;
-    JsonFields fields = 2;
+    JsonLog log = 1;
+    JsonField field = 2;
   }
 }
 
 message JsonFields {
   JsonParseStats parse_stats = 1;
-  repeated JsonField fields = 2;
+  map<string, JsonField> fields = 2;
 }
 
-message JsonLogs {
+message JsonLog {
   oneof log {
     JsonFieldCreate field_create = 1;
     JsonFieldUpdate field_update = 2;

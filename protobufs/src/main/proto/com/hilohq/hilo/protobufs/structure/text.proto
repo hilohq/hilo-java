@@ -12,10 +12,10 @@ message TextEvent {
 
 }
 
-message TextFields {
+message TextField {
 
 }
 
-message TextLogs {
+message TextLog {
 
 }
