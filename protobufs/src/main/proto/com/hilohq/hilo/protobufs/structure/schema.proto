@@ -34,20 +34,24 @@ message SchemaEvent {
   }
 }
 
+message SchemaMetadataModel {
+  SchemaMetadata metadata = 1;
+}
+
 message SchemaFieldsModel {
   SchemaMetadata metadata = 1;
 
   oneof schema {
-    JsonField json = 16;
-    TextField text = 17;
-    MysqlField mysql = 18;
+    JsonFields json = 16;
+    TextFields text = 17;
+    MysqlFields mysql = 18;
   }
 }
 
 message SchemaLogsModel {
   SchemaMetadata metadata = 1;
 
-  oneof schema {
+  oneof log {
     JsonLog json = 16;
     TextLog text = 17;
     MysqlLog mysql = 18;

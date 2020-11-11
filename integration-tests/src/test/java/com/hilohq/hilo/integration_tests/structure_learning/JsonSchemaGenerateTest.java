@@ -1,46 +1,73 @@
 package com.hilohq.hilo.integration_tests.structure_learning;
 
 import static com.hilohq.integration_tests.resources.ResourceUtils.copyResource;
+import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
+import static org.junit.Assert.assertEquals;
 
 import com.hilohq.hilo.connectors.mongodb.flink.MongoOutputFormat;
+import com.hilohq.hilo.protobufs.structure.Api;
+import com.hilohq.hilo.schema_service.client.SchemaClient;
 import com.hilohq.hilo.structure_learning.schema.base.SchemaUpdateMongoCommandGenerator;
-import com.hilohq.hilo.structure_learning.schema.json.JsonFieldStatsKeySelector;
-import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStatsAggregate;
-import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStatsGenerate;
-import com.hilohq.integration_tests.jars.JarUtils;
+
+import java.io.IOException;
 import java.util.UUID;
-import org.apache.flink.api.java.ExecutionEnvironment;
+import java.util.concurrent.TimeUnit;
+
+import com.hilohq.integration_tests.pipelines.JsonSchemaGeneratePipelineBuilder;
+import com.hilohq.integration_tests.pipelines.PipelineExecutor;
+import io.grpc.testing.GrpcCleanupRule;
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 public final class JsonSchemaGenerateTest {
 
-  private static final String PROJECT_ID = UUID.randomUUID().toString();
-  private static final String SCHEMA_ID = UUID.randomUUID().toString();
-  private static final String SOURCE_ID = UUID.randomUUID().toString();
+  @Rule
+  public GrpcCleanupRule grpcCleanupRule = new GrpcCleanupRule();
 
-  public void generateSchemaStats(final String filePath) throws Exception {
-    final var jarPath = JarUtils.jarPathForModule("integration-tests");
-    final var executionEnvironment =
-        ExecutionEnvironment.createRemoteEnvironment("127.0.0.1", 8081, jarPath.toString());
+  private String projectId;
+  private String schemaId;
+  private String sourceId;
+  private SchemaClient client;
 
-    final var lines = executionEnvironment.readTextFile(filePath);
+  @Before
+  public void setUp() throws IOException {
+    projectId = UUID.randomUUID().toString();
+    schemaId = UUID.randomUUID().toString();
+    sourceId = UUID.randomUUID().toString();
+
+    final var pair = createSchemaService(grpcCleanupRule);
+    client = pair.client();
+    pair.server().start();
+  }
+
+  private void generateSchemaStats(final String filePath) throws Exception {
     final var output =
-        MongoOutputFormat.newBuilder(new SchemaUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-    lines
-        .reduceGroup(new JsonSchemaStatsGenerate(PROJECT_ID, SOURCE_ID, SCHEMA_ID))
-        .groupBy(new JsonFieldStatsKeySelector())
-        .reduceGroup(new JsonSchemaStatsAggregate())
-        .output(output);
+            MongoOutputFormat.newBuilder(new SchemaUpdateMongoCommandGenerator())
+                    .database("test")
+                    .url("mongodb://root:example@mongodb:27017/admin")
+                    .build();
 
-    executionEnvironment.execute();
+    final var executor = PipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
+    final var pipelineBuilder = new JsonSchemaGeneratePipelineBuilder(
+            projectId, sourceId, schemaId);
+    executor.execute(filePath, pipelineBuilder);
   }
 
   @Test
-  public void testExample() throws Exception {
+  public void testGenerateSchemaFromJsonLogs() throws Exception {
     copyResource("samples/logs.txt", "/tmp/logs.txt");
     generateSchemaStats("/tmp/logs.txt");
+
+    final var schemaIdsResponse = client
+            .getSchemaIdsBySource(Api.GetSchemaIdsBySourceRequest.newBuilder().setSourceId(sourceId).build())
+            .get(1, TimeUnit.SECONDS);
+    assertEquals(1, schemaIdsResponse.getSchemaIdCount());
+
+    final var schemaResponse = client.getSchema(Api.GetSchemaRequest.newBuilder().setSchemaId(schemaIdsResponse.getSchemaId(0)).build()).get(1, TimeUnit.SECONDS);
+    assertEquals(32, schemaResponse.getJson().getFieldsCount());
+
+    final var logsResponse = client.getSchemaLogs(Api.GetSchemaLogsRequest.newBuilder().setSchemaId(schemaIdsResponse.getSchemaId(0)).build()).get(1, TimeUnit.SECONDS);
+    assertEquals(32, logsResponse.getJson().getLogsCount());
   }
 }

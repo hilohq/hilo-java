@@ -12,7 +12,7 @@ message TextEvent {
 
 }
 
-message TextField {
+message TextFields {
 
 }
 

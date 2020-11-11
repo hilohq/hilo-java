@@ -850,30 +850,30 @@ public final class Text {
 
   }
 
-  public interface TextFieldOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.TextField)
+  public interface TextFieldsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.TextFields)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code hilo.protobufs.structure.TextField}
+   * Protobuf type {@code hilo.protobufs.structure.TextFields}
    */
-  public static final class TextField extends
+  public static final class TextFields extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.TextField)
-      TextFieldOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.TextFields)
+      TextFieldsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TextField.newBuilder() to construct.
-    private TextField(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use TextFields.newBuilder() to construct.
+    private TextFields(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TextField() {
+    private TextFields() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new TextField();
+      return new TextFields();
     }
 
     @java.lang.Override
@@ -881,7 +881,7 @@ public final class Text {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TextField(
+    private TextFields(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -920,15 +920,15 @@ public final class Text {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextField_descriptor;
+      return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextFields_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextField_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextFields_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.structure.Text.TextField.class, com.hilohq.hilo.protobufs.structure.Text.TextField.Builder.class);
+              com.hilohq.hilo.protobufs.structure.Text.TextFields.class, com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -964,10 +964,10 @@ public final class Text {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Text.TextField)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Text.TextFields)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.structure.Text.TextField other = (com.hilohq.hilo.protobufs.structure.Text.TextField) obj;
+      com.hilohq.hilo.protobufs.structure.Text.TextFields other = (com.hilohq.hilo.protobufs.structure.Text.TextFields) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -985,69 +985,69 @@ public final class Text {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1060,7 +1060,7 @@ public final class Text {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Text.TextField prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Text.TextFields prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1076,26 +1076,26 @@ public final class Text {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.structure.TextField}
+     * Protobuf type {@code hilo.protobufs.structure.TextFields}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.TextField)
-        com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.TextFields)
+        com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextField_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextFields_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextField_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextFields_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.Text.TextField.class, com.hilohq.hilo.protobufs.structure.Text.TextField.Builder.class);
+                com.hilohq.hilo.protobufs.structure.Text.TextFields.class, com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.structure.Text.TextField.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.structure.Text.TextFields.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1119,17 +1119,17 @@ public final class Text {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextField_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Text.internal_static_hilo_protobufs_structure_TextFields_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextField getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.structure.Text.TextFields getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextField build() {
-        com.hilohq.hilo.protobufs.structure.Text.TextField result = buildPartial();
+      public com.hilohq.hilo.protobufs.structure.Text.TextFields build() {
+        com.hilohq.hilo.protobufs.structure.Text.TextFields result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1137,8 +1137,8 @@ public final class Text {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextField buildPartial() {
-        com.hilohq.hilo.protobufs.structure.Text.TextField result = new com.hilohq.hilo.protobufs.structure.Text.TextField(this);
+      public com.hilohq.hilo.protobufs.structure.Text.TextFields buildPartial() {
+        com.hilohq.hilo.protobufs.structure.Text.TextFields result = new com.hilohq.hilo.protobufs.structure.Text.TextFields(this);
         onBuilt();
         return result;
       }
@@ -1177,16 +1177,16 @@ public final class Text {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.structure.Text.TextField) {
-          return mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextField)other);
+        if (other instanceof com.hilohq.hilo.protobufs.structure.Text.TextFields) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextFields)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Text.TextField other) {
-        if (other == com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Text.TextFields other) {
+        if (other == com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1202,11 +1202,11 @@ public final class Text {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.structure.Text.TextField parsedMessage = null;
+        com.hilohq.hilo.protobufs.structure.Text.TextFields parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.structure.Text.TextField) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.Text.TextFields) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1228,41 +1228,41 @@ public final class Text {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.TextField)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.TextFields)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.TextField)
-    private static final com.hilohq.hilo.protobufs.structure.Text.TextField DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.TextFields)
+    private static final com.hilohq.hilo.protobufs.structure.Text.TextFields DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Text.TextField();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Text.TextFields();
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Text.TextField getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.structure.Text.TextFields getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TextField>
-        PARSER = new com.google.protobuf.AbstractParser<TextField>() {
+    private static final com.google.protobuf.Parser<TextFields>
+        PARSER = new com.google.protobuf.AbstractParser<TextFields>() {
       @java.lang.Override
-      public TextField parsePartialFrom(
+      public TextFields parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TextField(input, extensionRegistry);
+        return new TextFields(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TextField> parser() {
+    public static com.google.protobuf.Parser<TextFields> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TextField> getParserForType() {
+    public com.google.protobuf.Parser<TextFields> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Text.TextField getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.structure.Text.TextFields getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1697,10 +1697,10 @@ public final class Text {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_TextEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_TextField_descriptor;
+    internal_static_hilo_protobufs_structure_TextFields_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_TextField_fieldAccessorTable;
+      internal_static_hilo_protobufs_structure_TextFields_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_TextLog_descriptor;
   private static final 
@@ -1717,9 +1717,9 @@ public final class Text {
     java.lang.String[] descriptorData = {
       "\n.com/hilohq/hilo/protobufs/structure/te" +
       "xt.proto\022\030hilo.protobufs.structure\"\014\n\nTe" +
-      "xtUpdate\"\013\n\tTextEvent\"\013\n\tTextField\"\t\n\007Te" +
-      "xtLogB%\n#com.hilohq.hilo.protobufs.struc" +
-      "tureb\006proto3"
+      "xtUpdate\"\013\n\tTextEvent\"\014\n\nTextFields\"\t\n\007T" +
+      "extLogB%\n#com.hilohq.hilo.protobufs.stru" +
+      "ctureb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1737,11 +1737,11 @@ public final class Text {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_TextEvent_descriptor,
         new java.lang.String[] { });
-    internal_static_hilo_protobufs_structure_TextField_descriptor =
+    internal_static_hilo_protobufs_structure_TextFields_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_hilo_protobufs_structure_TextField_fieldAccessorTable = new
+    internal_static_hilo_protobufs_structure_TextFields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_TextField_descriptor,
+        internal_static_hilo_protobufs_structure_TextFields_descriptor,
         new java.lang.String[] { });
     internal_static_hilo_protobufs_structure_TextLog_descriptor =
       getDescriptor().getMessageTypes().get(3);

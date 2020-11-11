@@ -1,10 +1,13 @@
 package com.hilohq.hilo.schema_service.service;
 
-import static com.hilohq.hilo.protobufs.schema.Api.*;
+import static com.hilohq.hilo.protobufs.structure.Api.*;
 
-import com.hilohq.hilo.protobufs.schema.Model;
-import com.hilohq.hilo.protobufs.schema.SchemaGrpc.SchemaImplBase;
+import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.SchemaGrpc.SchemaImplBase;
 import io.grpc.stub.StreamObserver;
+import org.apache.commons.lang3.NotImplementedException;
+
+import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -39,26 +42,32 @@ public final class SchemaService extends SchemaImplBase {
   public void getSchema(
       final GetSchemaRequest request, final StreamObserver<GetSchemaResponse> responseObserver) {
     handle(
-        store.getSchemaMetadata(request.getSourceId()),
+        store.getSchema(request.getSchemaId()),
         responseObserver,
-        metadata ->
-            GetSchemaResponse.newBuilder()
-                .addAllSchemas(
-                    metadata
-                        .stream()
-                        .map(Model.SchemaMetadataModel::getMetadata)
-                        .collect(Collectors.toList()))
-                .build());
+        schema -> {
+          final var responseBuilder = GetSchemaResponse.newBuilder()
+                  .setSchemaId(schema.getMetadata().getSchemaId());
+          if (schema.hasJson()) {
+            responseBuilder.setJson(schema.getJson());
+          } else if (schema.hasMysql()) {
+            responseBuilder.setMysql(schema.getMysql());
+          } else if (schema.hasText()) {
+            responseBuilder.setText(schema.getText());
+          }
+
+          return responseBuilder.build();
+        });
   }
 
   @Override
-  public void getSchemaFields(
-      final GetSchemaFieldsRequest request,
-      final StreamObserver<GetSchemaFieldsResponse> responseObserver) {
+  public void getSchemaIdsBySource(
+      final GetSchemaIdsBySourceRequest request,
+      final StreamObserver<GetSchemaIdsBySourceResponse> responseObserver) {
     handle(
-        store.getSchema(request.getSchemaId()),
+        store.getSchemaIdsBySource(request.getSourceId()),
         responseObserver,
-        schema -> GetSchemaFieldsResponse.newBuilder().setSchema(schema).build());
+        metadataModels -> GetSchemaIdsBySourceResponse.newBuilder().addAllSchemaId(metadataModels.stream().map(metadata ->
+          metadata.getMetadata().getSchemaId()).collect(Collectors.toList())).build());
   }
 
   @Override
@@ -67,17 +76,26 @@ public final class SchemaService extends SchemaImplBase {
       final StreamObserver<GetSchemaLogsResponse> responseObserver) {
     handle(
         store.getSchemaLogs(request.getSchemaId()),
-        responseObserver,
-        logs -> GetSchemaLogsResponse.newBuilder().addAllLogs(logs).build());
+        responseObserver, SchemaService::createSchemaLogsResponse);
   }
 
-  @Override
-  public void getSchemaParseErrors(
-      final GetSchemaParseErrorsRequest request,
-      final StreamObserver<GetSchemaParseErrorsResponse> responseObserver) {
-    handle(
-        store.getSchemaErrors(request.getSchemaId()),
-        responseObserver,
-        errors -> GetSchemaParseErrorsResponse.newBuilder().addAllErrors(errors).build());
+  private static GetSchemaLogsResponse createSchemaLogsResponse(final Collection<Schema.SchemaLogsModel> logs) {
+    if (logs.isEmpty()) {
+      return GetSchemaLogsResponse.newBuilder().build();
+    }
+
+    final var responseBuilder = GetSchemaLogsResponse.newBuilder();
+    final var item = logs.iterator().next();
+    if (item.hasJson()) {
+      return responseBuilder.setJson(JsonLogs.newBuilder().addAllLogs(logs.stream().map(Schema.SchemaLogsModel::getJson).collect(Collectors.toList()))).build();
+
+    } else if (item.hasMysql()) {
+      throw new NotImplementedException("mysql not implemented");
+
+    } else if (item.hasText()) {
+      throw new NotImplementedException("text not implemented");
+    }
+
+    return responseBuilder.build();
   }
 }
