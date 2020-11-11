@@ -1,8 +1,8 @@
 package com.hilohq.hilo.schema_service.client;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import com.hilohq.hilo.protobufs.schema.Api;
-import com.hilohq.hilo.protobufs.schema.SchemaGrpc;
+import com.hilohq.hilo.protobufs.structure.Api;
+import com.hilohq.hilo.protobufs.structure.SchemaGrpc;
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import java.util.concurrent.*;
@@ -35,30 +35,22 @@ public final class SchemaClient {
           } catch (InterruptedException | ExecutionException e) {
             result.completeExceptionally(e);
           }
-        },
-        executor);
+        }, executor);
     return result;
   }
 
-  public CompletableFuture<Api.GetSchemaResponse> getSchema(final Api.GetSchemaRequest request) {
-    return toCompletableFuture(stub.getSchema(request), executor);
-  }
-
-  public CompletableFuture<Api.GetSchemaFieldsResponse> getSchemaFields(
-      final Api.GetSchemaFieldsRequest request) {
-    final var future = new CompletableFuture<Api.GetSchemaResponse>();
-    return toCompletableFuture(stub.getSchemaFields(request), executor);
+  public CompletableFuture<Api.GetSchemaIdsBySourceResponse> getSchemaIdsBySource(
+      final Api.GetSchemaIdsBySourceRequest request) {
+    return toCompletableFuture(stub.getSchemaIdsBySource(request), executor);
   }
 
   public CompletableFuture<Api.GetSchemaLogsResponse> getSchemaLogs(
       final Api.GetSchemaLogsRequest request) {
-    final var future = new CompletableFuture<Api.GetSchemaResponse>();
     return toCompletableFuture(stub.getSchemaLogs(request), executor);
   }
 
-  public CompletableFuture<Api.GetSchemaParseErrorsResponse> getSchemaParseErrors(
-      final Api.GetSchemaParseErrorsRequest request) {
-    final var future = new CompletableFuture<Api.GetSchemaResponse>();
-    return toCompletableFuture(stub.getSchemaParseErrors(request), executor);
+  public CompletableFuture<Api.GetSchemaResponse> getSchema(
+      final Api.GetSchemaRequest request) {
+    return toCompletableFuture(stub.getSchema(request), executor);
   }
 }

@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package hilo.protobufs.structure;
+
+option java_package = "com.hilohq.hilo.protobufs.structure";
+
+import "com/hilohq/hilo/protobufs/structure/schema.proto";
+import "com/hilohq/hilo/protobufs/structure/json.proto";
+import "com/hilohq/hilo/protobufs/structure/text.proto";
+import "com/hilohq/hilo/protobufs/structure/mysql.proto";
+
+message GetSchemaIdsBySourceRequest {
+  string sourceId = 1;
+}
+
+message GetSchemaIdsBySourceResponse {
+  repeated string schemaId = 1;
+}
+
+message GetSchemaRequest {
+  string schemaId = 1;
+}
+
+message GetSchemaResponse {
+  string schemaId = 1;
+
+  oneof schema {
+    JsonFields json = 16;
+    TextFields text = 17;
+    MysqlFields mysql = 18;
+  }
+}
+
+message GetSchemaLogsRequest {
+  string schemaId = 1;
+}
+
+message JsonLogs {
+  repeated JsonLog logs = 1;
+}
+
+message TextLogs {
+  repeated TextLog logs = 1;
+}
+
+message MysqlLogs {
+  repeated MysqlLog logs = 1;
+}
+
+message GetSchemaLogsResponse {
+  string schemaId = 1;
+
+  oneof logs {
+    JsonLogs json = 16;
+    TextLogs text = 17;
+    MysqlLogs mysql = 18;
+  }
+}
+
+service Schema {
+  rpc GetSchemaIdsBySource(GetSchemaIdsBySourceRequest) returns (GetSchemaIdsBySourceResponse) { }
+  rpc GetSchema(GetSchemaRequest) returns (GetSchemaResponse) { }
+  rpc GetSchemaLogs(GetSchemaLogsRequest) returns (GetSchemaLogsResponse) {}
+}

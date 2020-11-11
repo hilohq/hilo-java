@@ -12,7 +12,7 @@ message MysqlEvent {
 
 }
 
-message MysqlField {
+message MysqlFields {
 
 }
 
