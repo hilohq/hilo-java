@@ -3660,49 +3660,49 @@ public final class Schema {
     com.hilohq.hilo.protobufs.structure.Schema.SchemaMetadataOrBuilder getMetadataOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      * @return Whether the json field is set.
      */
     boolean hasJson();
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      * @return The json.
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonFields getJson();
+    com.hilohq.hilo.protobufs.structure.Json.JsonField getJson();
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getJsonOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getJsonOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      * @return The text.
      */
-    com.hilohq.hilo.protobufs.structure.Text.TextFields getText();
+    com.hilohq.hilo.protobufs.structure.Text.TextField getText();
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder getTextOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder getTextOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      * @return Whether the mysql field is set.
      */
     boolean hasMysql();
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      * @return The mysql.
      */
-    com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getMysql();
+    com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getMysql();
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder getMysqlOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder getMysqlOrBuilder();
 
     public com.hilohq.hilo.protobufs.structure.Schema.SchemaFieldsModel.SchemaCase getSchemaCase();
   }
@@ -3765,42 +3765,42 @@ public final class Schema {
               break;
             }
             case 130: {
-              com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder subBuilder = null;
               if (schemaCase_ == 16) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonFields.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonField.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 16;
               break;
             }
             case 138: {
-              com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Text.TextField.Builder subBuilder = null;
               if (schemaCase_ == 17) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Text.TextField) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Text.TextFields.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Text.TextField.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextField) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 17;
               break;
             }
             case 146: {
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder subBuilder = null;
               if (schemaCase_ == 18) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 18;
@@ -3909,7 +3909,7 @@ public final class Schema {
 
     public static final int JSON_FIELD_NUMBER = 16;
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      * @return Whether the json field is set.
      */
     @java.lang.Override
@@ -3917,30 +3917,30 @@ public final class Schema {
       return schemaCase_ == 16;
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      * @return The json.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonFields getJson() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonField getJson() {
       if (schemaCase_ == 16) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getJsonOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getJsonOrBuilder() {
       if (schemaCase_ == 16) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
     }
 
     public static final int TEXT_FIELD_NUMBER = 17;
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      * @return Whether the text field is set.
      */
     @java.lang.Override
@@ -3948,30 +3948,30 @@ public final class Schema {
       return schemaCase_ == 17;
     }
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      * @return The text.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Text.TextFields getText() {
+    public com.hilohq.hilo.protobufs.structure.Text.TextField getText() {
       if (schemaCase_ == 17) {
-         return (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextField text = 17;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder getTextOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder getTextOrBuilder() {
       if (schemaCase_ == 17) {
-         return (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
     }
 
     public static final int MYSQL_FIELD_NUMBER = 18;
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      * @return Whether the mysql field is set.
      */
     @java.lang.Override
@@ -3979,25 +3979,25 @@ public final class Schema {
       return schemaCase_ == 18;
     }
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      * @return The mysql.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getMysql() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getMysql() {
       if (schemaCase_ == 18) {
-         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder getMysqlOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder getMysqlOrBuilder() {
       if (schemaCase_ == 18) {
-         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4018,13 +4018,13 @@ public final class Schema {
         output.writeMessage(1, getMetadata());
       }
       if (schemaCase_ == 16) {
-        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_);
+        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_);
       }
       if (schemaCase_ == 17) {
-        output.writeMessage(17, (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_);
+        output.writeMessage(17, (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_);
       }
       if (schemaCase_ == 18) {
-        output.writeMessage(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_);
+        output.writeMessage(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_);
       }
       unknownFields.writeTo(output);
     }
@@ -4041,15 +4041,15 @@ public final class Schema {
       }
       if (schemaCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_);
+          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_);
       }
       if (schemaCase_ == 17) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_);
+          .computeMessageSize(17, (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_);
       }
       if (schemaCase_ == 18) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_);
+          .computeMessageSize(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4545,9 +4545,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder> jsonBuilder_;
+          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> jsonBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        * @return Whether the json field is set.
        */
       @java.lang.Override
@@ -4555,27 +4555,27 @@ public final class Schema {
         return schemaCase_ == 16;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        * @return The json.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFields getJson() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField getJson() {
         if (jsonBuilder_ == null) {
           if (schemaCase_ == 16) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         } else {
           if (schemaCase_ == 16) {
             return jsonBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
-      public Builder setJson(com.hilohq.hilo.protobufs.structure.Json.JsonFields value) {
+      public Builder setJson(com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
         if (jsonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4589,10 +4589,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
       public Builder setJson(
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder builderForValue) {
         if (jsonBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -4603,13 +4603,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
-      public Builder mergeJson(com.hilohq.hilo.protobufs.structure.Json.JsonFields value) {
+      public Builder mergeJson(com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
         if (jsonBuilder_ == null) {
           if (schemaCase_ == 16 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonFields.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonField.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -4625,7 +4625,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
       public Builder clearJson() {
         if (jsonBuilder_ == null) {
@@ -4644,38 +4644,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder getJsonBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder getJsonBuilder() {
         return getJsonFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getJsonOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getJsonOrBuilder() {
         if ((schemaCase_ == 16) && (jsonBuilder_ != null)) {
           return jsonBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 16) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonField json = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
           getJsonFieldBuilder() {
         if (jsonBuilder_ == null) {
           if (!(schemaCase_ == 16)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
           }
           jsonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Json.JsonFields) schema_,
+              com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Json.JsonField) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -4686,9 +4686,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Text.TextFields, com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder> textBuilder_;
+          com.hilohq.hilo.protobufs.structure.Text.TextField, com.hilohq.hilo.protobufs.structure.Text.TextField.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder> textBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        * @return Whether the text field is set.
        */
       @java.lang.Override
@@ -4696,27 +4696,27 @@ public final class Schema {
         return schemaCase_ == 17;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        * @return The text.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextFields getText() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextField getText() {
         if (textBuilder_ == null) {
           if (schemaCase_ == 17) {
-            return (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
         } else {
           if (schemaCase_ == 17) {
             return textBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
-      public Builder setText(com.hilohq.hilo.protobufs.structure.Text.TextFields value) {
+      public Builder setText(com.hilohq.hilo.protobufs.structure.Text.TextField value) {
         if (textBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4730,10 +4730,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
       public Builder setText(
-          com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Text.TextField.Builder builderForValue) {
         if (textBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -4744,13 +4744,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
-      public Builder mergeText(com.hilohq.hilo.protobufs.structure.Text.TextFields value) {
+      public Builder mergeText(com.hilohq.hilo.protobufs.structure.Text.TextField value) {
         if (textBuilder_ == null) {
           if (schemaCase_ == 17 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextFields.newBuilder((com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextField.newBuilder((com.hilohq.hilo.protobufs.structure.Text.TextField) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -4766,7 +4766,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
       public Builder clearText() {
         if (textBuilder_ == null) {
@@ -4785,38 +4785,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder getTextBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextField.Builder getTextBuilder() {
         return getTextFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder getTextOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder getTextOrBuilder() {
         if ((schemaCase_ == 17) && (textBuilder_ != null)) {
           return textBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 17) {
-            return (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.TextFields text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextField text = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Text.TextFields, com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Text.TextField, com.hilohq.hilo.protobufs.structure.Text.TextField.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder> 
           getTextFieldBuilder() {
         if (textBuilder_ == null) {
           if (!(schemaCase_ == 17)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextFields.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextField.getDefaultInstance();
           }
           textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Text.TextFields, com.hilohq.hilo.protobufs.structure.Text.TextFields.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Text.TextFields) schema_,
+              com.hilohq.hilo.protobufs.structure.Text.TextField, com.hilohq.hilo.protobufs.structure.Text.TextField.Builder, com.hilohq.hilo.protobufs.structure.Text.TextFieldOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Text.TextField) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -4827,9 +4827,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder> mysqlBuilder_;
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlField, com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder> mysqlBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        * @return Whether the mysql field is set.
        */
       @java.lang.Override
@@ -4837,27 +4837,27 @@ public final class Schema {
         return schemaCase_ == 18;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        * @return The mysql.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields getMysql() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField getMysql() {
         if (mysqlBuilder_ == null) {
           if (schemaCase_ == 18) {
-            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
         } else {
           if (schemaCase_ == 18) {
             return mysqlBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
-      public Builder setMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields value) {
+      public Builder setMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlField value) {
         if (mysqlBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4871,10 +4871,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
       public Builder setMysql(
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder builderForValue) {
         if (mysqlBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -4885,13 +4885,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
-      public Builder mergeMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields value) {
+      public Builder mergeMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlField value) {
         if (mysqlBuilder_ == null) {
           if (schemaCase_ == 18 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.newBuilder((com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.newBuilder((com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -4907,7 +4907,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
       public Builder clearMysql() {
         if (mysqlBuilder_ == null) {
@@ -4926,38 +4926,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder getMysqlBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder getMysqlBuilder() {
         return getMysqlFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder getMysqlOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder getMysqlOrBuilder() {
         if ((schemaCase_ == 18) && (mysqlBuilder_ != null)) {
           return mysqlBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 18) {
-            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlFields mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlField mysql = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlField, com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder> 
           getMysqlFieldBuilder() {
         if (mysqlBuilder_ == null) {
           if (!(schemaCase_ == 18)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.getDefaultInstance();
           }
           mysqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Mysql.MysqlFields) schema_,
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlField, com.hilohq.hilo.protobufs.structure.Mysql.MysqlField.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlFieldOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Mysql.MysqlField) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -5039,49 +5039,49 @@ public final class Schema {
     com.hilohq.hilo.protobufs.structure.Schema.SchemaMetadataOrBuilder getMetadataOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      * @return Whether the json field is set.
      */
     boolean hasJson();
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      * @return The json.
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonLogs getJson();
+    com.hilohq.hilo.protobufs.structure.Json.JsonLog getJson();
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getJsonOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getJsonOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      * @return The text.
      */
-    com.hilohq.hilo.protobufs.structure.Text.TextLogs getText();
+    com.hilohq.hilo.protobufs.structure.Text.TextLog getText();
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder getTextOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder getTextOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      * @return Whether the mysql field is set.
      */
     boolean hasMysql();
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      * @return The mysql.
      */
-    com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getMysql();
+    com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getMysql();
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder getMysqlOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder getMysqlOrBuilder();
 
     public com.hilohq.hilo.protobufs.structure.Schema.SchemaLogsModel.SchemaCase getSchemaCase();
   }
@@ -5144,42 +5144,42 @@ public final class Schema {
               break;
             }
             case 130: {
-              com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder subBuilder = null;
               if (schemaCase_ == 16) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonLogs.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonLog.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 16;
               break;
             }
             case 138: {
-              com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder subBuilder = null;
               if (schemaCase_ == 17) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Text.TextLogs.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Text.TextLog.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 17;
               break;
             }
             case 146: {
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder subBuilder = null;
               if (schemaCase_ == 18) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_).toBuilder();
               }
               schema_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_);
                 schema_ = subBuilder.buildPartial();
               }
               schemaCase_ = 18;
@@ -5288,7 +5288,7 @@ public final class Schema {
 
     public static final int JSON_FIELD_NUMBER = 16;
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      * @return Whether the json field is set.
      */
     @java.lang.Override
@@ -5296,30 +5296,30 @@ public final class Schema {
       return schemaCase_ == 16;
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      * @return The json.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getJson() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLog getJson() {
       if (schemaCase_ == 16) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+     * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getJsonOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getJsonOrBuilder() {
       if (schemaCase_ == 16) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
     }
 
     public static final int TEXT_FIELD_NUMBER = 17;
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      * @return Whether the text field is set.
      */
     @java.lang.Override
@@ -5327,30 +5327,30 @@ public final class Schema {
       return schemaCase_ == 17;
     }
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      * @return The text.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Text.TextLogs getText() {
+    public com.hilohq.hilo.protobufs.structure.Text.TextLog getText() {
       if (schemaCase_ == 17) {
-         return (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+     * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder getTextOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder getTextOrBuilder() {
       if (schemaCase_ == 17) {
-         return (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
     }
 
     public static final int MYSQL_FIELD_NUMBER = 18;
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      * @return Whether the mysql field is set.
      */
     @java.lang.Override
@@ -5358,25 +5358,25 @@ public final class Schema {
       return schemaCase_ == 18;
     }
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      * @return The mysql.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getMysql() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getMysql() {
       if (schemaCase_ == 18) {
-         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+     * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder getMysqlOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder getMysqlOrBuilder() {
       if (schemaCase_ == 18) {
-         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_;
+         return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_;
       }
-      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5397,13 +5397,13 @@ public final class Schema {
         output.writeMessage(1, getMetadata());
       }
       if (schemaCase_ == 16) {
-        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_);
+        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_);
       }
       if (schemaCase_ == 17) {
-        output.writeMessage(17, (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_);
+        output.writeMessage(17, (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_);
       }
       if (schemaCase_ == 18) {
-        output.writeMessage(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_);
+        output.writeMessage(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_);
       }
       unknownFields.writeTo(output);
     }
@@ -5420,15 +5420,15 @@ public final class Schema {
       }
       if (schemaCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_);
+          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_);
       }
       if (schemaCase_ == 17) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_);
+          .computeMessageSize(17, (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_);
       }
       if (schemaCase_ == 18) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_);
+          .computeMessageSize(18, (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5924,9 +5924,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder> jsonBuilder_;
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder> jsonBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        * @return Whether the json field is set.
        */
       @java.lang.Override
@@ -5934,27 +5934,27 @@ public final class Schema {
         return schemaCase_ == 16;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        * @return The json.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getJson() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog getJson() {
         if (jsonBuilder_ == null) {
           if (schemaCase_ == 16) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         } else {
           if (schemaCase_ == 16) {
             return jsonBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
-      public Builder setJson(com.hilohq.hilo.protobufs.structure.Json.JsonLogs value) {
+      public Builder setJson(com.hilohq.hilo.protobufs.structure.Json.JsonLog value) {
         if (jsonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5968,10 +5968,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
       public Builder setJson(
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder builderForValue) {
         if (jsonBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -5982,13 +5982,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
-      public Builder mergeJson(com.hilohq.hilo.protobufs.structure.Json.JsonLogs value) {
+      public Builder mergeJson(com.hilohq.hilo.protobufs.structure.Json.JsonLog value) {
         if (jsonBuilder_ == null) {
           if (schemaCase_ == 16 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonLogs.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonLog.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -6004,7 +6004,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
       public Builder clearJson() {
         if (jsonBuilder_ == null) {
@@ -6023,38 +6023,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder getJsonBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder getJsonBuilder() {
         return getJsonFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getJsonOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getJsonOrBuilder() {
         if ((schemaCase_ == 16) && (jsonBuilder_ != null)) {
           return jsonBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 16) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs json = 16;</code>
+       * <code>.hilo.protobufs.structure.JsonLog json = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder> 
           getJsonFieldBuilder() {
         if (jsonBuilder_ == null) {
           if (!(schemaCase_ == 16)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
           }
           jsonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) schema_,
+              com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Json.JsonLog) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -6065,9 +6065,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Text.TextLogs, com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder> textBuilder_;
+          com.hilohq.hilo.protobufs.structure.Text.TextLog, com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder> textBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        * @return Whether the text field is set.
        */
       @java.lang.Override
@@ -6075,27 +6075,27 @@ public final class Schema {
         return schemaCase_ == 17;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        * @return The text.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextLogs getText() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextLog getText() {
         if (textBuilder_ == null) {
           if (schemaCase_ == 17) {
-            return (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
         } else {
           if (schemaCase_ == 17) {
             return textBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
-      public Builder setText(com.hilohq.hilo.protobufs.structure.Text.TextLogs value) {
+      public Builder setText(com.hilohq.hilo.protobufs.structure.Text.TextLog value) {
         if (textBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6109,10 +6109,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
       public Builder setText(
-          com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder builderForValue) {
         if (textBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -6123,13 +6123,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
-      public Builder mergeText(com.hilohq.hilo.protobufs.structure.Text.TextLogs value) {
+      public Builder mergeText(com.hilohq.hilo.protobufs.structure.Text.TextLog value) {
         if (textBuilder_ == null) {
           if (schemaCase_ == 17 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextLogs.newBuilder((com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextLog.newBuilder((com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -6145,7 +6145,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
       public Builder clearText() {
         if (textBuilder_ == null) {
@@ -6164,38 +6164,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder getTextBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder getTextBuilder() {
         return getTextFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder getTextOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder getTextOrBuilder() {
         if ((schemaCase_ == 17) && (textBuilder_ != null)) {
           return textBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 17) {
-            return (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.TextLogs text = 17;</code>
+       * <code>.hilo.protobufs.structure.TextLog text = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Text.TextLogs, com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Text.TextLog, com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder> 
           getTextFieldBuilder() {
         if (textBuilder_ == null) {
           if (!(schemaCase_ == 17)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextLogs.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Text.TextLog.getDefaultInstance();
           }
           textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Text.TextLogs, com.hilohq.hilo.protobufs.structure.Text.TextLogs.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Text.TextLogs) schema_,
+              com.hilohq.hilo.protobufs.structure.Text.TextLog, com.hilohq.hilo.protobufs.structure.Text.TextLog.Builder, com.hilohq.hilo.protobufs.structure.Text.TextLogOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Text.TextLog) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -6206,9 +6206,9 @@ public final class Schema {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder> mysqlBuilder_;
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder> mysqlBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        * @return Whether the mysql field is set.
        */
       @java.lang.Override
@@ -6216,27 +6216,27 @@ public final class Schema {
         return schemaCase_ == 18;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        * @return The mysql.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs getMysql() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog getMysql() {
         if (mysqlBuilder_ == null) {
           if (schemaCase_ == 18) {
-            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
         } else {
           if (schemaCase_ == 18) {
             return mysqlBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
-      public Builder setMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs value) {
+      public Builder setMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog value) {
         if (mysqlBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6250,10 +6250,10 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
       public Builder setMysql(
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder builderForValue) {
         if (mysqlBuilder_ == null) {
           schema_ = builderForValue.build();
           onChanged();
@@ -6264,13 +6264,13 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
-      public Builder mergeMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs value) {
+      public Builder mergeMysql(com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog value) {
         if (mysqlBuilder_ == null) {
           if (schemaCase_ == 18 &&
-              schema_ != com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance()) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.newBuilder((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_)
+              schema_ != com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance()) {
+            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.newBuilder((com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_)
                 .mergeFrom(value).buildPartial();
           } else {
             schema_ = value;
@@ -6286,7 +6286,7 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
       public Builder clearMysql() {
         if (mysqlBuilder_ == null) {
@@ -6305,38 +6305,38 @@ public final class Schema {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder getMysqlBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder getMysqlBuilder() {
         return getMysqlFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder getMysqlOrBuilder() {
+      public com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder getMysqlOrBuilder() {
         if ((schemaCase_ == 18) && (mysqlBuilder_ != null)) {
           return mysqlBuilder_.getMessageOrBuilder();
         } else {
           if (schemaCase_ == 18) {
-            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_;
+            return (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_;
           }
-          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.MysqlLogs mysql = 18;</code>
+       * <code>.hilo.protobufs.structure.MysqlLog mysql = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder> 
           getMysqlFieldBuilder() {
         if (mysqlBuilder_ == null) {
           if (!(schemaCase_ == 18)) {
-            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.getDefaultInstance();
+            schema_ = com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.getDefaultInstance();
           }
           mysqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogs) schema_,
+              com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog.Builder, com.hilohq.hilo.protobufs.structure.Mysql.MysqlLogOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Mysql.MysqlLog) schema_,
                   getParentForChildren(),
                   isClean());
           schema_ = null;
@@ -6451,21 +6451,21 @@ public final class Schema {
       ".hilo.protobufs.structure.JsonEventH\000\0223\n" +
       "\004text\030\021 \001(\0132#.hilo.protobufs.structure.T" +
       "extEventH\000\0225\n\005mysql\030\022 \001(\0132$.hilo.protobu" +
-      "fs.structure.MysqlEventH\000B\007\n\005event\"\375\001\n\021S" +
+      "fs.structure.MysqlEventH\000B\007\n\005event\"\372\001\n\021S" +
       "chemaFieldsModel\022:\n\010metadata\030\001 \001(\0132(.hil" +
-      "o.protobufs.structure.SchemaMetadata\0224\n\004" +
-      "json\030\020 \001(\0132$.hilo.protobufs.structure.Js" +
-      "onFieldsH\000\0224\n\004text\030\021 \001(\0132$.hilo.protobuf" +
-      "s.structure.TextFieldsH\000\0226\n\005mysql\030\022 \001(\0132" +
-      "%.hilo.protobufs.structure.MysqlFieldsH\000" +
-      "B\010\n\006schema\"\365\001\n\017SchemaLogsModel\022:\n\010metada" +
-      "ta\030\001 \001(\0132(.hilo.protobufs.structure.Sche" +
-      "maMetadata\0222\n\004json\030\020 \001(\0132\".hilo.protobuf" +
-      "s.structure.JsonLogsH\000\0222\n\004text\030\021 \001(\0132\".h" +
-      "ilo.protobufs.structure.TextLogsH\000\0224\n\005my" +
-      "sql\030\022 \001(\0132#.hilo.protobufs.structure.Mys" +
-      "qlLogsH\000B\010\n\006schemaB%\n#com.hilohq.hilo.pr" +
-      "otobufs.structureb\006proto3"
+      "o.protobufs.structure.SchemaMetadata\0223\n\004" +
+      "json\030\020 \001(\0132#.hilo.protobufs.structure.Js" +
+      "onFieldH\000\0223\n\004text\030\021 \001(\0132#.hilo.protobufs" +
+      ".structure.TextFieldH\000\0225\n\005mysql\030\022 \001(\0132$." +
+      "hilo.protobufs.structure.MysqlFieldH\000B\010\n" +
+      "\006schema\"\362\001\n\017SchemaLogsModel\022:\n\010metadata\030" +
+      "\001 \001(\0132(.hilo.protobufs.structure.SchemaM" +
+      "etadata\0221\n\004json\030\020 \001(\0132!.hilo.protobufs.s" +
+      "tructure.JsonLogH\000\0221\n\004text\030\021 \001(\0132!.hilo." +
+      "protobufs.structure.TextLogH\000\0223\n\005mysql\030\022" +
+      " \001(\0132\".hilo.protobufs.structure.MysqlLog" +
+      "H\000B\010\n\006schemaB%\n#com.hilohq.hilo.protobuf" +
+      "s.structureb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

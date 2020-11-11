@@ -5,7 +5,8 @@ plugins {
 apply plugin: 'com.github.sherter.google-java-format'
 
 dependencies {
-    compile project(":connector")
+    compile project(":connectors")
+    compile project(":parsers")
     compile project(":protobufs")
     compile project(":statistics")
     compile group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.11.2'

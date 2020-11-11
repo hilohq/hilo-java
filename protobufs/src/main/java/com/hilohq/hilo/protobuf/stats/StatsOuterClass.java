@@ -230,8 +230,7 @@ public final class StatsOuterClass {
         if (!getHistogram()
             .equals(other.getHistogram())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -1181,8 +1180,7 @@ public final class StatsOuterClass {
       }
       if (!getBase64StatsRepr()
           .equals(other.getBase64StatsRepr())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -2255,8 +2253,7 @@ public final class StatsOuterClass {
         if (!getHistogram()
             .equals(other.getHistogram())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -2780,7 +2777,7 @@ public final class StatsOuterClass {
      */
     com.hilohq.hilo.protobuf.stats.StatsOuterClass.StringStatsOrBuilder getStringStatsOrBuilder();
 
-    public com.hilohq.hilo.protobuf.stats.StatsOuterClass.Stats.StatsCase getStatsCase();
+    com.hilohq.hilo.protobuf.stats.StatsOuterClass.Stats.StatsCase getStatsCase();
   }
   /**
    * Protobuf type {@code hilo.protobufs.stats.Stats}
@@ -2911,7 +2908,7 @@ public final class StatsOuterClass {
       STRING_STATS(3),
       STATS_NOT_SET(0);
       private final int value;
-      private StatsCase(int value) {
+      StatsCase(int value) {
         this.value = value;
       }
       /**
@@ -2936,7 +2933,7 @@ public final class StatsOuterClass {
       public int getNumber() {
         return this.value;
       }
-    };
+    }
 
     public StatsCase
     getStatsCase() {
@@ -3113,8 +3110,7 @@ public final class StatsOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      return unknownFields.equals(other.unknownFields);
     }
 
     @java.lang.Override
@@ -3569,7 +3565,7 @@ public final class StatsOuterClass {
           stats_ = null;
         }
         statsCase_ = 1;
-        onChanged();;
+        onChanged();
         return booleanStatsBuilder_;
       }
 
@@ -3710,7 +3706,7 @@ public final class StatsOuterClass {
           stats_ = null;
         }
         statsCase_ = 2;
-        onChanged();;
+        onChanged();
         return numericStatsBuilder_;
       }
 
@@ -3851,7 +3847,7 @@ public final class StatsOuterClass {
           stats_ = null;
         }
         statsCase_ = 3;
-        onChanged();;
+        onChanged();
         return stringStatsBuilder_;
       }
       @java.lang.Override
@@ -3932,7 +3928,7 @@ public final class StatsOuterClass {
       getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
+  private static final com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {

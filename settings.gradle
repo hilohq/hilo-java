@@ -1,10 +1,10 @@
 rootProject.name = 'hilo'
 
 include 'protobufs'
-include 'connector'
+include 'connectors'
+include 'parsers'
 include 'statistics'
 include 'structure-learning'
 include 'schema-service'
 include 'schema-server'
-include 'hilo-client'
-include 'structure-learning-integration-tests'
+include 'integration-tests'

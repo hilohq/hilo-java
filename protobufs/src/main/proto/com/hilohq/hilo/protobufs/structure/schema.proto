@@ -38,9 +38,9 @@ message SchemaFieldsModel {
   SchemaMetadata metadata = 1;
 
   oneof schema {
-    JsonFields json = 16;
-    TextFields text = 17;
-    MysqlFields mysql = 18;
+    JsonField json = 16;
+    TextField text = 17;
+    MysqlField mysql = 18;
   }
 }
 
@@ -48,8 +48,8 @@ message SchemaLogsModel {
   SchemaMetadata metadata = 1;
 
   oneof schema {
-    JsonLogs json = 16;
-    TextLogs text = 17;
-    MysqlLogs mysql = 18;
+    JsonLog json = 16;
+    TextLog text = 17;
+    MysqlLog mysql = 18;
   }
 }

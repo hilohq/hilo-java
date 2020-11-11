@@ -24,29 +24,29 @@ public final class Json {
      */
     JSON_BOOLEAN(0),
     /**
-     * <code>JSON_INTEGER = 1;</code>
+     * <code>JSON_NUMBER = 1;</code>
      */
-    JSON_INTEGER(1),
+    JSON_NUMBER(1),
     /**
-     * <code>JSON_FLOAT = 2;</code>
+     * <code>JSON_STRING = 2;</code>
      */
-    JSON_FLOAT(2),
+    JSON_STRING(2),
     /**
-     * <code>JSON_STRING = 3;</code>
+     * <code>JSON_ARRAY = 3;</code>
      */
-    JSON_STRING(3),
+    JSON_ARRAY(3),
     /**
-     * <code>JSON_ARRAY = 4;</code>
+     * <code>JSON_NULL = 4;</code>
      */
-    JSON_ARRAY(4),
+    JSON_NULL(4),
     /**
-     * <code>JSON_NULL = 5;</code>
+     * <code>JSON_OBJECT = 5;</code>
      */
-    JSON_NULL(5),
+    JSON_OBJECT(5),
     /**
-     * <code>JSON_OBJECT = 6;</code>
+     * <code>JSON_BINARY = 6;</code>
      */
-    JSON_OBJECT(6),
+    JSON_BINARY(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -55,29 +55,29 @@ public final class Json {
      */
     public static final int JSON_BOOLEAN_VALUE = 0;
     /**
-     * <code>JSON_INTEGER = 1;</code>
+     * <code>JSON_NUMBER = 1;</code>
      */
-    public static final int JSON_INTEGER_VALUE = 1;
+    public static final int JSON_NUMBER_VALUE = 1;
     /**
-     * <code>JSON_FLOAT = 2;</code>
+     * <code>JSON_STRING = 2;</code>
      */
-    public static final int JSON_FLOAT_VALUE = 2;
+    public static final int JSON_STRING_VALUE = 2;
     /**
-     * <code>JSON_STRING = 3;</code>
+     * <code>JSON_ARRAY = 3;</code>
      */
-    public static final int JSON_STRING_VALUE = 3;
+    public static final int JSON_ARRAY_VALUE = 3;
     /**
-     * <code>JSON_ARRAY = 4;</code>
+     * <code>JSON_NULL = 4;</code>
      */
-    public static final int JSON_ARRAY_VALUE = 4;
+    public static final int JSON_NULL_VALUE = 4;
     /**
-     * <code>JSON_NULL = 5;</code>
+     * <code>JSON_OBJECT = 5;</code>
      */
-    public static final int JSON_NULL_VALUE = 5;
+    public static final int JSON_OBJECT_VALUE = 5;
     /**
-     * <code>JSON_OBJECT = 6;</code>
+     * <code>JSON_BINARY = 6;</code>
      */
-    public static final int JSON_OBJECT_VALUE = 6;
+    public static final int JSON_BINARY_VALUE = 6;
 
 
     public final int getNumber() {
@@ -105,12 +105,12 @@ public final class Json {
     public static JsonType forNumber(int value) {
       switch (value) {
         case 0: return JSON_BOOLEAN;
-        case 1: return JSON_INTEGER;
-        case 2: return JSON_FLOAT;
-        case 3: return JSON_STRING;
-        case 4: return JSON_ARRAY;
-        case 5: return JSON_NULL;
-        case 6: return JSON_OBJECT;
+        case 1: return JSON_NUMBER;
+        case 2: return JSON_STRING;
+        case 3: return JSON_ARRAY;
+        case 4: return JSON_NULL;
+        case 5: return JSON_OBJECT;
+        case 6: return JSON_BINARY;
         default: return null;
       }
     }
@@ -196,10 +196,10 @@ public final class Json {
     long getArrayCount();
 
     /**
-     * <code>int64 float_count = 5;</code>
-     * @return The floatCount.
+     * <code>int64 number_count = 5;</code>
+     * @return The numberCount.
      */
-    long getFloatCount();
+    long getNumberCount();
 
     /**
      * <code>int64 string_count = 6;</code>
@@ -208,10 +208,10 @@ public final class Json {
     long getStringCount();
 
     /**
-     * <code>int64 integer_count = 7;</code>
-     * @return The integerCount.
+     * <code>int64 binary_count = 7;</code>
+     * @return The binaryCount.
      */
-    long getIntegerCount();
+    long getBinaryCount();
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.JsonTypeHistogram}
@@ -280,7 +280,7 @@ public final class Json {
             }
             case 40: {
 
-              floatCount_ = input.readInt64();
+              numberCount_ = input.readInt64();
               break;
             }
             case 48: {
@@ -290,7 +290,7 @@ public final class Json {
             }
             case 56: {
 
-              integerCount_ = input.readInt64();
+              binaryCount_ = input.readInt64();
               break;
             }
             default: {
@@ -369,15 +369,15 @@ public final class Json {
       return arrayCount_;
     }
 
-    public static final int FLOAT_COUNT_FIELD_NUMBER = 5;
-    private long floatCount_;
+    public static final int NUMBER_COUNT_FIELD_NUMBER = 5;
+    private long numberCount_;
     /**
-     * <code>int64 float_count = 5;</code>
-     * @return The floatCount.
+     * <code>int64 number_count = 5;</code>
+     * @return The numberCount.
      */
     @java.lang.Override
-    public long getFloatCount() {
-      return floatCount_;
+    public long getNumberCount() {
+      return numberCount_;
     }
 
     public static final int STRING_COUNT_FIELD_NUMBER = 6;
@@ -391,15 +391,15 @@ public final class Json {
       return stringCount_;
     }
 
-    public static final int INTEGER_COUNT_FIELD_NUMBER = 7;
-    private long integerCount_;
+    public static final int BINARY_COUNT_FIELD_NUMBER = 7;
+    private long binaryCount_;
     /**
-     * <code>int64 integer_count = 7;</code>
-     * @return The integerCount.
+     * <code>int64 binary_count = 7;</code>
+     * @return The binaryCount.
      */
     @java.lang.Override
-    public long getIntegerCount() {
-      return integerCount_;
+    public long getBinaryCount() {
+      return binaryCount_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -428,14 +428,14 @@ public final class Json {
       if (arrayCount_ != 0L) {
         output.writeInt64(4, arrayCount_);
       }
-      if (floatCount_ != 0L) {
-        output.writeInt64(5, floatCount_);
+      if (numberCount_ != 0L) {
+        output.writeInt64(5, numberCount_);
       }
       if (stringCount_ != 0L) {
         output.writeInt64(6, stringCount_);
       }
-      if (integerCount_ != 0L) {
-        output.writeInt64(7, integerCount_);
+      if (binaryCount_ != 0L) {
+        output.writeInt64(7, binaryCount_);
       }
       unknownFields.writeTo(output);
     }
@@ -462,17 +462,17 @@ public final class Json {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, arrayCount_);
       }
-      if (floatCount_ != 0L) {
+      if (numberCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, floatCount_);
+          .computeInt64Size(5, numberCount_);
       }
       if (stringCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, stringCount_);
       }
-      if (integerCount_ != 0L) {
+      if (binaryCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(7, integerCount_);
+          .computeInt64Size(7, binaryCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -497,12 +497,12 @@ public final class Json {
           != other.getObjectCount()) return false;
       if (getArrayCount()
           != other.getArrayCount()) return false;
-      if (getFloatCount()
-          != other.getFloatCount()) return false;
+      if (getNumberCount()
+          != other.getNumberCount()) return false;
       if (getStringCount()
           != other.getStringCount()) return false;
-      if (getIntegerCount()
-          != other.getIntegerCount()) return false;
+      if (getBinaryCount()
+          != other.getBinaryCount()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -526,15 +526,15 @@ public final class Json {
       hash = (37 * hash) + ARRAY_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getArrayCount());
-      hash = (37 * hash) + FLOAT_COUNT_FIELD_NUMBER;
+      hash = (37 * hash) + NUMBER_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFloatCount());
+          getNumberCount());
       hash = (37 * hash) + STRING_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStringCount());
-      hash = (37 * hash) + INTEGER_COUNT_FIELD_NUMBER;
+      hash = (37 * hash) + BINARY_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getIntegerCount());
+          getBinaryCount());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -676,11 +676,11 @@ public final class Json {
 
         arrayCount_ = 0L;
 
-        floatCount_ = 0L;
+        numberCount_ = 0L;
 
         stringCount_ = 0L;
 
-        integerCount_ = 0L;
+        binaryCount_ = 0L;
 
         return this;
       }
@@ -712,9 +712,9 @@ public final class Json {
         result.booleanCount_ = booleanCount_;
         result.objectCount_ = objectCount_;
         result.arrayCount_ = arrayCount_;
-        result.floatCount_ = floatCount_;
+        result.numberCount_ = numberCount_;
         result.stringCount_ = stringCount_;
-        result.integerCount_ = integerCount_;
+        result.binaryCount_ = binaryCount_;
         onBuilt();
         return result;
       }
@@ -775,14 +775,14 @@ public final class Json {
         if (other.getArrayCount() != 0L) {
           setArrayCount(other.getArrayCount());
         }
-        if (other.getFloatCount() != 0L) {
-          setFloatCount(other.getFloatCount());
+        if (other.getNumberCount() != 0L) {
+          setNumberCount(other.getNumberCount());
         }
         if (other.getStringCount() != 0L) {
           setStringCount(other.getStringCount());
         }
-        if (other.getIntegerCount() != 0L) {
-          setIntegerCount(other.getIntegerCount());
+        if (other.getBinaryCount() != 0L) {
+          setBinaryCount(other.getBinaryCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -937,33 +937,33 @@ public final class Json {
         return this;
       }
 
-      private long floatCount_ ;
+      private long numberCount_ ;
       /**
-       * <code>int64 float_count = 5;</code>
-       * @return The floatCount.
+       * <code>int64 number_count = 5;</code>
+       * @return The numberCount.
        */
       @java.lang.Override
-      public long getFloatCount() {
-        return floatCount_;
+      public long getNumberCount() {
+        return numberCount_;
       }
       /**
-       * <code>int64 float_count = 5;</code>
-       * @param value The floatCount to set.
+       * <code>int64 number_count = 5;</code>
+       * @param value The numberCount to set.
        * @return This builder for chaining.
        */
-      public Builder setFloatCount(long value) {
+      public Builder setNumberCount(long value) {
         
-        floatCount_ = value;
+        numberCount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 float_count = 5;</code>
+       * <code>int64 number_count = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearFloatCount() {
+      public Builder clearNumberCount() {
         
-        floatCount_ = 0L;
+        numberCount_ = 0L;
         onChanged();
         return this;
       }
@@ -999,33 +999,33 @@ public final class Json {
         return this;
       }
 
-      private long integerCount_ ;
+      private long binaryCount_ ;
       /**
-       * <code>int64 integer_count = 7;</code>
-       * @return The integerCount.
+       * <code>int64 binary_count = 7;</code>
+       * @return The binaryCount.
        */
       @java.lang.Override
-      public long getIntegerCount() {
-        return integerCount_;
+      public long getBinaryCount() {
+        return binaryCount_;
       }
       /**
-       * <code>int64 integer_count = 7;</code>
-       * @param value The integerCount to set.
+       * <code>int64 binary_count = 7;</code>
+       * @param value The binaryCount to set.
        * @return This builder for chaining.
        */
-      public Builder setIntegerCount(long value) {
+      public Builder setBinaryCount(long value) {
         
-        integerCount_ = value;
+        binaryCount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 integer_count = 7;</code>
+       * <code>int64 binary_count = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIntegerCount() {
+      public Builder clearBinaryCount() {
         
-        integerCount_ = 0L;
+        binaryCount_ = 0L;
         onChanged();
         return this;
       }
@@ -8930,34 +8930,34 @@ public final class Json {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-     * @return Whether the logs field is set.
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+     * @return Whether the log field is set.
      */
-    boolean hasLogs();
+    boolean hasLog();
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-     * @return The logs.
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+     * @return The log.
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonLogs getLogs();
+    com.hilohq.hilo.protobufs.structure.Json.JsonLog getLog();
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getLogsOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getLogOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-     * @return Whether the fields field is set.
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+     * @return Whether the field field is set.
      */
-    boolean hasFields();
+    boolean hasField();
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-     * @return The fields.
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+     * @return The field.
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonFields getFields();
+    com.hilohq.hilo.protobufs.structure.Json.JsonField getField();
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getFieldsOrBuilder();
+    com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldOrBuilder();
 
     public com.hilohq.hilo.protobufs.structure.Json.JsonUpdate.UpdateCase getUpdateCase();
   }
@@ -9007,28 +9007,28 @@ public final class Json {
               done = true;
               break;
             case 10: {
-              com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder subBuilder = null;
               if (updateCase_ == 1) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_).toBuilder();
               }
               update_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonLogs.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonLog.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_);
                 update_ = subBuilder.buildPartial();
               }
               updateCase_ = 1;
               break;
             }
             case 18: {
-              com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder subBuilder = null;
               if (updateCase_ == 2) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.Json.JsonField) update_).toBuilder();
               }
               update_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonFields.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonField.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonField) update_);
                 update_ = subBuilder.buildPartial();
               }
               updateCase_ = 2;
@@ -9071,8 +9071,8 @@ public final class Json {
     public enum UpdateCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      LOGS(1),
-      FIELDS(2),
+      LOG(1),
+      FIELD(2),
       UPDATE_NOT_SET(0);
       private final int value;
       private UpdateCase(int value) {
@@ -9090,8 +9090,8 @@ public final class Json {
 
       public static UpdateCase forNumber(int value) {
         switch (value) {
-          case 1: return LOGS;
-          case 2: return FIELDS;
+          case 1: return LOG;
+          case 2: return FIELD;
           case 0: return UPDATE_NOT_SET;
           default: return null;
         }
@@ -9107,66 +9107,66 @@ public final class Json {
           updateCase_);
     }
 
-    public static final int LOGS_FIELD_NUMBER = 1;
+    public static final int LOG_FIELD_NUMBER = 1;
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-     * @return Whether the logs field is set.
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+     * @return Whether the log field is set.
      */
     @java.lang.Override
-    public boolean hasLogs() {
+    public boolean hasLog() {
       return updateCase_ == 1;
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-     * @return The logs.
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+     * @return The log.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getLogs() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLog getLog() {
       if (updateCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+     * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getLogsOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getLogOrBuilder() {
       if (updateCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
     }
 
-    public static final int FIELDS_FIELD_NUMBER = 2;
+    public static final int FIELD_FIELD_NUMBER = 2;
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-     * @return Whether the fields field is set.
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+     * @return Whether the field field is set.
      */
     @java.lang.Override
-    public boolean hasFields() {
+    public boolean hasField() {
       return updateCase_ == 2;
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-     * @return The fields.
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+     * @return The field.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonFields getFields() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonField getField() {
       if (updateCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+     * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getFieldsOrBuilder() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldOrBuilder() {
       if (updateCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_;
+         return (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9184,10 +9184,10 @@ public final class Json {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (updateCase_ == 1) {
-        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_);
+        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_);
       }
       if (updateCase_ == 2) {
-        output.writeMessage(2, (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_);
+        output.writeMessage(2, (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_);
       }
       unknownFields.writeTo(output);
     }
@@ -9200,11 +9200,11 @@ public final class Json {
       size = 0;
       if (updateCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_);
+          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_);
       }
       if (updateCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_);
+          .computeMessageSize(2, (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9224,12 +9224,12 @@ public final class Json {
       if (!getUpdateCase().equals(other.getUpdateCase())) return false;
       switch (updateCase_) {
         case 1:
-          if (!getLogs()
-              .equals(other.getLogs())) return false;
+          if (!getLog()
+              .equals(other.getLog())) return false;
           break;
         case 2:
-          if (!getFields()
-              .equals(other.getFields())) return false;
+          if (!getField()
+              .equals(other.getField())) return false;
           break;
         case 0:
         default:
@@ -9247,12 +9247,12 @@ public final class Json {
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (updateCase_) {
         case 1:
-          hash = (37 * hash) + LOGS_FIELD_NUMBER;
-          hash = (53 * hash) + getLogs().hashCode();
+          hash = (37 * hash) + LOG_FIELD_NUMBER;
+          hash = (53 * hash) + getLog().hashCode();
           break;
         case 2:
-          hash = (37 * hash) + FIELDS_FIELD_NUMBER;
-          hash = (53 * hash) + getFields().hashCode();
+          hash = (37 * hash) + FIELD_FIELD_NUMBER;
+          hash = (53 * hash) + getField().hashCode();
           break;
         case 0:
         default:
@@ -9419,17 +9419,17 @@ public final class Json {
       public com.hilohq.hilo.protobufs.structure.Json.JsonUpdate buildPartial() {
         com.hilohq.hilo.protobufs.structure.Json.JsonUpdate result = new com.hilohq.hilo.protobufs.structure.Json.JsonUpdate(this);
         if (updateCase_ == 1) {
-          if (logsBuilder_ == null) {
+          if (logBuilder_ == null) {
             result.update_ = update_;
           } else {
-            result.update_ = logsBuilder_.build();
+            result.update_ = logBuilder_.build();
           }
         }
         if (updateCase_ == 2) {
-          if (fieldsBuilder_ == null) {
+          if (fieldBuilder_ == null) {
             result.update_ = update_;
           } else {
-            result.update_ = fieldsBuilder_.build();
+            result.update_ = fieldBuilder_.build();
           }
         }
         result.updateCase_ = updateCase_;
@@ -9482,12 +9482,12 @@ public final class Json {
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Json.JsonUpdate other) {
         if (other == com.hilohq.hilo.protobufs.structure.Json.JsonUpdate.getDefaultInstance()) return this;
         switch (other.getUpdateCase()) {
-          case LOGS: {
-            mergeLogs(other.getLogs());
+          case LOG: {
+            mergeLog(other.getLog());
             break;
           }
-          case FIELDS: {
-            mergeFields(other.getFields());
+          case FIELD: {
+            mergeField(other.getField());
             break;
           }
           case UPDATE_NOT_SET: {
@@ -9539,71 +9539,71 @@ public final class Json {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder> logsBuilder_;
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder> logBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-       * @return Whether the logs field is set.
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+       * @return Whether the log field is set.
        */
       @java.lang.Override
-      public boolean hasLogs() {
+      public boolean hasLog() {
         return updateCase_ == 1;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
-       * @return The logs.
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
+       * @return The log.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getLogs() {
-        if (logsBuilder_ == null) {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog getLog() {
+        if (logBuilder_ == null) {
           if (updateCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         } else {
           if (updateCase_ == 1) {
-            return logsBuilder_.getMessage();
+            return logBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
-      public Builder setLogs(com.hilohq.hilo.protobufs.structure.Json.JsonLogs value) {
-        if (logsBuilder_ == null) {
+      public Builder setLog(com.hilohq.hilo.protobufs.structure.Json.JsonLog value) {
+        if (logBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           update_ = value;
           onChanged();
         } else {
-          logsBuilder_.setMessage(value);
+          logBuilder_.setMessage(value);
         }
         updateCase_ = 1;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
-      public Builder setLogs(
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder builderForValue) {
-        if (logsBuilder_ == null) {
+      public Builder setLog(
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder builderForValue) {
+        if (logBuilder_ == null) {
           update_ = builderForValue.build();
           onChanged();
         } else {
-          logsBuilder_.setMessage(builderForValue.build());
+          logBuilder_.setMessage(builderForValue.build());
         }
         updateCase_ = 1;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
-      public Builder mergeLogs(com.hilohq.hilo.protobufs.structure.Json.JsonLogs value) {
-        if (logsBuilder_ == null) {
+      public Builder mergeLog(com.hilohq.hilo.protobufs.structure.Json.JsonLog value) {
+        if (logBuilder_ == null) {
           if (updateCase_ == 1 &&
-              update_ != com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance()) {
-            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonLogs.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_)
+              update_ != com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance()) {
+            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonLog.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_)
                 .mergeFrom(value).buildPartial();
           } else {
             update_ = value;
@@ -9611,18 +9611,18 @@ public final class Json {
           onChanged();
         } else {
           if (updateCase_ == 1) {
-            logsBuilder_.mergeFrom(value);
+            logBuilder_.mergeFrom(value);
           }
-          logsBuilder_.setMessage(value);
+          logBuilder_.setMessage(value);
         }
         updateCase_ = 1;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
-      public Builder clearLogs() {
-        if (logsBuilder_ == null) {
+      public Builder clearLog() {
+        if (logBuilder_ == null) {
           if (updateCase_ == 1) {
             updateCase_ = 0;
             update_ = null;
@@ -9633,118 +9633,118 @@ public final class Json {
             updateCase_ = 0;
             update_ = null;
           }
-          logsBuilder_.clear();
+          logBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder getLogsBuilder() {
-        return getLogsFieldBuilder().getBuilder();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder getLogBuilder() {
+        return getLogFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder getLogsOrBuilder() {
-        if ((updateCase_ == 1) && (logsBuilder_ != null)) {
-          return logsBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder getLogOrBuilder() {
+        if ((updateCase_ == 1) && (logBuilder_ != null)) {
+          return logBuilder_.getMessageOrBuilder();
         } else {
           if (updateCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonLogs logs = 1;</code>
+       * <code>.hilo.protobufs.structure.JsonLog log = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder> 
-          getLogsFieldBuilder() {
-        if (logsBuilder_ == null) {
+          com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder> 
+          getLogFieldBuilder() {
+        if (logBuilder_ == null) {
           if (!(updateCase_ == 1)) {
-            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
           }
-          logsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Json.JsonLogs, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) update_,
+          logBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.Json.JsonLog, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Json.JsonLog) update_,
                   getParentForChildren(),
                   isClean());
           update_ = null;
         }
         updateCase_ = 1;
         onChanged();;
-        return logsBuilder_;
+        return logBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder> fieldsBuilder_;
+          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> fieldBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-       * @return Whether the fields field is set.
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+       * @return Whether the field field is set.
        */
       @java.lang.Override
-      public boolean hasFields() {
+      public boolean hasField() {
         return updateCase_ == 2;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
-       * @return The fields.
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
+       * @return The field.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFields getFields() {
-        if (fieldsBuilder_ == null) {
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField getField() {
+        if (fieldBuilder_ == null) {
           if (updateCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         } else {
           if (updateCase_ == 2) {
-            return fieldsBuilder_.getMessage();
+            return fieldBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
-      public Builder setFields(com.hilohq.hilo.protobufs.structure.Json.JsonFields value) {
-        if (fieldsBuilder_ == null) {
+      public Builder setField(com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
+        if (fieldBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           update_ = value;
           onChanged();
         } else {
-          fieldsBuilder_.setMessage(value);
+          fieldBuilder_.setMessage(value);
         }
         updateCase_ = 2;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
-      public Builder setFields(
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder builderForValue) {
-        if (fieldsBuilder_ == null) {
+      public Builder setField(
+          com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder builderForValue) {
+        if (fieldBuilder_ == null) {
           update_ = builderForValue.build();
           onChanged();
         } else {
-          fieldsBuilder_.setMessage(builderForValue.build());
+          fieldBuilder_.setMessage(builderForValue.build());
         }
         updateCase_ = 2;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
-      public Builder mergeFields(com.hilohq.hilo.protobufs.structure.Json.JsonFields value) {
-        if (fieldsBuilder_ == null) {
+      public Builder mergeField(com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
+        if (fieldBuilder_ == null) {
           if (updateCase_ == 2 &&
-              update_ != com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance()) {
-            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonFields.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_)
+              update_ != com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance()) {
+            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonField.newBuilder((com.hilohq.hilo.protobufs.structure.Json.JsonField) update_)
                 .mergeFrom(value).buildPartial();
           } else {
             update_ = value;
@@ -9752,18 +9752,18 @@ public final class Json {
           onChanged();
         } else {
           if (updateCase_ == 2) {
-            fieldsBuilder_.mergeFrom(value);
+            fieldBuilder_.mergeFrom(value);
           }
-          fieldsBuilder_.setMessage(value);
+          fieldBuilder_.setMessage(value);
         }
         updateCase_ = 2;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
-      public Builder clearFields() {
-        if (fieldsBuilder_ == null) {
+      public Builder clearField() {
+        if (fieldBuilder_ == null) {
           if (updateCase_ == 2) {
             updateCase_ = 0;
             update_ = null;
@@ -9774,50 +9774,50 @@ public final class Json {
             updateCase_ = 0;
             update_ = null;
           }
-          fieldsBuilder_.clear();
+          fieldBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder getFieldsBuilder() {
-        return getFieldsFieldBuilder().getBuilder();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder getFieldBuilder() {
+        return getFieldFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder getFieldsOrBuilder() {
-        if ((updateCase_ == 2) && (fieldsBuilder_ != null)) {
-          return fieldsBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldOrBuilder() {
+        if ((updateCase_ == 2) && (fieldBuilder_ != null)) {
+          return fieldBuilder_.getMessageOrBuilder();
         } else {
           if (updateCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_;
+            return (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.JsonFields fields = 2;</code>
+       * <code>.hilo.protobufs.structure.JsonField field = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder> 
-          getFieldsFieldBuilder() {
-        if (fieldsBuilder_ == null) {
+          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
+          getFieldFieldBuilder() {
+        if (fieldBuilder_ == null) {
           if (!(updateCase_ == 2)) {
-            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonFields.getDefaultInstance();
+            update_ = com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance();
           }
-          fieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Json.JsonFields, com.hilohq.hilo.protobufs.structure.Json.JsonFields.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.Json.JsonFields) update_,
+          fieldBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.Json.JsonField) update_,
                   getParentForChildren(),
                   isClean());
           update_ = null;
         }
         updateCase_ = 2;
         onChanged();;
-        return fieldsBuilder_;
+        return fieldBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9892,28 +9892,38 @@ public final class Json {
     com.hilohq.hilo.protobufs.structure.Json.JsonParseStatsOrBuilder getParseStatsOrBuilder();
 
     /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-     */
-    java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField> 
-        getFieldsList();
-    /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-     */
-    com.hilohq.hilo.protobufs.structure.Json.JsonField getFields(int index);
-    /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
      */
     int getFieldsCount();
     /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
      */
-    java.util.List<? extends com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
-        getFieldsOrBuilderList();
+    boolean containsFields(
+        java.lang.String key);
     /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+     * Use {@link #getFieldsMap()} instead.
      */
-    com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldsOrBuilder(
-        int index);
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+    getFields();
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+    java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+    getFieldsMap();
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+
+    com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrDefault(
+        java.lang.String key,
+        com.hilohq.hilo.protobufs.structure.Json.JsonField defaultValue);
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+
+    com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.JsonFields}
@@ -9928,7 +9938,6 @@ public final class Json {
       super(builder);
     }
     private JsonFields() {
-      fields_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9977,11 +9986,15 @@ public final class Json {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                fields_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.structure.Json.JsonField>();
+                fields_ = com.google.protobuf.MapField.newMapField(
+                    FieldsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
               }
-              fields_.add(
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.Json.JsonField.parser(), extensionRegistry));
+              com.google.protobuf.MapEntry<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+              fields__ = input.readMessage(
+                  FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fields_.getMutableMap().put(
+                  fields__.getKey(), fields__.getValue());
               break;
             }
             default: {
@@ -9999,9 +10012,6 @@ public final class Json {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fields_ = java.util.Collections.unmodifiableList(fields_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -10011,6 +10021,18 @@ public final class Json {
       return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonFields_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetFields();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -10046,43 +10068,84 @@ public final class Json {
     }
 
     public static final int FIELDS_FIELD_NUMBER = 2;
-    private java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField> fields_;
-    /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField> getFieldsList() {
+    private static final class FieldsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>newDefaultInstance(
+                  com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> fields_;
+    private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+    internalGetFields() {
+      if (fields_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            FieldsDefaultEntryHolder.defaultEntry);
+      }
       return fields_;
     }
-    /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
-        getFieldsOrBuilderList() {
-      return fields_;
-    }
-    /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-     */
-    @java.lang.Override
+
     public int getFieldsCount() {
-      return fields_.size();
+      return internalGetFields().getMap().size();
     }
     /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
      */
+
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonField getFields(int index) {
-      return fields_.get(index);
+    public boolean containsFields(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetFields().getMap().containsKey(key);
     }
     /**
-     * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+     * Use {@link #getFieldsMap()} instead.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldsOrBuilder(
-        int index) {
-      return fields_.get(index);
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> getFields() {
+      return getFieldsMap();
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> getFieldsMap() {
+      return internalGetFields().getMap();
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrDefault(
+        java.lang.String key,
+        com.hilohq.hilo.protobufs.structure.Json.JsonField defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> map =
+          internalGetFields().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> map =
+          internalGetFields().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10102,9 +10165,12 @@ public final class Json {
       if (parseStats_ != null) {
         output.writeMessage(1, getParseStats());
       }
-      for (int i = 0; i < fields_.size(); i++) {
-        output.writeMessage(2, fields_.get(i));
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetFields(),
+          FieldsDefaultEntryHolder.defaultEntry,
+          2);
       unknownFields.writeTo(output);
     }
 
@@ -10118,9 +10184,15 @@ public final class Json {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getParseStats());
       }
-      for (int i = 0; i < fields_.size(); i++) {
+      for (java.util.Map.Entry<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> entry
+           : internalGetFields().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+        fields__ = FieldsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, fields_.get(i));
+            .computeMessageSize(2, fields__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10142,8 +10214,8 @@ public final class Json {
         if (!getParseStats()
             .equals(other.getParseStats())) return false;
       }
-      if (!getFieldsList()
-          .equals(other.getFieldsList())) return false;
+      if (!internalGetFields().equals(
+          other.internalGetFields())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10159,9 +10231,9 @@ public final class Json {
         hash = (37 * hash) + PARSE_STATS_FIELD_NUMBER;
         hash = (53 * hash) + getParseStats().hashCode();
       }
-      if (getFieldsCount() > 0) {
+      if (!internalGetFields().getMap().isEmpty()) {
         hash = (37 * hash) + FIELDS_FIELD_NUMBER;
-        hash = (53 * hash) + getFieldsList().hashCode();
+        hash = (53 * hash) + internalGetFields().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10270,6 +10342,28 @@ public final class Json {
         return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonFields_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -10291,7 +10385,6 @@ public final class Json {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getFieldsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10303,12 +10396,7 @@ public final class Json {
           parseStats_ = null;
           parseStatsBuilder_ = null;
         }
-        if (fieldsBuilder_ == null) {
-          fields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          fieldsBuilder_.clear();
-        }
+        internalGetMutableFields().clear();
         return this;
       }
 
@@ -10341,15 +10429,8 @@ public final class Json {
         } else {
           result.parseStats_ = parseStatsBuilder_.build();
         }
-        if (fieldsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            fields_ = java.util.Collections.unmodifiableList(fields_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.fields_ = fields_;
-        } else {
-          result.fields_ = fieldsBuilder_.build();
-        }
+        result.fields_ = internalGetFields();
+        result.fields_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -10401,32 +10482,8 @@ public final class Json {
         if (other.hasParseStats()) {
           mergeParseStats(other.getParseStats());
         }
-        if (fieldsBuilder_ == null) {
-          if (!other.fields_.isEmpty()) {
-            if (fields_.isEmpty()) {
-              fields_ = other.fields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureFieldsIsMutable();
-              fields_.addAll(other.fields_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.fields_.isEmpty()) {
-            if (fieldsBuilder_.isEmpty()) {
-              fieldsBuilder_.dispose();
-              fieldsBuilder_ = null;
-              fields_ = other.fields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              fieldsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFieldsFieldBuilder() : null;
-            } else {
-              fieldsBuilder_.addAllMessages(other.fields_);
-            }
-          }
-        }
+        internalGetMutableFields().mergeFrom(
+            other.internalGetFields());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10576,244 +10633,132 @@ public final class Json {
         return parseStatsBuilder_;
       }
 
-      private java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField> fields_ =
-        java.util.Collections.emptyList();
-      private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          fields_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.structure.Json.JsonField>(fields_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> fieldsBuilder_;
-
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField> getFieldsList() {
-        if (fieldsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(fields_);
-        } else {
-          return fieldsBuilder_.getMessageList();
+      private com.google.protobuf.MapField<
+          java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> fields_;
+      private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+      internalGetFields() {
+        if (fields_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
         }
+        return fields_;
       }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
+      private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+      internalGetMutableFields() {
+        onChanged();;
+        if (fields_ == null) {
+          fields_ = com.google.protobuf.MapField.newMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
+        }
+        if (!fields_.isMutable()) {
+          fields_ = fields_.copy();
+        }
+        return fields_;
+      }
+
       public int getFieldsCount() {
-        if (fieldsBuilder_ == null) {
-          return fields_.size();
-        } else {
-          return fieldsBuilder_.getCount();
-        }
+        return internalGetFields().getMap().size();
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonField getFields(int index) {
-        if (fieldsBuilder_ == null) {
-          return fields_.get(index);
-        } else {
-          return fieldsBuilder_.getMessage(index);
-        }
+
+      @java.lang.Override
+      public boolean containsFields(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetFields().getMap().containsKey(key);
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * Use {@link #getFieldsMap()} instead.
        */
-      public Builder setFields(
-          int index, com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
-        if (fieldsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFieldsIsMutable();
-          fields_.set(index, value);
-          onChanged();
-        } else {
-          fieldsBuilder_.setMessage(index, value);
-        }
-        return this;
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> getFields() {
+        return getFieldsMap();
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public Builder setFields(
-          int index, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder builderForValue) {
-        if (fieldsBuilder_ == null) {
-          ensureFieldsIsMutable();
-          fields_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          fieldsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> getFieldsMap() {
+        return internalGetFields().getMap();
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public Builder addFields(com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
-        if (fieldsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFieldsIsMutable();
-          fields_.add(value);
-          onChanged();
-        } else {
-          fieldsBuilder_.addMessage(value);
-        }
-        return this;
+      @java.lang.Override
+
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrDefault(
+          java.lang.String key,
+          com.hilohq.hilo.protobufs.structure.Json.JsonField defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> map =
+            internalGetFields().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public Builder addFields(
-          int index, com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
-        if (fieldsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFieldsIsMutable();
-          fields_.add(index, value);
-          onChanged();
-        } else {
-          fieldsBuilder_.addMessage(index, value);
+      @java.lang.Override
+
+      public com.hilohq.hilo.protobufs.structure.Json.JsonField getFieldsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> map =
+            internalGetFields().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
         }
-        return this;
+        return map.get(key);
       }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public Builder addFields(
-          com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder builderForValue) {
-        if (fieldsBuilder_ == null) {
-          ensureFieldsIsMutable();
-          fields_.add(builderForValue.build());
-          onChanged();
-        } else {
-          fieldsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public Builder addFields(
-          int index, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder builderForValue) {
-        if (fieldsBuilder_ == null) {
-          ensureFieldsIsMutable();
-          fields_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          fieldsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public Builder addAllFields(
-          java.lang.Iterable<? extends com.hilohq.hilo.protobufs.structure.Json.JsonField> values) {
-        if (fieldsBuilder_ == null) {
-          ensureFieldsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, fields_);
-          onChanged();
-        } else {
-          fieldsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
+
       public Builder clearFields() {
-        if (fieldsBuilder_ == null) {
-          fields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          fieldsBuilder_.clear();
-        }
+        internalGetMutableFields().getMutableMap()
+            .clear();
         return this;
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public Builder removeFields(int index) {
-        if (fieldsBuilder_ == null) {
-          ensureFieldsIsMutable();
-          fields_.remove(index);
-          onChanged();
-        } else {
-          fieldsBuilder_.remove(index);
-        }
+
+      public Builder removeFields(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableFields().getMutableMap()
+            .remove(key);
         return this;
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * Use alternate mutation accessors instead.
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder getFieldsBuilder(
-          int index) {
-        return getFieldsFieldBuilder().getBuilder(index);
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField>
+      getMutableFields() {
+        return internalGetMutableFields().getMutableMap();
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder getFieldsOrBuilder(
-          int index) {
-        if (fieldsBuilder_ == null) {
-          return fields_.get(index);  } else {
-          return fieldsBuilder_.getMessageOrBuilder(index);
-        }
+      public Builder putFields(
+          java.lang.String key,
+          com.hilohq.hilo.protobufs.structure.Json.JsonField value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableFields().getMutableMap()
+            .put(key, value);
+        return this;
       }
       /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
+       * <code>map&lt;string, .hilo.protobufs.structure.JsonField&gt; fields = 2;</code>
        */
-      public java.util.List<? extends com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
-           getFieldsOrBuilderList() {
-        if (fieldsBuilder_ != null) {
-          return fieldsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(fields_);
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder addFieldsBuilder() {
-        return getFieldsFieldBuilder().addBuilder(
-            com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder addFieldsBuilder(
-          int index) {
-        return getFieldsFieldBuilder().addBuilder(
-            index, com.hilohq.hilo.protobufs.structure.Json.JsonField.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.JsonField fields = 2;</code>
-       */
-      public java.util.List<com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder> 
-           getFieldsBuilderList() {
-        return getFieldsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder> 
-          getFieldsFieldBuilder() {
-        if (fieldsBuilder_ == null) {
-          fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.Json.JsonField, com.hilohq.hilo.protobufs.structure.Json.JsonField.Builder, com.hilohq.hilo.protobufs.structure.Json.JsonFieldOrBuilder>(
-                  fields_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          fields_ = null;
-        }
-        return fieldsBuilder_;
+
+      public Builder putAllFields(
+          java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.Json.JsonField> values) {
+        internalGetMutableFields().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10868,8 +10813,8 @@ public final class Json {
 
   }
 
-  public interface JsonLogsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.JsonLogs)
+  public interface JsonLogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.JsonLog)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10902,28 +10847,28 @@ public final class Json {
      */
     com.hilohq.hilo.protobufs.structure.Json.JsonFieldUpdateOrBuilder getFieldUpdateOrBuilder();
 
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogs.LogCase getLogCase();
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLog.LogCase getLogCase();
   }
   /**
-   * Protobuf type {@code hilo.protobufs.structure.JsonLogs}
+   * Protobuf type {@code hilo.protobufs.structure.JsonLog}
    */
-  public static final class JsonLogs extends
+  public static final class JsonLog extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.JsonLogs)
-      JsonLogsOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.JsonLog)
+      JsonLogOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use JsonLogs.newBuilder() to construct.
-    private JsonLogs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use JsonLog.newBuilder() to construct.
+    private JsonLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private JsonLogs() {
+    private JsonLog() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new JsonLogs();
+      return new JsonLog();
     }
 
     @java.lang.Override
@@ -10931,7 +10876,7 @@ public final class Json {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private JsonLogs(
+    private JsonLog(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -10998,15 +10943,15 @@ public final class Json {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLogs_descriptor;
+      return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLog_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLogs_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLog_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.structure.Json.JsonLogs.class, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder.class);
+              com.hilohq.hilo.protobufs.structure.Json.JsonLog.class, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder.class);
     }
 
     private int logCase_ = 0;
@@ -11159,10 +11104,10 @@ public final class Json {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Json.JsonLogs)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.Json.JsonLog)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.structure.Json.JsonLogs other = (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) obj;
+      com.hilohq.hilo.protobufs.structure.Json.JsonLog other = (com.hilohq.hilo.protobufs.structure.Json.JsonLog) obj;
 
       if (!getLogCase().equals(other.getLogCase())) return false;
       switch (logCase_) {
@@ -11205,69 +11150,69 @@ public final class Json {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs parseFrom(
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11280,7 +11225,7 @@ public final class Json {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Json.JsonLogs prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.Json.JsonLog prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11296,26 +11241,26 @@ public final class Json {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.structure.JsonLogs}
+     * Protobuf type {@code hilo.protobufs.structure.JsonLog}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.JsonLogs)
-        com.hilohq.hilo.protobufs.structure.Json.JsonLogsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.JsonLog)
+        com.hilohq.hilo.protobufs.structure.Json.JsonLogOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLogs_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLog_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLogs_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLog_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.Json.JsonLogs.class, com.hilohq.hilo.protobufs.structure.Json.JsonLogs.Builder.class);
+                com.hilohq.hilo.protobufs.structure.Json.JsonLog.class, com.hilohq.hilo.protobufs.structure.Json.JsonLog.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.structure.Json.JsonLogs.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.structure.Json.JsonLog.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11341,17 +11286,17 @@ public final class Json {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLogs_descriptor;
+        return com.hilohq.hilo.protobufs.structure.Json.internal_static_hilo_protobufs_structure_JsonLog_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs build() {
-        com.hilohq.hilo.protobufs.structure.Json.JsonLogs result = buildPartial();
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog build() {
+        com.hilohq.hilo.protobufs.structure.Json.JsonLog result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11359,8 +11304,8 @@ public final class Json {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.Json.JsonLogs buildPartial() {
-        com.hilohq.hilo.protobufs.structure.Json.JsonLogs result = new com.hilohq.hilo.protobufs.structure.Json.JsonLogs(this);
+      public com.hilohq.hilo.protobufs.structure.Json.JsonLog buildPartial() {
+        com.hilohq.hilo.protobufs.structure.Json.JsonLog result = new com.hilohq.hilo.protobufs.structure.Json.JsonLog(this);
         if (logCase_ == 1) {
           if (fieldCreateBuilder_ == null) {
             result.log_ = log_;
@@ -11414,16 +11359,16 @@ public final class Json {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.structure.Json.JsonLogs) {
-          return mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLogs)other);
+        if (other instanceof com.hilohq.hilo.protobufs.structure.Json.JsonLog) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.Json.JsonLog)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Json.JsonLogs other) {
-        if (other == com.hilohq.hilo.protobufs.structure.Json.JsonLogs.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.Json.JsonLog other) {
+        if (other == com.hilohq.hilo.protobufs.structure.Json.JsonLog.getDefaultInstance()) return this;
         switch (other.getLogCase()) {
           case FIELD_CREATE: {
             mergeFieldCreate(other.getFieldCreate());
@@ -11452,11 +11397,11 @@ public final class Json {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.structure.Json.JsonLogs parsedMessage = null;
+        com.hilohq.hilo.protobufs.structure.Json.JsonLog parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.structure.Json.JsonLogs) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.Json.JsonLog) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11775,41 +11720,41 @@ public final class Json {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.JsonLogs)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.JsonLog)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.JsonLogs)
-    private static final com.hilohq.hilo.protobufs.structure.Json.JsonLogs DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.JsonLog)
+    private static final com.hilohq.hilo.protobufs.structure.Json.JsonLog DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Json.JsonLogs();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.Json.JsonLog();
     }
 
-    public static com.hilohq.hilo.protobufs.structure.Json.JsonLogs getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.structure.Json.JsonLog getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<JsonLogs>
-        PARSER = new com.google.protobuf.AbstractParser<JsonLogs>() {
+    private static final com.google.protobuf.Parser<JsonLog>
+        PARSER = new com.google.protobuf.AbstractParser<JsonLog>() {
       @java.lang.Override
-      public JsonLogs parsePartialFrom(
+      public JsonLog parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new JsonLogs(input, extensionRegistry);
+        return new JsonLog(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<JsonLogs> parser() {
+    public static com.google.protobuf.Parser<JsonLog> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<JsonLogs> getParserForType() {
+    public com.google.protobuf.Parser<JsonLog> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.Json.JsonLogs getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.structure.Json.JsonLog getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11876,10 +11821,15 @@ public final class Json {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_JsonFields_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_JsonLogs_descriptor;
+    internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_JsonLogs_fieldAccessorTable;
+      internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_JsonLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_JsonLog_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11893,8 +11843,8 @@ public final class Json {
       "on.proto\022\030hilo.protobufs.structure\"\253\001\n\021J" +
       "sonTypeHistogram\022\022\n\nnull_count\030\001 \001(\003\022\025\n\r" +
       "boolean_count\030\002 \001(\003\022\024\n\014object_count\030\003 \001(" +
-      "\003\022\023\n\013array_count\030\004 \001(\003\022\023\n\013float_count\030\005 " +
-      "\001(\003\022\024\n\014string_count\030\006 \001(\003\022\025\n\rinteger_cou" +
+      "\003\022\023\n\013array_count\030\004 \001(\003\022\024\n\014number_count\030\005" +
+      " \001(\003\022\024\n\014string_count\030\006 \001(\003\022\024\n\014binary_cou" +
       "nt\030\007 \001(\003\"U\n\016JsonFieldStats\022C\n\016type_histo" +
       "gram\030\001 \001(\0132+.hilo.protobufs.structure.Js" +
       "onTypeHistogram\"\237\001\n\tJsonField\022\013\n\003key\030\001 \001" +
@@ -11922,21 +11872,24 @@ public final class Json {
       "onFieldUpdate.Field\032b\n\005Field\022\013\n\003key\030\001 \001(" +
       "\t\022\014\n\004path\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\0220\n\004type\030\004 " +
       "\001(\0162\".hilo.protobufs.structure.JsonType\"" +
-      "\202\001\n\nJsonUpdate\0222\n\004logs\030\001 \001(\0132\".hilo.prot" +
-      "obufs.structure.JsonLogsH\000\0226\n\006fields\030\002 \001" +
-      "(\0132$.hilo.protobufs.structure.JsonFields" +
-      "H\000B\010\n\006update\"\200\001\n\nJsonFields\022=\n\013parse_sta" +
-      "ts\030\001 \001(\0132(.hilo.protobufs.structure.Json" +
-      "ParseStats\0223\n\006fields\030\002 \003(\0132#.hilo.protob" +
-      "ufs.structure.JsonField\"\227\001\n\010JsonLogs\022A\n\014" +
-      "field_create\030\001 \001(\0132).hilo.protobufs.stru" +
-      "cture.JsonFieldCreateH\000\022A\n\014field_update\030" +
-      "\002 \001(\0132).hilo.protobufs.structure.JsonFie" +
-      "ldUpdateH\000B\005\n\003log*\177\n\010JsonType\022\020\n\014JSON_BO" +
-      "OLEAN\020\000\022\020\n\014JSON_INTEGER\020\001\022\016\n\nJSON_FLOAT\020" +
-      "\002\022\017\n\013JSON_STRING\020\003\022\016\n\nJSON_ARRAY\020\004\022\r\n\tJS" +
-      "ON_NULL\020\005\022\017\n\013JSON_OBJECT\020\006B%\n#com.hilohq" +
-      ".hilo.protobufs.structureb\006proto3"
+      "~\n\nJsonUpdate\0220\n\003log\030\001 \001(\0132!.hilo.protob" +
+      "ufs.structure.JsonLogH\000\0224\n\005field\030\002 \001(\0132#" +
+      ".hilo.protobufs.structure.JsonFieldH\000B\010\n" +
+      "\006update\"\341\001\n\nJsonFields\022=\n\013parse_stats\030\001 " +
+      "\001(\0132(.hilo.protobufs.structure.JsonParse" +
+      "Stats\022@\n\006fields\030\002 \003(\01320.hilo.protobufs.s" +
+      "tructure.JsonFields.FieldsEntry\032R\n\013Field" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\0222\n\005value\030\002 \001(\0132#.hil" +
+      "o.protobufs.structure.JsonField:\0028\001\"\226\001\n\007" +
+      "JsonLog\022A\n\014field_create\030\001 \001(\0132).hilo.pro" +
+      "tobufs.structure.JsonFieldCreateH\000\022A\n\014fi" +
+      "eld_update\030\002 \001(\0132).hilo.protobufs.struct" +
+      "ure.JsonFieldUpdateH\000B\005\n\003log*\177\n\010JsonType" +
+      "\022\020\n\014JSON_BOOLEAN\020\000\022\017\n\013JSON_NUMBER\020\001\022\017\n\013J" +
+      "SON_STRING\020\002\022\016\n\nJSON_ARRAY\020\003\022\r\n\tJSON_NUL" +
+      "L\020\004\022\017\n\013JSON_OBJECT\020\005\022\017\n\013JSON_BINARY\020\006B%\n" +
+      "#com.hilohq.hilo.protobufs.structureb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11947,7 +11900,7 @@ public final class Json {
     internal_static_hilo_protobufs_structure_JsonTypeHistogram_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_JsonTypeHistogram_descriptor,
-        new java.lang.String[] { "NullCount", "BooleanCount", "ObjectCount", "ArrayCount", "FloatCount", "StringCount", "IntegerCount", });
+        new java.lang.String[] { "NullCount", "BooleanCount", "ObjectCount", "ArrayCount", "NumberCount", "StringCount", "BinaryCount", });
     internal_static_hilo_protobufs_structure_JsonFieldStats_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_hilo_protobufs_structure_JsonFieldStats_fieldAccessorTable = new
@@ -12007,18 +11960,24 @@ public final class Json {
     internal_static_hilo_protobufs_structure_JsonUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_JsonUpdate_descriptor,
-        new java.lang.String[] { "Logs", "Fields", "Update", });
+        new java.lang.String[] { "Log", "Field", "Update", });
     internal_static_hilo_protobufs_structure_JsonFields_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_hilo_protobufs_structure_JsonFields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_JsonFields_descriptor,
         new java.lang.String[] { "ParseStats", "Fields", });
-    internal_static_hilo_protobufs_structure_JsonLogs_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_hilo_protobufs_structure_JsonLogs_fieldAccessorTable = new
+    internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_descriptor =
+      internal_static_hilo_protobufs_structure_JsonFields_descriptor.getNestedTypes().get(0);
+    internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_JsonLogs_descriptor,
+        internal_static_hilo_protobufs_structure_JsonFields_FieldsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_hilo_protobufs_structure_JsonLog_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_hilo_protobufs_structure_JsonLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_JsonLog_descriptor,
         new java.lang.String[] { "FieldCreate", "FieldUpdate", "Log", });
   }
 

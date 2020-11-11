@@ -161,7 +161,7 @@ public final class NumericPercentileHistogramAccumulator
       buckets.remove(lastBucketEntry.getKey());
       for (var currentBucketEntry = buckets.higherEntry(lastBucketEntry.getKey());
           currentBucketEntry != null
-              && (newBucketCount + currentBucketEntry.getValue()) * 100 / (double) totalCount
+              && (newBucketCount + currentBucketEntry.getValue()) * 100 / totalCount
                   < thresholdRatio * threshold
               && buckets.size() >= boundaries.boundaries().size();
           currentBucketEntry = buckets.higherEntry(currentBucketEntry.getKey()),
