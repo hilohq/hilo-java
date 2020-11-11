@@ -16,7 +16,7 @@ dependencies {
     compile group: 'org.apache.flink', name: 'flink-clients_2.12', version: '1.11.2'
     compile group: 'org.apache.flink', name: 'flink-connector-kafka_2.12', version: '1.11.2'
     compile group: 'de.javakaffee', name: 'kryo-serializers', version: '0.45'
+    compile group: 'io.grpc', name: 'grpc-testing', version: '1.33.1'
 
-    testCompile group: 'io.grpc', name: 'grpc-testing', version: '1.33.1'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
