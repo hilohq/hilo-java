@@ -35,7 +35,8 @@ public final class SchemaClient {
           } catch (InterruptedException | ExecutionException e) {
             result.completeExceptionally(e);
           }
-        }, executor);
+        },
+        executor);
     return result;
   }
 
@@ -49,8 +50,7 @@ public final class SchemaClient {
     return toCompletableFuture(stub.getSchemaLogs(request), executor);
   }
 
-  public CompletableFuture<Api.GetSchemaResponse> getSchema(
-      final Api.GetSchemaRequest request) {
+  public CompletableFuture<Api.GetSchemaResponse> getSchema(final Api.GetSchemaRequest request) {
     return toCompletableFuture(stub.getSchema(request), executor);
   }
 }

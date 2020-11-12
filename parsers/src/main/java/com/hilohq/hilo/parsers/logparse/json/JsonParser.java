@@ -41,7 +41,10 @@ public final class JsonParser implements LogParser {
   }
 
   private static void parseNodeObject(
-      final JsonNode node, final String path, final String name, final FieldsMap fields) {
+      final JsonNode node,
+      final String path,
+      final String name,
+      final FieldsMap<JsonFieldKey> fields) {
     final var it = node.fields();
     while (it.hasNext()) {
       final var fieldEntry = it.next();
@@ -50,7 +53,10 @@ public final class JsonParser implements LogParser {
   }
 
   private static void parseNode(
-      final JsonNode node, final String path, final String name, final FieldsMap fields) {
+      final JsonNode node,
+      final String path,
+      final String name,
+      final FieldsMap<JsonFieldKey> fields) {
     final var key = new JsonFieldKey(path, name);
     switch (node.getNodeType()) {
       case BOOLEAN:
@@ -84,12 +90,13 @@ public final class JsonParser implements LogParser {
   }
 
   @Override
-  public FieldsMap parse(final String log) {
+  public FieldsMap<JsonFieldKey> parse(final String log) {
     try {
       final var node = mapper.readTree(log);
-      final var fields = new FieldsMap();
+      final var fields = new FieldsMap<JsonFieldKey>();
       parseNode(node, "", "", fields);
       return fields;
+
     } catch (JsonProcessingException e) {
       throw new UncheckedIOException(e);
     }
