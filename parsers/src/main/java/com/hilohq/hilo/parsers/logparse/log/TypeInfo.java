@@ -18,6 +18,10 @@ public final class TypeInfo<K extends FieldKey, T> {
     return typeInfo.get(key);
   }
 
+  public boolean containsKey(final K key) {
+    return typeInfo.containsKey(key);
+  }
+
   public Map<K, T> typeInfo() {
     return typeInfo;
   }

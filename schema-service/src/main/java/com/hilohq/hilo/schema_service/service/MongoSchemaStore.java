@@ -6,12 +6,11 @@ import com.hilohq.hilo.connectors.mongodb.codec.MongoProtobufCodec;
 import com.hilohq.hilo.protobufs.structure.Schema;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
+import java.util.Collection;
+import java.util.concurrent.CompletableFuture;
 import org.bson.BsonDocument;
 import org.bson.BsonString;
 import org.bson.codecs.configuration.CodecRegistries;
-
-import java.util.Collection;
-import java.util.concurrent.CompletableFuture;
 
 public final class MongoSchemaStore implements SchemaStore {
   private final MongoClient client;
@@ -24,8 +23,8 @@ public final class MongoSchemaStore implements SchemaStore {
     final var codecRegistry =
         CodecRegistries.fromCodecs(
             new MongoProtobufCodec<>(Schema.SchemaMetadataModel.newBuilder().build()),
-                new MongoProtobufCodec<>(Schema.SchemaFieldsModel.newBuilder().build()),
-                new MongoProtobufCodec<>(Schema.SchemaLogsModel.newBuilder().build()));
+            new MongoProtobufCodec<>(Schema.SchemaFieldsModel.newBuilder().build()),
+            new MongoProtobufCodec<>(Schema.SchemaLogsModel.newBuilder().build()));
 
     final var settings =
         MongoClientSettings.builder()
@@ -51,9 +50,14 @@ public final class MongoSchemaStore implements SchemaStore {
   }
 
   @Override
-  public CompletableFuture<Collection<Schema.SchemaLogsModel>> getSchemaLogs(final String schemaId) {
+  public CompletableFuture<Collection<Schema.SchemaLogsModel>> getSchemaLogs(
+      final String schemaId) {
     final var filter = new BsonDocument();
     filter.append("metadata.schemaId", new BsonString(schemaId));
     return client.find("test", "schema_logs", filter, Schema.SchemaLogsModel.class);
+  }
+
+  public void close() {
+    client.close();
   }
 }

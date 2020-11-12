@@ -4,10 +4,10 @@ import com.hilohq.hilo.parsers.value.Value;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class FieldsMap {
-  public final Map<FieldKey, Value> values;
+public final class FieldsMap<K extends FieldKey> {
+  public final Map<K, Value> values;
 
-  public FieldsMap(final Map<FieldKey, Value> values) {
+  public FieldsMap(final Map<K, Value> values) {
     this.values = values;
   }
 
@@ -15,7 +15,7 @@ public final class FieldsMap {
     this(new HashMap<>());
   }
 
-  public Value put(final FieldKey key, final Value value) {
+  public Value put(final K key, final Value value) {
     return values.put(key, value);
   }
 
@@ -23,11 +23,11 @@ public final class FieldsMap {
     return values.size();
   }
 
-  public Value get(final FieldKey key) {
+  public Value get(final K key) {
     return values.get(key);
   }
 
-  public Iterable<FieldKey> keys() {
+  public Iterable<K> keys() {
     return values.keySet();
   }
 
@@ -35,11 +35,11 @@ public final class FieldsMap {
     return values.values();
   }
 
-  public Iterable<Map.Entry<FieldKey, Value>> entrySet() {
+  public Iterable<Map.Entry<K, Value>> entrySet() {
     return values.entrySet();
   }
 
-  public Value value(final FieldKey key) {
+  public Value value(final K key) {
     return values.get(key);
   }
 }

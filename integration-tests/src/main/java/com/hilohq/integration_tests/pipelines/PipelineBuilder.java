@@ -5,6 +5,5 @@ import org.apache.flink.api.java.operators.DataSource;
 
 @FunctionalInterface
 public interface PipelineBuilder<I, O> {
-    DataSet<O> build(DataSource<I> input);
-
+  DataSet<O> build(DataSource<I> input);
 }

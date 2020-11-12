@@ -1,4 +1,4 @@
-package com.hilohq.hilo.structure_learning.schema.base;
+package com.hilohq.hilo.structure_learning.schema.mongo;
 
 import com.hilohq.hilo.connectors.mongodb.flink.MongoCommand;
 import com.hilohq.hilo.connectors.mongodb.flink.MongoCommandGenerator;
