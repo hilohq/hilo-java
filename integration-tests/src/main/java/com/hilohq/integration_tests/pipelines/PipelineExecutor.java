@@ -41,7 +41,7 @@ public final class PipelineExecutor<O> {
     final var executionEnvironment =
         ExecutionEnvironment.createRemoteEnvironment("127.0.0.1", 8081, jarPath);
     final var source = executionEnvironment.readTextFile(filepath);
-    builder.build(source).output(outputFormat);
+    builder.build(executionEnvironment, source).output(outputFormat);
     executionEnvironment.execute();
   }
 }

@@ -5,9 +5,8 @@ import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaSer
 import static org.junit.Assert.assertEquals;
 
 import com.hilohq.hilo.connectors.mongodb.flink.MongoOutputFormat;
-import com.hilohq.hilo.parsers.field.FieldKey;
-import com.hilohq.hilo.parsers.field.FieldsMap;
 import com.hilohq.hilo.protobufs.structure.Api;
+import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 import com.hilohq.hilo.schema_service.client.SchemaClient;
 import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
 import com.hilohq.integration_tests.pipelines.JsonFeaturesGeneratePipelineBuilder;
@@ -57,7 +56,8 @@ public final class JsonSchemaGenerateTest {
   }
 
   private void generateFeatures(final String filePath) throws Exception {
-    final var output = new TextOutputFormat<FieldsMap<FieldKey>>(new Path("/tmp/results.txt"));
+    final var output =
+        new TextOutputFormat<FeatureOuterClass.FeaturesEvent>(new Path("/tmp/results.txt"));
 
     final var schemaId = "a41ebc8a-c76b-4227-8645-aa28efc9460a";
     final var executor = PipelineExecutor.newBuilder(output).jarModule("integration-tests").build();

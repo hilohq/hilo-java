@@ -2,9 +2,10 @@ package com.hilohq.integration_tests.pipelines;
 
 import com.hilohq.hilo.protobufs.structure.Schema;
 import com.hilohq.hilo.structure_learning.schema.json.JsonFieldStatsKeySelector;
-import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStatsAggregate;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStatsGenerate;
+import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaUpdateGenerate;
 import org.apache.flink.api.java.DataSet;
+import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 
 public final class JsonSchemaGeneratePipelineBuilder
@@ -22,10 +23,11 @@ public final class JsonSchemaGeneratePipelineBuilder
   }
 
   @Override
-  public DataSet<Schema.SchemaUpdate> build(final DataSource<String> input) {
+  public DataSet<Schema.SchemaUpdate> build(
+      final ExecutionEnvironment executionEnvironment, final DataSource<String> input) {
     return input
         .reduceGroup(new JsonSchemaStatsGenerate(projectId, sourceId, schemaId))
         .groupBy(new JsonFieldStatsKeySelector())
-        .reduceGroup(new JsonSchemaStatsAggregate());
+        .reduceGroup(new JsonSchemaUpdateGenerate());
   }
 }

@@ -1,7 +1,8 @@
 package com.hilohq.hilo.parsers.logparse.log;
 
+import com.hilohq.hilo.parsers.field.FieldKey;
 import com.hilohq.hilo.parsers.field.FieldsMap;
 
-public interface LogParser {
-  FieldsMap parse(String log);
+public interface LogParser<K extends FieldKey> {
+  FieldsMap<K> parse(String log);
 }

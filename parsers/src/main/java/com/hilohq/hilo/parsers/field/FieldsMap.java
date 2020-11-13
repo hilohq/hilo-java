@@ -27,14 +27,6 @@ public final class FieldsMap<K extends FieldKey> {
     return values.get(key);
   }
 
-  public Iterable<K> keys() {
-    return values.keySet();
-  }
-
-  public Iterable<Value> values() {
-    return values.values();
-  }
-
   public Iterable<Map.Entry<K, Value>> entrySet() {
     return values.entrySet();
   }
