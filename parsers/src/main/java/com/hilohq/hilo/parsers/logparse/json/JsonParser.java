@@ -11,7 +11,7 @@ import com.hilohq.hilo.parsers.value.*;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
-public final class JsonParser implements LogParser {
+public final class JsonParser implements LogParser<JsonFieldKey> {
   private final ObjectMapper mapper;
 
   public JsonParser() {

@@ -54,7 +54,7 @@ public final class JsonSchemaValidate extends RichGroupReduceFunction<String, Fi
     for (final var line : values) {
       final var fields = parser.parse(line);
       final var validatedFields = validator.validate(fields);
-      final var result = new FieldsMap<FieldKey>();
+      final var result = new FieldsMap<>();
       for (final var entry : validatedFields.entrySet()) {
         result.put(entry.getKey(), entry.getValue());
       }

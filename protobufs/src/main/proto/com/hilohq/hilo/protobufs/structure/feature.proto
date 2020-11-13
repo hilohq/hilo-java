@@ -20,15 +20,63 @@ message Feature {
   FeatureStats stats = 3;
 }
 
-message FeatureTypeHistogram {
-  int64 boolean_count = 1;
-  int64 float_count = 2;
-  int64 string_count = 3;
-  int64 integer_count = 4;
+message BooleanStats {
+  message Histogram {
+    message Bucket {
+      bool value = 1;
+      int64 count = 2;
+    }
+
+    repeated Bucket buckets = 1;
+  }
+
+  int64 count = 1;
+  Histogram histogram = 2;
+}
+
+message NumericStats {
+  message PercentileHistogram {
+    message Bucket {
+      double min = 1;
+      double max = 2;
+      int64 count = 3;
+      double boundary = 4;
+    }
+
+    repeated Bucket buckets = 1;
+    repeated double boundaries = 2;
+  }
+
+  int64 count = 1;
+  double min = 2;
+  double max = 3;
+  double mean = 4;
+  double standard_deviation = 5;
+  PercentileHistogram value_histogram = 6;
+  PercentileHistogram differential_histogram = 7;
+  string base64_stats_repr = 8;
+}
+
+message StringStats {
+  message Histogram {
+    message Bucket {
+      string value = 1;
+      int64 count = 2;
+    }
+
+    repeated Bucket buckets = 2;
+  }
+
+  int64 count = 1;
+  Histogram histogram = 2;
 }
 
 message FeatureStats {
-  FeatureTypeHistogram histogram = 1;
+  oneof stats {
+    BooleanStats boolean_stats = 1;
+    NumericStats numeric_stats = 2;
+    StringStats string_stats = 3;
+  }
 }
 
 message FeaturesEvent {
