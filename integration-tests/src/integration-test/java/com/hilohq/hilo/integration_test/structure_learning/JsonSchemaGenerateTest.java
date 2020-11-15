@@ -1,4 +1,4 @@
-package com.hilohq.hilo.integration_tests.structure_learning;
+package com.hilohq.hilo.integration_test.structure_learning;
 
 import static com.hilohq.integration_tests.resources.ResourceUtils.copyResource;
 import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
