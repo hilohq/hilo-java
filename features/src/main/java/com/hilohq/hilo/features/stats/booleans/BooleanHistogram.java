@@ -4,6 +4,7 @@ import com.hilohq.hilo.features.stats.feature.DiscreteHistogram;
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public final class BooleanHistogram {
 
@@ -23,6 +24,10 @@ public final class BooleanHistogram {
 
   public void observe(final Boolean value, final long count) {
     histogram.observe(value, count);
+  }
+
+  public Set<Map.Entry<Boolean, Long>> entrySet() {
+    return histogram.entrySet();
   }
 
   public static BooleanHistogram fromSnapshot(

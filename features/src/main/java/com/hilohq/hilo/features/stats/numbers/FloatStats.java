@@ -1,15 +1,20 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import com.hilohq.hilo.features.stats.feature.FeatureStats;
+import com.hilohq.hilo.features.stats.feature.Snapshot;
+import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 
-public class FloatStats implements FeatureStats {
+public class FloatStats implements StatsCollector, Snapshot<FeatureOuterClass.NumericStats> {
 
   private final DoubleStats stats;
 
+  public FloatStats(final DoubleStats stats) {
+    this.stats = stats;
+  }
+
   public FloatStats() {
-    this.stats = new DoubleStats();
+    this(new DoubleStats());
   }
 
   @Override
@@ -18,7 +23,23 @@ public class FloatStats implements FeatureStats {
   }
 
   @Override
-  public FeatureOuterClass.FeatureStats snapshot() {
+  public void merge(final StatsCollector collector) {
+    if (!collector.getClass().equals(FloatStats.class)) {
+      throw new IllegalArgumentException(
+          "FloatStats expects another " + "instance of FloatStats for a merge");
+    }
+
+    final var other = (FloatStats) collector;
+    stats.merge(other.stats);
+  }
+
+  public static FloatStats fromSnapshot(final FeatureOuterClass.NumericStats snapshot) {
+    final var stats = DoubleStats.fromSnapshot(snapshot);
+    return new FloatStats(stats);
+  }
+
+  @Override
+  public FeatureOuterClass.NumericStats snapshot() {
     return stats.snapshot();
   }
 }

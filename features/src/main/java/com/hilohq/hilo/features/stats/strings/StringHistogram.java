@@ -1,26 +1,32 @@
 package com.hilohq.hilo.features.stats.strings;
 
+import com.hilohq.hilo.features.stats.feature.DiscreteHistogram;
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public final class StringHistogram {
-  private final Map<String, Long> histogram;
+  private final DiscreteHistogram<String> histogram;
 
   private StringHistogram(final Map<String, Long> histogram) {
-    this.histogram = histogram;
+    this.histogram = new DiscreteHistogram<>(histogram);
   }
 
   public StringHistogram() {
     this(new HashMap<>());
   }
 
-  public void add(final String value) {
-    if (!histogram.containsKey(value)) {
-      histogram.put(value, 0L);
-    }
+  public void observe(final String value, final long count) {
+    histogram.observe(value, count);
+  }
 
-    histogram.put(value, histogram.get(value) + 1);
+  public void observe(final String value) {
+    observe(value, 1);
+  }
+
+  public Set<Map.Entry<String, Long>> entrySet() {
+    return histogram.entrySet();
   }
 
   public static StringHistogram fromSnapshot(

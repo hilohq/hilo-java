@@ -18,7 +18,6 @@ public final class JsonMongoUtils {
     setOp.put("metadata", Document.parse(serializedMessage(metadata)));
     query.put("$set", setOp);
 
-    System.out.println("SET " + query);
     return query;
   }
 }

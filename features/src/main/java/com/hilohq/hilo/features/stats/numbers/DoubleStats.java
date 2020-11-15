@@ -1,11 +1,12 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import com.hilohq.hilo.features.stats.feature.FeatureStats;
+import com.hilohq.hilo.features.stats.feature.Snapshot;
+import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 import java.util.Base64;
 
-public final class DoubleStats implements FeatureStats {
+public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterClass.NumericStats> {
   private final com.google.common.math.StatsAccumulator statsAccumulator;
   private final NumericPercentileHistogram valueHistogramAccumulator;
   private final DifferentialPercentileHistogram differentialHistogramAccumulator;
@@ -31,18 +32,23 @@ public final class DoubleStats implements FeatureStats {
     observe(value.doubleValue());
   }
 
+  @Override
+  public void merge(final StatsCollector collector) {
+    if (!collector.getClass().equals(DoubleStats.class)) {
+      throw new IllegalArgumentException(
+          "DoubleStats expects another " + "instance of DoubleStats for a merge");
+    }
+
+    final var other = (DoubleStats) collector;
+    statsAccumulator.addAll(other.statsAccumulator);
+
+    valueHistogramAccumulator.merge(other.valueHistogramAccumulator);
+    differentialHistogramAccumulator.merge(other.differentialHistogramAccumulator);
+  }
+
   public void observe(final Double value) {
     statsAccumulator.add(value);
     valueHistogramAccumulator.observe(value);
-  }
-
-  public static DoubleStats fromSnapshot(final FeatureOuterClass.FeatureStats stats) {
-    if (!stats.hasNumericStats()) {
-      throw new IllegalArgumentException(
-          "NumericStatsAccumulator expects an instance of FeatureStats " + "with NumericStats set");
-    }
-
-    return fromSnapshot(stats.getNumericStats());
   }
 
   public static DoubleStats fromSnapshot(final FeatureOuterClass.NumericStats stats) {
@@ -59,20 +65,17 @@ public final class DoubleStats implements FeatureStats {
         internalStatsAccumulator, valueHistogramAccumulator, differentialHistogramAccumulator);
   }
 
-  public FeatureOuterClass.FeatureStats snapshot() {
-    return FeatureOuterClass.FeatureStats.newBuilder()
-        .setNumericStats(
-            FeatureOuterClass.NumericStats.newBuilder()
-                .setCount(statsAccumulator.count())
-                .setMax(statsAccumulator.max())
-                .setMin(statsAccumulator.min())
-                .setMean(statsAccumulator.mean())
-                .setStandardDeviation(statsAccumulator.sampleStandardDeviation())
-                .setValueHistogram(valueHistogramAccumulator.snapshot())
-                .setDifferentialHistogram(differentialHistogramAccumulator.snapshot())
-                .setBase64StatsRepr(
-                    Base64.getEncoder().encodeToString(statsAccumulator.snapshot().toByteArray()))
-                .build())
+  public FeatureOuterClass.NumericStats snapshot() {
+    return FeatureOuterClass.NumericStats.newBuilder()
+        .setCount(statsAccumulator.count())
+        .setMax(statsAccumulator.max())
+        .setMin(statsAccumulator.min())
+        .setMean(statsAccumulator.mean())
+        .setStandardDeviation(statsAccumulator.sampleStandardDeviation())
+        .setValueHistogram(valueHistogramAccumulator.snapshot())
+        .setDifferentialHistogram(differentialHistogramAccumulator.snapshot())
+        .setBase64StatsRepr(
+            Base64.getEncoder().encodeToString(statsAccumulator.snapshot().toByteArray()))
         .build();
   }
 }

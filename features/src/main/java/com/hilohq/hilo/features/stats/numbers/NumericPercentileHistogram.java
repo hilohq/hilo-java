@@ -1,6 +1,5 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.*;
 import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.*;
 import static java.lang.Integer.max;
 
@@ -179,6 +178,56 @@ public final class NumericPercentileHistogram {
       }
 
       throw new IllegalStateException("Should not attempt to increase thresholdRatio over 2");
+    }
+  }
+
+  public void addBucket(final Interval interval, final long count) {
+    final var lowerInterval = buckets.lowerKey(interval);
+    final var higherInterval = buckets.higherKey(interval);
+    final var noIntersection =
+        (higherInterval == null && lowerInterval == null)
+            || (higherInterval == null && lowerInterval.max() < interval.min())
+            || (lowerInterval == null && higherInterval.min() > interval.max())
+            || lowerInterval != null
+                && higherInterval != null
+                && lowerInterval.max() < interval.min()
+                && higherInterval.min() > interval.max();
+    final var intersectsLowerOnly =
+        (higherInterval == null || higherInterval.min() > interval.max())
+            && lowerInterval != null
+            && lowerInterval.max() > interval.min();
+    final var intersectsHigherOnly =
+        (lowerInterval == null || lowerInterval.max() < interval.min())
+            && higherInterval != null
+            && higherInterval.min() < interval.max();
+    final var intersectsHigherAndLower =
+        higherInterval != null
+            && lowerInterval != null
+            && lowerInterval.max() > interval.min()
+            && higherInterval.min() < interval.max();
+
+    if (intersectsLowerOnly) {
+      final var lowerCount = buckets.remove(lowerInterval);
+      buckets.put(interval.merge(lowerInterval), count + lowerCount);
+
+    } else if (intersectsHigherOnly) {
+      final var higherCount = buckets.remove(higherInterval);
+      buckets.put(interval.merge(higherInterval), count + higherCount);
+
+    } else if (intersectsHigherAndLower) {
+      final var lowerCount = buckets.remove(lowerInterval);
+      final var higherCount = buckets.remove(higherInterval);
+      buckets.put(
+          interval.merge(lowerInterval).merge(higherInterval), lowerCount + higherCount + count);
+
+    } else {
+      buckets.put(interval, count);
+    }
+  }
+
+  public void merge(final NumericPercentileHistogram other) {
+    for (final var bucket : other.buckets.entrySet()) {
+      addBucket(bucket.getKey(), bucket.getValue());
     }
   }
 

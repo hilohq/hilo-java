@@ -4,19 +4,59 @@ package hilo.protobufs.structure;
 
 option java_package = "com.hilohq.hilo.protobufs.structure";
 
-enum FeatureType {
-  FEATURE_BOOLEAN = 0;
-  FEATURE_INTEGER = 1;
-  FEATURE_LONG = 2;
-  FEATURE_FLOAT = 3;
-  FEATURE_DOUBLE = 4;
-  FEATURE_STRING = 5;
-  FEATURE_BYTES = 6;
+message FeaturesMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message FeatureClass {
+  message IntEnum {
+    repeated int64 values = 1;
+  }
+
+  message BooleanEnum { }
+
+  message StringEnum {
+    repeated string values = 1;
+  }
+
+  message Gauge {
+    int64 scale = 1;
+  }
+
+  message Counter { }
+
+  message Distance {
+    string units = 1;
+  }
+
+  message Duration {
+    string units = 1;
+  }
+
+  message Set {
+    repeated string values = 1;
+  }
+
+  message Ephemeral { }
+
+  oneof feature {
+    BooleanEnum bool_enum = 1;
+    IntEnum int_enum = 2;
+    StringEnum string_enum = 3;
+    Gauge gauge = 4;
+    Counter counter = 5;
+    Distance distance = 6;
+    Duration duration = 7;
+    Set set = 8;
+    Ephemeral ephemeral = 9;
+  }
 }
 
 message Feature {
   string key = 1;
-  FeatureType type = 2;
+  FeatureClass feature_class = 2;
   FeatureStats stats = 3;
 }
 
@@ -72,33 +112,37 @@ message StringStats {
 }
 
 message FeatureStats {
-  oneof stats {
-    BooleanStats boolean_stats = 1;
-    NumericStats numeric_stats = 2;
-    StringStats string_stats = 3;
-  }
+  BooleanStats boolean_stats = 1;
+  NumericStats int_stats = 2;
+  NumericStats long_stats = 3;
+  NumericStats float_stats = 4;
+  NumericStats double_stats = 5;
+  StringStats string_stats = 6;
+  StringStats bytes_stats = 7;
+}
+
+message StatsEvent {
+  string key = 1;
+  FeatureStats feature_stats = 2;
 }
 
 message FeaturesEvent {
-  message Stats {
-    string key = 1;
-    FeatureStats feature_stats = 2;
-  }
+  FeaturesMetadata metadata = 1;
 
   oneof event {
-    Stats stats = 1;
+    StatsEvent stats = 16;
   }
 }
 
 message FeatureCreate {
   string key = 1;
-  FeatureType type = 2;
+  FeatureClass feature_class = 2;
 }
 
 message FeatureUpdate {
   message Feature {
     string key = 1;
-    FeatureType type = 2;
+    FeatureClass feature_class = 2;
   }
 
   Feature before = 1;
@@ -113,20 +157,20 @@ message FeatureLog {
 }
 
 message FeaturesUpdate {
+  FeaturesMetadata metadata = 1;
+
   oneof update {
-    FeatureLog log = 1;
-    Features features = 2;
+    FeatureLog log = 16;
+    Feature feature = 17;
   }
 }
 
 message FeatureLogsModel {
-  FeatureLog logs = 1;
-}
-
-message Features {
-  repeated Feature feature = 1;
+  FeaturesMetadata metadata = 1;
+  FeatureLog logs = 2;
 }
 
 message FeaturesModel {
-  Features features = 1;
+  FeaturesMetadata metadata = 1;
+  map<string, Feature> features = 2;
 }

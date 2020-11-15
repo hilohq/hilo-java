@@ -2,6 +2,7 @@ package com.hilohq.hilo.features.stats.feature;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public final class DiscreteHistogram<T> {
   private final Map<T, Long> histogram;
@@ -20,6 +21,10 @@ public final class DiscreteHistogram<T> {
     }
 
     histogram.put(value, histogram.get(value) + count);
+  }
+
+  public Set<Map.Entry<T, Long>> entrySet() {
+    return histogram.entrySet();
   }
 
   public void observe(final T value) {

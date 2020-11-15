@@ -14,157 +14,8192 @@ public final class FeatureOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface FeaturesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeaturesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string schema_id = 1;</code>
+     * @return The schemaId.
+     */
+    java.lang.String getSchemaId();
+    /**
+     * <code>string schema_id = 1;</code>
+     * @return The bytes for schemaId.
+     */
+    com.google.protobuf.ByteString
+        getSchemaIdBytes();
+
+    /**
+     * <code>string source_id = 2;</code>
+     * @return The sourceId.
+     */
+    java.lang.String getSourceId();
+    /**
+     * <code>string source_id = 2;</code>
+     * @return The bytes for sourceId.
+     */
+    com.google.protobuf.ByteString
+        getSourceIdBytes();
+
+    /**
+     * <code>string project_id = 3;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <code>string project_id = 3;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+  }
   /**
-   * Protobuf enum {@code hilo.protobufs.structure.FeatureType}
+   * Protobuf type {@code hilo.protobufs.structure.FeaturesMetadata}
    */
-  public enum FeatureType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>FEATURE_BOOLEAN = 0;</code>
-     */
-    FEATURE_BOOLEAN(0),
-    /**
-     * <code>FEATURE_INTEGER = 1;</code>
-     */
-    FEATURE_INTEGER(1),
-    /**
-     * <code>FEATURE_LONG = 2;</code>
-     */
-    FEATURE_LONG(2),
-    /**
-     * <code>FEATURE_FLOAT = 3;</code>
-     */
-    FEATURE_FLOAT(3),
-    /**
-     * <code>FEATURE_DOUBLE = 4;</code>
-     */
-    FEATURE_DOUBLE(4),
-    /**
-     * <code>FEATURE_STRING = 5;</code>
-     */
-    FEATURE_STRING(5),
-    /**
-     * <code>FEATURE_BYTES = 6;</code>
-     */
-    FEATURE_BYTES(6),
-    UNRECOGNIZED(-1),
-    ;
+  public static final class FeaturesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeaturesMetadata)
+      FeaturesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeaturesMetadata.newBuilder() to construct.
+    private FeaturesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeaturesMetadata() {
+      schemaId_ = "";
+      sourceId_ = "";
+      projectId_ = "";
+    }
 
-    /**
-     * <code>FEATURE_BOOLEAN = 0;</code>
-     */
-    public static final int FEATURE_BOOLEAN_VALUE = 0;
-    /**
-     * <code>FEATURE_INTEGER = 1;</code>
-     */
-    public static final int FEATURE_INTEGER_VALUE = 1;
-    /**
-     * <code>FEATURE_LONG = 2;</code>
-     */
-    public static final int FEATURE_LONG_VALUE = 2;
-    /**
-     * <code>FEATURE_FLOAT = 3;</code>
-     */
-    public static final int FEATURE_FLOAT_VALUE = 3;
-    /**
-     * <code>FEATURE_DOUBLE = 4;</code>
-     */
-    public static final int FEATURE_DOUBLE_VALUE = 4;
-    /**
-     * <code>FEATURE_STRING = 5;</code>
-     */
-    public static final int FEATURE_STRING_VALUE = 5;
-    /**
-     * <code>FEATURE_BYTES = 6;</code>
-     */
-    public static final int FEATURE_BYTES_VALUE = 6;
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeaturesMetadata();
+    }
 
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeaturesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
       }
-      return value;
-    }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static FeatureType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static FeatureType forNumber(int value) {
-      switch (value) {
-        case 0: return FEATURE_BOOLEAN;
-        case 1: return FEATURE_INTEGER;
-        case 2: return FEATURE_LONG;
-        case 3: return FEATURE_FLOAT;
-        case 4: return FEATURE_DOUBLE;
-        case 5: return FEATURE_STRING;
-        case 6: return FEATURE_BYTES;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<FeatureType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        FeatureType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<FeatureType>() {
-            public FeatureType findValueByNumber(int number) {
-              return FeatureType.forNumber(number);
+              schemaId_ = s;
+              break;
             }
-          };
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
+              sourceId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.getDescriptor().getEnumTypes().get(0);
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor;
     }
 
-    private static final FeatureType[] VALUES = values();
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder.class);
+    }
 
-    public static FeatureType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
+    public static final int SCHEMA_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object schemaId_;
+    /**
+     * <code>string schema_id = 1;</code>
+     * @return The schemaId.
+     */
+    @java.lang.Override
+    public java.lang.String getSchemaId() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schemaId_ = s;
+        return s;
       }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
+    }
+    /**
+     * <code>string schema_id = 1;</code>
+     * @return The bytes for schemaId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaIdBytes() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schemaId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return VALUES[desc.getIndex()];
     }
 
-    private final int value;
-
-    private FeatureType(int value) {
-      this.value = value;
+    public static final int SOURCE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object sourceId_;
+    /**
+     * <code>string source_id = 2;</code>
+     * @return The sourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceId() {
+      java.lang.Object ref = sourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source_id = 2;</code>
+     * @return The bytes for sourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceIdBytes() {
+      java.lang.Object ref = sourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    // @@protoc_insertion_point(enum_scope:hilo.protobufs.structure.FeatureType)
+    public static final int PROJECT_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <code>string project_id = 3;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string project_id = 3;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSchemaIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schemaId_);
+      }
+      if (!getSourceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceId_);
+      }
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSchemaIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schemaId_);
+      }
+      if (!getSourceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceId_);
+      }
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata) obj;
+
+      if (!getSchemaId()
+          .equals(other.getSchemaId())) return false;
+      if (!getSourceId()
+          .equals(other.getSourceId())) return false;
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEMA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSchemaId().hashCode();
+      hash = (37 * hash) + SOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceId().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeaturesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeaturesMetadata)
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        schemaId_ = "";
+
+        sourceId_ = "";
+
+        projectId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata build() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata buildPartial() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata(this);
+        result.schemaId_ = schemaId_;
+        result.sourceId_ = sourceId_;
+        result.projectId_ = projectId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata other) {
+        if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance()) return this;
+        if (!other.getSchemaId().isEmpty()) {
+          schemaId_ = other.schemaId_;
+          onChanged();
+        }
+        if (!other.getSourceId().isEmpty()) {
+          sourceId_ = other.sourceId_;
+          onChanged();
+        }
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object schemaId_ = "";
+      /**
+       * <code>string schema_id = 1;</code>
+       * @return The schemaId.
+       */
+      public java.lang.String getSchemaId() {
+        java.lang.Object ref = schemaId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schemaId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 1;</code>
+       * @return The bytes for schemaId.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaIdBytes() {
+        java.lang.Object ref = schemaId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 1;</code>
+       * @param value The schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaId() {
+        
+        schemaId_ = getDefaultInstance().getSchemaId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 1;</code>
+       * @param value The bytes for schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceId_ = "";
+      /**
+       * <code>string source_id = 2;</code>
+       * @return The sourceId.
+       */
+      public java.lang.String getSourceId() {
+        java.lang.Object ref = sourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source_id = 2;</code>
+       * @return The bytes for sourceId.
+       */
+      public com.google.protobuf.ByteString
+          getSourceIdBytes() {
+        java.lang.Object ref = sourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source_id = 2;</code>
+       * @param value The sourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceId() {
+        
+        sourceId_ = getDefaultInstance().getSourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_id = 2;</code>
+       * @param value The bytes for sourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <code>string project_id = 3;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 3;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 3;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 3;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeaturesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeaturesMetadata)
+    private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata();
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeaturesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<FeaturesMetadata>() {
+      @java.lang.Override
+      public FeaturesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeaturesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeaturesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeaturesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeatureClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     * @return Whether the boolEnum field is set.
+     */
+    boolean hasBoolEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     * @return The boolEnum.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getBoolEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder getBoolEnumOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     * @return Whether the intEnum field is set.
+     */
+    boolean hasIntEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     * @return The intEnum.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getIntEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder getIntEnumOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     * @return Whether the stringEnum field is set.
+     */
+    boolean hasStringEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     * @return The stringEnum.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getStringEnum();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder getStringEnumOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     * @return Whether the gauge field is set.
+     */
+    boolean hasGauge();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     * @return The gauge.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getGauge();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder getGaugeOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     * @return Whether the counter field is set.
+     */
+    boolean hasCounter();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     * @return The counter.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getCounter();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     * @return Whether the distance field is set.
+     */
+    boolean hasDistance();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     * @return The distance.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDistance();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     * @return The duration.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDuration();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     * @return Whether the set field is set.
+     */
+    boolean hasSet();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     * @return The set.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getSet();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     * @return Whether the ephemeral field is set.
+     */
+    boolean hasEphemeral();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     * @return The ephemeral.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder();
+
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.FeatureCase getFeatureCase();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.structure.FeatureClass}
+   */
+  public static final class FeatureClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass)
+      FeatureClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeatureClass.newBuilder() to construct.
+    private FeatureClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeatureClass() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeatureClass();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeatureClass(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder subBuilder = null;
+              if (featureCase_ == 1) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder subBuilder = null;
+              if (featureCase_ == 2) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder subBuilder = null;
+              if (featureCase_ == 3) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 3;
+              break;
+            }
+            case 34: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder subBuilder = null;
+              if (featureCase_ == 4) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 4;
+              break;
+            }
+            case 42: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder subBuilder = null;
+              if (featureCase_ == 5) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 5;
+              break;
+            }
+            case 50: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder subBuilder = null;
+              if (featureCase_ == 6) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 6;
+              break;
+            }
+            case 58: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder subBuilder = null;
+              if (featureCase_ == 7) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 7;
+              break;
+            }
+            case 66: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder subBuilder = null;
+              if (featureCase_ == 8) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 8;
+              break;
+            }
+            case 74: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder subBuilder = null;
+              if (featureCase_ == 9) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 9;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder.class);
+    }
+
+    public interface IntEnumOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.IntEnum)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @return A list containing the values.
+       */
+      java.util.List<java.lang.Long> getValuesList();
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @return The count of values.
+       */
+      int getValuesCount();
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      long getValues(int index);
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.IntEnum}
+     */
+    public static final class IntEnum extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.IntEnum)
+        IntEnumOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use IntEnum.newBuilder() to construct.
+      private IntEnum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private IntEnum() {
+        values_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new IntEnum();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private IntEnum(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  values_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                values_.addLong(input.readInt64());
+                break;
+              }
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  values_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  values_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            values_.makeImmutable(); // C
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder.class);
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 1;
+      private com.google.protobuf.Internal.LongList values_;
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @return A list containing the values.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated int64 values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public long getValues(int index) {
+        return values_.getLong(index);
+      }
+      private int valuesMemoizedSerializedSize = -1;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getValuesList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(valuesMemoizedSerializedSize);
+        }
+        for (int i = 0; i < values_.size(); i++) {
+          output.writeInt64NoTag(values_.getLong(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(values_.getLong(i));
+          }
+          size += dataSize;
+          if (!getValuesList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          valuesMemoizedSerializedSize = dataSize;
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) obj;
+
+        if (!getValuesList()
+            .equals(other.getValuesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.IntEnum}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.IntEnum)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          values_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            values_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance()) return this;
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Internal.LongList values_ = emptyLongList();
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            values_ = mutableCopy(values_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @return A list containing the values.
+         */
+        public java.util.List<java.lang.Long>
+            getValuesList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(values_) : values_;
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @return The count of values.
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @param index The index of the element to return.
+         * @return The values at the given index.
+         */
+        public long getValues(int index) {
+          return values_.getLong(index);
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The values to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValues(
+            int index, long value) {
+          ensureValuesIsMutable();
+          values_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @param value The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValues(long value) {
+          ensureValuesIsMutable();
+          values_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @param values The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 values = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValues() {
+          values_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.IntEnum)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.IntEnum)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<IntEnum>
+          PARSER = new com.google.protobuf.AbstractParser<IntEnum>() {
+        @java.lang.Override
+        public IntEnum parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IntEnum(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<IntEnum> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<IntEnum> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface BooleanEnumOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.BooleanEnum)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.BooleanEnum}
+     */
+    public static final class BooleanEnum extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.BooleanEnum)
+        BooleanEnumOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use BooleanEnum.newBuilder() to construct.
+      private BooleanEnum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private BooleanEnum() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new BooleanEnum();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private BooleanEnum(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.BooleanEnum}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.BooleanEnum)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.BooleanEnum)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.BooleanEnum)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<BooleanEnum>
+          PARSER = new com.google.protobuf.AbstractParser<BooleanEnum>() {
+        @java.lang.Override
+        public BooleanEnum parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BooleanEnum(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<BooleanEnum> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<BooleanEnum> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface StringEnumOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.StringEnum)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return A list containing the values.
+       */
+      java.util.List<java.lang.String>
+          getValuesList();
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return The count of values.
+       */
+      int getValuesCount();
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      java.lang.String getValues(int index);
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      com.google.protobuf.ByteString
+          getValuesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.StringEnum}
+     */
+    public static final class StringEnum extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.StringEnum)
+        StringEnumOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use StringEnum.newBuilder() to construct.
+      private StringEnum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private StringEnum() {
+        values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StringEnum();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private StringEnum(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  values_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                values_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            values_ = values_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder.class);
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList values_;
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < values_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += computeStringSizeNoTag(values_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValuesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) obj;
+
+        if (!getValuesList()
+            .equals(other.getValuesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.StringEnum}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.StringEnum)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            values_ = values_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance()) return this;
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            values_ = new com.google.protobuf.LazyStringArrayList(values_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return A list containing the values.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValuesList() {
+          return values_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return The count of values.
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index of the element to return.
+         * @return The values at the given index.
+         */
+        public java.lang.String getValues(int index) {
+          return values_.get(index);
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the values at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getValuesBytes(int index) {
+          return values_.getByteString(index);
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The values to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValues(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param value The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValues(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param values The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValues() {
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param value The bytes of the values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValuesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.StringEnum)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.StringEnum)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<StringEnum>
+          PARSER = new com.google.protobuf.AbstractParser<StringEnum>() {
+        @java.lang.Override
+        public StringEnum parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new StringEnum(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<StringEnum> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<StringEnum> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GaugeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Gauge)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int64 scale = 1;</code>
+       * @return The scale.
+       */
+      long getScale();
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Gauge}
+     */
+    public static final class Gauge extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Gauge)
+        GaugeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Gauge.newBuilder() to construct.
+      private Gauge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Gauge() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Gauge();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Gauge(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                scale_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Gauge_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder.class);
+      }
+
+      public static final int SCALE_FIELD_NUMBER = 1;
+      private long scale_;
+      /**
+       * <code>int64 scale = 1;</code>
+       * @return The scale.
+       */
+      @java.lang.Override
+      public long getScale() {
+        return scale_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (scale_ != 0L) {
+          output.writeInt64(1, scale_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (scale_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, scale_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) obj;
+
+        if (getScale()
+            != other.getScale()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SCALE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getScale());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Gauge}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Gauge)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Gauge_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          scale_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge(this);
+          result.scale_ = scale_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance()) return this;
+          if (other.getScale() != 0L) {
+            setScale(other.getScale());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long scale_ ;
+        /**
+         * <code>int64 scale = 1;</code>
+         * @return The scale.
+         */
+        @java.lang.Override
+        public long getScale() {
+          return scale_;
+        }
+        /**
+         * <code>int64 scale = 1;</code>
+         * @param value The scale to set.
+         * @return This builder for chaining.
+         */
+        public Builder setScale(long value) {
+          
+          scale_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int64 scale = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearScale() {
+          
+          scale_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Gauge)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Gauge)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Gauge>
+          PARSER = new com.google.protobuf.AbstractParser<Gauge>() {
+        @java.lang.Override
+        public Gauge parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Gauge(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Gauge> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Gauge> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CounterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Counter)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Counter}
+     */
+    public static final class Counter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Counter)
+        CounterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Counter.newBuilder() to construct.
+      private Counter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Counter() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Counter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Counter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Counter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Counter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Counter)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Counter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Counter)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Counter)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Counter>
+          PARSER = new com.google.protobuf.AbstractParser<Counter>() {
+        @java.lang.Override
+        public Counter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Counter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Counter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Counter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DistanceOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Distance)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string units = 1;</code>
+       * @return The units.
+       */
+      java.lang.String getUnits();
+      /**
+       * <code>string units = 1;</code>
+       * @return The bytes for units.
+       */
+      com.google.protobuf.ByteString
+          getUnitsBytes();
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Distance}
+     */
+    public static final class Distance extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Distance)
+        DistanceOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Distance.newBuilder() to construct.
+      private Distance(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Distance() {
+        units_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Distance();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Distance(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                units_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Distance_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder.class);
+      }
+
+      public static final int UNITS_FIELD_NUMBER = 1;
+      private volatile java.lang.Object units_;
+      /**
+       * <code>string units = 1;</code>
+       * @return The units.
+       */
+      @java.lang.Override
+      public java.lang.String getUnits() {
+        java.lang.Object ref = units_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          units_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string units = 1;</code>
+       * @return The bytes for units.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUnitsBytes() {
+        java.lang.Object ref = units_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          units_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getUnitsBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, units_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getUnitsBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, units_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) obj;
+
+        if (!getUnits()
+            .equals(other.getUnits())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnits().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Distance}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Distance)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Distance_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          units_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance(this);
+          result.units_ = units_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance()) return this;
+          if (!other.getUnits().isEmpty()) {
+            units_ = other.units_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object units_ = "";
+        /**
+         * <code>string units = 1;</code>
+         * @return The units.
+         */
+        public java.lang.String getUnits() {
+          java.lang.Object ref = units_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            units_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @return The bytes for units.
+         */
+        public com.google.protobuf.ByteString
+            getUnitsBytes() {
+          java.lang.Object ref = units_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            units_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @param value The units to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnits(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          units_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUnits() {
+          
+          units_ = getDefaultInstance().getUnits();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @param value The bytes for units to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnitsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          units_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Distance)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Distance)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Distance>
+          PARSER = new com.google.protobuf.AbstractParser<Distance>() {
+        @java.lang.Override
+        public Distance parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Distance(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Distance> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Distance> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DurationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Duration)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string units = 1;</code>
+       * @return The units.
+       */
+      java.lang.String getUnits();
+      /**
+       * <code>string units = 1;</code>
+       * @return The bytes for units.
+       */
+      com.google.protobuf.ByteString
+          getUnitsBytes();
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Duration}
+     */
+    public static final class Duration extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Duration)
+        DurationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Duration.newBuilder() to construct.
+      private Duration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Duration() {
+        units_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Duration();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Duration(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                units_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Duration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder.class);
+      }
+
+      public static final int UNITS_FIELD_NUMBER = 1;
+      private volatile java.lang.Object units_;
+      /**
+       * <code>string units = 1;</code>
+       * @return The units.
+       */
+      @java.lang.Override
+      public java.lang.String getUnits() {
+        java.lang.Object ref = units_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          units_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string units = 1;</code>
+       * @return The bytes for units.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUnitsBytes() {
+        java.lang.Object ref = units_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          units_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getUnitsBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, units_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getUnitsBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, units_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) obj;
+
+        if (!getUnits()
+            .equals(other.getUnits())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnits().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Duration}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Duration)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Duration_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          units_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration(this);
+          result.units_ = units_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance()) return this;
+          if (!other.getUnits().isEmpty()) {
+            units_ = other.units_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object units_ = "";
+        /**
+         * <code>string units = 1;</code>
+         * @return The units.
+         */
+        public java.lang.String getUnits() {
+          java.lang.Object ref = units_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            units_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @return The bytes for units.
+         */
+        public com.google.protobuf.ByteString
+            getUnitsBytes() {
+          java.lang.Object ref = units_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            units_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @param value The units to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnits(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          units_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUnits() {
+          
+          units_ = getDefaultInstance().getUnits();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string units = 1;</code>
+         * @param value The bytes for units to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUnitsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          units_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Duration)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Duration)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Duration>
+          PARSER = new com.google.protobuf.AbstractParser<Duration>() {
+        @java.lang.Override
+        public Duration parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Duration(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Duration> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Duration> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SetOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Set)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return A list containing the values.
+       */
+      java.util.List<java.lang.String>
+          getValuesList();
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return The count of values.
+       */
+      int getValuesCount();
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      java.lang.String getValues(int index);
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      com.google.protobuf.ByteString
+          getValuesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Set}
+     */
+    public static final class Set extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Set)
+        SetOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Set.newBuilder() to construct.
+      private Set(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Set() {
+        values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Set();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Set(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  values_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                values_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            values_ = values_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Set_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder.class);
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList values_;
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return A list containing the values.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <code>repeated string values = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the values at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < values_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += computeStringSizeNoTag(values_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValuesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) obj;
+
+        if (!getValuesList()
+            .equals(other.getValuesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Set}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Set)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Set_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            values_ = values_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance()) return this;
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            values_ = new com.google.protobuf.LazyStringArrayList(values_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return A list containing the values.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValuesList() {
+          return values_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return The count of values.
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index of the element to return.
+         * @return The values at the given index.
+         */
+        public java.lang.String getValues(int index) {
+          return values_.get(index);
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the values at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getValuesBytes(int index) {
+          return values_.getByteString(index);
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The values to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValues(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param value The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValues(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param values The values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValues() {
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string values = 1;</code>
+         * @param value The bytes of the values to add.
+         * @return This builder for chaining.
+         */
+        public Builder addValuesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Set)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Set)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Set>
+          PARSER = new com.google.protobuf.AbstractParser<Set>() {
+        @java.lang.Override
+        public Set parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Set(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Set> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Set> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface EphemeralOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeatureClass.Ephemeral)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Ephemeral}
+     */
+    public static final class Ephemeral extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeatureClass.Ephemeral)
+        EphemeralOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Ephemeral.newBuilder() to construct.
+      private Ephemeral(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Ephemeral() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Ephemeral();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Ephemeral(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.FeatureClass.Ephemeral}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass.Ephemeral)
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral build() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral buildPartial() {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral other) {
+          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass.Ephemeral)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass.Ephemeral)
+      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Ephemeral>
+          PARSER = new com.google.protobuf.AbstractParser<Ephemeral>() {
+        @java.lang.Override
+        public Ephemeral parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Ephemeral(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Ephemeral> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Ephemeral> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int featureCase_ = 0;
+    private java.lang.Object feature_;
+    public enum FeatureCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      BOOL_ENUM(1),
+      INT_ENUM(2),
+      STRING_ENUM(3),
+      GAUGE(4),
+      COUNTER(5),
+      DISTANCE(6),
+      DURATION(7),
+      SET(8),
+      EPHEMERAL(9),
+      FEATURE_NOT_SET(0);
+      private final int value;
+      private FeatureCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FeatureCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static FeatureCase forNumber(int value) {
+        switch (value) {
+          case 1: return BOOL_ENUM;
+          case 2: return INT_ENUM;
+          case 3: return STRING_ENUM;
+          case 4: return GAUGE;
+          case 5: return COUNTER;
+          case 6: return DISTANCE;
+          case 7: return DURATION;
+          case 8: return SET;
+          case 9: return EPHEMERAL;
+          case 0: return FEATURE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public FeatureCase
+    getFeatureCase() {
+      return FeatureCase.forNumber(
+          featureCase_);
+    }
+
+    public static final int BOOL_ENUM_FIELD_NUMBER = 1;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     * @return Whether the boolEnum field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoolEnum() {
+      return featureCase_ == 1;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     * @return The boolEnum.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getBoolEnum() {
+      if (featureCase_ == 1) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder getBoolEnumOrBuilder() {
+      if (featureCase_ == 1) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+    }
+
+    public static final int INT_ENUM_FIELD_NUMBER = 2;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     * @return Whether the intEnum field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntEnum() {
+      return featureCase_ == 2;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     * @return The intEnum.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getIntEnum() {
+      if (featureCase_ == 2) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder getIntEnumOrBuilder() {
+      if (featureCase_ == 2) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+    }
+
+    public static final int STRING_ENUM_FIELD_NUMBER = 3;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     * @return Whether the stringEnum field is set.
+     */
+    @java.lang.Override
+    public boolean hasStringEnum() {
+      return featureCase_ == 3;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     * @return The stringEnum.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getStringEnum() {
+      if (featureCase_ == 3) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder getStringEnumOrBuilder() {
+      if (featureCase_ == 3) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+    }
+
+    public static final int GAUGE_FIELD_NUMBER = 4;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     * @return Whether the gauge field is set.
+     */
+    @java.lang.Override
+    public boolean hasGauge() {
+      return featureCase_ == 4;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     * @return The gauge.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getGauge() {
+      if (featureCase_ == 4) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder getGaugeOrBuilder() {
+      if (featureCase_ == 4) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+    }
+
+    public static final int COUNTER_FIELD_NUMBER = 5;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     * @return Whether the counter field is set.
+     */
+    @java.lang.Override
+    public boolean hasCounter() {
+      return featureCase_ == 5;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     * @return The counter.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getCounter() {
+      if (featureCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder() {
+      if (featureCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+    }
+
+    public static final int DISTANCE_FIELD_NUMBER = 6;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     * @return Whether the distance field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistance() {
+      return featureCase_ == 6;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     * @return The distance.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDistance() {
+      if (featureCase_ == 6) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder() {
+      if (featureCase_ == 6) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 7;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return featureCase_ == 7;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDuration() {
+      if (featureCase_ == 7) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder() {
+      if (featureCase_ == 7) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+    }
+
+    public static final int SET_FIELD_NUMBER = 8;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     * @return Whether the set field is set.
+     */
+    @java.lang.Override
+    public boolean hasSet() {
+      return featureCase_ == 8;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     * @return The set.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getSet() {
+      if (featureCase_ == 8) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder() {
+      if (featureCase_ == 8) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+    }
+
+    public static final int EPHEMERAL_FIELD_NUMBER = 9;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     * @return Whether the ephemeral field is set.
+     */
+    @java.lang.Override
+    public boolean hasEphemeral() {
+      return featureCase_ == 9;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     * @return The ephemeral.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral() {
+      if (featureCase_ == 9) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder() {
+      if (featureCase_ == 9) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (featureCase_ == 1) {
+        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_);
+      }
+      if (featureCase_ == 2) {
+        output.writeMessage(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_);
+      }
+      if (featureCase_ == 3) {
+        output.writeMessage(3, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_);
+      }
+      if (featureCase_ == 4) {
+        output.writeMessage(4, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_);
+      }
+      if (featureCase_ == 5) {
+        output.writeMessage(5, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_);
+      }
+      if (featureCase_ == 6) {
+        output.writeMessage(6, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_);
+      }
+      if (featureCase_ == 7) {
+        output.writeMessage(7, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_);
+      }
+      if (featureCase_ == 8) {
+        output.writeMessage(8, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_);
+      }
+      if (featureCase_ == 9) {
+        output.writeMessage(9, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (featureCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_);
+      }
+      if (featureCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_);
+      }
+      if (featureCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_);
+      }
+      if (featureCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_);
+      }
+      if (featureCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_);
+      }
+      if (featureCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_);
+      }
+      if (featureCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_);
+      }
+      if (featureCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_);
+      }
+      if (featureCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass) obj;
+
+      if (!getFeatureCase().equals(other.getFeatureCase())) return false;
+      switch (featureCase_) {
+        case 1:
+          if (!getBoolEnum()
+              .equals(other.getBoolEnum())) return false;
+          break;
+        case 2:
+          if (!getIntEnum()
+              .equals(other.getIntEnum())) return false;
+          break;
+        case 3:
+          if (!getStringEnum()
+              .equals(other.getStringEnum())) return false;
+          break;
+        case 4:
+          if (!getGauge()
+              .equals(other.getGauge())) return false;
+          break;
+        case 5:
+          if (!getCounter()
+              .equals(other.getCounter())) return false;
+          break;
+        case 6:
+          if (!getDistance()
+              .equals(other.getDistance())) return false;
+          break;
+        case 7:
+          if (!getDuration()
+              .equals(other.getDuration())) return false;
+          break;
+        case 8:
+          if (!getSet()
+              .equals(other.getSet())) return false;
+          break;
+        case 9:
+          if (!getEphemeral()
+              .equals(other.getEphemeral())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (featureCase_) {
+        case 1:
+          hash = (37 * hash) + BOOL_ENUM_FIELD_NUMBER;
+          hash = (53 * hash) + getBoolEnum().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INT_ENUM_FIELD_NUMBER;
+          hash = (53 * hash) + getIntEnum().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STRING_ENUM_FIELD_NUMBER;
+          hash = (53 * hash) + getStringEnum().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + GAUGE_FIELD_NUMBER;
+          hash = (53 * hash) + getGauge().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + COUNTER_FIELD_NUMBER;
+          hash = (53 * hash) + getCounter().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
+          hash = (53 * hash) + getDistance().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + DURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getDuration().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + SET_FIELD_NUMBER;
+          hash = (53 * hash) + getSet().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + EPHEMERAL_FIELD_NUMBER;
+          hash = (53 * hash) + getEphemeral().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.FeatureClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeatureClass)
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        featureCase_ = 0;
+        feature_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeatureClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass build() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass buildPartial() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass(this);
+        if (featureCase_ == 1) {
+          if (boolEnumBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = boolEnumBuilder_.build();
+          }
+        }
+        if (featureCase_ == 2) {
+          if (intEnumBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = intEnumBuilder_.build();
+          }
+        }
+        if (featureCase_ == 3) {
+          if (stringEnumBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = stringEnumBuilder_.build();
+          }
+        }
+        if (featureCase_ == 4) {
+          if (gaugeBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = gaugeBuilder_.build();
+          }
+        }
+        if (featureCase_ == 5) {
+          if (counterBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = counterBuilder_.build();
+          }
+        }
+        if (featureCase_ == 6) {
+          if (distanceBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = distanceBuilder_.build();
+          }
+        }
+        if (featureCase_ == 7) {
+          if (durationBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = durationBuilder_.build();
+          }
+        }
+        if (featureCase_ == 8) {
+          if (setBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = setBuilder_.build();
+          }
+        }
+        if (featureCase_ == 9) {
+          if (ephemeralBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = ephemeralBuilder_.build();
+          }
+        }
+        result.featureCase_ = featureCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass other) {
+        if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance()) return this;
+        switch (other.getFeatureCase()) {
+          case BOOL_ENUM: {
+            mergeBoolEnum(other.getBoolEnum());
+            break;
+          }
+          case INT_ENUM: {
+            mergeIntEnum(other.getIntEnum());
+            break;
+          }
+          case STRING_ENUM: {
+            mergeStringEnum(other.getStringEnum());
+            break;
+          }
+          case GAUGE: {
+            mergeGauge(other.getGauge());
+            break;
+          }
+          case COUNTER: {
+            mergeCounter(other.getCounter());
+            break;
+          }
+          case DISTANCE: {
+            mergeDistance(other.getDistance());
+            break;
+          }
+          case DURATION: {
+            mergeDuration(other.getDuration());
+            break;
+          }
+          case SET: {
+            mergeSet(other.getSet());
+            break;
+          }
+          case EPHEMERAL: {
+            mergeEphemeral(other.getEphemeral());
+            break;
+          }
+          case FEATURE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int featureCase_ = 0;
+      private java.lang.Object feature_;
+      public FeatureCase
+          getFeatureCase() {
+        return FeatureCase.forNumber(
+            featureCase_);
+      }
+
+      public Builder clearFeature() {
+        featureCase_ = 0;
+        feature_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder> boolEnumBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       * @return Whether the boolEnum field is set.
+       */
+      @java.lang.Override
+      public boolean hasBoolEnum() {
+        return featureCase_ == 1;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       * @return The boolEnum.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum getBoolEnum() {
+        if (boolEnumBuilder_ == null) {
+          if (featureCase_ == 1) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+        } else {
+          if (featureCase_ == 1) {
+            return boolEnumBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      public Builder setBoolEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum value) {
+        if (boolEnumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          boolEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      public Builder setBoolEnum(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder builderForValue) {
+        if (boolEnumBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          boolEnumBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      public Builder mergeBoolEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum value) {
+        if (boolEnumBuilder_ == null) {
+          if (featureCase_ == 1 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 1) {
+            boolEnumBuilder_.mergeFrom(value);
+          }
+          boolEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      public Builder clearBoolEnum() {
+        if (boolEnumBuilder_ == null) {
+          if (featureCase_ == 1) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 1) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          boolEnumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder getBoolEnumBuilder() {
+        return getBoolEnumFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder getBoolEnumOrBuilder() {
+        if ((featureCase_ == 1) && (boolEnumBuilder_ != null)) {
+          return boolEnumBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 1) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.BooleanEnum bool_enum = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder> 
+          getBoolEnumFieldBuilder() {
+        if (boolEnumBuilder_ == null) {
+          if (!(featureCase_ == 1)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.getDefaultInstance();
+          }
+          boolEnumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnumOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.BooleanEnum) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 1;
+        onChanged();;
+        return boolEnumBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder> intEnumBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       * @return Whether the intEnum field is set.
+       */
+      @java.lang.Override
+      public boolean hasIntEnum() {
+        return featureCase_ == 2;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       * @return The intEnum.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum getIntEnum() {
+        if (intEnumBuilder_ == null) {
+          if (featureCase_ == 2) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+        } else {
+          if (featureCase_ == 2) {
+            return intEnumBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      public Builder setIntEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum value) {
+        if (intEnumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          intEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      public Builder setIntEnum(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder builderForValue) {
+        if (intEnumBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          intEnumBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      public Builder mergeIntEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum value) {
+        if (intEnumBuilder_ == null) {
+          if (featureCase_ == 2 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 2) {
+            intEnumBuilder_.mergeFrom(value);
+          }
+          intEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      public Builder clearIntEnum() {
+        if (intEnumBuilder_ == null) {
+          if (featureCase_ == 2) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 2) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          intEnumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder getIntEnumBuilder() {
+        return getIntEnumFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder getIntEnumOrBuilder() {
+        if ((featureCase_ == 2) && (intEnumBuilder_ != null)) {
+          return intEnumBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 2) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.IntEnum int_enum = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder> 
+          getIntEnumFieldBuilder() {
+        if (intEnumBuilder_ == null) {
+          if (!(featureCase_ == 2)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.getDefaultInstance();
+          }
+          intEnumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnumOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.IntEnum) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 2;
+        onChanged();;
+        return intEnumBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder> stringEnumBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       * @return Whether the stringEnum field is set.
+       */
+      @java.lang.Override
+      public boolean hasStringEnum() {
+        return featureCase_ == 3;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       * @return The stringEnum.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum getStringEnum() {
+        if (stringEnumBuilder_ == null) {
+          if (featureCase_ == 3) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+        } else {
+          if (featureCase_ == 3) {
+            return stringEnumBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      public Builder setStringEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum value) {
+        if (stringEnumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          stringEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      public Builder setStringEnum(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder builderForValue) {
+        if (stringEnumBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          stringEnumBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      public Builder mergeStringEnum(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum value) {
+        if (stringEnumBuilder_ == null) {
+          if (featureCase_ == 3 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 3) {
+            stringEnumBuilder_.mergeFrom(value);
+          }
+          stringEnumBuilder_.setMessage(value);
+        }
+        featureCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      public Builder clearStringEnum() {
+        if (stringEnumBuilder_ == null) {
+          if (featureCase_ == 3) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 3) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          stringEnumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder getStringEnumBuilder() {
+        return getStringEnumFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder getStringEnumOrBuilder() {
+        if ((featureCase_ == 3) && (stringEnumBuilder_ != null)) {
+          return stringEnumBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 3) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.StringEnum string_enum = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder> 
+          getStringEnumFieldBuilder() {
+        if (stringEnumBuilder_ == null) {
+          if (!(featureCase_ == 3)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.getDefaultInstance();
+          }
+          stringEnumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnumOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.StringEnum) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 3;
+        onChanged();;
+        return stringEnumBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder> gaugeBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       * @return Whether the gauge field is set.
+       */
+      @java.lang.Override
+      public boolean hasGauge() {
+        return featureCase_ == 4;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       * @return The gauge.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge getGauge() {
+        if (gaugeBuilder_ == null) {
+          if (featureCase_ == 4) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+        } else {
+          if (featureCase_ == 4) {
+            return gaugeBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      public Builder setGauge(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          gaugeBuilder_.setMessage(value);
+        }
+        featureCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      public Builder setGauge(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder builderForValue) {
+        if (gaugeBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          gaugeBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      public Builder mergeGauge(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (featureCase_ == 4 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 4) {
+            gaugeBuilder_.mergeFrom(value);
+          }
+          gaugeBuilder_.setMessage(value);
+        }
+        featureCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      public Builder clearGauge() {
+        if (gaugeBuilder_ == null) {
+          if (featureCase_ == 4) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 4) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          gaugeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder getGaugeBuilder() {
+        return getGaugeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder getGaugeOrBuilder() {
+        if ((featureCase_ == 4) && (gaugeBuilder_ != null)) {
+          return gaugeBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 4) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Gauge gauge = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder> 
+          getGaugeFieldBuilder() {
+        if (gaugeBuilder_ == null) {
+          if (!(featureCase_ == 4)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
+          }
+          gaugeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.GaugeOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Gauge) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 4;
+        onChanged();;
+        return gaugeBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder> counterBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       * @return Whether the counter field is set.
+       */
+      @java.lang.Override
+      public boolean hasCounter() {
+        return featureCase_ == 5;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       * @return The counter.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter getCounter() {
+        if (counterBuilder_ == null) {
+          if (featureCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+        } else {
+          if (featureCase_ == 5) {
+            return counterBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      public Builder setCounter(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter value) {
+        if (counterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          counterBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      public Builder setCounter(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder builderForValue) {
+        if (counterBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          counterBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      public Builder mergeCounter(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter value) {
+        if (counterBuilder_ == null) {
+          if (featureCase_ == 5 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 5) {
+            counterBuilder_.mergeFrom(value);
+          }
+          counterBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      public Builder clearCounter() {
+        if (counterBuilder_ == null) {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          counterBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder getCounterBuilder() {
+        return getCounterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder() {
+        if ((featureCase_ == 5) && (counterBuilder_ != null)) {
+          return counterBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Counter counter = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder> 
+          getCounterFieldBuilder() {
+        if (counterBuilder_ == null) {
+          if (!(featureCase_ == 5)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
+          }
+          counterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.CounterOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Counter) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 5;
+        onChanged();;
+        return counterBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder> distanceBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       * @return Whether the distance field is set.
+       */
+      @java.lang.Override
+      public boolean hasDistance() {
+        return featureCase_ == 6;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       * @return The distance.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance getDistance() {
+        if (distanceBuilder_ == null) {
+          if (featureCase_ == 6) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+        } else {
+          if (featureCase_ == 6) {
+            return distanceBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      public Builder setDistance(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance value) {
+        if (distanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          distanceBuilder_.setMessage(value);
+        }
+        featureCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      public Builder setDistance(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder builderForValue) {
+        if (distanceBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          distanceBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      public Builder mergeDistance(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance value) {
+        if (distanceBuilder_ == null) {
+          if (featureCase_ == 6 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 6) {
+            distanceBuilder_.mergeFrom(value);
+          }
+          distanceBuilder_.setMessage(value);
+        }
+        featureCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      public Builder clearDistance() {
+        if (distanceBuilder_ == null) {
+          if (featureCase_ == 6) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 6) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          distanceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder getDistanceBuilder() {
+        return getDistanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder() {
+        if ((featureCase_ == 6) && (distanceBuilder_ != null)) {
+          return distanceBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 6) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Distance distance = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder> 
+          getDistanceFieldBuilder() {
+        if (distanceBuilder_ == null) {
+          if (!(featureCase_ == 6)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
+          }
+          distanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DistanceOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Distance) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 6;
+        onChanged();;
+        return distanceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       * @return Whether the duration field is set.
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return featureCase_ == 7;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          if (featureCase_ == 7) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+        } else {
+          if (featureCase_ == 7) {
+            return durationBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      public Builder setDuration(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        featureCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      public Builder setDuration(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      public Builder mergeDuration(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration value) {
+        if (durationBuilder_ == null) {
+          if (featureCase_ == 7 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 7) {
+            durationBuilder_.mergeFrom(value);
+          }
+          durationBuilder_.setMessage(value);
+        }
+        featureCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          if (featureCase_ == 7) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 7) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          durationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder getDurationBuilder() {
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder() {
+        if ((featureCase_ == 7) && (durationBuilder_ != null)) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 7) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Duration duration = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          if (!(featureCase_ == 7)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
+          }
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.DurationOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Duration) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 7;
+        onChanged();;
+        return durationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder> setBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       * @return Whether the set field is set.
+       */
+      @java.lang.Override
+      public boolean hasSet() {
+        return featureCase_ == 8;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       * @return The set.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set getSet() {
+        if (setBuilder_ == null) {
+          if (featureCase_ == 8) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+        } else {
+          if (featureCase_ == 8) {
+            return setBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      public Builder setSet(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set value) {
+        if (setBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          setBuilder_.setMessage(value);
+        }
+        featureCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      public Builder setSet(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder builderForValue) {
+        if (setBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          setBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      public Builder mergeSet(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set value) {
+        if (setBuilder_ == null) {
+          if (featureCase_ == 8 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 8) {
+            setBuilder_.mergeFrom(value);
+          }
+          setBuilder_.setMessage(value);
+        }
+        featureCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      public Builder clearSet() {
+        if (setBuilder_ == null) {
+          if (featureCase_ == 8) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 8) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          setBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder getSetBuilder() {
+        return getSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder() {
+        if ((featureCase_ == 8) && (setBuilder_ != null)) {
+          return setBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 8) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Set set = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder> 
+          getSetFieldBuilder() {
+        if (setBuilder_ == null) {
+          if (!(featureCase_ == 8)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
+          }
+          setBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.SetOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Set) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 8;
+        onChanged();;
+        return setBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder> ephemeralBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       * @return Whether the ephemeral field is set.
+       */
+      @java.lang.Override
+      public boolean hasEphemeral() {
+        return featureCase_ == 9;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       * @return The ephemeral.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral() {
+        if (ephemeralBuilder_ == null) {
+          if (featureCase_ == 9) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+        } else {
+          if (featureCase_ == 9) {
+            return ephemeralBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      public Builder setEphemeral(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral value) {
+        if (ephemeralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          ephemeralBuilder_.setMessage(value);
+        }
+        featureCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      public Builder setEphemeral(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder builderForValue) {
+        if (ephemeralBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          ephemeralBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      public Builder mergeEphemeral(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral value) {
+        if (ephemeralBuilder_ == null) {
+          if (featureCase_ == 9 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 9) {
+            ephemeralBuilder_.mergeFrom(value);
+          }
+          ephemeralBuilder_.setMessage(value);
+        }
+        featureCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      public Builder clearEphemeral() {
+        if (ephemeralBuilder_ == null) {
+          if (featureCase_ == 9) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 9) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          ephemeralBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder getEphemeralBuilder() {
+        return getEphemeralFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder() {
+        if ((featureCase_ == 9) && (ephemeralBuilder_ != null)) {
+          return ephemeralBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 9) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass.Ephemeral ephemeral = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder> 
+          getEphemeralFieldBuilder() {
+        if (ephemeralBuilder_ == null) {
+          if (!(featureCase_ == 9)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
+          }
+          ephemeralBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.EphemeralOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Ephemeral) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 9;
+        onChanged();;
+        return ephemeralBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeatureClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeatureClass)
+    private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass();
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeatureClass>
+        PARSER = new com.google.protobuf.AbstractParser<FeatureClass>() {
+      @java.lang.Override
+      public FeatureClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeatureClass(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeatureClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeatureClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface FeatureOrBuilder extends
@@ -184,15 +8219,19 @@ public final class FeatureOuterClass {
         getKeyBytes();
 
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The enum numeric value on the wire for type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return Whether the featureClass field is set.
      */
-    int getTypeValue();
+    boolean hasFeatureClass();
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return The featureClass.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder();
 
     /**
      * <code>.hilo.protobufs.structure.FeatureStats stats = 3;</code>
@@ -223,7 +8262,6 @@ public final class FeatureOuterClass {
     }
     private Feature() {
       key_ = "";
-      type_ = 0;
     }
 
     @java.lang.Override
@@ -262,10 +8300,17 @@ public final class FeatureOuterClass {
               key_ = s;
               break;
             }
-            case 16: {
-              int rawValue = input.readEnum();
+            case 18: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder subBuilder = null;
+              if (featureClass_ != null) {
+                subBuilder = featureClass_.toBuilder();
+              }
+              featureClass_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(featureClass_);
+                featureClass_ = subBuilder.buildPartial();
+              }
 
-              type_ = rawValue;
               break;
             }
             case 26: {
@@ -351,23 +8396,30 @@ public final class FeatureOuterClass {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_;
+    public static final int FEATURE_CLASS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The enum numeric value on the wire for type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return Whether the featureClass field is set.
      */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
+    @java.lang.Override
+    public boolean hasFeatureClass() {
+      return featureClass_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return The featureClass.
      */
-    @java.lang.Override public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-      @SuppressWarnings("deprecation")
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-      return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+      return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+      return getFeatureClass();
     }
 
     public static final int STATS_FIELD_NUMBER = 3;
@@ -413,8 +8465,8 @@ public final class FeatureOuterClass {
       if (!getKeyBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
-        output.writeEnum(2, type_);
+      if (featureClass_ != null) {
+        output.writeMessage(2, getFeatureClass());
       }
       if (stats_ != null) {
         output.writeMessage(3, getStats());
@@ -431,9 +8483,9 @@ public final class FeatureOuterClass {
       if (!getKeyBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
+      if (featureClass_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, type_);
+          .computeMessageSize(2, getFeatureClass());
       }
       if (stats_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -456,7 +8508,11 @@ public final class FeatureOuterClass {
 
       if (!getKey()
           .equals(other.getKey())) return false;
-      if (type_ != other.type_) return false;
+      if (hasFeatureClass() != other.hasFeatureClass()) return false;
+      if (hasFeatureClass()) {
+        if (!getFeatureClass()
+            .equals(other.getFeatureClass())) return false;
+      }
       if (hasStats() != other.hasStats()) return false;
       if (hasStats()) {
         if (!getStats()
@@ -475,8 +8531,10 @@ public final class FeatureOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
+      if (hasFeatureClass()) {
+        hash = (37 * hash) + FEATURE_CLASS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatureClass().hashCode();
+      }
       if (hasStats()) {
         hash = (37 * hash) + STATS_FIELD_NUMBER;
         hash = (53 * hash) + getStats().hashCode();
@@ -616,8 +8674,12 @@ public final class FeatureOuterClass {
         super.clear();
         key_ = "";
 
-        type_ = 0;
-
+        if (featureClassBuilder_ == null) {
+          featureClass_ = null;
+        } else {
+          featureClass_ = null;
+          featureClassBuilder_ = null;
+        }
         if (statsBuilder_ == null) {
           stats_ = null;
         } else {
@@ -651,7 +8713,11 @@ public final class FeatureOuterClass {
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature(this);
         result.key_ = key_;
-        result.type_ = type_;
+        if (featureClassBuilder_ == null) {
+          result.featureClass_ = featureClass_;
+        } else {
+          result.featureClass_ = featureClassBuilder_.build();
+        }
         if (statsBuilder_ == null) {
           result.stats_ = stats_;
         } else {
@@ -709,8 +8775,8 @@ public final class FeatureOuterClass {
           key_ = other.key_;
           onChanged();
         }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
+        if (other.hasFeatureClass()) {
+          mergeFeatureClass(other.getFeatureClass());
         }
         if (other.hasStats()) {
           mergeStats(other.getStats());
@@ -820,58 +8886,123 @@ public final class FeatureOuterClass {
         return this;
       }
 
-      private int type_ = 0;
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> featureClassBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The enum numeric value on the wire for type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return Whether the featureClass field is set.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      public boolean hasFeatureClass() {
+        return featureClassBuilder_ != null || featureClass_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @param value The enum numeric value on the wire for type to set.
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return The featureClass.
        */
-      public Builder setTypeValue(int value) {
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-        @SuppressWarnings("deprecation")
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-        return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+        if (featureClassBuilder_ == null) {
+          return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+        } else {
+          return featureClassBuilder_.getMessage();
         }
-        
-        type_ = value.getNumber();
-        onChanged();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder setFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+        if (featureClassBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          featureClass_ = value;
+          onChanged();
+        } else {
+          featureClassBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
        */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
+      public Builder setFeatureClass(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder builderForValue) {
+        if (featureClassBuilder_ == null) {
+          featureClass_ = builderForValue.build();
+          onChanged();
+        } else {
+          featureClassBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder mergeFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+        if (featureClassBuilder_ == null) {
+          if (featureClass_ != null) {
+            featureClass_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.newBuilder(featureClass_).mergeFrom(value).buildPartial();
+          } else {
+            featureClass_ = value;
+          }
+          onChanged();
+        } else {
+          featureClassBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder clearFeatureClass() {
+        if (featureClassBuilder_ == null) {
+          featureClass_ = null;
+          onChanged();
+        } else {
+          featureClass_ = null;
+          featureClassBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder getFeatureClassBuilder() {
+        
+        onChanged();
+        return getFeatureClassFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+        if (featureClassBuilder_ != null) {
+          return featureClassBuilder_.getMessageOrBuilder();
+        } else {
+          return featureClass_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> 
+          getFeatureClassFieldBuilder() {
+        if (featureClassBuilder_ == null) {
+          featureClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder>(
+                  getFeatureClass(),
+                  getParentForChildren(),
+                  isClean());
+          featureClass_ = null;
+        }
+        return featureClassBuilder_;
       }
 
       private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats stats_;
@@ -8256,36 +16387,94 @@ public final class FeatureOuterClass {
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder getBooleanStatsOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-     * @return Whether the numericStats field is set.
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+     * @return Whether the intStats field is set.
      */
-    boolean hasNumericStats();
+    boolean hasIntStats();
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-     * @return The numericStats.
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+     * @return The intStats.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getNumericStats();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getIntStats();
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getNumericStatsOrBuilder();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getIntStatsOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     * @return Whether the longStats field is set.
+     */
+    boolean hasLongStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     * @return The longStats.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getLongStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getLongStatsOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     * @return Whether the floatStats field is set.
+     */
+    boolean hasFloatStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     * @return The floatStats.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getFloatStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getFloatStatsOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     * @return Whether the doubleStats field is set.
+     */
+    boolean hasDoubleStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     * @return The doubleStats.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getDoubleStats();
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getDoubleStatsOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      * @return Whether the stringStats field is set.
      */
     boolean hasStringStats();
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      * @return The stringStats.
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getStringStats();
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getStringStatsOrBuilder();
 
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.StatsCase getStatsCase();
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     * @return Whether the bytesStats field is set.
+     */
+    boolean hasBytesStats();
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     * @return The bytesStats.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getBytesStats();
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getBytesStatsOrBuilder();
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.FeatureStats}
@@ -8334,44 +16523,93 @@ public final class FeatureOuterClass {
               break;
             case 10: {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder subBuilder = null;
-              if (statsCase_ == 1) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_).toBuilder();
+              if (booleanStats_ != null) {
+                subBuilder = booleanStats_.toBuilder();
               }
-              stats_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.parser(), extensionRegistry);
+              booleanStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_);
-                stats_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(booleanStats_);
+                booleanStats_ = subBuilder.buildPartial();
               }
-              statsCase_ = 1;
+
               break;
             }
             case 18: {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder subBuilder = null;
-              if (statsCase_ == 2) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_).toBuilder();
+              if (intStats_ != null) {
+                subBuilder = intStats_.toBuilder();
               }
-              stats_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.parser(), extensionRegistry);
+              intStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_);
-                stats_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(intStats_);
+                intStats_ = subBuilder.buildPartial();
               }
-              statsCase_ = 2;
+
               break;
             }
             case 26: {
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder subBuilder = null;
-              if (statsCase_ == 3) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_).toBuilder();
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder subBuilder = null;
+              if (longStats_ != null) {
+                subBuilder = longStats_.toBuilder();
               }
-              stats_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.parser(), extensionRegistry);
+              longStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_);
-                stats_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(longStats_);
+                longStats_ = subBuilder.buildPartial();
               }
-              statsCase_ = 3;
+
+              break;
+            }
+            case 34: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder subBuilder = null;
+              if (floatStats_ != null) {
+                subBuilder = floatStats_.toBuilder();
+              }
+              floatStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(floatStats_);
+                floatStats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder subBuilder = null;
+              if (doubleStats_ != null) {
+                subBuilder = doubleStats_.toBuilder();
+              }
+              doubleStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(doubleStats_);
+                doubleStats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder subBuilder = null;
+              if (stringStats_ != null) {
+                subBuilder = stringStats_.toBuilder();
+              }
+              stringStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stringStats_);
+                stringStats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder subBuilder = null;
+              if (bytesStats_ != null) {
+                subBuilder = bytesStats_.toBuilder();
+              }
+              bytesStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bytesStats_);
+                bytesStats_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8406,57 +16644,15 @@ public final class FeatureOuterClass {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder.class);
     }
 
-    private int statsCase_ = 0;
-    private java.lang.Object stats_;
-    public enum StatsCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      BOOLEAN_STATS(1),
-      NUMERIC_STATS(2),
-      STRING_STATS(3),
-      STATS_NOT_SET(0);
-      private final int value;
-      private StatsCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static StatsCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static StatsCase forNumber(int value) {
-        switch (value) {
-          case 1: return BOOLEAN_STATS;
-          case 2: return NUMERIC_STATS;
-          case 3: return STRING_STATS;
-          case 0: return STATS_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public StatsCase
-    getStatsCase() {
-      return StatsCase.forNumber(
-          statsCase_);
-    }
-
     public static final int BOOLEAN_STATS_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats booleanStats_;
     /**
      * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
      * @return Whether the booleanStats field is set.
      */
     @java.lang.Override
     public boolean hasBooleanStats() {
-      return statsCase_ == 1;
+      return booleanStats_ != null;
     }
     /**
      * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
@@ -8464,82 +16660,170 @@ public final class FeatureOuterClass {
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats getBooleanStats() {
-      if (statsCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
+      return booleanStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance() : booleanStats_;
     }
     /**
      * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder getBooleanStatsOrBuilder() {
-      if (statsCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
+      return getBooleanStats();
     }
 
-    public static final int NUMERIC_STATS_FIELD_NUMBER = 2;
+    public static final int INT_STATS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats intStats_;
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-     * @return Whether the numericStats field is set.
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+     * @return Whether the intStats field is set.
      */
     @java.lang.Override
-    public boolean hasNumericStats() {
-      return statsCase_ == 2;
+    public boolean hasIntStats() {
+      return intStats_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-     * @return The numericStats.
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+     * @return The intStats.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getNumericStats() {
-      if (statsCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getIntStats() {
+      return intStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : intStats_;
     }
     /**
-     * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+     * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getNumericStatsOrBuilder() {
-      if (statsCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getIntStatsOrBuilder() {
+      return getIntStats();
     }
 
-    public static final int STRING_STATS_FIELD_NUMBER = 3;
+    public static final int LONG_STATS_FIELD_NUMBER = 3;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats longStats_;
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     * @return Whether the longStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasLongStats() {
+      return longStats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     * @return The longStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getLongStats() {
+      return longStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : longStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getLongStatsOrBuilder() {
+      return getLongStats();
+    }
+
+    public static final int FLOAT_STATS_FIELD_NUMBER = 4;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats floatStats_;
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     * @return Whether the floatStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasFloatStats() {
+      return floatStats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     * @return The floatStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getFloatStats() {
+      return floatStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : floatStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getFloatStatsOrBuilder() {
+      return getFloatStats();
+    }
+
+    public static final int DOUBLE_STATS_FIELD_NUMBER = 5;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats doubleStats_;
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     * @return Whether the doubleStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasDoubleStats() {
+      return doubleStats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     * @return The doubleStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getDoubleStats() {
+      return doubleStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : doubleStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getDoubleStatsOrBuilder() {
+      return getDoubleStats();
+    }
+
+    public static final int STRING_STATS_FIELD_NUMBER = 6;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats stringStats_;
+    /**
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      * @return Whether the stringStats field is set.
      */
     @java.lang.Override
     public boolean hasStringStats() {
-      return statsCase_ == 3;
+      return stringStats_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      * @return The stringStats.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getStringStats() {
-      if (statsCase_ == 3) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
+      return stringStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : stringStats_;
     }
     /**
-     * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+     * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getStringStatsOrBuilder() {
-      if (statsCase_ == 3) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_;
-      }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
+      return getStringStats();
+    }
+
+    public static final int BYTES_STATS_FIELD_NUMBER = 7;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats bytesStats_;
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     * @return Whether the bytesStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasBytesStats() {
+      return bytesStats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     * @return The bytesStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getBytesStats() {
+      return bytesStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : bytesStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getBytesStatsOrBuilder() {
+      return getBytesStats();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8556,14 +16840,26 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (statsCase_ == 1) {
-        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_);
+      if (booleanStats_ != null) {
+        output.writeMessage(1, getBooleanStats());
       }
-      if (statsCase_ == 2) {
-        output.writeMessage(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_);
+      if (intStats_ != null) {
+        output.writeMessage(2, getIntStats());
       }
-      if (statsCase_ == 3) {
-        output.writeMessage(3, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_);
+      if (longStats_ != null) {
+        output.writeMessage(3, getLongStats());
+      }
+      if (floatStats_ != null) {
+        output.writeMessage(4, getFloatStats());
+      }
+      if (doubleStats_ != null) {
+        output.writeMessage(5, getDoubleStats());
+      }
+      if (stringStats_ != null) {
+        output.writeMessage(6, getStringStats());
+      }
+      if (bytesStats_ != null) {
+        output.writeMessage(7, getBytesStats());
       }
       unknownFields.writeTo(output);
     }
@@ -8574,17 +16870,33 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (statsCase_ == 1) {
+      if (booleanStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_);
+          .computeMessageSize(1, getBooleanStats());
       }
-      if (statsCase_ == 2) {
+      if (intStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_);
+          .computeMessageSize(2, getIntStats());
       }
-      if (statsCase_ == 3) {
+      if (longStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_);
+          .computeMessageSize(3, getLongStats());
+      }
+      if (floatStats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFloatStats());
+      }
+      if (doubleStats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDoubleStats());
+      }
+      if (stringStats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getStringStats());
+      }
+      if (bytesStats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getBytesStats());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8601,22 +16913,40 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats) obj;
 
-      if (!getStatsCase().equals(other.getStatsCase())) return false;
-      switch (statsCase_) {
-        case 1:
-          if (!getBooleanStats()
-              .equals(other.getBooleanStats())) return false;
-          break;
-        case 2:
-          if (!getNumericStats()
-              .equals(other.getNumericStats())) return false;
-          break;
-        case 3:
-          if (!getStringStats()
-              .equals(other.getStringStats())) return false;
-          break;
-        case 0:
-        default:
+      if (hasBooleanStats() != other.hasBooleanStats()) return false;
+      if (hasBooleanStats()) {
+        if (!getBooleanStats()
+            .equals(other.getBooleanStats())) return false;
+      }
+      if (hasIntStats() != other.hasIntStats()) return false;
+      if (hasIntStats()) {
+        if (!getIntStats()
+            .equals(other.getIntStats())) return false;
+      }
+      if (hasLongStats() != other.hasLongStats()) return false;
+      if (hasLongStats()) {
+        if (!getLongStats()
+            .equals(other.getLongStats())) return false;
+      }
+      if (hasFloatStats() != other.hasFloatStats()) return false;
+      if (hasFloatStats()) {
+        if (!getFloatStats()
+            .equals(other.getFloatStats())) return false;
+      }
+      if (hasDoubleStats() != other.hasDoubleStats()) return false;
+      if (hasDoubleStats()) {
+        if (!getDoubleStats()
+            .equals(other.getDoubleStats())) return false;
+      }
+      if (hasStringStats() != other.hasStringStats()) return false;
+      if (hasStringStats()) {
+        if (!getStringStats()
+            .equals(other.getStringStats())) return false;
+      }
+      if (hasBytesStats() != other.hasBytesStats()) return false;
+      if (hasBytesStats()) {
+        if (!getBytesStats()
+            .equals(other.getBytesStats())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -8629,21 +16959,33 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      switch (statsCase_) {
-        case 1:
-          hash = (37 * hash) + BOOLEAN_STATS_FIELD_NUMBER;
-          hash = (53 * hash) + getBooleanStats().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + NUMERIC_STATS_FIELD_NUMBER;
-          hash = (53 * hash) + getNumericStats().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + STRING_STATS_FIELD_NUMBER;
-          hash = (53 * hash) + getStringStats().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasBooleanStats()) {
+        hash = (37 * hash) + BOOLEAN_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getBooleanStats().hashCode();
+      }
+      if (hasIntStats()) {
+        hash = (37 * hash) + INT_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getIntStats().hashCode();
+      }
+      if (hasLongStats()) {
+        hash = (37 * hash) + LONG_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getLongStats().hashCode();
+      }
+      if (hasFloatStats()) {
+        hash = (37 * hash) + FLOAT_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getFloatStats().hashCode();
+      }
+      if (hasDoubleStats()) {
+        hash = (37 * hash) + DOUBLE_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getDoubleStats().hashCode();
+      }
+      if (hasStringStats()) {
+        hash = (37 * hash) + STRING_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getStringStats().hashCode();
+      }
+      if (hasBytesStats()) {
+        hash = (37 * hash) + BYTES_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getBytesStats().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8778,8 +17120,48 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        statsCase_ = 0;
-        stats_ = null;
+        if (booleanStatsBuilder_ == null) {
+          booleanStats_ = null;
+        } else {
+          booleanStats_ = null;
+          booleanStatsBuilder_ = null;
+        }
+        if (intStatsBuilder_ == null) {
+          intStats_ = null;
+        } else {
+          intStats_ = null;
+          intStatsBuilder_ = null;
+        }
+        if (longStatsBuilder_ == null) {
+          longStats_ = null;
+        } else {
+          longStats_ = null;
+          longStatsBuilder_ = null;
+        }
+        if (floatStatsBuilder_ == null) {
+          floatStats_ = null;
+        } else {
+          floatStats_ = null;
+          floatStatsBuilder_ = null;
+        }
+        if (doubleStatsBuilder_ == null) {
+          doubleStats_ = null;
+        } else {
+          doubleStats_ = null;
+          doubleStatsBuilder_ = null;
+        }
+        if (stringStatsBuilder_ == null) {
+          stringStats_ = null;
+        } else {
+          stringStats_ = null;
+          stringStatsBuilder_ = null;
+        }
+        if (bytesStatsBuilder_ == null) {
+          bytesStats_ = null;
+        } else {
+          bytesStats_ = null;
+          bytesStatsBuilder_ = null;
+        }
         return this;
       }
 
@@ -8806,28 +17188,41 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats(this);
-        if (statsCase_ == 1) {
-          if (booleanStatsBuilder_ == null) {
-            result.stats_ = stats_;
-          } else {
-            result.stats_ = booleanStatsBuilder_.build();
-          }
+        if (booleanStatsBuilder_ == null) {
+          result.booleanStats_ = booleanStats_;
+        } else {
+          result.booleanStats_ = booleanStatsBuilder_.build();
         }
-        if (statsCase_ == 2) {
-          if (numericStatsBuilder_ == null) {
-            result.stats_ = stats_;
-          } else {
-            result.stats_ = numericStatsBuilder_.build();
-          }
+        if (intStatsBuilder_ == null) {
+          result.intStats_ = intStats_;
+        } else {
+          result.intStats_ = intStatsBuilder_.build();
         }
-        if (statsCase_ == 3) {
-          if (stringStatsBuilder_ == null) {
-            result.stats_ = stats_;
-          } else {
-            result.stats_ = stringStatsBuilder_.build();
-          }
+        if (longStatsBuilder_ == null) {
+          result.longStats_ = longStats_;
+        } else {
+          result.longStats_ = longStatsBuilder_.build();
         }
-        result.statsCase_ = statsCase_;
+        if (floatStatsBuilder_ == null) {
+          result.floatStats_ = floatStats_;
+        } else {
+          result.floatStats_ = floatStatsBuilder_.build();
+        }
+        if (doubleStatsBuilder_ == null) {
+          result.doubleStats_ = doubleStats_;
+        } else {
+          result.doubleStats_ = doubleStatsBuilder_.build();
+        }
+        if (stringStatsBuilder_ == null) {
+          result.stringStats_ = stringStats_;
+        } else {
+          result.stringStats_ = stringStatsBuilder_.build();
+        }
+        if (bytesStatsBuilder_ == null) {
+          result.bytesStats_ = bytesStats_;
+        } else {
+          result.bytesStats_ = bytesStatsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -8876,22 +17271,26 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats other) {
         if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance()) return this;
-        switch (other.getStatsCase()) {
-          case BOOLEAN_STATS: {
-            mergeBooleanStats(other.getBooleanStats());
-            break;
-          }
-          case NUMERIC_STATS: {
-            mergeNumericStats(other.getNumericStats());
-            break;
-          }
-          case STRING_STATS: {
-            mergeStringStats(other.getStringStats());
-            break;
-          }
-          case STATS_NOT_SET: {
-            break;
-          }
+        if (other.hasBooleanStats()) {
+          mergeBooleanStats(other.getBooleanStats());
+        }
+        if (other.hasIntStats()) {
+          mergeIntStats(other.getIntStats());
+        }
+        if (other.hasLongStats()) {
+          mergeLongStats(other.getLongStats());
+        }
+        if (other.hasFloatStats()) {
+          mergeFloatStats(other.getFloatStats());
+        }
+        if (other.hasDoubleStats()) {
+          mergeDoubleStats(other.getDoubleStats());
+        }
+        if (other.hasStringStats()) {
+          mergeStringStats(other.getStringStats());
+        }
+        if (other.hasBytesStats()) {
+          mergeBytesStats(other.getBytesStats());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8921,48 +17320,26 @@ public final class FeatureOuterClass {
         }
         return this;
       }
-      private int statsCase_ = 0;
-      private java.lang.Object stats_;
-      public StatsCase
-          getStatsCase() {
-        return StatsCase.forNumber(
-            statsCase_);
-      }
 
-      public Builder clearStats() {
-        statsCase_ = 0;
-        stats_ = null;
-        onChanged();
-        return this;
-      }
-
-
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats booleanStats_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder> booleanStatsBuilder_;
       /**
        * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
        * @return Whether the booleanStats field is set.
        */
-      @java.lang.Override
       public boolean hasBooleanStats() {
-        return statsCase_ == 1;
+        return booleanStatsBuilder_ != null || booleanStats_ != null;
       }
       /**
        * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
        * @return The booleanStats.
        */
-      @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats getBooleanStats() {
         if (booleanStatsBuilder_ == null) {
-          if (statsCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
+          return booleanStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance() : booleanStats_;
         } else {
-          if (statsCase_ == 1) {
-            return booleanStatsBuilder_.getMessage();
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
+          return booleanStatsBuilder_.getMessage();
         }
       }
       /**
@@ -8973,12 +17350,12 @@ public final class FeatureOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          stats_ = value;
+          booleanStats_ = value;
           onChanged();
         } else {
           booleanStatsBuilder_.setMessage(value);
         }
-        statsCase_ = 1;
+
         return this;
       }
       /**
@@ -8987,12 +17364,12 @@ public final class FeatureOuterClass {
       public Builder setBooleanStats(
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder builderForValue) {
         if (booleanStatsBuilder_ == null) {
-          stats_ = builderForValue.build();
+          booleanStats_ = builderForValue.build();
           onChanged();
         } else {
           booleanStatsBuilder_.setMessage(builderForValue.build());
         }
-        statsCase_ = 1;
+
         return this;
       }
       /**
@@ -9000,21 +17377,17 @@ public final class FeatureOuterClass {
        */
       public Builder mergeBooleanStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats value) {
         if (booleanStatsBuilder_ == null) {
-          if (statsCase_ == 1 &&
-              stats_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance()) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_)
-                .mergeFrom(value).buildPartial();
+          if (booleanStats_ != null) {
+            booleanStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.newBuilder(booleanStats_).mergeFrom(value).buildPartial();
           } else {
-            stats_ = value;
+            booleanStats_ = value;
           }
           onChanged();
         } else {
-          if (statsCase_ == 1) {
-            booleanStatsBuilder_.mergeFrom(value);
-          }
-          booleanStatsBuilder_.setMessage(value);
+          booleanStatsBuilder_.mergeFrom(value);
         }
-        statsCase_ = 1;
+
         return this;
       }
       /**
@@ -9022,38 +17395,32 @@ public final class FeatureOuterClass {
        */
       public Builder clearBooleanStats() {
         if (booleanStatsBuilder_ == null) {
-          if (statsCase_ == 1) {
-            statsCase_ = 0;
-            stats_ = null;
-            onChanged();
-          }
+          booleanStats_ = null;
+          onChanged();
         } else {
-          if (statsCase_ == 1) {
-            statsCase_ = 0;
-            stats_ = null;
-          }
-          booleanStatsBuilder_.clear();
+          booleanStats_ = null;
+          booleanStatsBuilder_ = null;
         }
+
         return this;
       }
       /**
        * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder getBooleanStatsBuilder() {
+        
+        onChanged();
         return getBooleanStatsFieldBuilder().getBuilder();
       }
       /**
        * <code>.hilo.protobufs.structure.BooleanStats boolean_stats = 1;</code>
        */
-      @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder getBooleanStatsOrBuilder() {
-        if ((statsCase_ == 1) && (booleanStatsBuilder_ != null)) {
+        if (booleanStatsBuilder_ != null) {
           return booleanStatsBuilder_.getMessageOrBuilder();
         } else {
-          if (statsCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
+          return booleanStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance() : booleanStats_;
         }
       }
       /**
@@ -9063,301 +17430,728 @@ public final class FeatureOuterClass {
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder> 
           getBooleanStatsFieldBuilder() {
         if (booleanStatsBuilder_ == null) {
-          if (!(statsCase_ == 1)) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.getDefaultInstance();
-          }
           booleanStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStatsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.BooleanStats) stats_,
+                  getBooleanStats(),
                   getParentForChildren(),
                   isClean());
-          stats_ = null;
+          booleanStats_ = null;
         }
-        statsCase_ = 1;
-        onChanged();;
         return booleanStatsBuilder_;
       }
 
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats intStats_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> numericStatsBuilder_;
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> intStatsBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-       * @return Whether the numericStats field is set.
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+       * @return Whether the intStats field is set.
        */
-      @java.lang.Override
-      public boolean hasNumericStats() {
-        return statsCase_ == 2;
+      public boolean hasIntStats() {
+        return intStatsBuilder_ != null || intStats_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
-       * @return The numericStats.
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
+       * @return The intStats.
        */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getNumericStats() {
-        if (numericStatsBuilder_ == null) {
-          if (statsCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getIntStats() {
+        if (intStatsBuilder_ == null) {
+          return intStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : intStats_;
         } else {
-          if (statsCase_ == 2) {
-            return numericStatsBuilder_.getMessage();
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
+          return intStatsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      public Builder setNumericStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
-        if (numericStatsBuilder_ == null) {
+      public Builder setIntStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (intStatsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          stats_ = value;
+          intStats_ = value;
           onChanged();
         } else {
-          numericStatsBuilder_.setMessage(value);
+          intStatsBuilder_.setMessage(value);
         }
-        statsCase_ = 2;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      public Builder setNumericStats(
+      public Builder setIntStats(
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder builderForValue) {
-        if (numericStatsBuilder_ == null) {
-          stats_ = builderForValue.build();
+        if (intStatsBuilder_ == null) {
+          intStats_ = builderForValue.build();
           onChanged();
         } else {
-          numericStatsBuilder_.setMessage(builderForValue.build());
+          intStatsBuilder_.setMessage(builderForValue.build());
         }
-        statsCase_ = 2;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      public Builder mergeNumericStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
-        if (numericStatsBuilder_ == null) {
-          if (statsCase_ == 2 &&
-              stats_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance()) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_)
-                .mergeFrom(value).buildPartial();
+      public Builder mergeIntStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (intStatsBuilder_ == null) {
+          if (intStats_ != null) {
+            intStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.newBuilder(intStats_).mergeFrom(value).buildPartial();
           } else {
-            stats_ = value;
+            intStats_ = value;
           }
           onChanged();
         } else {
-          if (statsCase_ == 2) {
-            numericStatsBuilder_.mergeFrom(value);
-          }
-          numericStatsBuilder_.setMessage(value);
+          intStatsBuilder_.mergeFrom(value);
         }
-        statsCase_ = 2;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      public Builder clearNumericStats() {
-        if (numericStatsBuilder_ == null) {
-          if (statsCase_ == 2) {
-            statsCase_ = 0;
-            stats_ = null;
-            onChanged();
-          }
+      public Builder clearIntStats() {
+        if (intStatsBuilder_ == null) {
+          intStats_ = null;
+          onChanged();
         } else {
-          if (statsCase_ == 2) {
-            statsCase_ = 0;
-            stats_ = null;
-          }
-          numericStatsBuilder_.clear();
+          intStats_ = null;
+          intStatsBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder getNumericStatsBuilder() {
-        return getNumericStatsFieldBuilder().getBuilder();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder getIntStatsBuilder() {
+        
+        onChanged();
+        return getIntStatsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getNumericStatsOrBuilder() {
-        if ((statsCase_ == 2) && (numericStatsBuilder_ != null)) {
-          return numericStatsBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getIntStatsOrBuilder() {
+        if (intStatsBuilder_ != null) {
+          return intStatsBuilder_.getMessageOrBuilder();
         } else {
-          if (statsCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
+          return intStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : intStats_;
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.NumericStats numeric_stats = 2;</code>
+       * <code>.hilo.protobufs.structure.NumericStats int_stats = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> 
-          getNumericStatsFieldBuilder() {
-        if (numericStatsBuilder_ == null) {
-          if (!(statsCase_ == 2)) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance();
-          }
-          numericStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getIntStatsFieldBuilder() {
+        if (intStatsBuilder_ == null) {
+          intStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats) stats_,
+                  getIntStats(),
                   getParentForChildren(),
                   isClean());
-          stats_ = null;
+          intStats_ = null;
         }
-        statsCase_ = 2;
-        onChanged();;
-        return numericStatsBuilder_;
+        return intStatsBuilder_;
       }
 
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats longStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> longStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       * @return Whether the longStats field is set.
+       */
+      public boolean hasLongStats() {
+        return longStatsBuilder_ != null || longStats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       * @return The longStats.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getLongStats() {
+        if (longStatsBuilder_ == null) {
+          return longStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : longStats_;
+        } else {
+          return longStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public Builder setLongStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (longStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          longStats_ = value;
+          onChanged();
+        } else {
+          longStatsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public Builder setLongStats(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder builderForValue) {
+        if (longStatsBuilder_ == null) {
+          longStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          longStatsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public Builder mergeLongStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (longStatsBuilder_ == null) {
+          if (longStats_ != null) {
+            longStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.newBuilder(longStats_).mergeFrom(value).buildPartial();
+          } else {
+            longStats_ = value;
+          }
+          onChanged();
+        } else {
+          longStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public Builder clearLongStats() {
+        if (longStatsBuilder_ == null) {
+          longStats_ = null;
+          onChanged();
+        } else {
+          longStats_ = null;
+          longStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder getLongStatsBuilder() {
+        
+        onChanged();
+        return getLongStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getLongStatsOrBuilder() {
+        if (longStatsBuilder_ != null) {
+          return longStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return longStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : longStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats long_stats = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> 
+          getLongStatsFieldBuilder() {
+        if (longStatsBuilder_ == null) {
+          longStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder>(
+                  getLongStats(),
+                  getParentForChildren(),
+                  isClean());
+          longStats_ = null;
+        }
+        return longStatsBuilder_;
+      }
+
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats floatStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> floatStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       * @return Whether the floatStats field is set.
+       */
+      public boolean hasFloatStats() {
+        return floatStatsBuilder_ != null || floatStats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       * @return The floatStats.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getFloatStats() {
+        if (floatStatsBuilder_ == null) {
+          return floatStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : floatStats_;
+        } else {
+          return floatStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public Builder setFloatStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (floatStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          floatStats_ = value;
+          onChanged();
+        } else {
+          floatStatsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public Builder setFloatStats(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder builderForValue) {
+        if (floatStatsBuilder_ == null) {
+          floatStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          floatStatsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public Builder mergeFloatStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (floatStatsBuilder_ == null) {
+          if (floatStats_ != null) {
+            floatStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.newBuilder(floatStats_).mergeFrom(value).buildPartial();
+          } else {
+            floatStats_ = value;
+          }
+          onChanged();
+        } else {
+          floatStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public Builder clearFloatStats() {
+        if (floatStatsBuilder_ == null) {
+          floatStats_ = null;
+          onChanged();
+        } else {
+          floatStats_ = null;
+          floatStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder getFloatStatsBuilder() {
+        
+        onChanged();
+        return getFloatStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getFloatStatsOrBuilder() {
+        if (floatStatsBuilder_ != null) {
+          return floatStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return floatStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : floatStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats float_stats = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> 
+          getFloatStatsFieldBuilder() {
+        if (floatStatsBuilder_ == null) {
+          floatStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder>(
+                  getFloatStats(),
+                  getParentForChildren(),
+                  isClean());
+          floatStats_ = null;
+        }
+        return floatStatsBuilder_;
+      }
+
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats doubleStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> doubleStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       * @return Whether the doubleStats field is set.
+       */
+      public boolean hasDoubleStats() {
+        return doubleStatsBuilder_ != null || doubleStats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       * @return The doubleStats.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats getDoubleStats() {
+        if (doubleStatsBuilder_ == null) {
+          return doubleStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : doubleStats_;
+        } else {
+          return doubleStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public Builder setDoubleStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (doubleStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          doubleStats_ = value;
+          onChanged();
+        } else {
+          doubleStatsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public Builder setDoubleStats(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder builderForValue) {
+        if (doubleStatsBuilder_ == null) {
+          doubleStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          doubleStatsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public Builder mergeDoubleStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats value) {
+        if (doubleStatsBuilder_ == null) {
+          if (doubleStats_ != null) {
+            doubleStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.newBuilder(doubleStats_).mergeFrom(value).buildPartial();
+          } else {
+            doubleStats_ = value;
+          }
+          onChanged();
+        } else {
+          doubleStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public Builder clearDoubleStats() {
+        if (doubleStatsBuilder_ == null) {
+          doubleStats_ = null;
+          onChanged();
+        } else {
+          doubleStats_ = null;
+          doubleStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder getDoubleStatsBuilder() {
+        
+        onChanged();
+        return getDoubleStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder getDoubleStatsOrBuilder() {
+        if (doubleStatsBuilder_ != null) {
+          return doubleStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return doubleStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.getDefaultInstance() : doubleStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.NumericStats double_stats = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder> 
+          getDoubleStatsFieldBuilder() {
+        if (doubleStatsBuilder_ == null) {
+          doubleStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStatsOrBuilder>(
+                  getDoubleStats(),
+                  getParentForChildren(),
+                  isClean());
+          doubleStats_ = null;
+        }
+        return doubleStatsBuilder_;
+      }
+
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats stringStats_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder> stringStatsBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        * @return Whether the stringStats field is set.
        */
-      @java.lang.Override
       public boolean hasStringStats() {
-        return statsCase_ == 3;
+        return stringStatsBuilder_ != null || stringStats_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        * @return The stringStats.
        */
-      @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getStringStats() {
         if (stringStatsBuilder_ == null) {
-          if (statsCase_ == 3) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
+          return stringStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : stringStats_;
         } else {
-          if (statsCase_ == 3) {
-            return stringStatsBuilder_.getMessage();
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
+          return stringStatsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       public Builder setStringStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats value) {
         if (stringStatsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          stats_ = value;
+          stringStats_ = value;
           onChanged();
         } else {
           stringStatsBuilder_.setMessage(value);
         }
-        statsCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       public Builder setStringStats(
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder builderForValue) {
         if (stringStatsBuilder_ == null) {
-          stats_ = builderForValue.build();
+          stringStats_ = builderForValue.build();
           onChanged();
         } else {
           stringStatsBuilder_.setMessage(builderForValue.build());
         }
-        statsCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       public Builder mergeStringStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats value) {
         if (stringStatsBuilder_ == null) {
-          if (statsCase_ == 3 &&
-              stats_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance()) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_)
-                .mergeFrom(value).buildPartial();
+          if (stringStats_ != null) {
+            stringStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.newBuilder(stringStats_).mergeFrom(value).buildPartial();
           } else {
-            stats_ = value;
+            stringStats_ = value;
           }
           onChanged();
         } else {
-          if (statsCase_ == 3) {
-            stringStatsBuilder_.mergeFrom(value);
-          }
-          stringStatsBuilder_.setMessage(value);
+          stringStatsBuilder_.mergeFrom(value);
         }
-        statsCase_ = 3;
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       public Builder clearStringStats() {
         if (stringStatsBuilder_ == null) {
-          if (statsCase_ == 3) {
-            statsCase_ = 0;
-            stats_ = null;
-            onChanged();
-          }
+          stringStats_ = null;
+          onChanged();
         } else {
-          if (statsCase_ == 3) {
-            statsCase_ = 0;
-            stats_ = null;
-          }
-          stringStatsBuilder_.clear();
+          stringStats_ = null;
+          stringStatsBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder getStringStatsBuilder() {
+        
+        onChanged();
         return getStringStatsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
-      @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getStringStatsOrBuilder() {
-        if ((statsCase_ == 3) && (stringStatsBuilder_ != null)) {
+        if (stringStatsBuilder_ != null) {
           return stringStatsBuilder_.getMessageOrBuilder();
         } else {
-          if (statsCase_ == 3) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_;
-          }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
+          return stringStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : stringStats_;
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.StringStats string_stats = 3;</code>
+       * <code>.hilo.protobufs.structure.StringStats string_stats = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder> 
           getStringStatsFieldBuilder() {
         if (stringStatsBuilder_ == null) {
-          if (!(statsCase_ == 3)) {
-            stats_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance();
-          }
           stringStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats) stats_,
+                  getStringStats(),
                   getParentForChildren(),
                   isClean());
-          stats_ = null;
+          stringStats_ = null;
         }
-        statsCase_ = 3;
-        onChanged();;
         return stringStatsBuilder_;
+      }
+
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats bytesStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder> bytesStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       * @return Whether the bytesStats field is set.
+       */
+      public boolean hasBytesStats() {
+        return bytesStatsBuilder_ != null || bytesStats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       * @return The bytesStats.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats getBytesStats() {
+        if (bytesStatsBuilder_ == null) {
+          return bytesStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : bytesStats_;
+        } else {
+          return bytesStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public Builder setBytesStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats value) {
+        if (bytesStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bytesStats_ = value;
+          onChanged();
+        } else {
+          bytesStatsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public Builder setBytesStats(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder builderForValue) {
+        if (bytesStatsBuilder_ == null) {
+          bytesStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          bytesStatsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public Builder mergeBytesStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats value) {
+        if (bytesStatsBuilder_ == null) {
+          if (bytesStats_ != null) {
+            bytesStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.newBuilder(bytesStats_).mergeFrom(value).buildPartial();
+          } else {
+            bytesStats_ = value;
+          }
+          onChanged();
+        } else {
+          bytesStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public Builder clearBytesStats() {
+        if (bytesStatsBuilder_ == null) {
+          bytesStats_ = null;
+          onChanged();
+        } else {
+          bytesStats_ = null;
+          bytesStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder getBytesStatsBuilder() {
+        
+        onChanged();
+        return getBytesStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder getBytesStatsOrBuilder() {
+        if (bytesStatsBuilder_ != null) {
+          return bytesStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return bytesStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.getDefaultInstance() : bytesStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.StringStats bytes_stats = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder> 
+          getBytesStatsFieldBuilder() {
+        if (bytesStatsBuilder_ == null) {
+          bytesStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StringStatsOrBuilder>(
+                  getBytesStats(),
+                  getParentForChildren(),
+                  isClean());
+          bytesStats_ = null;
+        }
+        return bytesStatsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9412,24 +18206,810 @@ public final class FeatureOuterClass {
 
   }
 
+  public interface StatsEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.StatsEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     * @return Whether the featureStats field is set.
+     */
+    boolean hasFeatureStats();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     * @return The featureStats.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.structure.StatsEvent}
+   */
+  public static final class StatsEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.StatsEvent)
+      StatsEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StatsEvent.newBuilder() to construct.
+    private StatsEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StatsEvent() {
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StatsEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StatsEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder subBuilder = null;
+              if (featureStats_ != null) {
+                subBuilder = featureStats_.toBuilder();
+              }
+              featureStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(featureStats_);
+                featureStats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_StatsEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_StatsEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEATURE_STATS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats featureStats_;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     * @return Whether the featureStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeatureStats() {
+      return featureStats_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     * @return The featureStats.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats() {
+      return featureStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder() {
+      return getFeatureStats();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (featureStats_ != null) {
+        output.writeMessage(2, getFeatureStats());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (featureStats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFeatureStats());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasFeatureStats() != other.hasFeatureStats()) return false;
+      if (hasFeatureStats()) {
+        if (!getFeatureStats()
+            .equals(other.getFeatureStats())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (hasFeatureStats()) {
+        hash = (37 * hash) + FEATURE_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatureStats().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.StatsEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.StatsEvent)
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_StatsEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_StatsEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        if (featureStatsBuilder_ == null) {
+          featureStats_ = null;
+        } else {
+          featureStats_ = null;
+          featureStatsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_StatsEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent build() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent buildPartial() {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent(this);
+        result.key_ = key_;
+        if (featureStatsBuilder_ == null) {
+          result.featureStats_ = featureStats_;
+        } else {
+          result.featureStats_ = featureStatsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) {
+          return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent other) {
+        if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasFeatureStats()) {
+          mergeFeatureStats(other.getFeatureStats());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats featureStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder> featureStatsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       * @return Whether the featureStats field is set.
+       */
+      public boolean hasFeatureStats() {
+        return featureStatsBuilder_ != null || featureStats_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       * @return The featureStats.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats() {
+        if (featureStatsBuilder_ == null) {
+          return featureStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
+        } else {
+          return featureStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public Builder setFeatureStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats value) {
+        if (featureStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          featureStats_ = value;
+          onChanged();
+        } else {
+          featureStatsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public Builder setFeatureStats(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder builderForValue) {
+        if (featureStatsBuilder_ == null) {
+          featureStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          featureStatsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public Builder mergeFeatureStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats value) {
+        if (featureStatsBuilder_ == null) {
+          if (featureStats_ != null) {
+            featureStats_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.newBuilder(featureStats_).mergeFrom(value).buildPartial();
+          } else {
+            featureStats_ = value;
+          }
+          onChanged();
+        } else {
+          featureStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public Builder clearFeatureStats() {
+        if (featureStatsBuilder_ == null) {
+          featureStats_ = null;
+          onChanged();
+        } else {
+          featureStats_ = null;
+          featureStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder getFeatureStatsBuilder() {
+        
+        onChanged();
+        return getFeatureStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder() {
+        if (featureStatsBuilder_ != null) {
+          return featureStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return featureStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder> 
+          getFeatureStatsFieldBuilder() {
+        if (featureStatsBuilder_ == null) {
+          featureStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder>(
+                  getFeatureStats(),
+                  getParentForChildren(),
+                  isClean());
+          featureStats_ = null;
+        }
+        return featureStatsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.StatsEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.StatsEvent)
+    private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent();
+    }
+
+    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StatsEvent>
+        PARSER = new com.google.protobuf.AbstractParser<StatsEvent>() {
+      @java.lang.Override
+      public StatsEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StatsEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StatsEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StatsEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface FeaturesEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeaturesEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      * @return Whether the stats field is set.
      */
     boolean hasStats();
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      * @return The stats.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getStats();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getStats();
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder getStatsOrBuilder();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder getStatsOrBuilder();
 
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.EventCase getEventCase();
   }
@@ -9479,17 +19059,30 @@ public final class FeatureOuterClass {
               done = true;
               break;
             case 10: {
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder subBuilder = null;
-              if (eventCase_ == 1) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_).toBuilder();
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder subBuilder = null;
+              if (eventCase_ == 16) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_).toBuilder();
               }
               event_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_);
                 event_ = subBuilder.buildPartial();
               }
-              eventCase_ = 1;
+              eventCase_ = 16;
               break;
             }
             default: {
@@ -9524,783 +19117,12 @@ public final class FeatureOuterClass {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Builder.class);
     }
 
-    public interface StatsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeaturesEvent.Stats)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string key = 1;</code>
-       * @return The key.
-       */
-      java.lang.String getKey();
-      /**
-       * <code>string key = 1;</code>
-       * @return The bytes for key.
-       */
-      com.google.protobuf.ByteString
-          getKeyBytes();
-
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       * @return Whether the featureStats field is set.
-       */
-      boolean hasFeatureStats();
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       * @return The featureStats.
-       */
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats();
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       */
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder();
-    }
-    /**
-     * Protobuf type {@code hilo.protobufs.structure.FeaturesEvent.Stats}
-     */
-    public static final class Stats extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.FeaturesEvent.Stats)
-        StatsOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Stats.newBuilder() to construct.
-      private Stats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Stats() {
-        key_ = "";
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Stats();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Stats(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                key_ = s;
-                break;
-              }
-              case 18: {
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder subBuilder = null;
-                if (featureStats_ != null) {
-                  subBuilder = featureStats_.toBuilder();
-                }
-                featureStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(featureStats_);
-                  featureStats_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder.class);
-      }
-
-      public static final int KEY_FIELD_NUMBER = 1;
-      private volatile java.lang.Object key_;
-      /**
-       * <code>string key = 1;</code>
-       * @return The key.
-       */
-      @java.lang.Override
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string key = 1;</code>
-       * @return The bytes for key.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int FEATURE_STATS_FIELD_NUMBER = 2;
-      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats featureStats_;
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       * @return Whether the featureStats field is set.
-       */
-      @java.lang.Override
-      public boolean hasFeatureStats() {
-        return featureStats_ != null;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       * @return The featureStats.
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats() {
-        return featureStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder() {
-        return getFeatureStats();
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getKeyBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
-        }
-        if (featureStats_ != null) {
-          output.writeMessage(2, getFeatureStats());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getKeyBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
-        }
-        if (featureStats_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getFeatureStats());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats)) {
-          return super.equals(obj);
-        }
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) obj;
-
-        if (!getKey()
-            .equals(other.getKey())) return false;
-        if (hasFeatureStats() != other.hasFeatureStats()) return false;
-        if (hasFeatureStats()) {
-          if (!getFeatureStats()
-              .equals(other.getFeatureStats())) return false;
-        }
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getKey().hashCode();
-        if (hasFeatureStats()) {
-          hash = (37 * hash) + FEATURE_STATS_FIELD_NUMBER;
-          hash = (53 * hash) + getFeatureStats().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code hilo.protobufs.structure.FeaturesEvent.Stats}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.FeaturesEvent.Stats)
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder.class);
-        }
-
-        // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          key_ = "";
-
-          if (featureStatsBuilder_ == null) {
-            featureStats_ = null;
-          } else {
-            featureStats_ = null;
-            featureStatsBuilder_ = null;
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor;
-        }
-
-        @java.lang.Override
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getDefaultInstanceForType() {
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats build() {
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats buildPartial() {
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats(this);
-          result.key_ = key_;
-          if (featureStatsBuilder_ == null) {
-            result.featureStats_ = featureStats_;
-          } else {
-            result.featureStats_ = featureStatsBuilder_.build();
-          }
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) {
-            return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats other) {
-          if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance()) return this;
-          if (!other.getKey().isEmpty()) {
-            key_ = other.key_;
-            onChanged();
-          }
-          if (other.hasFeatureStats()) {
-            mergeFeatureStats(other.getFeatureStats());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object key_ = "";
-        /**
-         * <code>string key = 1;</code>
-         * @return The key.
-         */
-        public java.lang.String getKey() {
-          java.lang.Object ref = key_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            key_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string key = 1;</code>
-         * @return The bytes for key.
-         */
-        public com.google.protobuf.ByteString
-            getKeyBytes() {
-          java.lang.Object ref = key_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            key_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string key = 1;</code>
-         * @param value The key to set.
-         * @return This builder for chaining.
-         */
-        public Builder setKey(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          key_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string key = 1;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearKey() {
-          
-          key_ = getDefaultInstance().getKey();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string key = 1;</code>
-         * @param value The bytes for key to set.
-         * @return This builder for chaining.
-         */
-        public Builder setKeyBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          key_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats featureStats_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder> featureStatsBuilder_;
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         * @return Whether the featureStats field is set.
-         */
-        public boolean hasFeatureStats() {
-          return featureStatsBuilder_ != null || featureStats_ != null;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         * @return The featureStats.
-         */
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats getFeatureStats() {
-          if (featureStatsBuilder_ == null) {
-            return featureStats_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
-          } else {
-            return featureStatsBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public Builder setFeatureStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats value) {
-          if (featureStatsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            featureStats_ = value;
-            onChanged();
-          } else {
-            featureStatsBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public Builder setFeatureStats(
-            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder builderForValue) {
-          if (featureStatsBuilder_ == null) {
-            featureStats_ = builderForValue.build();
-            onChanged();
-          } else {
-            featureStatsBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public Builder mergeFeatureStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats value) {
-          if (featureStatsBuilder_ == null) {
-            if (featureStats_ != null) {
-              featureStats_ =
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.newBuilder(featureStats_).mergeFrom(value).buildPartial();
-            } else {
-              featureStats_ = value;
-            }
-            onChanged();
-          } else {
-            featureStatsBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public Builder clearFeatureStats() {
-          if (featureStatsBuilder_ == null) {
-            featureStats_ = null;
-            onChanged();
-          } else {
-            featureStats_ = null;
-            featureStatsBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder getFeatureStatsBuilder() {
-          
-          onChanged();
-          return getFeatureStatsFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder getFeatureStatsOrBuilder() {
-          if (featureStatsBuilder_ != null) {
-            return featureStatsBuilder_.getMessageOrBuilder();
-          } else {
-            return featureStats_ == null ?
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.getDefaultInstance() : featureStats_;
-          }
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureStats feature_stats = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder> 
-            getFeatureStatsFieldBuilder() {
-          if (featureStatsBuilder_ == null) {
-            featureStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureStatsOrBuilder>(
-                    getFeatureStats(),
-                    getParentForChildren(),
-                    isClean());
-            featureStats_ = null;
-          }
-          return featureStatsBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.FeaturesEvent.Stats)
-      }
-
-      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.FeaturesEvent.Stats)
-      private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats();
-      }
-
-      public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Stats>
-          PARSER = new com.google.protobuf.AbstractParser<Stats>() {
-        @java.lang.Override
-        public Stats parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Stats(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Stats> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Stats> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int eventCase_ = 0;
     private java.lang.Object event_;
     public enum EventCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      STATS(1),
+      STATS(16),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -10318,7 +19140,7 @@ public final class FeatureOuterClass {
 
       public static EventCase forNumber(int value) {
         switch (value) {
-          case 1: return STATS;
+          case 16: return STATS;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -10334,35 +19156,61 @@ public final class FeatureOuterClass {
           eventCase_);
     }
 
-    public static final int STATS_FIELD_NUMBER = 1;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+      return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    public static final int STATS_FIELD_NUMBER = 16;
+    /**
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      * @return Whether the stats field is set.
      */
     @java.lang.Override
     public boolean hasStats() {
-      return eventCase_ == 1;
+      return eventCase_ == 16;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      * @return The stats.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getStats() {
-      if (eventCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_;
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getStats() {
+      if (eventCase_ == 16) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_;
       }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+     * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder getStatsOrBuilder() {
-      if (eventCase_ == 1) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_;
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder getStatsOrBuilder() {
+      if (eventCase_ == 16) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_;
       }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10379,8 +19227,11 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (eventCase_ == 1) {
-        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_);
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
+      }
+      if (eventCase_ == 16) {
+        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_);
       }
       unknownFields.writeTo(output);
     }
@@ -10391,9 +19242,13 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (eventCase_ == 1) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_);
+          .computeMessageSize(1, getMetadata());
+      }
+      if (eventCase_ == 16) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10410,9 +19265,14 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent) obj;
 
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!getEventCase().equals(other.getEventCase())) return false;
       switch (eventCase_) {
-        case 1:
+        case 16:
           if (!getStats()
               .equals(other.getStats())) return false;
           break;
@@ -10430,8 +19290,12 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
       switch (eventCase_) {
-        case 1:
+        case 16:
           hash = (37 * hash) + STATS_FIELD_NUMBER;
           hash = (53 * hash) + getStats().hashCode();
           break;
@@ -10571,6 +19435,12 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         eventCase_ = 0;
         event_ = null;
         return this;
@@ -10599,7 +19469,12 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent(this);
-        if (eventCase_ == 1) {
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
+        if (eventCase_ == 16) {
           if (statsBuilder_ == null) {
             result.event_ = event_;
           } else {
@@ -10655,6 +19530,9 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent other) {
         if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         switch (other.getEventCase()) {
           case STATS: {
             mergeStats(other.getStats());
@@ -10708,38 +19586,157 @@ public final class FeatureOuterClass {
       }
 
 
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder> statsBuilder_;
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> metadataBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder> statsBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        * @return Whether the stats field is set.
        */
       @java.lang.Override
       public boolean hasStats() {
-        return eventCase_ == 1;
+        return eventCase_ == 16;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        * @return The stats.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats getStats() {
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent getStats() {
         if (statsBuilder_ == null) {
-          if (eventCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_;
+          if (eventCase_ == 16) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_;
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
         } else {
-          if (eventCase_ == 1) {
+          if (eventCase_ == 16) {
             return statsBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
-      public Builder setStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats value) {
+      public Builder setStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent value) {
         if (statsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10749,57 +19746,57 @@ public final class FeatureOuterClass {
         } else {
           statsBuilder_.setMessage(value);
         }
-        eventCase_ = 1;
+        eventCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
       public Builder setStats(
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder builderForValue) {
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder builderForValue) {
         if (statsBuilder_ == null) {
           event_ = builderForValue.build();
           onChanged();
         } else {
           statsBuilder_.setMessage(builderForValue.build());
         }
-        eventCase_ = 1;
+        eventCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
-      public Builder mergeStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats value) {
+      public Builder mergeStats(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent value) {
         if (statsBuilder_ == null) {
-          if (eventCase_ == 1 &&
-              event_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance()) {
-            event_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_)
+          if (eventCase_ == 16 &&
+              event_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance()) {
+            event_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_)
                 .mergeFrom(value).buildPartial();
           } else {
             event_ = value;
           }
           onChanged();
         } else {
-          if (eventCase_ == 1) {
+          if (eventCase_ == 16) {
             statsBuilder_.mergeFrom(value);
           }
           statsBuilder_.setMessage(value);
         }
-        eventCase_ = 1;
+        eventCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
       public Builder clearStats() {
         if (statsBuilder_ == null) {
-          if (eventCase_ == 1) {
+          if (eventCase_ == 16) {
             eventCase_ = 0;
             event_ = null;
             onChanged();
           }
         } else {
-          if (eventCase_ == 1) {
+          if (eventCase_ == 16) {
             eventCase_ = 0;
             event_ = null;
           }
@@ -10808,43 +19805,43 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder getStatsBuilder() {
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder getStatsBuilder() {
         return getStatsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder getStatsOrBuilder() {
-        if ((eventCase_ == 1) && (statsBuilder_ != null)) {
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder getStatsOrBuilder() {
+        if ((eventCase_ == 16) && (statsBuilder_ != null)) {
           return statsBuilder_.getMessageOrBuilder();
         } else {
-          if (eventCase_ == 1) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_;
+          if (eventCase_ == 16) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_;
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeaturesEvent.Stats stats = 1;</code>
+       * <code>.hilo.protobufs.structure.StatsEvent stats = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder> 
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder> 
           getStatsFieldBuilder() {
         if (statsBuilder_ == null) {
-          if (!(eventCase_ == 1)) {
-            event_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.getDefaultInstance();
+          if (!(eventCase_ == 16)) {
+            event_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.getDefaultInstance();
           }
           statsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.StatsOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesEvent.Stats) event_,
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEventOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.StatsEvent) event_,
                   getParentForChildren(),
                   isClean());
           event_ = null;
         }
-        eventCase_ = 1;
+        eventCase_ = 16;
         onChanged();;
         return statsBuilder_;
       }
@@ -10918,15 +19915,19 @@ public final class FeatureOuterClass {
         getKeyBytes();
 
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The enum numeric value on the wire for type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return Whether the featureClass field is set.
      */
-    int getTypeValue();
+    boolean hasFeatureClass();
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return The featureClass.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass();
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder();
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.FeatureCreate}
@@ -10942,7 +19943,6 @@ public final class FeatureOuterClass {
     }
     private FeatureCreate() {
       key_ = "";
-      type_ = 0;
     }
 
     @java.lang.Override
@@ -10981,10 +19981,17 @@ public final class FeatureOuterClass {
               key_ = s;
               break;
             }
-            case 16: {
-              int rawValue = input.readEnum();
+            case 18: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder subBuilder = null;
+              if (featureClass_ != null) {
+                subBuilder = featureClass_.toBuilder();
+              }
+              featureClass_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(featureClass_);
+                featureClass_ = subBuilder.buildPartial();
+              }
 
-              type_ = rawValue;
               break;
             }
             default: {
@@ -11057,23 +20064,30 @@ public final class FeatureOuterClass {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_;
+    public static final int FEATURE_CLASS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The enum numeric value on the wire for type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return Whether the featureClass field is set.
      */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
+    @java.lang.Override
+    public boolean hasFeatureClass() {
+      return featureClass_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-     * @return The type.
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     * @return The featureClass.
      */
-    @java.lang.Override public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-      @SuppressWarnings("deprecation")
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-      return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+      return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+      return getFeatureClass();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11093,8 +20107,8 @@ public final class FeatureOuterClass {
       if (!getKeyBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
-        output.writeEnum(2, type_);
+      if (featureClass_ != null) {
+        output.writeMessage(2, getFeatureClass());
       }
       unknownFields.writeTo(output);
     }
@@ -11108,9 +20122,9 @@ public final class FeatureOuterClass {
       if (!getKeyBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
-      if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
+      if (featureClass_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, type_);
+          .computeMessageSize(2, getFeatureClass());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11129,7 +20143,11 @@ public final class FeatureOuterClass {
 
       if (!getKey()
           .equals(other.getKey())) return false;
-      if (type_ != other.type_) return false;
+      if (hasFeatureClass() != other.hasFeatureClass()) return false;
+      if (hasFeatureClass()) {
+        if (!getFeatureClass()
+            .equals(other.getFeatureClass())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11143,8 +20161,10 @@ public final class FeatureOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
+      if (hasFeatureClass()) {
+        hash = (37 * hash) + FEATURE_CLASS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatureClass().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11280,8 +20300,12 @@ public final class FeatureOuterClass {
         super.clear();
         key_ = "";
 
-        type_ = 0;
-
+        if (featureClassBuilder_ == null) {
+          featureClass_ = null;
+        } else {
+          featureClass_ = null;
+          featureClassBuilder_ = null;
+        }
         return this;
       }
 
@@ -11309,7 +20333,11 @@ public final class FeatureOuterClass {
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureCreate buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureCreate result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureCreate(this);
         result.key_ = key_;
-        result.type_ = type_;
+        if (featureClassBuilder_ == null) {
+          result.featureClass_ = featureClass_;
+        } else {
+          result.featureClass_ = featureClassBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11362,8 +20390,8 @@ public final class FeatureOuterClass {
           key_ = other.key_;
           onChanged();
         }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
+        if (other.hasFeatureClass()) {
+          mergeFeatureClass(other.getFeatureClass());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11470,58 +20498,123 @@ public final class FeatureOuterClass {
         return this;
       }
 
-      private int type_ = 0;
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> featureClassBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The enum numeric value on the wire for type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return Whether the featureClass field is set.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      public boolean hasFeatureClass() {
+        return featureClassBuilder_ != null || featureClass_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @param value The enum numeric value on the wire for type to set.
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return The featureClass.
        */
-      public Builder setTypeValue(int value) {
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-        @SuppressWarnings("deprecation")
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-        return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+        if (featureClassBuilder_ == null) {
+          return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+        } else {
+          return featureClassBuilder_.getMessage();
         }
-        
-        type_ = value.getNumber();
-        onChanged();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder setFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+        if (featureClassBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          featureClass_ = value;
+          onChanged();
+        } else {
+          featureClassBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
        */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
+      public Builder setFeatureClass(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder builderForValue) {
+        if (featureClassBuilder_ == null) {
+          featureClass_ = builderForValue.build();
+          onChanged();
+        } else {
+          featureClassBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder mergeFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+        if (featureClassBuilder_ == null) {
+          if (featureClass_ != null) {
+            featureClass_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.newBuilder(featureClass_).mergeFrom(value).buildPartial();
+          } else {
+            featureClass_ = value;
+          }
+          onChanged();
+        } else {
+          featureClassBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public Builder clearFeatureClass() {
+        if (featureClassBuilder_ == null) {
+          featureClass_ = null;
+          onChanged();
+        } else {
+          featureClass_ = null;
+          featureClassBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder getFeatureClassBuilder() {
+        
+        onChanged();
+        return getFeatureClassFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+        if (featureClassBuilder_ != null) {
+          return featureClassBuilder_.getMessageOrBuilder();
+        } else {
+          return featureClass_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> 
+          getFeatureClassFieldBuilder() {
+        if (featureClassBuilder_ == null) {
+          featureClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder>(
+                  getFeatureClass(),
+                  getParentForChildren(),
+                  isClean());
+          featureClass_ = null;
+        }
+        return featureClassBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11730,15 +20823,19 @@ public final class FeatureOuterClass {
           getKeyBytes();
 
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The enum numeric value on the wire for type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return Whether the featureClass field is set.
        */
-      int getTypeValue();
+      boolean hasFeatureClass();
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return The featureClass.
        */
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType();
+      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass();
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder();
     }
     /**
      * Protobuf type {@code hilo.protobufs.structure.FeatureUpdate.Feature}
@@ -11754,7 +20851,6 @@ public final class FeatureOuterClass {
       }
       private Feature() {
         key_ = "";
-        type_ = 0;
       }
 
       @java.lang.Override
@@ -11793,10 +20889,17 @@ public final class FeatureOuterClass {
                 key_ = s;
                 break;
               }
-              case 16: {
-                int rawValue = input.readEnum();
+              case 18: {
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder subBuilder = null;
+                if (featureClass_ != null) {
+                  subBuilder = featureClass_.toBuilder();
+                }
+                featureClass_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(featureClass_);
+                  featureClass_ = subBuilder.buildPartial();
+                }
 
-                type_ = rawValue;
                 break;
               }
               default: {
@@ -11869,23 +20972,30 @@ public final class FeatureOuterClass {
         }
       }
 
-      public static final int TYPE_FIELD_NUMBER = 2;
-      private int type_;
+      public static final int FEATURE_CLASS_FIELD_NUMBER = 2;
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The enum numeric value on the wire for type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return Whether the featureClass field is set.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public boolean hasFeatureClass() {
+        return featureClass_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-       * @return The type.
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       * @return The featureClass.
        */
-      @java.lang.Override public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-        @SuppressWarnings("deprecation")
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-        return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+        return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+        return getFeatureClass();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -11905,8 +21015,8 @@ public final class FeatureOuterClass {
         if (!getKeyBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
         }
-        if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
-          output.writeEnum(2, type_);
+        if (featureClass_ != null) {
+          output.writeMessage(2, getFeatureClass());
         }
         unknownFields.writeTo(output);
       }
@@ -11920,9 +21030,9 @@ public final class FeatureOuterClass {
         if (!getKeyBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
         }
-        if (type_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.FEATURE_BOOLEAN.getNumber()) {
+        if (featureClass_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(2, type_);
+            .computeMessageSize(2, getFeatureClass());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -11941,7 +21051,11 @@ public final class FeatureOuterClass {
 
         if (!getKey()
             .equals(other.getKey())) return false;
-        if (type_ != other.type_) return false;
+        if (hasFeatureClass() != other.hasFeatureClass()) return false;
+        if (hasFeatureClass()) {
+          if (!getFeatureClass()
+              .equals(other.getFeatureClass())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -11955,8 +21069,10 @@ public final class FeatureOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + KEY_FIELD_NUMBER;
         hash = (53 * hash) + getKey().hashCode();
-        hash = (37 * hash) + TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + type_;
+        if (hasFeatureClass()) {
+          hash = (37 * hash) + FEATURE_CLASS_FIELD_NUMBER;
+          hash = (53 * hash) + getFeatureClass().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -12092,8 +21208,12 @@ public final class FeatureOuterClass {
           super.clear();
           key_ = "";
 
-          type_ = 0;
-
+          if (featureClassBuilder_ == null) {
+            featureClass_ = null;
+          } else {
+            featureClass_ = null;
+            featureClassBuilder_ = null;
+          }
           return this;
         }
 
@@ -12121,7 +21241,11 @@ public final class FeatureOuterClass {
         public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureUpdate.Feature buildPartial() {
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureUpdate.Feature result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureUpdate.Feature(this);
           result.key_ = key_;
-          result.type_ = type_;
+          if (featureClassBuilder_ == null) {
+            result.featureClass_ = featureClass_;
+          } else {
+            result.featureClass_ = featureClassBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -12174,8 +21298,8 @@ public final class FeatureOuterClass {
             key_ = other.key_;
             onChanged();
           }
-          if (other.type_ != 0) {
-            setTypeValue(other.getTypeValue());
+          if (other.hasFeatureClass()) {
+            mergeFeatureClass(other.getFeatureClass());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -12282,58 +21406,123 @@ public final class FeatureOuterClass {
           return this;
         }
 
-        private int type_ = 0;
+        private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass featureClass_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> featureClassBuilder_;
         /**
-         * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-         * @return The enum numeric value on the wire for type.
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         * @return Whether the featureClass field is set.
          */
-        @java.lang.Override public int getTypeValue() {
-          return type_;
+        public boolean hasFeatureClass() {
+          return featureClassBuilder_ != null || featureClass_ != null;
         }
         /**
-         * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-         * @param value The enum numeric value on the wire for type to set.
-         * @return This builder for chaining.
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         * @return The featureClass.
          */
-        public Builder setTypeValue(int value) {
-          
-          type_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-         * @return The type.
-         */
-        @java.lang.Override
-        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType getType() {
-          @SuppressWarnings("deprecation")
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType result = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.valueOf(type_);
-          return result == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType.UNRECOGNIZED : result;
-        }
-        /**
-         * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-         * @param value The type to set.
-         * @return This builder for chaining.
-         */
-        public Builder setType(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureType value) {
-          if (value == null) {
-            throw new NullPointerException();
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass getFeatureClass() {
+          if (featureClassBuilder_ == null) {
+            return featureClass_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+          } else {
+            return featureClassBuilder_.getMessage();
           }
-          
-          type_ = value.getNumber();
-          onChanged();
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        public Builder setFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+          if (featureClassBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            featureClass_ = value;
+            onChanged();
+          } else {
+            featureClassBuilder_.setMessage(value);
+          }
+
           return this;
         }
         /**
-         * <code>.hilo.protobufs.structure.FeatureType type = 2;</code>
-         * @return This builder for chaining.
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
          */
-        public Builder clearType() {
-          
-          type_ = 0;
-          onChanged();
+        public Builder setFeatureClass(
+            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder builderForValue) {
+          if (featureClassBuilder_ == null) {
+            featureClass_ = builderForValue.build();
+            onChanged();
+          } else {
+            featureClassBuilder_.setMessage(builderForValue.build());
+          }
+
           return this;
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        public Builder mergeFeatureClass(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass value) {
+          if (featureClassBuilder_ == null) {
+            if (featureClass_ != null) {
+              featureClass_ =
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.newBuilder(featureClass_).mergeFrom(value).buildPartial();
+            } else {
+              featureClass_ = value;
+            }
+            onChanged();
+          } else {
+            featureClassBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        public Builder clearFeatureClass() {
+          if (featureClassBuilder_ == null) {
+            featureClass_ = null;
+            onChanged();
+          } else {
+            featureClass_ = null;
+            featureClassBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder getFeatureClassBuilder() {
+          
+          onChanged();
+          return getFeatureClassFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder getFeatureClassOrBuilder() {
+          if (featureClassBuilder_ != null) {
+            return featureClassBuilder_.getMessageOrBuilder();
+          } else {
+            return featureClass_ == null ?
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.getDefaultInstance() : featureClass_;
+          }
+        }
+        /**
+         * <code>.hilo.protobufs.structure.FeatureClass feature_class = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder> 
+            getFeatureClassFieldBuilder() {
+          if (featureClassBuilder_ == null) {
+            featureClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClass.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureClassOrBuilder>(
+                    getFeatureClass(),
+                    getParentForChildren(),
+                    isClean());
+            featureClass_ = null;
+          }
+          return featureClassBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -14027,34 +23216,49 @@ public final class FeatureOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      * @return Whether the log field is set.
      */
     boolean hasLog();
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      * @return The log.
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog getLog();
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
-     * @return Whether the features field is set.
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+     * @return Whether the feature field is set.
      */
-    boolean hasFeatures();
+    boolean hasFeature();
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
-     * @return The features.
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+     * @return The feature.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature();
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder();
 
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate.UpdateCase getUpdateCase();
   }
@@ -14104,8 +23308,21 @@ public final class FeatureOuterClass {
               done = true;
               break;
             case 10: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder subBuilder = null;
-              if (updateCase_ == 1) {
+              if (updateCase_ == 16) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_).toBuilder();
               }
               update_ =
@@ -14114,21 +23331,21 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_);
                 update_ = subBuilder.buildPartial();
               }
-              updateCase_ = 1;
+              updateCase_ = 16;
               break;
             }
-            case 18: {
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder subBuilder = null;
-              if (updateCase_ == 2) {
-                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_).toBuilder();
+            case 138: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder subBuilder = null;
+              if (updateCase_ == 17) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_).toBuilder();
               }
               update_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_);
                 update_ = subBuilder.buildPartial();
               }
-              updateCase_ = 2;
+              updateCase_ = 17;
               break;
             }
             default: {
@@ -14168,8 +23385,8 @@ public final class FeatureOuterClass {
     public enum UpdateCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      LOG(1),
-      FEATURES(2),
+      LOG(16),
+      FEATURE(17),
       UPDATE_NOT_SET(0);
       private final int value;
       private UpdateCase(int value) {
@@ -14187,8 +23404,8 @@ public final class FeatureOuterClass {
 
       public static UpdateCase forNumber(int value) {
         switch (value) {
-          case 1: return LOG;
-          case 2: return FEATURES;
+          case 16: return LOG;
+          case 17: return FEATURE;
           case 0: return UPDATE_NOT_SET;
           default: return null;
         }
@@ -14204,66 +23421,92 @@ public final class FeatureOuterClass {
           updateCase_);
     }
 
-    public static final int LOG_FIELD_NUMBER = 1;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+      return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    public static final int LOG_FIELD_NUMBER = 16;
+    /**
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      * @return Whether the log field is set.
      */
     @java.lang.Override
     public boolean hasLog() {
-      return updateCase_ == 1;
+      return updateCase_ == 16;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      * @return The log.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog getLog() {
-      if (updateCase_ == 1) {
+      if (updateCase_ == 16) {
          return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_;
       }
       return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogOrBuilder() {
-      if (updateCase_ == 1) {
+      if (updateCase_ == 16) {
          return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_;
       }
       return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
     }
 
-    public static final int FEATURES_FIELD_NUMBER = 2;
+    public static final int FEATURE_FIELD_NUMBER = 17;
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
-     * @return Whether the features field is set.
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+     * @return Whether the feature field is set.
      */
     @java.lang.Override
-    public boolean hasFeatures() {
-      return updateCase_ == 2;
+    public boolean hasFeature() {
+      return updateCase_ == 17;
     }
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
-     * @return The features.
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+     * @return The feature.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures() {
-      if (updateCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_;
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature() {
+      if (updateCase_ == 17) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.Features features = 2;</code>
+     * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder() {
-      if (updateCase_ == 2) {
-         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_;
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder() {
+      if (updateCase_ == 17) {
+         return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_;
       }
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14280,11 +23523,14 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (updateCase_ == 1) {
-        output.writeMessage(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_);
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
       }
-      if (updateCase_ == 2) {
-        output.writeMessage(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_);
+      if (updateCase_ == 16) {
+        output.writeMessage(16, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_);
+      }
+      if (updateCase_ == 17) {
+        output.writeMessage(17, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_);
       }
       unknownFields.writeTo(output);
     }
@@ -14295,13 +23541,17 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (updateCase_ == 1) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_);
+          .computeMessageSize(1, getMetadata());
       }
-      if (updateCase_ == 2) {
+      if (updateCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_);
+          .computeMessageSize(16, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_);
+      }
+      if (updateCase_ == 17) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14318,15 +23568,20 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate) obj;
 
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (!getUpdateCase().equals(other.getUpdateCase())) return false;
       switch (updateCase_) {
-        case 1:
+        case 16:
           if (!getLog()
               .equals(other.getLog())) return false;
           break;
-        case 2:
-          if (!getFeatures()
-              .equals(other.getFeatures())) return false;
+        case 17:
+          if (!getFeature()
+              .equals(other.getFeature())) return false;
           break;
         case 0:
         default:
@@ -14342,14 +23597,18 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
       switch (updateCase_) {
-        case 1:
+        case 16:
           hash = (37 * hash) + LOG_FIELD_NUMBER;
           hash = (53 * hash) + getLog().hashCode();
           break;
-        case 2:
-          hash = (37 * hash) + FEATURES_FIELD_NUMBER;
-          hash = (53 * hash) + getFeatures().hashCode();
+        case 17:
+          hash = (37 * hash) + FEATURE_FIELD_NUMBER;
+          hash = (53 * hash) + getFeature().hashCode();
           break;
         case 0:
         default:
@@ -14487,6 +23746,12 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         updateCase_ = 0;
         update_ = null;
         return this;
@@ -14515,18 +23780,23 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate(this);
-        if (updateCase_ == 1) {
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
+        if (updateCase_ == 16) {
           if (logBuilder_ == null) {
             result.update_ = update_;
           } else {
             result.update_ = logBuilder_.build();
           }
         }
-        if (updateCase_ == 2) {
-          if (featuresBuilder_ == null) {
+        if (updateCase_ == 17) {
+          if (featureBuilder_ == null) {
             result.update_ = update_;
           } else {
-            result.update_ = featuresBuilder_.build();
+            result.update_ = featureBuilder_.build();
           }
         }
         result.updateCase_ = updateCase_;
@@ -14578,13 +23848,16 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate other) {
         if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesUpdate.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         switch (other.getUpdateCase()) {
           case LOG: {
             mergeLog(other.getLog());
             break;
           }
-          case FEATURES: {
-            mergeFeatures(other.getFeatures());
+          case FEATURE: {
+            mergeFeature(other.getFeature());
             break;
           }
           case UPDATE_NOT_SET: {
@@ -14635,36 +23908,155 @@ public final class FeatureOuterClass {
       }
 
 
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder> logBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        * @return Whether the log field is set.
        */
       @java.lang.Override
       public boolean hasLog() {
-        return updateCase_ == 1;
+        return updateCase_ == 16;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        * @return The log.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog getLog() {
         if (logBuilder_ == null) {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_;
           }
           return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
         } else {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             return logBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       public Builder setLog(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog value) {
         if (logBuilder_ == null) {
@@ -14676,11 +24068,11 @@ public final class FeatureOuterClass {
         } else {
           logBuilder_.setMessage(value);
         }
-        updateCase_ = 1;
+        updateCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       public Builder setLog(
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder builderForValue) {
@@ -14690,15 +24082,15 @@ public final class FeatureOuterClass {
         } else {
           logBuilder_.setMessage(builderForValue.build());
         }
-        updateCase_ = 1;
+        updateCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       public Builder mergeLog(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog value) {
         if (logBuilder_ == null) {
-          if (updateCase_ == 1 &&
+          if (updateCase_ == 16 &&
               update_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance()) {
             update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_)
                 .mergeFrom(value).buildPartial();
@@ -14707,26 +24099,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             logBuilder_.mergeFrom(value);
           }
           logBuilder_.setMessage(value);
         }
-        updateCase_ = 1;
+        updateCase_ = 16;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       public Builder clearLog() {
         if (logBuilder_ == null) {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             updateCase_ = 0;
             update_ = null;
             onChanged();
           }
         } else {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             updateCase_ = 0;
             update_ = null;
           }
@@ -14735,33 +24127,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder getLogBuilder() {
         return getLogFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogOrBuilder() {
-        if ((updateCase_ == 1) && (logBuilder_ != null)) {
+        if ((updateCase_ == 16) && (logBuilder_ != null)) {
           return logBuilder_.getMessageOrBuilder();
         } else {
-          if (updateCase_ == 1) {
+          if (updateCase_ == 16) {
             return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog) update_;
           }
           return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog log = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog log = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder> 
           getLogFieldBuilder() {
         if (logBuilder_ == null) {
-          if (!(updateCase_ == 1)) {
+          if (!(updateCase_ == 16)) {
             update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance();
           }
           logBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -14771,150 +24163,150 @@ public final class FeatureOuterClass {
                   isClean());
           update_ = null;
         }
-        updateCase_ = 1;
+        updateCase_ = 16;
         onChanged();;
         return logBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder> featuresBuilder_;
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> featureBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
-       * @return Whether the features field is set.
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+       * @return Whether the feature field is set.
        */
       @java.lang.Override
-      public boolean hasFeatures() {
-        return updateCase_ == 2;
+      public boolean hasFeature() {
+        return updateCase_ == 17;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
-       * @return The features.
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
+       * @return The feature.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures() {
-        if (featuresBuilder_ == null) {
-          if (updateCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_;
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature() {
+        if (featureBuilder_ == null) {
+          if (updateCase_ == 17) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
         } else {
-          if (updateCase_ == 2) {
-            return featuresBuilder_.getMessage();
+          if (updateCase_ == 17) {
+            return featureBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
-      public Builder setFeatures(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features value) {
-        if (featuresBuilder_ == null) {
+      public Builder setFeature(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
+        if (featureBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           update_ = value;
           onChanged();
         } else {
-          featuresBuilder_.setMessage(value);
+          featureBuilder_.setMessage(value);
         }
-        updateCase_ = 2;
+        updateCase_ = 17;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
-      public Builder setFeatures(
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder builderForValue) {
-        if (featuresBuilder_ == null) {
+      public Builder setFeature(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder builderForValue) {
+        if (featureBuilder_ == null) {
           update_ = builderForValue.build();
           onChanged();
         } else {
-          featuresBuilder_.setMessage(builderForValue.build());
+          featureBuilder_.setMessage(builderForValue.build());
         }
-        updateCase_ = 2;
+        updateCase_ = 17;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
-      public Builder mergeFeatures(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features value) {
-        if (featuresBuilder_ == null) {
-          if (updateCase_ == 2 &&
-              update_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance()) {
-            update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_)
+      public Builder mergeFeature(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
+        if (featureBuilder_ == null) {
+          if (updateCase_ == 17 &&
+              update_ != com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance()) {
+            update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.newBuilder((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_)
                 .mergeFrom(value).buildPartial();
           } else {
             update_ = value;
           }
           onChanged();
         } else {
-          if (updateCase_ == 2) {
-            featuresBuilder_.mergeFrom(value);
+          if (updateCase_ == 17) {
+            featureBuilder_.mergeFrom(value);
           }
-          featuresBuilder_.setMessage(value);
+          featureBuilder_.setMessage(value);
         }
-        updateCase_ = 2;
+        updateCase_ = 17;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
-      public Builder clearFeatures() {
-        if (featuresBuilder_ == null) {
-          if (updateCase_ == 2) {
+      public Builder clearFeature() {
+        if (featureBuilder_ == null) {
+          if (updateCase_ == 17) {
             updateCase_ = 0;
             update_ = null;
             onChanged();
           }
         } else {
-          if (updateCase_ == 2) {
+          if (updateCase_ == 17) {
             updateCase_ = 0;
             update_ = null;
           }
-          featuresBuilder_.clear();
+          featureBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder getFeaturesBuilder() {
-        return getFeaturesFieldBuilder().getBuilder();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder getFeatureBuilder() {
+        return getFeatureFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder() {
-        if ((updateCase_ == 2) && (featuresBuilder_ != null)) {
-          return featuresBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder() {
+        if ((updateCase_ == 17) && (featureBuilder_ != null)) {
+          return featureBuilder_.getMessageOrBuilder();
         } else {
-          if (updateCase_ == 2) {
-            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_;
+          if (updateCase_ == 17) {
+            return (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_;
           }
-          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 2;</code>
+       * <code>.hilo.protobufs.structure.Feature feature = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder> 
-          getFeaturesFieldBuilder() {
-        if (featuresBuilder_ == null) {
-          if (!(updateCase_ == 2)) {
-            update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> 
+          getFeatureFieldBuilder() {
+        if (featureBuilder_ == null) {
+          if (!(updateCase_ == 17)) {
+            update_ = com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance();
           }
-          featuresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder>(
-                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) update_,
+          featureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature) update_,
                   getParentForChildren(),
                   isClean());
           update_ = null;
         }
-        updateCase_ = 2;
+        updateCase_ = 17;
         onChanged();;
-        return featuresBuilder_;
+        return featureBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14974,17 +24366,32 @@ public final class FeatureOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata();
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      * @return Whether the logs field is set.
      */
     boolean hasLogs();
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      * @return The logs.
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog getLogs();
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      */
     com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogsOrBuilder();
   }
@@ -15034,6 +24441,19 @@ public final class FeatureOuterClass {
               done = true;
               break;
             case 10: {
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder subBuilder = null;
               if (logs_ != null) {
                 subBuilder = logs_.toBuilder();
@@ -15078,10 +24498,36 @@ public final class FeatureOuterClass {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel.Builder.class);
     }
 
-    public static final int LOGS_FIELD_NUMBER = 1;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+      return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    public static final int LOGS_FIELD_NUMBER = 2;
     private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog logs_;
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      * @return Whether the logs field is set.
      */
     @java.lang.Override
@@ -15089,7 +24535,7 @@ public final class FeatureOuterClass {
       return logs_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      * @return The logs.
      */
     @java.lang.Override
@@ -15097,7 +24543,7 @@ public final class FeatureOuterClass {
       return logs_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.getDefaultInstance() : logs_;
     }
     /**
-     * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+     * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogsOrBuilder() {
@@ -15118,8 +24564,11 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
+      }
       if (logs_ != null) {
-        output.writeMessage(1, getLogs());
+        output.writeMessage(2, getLogs());
       }
       unknownFields.writeTo(output);
     }
@@ -15130,9 +24579,13 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
       if (logs_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLogs());
+          .computeMessageSize(2, getLogs());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15149,6 +24602,11 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel) obj;
 
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (hasLogs() != other.hasLogs()) return false;
       if (hasLogs()) {
         if (!getLogs()
@@ -15165,6 +24623,10 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
       if (hasLogs()) {
         hash = (37 * hash) + LOGS_FIELD_NUMBER;
         hash = (53 * hash) + getLogs().hashCode();
@@ -15302,6 +24764,12 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         if (logsBuilder_ == null) {
           logs_ = null;
         } else {
@@ -15334,6 +24802,11 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel(this);
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
         if (logsBuilder_ == null) {
           result.logs_ = logs_;
         } else {
@@ -15387,6 +24860,9 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel other) {
         if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogsModel.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         if (other.hasLogs()) {
           mergeLogs(other.getLogs());
         }
@@ -15419,18 +24895,137 @@ public final class FeatureOuterClass {
         return this;
       }
 
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
       private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog logs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder> logsBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        * @return Whether the logs field is set.
        */
       public boolean hasLogs() {
         return logsBuilder_ != null || logs_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        * @return The logs.
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog getLogs() {
@@ -15441,7 +25036,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public Builder setLogs(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog value) {
         if (logsBuilder_ == null) {
@@ -15457,7 +25052,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public Builder setLogs(
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder builderForValue) {
@@ -15471,7 +25066,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public Builder mergeLogs(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog value) {
         if (logsBuilder_ == null) {
@@ -15489,7 +25084,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public Builder clearLogs() {
         if (logsBuilder_ == null) {
@@ -15503,7 +25098,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder getLogsBuilder() {
         
@@ -15511,7 +25106,7 @@ public final class FeatureOuterClass {
         return getLogsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder getLogsOrBuilder() {
         if (logsBuilder_ != null) {
@@ -15522,7 +25117,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.FeatureLog logs = 1;</code>
+       * <code>.hilo.protobufs.structure.FeatureLog logs = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLog.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureLogOrBuilder> 
@@ -15590,817 +25185,58 @@ public final class FeatureOuterClass {
 
   }
 
-  public interface FeaturesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.Features)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> 
-        getFeatureList();
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature(int index);
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    int getFeatureCount();
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    java.util.List<? extends com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> 
-        getFeatureOrBuilderList();
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code hilo.protobufs.structure.Features}
-   */
-  public static final class Features extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.Features)
-      FeaturesOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Features.newBuilder() to construct.
-    private Features(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Features() {
-      feature_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Features();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Features(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                feature_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              feature_.add(
-                  input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          feature_ = java.util.Collections.unmodifiableList(feature_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_Features_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_Features_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder.class);
-    }
-
-    public static final int FEATURE_FIELD_NUMBER = 1;
-    private java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> feature_;
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeatureList() {
-      return feature_;
-    }
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> 
-        getFeatureOrBuilderList() {
-      return feature_;
-    }
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    @java.lang.Override
-    public int getFeatureCount() {
-      return feature_.size();
-    }
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature(int index) {
-      return feature_.get(index);
-    }
-    /**
-     * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-     */
-    @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder(
-        int index) {
-      return feature_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < feature_.size(); i++) {
-        output.writeMessage(1, feature_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < feature_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, feature_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features)) {
-        return super.equals(obj);
-      }
-      com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) obj;
-
-      if (!getFeatureList()
-          .equals(other.getFeatureList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getFeatureCount() > 0) {
-        hash = (37 * hash) + FEATURE_FIELD_NUMBER;
-        hash = (53 * hash) + getFeatureList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code hilo.protobufs.structure.Features}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.Features)
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_Features_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_Features_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder.class);
-      }
-
-      // Construct using com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFeatureFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (featureBuilder_ == null) {
-          feature_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          featureBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_Features_descriptor;
-      }
-
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features build() {
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features buildPartial() {
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features(this);
-        int from_bitField0_ = bitField0_;
-        if (featureBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            feature_ = java.util.Collections.unmodifiableList(feature_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.feature_ = feature_;
-        } else {
-          result.feature_ = featureBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) {
-          return mergeFrom((com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features other) {
-        if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance()) return this;
-        if (featureBuilder_ == null) {
-          if (!other.feature_.isEmpty()) {
-            if (feature_.isEmpty()) {
-              feature_ = other.feature_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureFeatureIsMutable();
-              feature_.addAll(other.feature_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.feature_.isEmpty()) {
-            if (featureBuilder_.isEmpty()) {
-              featureBuilder_.dispose();
-              featureBuilder_ = null;
-              feature_ = other.feature_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              featureBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFeatureFieldBuilder() : null;
-            } else {
-              featureBuilder_.addAllMessages(other.feature_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> feature_ =
-        java.util.Collections.emptyList();
-      private void ensureFeatureIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          feature_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>(feature_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> featureBuilder_;
-
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeatureList() {
-        if (featureBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(feature_);
-        } else {
-          return featureBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public int getFeatureCount() {
-        if (featureBuilder_ == null) {
-          return feature_.size();
-        } else {
-          return featureBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeature(int index) {
-        if (featureBuilder_ == null) {
-          return feature_.get(index);
-        } else {
-          return featureBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder setFeature(
-          int index, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
-        if (featureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeatureIsMutable();
-          feature_.set(index, value);
-          onChanged();
-        } else {
-          featureBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder setFeature(
-          int index, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder builderForValue) {
-        if (featureBuilder_ == null) {
-          ensureFeatureIsMutable();
-          feature_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          featureBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder addFeature(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
-        if (featureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeatureIsMutable();
-          feature_.add(value);
-          onChanged();
-        } else {
-          featureBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder addFeature(
-          int index, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
-        if (featureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFeatureIsMutable();
-          feature_.add(index, value);
-          onChanged();
-        } else {
-          featureBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder addFeature(
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder builderForValue) {
-        if (featureBuilder_ == null) {
-          ensureFeatureIsMutable();
-          feature_.add(builderForValue.build());
-          onChanged();
-        } else {
-          featureBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder addFeature(
-          int index, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder builderForValue) {
-        if (featureBuilder_ == null) {
-          ensureFeatureIsMutable();
-          feature_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          featureBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder addAllFeature(
-          java.lang.Iterable<? extends com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> values) {
-        if (featureBuilder_ == null) {
-          ensureFeatureIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, feature_);
-          onChanged();
-        } else {
-          featureBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder clearFeature() {
-        if (featureBuilder_ == null) {
-          feature_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          featureBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public Builder removeFeature(int index) {
-        if (featureBuilder_ == null) {
-          ensureFeatureIsMutable();
-          feature_.remove(index);
-          onChanged();
-        } else {
-          featureBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder getFeatureBuilder(
-          int index) {
-        return getFeatureFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder getFeatureOrBuilder(
-          int index) {
-        if (featureBuilder_ == null) {
-          return feature_.get(index);  } else {
-          return featureBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public java.util.List<? extends com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> 
-           getFeatureOrBuilderList() {
-        if (featureBuilder_ != null) {
-          return featureBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(feature_);
-        }
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder addFeatureBuilder() {
-        return getFeatureFieldBuilder().addBuilder(
-            com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder addFeatureBuilder(
-          int index) {
-        return getFeatureFieldBuilder().addBuilder(
-            index, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .hilo.protobufs.structure.Feature feature = 1;</code>
-       */
-      public java.util.List<com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder> 
-           getFeatureBuilderList() {
-        return getFeatureFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder> 
-          getFeatureFieldBuilder() {
-        if (featureBuilder_ == null) {
-          featureBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeatureOrBuilder>(
-                  feature_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          feature_ = null;
-        }
-        return featureBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.Features)
-    }
-
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.Features)
-    private static final com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features();
-    }
-
-    public static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Features>
-        PARSER = new com.google.protobuf.AbstractParser<Features>() {
-      @java.lang.Override
-      public Features parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Features(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Features> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Features> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface FeaturesModelOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.FeaturesModel)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
-     * @return Whether the features field is set.
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
      */
-    boolean hasFeatures();
+    boolean hasMetadata();
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
-     * @return The features.
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata();
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
      */
-    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder();
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    int getFeaturesCount();
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    boolean containsFeatures(
+        java.lang.String key);
+    /**
+     * Use {@link #getFeaturesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+    getFeatures();
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+    getFeaturesMap();
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrDefault(
+        java.lang.String key,
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature defaultValue);
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+
+    com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.FeaturesModel}
@@ -16437,6 +25273,7 @@ public final class FeatureOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -16448,16 +25285,29 @@ public final class FeatureOuterClass {
               done = true;
               break;
             case 10: {
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder subBuilder = null;
-              if (features_ != null) {
-                subBuilder = features_.toBuilder();
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
               }
-              features_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.parser(), extensionRegistry);
+              metadata_ = input.readMessage(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(features_);
-                features_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                features_ = com.google.protobuf.MapField.newMapField(
+                    FeaturesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+              features__ = input.readMessage(
+                  FeaturesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              features_.getMutableMap().put(
+                  features__.getKey(), features__.getValue());
               break;
             }
             default: {
@@ -16484,6 +25334,18 @@ public final class FeatureOuterClass {
       return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesModel_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetFeatures();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -16492,30 +25354,111 @@ public final class FeatureOuterClass {
               com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel.class, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel.Builder.class);
     }
 
-    public static final int FEATURES_FIELD_NUMBER = 1;
-    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features features_;
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
-     * @return Whether the features field is set.
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
      */
     @java.lang.Override
-    public boolean hasFeatures() {
-      return features_ != null;
+    public boolean hasMetadata() {
+      return metadata_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
-     * @return The features.
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+     * @return The metadata.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures() {
-      return features_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance() : features_;
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+      return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
     }
     /**
-     * <code>.hilo.protobufs.structure.Features features = 1;</code>
+     * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder() {
-      return getFeatures();
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 2;
+    private static final class FeaturesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>newDefaultInstance(
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> features_;
+    private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+    internalGetFeatures() {
+      if (features_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            FeaturesDefaultEntryHolder.defaultEntry);
+      }
+      return features_;
+    }
+
+    public int getFeaturesCount() {
+      return internalGetFeatures().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsFeatures(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetFeatures().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getFeaturesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeatures() {
+      return getFeaturesMap();
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeaturesMap() {
+      return internalGetFeatures().getMap();
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrDefault(
+        java.lang.String key,
+        com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> map =
+          internalGetFeatures().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+     */
+    @java.lang.Override
+
+    public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> map =
+          internalGetFeatures().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16532,9 +25475,15 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (features_ != null) {
-        output.writeMessage(1, getFeatures());
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetFeatures(),
+          FeaturesDefaultEntryHolder.defaultEntry,
+          2);
       unknownFields.writeTo(output);
     }
 
@@ -16544,9 +25493,19 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (features_ != null) {
+      if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getFeatures());
+          .computeMessageSize(1, getMetadata());
+      }
+      for (java.util.Map.Entry<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> entry
+           : internalGetFeatures().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+        features__ = FeaturesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, features__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16563,11 +25522,13 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel other = (com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel) obj;
 
-      if (hasFeatures() != other.hasFeatures()) return false;
-      if (hasFeatures()) {
-        if (!getFeatures()
-            .equals(other.getFeatures())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
       }
+      if (!internalGetFeatures().equals(
+          other.internalGetFeatures())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16579,9 +25540,13 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasFeatures()) {
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (!internalGetFeatures().getMap().isEmpty()) {
         hash = (37 * hash) + FEATURES_FIELD_NUMBER;
-        hash = (53 * hash) + getFeatures().hashCode();
+        hash = (53 * hash) + internalGetFeatures().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -16690,6 +25655,28 @@ public final class FeatureOuterClass {
         return com.hilohq.hilo.protobufs.structure.FeatureOuterClass.internal_static_hilo_protobufs_structure_FeaturesModel_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetFeatures();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableFeatures();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -16716,12 +25703,13 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (featuresBuilder_ == null) {
-          features_ = null;
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
         } else {
-          features_ = null;
-          featuresBuilder_ = null;
+          metadata_ = null;
+          metadataBuilder_ = null;
         }
+        internalGetMutableFeatures().clear();
         return this;
       }
 
@@ -16748,11 +25736,14 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel buildPartial() {
         com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel result = new com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel(this);
-        if (featuresBuilder_ == null) {
-          result.features_ = features_;
+        int from_bitField0_ = bitField0_;
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
         } else {
-          result.features_ = featuresBuilder_.build();
+          result.metadata_ = metadataBuilder_.build();
         }
+        result.features_ = internalGetFeatures();
+        result.features_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -16801,9 +25792,11 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel other) {
         if (other == com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesModel.getDefaultInstance()) return this;
-        if (other.hasFeatures()) {
-          mergeFeatures(other.getFeatures());
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
         }
+        internalGetMutableFeatures().mergeFrom(
+            other.internalGetFeatures());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -16832,124 +25825,253 @@ public final class FeatureOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
-      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features features_;
+      private com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder> featuresBuilder_;
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> metadataBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
-       * @return Whether the features field is set.
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
        */
-      public boolean hasFeatures() {
-        return featuresBuilder_ != null || features_ != null;
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
-       * @return The features.
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
+       * @return The metadata.
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features getFeatures() {
-        if (featuresBuilder_ == null) {
-          return features_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance() : features_;
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
         } else {
-          return featuresBuilder_.getMessage();
+          return metadataBuilder_.getMessage();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public Builder setFeatures(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features value) {
-        if (featuresBuilder_ == null) {
+      public Builder setMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          features_ = value;
+          metadata_ = value;
           onChanged();
         } else {
-          featuresBuilder_.setMessage(value);
+          metadataBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public Builder setFeatures(
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder builderForValue) {
-        if (featuresBuilder_ == null) {
-          features_ = builderForValue.build();
+      public Builder setMetadata(
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
           onChanged();
         } else {
-          featuresBuilder_.setMessage(builderForValue.build());
+          metadataBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public Builder mergeFeatures(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features value) {
-        if (featuresBuilder_ == null) {
-          if (features_ != null) {
-            features_ =
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.newBuilder(features_).mergeFrom(value).buildPartial();
+      public Builder mergeMetadata(com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
           } else {
-            features_ = value;
+            metadata_ = value;
           }
           onChanged();
         } else {
-          featuresBuilder_.mergeFrom(value);
+          metadataBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public Builder clearFeatures() {
-        if (featuresBuilder_ == null) {
-          features_ = null;
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
           onChanged();
         } else {
-          features_ = null;
-          featuresBuilder_ = null;
+          metadata_ = null;
+          metadataBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder getFeaturesBuilder() {
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder getMetadataBuilder() {
         
         onChanged();
-        return getFeaturesFieldBuilder().getBuilder();
+        return getMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
-      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder getFeaturesOrBuilder() {
-        if (featuresBuilder_ != null) {
-          return featuresBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
         } else {
-          return features_ == null ?
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.getDefaultInstance() : features_;
+          return metadata_ == null ?
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.getDefaultInstance() : metadata_;
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.Features features = 1;</code>
+       * <code>.hilo.protobufs.structure.FeaturesMetadata metadata = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder> 
-          getFeaturesFieldBuilder() {
-        if (featuresBuilder_ == null) {
-          featuresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Features.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesOrBuilder>(
-                  getFeatures(),
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadata.Builder, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.FeaturesMetadataOrBuilder>(
+                  getMetadata(),
                   getParentForChildren(),
                   isClean());
-          features_ = null;
+          metadata_ = null;
         }
-        return featuresBuilder_;
+        return metadataBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> features_;
+      private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+      internalGetFeatures() {
+        if (features_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              FeaturesDefaultEntryHolder.defaultEntry);
+        }
+        return features_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+      internalGetMutableFeatures() {
+        onChanged();;
+        if (features_ == null) {
+          features_ = com.google.protobuf.MapField.newMapField(
+              FeaturesDefaultEntryHolder.defaultEntry);
+        }
+        if (!features_.isMutable()) {
+          features_ = features_.copy();
+        }
+        return features_;
+      }
+
+      public int getFeaturesCount() {
+        return internalGetFeatures().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsFeatures(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetFeatures().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getFeaturesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeatures() {
+        return getFeaturesMap();
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> getFeaturesMap() {
+        return internalGetFeatures().getMap();
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+      @java.lang.Override
+
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrDefault(
+          java.lang.String key,
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> map =
+            internalGetFeatures().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+      @java.lang.Override
+
+      public com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature getFeaturesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> map =
+            internalGetFeatures().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearFeatures() {
+        internalGetMutableFeatures().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+
+      public Builder removeFeatures(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableFeatures().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature>
+      getMutableFeatures() {
+        return internalGetMutableFeatures().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+      public Builder putFeatures(
+          java.lang.String key,
+          com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableFeatures().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .hilo.protobufs.structure.Feature&gt; features = 2;</code>
+       */
+
+      public Builder putAllFeatures(
+          java.util.Map<java.lang.String, com.hilohq.hilo.protobufs.structure.FeatureOuterClass.Feature> values) {
+        internalGetMutableFeatures().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17004,6 +26126,61 @@ public final class FeatureOuterClass {
 
   }
 
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeaturesMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Gauge_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Counter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Distance_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Duration_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Set_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_Feature_descriptor;
   private static final 
@@ -17060,15 +26237,15 @@ public final class FeatureOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_FeatureStats_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_StatsEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_StatsEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_FeaturesEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_FeaturesEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_FeatureCreate_descriptor;
   private static final 
@@ -17100,15 +26277,15 @@ public final class FeatureOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_FeatureLogsModel_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_structure_Features_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_structure_Features_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_FeaturesModel_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_FeaturesModel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17119,83 +26296,181 @@ public final class FeatureOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n1com/hilohq/hilo/protobufs/structure/fe" +
-      "ature.proto\022\030hilo.protobufs.structure\"\202\001" +
-      "\n\007Feature\022\013\n\003key\030\001 \001(\t\0223\n\004type\030\002 \001(\0162%.h" +
-      "ilo.protobufs.structure.FeatureType\0225\n\005s" +
-      "tats\030\003 \001(\0132&.hilo.protobufs.structure.Fe" +
-      "atureStats\"\341\001\n\014BooleanStats\022\r\n\005count\030\001 \001" +
-      "(\003\022C\n\thistogram\030\002 \001(\01320.hilo.protobufs.s" +
-      "tructure.BooleanStats.Histogram\032}\n\tHisto" +
-      "gram\022H\n\007buckets\030\001 \003(\01327.hilo.protobufs.s" +
-      "tructure.BooleanStats.Histogram.Bucket\032&" +
-      "\n\006Bucket\022\r\n\005value\030\001 \001(\010\022\r\n\005count\030\002 \001(\003\"\362" +
-      "\003\n\014NumericStats\022\r\n\005count\030\001 \001(\003\022\013\n\003min\030\002 " +
-      "\001(\001\022\013\n\003max\030\003 \001(\001\022\014\n\004mean\030\004 \001(\001\022\032\n\022standa" +
-      "rd_deviation\030\005 \001(\001\022S\n\017value_histogram\030\006 " +
-      "\001(\0132:.hilo.protobufs.structure.NumericSt" +
-      "ats.PercentileHistogram\022Z\n\026differential_" +
-      "histogram\030\007 \001(\0132:.hilo.protobufs.structu" +
-      "re.NumericStats.PercentileHistogram\022\031\n\021b" +
-      "ase64_stats_repr\030\010 \001(\t\032\302\001\n\023PercentileHis" +
-      "togram\022R\n\007buckets\030\001 \003(\0132A.hilo.protobufs" +
-      ".structure.NumericStats.PercentileHistog" +
-      "ram.Bucket\022\022\n\nboundaries\030\002 \003(\001\032C\n\006Bucket" +
-      "\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\r\n\005count\030\003 \001(" +
-      "\003\022\020\n\010boundary\030\004 \001(\001\"\336\001\n\013StringStats\022\r\n\005c" +
-      "ount\030\001 \001(\003\022B\n\thistogram\030\002 \001(\0132/.hilo.pro" +
-      "tobufs.structure.StringStats.Histogram\032|" +
-      "\n\tHistogram\022G\n\007buckets\030\002 \003(\01326.hilo.prot" +
-      "obufs.structure.StringStats.Histogram.Bu" +
-      "cket\032&\n\006Bucket\022\r\n\005value\030\001 \001(\t\022\r\n\005count\030\002" +
-      " \001(\003\"\330\001\n\014FeatureStats\022?\n\rboolean_stats\030\001" +
-      " \001(\0132&.hilo.protobufs.structure.BooleanS" +
-      "tatsH\000\022?\n\rnumeric_stats\030\002 \001(\0132&.hilo.pro" +
-      "tobufs.structure.NumericStatsH\000\022=\n\014strin" +
-      "g_stats\030\003 \001(\0132%.hilo.protobufs.structure" +
-      ".StringStatsH\000B\007\n\005stats\"\255\001\n\rFeaturesEven" +
-      "t\022>\n\005stats\030\001 \001(\0132-.hilo.protobufs.struct" +
-      "ure.FeaturesEvent.StatsH\000\032S\n\005Stats\022\013\n\003ke" +
-      "y\030\001 \001(\t\022=\n\rfeature_stats\030\002 \001(\0132&.hilo.pr" +
-      "otobufs.structure.FeatureStatsB\007\n\005event\"" +
-      "Q\n\rFeatureCreate\022\013\n\003key\030\001 \001(\t\0223\n\004type\030\002 " +
-      "\001(\0162%.hilo.protobufs.structure.FeatureTy" +
-      "pe\"\335\001\n\rFeatureUpdate\022?\n\006before\030\001 \001(\0132/.h" +
-      "ilo.protobufs.structure.FeatureUpdate.Fe" +
-      "ature\022>\n\005after\030\002 \001(\0132/.hilo.protobufs.st" +
-      "ructure.FeatureUpdate.Feature\032K\n\007Feature" +
-      "\022\013\n\003key\030\001 \001(\t\0223\n\004type\030\002 \001(\0162%.hilo.proto" +
-      "bufs.structure.FeatureType\"\231\001\n\nFeatureLo" +
-      "g\022A\n\016feature_create\030\001 \001(\0132\'.hilo.protobu" +
-      "fs.structure.FeatureCreateH\000\022A\n\016feature_" +
-      "update\030\002 \001(\0132\'.hilo.protobufs.structure." +
-      "FeatureUpdateH\000B\005\n\003log\"\207\001\n\016FeaturesUpdat" +
-      "e\0223\n\003log\030\001 \001(\0132$.hilo.protobufs.structur" +
-      "e.FeatureLogH\000\0226\n\010features\030\002 \001(\0132\".hilo." +
-      "protobufs.structure.FeaturesH\000B\010\n\006update" +
-      "\"F\n\020FeatureLogsModel\0222\n\004logs\030\001 \001(\0132$.hil" +
-      "o.protobufs.structure.FeatureLog\">\n\010Feat" +
-      "ures\0222\n\007feature\030\001 \003(\0132!.hilo.protobufs.s" +
-      "tructure.Feature\"E\n\rFeaturesModel\0224\n\010fea" +
-      "tures\030\001 \001(\0132\".hilo.protobufs.structure.F" +
-      "eatures*\227\001\n\013FeatureType\022\023\n\017FEATURE_BOOLE" +
-      "AN\020\000\022\023\n\017FEATURE_INTEGER\020\001\022\020\n\014FEATURE_LON" +
-      "G\020\002\022\021\n\rFEATURE_FLOAT\020\003\022\022\n\016FEATURE_DOUBLE" +
-      "\020\004\022\022\n\016FEATURE_STRING\020\005\022\021\n\rFEATURE_BYTES\020" +
-      "\006B%\n#com.hilohq.hilo.protobufs.structure" +
-      "b\006proto3"
+      "ature.proto\022\030hilo.protobufs.structure\"L\n" +
+      "\020FeaturesMetadata\022\021\n\tschema_id\030\001 \001(\t\022\021\n\t" +
+      "source_id\030\002 \001(\t\022\022\n\nproject_id\030\003 \001(\t\"\303\006\n\014" +
+      "FeatureClass\022G\n\tbool_enum\030\001 \001(\01322.hilo.p" +
+      "rotobufs.structure.FeatureClass.BooleanE" +
+      "numH\000\022B\n\010int_enum\030\002 \001(\0132..hilo.protobufs" +
+      ".structure.FeatureClass.IntEnumH\000\022H\n\013str" +
+      "ing_enum\030\003 \001(\01321.hilo.protobufs.structur" +
+      "e.FeatureClass.StringEnumH\000\022=\n\005gauge\030\004 \001" +
+      "(\0132,.hilo.protobufs.structure.FeatureCla" +
+      "ss.GaugeH\000\022A\n\007counter\030\005 \001(\0132..hilo.proto" +
+      "bufs.structure.FeatureClass.CounterH\000\022C\n" +
+      "\010distance\030\006 \001(\0132/.hilo.protobufs.structu" +
+      "re.FeatureClass.DistanceH\000\022C\n\010duration\030\007" +
+      " \001(\0132/.hilo.protobufs.structure.FeatureC" +
+      "lass.DurationH\000\0229\n\003set\030\010 \001(\0132*.hilo.prot" +
+      "obufs.structure.FeatureClass.SetH\000\022E\n\tep" +
+      "hemeral\030\t \001(\01320.hilo.protobufs.structure" +
+      ".FeatureClass.EphemeralH\000\032\031\n\007IntEnum\022\016\n\006" +
+      "values\030\001 \003(\003\032\r\n\013BooleanEnum\032\034\n\nStringEnu" +
+      "m\022\016\n\006values\030\001 \003(\t\032\026\n\005Gauge\022\r\n\005scale\030\001 \001(" +
+      "\003\032\t\n\007Counter\032\031\n\010Distance\022\r\n\005units\030\001 \001(\t\032" +
+      "\031\n\010Duration\022\r\n\005units\030\001 \001(\t\032\025\n\003Set\022\016\n\006val" +
+      "ues\030\001 \003(\t\032\013\n\tEphemeralB\t\n\007feature\"\214\001\n\007Fe" +
+      "ature\022\013\n\003key\030\001 \001(\t\022=\n\rfeature_class\030\002 \001(" +
+      "\0132&.hilo.protobufs.structure.FeatureClas" +
+      "s\0225\n\005stats\030\003 \001(\0132&.hilo.protobufs.struct" +
+      "ure.FeatureStats\"\341\001\n\014BooleanStats\022\r\n\005cou" +
+      "nt\030\001 \001(\003\022C\n\thistogram\030\002 \001(\01320.hilo.proto" +
+      "bufs.structure.BooleanStats.Histogram\032}\n" +
+      "\tHistogram\022H\n\007buckets\030\001 \003(\01327.hilo.proto" +
+      "bufs.structure.BooleanStats.Histogram.Bu" +
+      "cket\032&\n\006Bucket\022\r\n\005value\030\001 \001(\010\022\r\n\005count\030\002" +
+      " \001(\003\"\362\003\n\014NumericStats\022\r\n\005count\030\001 \001(\003\022\013\n\003" +
+      "min\030\002 \001(\001\022\013\n\003max\030\003 \001(\001\022\014\n\004mean\030\004 \001(\001\022\032\n\022" +
+      "standard_deviation\030\005 \001(\001\022S\n\017value_histog" +
+      "ram\030\006 \001(\0132:.hilo.protobufs.structure.Num" +
+      "ericStats.PercentileHistogram\022Z\n\026differe" +
+      "ntial_histogram\030\007 \001(\0132:.hilo.protobufs.s" +
+      "tructure.NumericStats.PercentileHistogra" +
+      "m\022\031\n\021base64_stats_repr\030\010 \001(\t\032\302\001\n\023Percent" +
+      "ileHistogram\022R\n\007buckets\030\001 \003(\0132A.hilo.pro" +
+      "tobufs.structure.NumericStats.Percentile" +
+      "Histogram.Bucket\022\022\n\nboundaries\030\002 \003(\001\032C\n\006" +
+      "Bucket\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\r\n\005coun" +
+      "t\030\003 \001(\003\022\020\n\010boundary\030\004 \001(\001\"\336\001\n\013StringStat" +
+      "s\022\r\n\005count\030\001 \001(\003\022B\n\thistogram\030\002 \001(\0132/.hi" +
+      "lo.protobufs.structure.StringStats.Histo" +
+      "gram\032|\n\tHistogram\022G\n\007buckets\030\002 \003(\01326.hil" +
+      "o.protobufs.structure.StringStats.Histog" +
+      "ram.Bucket\032&\n\006Bucket\022\r\n\005value\030\001 \001(\t\022\r\n\005c" +
+      "ount\030\002 \001(\003\"\270\003\n\014FeatureStats\022=\n\rboolean_s" +
+      "tats\030\001 \001(\0132&.hilo.protobufs.structure.Bo" +
+      "oleanStats\0229\n\tint_stats\030\002 \001(\0132&.hilo.pro" +
+      "tobufs.structure.NumericStats\022:\n\nlong_st" +
+      "ats\030\003 \001(\0132&.hilo.protobufs.structure.Num" +
+      "ericStats\022;\n\013float_stats\030\004 \001(\0132&.hilo.pr" +
+      "otobufs.structure.NumericStats\022<\n\014double" +
+      "_stats\030\005 \001(\0132&.hilo.protobufs.structure." +
+      "NumericStats\022;\n\014string_stats\030\006 \001(\0132%.hil" +
+      "o.protobufs.structure.StringStats\022:\n\013byt" +
+      "es_stats\030\007 \001(\0132%.hilo.protobufs.structur" +
+      "e.StringStats\"X\n\nStatsEvent\022\013\n\003key\030\001 \001(\t" +
+      "\022=\n\rfeature_stats\030\002 \001(\0132&.hilo.protobufs" +
+      ".structure.FeatureStats\"\215\001\n\rFeaturesEven" +
+      "t\022<\n\010metadata\030\001 \001(\0132*.hilo.protobufs.str" +
+      "ucture.FeaturesMetadata\0225\n\005stats\030\020 \001(\0132$" +
+      ".hilo.protobufs.structure.StatsEventH\000B\007" +
+      "\n\005event\"[\n\rFeatureCreate\022\013\n\003key\030\001 \001(\t\022=\n" +
+      "\rfeature_class\030\002 \001(\0132&.hilo.protobufs.st" +
+      "ructure.FeatureClass\"\347\001\n\rFeatureUpdate\022?" +
+      "\n\006before\030\001 \001(\0132/.hilo.protobufs.structur" +
+      "e.FeatureUpdate.Feature\022>\n\005after\030\002 \001(\0132/" +
+      ".hilo.protobufs.structure.FeatureUpdate." +
+      "Feature\032U\n\007Feature\022\013\n\003key\030\001 \001(\t\022=\n\rfeatu" +
+      "re_class\030\002 \001(\0132&.hilo.protobufs.structur" +
+      "e.FeatureClass\"\231\001\n\nFeatureLog\022A\n\016feature" +
+      "_create\030\001 \001(\0132\'.hilo.protobufs.structure" +
+      ".FeatureCreateH\000\022A\n\016feature_update\030\002 \001(\013" +
+      "2\'.hilo.protobufs.structure.FeatureUpdat" +
+      "eH\000B\005\n\003log\"\303\001\n\016FeaturesUpdate\022<\n\010metadat" +
+      "a\030\001 \001(\0132*.hilo.protobufs.structure.Featu" +
+      "resMetadata\0223\n\003log\030\020 \001(\0132$.hilo.protobuf" +
+      "s.structure.FeatureLogH\000\0224\n\007feature\030\021 \001(" +
+      "\0132!.hilo.protobufs.structure.FeatureH\000B\010" +
+      "\n\006update\"\204\001\n\020FeatureLogsModel\022<\n\010metadat" +
+      "a\030\001 \001(\0132*.hilo.protobufs.structure.Featu" +
+      "resMetadata\0222\n\004logs\030\002 \001(\0132$.hilo.protobu" +
+      "fs.structure.FeatureLog\"\352\001\n\rFeaturesMode" +
+      "l\022<\n\010metadata\030\001 \001(\0132*.hilo.protobufs.str" +
+      "ucture.FeaturesMetadata\022G\n\010features\030\002 \003(" +
+      "\01325.hilo.protobufs.structure.FeaturesMod" +
+      "el.FeaturesEntry\032R\n\rFeaturesEntry\022\013\n\003key" +
+      "\030\001 \001(\t\0220\n\005value\030\002 \001(\0132!.hilo.protobufs.s" +
+      "tructure.Feature:\0028\001B%\n#com.hilohq.hilo." +
+      "protobufs.structureb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_hilo_protobufs_structure_Feature_descriptor =
+    internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_hilo_protobufs_structure_FeaturesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeaturesMetadata_descriptor,
+        new java.lang.String[] { "SchemaId", "SourceId", "ProjectId", });
+    internal_static_hilo_protobufs_structure_FeatureClass_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_hilo_protobufs_structure_FeatureClass_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_descriptor,
+        new java.lang.String[] { "BoolEnum", "IntEnum", "StringEnum", "Gauge", "Counter", "Distance", "Duration", "Set", "Ephemeral", "Feature", });
+    internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(0);
+    internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_IntEnum_descriptor,
+        new java.lang.String[] { "Values", });
+    internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(1);
+    internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_BooleanEnum_descriptor,
+        new java.lang.String[] { });
+    internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(2);
+    internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_StringEnum_descriptor,
+        new java.lang.String[] { "Values", });
+    internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(3);
+    internal_static_hilo_protobufs_structure_FeatureClass_Gauge_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Gauge_descriptor,
+        new java.lang.String[] { "Scale", });
+    internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(4);
+    internal_static_hilo_protobufs_structure_FeatureClass_Counter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Counter_descriptor,
+        new java.lang.String[] { });
+    internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(5);
+    internal_static_hilo_protobufs_structure_FeatureClass_Distance_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Distance_descriptor,
+        new java.lang.String[] { "Units", });
+    internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(6);
+    internal_static_hilo_protobufs_structure_FeatureClass_Duration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Duration_descriptor,
+        new java.lang.String[] { "Units", });
+    internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(7);
+    internal_static_hilo_protobufs_structure_FeatureClass_Set_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Set_descriptor,
+        new java.lang.String[] { "Values", });
+    internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor =
+      internal_static_hilo_protobufs_structure_FeatureClass_descriptor.getNestedTypes().get(8);
+    internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeatureClass_Ephemeral_descriptor,
+        new java.lang.String[] { });
+    internal_static_hilo_protobufs_structure_Feature_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_hilo_protobufs_structure_Feature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_Feature_descriptor,
-        new java.lang.String[] { "Key", "Type", "Stats", });
+        new java.lang.String[] { "Key", "FeatureClass", "Stats", });
     internal_static_hilo_protobufs_structure_BooleanStats_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_hilo_protobufs_structure_BooleanStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_BooleanStats_descriptor,
@@ -17213,7 +26488,7 @@ public final class FeatureOuterClass {
         internal_static_hilo_protobufs_structure_BooleanStats_Histogram_Bucket_descriptor,
         new java.lang.String[] { "Value", "Count", });
     internal_static_hilo_protobufs_structure_NumericStats_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_hilo_protobufs_structure_NumericStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_NumericStats_descriptor,
@@ -17231,7 +26506,7 @@ public final class FeatureOuterClass {
         internal_static_hilo_protobufs_structure_NumericStats_PercentileHistogram_Bucket_descriptor,
         new java.lang.String[] { "Min", "Max", "Count", "Boundary", });
     internal_static_hilo_protobufs_structure_StringStats_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_hilo_protobufs_structure_StringStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_StringStats_descriptor,
@@ -17249,31 +26524,31 @@ public final class FeatureOuterClass {
         internal_static_hilo_protobufs_structure_StringStats_Histogram_Bucket_descriptor,
         new java.lang.String[] { "Value", "Count", });
     internal_static_hilo_protobufs_structure_FeatureStats_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_hilo_protobufs_structure_FeatureStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureStats_descriptor,
-        new java.lang.String[] { "BooleanStats", "NumericStats", "StringStats", "Stats", });
+        new java.lang.String[] { "BooleanStats", "IntStats", "LongStats", "FloatStats", "DoubleStats", "StringStats", "BytesStats", });
+    internal_static_hilo_protobufs_structure_StatsEvent_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_hilo_protobufs_structure_StatsEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_StatsEvent_descriptor,
+        new java.lang.String[] { "Key", "FeatureStats", });
     internal_static_hilo_protobufs_structure_FeaturesEvent_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_hilo_protobufs_structure_FeaturesEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeaturesEvent_descriptor,
-        new java.lang.String[] { "Stats", "Event", });
-    internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor =
-      internal_static_hilo_protobufs_structure_FeaturesEvent_descriptor.getNestedTypes().get(0);
-    internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_FeaturesEvent_Stats_descriptor,
-        new java.lang.String[] { "Key", "FeatureStats", });
+        new java.lang.String[] { "Metadata", "Stats", "Event", });
     internal_static_hilo_protobufs_structure_FeatureCreate_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_hilo_protobufs_structure_FeatureCreate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureCreate_descriptor,
-        new java.lang.String[] { "Key", "Type", });
+        new java.lang.String[] { "Key", "FeatureClass", });
     internal_static_hilo_protobufs_structure_FeatureUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_hilo_protobufs_structure_FeatureUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureUpdate_descriptor,
@@ -17283,37 +26558,37 @@ public final class FeatureOuterClass {
     internal_static_hilo_protobufs_structure_FeatureUpdate_Feature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureUpdate_Feature_descriptor,
-        new java.lang.String[] { "Key", "Type", });
+        new java.lang.String[] { "Key", "FeatureClass", });
     internal_static_hilo_protobufs_structure_FeatureLog_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_hilo_protobufs_structure_FeatureLog_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureLog_descriptor,
         new java.lang.String[] { "FeatureCreate", "FeatureUpdate", "Log", });
     internal_static_hilo_protobufs_structure_FeaturesUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_hilo_protobufs_structure_FeaturesUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeaturesUpdate_descriptor,
-        new java.lang.String[] { "Log", "Features", "Update", });
+        new java.lang.String[] { "Metadata", "Log", "Feature", "Update", });
     internal_static_hilo_protobufs_structure_FeatureLogsModel_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_hilo_protobufs_structure_FeatureLogsModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeatureLogsModel_descriptor,
-        new java.lang.String[] { "Logs", });
-    internal_static_hilo_protobufs_structure_Features_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_hilo_protobufs_structure_Features_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_structure_Features_descriptor,
-        new java.lang.String[] { "Feature", });
+        new java.lang.String[] { "Metadata", "Logs", });
     internal_static_hilo_protobufs_structure_FeaturesModel_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_hilo_protobufs_structure_FeaturesModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_FeaturesModel_descriptor,
-        new java.lang.String[] { "Features", });
+        new java.lang.String[] { "Metadata", "Features", });
+    internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_descriptor =
+      internal_static_hilo_protobufs_structure_FeaturesModel_descriptor.getNestedTypes().get(0);
+    internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_FeaturesModel_FeaturesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

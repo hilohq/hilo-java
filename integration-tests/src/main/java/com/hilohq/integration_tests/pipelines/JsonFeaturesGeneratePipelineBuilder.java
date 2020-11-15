@@ -1,7 +1,8 @@
 package com.hilohq.integration_tests.pipelines;
 
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
-import com.hilohq.hilo.structure_learning.features.FeatureStatsGenerate;
+import com.hilohq.hilo.structure_learning.features.FeaturesStatsGenerate;
+import com.hilohq.hilo.structure_learning.features.FeaturesUpdateGenerate;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaValidate;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
 import de.javakaffee.kryoserializers.protobuf.ProtobufSerializer;
@@ -10,7 +11,7 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 
 public final class JsonFeaturesGeneratePipelineBuilder
-    implements PipelineBuilder<String, FeatureOuterClass.FeaturesEvent> {
+    implements PipelineBuilder<String, FeatureOuterClass.FeaturesUpdate> {
   private final String schemaId;
   private final String mongoUrl;
 
@@ -20,7 +21,7 @@ public final class JsonFeaturesGeneratePipelineBuilder
   }
 
   @Override
-  public DataSet<FeatureOuterClass.FeaturesEvent> build(
+  public DataSet<FeatureOuterClass.FeaturesUpdate> build(
       final ExecutionEnvironment executionEnvironment, final DataSource<String> input)
       throws Exception {
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");
@@ -32,6 +33,7 @@ public final class JsonFeaturesGeneratePipelineBuilder
 
     return input
         .reduceGroup(new JsonSchemaValidate(mongoUrl, schemaId))
-        .reduceGroup(new FeatureStatsGenerate());
+        .reduceGroup(new FeaturesStatsGenerate())
+        .reduceGroup(new FeaturesUpdateGenerate());
   }
 }

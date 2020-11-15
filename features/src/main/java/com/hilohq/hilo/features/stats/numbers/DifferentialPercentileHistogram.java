@@ -1,19 +1,18 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.*;
 import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.*;
 
 public final class DifferentialPercentileHistogram {
 
-  private final NumericPercentileHistogram histogramAccumulator;
+  private final NumericPercentileHistogram histogram;
   private Double previous;
 
   public DifferentialPercentileHistogram() {
     this(new NumericPercentileHistogram());
   }
 
-  private DifferentialPercentileHistogram(final NumericPercentileHistogram histogramAccumulator) {
-    this.histogramAccumulator = histogramAccumulator;
+  private DifferentialPercentileHistogram(final NumericPercentileHistogram histogram) {
+    this.histogram = histogram;
     this.previous = null;
   }
 
@@ -24,11 +23,16 @@ public final class DifferentialPercentileHistogram {
     }
 
     final var diff = value - previous;
-    histogramAccumulator.observe(diff);
+    histogram.observe(diff);
+  }
+
+  public void merge(final DifferentialPercentileHistogram other) {
+    histogram.merge(other.histogram);
+    previous = null;
   }
 
   public PercentileHistogram snapshot() {
-    return histogramAccumulator.snapshot();
+    return histogram.snapshot();
   }
 
   public static DifferentialPercentileHistogram fromSnapshot(final PercentileHistogram snapshot) {

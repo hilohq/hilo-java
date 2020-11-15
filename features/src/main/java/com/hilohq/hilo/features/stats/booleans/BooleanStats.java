@@ -1,10 +1,12 @@
 package com.hilohq.hilo.features.stats.booleans;
 
-import com.hilohq.hilo.features.stats.feature.FeatureStats;
+import com.hilohq.hilo.features.stats.feature.Snapshot;
+import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
 import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
 
-public final class BooleanStats implements FeatureStats {
+public final class BooleanStats
+    implements StatsCollector, Snapshot<FeatureOuterClass.BooleanStats> {
   private final BooleanHistogram histogram;
 
   public BooleanStats() {
@@ -18,6 +20,19 @@ public final class BooleanStats implements FeatureStats {
   @Override
   public void observe(final Value value) {
     observe(value.booleanValue());
+  }
+
+  @Override
+  public void merge(final StatsCollector collector) {
+    if (!collector.getClass().equals(BooleanStats.class)) {
+      throw new IllegalArgumentException(
+          "BooleanStats expects another " + "instance of BooleanStats for a merge");
+    }
+
+    final var other = (BooleanStats) collector;
+    for (final var entry : other.histogram.entrySet()) {
+      histogram.observe(entry.getKey(), entry.getValue());
+    }
   }
 
   public void observe(final Boolean value) {
@@ -37,7 +52,7 @@ public final class BooleanStats implements FeatureStats {
     return fromSnapshot(stats.getBooleanStats());
   }
 
-  public FeatureOuterClass.FeatureStats snapshot() {
+  public FeatureOuterClass.BooleanStats snapshot() {
     final var histogramSnapshot = histogram.snapshot();
     final var count =
         histogramSnapshot
@@ -45,12 +60,9 @@ public final class BooleanStats implements FeatureStats {
             .stream()
             .mapToLong(FeatureOuterClass.BooleanStats.Histogram.Bucket::getCount)
             .sum();
-    return FeatureOuterClass.FeatureStats.newBuilder()
-        .setBooleanStats(
-            FeatureOuterClass.BooleanStats.newBuilder()
-                .setHistogram(histogramSnapshot)
-                .setCount(count)
-                .build())
+    return FeatureOuterClass.BooleanStats.newBuilder()
+        .setHistogram(histogramSnapshot)
+        .setCount(count)
         .build();
   }
 }
