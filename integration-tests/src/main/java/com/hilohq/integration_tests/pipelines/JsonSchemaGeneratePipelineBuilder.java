@@ -1,6 +1,6 @@
 package com.hilohq.integration_tests.pipelines;
 
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.structure_learning.schema.json.JsonFieldStatsKeySelector;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStatsGenerate;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaUpdateGenerate;

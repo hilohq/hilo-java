@@ -1,9 +1,9 @@
 package com.hilohq.hilo.schema_service.service;
 
-import static com.hilohq.hilo.protobufs.structure.Api.*;
+import static com.hilohq.hilo.protobufs.structure.schema.Api.*;
 
-import com.hilohq.hilo.protobufs.structure.Schema;
-import com.hilohq.hilo.protobufs.structure.SchemaGrpc.SchemaImplBase;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.SchemaGrpc;
 import io.grpc.stub.StreamObserver;
 import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
@@ -11,7 +11,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import org.apache.commons.lang3.NotImplementedException;
 
-public final class SchemaService extends SchemaImplBase {
+public final class SchemaService extends SchemaGrpc.SchemaImplBase {
 
   private final SchemaStore store;
 

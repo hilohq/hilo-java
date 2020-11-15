@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package hilo.protobufs.structure;
+package hilo.protobufs.structure.schema;
 
-option java_package = "com.hilohq.hilo.protobufs.structure";
+option java_package = "com.hilohq.hilo.protobufs.structure.schema";
 
 enum JsonType {
   JSON_BOOLEAN = 0;

@@ -4,8 +4,8 @@ import com.hilohq.hilo.parsers.logparse.json.JsonFieldKey;
 import com.hilohq.hilo.parsers.logparse.json.JsonInfer;
 import com.hilohq.hilo.parsers.logparse.json.JsonType;
 import com.hilohq.hilo.parsers.logparse.log.TypeInfoStats;
-import com.hilohq.hilo.protobufs.structure.Json;
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Json;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import org.apache.flink.api.common.functions.GroupReduceFunction;
 import org.apache.flink.util.Collector;
 

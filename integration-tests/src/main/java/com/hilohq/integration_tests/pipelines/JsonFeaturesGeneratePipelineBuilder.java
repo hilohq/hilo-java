@@ -1,6 +1,6 @@
 package com.hilohq.integration_tests.pipelines;
 
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import com.hilohq.hilo.structure_learning.features.FeaturesStatsGenerate;
 import com.hilohq.hilo.structure_learning.features.FeaturesUpdateGenerate;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaValidate;

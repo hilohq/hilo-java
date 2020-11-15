@@ -1,6 +1,6 @@
 package com.hilohq.hilo.schema_service.service;
 
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
 

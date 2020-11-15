@@ -1,6 +1,6 @@
 package com.hilohq.hilo.structure_learning.schema.json;
 
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import org.apache.flink.api.java.functions.KeySelector;
 
 public final class JsonFieldStatsKeySelector implements KeySelector<Schema.SchemaEvent, String> {

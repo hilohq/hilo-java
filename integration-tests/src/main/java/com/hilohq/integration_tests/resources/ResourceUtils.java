@@ -22,4 +22,14 @@ public final class ResourceUtils {
     target.flush();
     target.close();
   }
+
+  public static String readStringResource(final String resourcePath) throws Exception {
+    final var resource = ResourceUtils.class.getClassLoader().getResource(resourcePath);
+    if (resource == null) {
+      throw new IllegalArgumentException("invalid resource " + resourcePath);
+    }
+
+    final var path = Paths.get(resource.toURI()).toAbsolutePath();
+    return Files.readString(path);
+  }
 }

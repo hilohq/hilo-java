@@ -1,6 +1,6 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.*;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram;
 
 public final class DifferentialPercentileHistogram {
 

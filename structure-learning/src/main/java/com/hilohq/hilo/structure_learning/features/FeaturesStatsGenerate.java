@@ -3,8 +3,8 @@ package com.hilohq.hilo.structure_learning.features;
 import com.hilohq.hilo.features.stats.feature.FeatureGroupStats;
 import com.hilohq.hilo.parsers.field.FieldKey;
 import com.hilohq.hilo.parsers.field.Fields;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import org.apache.flink.api.common.functions.RichGroupReduceFunction;
 import org.apache.flink.util.Collector;
 

@@ -31,6 +31,7 @@ dependencies {
     compile project(":connectors")
     compile project(":protobufs")
     compile project(":schema-service")
+    compile project(":features-service")
     compile project(":structure-learning")
 
     compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.0.0-beta-1'

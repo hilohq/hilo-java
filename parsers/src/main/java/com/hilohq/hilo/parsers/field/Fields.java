@@ -1,6 +1,6 @@
 package com.hilohq.hilo.parsers.field;
 
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 
 public final class Fields<K extends FieldKey> {
 

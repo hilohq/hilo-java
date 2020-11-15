@@ -1,4 +1,4 @@
-package com.hilohq.hilo.schema_server;
+package com.hilohq.hilo.features_server;
 
 import com.hilohq.hilo.schema_service.service.MongoSchemaStore;
 import com.hilohq.hilo.schema_service.service.SchemaService;
@@ -10,7 +10,6 @@ public final class SchemaServer {
     final var service = new SchemaService(store);
     final var server = ServerBuilder.forPort(1234).addService(service).build();
     server.start();
-    System.out.println("SERVER LISTENING");
     server.awaitTermination();
   }
 }

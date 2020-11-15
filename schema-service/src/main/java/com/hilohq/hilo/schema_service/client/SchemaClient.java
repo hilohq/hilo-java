@@ -1,8 +1,8 @@
 package com.hilohq.hilo.schema_service.client;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import com.hilohq.hilo.protobufs.structure.Api;
-import com.hilohq.hilo.protobufs.structure.SchemaGrpc;
+import com.hilohq.hilo.protobufs.structure.schema.Api;
+import com.hilohq.hilo.protobufs.structure.schema.SchemaGrpc;
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import java.util.concurrent.*;

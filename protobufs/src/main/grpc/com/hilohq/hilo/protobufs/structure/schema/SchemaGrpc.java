@@ -1,4 +1,4 @@
-package com.hilohq.hilo.protobufs.structure;
+package com.hilohq.hilo.protobufs.structure.schema;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -19,37 +19,37 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.31.1)",
-    comments = "Source: com/hilohq/hilo/protobufs/structure/api.proto")
+    comments = "Source: com/hilohq/hilo/protobufs/structure/schema/api.proto")
 public final class SchemaGrpc {
 
   private SchemaGrpc() {}
 
-  public static final String SERVICE_NAME = "hilo.protobufs.structure.Schema";
+  public static final String SERVICE_NAME = "hilo.protobufs.structure.schema.Schema";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod;
+  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetSchemaIdsBySource",
-      requestType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest.class,
-      responseType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse.class,
+      requestType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest.class,
+      responseType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod() {
-    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod;
+  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod() {
+    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> getGetSchemaIdsBySourceMethod;
     if ((getGetSchemaIdsBySourceMethod = SchemaGrpc.getGetSchemaIdsBySourceMethod) == null) {
       synchronized (SchemaGrpc.class) {
         if ((getGetSchemaIdsBySourceMethod = SchemaGrpc.getGetSchemaIdsBySourceMethod) == null) {
           SchemaGrpc.getGetSchemaIdsBySourceMethod = getGetSchemaIdsBySourceMethod =
-              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSchemaIdsBySource"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchemaMethodDescriptorSupplier("GetSchemaIdsBySource"))
               .build();
         }
@@ -58,29 +58,29 @@ public final class SchemaGrpc {
     return getGetSchemaIdsBySourceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> getGetSchemaMethod;
+  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> getGetSchemaMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetSchema",
-      requestType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest.class,
-      responseType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse.class,
+      requestType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest.class,
+      responseType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> getGetSchemaMethod() {
-    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> getGetSchemaMethod;
+  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> getGetSchemaMethod() {
+    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> getGetSchemaMethod;
     if ((getGetSchemaMethod = SchemaGrpc.getGetSchemaMethod) == null) {
       synchronized (SchemaGrpc.class) {
         if ((getGetSchemaMethod = SchemaGrpc.getGetSchemaMethod) == null) {
           SchemaGrpc.getGetSchemaMethod = getGetSchemaMethod =
-              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSchema"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchemaMethodDescriptorSupplier("GetSchema"))
               .build();
         }
@@ -89,29 +89,29 @@ public final class SchemaGrpc {
     return getGetSchemaMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetSchemaLogs",
-      requestType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest.class,
-      responseType = com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse.class,
+      requestType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest.class,
+      responseType = com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest,
-      com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod() {
-    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod;
+  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest,
+      com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod() {
+    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> getGetSchemaLogsMethod;
     if ((getGetSchemaLogsMethod = SchemaGrpc.getGetSchemaLogsMethod) == null) {
       synchronized (SchemaGrpc.class) {
         if ((getGetSchemaLogsMethod = SchemaGrpc.getGetSchemaLogsMethod) == null) {
           SchemaGrpc.getGetSchemaLogsMethod = getGetSchemaLogsMethod =
-              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest, com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest, com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSchemaLogs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse.getDefaultInstance()))
+                  com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchemaMethodDescriptorSupplier("GetSchemaLogs"))
               .build();
         }
@@ -170,22 +170,22 @@ public final class SchemaGrpc {
 
     /**
      */
-    public void getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> responseObserver) {
+    public void getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetSchemaIdsBySourceMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSchema(com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> responseObserver) {
+    public void getSchema(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetSchemaMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSchemaLogs(com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> responseObserver) {
+    public void getSchemaLogs(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetSchemaLogsMethod(), responseObserver);
     }
 
@@ -195,22 +195,22 @@ public final class SchemaGrpc {
             getGetSchemaIdsBySourceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest,
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse>(
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest,
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse>(
                   this, METHODID_GET_SCHEMA_IDS_BY_SOURCE)))
           .addMethod(
             getGetSchemaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest,
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse>(
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest,
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse>(
                   this, METHODID_GET_SCHEMA)))
           .addMethod(
             getGetSchemaLogsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest,
-                com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse>(
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest,
+                com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse>(
                   this, METHODID_GET_SCHEMA_LOGS)))
           .build();
     }
@@ -232,24 +232,24 @@ public final class SchemaGrpc {
 
     /**
      */
-    public void getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> responseObserver) {
+    public void getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetSchemaIdsBySourceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getSchema(com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> responseObserver) {
+    public void getSchema(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetSchemaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getSchemaLogs(com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest request,
-        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> responseObserver) {
+    public void getSchemaLogs(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetSchemaLogsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -271,21 +271,21 @@ public final class SchemaGrpc {
 
     /**
      */
-    public com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest request) {
+    public com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse getSchemaIdsBySource(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetSchemaIdsBySourceMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse getSchema(com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest request) {
+    public com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse getSchema(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetSchemaMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse getSchemaLogs(com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest request) {
+    public com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse getSchemaLogs(com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetSchemaLogsMethod(), getCallOptions(), request);
     }
@@ -307,24 +307,24 @@ public final class SchemaGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse> getSchemaIdsBySource(
-        com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse> getSchemaIdsBySource(
+        com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetSchemaIdsBySourceMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse> getSchema(
-        com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse> getSchema(
+        com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetSchemaMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse> getSchemaLogs(
-        com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse> getSchemaLogs(
+        com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetSchemaLogsMethod(), getCallOptions()), request);
     }
@@ -352,16 +352,16 @@ public final class SchemaGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_SCHEMA_IDS_BY_SOURCE:
-          serviceImpl.getSchemaIdsBySource((com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceRequest) request,
-              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaIdsBySourceResponse>) responseObserver);
+          serviceImpl.getSchemaIdsBySource((com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceRequest) request,
+              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaIdsBySourceResponse>) responseObserver);
           break;
         case METHODID_GET_SCHEMA:
-          serviceImpl.getSchema((com.hilohq.hilo.protobufs.structure.Api.GetSchemaRequest) request,
-              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaResponse>) responseObserver);
+          serviceImpl.getSchema((com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaRequest) request,
+              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaResponse>) responseObserver);
           break;
         case METHODID_GET_SCHEMA_LOGS:
-          serviceImpl.getSchemaLogs((com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsRequest) request,
-              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.Api.GetSchemaLogsResponse>) responseObserver);
+          serviceImpl.getSchemaLogs((com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsRequest) request,
+              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.structure.schema.Api.GetSchemaLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -385,7 +385,7 @@ public final class SchemaGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.hilohq.hilo.protobufs.structure.Api.getDescriptor();
+      return com.hilohq.hilo.protobufs.structure.schema.Api.getDescriptor();
     }
 
     @java.lang.Override

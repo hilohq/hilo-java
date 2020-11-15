@@ -4,7 +4,7 @@ import com.hilohq.hilo.connectors.mongodb.flink.MongoCommand;
 import com.hilohq.hilo.connectors.mongodb.flink.MongoCommandGenerator;
 import com.hilohq.hilo.connectors.mongodb.flink.MongoInsert;
 import com.hilohq.hilo.connectors.mongodb.flink.MongoUpdate;
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.structure_learning.schema.json.JsonMongoUtils;
 import com.hilohq.hilo.structure_learning.serializer.ProtobufMessageToDocumentSerializer;
 import org.bson.BsonDocument;

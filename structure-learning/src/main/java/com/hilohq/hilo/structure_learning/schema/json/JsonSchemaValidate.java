@@ -10,7 +10,7 @@ import com.hilohq.hilo.parsers.logparse.json.JsonParser;
 import com.hilohq.hilo.parsers.logparse.json.JsonType;
 import com.hilohq.hilo.parsers.logparse.json.JsonValidator;
 import com.hilohq.hilo.parsers.logparse.log.TypeInfo;
-import com.hilohq.hilo.protobufs.structure.Schema;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.schema_service.service.MongoSchemaStore;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;

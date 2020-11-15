@@ -1,6 +1,7 @@
 package com.hilohq.hilo.features.stats.numbers;
 
-import static com.hilohq.hilo.protobufs.structure.FeatureOuterClass.NumericStats.*;
+import static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.*;
+import static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.*;
 import static java.lang.Integer.max;
 
 import java.util.*;

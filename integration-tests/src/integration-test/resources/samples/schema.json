@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "schemaId": "<schema_id>",
+    "sourceId": "<source_id>",
+    "projectId": "<project_id>"
+  },
+  "json": {
+    "fields": {
+      "blockHash": {
+        "key": "blockHash",
+        "name": "blockHash",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "blockNumber": {
+        "key": "blockNumber",
+        "name": "blockNumber",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "217"
+          }
+        }
+      },
+      "difficulty": {
+        "key": "difficulty",
+        "name": "difficulty",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "extraData": {
+        "key": "extraData",
+        "name": "extraData",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "from": {
+        "key": "from",
+        "name": "from",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "gas": {
+        "key": "gas",
+        "name": "gas",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "217"
+          }
+        }
+      },
+      "gasLimit": {
+        "key": "gasLimit",
+        "name": "gasLimit",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "100"
+          }
+        }
+      },
+      "gasPrice": {
+        "key": "gasPrice",
+        "name": "gasPrice",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "gasUsed": {
+        "key": "gasUsed",
+        "name": "gasUsed",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "100"
+          }
+        }
+      },
+      "hash": {
+        "key": "hash",
+        "name": "hash",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "317"
+          }
+        }
+      },
+      "input": {
+        "key": "input",
+        "name": "input",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "logsBloom": {
+        "key": "logsBloom",
+        "name": "logsBloom",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "miner": {
+        "key": "miner",
+        "name": "miner",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "mixHash": {
+        "key": "mixHash",
+        "name": "mixHash",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "nonce": {
+        "key": "nonce",
+        "name": "nonce",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "217",
+            "stringCount": "100"
+          }
+        }
+      },
+      "number": {
+        "key": "number",
+        "name": "number",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "100"
+          }
+        }
+      },
+      "parentHash": {
+        "key": "parentHash",
+        "name": "parentHash",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "r": {
+        "key": "r",
+        "name": "r",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "receiptsRoot": {
+        "key": "receiptsRoot",
+        "name": "receiptsRoot",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "s": {
+        "key": "s",
+        "name": "s",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "sha3Uncles": {
+        "key": "sha3Uncles",
+        "name": "sha3Uncles",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "size": {
+        "key": "size",
+        "name": "size",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "100"
+          }
+        }
+      },
+      "stateRoot": {
+        "key": "stateRoot",
+        "name": "stateRoot",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "timestamp": {
+        "key": "timestamp",
+        "name": "timestamp",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "100"
+          }
+        }
+      },
+      "to": {
+        "key": "to",
+        "name": "to",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "nullCount": "3",
+            "stringCount": "214"
+          }
+        }
+      },
+      "totalDifficulty": {
+        "key": "totalDifficulty",
+        "name": "totalDifficulty",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "transactionIndex": {
+        "key": "transactionIndex",
+        "name": "transactionIndex",
+        "type": "JSON_NUMBER",
+        "stats": {
+          "typeHistogram": {
+            "numberCount": "217"
+          }
+        }
+      },
+      "transactions": {
+        "key": "transactions",
+        "name": "transactions",
+        "type": "JSON_ARRAY",
+        "stats": {
+          "typeHistogram": {
+            "arrayCount": "100"
+          }
+        }
+      },
+      "transactionsRoot": {
+        "key": "transactionsRoot",
+        "name": "transactionsRoot",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "100"
+          }
+        }
+      },
+      "uncles": {
+        "key": "uncles",
+        "name": "uncles",
+        "type": "JSON_ARRAY",
+        "stats": {
+          "typeHistogram": {
+            "arrayCount": "100"
+          }
+        }
+      },
+      "v": {
+        "key": "v",
+        "name": "v",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      },
+      "value": {
+        "key": "value",
+        "name": "value",
+        "type": "JSON_STRING",
+        "stats": {
+          "typeHistogram": {
+            "stringCount": "217"
+          }
+        }
+      }
+    }
+  }
+}

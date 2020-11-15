@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package hilo.protobufs.structure;
+package hilo.protobufs.structure.feature;
 
-option java_package = "com.hilohq.hilo.protobufs.structure";
+option java_package = "com.hilohq.hilo.protobufs.structure.feature";
 
 message FeaturesMetadata {
   string schema_id = 1;

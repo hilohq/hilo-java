@@ -1,13 +1,13 @@
 syntax = "proto3";
 
-package hilo.protobufs.structure;
+package hilo.protobufs.structure.schema;
 
-option java_package = "com.hilohq.hilo.protobufs.structure";
+option java_package = "com.hilohq.hilo.protobufs.structure.schema";
 
-import "com/hilohq/hilo/protobufs/structure/schema.proto";
-import "com/hilohq/hilo/protobufs/structure/json.proto";
-import "com/hilohq/hilo/protobufs/structure/text.proto";
-import "com/hilohq/hilo/protobufs/structure/mysql.proto";
+import "com/hilohq/hilo/protobufs/structure/schema/schema.proto";
+import "com/hilohq/hilo/protobufs/structure/schema/json.proto";
+import "com/hilohq/hilo/protobufs/structure/schema/text.proto";
+import "com/hilohq/hilo/protobufs/structure/schema/mysql.proto";
 
 message GetSchemaIdsBySourceRequest {
   string sourceId = 1;

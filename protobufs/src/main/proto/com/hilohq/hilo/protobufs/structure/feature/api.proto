@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package hilo.protobufs.structure.feature;
+
+option java_package = "com.hilohq.hilo.protobufs.structure.feature";
+
+import "com/hilohq/hilo/protobufs/structure/feature/feature.proto";
+
+message GetFeaturesRequest {
+  string schemaId = 1;
+}
+
+message GetFeaturesResponse {
+  map<string, Feature> features = 1;
+}
+
+message GetFeatureLogsRequest {
+  string schemaId = 1;
+}
+
+message GetFeatureLogsResponse {
+  repeated FeatureLog logs = 1;
+}
+
+service Features {
+  rpc GetFeatures(GetFeaturesRequest) returns (GetFeaturesResponse) { }
+  rpc GetFeatureLogs(GetFeatureLogsRequest) returns (GetFeatureLogsResponse) {}
+}

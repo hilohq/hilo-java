@@ -4,7 +4,7 @@ import static com.hilohq.hilo.features.stats.feature.FeatureProtobufObjectMapper
 
 import com.hilohq.hilo.features.stats.feature.FeatureInfer;
 import com.hilohq.hilo.features.stats.feature.FeatureStats;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.HashMap;
 import org.apache.flink.api.common.functions.RichGroupReduceFunction;
 import org.apache.flink.util.Collector;

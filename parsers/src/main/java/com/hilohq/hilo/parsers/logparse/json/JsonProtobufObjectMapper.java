@@ -2,7 +2,7 @@ package com.hilohq.hilo.parsers.logparse.json;
 
 import com.hilohq.hilo.parsers.logparse.log.TypeInfoFieldStats;
 import com.hilohq.hilo.parsers.logparse.log.TypeInfoHistogram;
-import com.hilohq.hilo.protobufs.structure.Json;
+import com.hilohq.hilo.protobufs.structure.schema.Json;
 
 public final class JsonProtobufObjectMapper {
 

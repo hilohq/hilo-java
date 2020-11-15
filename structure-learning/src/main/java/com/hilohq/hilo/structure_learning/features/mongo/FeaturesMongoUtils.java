@@ -2,7 +2,7 @@ package com.hilohq.hilo.structure_learning.features.mongo;
 
 import static com.hilohq.hilo.structure_learning.serializer.ProtobufMessageToDocumentSerializer.serializedMessage;
 
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import org.bson.Document;
 
 public final class FeaturesMongoUtils {

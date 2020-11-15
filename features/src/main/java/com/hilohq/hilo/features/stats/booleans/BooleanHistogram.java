@@ -1,7 +1,7 @@
 package com.hilohq.hilo.features.stats.booleans;
 
 import com.hilohq.hilo.features.stats.feature.DiscreteHistogram;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

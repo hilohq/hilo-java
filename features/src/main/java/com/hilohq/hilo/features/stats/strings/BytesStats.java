@@ -3,7 +3,7 @@ package com.hilohq.hilo.features.stats.strings;
 import com.hilohq.hilo.features.stats.feature.Snapshot;
 import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.nio.charset.StandardCharsets;
 
 public final class BytesStats implements StatsCollector, Snapshot<FeatureOuterClass.StringStats> {

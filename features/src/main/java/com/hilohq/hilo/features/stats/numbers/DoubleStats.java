@@ -3,7 +3,7 @@ package com.hilohq.hilo.features.stats.numbers;
 import com.hilohq.hilo.features.stats.feature.Snapshot;
 import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.Base64;
 
 public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterClass.NumericStats> {

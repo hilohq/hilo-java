@@ -5,11 +5,9 @@ import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaSer
 import static org.junit.Assert.assertEquals;
 
 import com.hilohq.hilo.connectors.mongodb.flink.MongoOutputFormat;
-import com.hilohq.hilo.protobufs.structure.Api;
+import com.hilohq.hilo.protobufs.structure.schema.Api;
 import com.hilohq.hilo.schema_service.client.SchemaClient;
-import com.hilohq.hilo.structure_learning.features.mongo.FeaturesUpdateMongoCommandGenerator;
 import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
-import com.hilohq.integration_tests.pipelines.JsonFeaturesGeneratePipelineBuilder;
 import com.hilohq.integration_tests.pipelines.JsonSchemaGeneratePipelineBuilder;
 import com.hilohq.integration_tests.pipelines.PipelineExecutor;
 import io.grpc.testing.GrpcCleanupRule;
@@ -53,21 +51,6 @@ public final class JsonSchemaGenerateTest {
     executor.execute(filePath, pipelineBuilder);
   }
 
-  private void generateFeatures(final String filePath) throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new FeaturesUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-
-    final var schemaId = "6a733a83-5f81-413e-90bb-0f809f242f52";
-    final var executor = PipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonFeaturesGeneratePipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
-  }
-
   @Test
   public void testGenerateSchemaFromJsonLogs() throws Exception {
     copyResource("samples/logs.txt", "/tmp/logs.txt");
@@ -97,11 +80,5 @@ public final class JsonSchemaGenerateTest {
                     .build())
             .get(1, TimeUnit.SECONDS);
     assertEquals(32, logsResponse.getJson().getLogsCount());
-  }
-
-  @Test
-  public void testGenerateFeatureStatsFromJsonLogs() throws Exception {
-    copyResource("samples/logs.txt", "/tmp/logs.txt");
-    generateFeatures("/tmp/logs.txt");
   }
 }

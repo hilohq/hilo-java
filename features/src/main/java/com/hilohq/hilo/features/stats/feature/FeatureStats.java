@@ -9,7 +9,7 @@ import com.hilohq.hilo.features.stats.strings.BytesStats;
 import com.hilohq.hilo.features.stats.strings.StringStats;
 import com.hilohq.hilo.parsers.value.Value;
 import com.hilohq.hilo.parsers.value.ValueType;
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.HashMap;
 import java.util.Map;
 

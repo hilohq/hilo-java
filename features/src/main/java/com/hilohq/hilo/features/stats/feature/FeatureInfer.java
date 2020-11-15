@@ -1,6 +1,6 @@
 package com.hilohq.hilo.features.stats.feature;
 
-import com.hilohq.hilo.protobufs.structure.FeatureOuterClass;
+import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.Arrays;
 
 public final class FeatureInfer {
