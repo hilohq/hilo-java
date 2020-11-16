@@ -1,11 +1,12 @@
 package com.hilohq.hilo.integration_test.structure_learning;
 
-import static com.hilohq.integration_tests.resources.ResourceUtils.copyResource;
+import static com.hilohq.integration_tests.resources.ResourceUtils.*;
 import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
 import static org.junit.Assert.assertEquals;
 
 import com.hilohq.hilo.connectors.mongodb.flink.MongoOutputFormat;
 import com.hilohq.hilo.protobufs.structure.schema.Api;
+import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.schema_service.client.SchemaClient;
 import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
 import com.hilohq.integration_tests.pipelines.JsonSchemaGeneratePipelineBuilder;
@@ -52,9 +53,45 @@ public final class JsonSchemaGenerateTest {
   }
 
   @Test
-  public void testGenerateSchemaFromJsonLogs() throws Exception {
-    copyResource("samples/logs.txt", "/tmp/logs.txt");
-    generateSchema("/tmp/logs.txt");
+  public void testGenerateSchemaForBlocks() throws Exception {
+    copyResource("samples/blocks/logs.txt", "/tmp/blocks/logs.txt");
+    generateSchema("/tmp/blocks/logs.txt");
+    final var expectedSchema =
+        readFromResource(
+            "samples/blocks/schema.json", Schema.SchemaFieldsModel.newBuilder().build());
+    final var schemaIdsResponse =
+        client
+            .getSchemaIdsBySource(
+                Api.GetSchemaIdsBySourceRequest.newBuilder().setSourceId(sourceId).build())
+            .get(1, TimeUnit.SECONDS);
+    assertEquals(1, schemaIdsResponse.getSchemaIdCount());
+
+    final var schemaResponse =
+        client
+            .getSchema(
+                Api.GetSchemaRequest.newBuilder()
+                    .setSchemaId(schemaIdsResponse.getSchemaId(0))
+                    .build())
+            .get(1, TimeUnit.SECONDS);
+    assertEquals(expectedSchema.getJson(), schemaResponse.getJson());
+
+    final var logsResponse =
+        client
+            .getSchemaLogs(
+                Api.GetSchemaLogsRequest.newBuilder()
+                    .setSchemaId(schemaIdsResponse.getSchemaId(0))
+                    .build())
+            .get(1, TimeUnit.SECONDS);
+    assertEquals(20, logsResponse.getJson().getLogsCount());
+  }
+
+  @Test
+  public void testGenerateSchemaForTransactions() throws Exception {
+    copyResource("samples/transactions/logs.txt", "/tmp/transactions/logs.txt");
+    generateSchema("/tmp/transactions/logs.txt");
+    final var expectedSchema =
+        readFromResource(
+            "samples/transactions/schema.json", Schema.SchemaFieldsModel.newBuilder().build());
 
     final var schemaIdsResponse =
         client
@@ -70,7 +107,8 @@ public final class JsonSchemaGenerateTest {
                     .setSchemaId(schemaIdsResponse.getSchemaId(0))
                     .build())
             .get(1, TimeUnit.SECONDS);
-    assertEquals(32, schemaResponse.getJson().getFieldsCount());
+    assertEquals(expectedSchema.getJson(), schemaResponse.getJson());
+    ;
 
     final var logsResponse =
         client
@@ -79,6 +117,6 @@ public final class JsonSchemaGenerateTest {
                     .setSchemaId(schemaIdsResponse.getSchemaId(0))
                     .build())
             .get(1, TimeUnit.SECONDS);
-    assertEquals(32, logsResponse.getJson().getLogsCount());
+    assertEquals(14, logsResponse.getJson().getLogsCount());
   }
 }
