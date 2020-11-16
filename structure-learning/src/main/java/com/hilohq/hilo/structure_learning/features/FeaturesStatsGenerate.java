@@ -3,6 +3,8 @@ package com.hilohq.hilo.structure_learning.features;
 import com.hilohq.hilo.features.stats.feature.FeatureGroupStats;
 import com.hilohq.hilo.parsers.field.FieldKey;
 import com.hilohq.hilo.parsers.field.Fields;
+import com.hilohq.hilo.parsers.string.StringParser;
+import com.hilohq.hilo.parsers.value.Value;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import org.apache.flink.api.common.functions.RichGroupReduceFunction;
@@ -10,6 +12,20 @@ import org.apache.flink.util.Collector;
 
 public final class FeaturesStatsGenerate
     extends RichGroupReduceFunction<Fields<FieldKey>, FeatureOuterClass.FeaturesEvent> {
+
+  private final StringParser stringParser;
+
+  public FeaturesStatsGenerate() {
+    this.stringParser = new StringParser();
+  }
+
+  private Value parseValueIfString(final Value value) {
+    if (value.isString()) {
+      return stringParser.parse(value.stringValue());
+    }
+
+    return value;
+  }
 
   @Override
   public void reduce(
@@ -22,7 +38,8 @@ public final class FeaturesStatsGenerate
       final var map = fields.map();
       metadata = fields.metadata();
       for (final var entry : map.entrySet()) {
-        stats.observe(entry.getKey().key(), entry.getValue());
+        final var value = parseValueIfString(entry.getValue());
+        stats.observe(entry.getKey().key(), value);
       }
     }
 

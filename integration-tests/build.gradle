@@ -22,7 +22,7 @@ configurations {
 
 task stopDockerCompose(type: Exec) {
     workingDir "."
-    commandLine '/usr/bin/bash', '-c', 'docker-compose stop && docker-compose rm -f || true'
+    commandLine './scripts/docker-stop.sh'
 }
 
 task startDockerCompose(type: Exec) {
@@ -36,7 +36,7 @@ task integrationTest(type: Test) {
 }
 
 tasks.integrationTest.dependsOn("shadowJar", "startDockerCompose")
-//tasks.integrationTest.finalizedBy("stopDockerCompose")
+tasks.integrationTest.finalizedBy("stopDockerCompose")
 
 dependencies {
     compile project(":connectors")

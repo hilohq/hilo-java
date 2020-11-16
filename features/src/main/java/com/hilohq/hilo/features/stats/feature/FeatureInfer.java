@@ -1,6 +1,8 @@
 package com.hilohq.hilo.features.stats.feature;
 
+import com.hilohq.hilo.features.stats.numbers.IntegerUtils;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public final class FeatureInfer {
@@ -60,6 +62,60 @@ public final class FeatureInfer {
     }
   }
 
+  private FeatureOuterClass.FeatureClass inferInt(final FeatureOuterClass.NumericStats snapshot) {
+    return inferLong(snapshot);
+  }
+
+  private FeatureOuterClass.FeatureClass inferLong(final FeatureOuterClass.NumericStats snapshot) {
+    final var histogram = snapshot.getValueHistogram();
+    final var values = new ArrayList<Long>();
+    for (final var bucket : histogram.getBucketsList()) {
+      values.add((long) bucket.getMin());
+      values.add((long) bucket.getMax());
+    }
+
+    final var probability = IntegerUtils.isTimestampWithProbability(values);
+    if (probability < 0.8) {
+      return inferNumeric(snapshot);
+
+    } else {
+      return FeatureOuterClass.FeatureClass.newBuilder()
+          .setTimestamp(FeatureOuterClass.FeatureClass.Timestamp.newBuilder())
+          .build();
+    }
+  }
+
+  private FeatureOuterClass.FeatureClass inferFloat(final FeatureOuterClass.NumericStats snapshot) {
+    return inferNumeric(snapshot);
+  }
+
+  private FeatureOuterClass.FeatureClass inferDouble(
+      final FeatureOuterClass.NumericStats snapshot) {
+    return inferNumeric(snapshot);
+  }
+
+  private FeatureOuterClass.FeatureClass inferNumeric(
+      final FeatureOuterClass.NumericStats snapshot) {
+    final var diffHistogram = snapshot.getDifferentialHistogram();
+
+    if (diffHistogram.getBoundariesCount() == 0) {
+      return FeatureOuterClass.FeatureClass.newBuilder()
+          .setGauge(FeatureOuterClass.FeatureClass.Gauge.newBuilder())
+          .build();
+    }
+
+    final var bucket = diffHistogram.getBuckets(0);
+    if (bucket.getMax() > 0) {
+      return FeatureOuterClass.FeatureClass.newBuilder()
+          .setMonotonic(FeatureOuterClass.FeatureClass.Monotonic.newBuilder())
+          .build();
+    } else {
+      return FeatureOuterClass.FeatureClass.newBuilder()
+          .setGauge(FeatureOuterClass.FeatureClass.Gauge.newBuilder())
+          .build();
+    }
+  }
+
   public FeatureOuterClass.FeatureClass infer(final FeatureStats stats) {
     final var snapshot = stats.snapshot();
 
@@ -86,12 +142,13 @@ public final class FeatureInfer {
             .setBoolEnum(FeatureOuterClass.FeatureClass.BooleanEnum.newBuilder())
             .build();
       case 1:
+        return inferInt(snapshot.getIntStats());
       case 2:
+        return inferLong(snapshot.getLongStats());
       case 3:
+        return inferFloat(snapshot.getFloatStats());
       case 4:
-        return FeatureOuterClass.FeatureClass.newBuilder()
-            .setGauge(FeatureOuterClass.FeatureClass.Gauge.newBuilder().setScale(1))
-            .build();
+        return inferDouble(snapshot.getDoubleStats());
       case 5:
       case 6:
         return FeatureOuterClass.FeatureClass.newBuilder()

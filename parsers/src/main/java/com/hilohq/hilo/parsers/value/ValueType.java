@@ -8,5 +8,6 @@ public enum ValueType {
   Double,
   String,
   Bytes,
-  Null
+  Null,
+  Timestamp
 }
