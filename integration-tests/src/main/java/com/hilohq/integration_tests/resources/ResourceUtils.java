@@ -6,6 +6,8 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class ResourceUtils {
 
@@ -56,8 +58,18 @@ public final class ResourceUtils {
 
   public static <T extends Message> T readFromResource(final String resourcePath, final T type)
       throws Exception {
+    return readFromResource(resourcePath, type, new HashMap<>());
+  }
+
+  public static <T extends Message> T readFromResource(
+      final String resourcePath, final T type, final Map<String, String> substitutions)
+      throws Exception {
     final var builder = type.newBuilderForType();
-    final var schemaString = readStringResource(resourcePath);
+    var schemaString = readStringResource(resourcePath);
+    for (final var entry : substitutions.entrySet()) {
+      schemaString = schemaString.replace(entry.getKey(), entry.getValue());
+    }
+
     JsonFormat.parser().merge(schemaString, builder);
     return (T) builder.build();
   }

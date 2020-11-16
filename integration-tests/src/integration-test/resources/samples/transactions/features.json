@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schemaId": "$SCHEMA_ID",
-    "sourceId": "$SOURCE_ID",
+    "sourceId": "$PROJECT_ID",
     "projectId": "$PROJECT_ID"
   },
   "features": {
@@ -409,6 +409,72 @@
             ]
           },
           "differentialHistogram": {
+            "buckets": [
+              {
+                "count": "1",
+                "boundary": 1e-7
+              },
+              {
+                "min": 1,
+                "max": 1,
+                "count": "1",
+                "boundary": 0.000001
+              },
+              {
+                "min": 2,
+                "max": 2,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": 3,
+                "max": 3,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": 4,
+                "max": 4,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": 5,
+                "max": 5,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": 6,
+                "max": 6,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": 7,
+                "max": 7,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "min": 8,
+                "max": 8,
+                "count": "1",
+                "boundary": 5
+              },
+              {
+                "min": 9,
+                "max": 9,
+                "count": "1",
+                "boundary": 10
+              },
+              {
+                "min": 10,
+                "max": 10,
+                "count": "1",
+                "boundary": 15
+              }
+            ],
             "boundaries": [
               1e-7,
               0.000001,
@@ -657,6 +723,176 @@
             ]
           },
           "differentialHistogram": {
+            "buckets": [
+              {
+                "min": -21,
+                "max": -21,
+                "count": "1",
+                "boundary": 1e-7
+              },
+              {
+                "min": -20,
+                "max": -20,
+                "count": "1",
+                "boundary": 0.000001
+              },
+              {
+                "min": -19,
+                "max": -19,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": -18,
+                "max": -18,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": -17,
+                "max": -17,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": -16,
+                "max": -16,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": -15,
+                "max": -15,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": -14,
+                "max": -14,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "min": -13,
+                "max": -6,
+                "count": "7",
+                "boundary": 5
+              },
+              {
+                "min": -5,
+                "max": 11,
+                "count": "9",
+                "boundary": 10
+              },
+              {
+                "min": 13,
+                "max": 87,
+                "count": "9",
+                "boundary": 15
+              },
+              {
+                "min": 88,
+                "max": 157,
+                "count": "9",
+                "boundary": 20
+              },
+              {
+                "min": 160,
+                "max": 380,
+                "count": "18",
+                "boundary": 30
+              },
+              {
+                "min": 401,
+                "max": 5792,
+                "count": "18",
+                "boundary": 40
+              },
+              {
+                "min": 5793,
+                "max": 11846,
+                "count": "18",
+                "boundary": 50
+              },
+              {
+                "min": 11847,
+                "max": 22954,
+                "count": "18",
+                "boundary": 60
+              },
+              {
+                "min": 22955,
+                "max": 82155,
+                "count": "18",
+                "boundary": 70
+              },
+              {
+                "min": 82156,
+                "max": 172310,
+                "count": "18",
+                "boundary": 80
+              },
+              {
+                "min": 172311,
+                "max": 172319,
+                "count": "9",
+                "boundary": 85
+              },
+              {
+                "min": 172320,
+                "max": 172328,
+                "count": "9",
+                "boundary": 90
+              },
+              {
+                "min": 172329,
+                "max": 172337,
+                "count": "9",
+                "boundary": 95
+              },
+              {
+                "min": 172338,
+                "max": 172338,
+                "count": "1",
+                "boundary": 99
+              },
+              {
+                "min": 172339,
+                "max": 172339,
+                "count": "1",
+                "boundary": 99.9
+              },
+              {
+                "min": 172340,
+                "max": 172340,
+                "count": "1",
+                "boundary": 99.99
+              },
+              {
+                "min": 172341,
+                "max": 172341,
+                "count": "1",
+                "boundary": 99.999
+              },
+              {
+                "min": 172342,
+                "max": 172342,
+                "count": "1",
+                "boundary": 99.9999
+              },
+              {
+                "min": 172343,
+                "max": 172343,
+                "count": "1",
+                "boundary": 99.99999
+              },
+              {
+                "min": 172344,
+                "max": 172344,
+                "count": "1",
+                "boundary": 99.999999
+              }
+            ],
             "boundaries": [
               1e-7,
               0.000001,
@@ -2796,6 +3032,174 @@
             ]
           },
           "differentialHistogram": {
+            "buckets": [
+              {
+                "count": "1",
+                "boundary": 1e-7
+              },
+              {
+                "min": 1,
+                "max": 1,
+                "count": "1",
+                "boundary": 0.000001
+              },
+              {
+                "min": 2,
+                "max": 2,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": 3,
+                "max": 3,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": 4,
+                "max": 4,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": 5,
+                "max": 5,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": 7,
+                "max": 7,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": 8,
+                "max": 8,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "min": 10,
+                "max": 12,
+                "count": "2",
+                "boundary": 5
+              },
+              {
+                "min": 13,
+                "max": 15,
+                "count": "3",
+                "boundary": 10
+              },
+              {
+                "min": 16,
+                "max": 18,
+                "count": "3",
+                "boundary": 15
+              },
+              {
+                "min": 21,
+                "max": 24,
+                "count": "3",
+                "boundary": 20
+              },
+              {
+                "min": 25,
+                "max": 31,
+                "count": "7",
+                "boundary": 30
+              },
+              {
+                "min": 32,
+                "max": 38,
+                "count": "7",
+                "boundary": 40
+              },
+              {
+                "min": 39,
+                "max": 49,
+                "count": "7",
+                "boundary": 50
+              },
+              {
+                "min": 50,
+                "max": 60,
+                "count": "7",
+                "boundary": 60
+              },
+              {
+                "min": 62,
+                "max": 70,
+                "count": "7",
+                "boundary": 70
+              },
+              {
+                "min": 71,
+                "max": 86,
+                "count": "7",
+                "boundary": 80
+              },
+              {
+                "min": 87,
+                "max": 87,
+                "count": "1",
+                "boundary": 85
+              },
+              {
+                "min": 89,
+                "max": 89,
+                "count": "1",
+                "boundary": 90
+              },
+              {
+                "min": 91,
+                "max": 91,
+                "count": "1",
+                "boundary": 95
+              },
+              {
+                "min": 93,
+                "max": 93,
+                "count": "1",
+                "boundary": 99
+              },
+              {
+                "min": 94,
+                "max": 94,
+                "count": "1",
+                "boundary": 99.9
+              },
+              {
+                "min": 95,
+                "max": 95,
+                "count": "1",
+                "boundary": 99.99
+              },
+              {
+                "min": 96,
+                "max": 96,
+                "count": "1",
+                "boundary": 99.999
+              },
+              {
+                "min": 97,
+                "max": 97,
+                "count": "1",
+                "boundary": 99.9999
+              },
+              {
+                "min": 98,
+                "max": 98,
+                "count": "1",
+                "boundary": 99.99999
+              },
+              {
+                "min": 99,
+                "max": 99,
+                "count": "1",
+                "boundary": 99.999999
+              }
+            ],
             "boundaries": [
               1e-7,
               0.000001,
@@ -2981,6 +3385,108 @@
             ]
           },
           "differentialHistogram": {
+            "buckets": [
+              {
+                "min": -108244,
+                "max": -108244,
+                "count": "1",
+                "boundary": 1e-7
+              },
+              {
+                "min": -107244,
+                "max": -107244,
+                "count": "1",
+                "boundary": 0.000001
+              },
+              {
+                "min": -107194,
+                "max": -107194,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": -89244,
+                "max": -89244,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": -79244,
+                "max": -79244,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": -39244,
+                "max": -39244,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": -29244,
+                "max": -29244,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": -8244,
+                "max": -8244,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "count": "1",
+                "boundary": 5
+              },
+              {
+                "min": 629,
+                "max": 629,
+                "count": "1",
+                "boundary": 10
+              },
+              {
+                "min": 45100,
+                "max": 45100,
+                "count": "1",
+                "boundary": 15
+              },
+              {
+                "min": 70756,
+                "max": 70756,
+                "count": "1",
+                "boundary": 20
+              },
+              {
+                "min": 120756,
+                "max": 120756,
+                "count": "1",
+                "boundary": 30
+              },
+              {
+                "min": 170756,
+                "max": 170756,
+                "count": "1",
+                "boundary": 40
+              },
+              {
+                "min": 370756,
+                "max": 370756,
+                "count": "1",
+                "boundary": 50
+              },
+              {
+                "min": 870756,
+                "max": 870756,
+                "count": "1",
+                "boundary": 60
+              },
+              {
+                "min": 2870756,
+                "max": 2870756,
+                "count": "1",
+                "boundary": 70
+              }
+            ],
             "boundaries": [
               1e-7,
               0.000001,

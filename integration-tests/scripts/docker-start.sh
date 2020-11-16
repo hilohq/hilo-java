@@ -9,5 +9,7 @@ if [ "$DOCKER_COMPOSE_SERVICES" != "$UP_SERVICES_COUNT" ]; then
   docker-compose rm -f || true
 
   echo "Start docker-compose"
-  docker-compose up -d > logs.txt
+  docker-compose up -d
+  docker-compose logs > logs.txt &
+  sleep 5
 fi

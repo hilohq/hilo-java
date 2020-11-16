@@ -1,6 +1,7 @@
 package com.hilohq.hilo.integration_test.structure_learning;
 
-import static com.hilohq.integration_tests.resources.ResourceUtils.*;
+import static com.hilohq.integration_tests.resources.ResourceUtils.copyResource;
+import static com.hilohq.integration_tests.resources.ResourceUtils.readFromResource;
 import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
 import static org.junit.Assert.assertEquals;
 
@@ -13,6 +14,8 @@ import com.hilohq.integration_tests.pipelines.JsonSchemaGeneratePipelineBuilder;
 import com.hilohq.integration_tests.pipelines.PipelineExecutor;
 import io.grpc.testing.GrpcCleanupRule;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import org.junit.Before;
@@ -27,12 +30,18 @@ public final class JsonSchemaGenerateTest {
   private String schemaId;
   private String sourceId;
   private SchemaClient client;
+  private Map<String, String> substitutions;
 
   @Before
   public void setUp() throws IOException {
     projectId = UUID.randomUUID().toString();
     schemaId = UUID.randomUUID().toString();
     sourceId = UUID.randomUUID().toString();
+
+    substitutions = new HashMap<>();
+    substitutions.put("$PROJECT_ID", projectId);
+    substitutions.put("$SOURCE_ID", sourceId);
+    substitutions.put("$SCHEMA_ID", schemaId);
 
     final var pair = createSchemaService(grpcCleanupRule);
     client = pair.client();
@@ -58,7 +67,9 @@ public final class JsonSchemaGenerateTest {
     generateSchema("/tmp/blocks/logs.txt");
     final var expectedSchema =
         readFromResource(
-            "samples/blocks/schema.json", Schema.SchemaFieldsModel.newBuilder().build());
+            "samples/blocks/schema.json",
+            Schema.SchemaFieldsModel.newBuilder().build(),
+            substitutions);
     final var schemaIdsResponse =
         client
             .getSchemaIdsBySource(
@@ -91,7 +102,9 @@ public final class JsonSchemaGenerateTest {
     generateSchema("/tmp/transactions/logs.txt");
     final var expectedSchema =
         readFromResource(
-            "samples/transactions/schema.json", Schema.SchemaFieldsModel.newBuilder().build());
+            "samples/transactions/schema.json",
+            Schema.SchemaFieldsModel.newBuilder().build(),
+            substitutions);
 
     final var schemaIdsResponse =
         client

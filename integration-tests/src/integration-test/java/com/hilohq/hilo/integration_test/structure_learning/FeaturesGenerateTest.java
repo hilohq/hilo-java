@@ -13,6 +13,8 @@ import com.hilohq.hilo.structure_learning.features.mongo.FeaturesUpdateMongoComm
 import com.hilohq.integration_tests.pipelines.JsonFeaturesGeneratePipelineBuilder;
 import com.hilohq.integration_tests.pipelines.PipelineExecutor;
 import io.grpc.testing.GrpcCleanupRule;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import org.bson.Document;
@@ -28,12 +30,18 @@ public final class FeaturesGenerateTest {
   private String schemaId;
   private String sourceId;
   private FeaturesClient client;
+  private Map<String, String> substitutions;
 
   @Before
   public void setUp() throws Exception {
     projectId = UUID.randomUUID().toString();
     schemaId = UUID.randomUUID().toString();
     sourceId = UUID.randomUUID().toString();
+
+    substitutions = new HashMap<>();
+    substitutions.put("$PROJECT_ID", projectId);
+    substitutions.put("$SOURCE_ID", sourceId);
+    substitutions.put("$SCHEMA_ID", schemaId);
 
     final var pair = createFeaturesService(grpcCleanupRule);
     client = pair.client();
@@ -73,7 +81,9 @@ public final class FeaturesGenerateTest {
     generateFeatures("/tmp/blocks/logs.txt");
     final var expectedFeatures =
         readFromResource(
-            "samples/blocks/features.json", FeatureOuterClass.FeaturesModel.newBuilder().build());
+            "samples/blocks/features.json",
+            FeatureOuterClass.FeaturesModel.newBuilder().build(),
+            substitutions);
 
     final var featuresResponse =
         client
@@ -96,7 +106,8 @@ public final class FeaturesGenerateTest {
     final var expectedFeatures =
         readFromResource(
             "samples/transactions/features.json",
-            FeatureOuterClass.FeaturesModel.newBuilder().build());
+            FeatureOuterClass.FeaturesModel.newBuilder().build(),
+            substitutions);
 
     final var featuresResponse =
         client

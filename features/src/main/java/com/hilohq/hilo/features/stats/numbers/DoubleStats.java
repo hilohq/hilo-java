@@ -49,6 +49,7 @@ public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterC
   public void observe(final Double value) {
     statsAccumulator.add(value);
     valueHistogramAccumulator.observe(value);
+    differentialHistogramAccumulator.observe(value);
   }
 
   public static DoubleStats fromSnapshot(final FeatureOuterClass.NumericStats stats) {
