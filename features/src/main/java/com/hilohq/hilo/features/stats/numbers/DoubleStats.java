@@ -1,5 +1,6 @@
 package com.hilohq.hilo.features.stats.numbers;
 
+import com.google.common.math.StatsAccumulator;
 import com.hilohq.hilo.features.stats.feature.Snapshot;
 import com.hilohq.hilo.features.stats.feature.StatsCollector;
 import com.hilohq.hilo.parsers.value.Value;
@@ -7,24 +8,32 @@ import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.Base64;
 
 public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterClass.NumericStats> {
-  private final com.google.common.math.StatsAccumulator statsAccumulator;
-  private final NumericPercentileHistogram valueHistogramAccumulator;
-  private final DifferentialPercentileHistogram differentialHistogramAccumulator;
+  private static final int DEFAULT_WINDOW_SIZE = 16;
+
+  private final StatsAccumulator valueStatsAccumulator;
+  private final ContinuityStats continuityStats;
+  private final NumericPercentileHistogram valueHistogram;
+  private final NumericPercentileHistogram differentialHistogram;
+  private final Window valueWindow;
 
   private DoubleStats(
-      final com.google.common.math.StatsAccumulator statsAccumulator,
-      final NumericPercentileHistogram valueHistogramAccumulator,
-      final DifferentialPercentileHistogram differentialHistogramAccumulator) {
-    this.statsAccumulator = statsAccumulator;
-    this.valueHistogramAccumulator = valueHistogramAccumulator;
-    this.differentialHistogramAccumulator = differentialHistogramAccumulator;
+      final StatsAccumulator valueStatsAccumulator,
+      final ContinuityStats continuityStats,
+      final NumericPercentileHistogram valueHistogram,
+      final NumericPercentileHistogram differentialHistogram) {
+    this.valueStatsAccumulator = valueStatsAccumulator;
+    this.continuityStats = continuityStats;
+    this.valueHistogram = valueHistogram;
+    this.differentialHistogram = differentialHistogram;
+    this.valueWindow = new Window(DEFAULT_WINDOW_SIZE);
   }
 
   public DoubleStats() {
     this(
-        new com.google.common.math.StatsAccumulator(),
+        new StatsAccumulator(),
+        new ContinuityStats(),
         new NumericPercentileHistogram(),
-        new DifferentialPercentileHistogram());
+        new NumericPercentileHistogram());
   }
 
   @Override
@@ -40,43 +49,51 @@ public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterC
     }
 
     final var other = (DoubleStats) collector;
-    statsAccumulator.addAll(other.statsAccumulator);
+    valueStatsAccumulator.addAll(other.valueStatsAccumulator);
 
-    valueHistogramAccumulator.merge(other.valueHistogramAccumulator);
-    differentialHistogramAccumulator.merge(other.differentialHistogramAccumulator);
+    valueHistogram.merge(other.valueHistogram);
+    differentialHistogram.merge(other.differentialHistogram);
+    valueWindow.clear();
   }
 
   public void observe(final Double value) {
-    statsAccumulator.add(value);
-    valueHistogramAccumulator.observe(value);
-    differentialHistogramAccumulator.observe(value);
+    final var previousOptional = valueWindow.peek();
+    valueStatsAccumulator.add(value);
+    valueHistogram.observe(value);
+    valueWindow.observe(value);
+    previousOptional.ifPresent(previous -> differentialHistogram.observe(value - previous));
+    continuityStats.observe(value);
   }
 
   public static DoubleStats fromSnapshot(final FeatureOuterClass.NumericStats stats) {
-    final var valueHistogramAccumulator =
-        NumericPercentileHistogram.fromSnapshot(stats.getValueHistogram());
-    final var differentialHistogramAccumulator =
-        DifferentialPercentileHistogram.fromSnapshot(stats.getDifferentialHistogram());
-    final var internalStatsAccumulator = new com.google.common.math.StatsAccumulator();
-    final var internalStats =
+    final var valueHistogram = NumericPercentileHistogram.fromSnapshot(stats.getValueHistogram());
+    final var differentialHistogram =
+        NumericPercentileHistogram.fromSnapshot(stats.getDifferentialHistogram());
+    final var valueStatsAccumulator = new com.google.common.math.StatsAccumulator();
+    final var valueStats =
         com.google.common.math.Stats.fromByteArray(
-            Base64.getDecoder().decode(stats.getBase64StatsRepr()));
-    internalStatsAccumulator.addAll(internalStats);
+            Base64.getDecoder().decode(stats.getValueStats().getBase64StatsRepr()));
+    valueStatsAccumulator.addAll(valueStats);
+    final var continuityStats = ContinuityStats.fromSnapshot(stats.getContinuityStats());
     return new DoubleStats(
-        internalStatsAccumulator, valueHistogramAccumulator, differentialHistogramAccumulator);
+        valueStatsAccumulator, continuityStats, valueHistogram, differentialHistogram);
   }
 
   public FeatureOuterClass.NumericStats snapshot() {
     return FeatureOuterClass.NumericStats.newBuilder()
-        .setCount(statsAccumulator.count())
-        .setMax(statsAccumulator.max())
-        .setMin(statsAccumulator.min())
-        .setMean(statsAccumulator.mean())
-        .setStandardDeviation(statsAccumulator.sampleStandardDeviation())
-        .setValueHistogram(valueHistogramAccumulator.snapshot())
-        .setDifferentialHistogram(differentialHistogramAccumulator.snapshot())
-        .setBase64StatsRepr(
-            Base64.getEncoder().encodeToString(statsAccumulator.snapshot().toByteArray()))
+        .setValueStats(
+            FeatureOuterClass.NumericStats.ValueStats.newBuilder()
+                .setCount(valueStatsAccumulator.count())
+                .setMax(valueStatsAccumulator.max())
+                .setMin(valueStatsAccumulator.min())
+                .setMean(valueStatsAccumulator.mean())
+                .setStandardDeviation(valueStatsAccumulator.sampleStandardDeviation())
+                .setBase64StatsRepr(
+                    Base64.getEncoder()
+                        .encodeToString(valueStatsAccumulator.snapshot().toByteArray())))
+        .setContinuityStats(continuityStats.snapshot())
+        .setValueHistogram(valueHistogram.snapshot())
+        .setDifferentialHistogram(differentialHistogram.snapshot())
         .build();
   }
 }

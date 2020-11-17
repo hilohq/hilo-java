@@ -16,7 +16,7 @@ public final class FeatureInfer {
 
   private long getIntCount(final FeatureOuterClass.FeatureStats stats) {
     if (stats.hasIntStats()) {
-      return stats.getIntStats().getCount();
+      return stats.getIntStats().getValueStats().getCount();
     } else {
       return 0;
     }
@@ -24,7 +24,7 @@ public final class FeatureInfer {
 
   private long getLongCount(final FeatureOuterClass.FeatureStats stats) {
     if (stats.hasLongStats()) {
-      return stats.getLongStats().getCount();
+      return stats.getLongStats().getValueStats().getCount();
     } else {
       return 0;
     }
@@ -32,7 +32,7 @@ public final class FeatureInfer {
 
   private long getFloatCount(final FeatureOuterClass.FeatureStats stats) {
     if (stats.hasFloatStats()) {
-      return stats.getFloatStats().getCount();
+      return stats.getFloatStats().getValueStats().getCount();
     } else {
       return 0;
     }
@@ -40,7 +40,7 @@ public final class FeatureInfer {
 
   private long getDoubleCount(final FeatureOuterClass.FeatureStats stats) {
     if (stats.hasDoubleStats()) {
-      return stats.getDoubleStats().getCount();
+      return stats.getDoubleStats().getValueStats().getCount();
     } else {
       return 0;
     }
@@ -94,6 +94,20 @@ public final class FeatureInfer {
     return inferNumeric(snapshot);
   }
 
+  private boolean isCounter(final FeatureOuterClass.NumericStats snapshot) {
+    final var buckets = snapshot.getDifferentialHistogram().getBucketsList();
+    long totalCount = 0;
+    long countOfOne = 0;
+    for (final var bucket : buckets) {
+      totalCount += bucket.getCount();
+      if ((bucket.getMin() == bucket.getMax()) && (bucket.getMin() == 1)) {
+        countOfOne = bucket.getCount();
+      }
+    }
+
+    return (countOfOne / (double) totalCount) > 0.9;
+  }
+
   private FeatureOuterClass.FeatureClass inferNumeric(
       final FeatureOuterClass.NumericStats snapshot) {
     final var diffHistogram = snapshot.getDifferentialHistogram();
@@ -106,12 +120,27 @@ public final class FeatureInfer {
 
     final var bucket = diffHistogram.getBuckets(0);
     if (bucket.getMax() > 0) {
-      return FeatureOuterClass.FeatureClass.newBuilder()
-          .setMonotonic(FeatureOuterClass.FeatureClass.Monotonic.newBuilder())
-          .build();
-    } else {
+      if (isCounter(snapshot)) {
+        return FeatureOuterClass.FeatureClass.newBuilder()
+            .setCounter(FeatureOuterClass.FeatureClass.Counter.newBuilder())
+            .build();
+
+      } else {
+        return FeatureOuterClass.FeatureClass.newBuilder()
+            .setMonotonic(FeatureOuterClass.FeatureClass.Monotonic.newBuilder())
+            .build();
+      }
+    }
+
+    final var isContinuous = snapshot.getContinuityStats().getContinuityScore() > 0.7;
+    if (isContinuous) {
       return FeatureOuterClass.FeatureClass.newBuilder()
           .setGauge(FeatureOuterClass.FeatureClass.Gauge.newBuilder())
+          .build();
+
+    } else {
+      return FeatureOuterClass.FeatureClass.newBuilder()
+          .setDiscrete(FeatureOuterClass.FeatureClass.Discrete.newBuilder())
           .build();
     }
   }

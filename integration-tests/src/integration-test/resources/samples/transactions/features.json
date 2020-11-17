@@ -306,10 +306,22 @@
     "transactionIndex": {
       "stats": {
         "intStats": {
-          "count": "217",
-          "max": 10,
-          "mean": 2.1336405529953915,
-          "standardDeviation": 2.4143901384345616,
+          "valueStats": {
+            "count": "217",
+            "max": 10,
+            "mean": 2.1336405529953915,
+            "standardDeviation": 2.4143901384345616,
+            "base64StatsRepr": "2QAAAAAAAADIRmQjshEBQPzR/mh/rJNAAAAAAAAAAAAAAAAAAAAkQA=="
+          },
+          "continuityStats": {
+            "count": "215",
+            "min": 0.20089285714285715,
+            "max": 0.7455357142857143,
+            "mean": 0.48270210409745296,
+            "standardDeviation": 0.11006691408632015,
+            "continuityScore": 0.5927690181837731,
+            "base64StatsRepr": "1wAAAAAAAADOxbNdl+TeP5qLooWLvQRAbtu2bdu2yT+3bdu2bdvnPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -411,66 +423,66 @@
           "differentialHistogram": {
             "buckets": [
               {
+                "min": -10,
+                "max": -10,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": 1,
-                "max": 1,
+                "min": -8,
+                "max": -8,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": 2,
-                "max": 2,
+                "min": -7,
+                "max": -7,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": 3,
-                "max": 3,
+                "min": -6,
+                "max": -6,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": 4,
-                "max": 4,
+                "min": -5,
+                "max": -5,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": 5,
-                "max": 5,
+                "min": -4,
+                "max": -4,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": 6,
-                "max": 6,
+                "min": -3,
+                "max": -3,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": 7,
-                "max": 7,
+                "min": -2,
+                "max": -2,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": 8,
-                "max": 8,
+                "min": -1,
+                "max": -1,
                 "count": "1",
                 "boundary": 5
               },
               {
-                "min": 9,
-                "max": 9,
                 "count": "1",
                 "boundary": 10
               },
               {
-                "min": 10,
-                "max": 10,
+                "min": 1,
+                "max": 1,
                 "count": "1",
                 "boundary": 15
               }
@@ -505,21 +517,32 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "2QAAAAAAAADIRmQjshEBQPzR/mh/rJNAAAAAAAAAAAAAAAAAAAAkQA=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "nonce": {
       "stats": {
         "intStats": {
-          "count": "217",
-          "max": 172365,
-          "mean": 45657.433179723455,
-          "standardDeviation": 68616.37824499069,
+          "valueStats": {
+            "count": "217",
+            "max": 172365,
+            "mean": 45657.433179723455,
+            "standardDeviation": 68616.37824499069,
+            "base64StatsRepr": "2QAAAAAAAAAxuZvcLUvmQPhoXakJmW1CAAAAAAAAAAAAAAAAaAoFQQ=="
+          },
+          "continuityStats": {
+            "count": "215",
+            "min": 0.2544642857142857,
+            "max": 0.8705357142857143,
+            "mean": 0.5513012181616833,
+            "standardDeviation": 0.12805692552098008,
+            "continuityScore": 0.6793581436826635,
+            "base64StatsRepr": "1wAAAAAAAAAD+8dzQqThP2quNWoJEwxAkiRJkiRJ0D+3bdu2bdvrPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -723,170 +746,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -21,
-                "max": -21,
+                "min": -172358,
+                "max": -172358,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -20,
-                "max": -20,
+                "min": -172357,
+                "max": -172357,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -19,
-                "max": -19,
+                "min": -172341,
+                "max": -172341,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -18,
-                "max": -18,
+                "min": -172335,
+                "max": -172335,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": -17,
-                "max": -17,
+                "min": -172320,
+                "max": -172320,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -16,
-                "max": -16,
+                "min": -172296,
+                "max": -172296,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": -15,
-                "max": -15,
+                "min": -172261,
+                "max": -172261,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": -14,
-                "max": -14,
+                "min": -172198,
+                "max": -172198,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": -13,
-                "max": -6,
-                "count": "7",
+                "min": -171969,
+                "max": -163767,
+                "count": "5",
                 "boundary": 5
               },
               {
-                "min": -5,
-                "max": 11,
-                "count": "9",
+                "min": -162531,
+                "max": -82162,
+                "count": "7",
                 "boundary": 10
               },
               {
-                "min": 13,
-                "max": 87,
-                "count": "9",
+                "min": -78000,
+                "max": -22974,
+                "count": "7",
                 "boundary": 15
               },
               {
-                "min": 88,
-                "max": 157,
-                "count": "9",
+                "min": -22607,
+                "max": -10419,
+                "count": "7",
                 "boundary": 20
               },
               {
-                "min": 160,
-                "max": 380,
-                "count": "18",
+                "min": -10015,
+                "max": -314,
+                "count": "14",
                 "boundary": 30
               },
               {
-                "min": 401,
-                "max": 5792,
-                "count": "18",
+                "min": -286,
+                "max": -96,
+                "count": "14",
                 "boundary": 40
               },
               {
-                "min": 5793,
-                "max": 11846,
-                "count": "18",
+                "min": -83,
+                "max": 4,
+                "count": "14",
                 "boundary": 50
               },
               {
-                "min": 11847,
-                "max": 22954,
-                "count": "18",
+                "min": 8,
+                "max": 100,
+                "count": "14",
                 "boundary": 60
               },
               {
-                "min": 22955,
-                "max": 82155,
-                "count": "18",
+                "min": 103,
+                "max": 416,
+                "count": "14",
                 "boundary": 70
               },
               {
-                "min": 82156,
-                "max": 172310,
-                "count": "18",
+                "min": 447,
+                "max": 12557,
+                "count": "14",
                 "boundary": 80
               },
               {
-                "min": 172311,
-                "max": 172319,
-                "count": "9",
+                "min": 14247,
+                "max": 23360,
+                "count": "7",
                 "boundary": 85
               },
               {
-                "min": 172320,
-                "max": 172328,
-                "count": "9",
+                "min": 31897,
+                "max": 90181,
+                "count": "7",
                 "boundary": 90
               },
               {
-                "min": 172329,
-                "max": 172337,
-                "count": "9",
+                "min": 154934,
+                "max": 166547,
+                "count": "7",
                 "boundary": 95
               },
               {
-                "min": 172338,
-                "max": 172338,
-                "count": "1",
+                "min": 166548,
+                "max": 171970,
+                "count": "5",
                 "boundary": 99
               },
               {
-                "min": 172339,
-                "max": 172339,
+                "min": 172042,
+                "max": 172042,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 172340,
-                "max": 172340,
+                "min": 172122,
+                "max": 172122,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 172341,
-                "max": 172341,
+                "min": 172252,
+                "max": 172252,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 172342,
-                "max": 172342,
+                "min": 172319,
+                "max": 172319,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 172343,
-                "max": 172343,
+                "min": 172332,
+                "max": 172332,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 172344,
-                "max": 172344,
+                "min": 172352,
+                "max": 172352,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -921,12 +944,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "2QAAAAAAAAAxuZvcLUvmQPhoXakJmW1CAAAAAAAAAAAAAAAAaAoFQQ=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "input": {
@@ -2820,11 +2842,23 @@
     "blockNumber": {
       "stats": {
         "intStats": {
-          "count": "217",
-          "min": 1000000,
-          "max": 1000099,
-          "mean": 1000051.7327188943,
-          "standardDeviation": 29.244222102189642,
+          "valueStats": {
+            "count": "217",
+            "min": 1000000,
+            "max": 1000099,
+            "mean": 1000051.7327188943,
+            "standardDeviation": 29.244222102189642,
+            "base64StatsRepr": "2QAAAAAAAABQ7iZ354QuQWgdR/vDjAZBAAAAAICELkEAAAAARoUuQQ=="
+          },
+          "continuityStats": {
+            "count": "215",
+            "min": 0.06696428571428571,
+            "max": 0.7291666666666667,
+            "mean": 0.3531229235880398,
+            "standardDeviation": 0.12914406950220209,
+            "continuityScore": 0.4822669930902419,
+            "base64StatsRepr": "1wAAAAAAAACR0xHkkJnWP4ceToCVjQxASZIkSZIksT9WVVVVVVXnPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -3052,148 +3086,10 @@
                 "boundary": 0.0001
               },
               {
-                "min": 4,
-                "max": 4,
-                "count": "1",
-                "boundary": 0.001
-              },
-              {
                 "min": 5,
                 "max": 5,
                 "count": "1",
-                "boundary": 0.01
-              },
-              {
-                "min": 7,
-                "max": 7,
-                "count": "1",
-                "boundary": 0.1
-              },
-              {
-                "min": 8,
-                "max": 8,
-                "count": "1",
-                "boundary": 1
-              },
-              {
-                "min": 10,
-                "max": 12,
-                "count": "2",
-                "boundary": 5
-              },
-              {
-                "min": 13,
-                "max": 15,
-                "count": "3",
-                "boundary": 10
-              },
-              {
-                "min": 16,
-                "max": 18,
-                "count": "3",
-                "boundary": 15
-              },
-              {
-                "min": 21,
-                "max": 24,
-                "count": "3",
-                "boundary": 20
-              },
-              {
-                "min": 25,
-                "max": 31,
-                "count": "7",
-                "boundary": 30
-              },
-              {
-                "min": 32,
-                "max": 38,
-                "count": "7",
-                "boundary": 40
-              },
-              {
-                "min": 39,
-                "max": 49,
-                "count": "7",
-                "boundary": 50
-              },
-              {
-                "min": 50,
-                "max": 60,
-                "count": "7",
-                "boundary": 60
-              },
-              {
-                "min": 62,
-                "max": 70,
-                "count": "7",
-                "boundary": 70
-              },
-              {
-                "min": 71,
-                "max": 86,
-                "count": "7",
-                "boundary": 80
-              },
-              {
-                "min": 87,
-                "max": 87,
-                "count": "1",
-                "boundary": 85
-              },
-              {
-                "min": 89,
-                "max": 89,
-                "count": "1",
-                "boundary": 90
-              },
-              {
-                "min": 91,
-                "max": 91,
-                "count": "1",
-                "boundary": 95
-              },
-              {
-                "min": 93,
-                "max": 93,
-                "count": "1",
-                "boundary": 99
-              },
-              {
-                "min": 94,
-                "max": 94,
-                "count": "1",
-                "boundary": 99.9
-              },
-              {
-                "min": 95,
-                "max": 95,
-                "count": "1",
-                "boundary": 99.99
-              },
-              {
-                "min": 96,
-                "max": 96,
-                "count": "1",
-                "boundary": 99.999
-              },
-              {
-                "min": 97,
-                "max": 97,
-                "count": "1",
-                "boundary": 99.9999
-              },
-              {
-                "min": 98,
-                "max": 98,
-                "count": "1",
-                "boundary": 99.99999
-              },
-              {
-                "min": 99,
-                "max": 99,
-                "count": "1",
-                "boundary": 99.999999
+                "boundary": 0.001
               }
             ],
             "boundaries": [
@@ -3226,22 +3122,33 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "2QAAAAAAAABQ7iZ354QuQWgdR/vDjAZBAAAAAICELkEAAAAARoUuQQ=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "gas": {
       "stats": {
         "intStats": {
-          "count": "217",
-          "min": 21000,
-          "max": 3000000,
-          "mean": 122547.00000000004,
-          "standardDeviation": 260065.89633437863,
+          "valueStats": {
+            "count": "217",
+            "min": 21000,
+            "max": 3000000,
+            "mean": 122547.00000000004,
+            "standardDeviation": 260065.89633437863,
+            "base64StatsRepr": "2QAAAAAAAAADAAAAMOv9QAcYgczYkqpCAAAAAACC1EAAAAAAYONGQQ=="
+          },
+          "continuityStats": {
+            "count": "215",
+            "min": 0.06696428571428571,
+            "max": 0.5401785714285714,
+            "mean": 0.2813122923588041,
+            "standardDeviation": 0.1250281686170015,
+            "continuityScore": 0.4063404609758056,
+            "base64StatsRepr": "1wAAAAAAAADpNOlFBQHSP9T7uTMWwwpASZIkSZIksT+SJEmSJEnhPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -3381,104 +3288,172 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -108244,
-                "max": -108244,
+                "min": -2910000,
+                "max": -2910000,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -107244,
-                "max": -107244,
+                "min": -979000,
+                "max": -979000,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -107194,
-                "max": -107194,
+                "min": -950000,
+                "max": -950000,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -89244,
-                "max": -89244,
+                "min": -910000,
+                "max": -910000,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": -79244,
-                "max": -79244,
+                "min": -870127,
+                "max": -870127,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -39244,
-                "max": -39244,
+                "min": -700000,
+                "max": -700000,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": -29244,
-                "max": -29244,
+                "min": -479000,
+                "max": -479000,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": -8244,
-                "max": -8244,
+                "min": -410000,
+                "max": -410000,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "count": "1",
+                "min": -277950,
+                "max": -250000,
+                "count": "2",
                 "boundary": 5
               },
               {
-                "min": 629,
-                "max": 629,
-                "count": "1",
+                "min": -229000,
+                "max": -177950,
+                "count": "2",
                 "boundary": 10
               },
               {
-                "min": 45100,
-                "max": 45100,
-                "count": "1",
+                "min": -160000,
+                "max": -152344,
+                "count": "2",
                 "boundary": 15
               },
               {
-                "min": 70756,
-                "max": 70756,
-                "count": "1",
+                "min": -129000,
+                "max": -100000,
+                "count": "2",
                 "boundary": 20
               },
               {
-                "min": 120756,
-                "max": 120756,
-                "count": "1",
+                "min": -99000,
+                "max": -79000,
+                "count": "5",
                 "boundary": 30
               },
               {
-                "min": 170756,
-                "max": 170756,
-                "count": "1",
+                "min": -69000,
+                "max": -39873,
+                "count": "5",
                 "boundary": 40
               },
               {
-                "min": 370756,
-                "max": 370756,
-                "count": "1",
+                "min": -39244,
+                "max": -1050,
+                "count": "5",
                 "boundary": 50
               },
               {
-                "min": 870756,
-                "max": 870756,
-                "count": "1",
+                "min": -1000,
+                "max": 31000,
+                "count": "5",
                 "boundary": 60
               },
               {
-                "min": 2870756,
-                "max": 2870756,
-                "count": "1",
+                "min": 39244,
+                "max": 68000,
+                "count": "5",
                 "boundary": 70
+              },
+              {
+                "min": 69000,
+                "max": 99000,
+                "count": "5",
+                "boundary": 80
+              },
+              {
+                "min": 153344,
+                "max": 160000,
+                "count": "2",
+                "boundary": 85
+              },
+              {
+                "min": 177950,
+                "max": 177950,
+                "count": "1",
+                "boundary": 90
+              },
+              {
+                "min": 227950,
+                "max": 227950,
+                "count": "1",
+                "boundary": 95
+              },
+              {
+                "min": 229000,
+                "max": 229000,
+                "count": "1",
+                "boundary": 99
+              },
+              {
+                "min": 379000,
+                "max": 379000,
+                "count": "1",
+                "boundary": 99.9
+              },
+              {
+                "min": 410000,
+                "max": 410000,
+                "count": "1",
+                "boundary": 99.99
+              },
+              {
+                "min": 879000,
+                "max": 879000,
+                "count": "1",
+                "boundary": 99.999
+              },
+              {
+                "min": 910000,
+                "max": 910000,
+                "count": "1",
+                "boundary": 99.9999
+              },
+              {
+                "min": 979000,
+                "max": 979000,
+                "count": "1",
+                "boundary": 99.99999
+              },
+              {
+                "min": 2750000,
+                "max": 2750000,
+                "count": "1",
+                "boundary": 99.999999
               }
             ],
             "boundaries": [
@@ -3511,12 +3486,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "2QAAAAAAAAADAAAAMOv9QAcYgczYkqpCAAAAAACC1EAAAAAAYONGQQ=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "from": {
@@ -4478,10 +4452,22 @@
     "value": {
       "stats": {
         "intStats": {
-          "count": "20",
-          "max": 1,
-          "mean": 0.6000000000000002,
-          "standardDeviation": 0.5026246899500345,
+          "valueStats": {
+            "count": "20",
+            "max": 1,
+            "mean": 0.6000000000000002,
+            "standardDeviation": 0.5026246899500345,
+            "base64StatsRepr": "FAAAAAAAAAA1MzMzMzPjPzIzMzMzMxNAAAAAAAAAAAAAAAAAAADwPw=="
+          },
+          "continuityStats": {
+            "count": "18",
+            "min": 0.1294642857142857,
+            "max": 0.5,
+            "mean": 0.24489087301587295,
+            "standardDeviation": 0.11793590910163416,
+            "continuityScore": 0.36282678211750713,
+            "base64StatsRepr": "EgAAAAAAAACHlViJlVjPPyocEzkGRM4/JEmSJEmSwD8AAAAAAADgPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -4537,6 +4523,12 @@
               {
                 "count": "1",
                 "boundary": 0.000001
+              },
+              {
+                "min": 1,
+                "max": 1,
+                "count": "1",
+                "boundary": 0.00001
               }
             ],
             "boundaries": [
@@ -4569,15 +4561,26 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "FAAAAAAAAAA1MzMzMzPjPzIzMzMzMxNAAAAAAAAAAAAAAAAAAADwPw=="
+          }
         },
         "longStats": {
-          "count": "166",
-          "min": 90003103827236,
-          "max": 9000000000000000000,
-          "mean": 1232565399099249000,
-          "standardDeviation": 1211524783969696300,
+          "valueStats": {
+            "count": "166",
+            "min": 90003103827236,
+            "max": 9000000000000000000,
+            "mean": 1232565399099249000,
+            "standardDeviation": 1211524783969696300,
+            "base64StatsRepr": "pgAAAAAAAACRvzez8xqxQxX0LMxoxuZHAEkRwt521EIAoTgUmznfQw=="
+          },
+          "continuityStats": {
+            "count": "164",
+            "min": 0.2544642857142857,
+            "max": 0.8705357142857143,
+            "mean": 0.5298471980255515,
+            "standardDeviation": 0.12543197397481912,
+            "continuityScore": 0.6552791720003706,
+            "base64StatsRepr": "pAAAAAAAAAAOtGwcgvTgP7g+6vQchARAkiRJkiRJ0D+3bdu2bdvrPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -4783,170 +4786,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -437104976896172740,
-                "max": -437104976896172740,
+                "min": -8999909996896173000,
+                "max": -8999909996896173000,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -437093461713305800,
-                "max": -437093461713305800,
+                "min": -5130628490000000000,
+                "max": -5130628490000000000,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -437081830215460400,
-                "max": -437081830215460400,
+                "min": -4912039500000208000,
+                "max": -4912039500000208000,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -437070081227737800,
-                "max": -437070081227737800,
+                "min": -4031898910000000000,
+                "max": -4031898910000000000,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": -436194980000000000,
-                "max": -436194980000000000,
+                "min": -4001968090000000000,
+                "max": -4001968090000000000,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -435194980000000000,
-                "max": -435194980000000000,
+                "min": -4000071950000000000,
+                "max": -4000071950000000000,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": -432194980000000000,
-                "max": -432194980000000000,
+                "min": -3949779500000000000,
+                "max": -3949779500000000000,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": -422107634867256640,
-                "max": -422107634867256640,
+                "min": -3947505400000208000,
+                "max": -3947505400000208000,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": -420989130000000000,
-                "max": -337194980000000000,
+                "min": -2368860610000000000,
+                "max": -1274956845394830300,
                 "count": "6",
                 "boundary": 5
               },
               {
-                "min": -336046090000000000,
-                "max": -212970350000000000,
-                "count": "7",
+                "min": -1166402930000000000,
+                "max": -1018252010000000000,
+                "count": "8",
                 "boundary": 10
               },
               {
-                "min": -200194790000000000,
-                "max": 62805020000000000,
-                "count": "7",
+                "min": -1012362091227737900,
+                "max": -910288100000000000,
+                "count": "8",
                 "boundary": 15
               },
               {
-                "min": 193944410000000000,
-                "max": 561586620000000000,
-                "count": "7",
+                "min": -874405060000000000,
+                "max": -237013900000000000,
+                "count": "8",
                 "boundary": 20
               },
               {
-                "min": 561835000000000000,
-                "max": 567435760000000000,
-                "count": "15",
+                "min": -216582190000000000,
+                "max": -33164099999999984,
+                "count": "16",
                 "boundary": 30
               },
               {
-                "min": 568695760000000000,
-                "max": 580000780000000000,
-                "count": "15",
+                "min": -32870940000000000,
+                "max": -1869660000000000,
+                "count": "16",
                 "boundary": 40
               },
               {
-                "min": 581400190000000000,
-                "max": 591636230000000000,
-                "count": "15",
+                "min": -1692620000000000,
+                "max": -172750000000000,
+                "count": "16",
                 "boundary": 50
               },
               {
-                "min": 592044340000000000,
-                "max": 601987280000000000,
-                "count": "15",
+                "min": -152380000000000,
+                "max": 26186650000000000,
+                "count": "16",
                 "boundary": 60
               },
               {
-                "min": 602366810000000000,
-                "max": 611655260000000000,
-                "count": "15",
+                "min": 27142960000000000,
+                "max": 200415650000000000,
+                "count": "16",
                 "boundary": 70
               },
               {
-                "min": 611985900000000000,
-                "max": 781498330000000000,
-                "count": "15",
+                "min": 205934330000000260,
+                "max": 918001040000000000,
+                "count": "16",
                 "boundary": 80
               },
               {
-                "min": 782758330000000000,
-                "max": 1374492960000000000,
-                "count": "7",
+                "min": 929903150000000000,
+                "max": 1013595170000000000,
+                "count": "8",
                 "boundary": 85
               },
               {
-                "min": 1562805020000000000,
-                "max": 1772805020000000000,
-                "count": "7",
+                "min": 1023245500000000000,
+                "max": 1997064360000000000,
+                "count": "8",
                 "boundary": 90
               },
               {
-                "min": 1822055190000000000,
-                "max": 4513844520000208000,
-                "count": "7",
+                "min": 2108851110000000000,
+                "max": 3005377050000000000,
+                "count": "4",
                 "boundary": 95
               },
               {
-                "min": 4529021220000208000,
-                "max": 4529021220000208000,
+                "min": 3996762260000000000,
+                "max": 3996762260000000000,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 4562805020000000000,
-                "max": 4562805020000000000,
+                "min": 4008926240000000000,
+                "max": 4008926240000000000,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 4567708750000000000,
-                "max": 4567708750000000000,
+                "min": 4703860610000000000,
+                "max": 4703860610000000000,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 4585963930000000000,
-                "max": 4585963930000000000,
+                "min": 4761844690000208000,
+                "max": 4761844690000208000,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 4587013930000000000,
-                "max": 4587013930000000000,
+                "min": 4799482220000000000,
+                "max": 4799482220000000000,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 4897805020000000000,
-                "max": 4897805020000000000,
+                "min": 4998000000000000000,
+                "max": 4998000000000000000,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 8562805020000000000,
-                "max": 8562805020000000000,
+                "min": 7993176990000000000,
+                "max": 7993176990000000000,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -4981,15 +4984,26 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "pgAAAAAAAACRvzez8xqxQxX0LMxoxuZHAEkRwt521EIAoTgUmznfQw=="
+          }
         },
         "floatStats": {
-          "count": "31",
-          "min": 9999999980506448000,
-          "max": 2.179175047569248e+21,
-          "mean": 334864646397594700000,
-          "standardDeviation": 571783156792507200000,
+          "valueStats": {
+            "count": "31",
+            "min": 9999999980506448000,
+            "max": 2.179175047569248e+21,
+            "mean": 334864646397594700000,
+            "standardDeviation": 571783156792507200000,
+            "base64StatsRepr": "HwAAAAAAAABsrbU1LicyRDvuArPWJdxIAAAAYORY4UMAAABAiIhdRA=="
+          },
+          "continuityStats": {
+            "count": "29",
+            "min": 0.32589285714285715,
+            "max": 0.75,
+            "mean": 0.5138752052545157,
+            "standardDeviation": 0.10316698432310342,
+            "continuityScore": 0.6170421895776191,
+            "base64StatsRepr": "HQAAAAAAAADMYxlqqnHgP+mqyHmxEtM/t23btm3b1D8AAAAAAADoPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -5195,169 +5209,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -90000002023581290000,
-                "max": -90000002023581290000,
+                "min": -2.1591165250023352e+21,
+                "max": -2.1591165250023352e+21,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -89933428793542700000,
-                "max": -89933428793542700000,
+                "min": -2.1289243447219318e+21,
+                "max": -2.1289243447219318e+21,
                 "count": "1",
                 "boundary": 0.000001
+              },
+              {
+                "min": -1.2999999644804894e+21,
+                "max": -1.2999999644804894e+21,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": -651895025715088700000,
+                "max": -651895025715088700000,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": -380150058407180600000,
+                "max": -380150058407180600000,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": -299990013650590000000,
+                "max": -299990013650590000000,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": -274999996715148250000,
+                "max": -274999996715148250000,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": -188771150250047960000,
+                "max": -188771150250047960000,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "min": -176541729915528020000,
+                "max": -176541729915528020000,
+                "count": "1",
+                "boundary": 5
+              },
+              {
+                "min": -152749305443106420000,
+                "max": -152749305443106420000,
+                "count": "1",
+                "boundary": 10
               },
               {
                 "min": -89932168753217270000,
                 "max": -89932168753217270000,
                 "count": "1",
-                "boundary": 0.00001
-              },
-              {
-                "min": -79941479437174830000,
-                "max": -79941479437174830000,
-                "count": "1",
-                "boundary": 0.0001
-              },
-              {
-                "min": -79940219396849400000,
-                "max": -79940219396849400000,
-                "count": "1",
-                "boundary": 0.001
-              },
-              {
-                "min": -76541727911440290000,
-                "max": -76541727911440290000,
-                "count": "1",
-                "boundary": 0.01
-              },
-              {
-                "min": -76001262970807000000,
-                "max": -76001262970807000000,
-                "count": "1",
-                "boundary": 0.1
-              },
-              {
-                "min": -76000002930481560000,
-                "max": -76000002930481560000,
-                "count": "1",
-                "boundary": 1
+                "boundary": 15
               },
               {
                 "min": -70010002120823010000,
                 "max": -70010002120823010000,
                 "count": "1",
-                "boundary": 5
-              },
-              {
-                "min": -49750565794166600000,
-                "max": -49750565794166600000,
-                "count": "1",
-                "boundary": 10
-              },
-              {
-                "min": -49749307952864430000,
-                "max": -49749307952864430000,
-                "count": "1",
-                "boundary": 15
-              },
-              {
-                "min": -37869788502186525000,
-                "max": -37869788502186525000,
-                "count": "1",
                 "boundary": 20
               },
               {
-                "min": -30009999999773966000,
-                "max": -25010001658788184000,
+                "min": -45990002930707595000,
+                "max": -22885850747041220000,
                 "count": "2",
                 "boundary": 30
               },
               {
-                "min": -10001157766250496,
+                "min": -13999999093099725000,
+                "max": 3940216466367840000,
                 "count": "2",
                 "boundary": 40
               },
               {
-                "min": 10076988884194951000,
-                "max": 10076988884194951000,
+                "min": 9991949356367872000,
+                "max": 9991949356367872000,
                 "count": "1",
                 "boundary": 50
               },
               {
-                "min": 98837721456505260000,
-                "max": 98837721456505260000,
+                "min": 11880777291980080000,
+                "max": 11880777291980080000,
                 "count": "1",
                 "boundary": 60
               },
               {
-                "min": 98838970501714410000,
-                "max": 98838970501714410000,
+                "min": 22884795215878554000,
+                "max": 22884795215878554000,
                 "count": "1",
                 "boundary": 70
               },
               {
-                "min": 100000002004087730000,
-                "max": 100000002004087730000,
+                "min": 86618716795635240000,
+                "max": 86618716795635240000,
                 "count": "1",
                 "boundary": 80
               },
               {
-                "min": 102999997490242000000,
-                "max": 102999997490242000000,
+                "min": 149749309956952160000,
+                "max": 149749309956952160000,
                 "count": "1",
                 "boundary": 85
               },
               {
-                "min": 249989995056360060000,
-                "max": 249989995056360060000,
+                "min": 174838984427312250000,
+                "max": 174838984427312250000,
                 "count": "1",
                 "boundary": 90
               },
               {
-                "min": 299990013650590000000,
-                "max": 299990013650590000000,
+                "min": 188838972525295700000,
+                "max": 188838972525295700000,
                 "count": "1",
                 "boundary": 95
               },
               {
-                "min": 327255263191528100000,
-                "max": 327255263191528100000,
+                "min": 325000015309378160000,
+                "max": 325000015309378160000,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 350140058407406670000,
-                "max": 350140058407406670000,
+                "min": 339923423849902800000,
+                "max": 339923423849902800000,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 350141113938569300000,
-                "max": 350141113938569300000,
+                "min": 430081333335418700000,
+                "max": 430081333335418700000,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 754895023205330700000,
-                "max": 754895023205330700000,
+                "min": 754905024363097000000,
+                "max": 754905024363097000000,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 1.2999899633227231e+21,
-                "max": 1.2999899633227231e+21,
+                "min": 1.3699999654435462e+21,
+                "max": 1.3699999654435462e+21,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 2.0791737789277652e+21,
-                "max": 2.0791737789277652e+21,
+                "min": 1.980336075063446e+21,
+                "max": 1.980336075063446e+21,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 2.0791750455651604e+21,
-                "max": 2.0791750455651604e+21,
+                "min": 2.0690967900435702e+21,
+                "max": 2.0690967900435702e+21,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -5392,12 +5407,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "HwAAAAAAAABsrbU1LicyRDvuArPWJdxIAAAAYORY4UMAAABAiIhdRA=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "hash": {
@@ -6285,10 +6299,16 @@
     "gasPrice": {
       "stats": {
         "intStats": {
-          "count": "2",
-          "min": 10,
-          "max": 10,
-          "mean": 10,
+          "valueStats": {
+            "count": "2",
+            "min": 10,
+            "max": 10,
+            "mean": 10,
+            "base64StatsRepr": "AgAAAAAAAAAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAkQA=="
+          },
+          "continuityStats": {
+            "base64StatsRepr": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+H8AAAAAAAD4fw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -6366,15 +6386,26 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "AgAAAAAAAAAAAAAAAAAkQAAAAAAAAAAAAAAAAAAAJEAAAAAAAAAkQA=="
+          }
         },
         "longStats": {
-          "count": "215",
-          "min": 45000000000,
-          "max": 80525500000,
-          "mean": 53001928541.218636,
-          "standardDeviation": 5729130005.953071,
+          "valueStats": {
+            "count": "215",
+            "min": 45000000000,
+            "max": 80525500000,
+            "mean": 53001928541.218636,
+            "standardDeviation": 5729130005.953071,
+            "base64StatsRepr": "1wAAAAAAAADxb7p+Uq4oQvSuEBlxzHdEAAAABGv0JEIAAGCesb8yQg=="
+          },
+          "continuityStats": {
+            "count": "213",
+            "min": 0.06696428571428571,
+            "max": 0.625,
+            "mean": 0.17489101274312543,
+            "standardDeviation": 0.09839643917282728,
+            "continuityScore": 0.2732874519159527,
+            "base64StatsRepr": "1QAAAAAAAAAjSwwm1GLGP1YM24OhawBASZIkSZIksT8AAAAAAADkPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -6454,44 +6485,98 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -35525500000,
-                "max": -35525500000,
-                "count": "1",
-                "boundary": 1e-7
-              },
-              {
-                "min": -35070954546,
-                "max": -35070954546,
-                "count": "1",
-                "boundary": 0.000001
-              },
-              {
                 "min": -30525500000,
                 "max": -30525500000,
                 "count": "1",
-                "boundary": 0.00001
-              },
-              {
-                "min": -28525500000,
-                "max": -28525500000,
-                "count": "1",
-                "boundary": 0.0001
+                "boundary": 1e-7
               },
               {
                 "min": -20525500000,
                 "max": -20525500000,
                 "count": "1",
+                "boundary": 0.000001
+              },
+              {
+                "min": -20000000000,
+                "max": -20000000000,
+                "count": "1",
+                "boundary": 0.00001
+              },
+              {
+                "min": -18000000000,
+                "max": -18000000000,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": -10000000000,
+                "max": -10000000000,
+                "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -10525500000,
-                "max": -10525500000,
+                "min": -5000000000,
+                "max": -5000000000,
                 "count": "1",
                 "boundary": 0.01
               },
               {
+                "min": -4545454546,
+                "max": -4545454546,
                 "count": "1",
                 "boundary": 0.1
+              },
+              {
+                "min": -2000000000,
+                "max": -2000000000,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "count": "1",
+                "boundary": 5
+              },
+              {
+                "min": 2000000000,
+                "max": 2000000000,
+                "count": "1",
+                "boundary": 10
+              },
+              {
+                "min": 4545454546,
+                "max": 4545454546,
+                "count": "1",
+                "boundary": 15
+              },
+              {
+                "min": 5000000000,
+                "max": 5000000000,
+                "count": "1",
+                "boundary": 20
+              },
+              {
+                "min": 10000000000,
+                "max": 10000000000,
+                "count": "1",
+                "boundary": 30
+              },
+              {
+                "min": 15000000000,
+                "max": 15000000000,
+                "count": "1",
+                "boundary": 40
+              },
+              {
+                "min": 20000000000,
+                "max": 20000000000,
+                "count": "1",
+                "boundary": 50
+              },
+              {
+                "min": 30525500000,
+                "max": 30525500000,
+                "count": "1",
+                "boundary": 60
               }
             ],
             "boundaries": [
@@ -6524,12 +6609,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "1wAAAAAAAADxb7p+Uq4oQvSuEBlxzHdEAAAABGv0JEIAAGCesb8yQg=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     }
   }

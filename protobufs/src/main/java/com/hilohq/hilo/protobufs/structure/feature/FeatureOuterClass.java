@@ -947,107 +947,122 @@ public final class FeatureOuterClass {
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.GaugeOrBuilder getGaugeOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     * @return Whether the discrete field is set.
+     */
+    boolean hasDiscrete();
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     * @return The discrete.
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDiscrete();
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder getDiscreteOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      * @return Whether the counter field is set.
      */
     boolean hasCounter();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      * @return The counter.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter getCounter();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      * @return Whether the monotonic field is set.
      */
     boolean hasMonotonic();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      * @return The monotonic.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic getMonotonic();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.MonotonicOrBuilder getMonotonicOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      * @return Whether the distance field is set.
      */
     boolean hasDistance();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      * @return The distance.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance getDistance();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      * @return Whether the duration field is set.
      */
     boolean hasDuration();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      * @return The duration.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration getDuration();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      * @return The timestamp.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp getTimestamp();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      * @return Whether the set field is set.
      */
     boolean hasSet();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      * @return The set.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set getSet();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      * @return Whether the ephemeral field is set.
      */
     boolean hasEphemeral();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      * @return The ephemeral.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral();
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder();
 
@@ -1155,8 +1170,22 @@ public final class FeatureOuterClass {
               break;
             }
             case 42: {
-              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder subBuilder = null;
               if (featureCase_ == 5) {
+                subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 5;
+              break;
+            }
+            case 50: {
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder subBuilder = null;
+              if (featureCase_ == 6) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_).toBuilder();
               }
               feature_ =
@@ -1165,12 +1194,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 5;
+              featureCase_ = 6;
               break;
             }
-            case 50: {
+            case 58: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.Builder subBuilder = null;
-              if (featureCase_ == 6) {
+              if (featureCase_ == 7) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_).toBuilder();
               }
               feature_ =
@@ -1179,12 +1208,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 6;
+              featureCase_ = 7;
               break;
             }
-            case 58: {
+            case 66: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.Builder subBuilder = null;
-              if (featureCase_ == 7) {
+              if (featureCase_ == 8) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_).toBuilder();
               }
               feature_ =
@@ -1193,12 +1222,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 7;
+              featureCase_ = 8;
               break;
             }
-            case 66: {
+            case 74: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.Builder subBuilder = null;
-              if (featureCase_ == 8) {
+              if (featureCase_ == 9) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_).toBuilder();
               }
               feature_ =
@@ -1207,12 +1236,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 8;
+              featureCase_ = 9;
               break;
             }
-            case 74: {
+            case 82: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.Builder subBuilder = null;
-              if (featureCase_ == 9) {
+              if (featureCase_ == 10) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_).toBuilder();
               }
               feature_ =
@@ -1221,12 +1250,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 9;
+              featureCase_ = 10;
               break;
             }
-            case 82: {
+            case 90: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.Builder subBuilder = null;
-              if (featureCase_ == 10) {
+              if (featureCase_ == 11) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_).toBuilder();
               }
               feature_ =
@@ -1235,12 +1264,12 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 10;
+              featureCase_ = 11;
               break;
             }
-            case 90: {
+            case 98: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.Builder subBuilder = null;
-              if (featureCase_ == 11) {
+              if (featureCase_ == 12) {
                 subBuilder = ((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_).toBuilder();
               }
               feature_ =
@@ -1249,7 +1278,7 @@ public final class FeatureOuterClass {
                 subBuilder.mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
                 feature_ = subBuilder.buildPartial();
               }
-              featureCase_ = 11;
+              featureCase_ = 12;
               break;
             }
             default: {
@@ -6890,6 +6919,424 @@ public final class FeatureOuterClass {
 
     }
 
+    public interface DiscreteOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.feature.FeatureClass.Discrete)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.feature.FeatureClass.Discrete}
+     */
+    public static final class Discrete extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.feature.FeatureClass.Discrete)
+        DiscreteOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Discrete.newBuilder() to construct.
+      private Discrete(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Discrete() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Discrete();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Discrete(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.class, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete other = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.feature.FeatureClass.Discrete}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.feature.FeatureClass.Discrete)
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.class, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete build() {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete buildPartial() {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete result = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete other) {
+          if (other == com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.feature.FeatureClass.Discrete)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.feature.FeatureClass.Discrete)
+      private static final com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Discrete>
+          PARSER = new com.google.protobuf.AbstractParser<Discrete>() {
+        @java.lang.Override
+        public Discrete parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Discrete(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Discrete> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Discrete> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int featureCase_ = 0;
     private java.lang.Object feature_;
     public enum FeatureCase
@@ -6899,13 +7346,14 @@ public final class FeatureOuterClass {
       INT_ENUM(2),
       STRING_ENUM(3),
       GAUGE(4),
-      COUNTER(5),
-      MONOTONIC(6),
-      DISTANCE(7),
-      DURATION(8),
-      TIMESTAMP(9),
-      SET(10),
-      EPHEMERAL(11),
+      DISCRETE(5),
+      COUNTER(6),
+      MONOTONIC(7),
+      DISTANCE(8),
+      DURATION(9),
+      TIMESTAMP(10),
+      SET(11),
+      EPHEMERAL(12),
       FEATURE_NOT_SET(0);
       private final int value;
       private FeatureCase(int value) {
@@ -6927,13 +7375,14 @@ public final class FeatureOuterClass {
           case 2: return INT_ENUM;
           case 3: return STRING_ENUM;
           case 4: return GAUGE;
-          case 5: return COUNTER;
-          case 6: return MONOTONIC;
-          case 7: return DISTANCE;
-          case 8: return DURATION;
-          case 9: return TIMESTAMP;
-          case 10: return SET;
-          case 11: return EPHEMERAL;
+          case 5: return DISCRETE;
+          case 6: return COUNTER;
+          case 7: return MONOTONIC;
+          case 8: return DISTANCE;
+          case 9: return DURATION;
+          case 10: return TIMESTAMP;
+          case 11: return SET;
+          case 12: return EPHEMERAL;
           case 0: return FEATURE_NOT_SET;
           default: return null;
         }
@@ -7073,218 +7522,249 @@ public final class FeatureOuterClass {
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Gauge.getDefaultInstance();
     }
 
-    public static final int COUNTER_FIELD_NUMBER = 5;
+    public static final int DISCRETE_FIELD_NUMBER = 5;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     * @return Whether the discrete field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscrete() {
+      return featureCase_ == 5;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     * @return The discrete.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDiscrete() {
+      if (featureCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder getDiscreteOrBuilder() {
+      if (featureCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_;
+      }
+      return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+    }
+
+    public static final int COUNTER_FIELD_NUMBER = 6;
+    /**
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      * @return Whether the counter field is set.
      */
     @java.lang.Override
     public boolean hasCounter() {
-      return featureCase_ == 5;
+      return featureCase_ == 6;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      * @return The counter.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter getCounter() {
-      if (featureCase_ == 5) {
+      if (featureCase_ == 6) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder() {
-      if (featureCase_ == 5) {
+      if (featureCase_ == 6) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
     }
 
-    public static final int MONOTONIC_FIELD_NUMBER = 6;
+    public static final int MONOTONIC_FIELD_NUMBER = 7;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      * @return Whether the monotonic field is set.
      */
     @java.lang.Override
     public boolean hasMonotonic() {
-      return featureCase_ == 6;
+      return featureCase_ == 7;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      * @return The monotonic.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic getMonotonic() {
-      if (featureCase_ == 6) {
+      if (featureCase_ == 7) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.MonotonicOrBuilder getMonotonicOrBuilder() {
-      if (featureCase_ == 6) {
+      if (featureCase_ == 7) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
     }
 
-    public static final int DISTANCE_FIELD_NUMBER = 7;
+    public static final int DISTANCE_FIELD_NUMBER = 8;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      * @return Whether the distance field is set.
      */
     @java.lang.Override
     public boolean hasDistance() {
-      return featureCase_ == 7;
+      return featureCase_ == 8;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      * @return The distance.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance getDistance() {
-      if (featureCase_ == 7) {
+      if (featureCase_ == 8) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder() {
-      if (featureCase_ == 7) {
+      if (featureCase_ == 8) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
     }
 
-    public static final int DURATION_FIELD_NUMBER = 8;
+    public static final int DURATION_FIELD_NUMBER = 9;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      * @return Whether the duration field is set.
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return featureCase_ == 8;
+      return featureCase_ == 9;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      * @return The duration.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration getDuration() {
-      if (featureCase_ == 8) {
+      if (featureCase_ == 9) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder() {
-      if (featureCase_ == 8) {
+      if (featureCase_ == 9) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 9;
+    public static final int TIMESTAMP_FIELD_NUMBER = 10;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      * @return Whether the timestamp field is set.
      */
     @java.lang.Override
     public boolean hasTimestamp() {
-      return featureCase_ == 9;
+      return featureCase_ == 10;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      * @return The timestamp.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp getTimestamp() {
-      if (featureCase_ == 9) {
+      if (featureCase_ == 10) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.TimestampOrBuilder getTimestampOrBuilder() {
-      if (featureCase_ == 9) {
+      if (featureCase_ == 10) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
     }
 
-    public static final int SET_FIELD_NUMBER = 10;
+    public static final int SET_FIELD_NUMBER = 11;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      * @return Whether the set field is set.
      */
     @java.lang.Override
     public boolean hasSet() {
-      return featureCase_ == 10;
+      return featureCase_ == 11;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      * @return The set.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set getSet() {
-      if (featureCase_ == 10) {
+      if (featureCase_ == 11) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder() {
-      if (featureCase_ == 10) {
+      if (featureCase_ == 11) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
     }
 
-    public static final int EPHEMERAL_FIELD_NUMBER = 11;
+    public static final int EPHEMERAL_FIELD_NUMBER = 12;
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      * @return Whether the ephemeral field is set.
      */
     @java.lang.Override
     public boolean hasEphemeral() {
-      return featureCase_ == 11;
+      return featureCase_ == 12;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      * @return The ephemeral.
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral() {
-      if (featureCase_ == 11) {
+      if (featureCase_ == 12) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+     * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder() {
-      if (featureCase_ == 11) {
+      if (featureCase_ == 12) {
          return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
       }
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
@@ -7317,25 +7797,28 @@ public final class FeatureOuterClass {
         output.writeMessage(4, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Gauge) feature_);
       }
       if (featureCase_ == 5) {
-        output.writeMessage(5, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_);
+        output.writeMessage(5, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_);
       }
       if (featureCase_ == 6) {
-        output.writeMessage(6, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_);
+        output.writeMessage(6, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_);
       }
       if (featureCase_ == 7) {
-        output.writeMessage(7, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_);
+        output.writeMessage(7, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_);
       }
       if (featureCase_ == 8) {
-        output.writeMessage(8, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_);
+        output.writeMessage(8, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_);
       }
       if (featureCase_ == 9) {
-        output.writeMessage(9, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_);
+        output.writeMessage(9, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_);
       }
       if (featureCase_ == 10) {
-        output.writeMessage(10, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_);
+        output.writeMessage(10, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_);
       }
       if (featureCase_ == 11) {
-        output.writeMessage(11, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
+        output.writeMessage(11, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_);
+      }
+      if (featureCase_ == 12) {
+        output.writeMessage(12, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
       }
       unknownFields.writeTo(output);
     }
@@ -7364,31 +7847,35 @@ public final class FeatureOuterClass {
       }
       if (featureCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_);
+          .computeMessageSize(5, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_);
       }
       if (featureCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_);
+          .computeMessageSize(6, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_);
       }
       if (featureCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_);
+          .computeMessageSize(7, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_);
       }
       if (featureCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_);
+          .computeMessageSize(8, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_);
       }
       if (featureCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_);
+          .computeMessageSize(9, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_);
       }
       if (featureCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_);
+          .computeMessageSize(10, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_);
       }
       if (featureCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
+          .computeMessageSize(11, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_);
+      }
+      if (featureCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7424,30 +7911,34 @@ public final class FeatureOuterClass {
               .equals(other.getGauge())) return false;
           break;
         case 5:
+          if (!getDiscrete()
+              .equals(other.getDiscrete())) return false;
+          break;
+        case 6:
           if (!getCounter()
               .equals(other.getCounter())) return false;
           break;
-        case 6:
+        case 7:
           if (!getMonotonic()
               .equals(other.getMonotonic())) return false;
           break;
-        case 7:
+        case 8:
           if (!getDistance()
               .equals(other.getDistance())) return false;
           break;
-        case 8:
+        case 9:
           if (!getDuration()
               .equals(other.getDuration())) return false;
           break;
-        case 9:
+        case 10:
           if (!getTimestamp()
               .equals(other.getTimestamp())) return false;
           break;
-        case 10:
+        case 11:
           if (!getSet()
               .equals(other.getSet())) return false;
           break;
-        case 11:
+        case 12:
           if (!getEphemeral()
               .equals(other.getEphemeral())) return false;
           break;
@@ -7483,30 +7974,34 @@ public final class FeatureOuterClass {
           hash = (53 * hash) + getGauge().hashCode();
           break;
         case 5:
+          hash = (37 * hash) + DISCRETE_FIELD_NUMBER;
+          hash = (53 * hash) + getDiscrete().hashCode();
+          break;
+        case 6:
           hash = (37 * hash) + COUNTER_FIELD_NUMBER;
           hash = (53 * hash) + getCounter().hashCode();
           break;
-        case 6:
+        case 7:
           hash = (37 * hash) + MONOTONIC_FIELD_NUMBER;
           hash = (53 * hash) + getMonotonic().hashCode();
           break;
-        case 7:
+        case 8:
           hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
           hash = (53 * hash) + getDistance().hashCode();
           break;
-        case 8:
+        case 9:
           hash = (37 * hash) + DURATION_FIELD_NUMBER;
           hash = (53 * hash) + getDuration().hashCode();
           break;
-        case 9:
+        case 10:
           hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
           hash = (53 * hash) + getTimestamp().hashCode();
           break;
-        case 10:
+        case 11:
           hash = (37 * hash) + SET_FIELD_NUMBER;
           hash = (53 * hash) + getSet().hashCode();
           break;
-        case 11:
+        case 12:
           hash = (37 * hash) + EPHEMERAL_FIELD_NUMBER;
           hash = (53 * hash) + getEphemeral().hashCode();
           break;
@@ -7703,48 +8198,55 @@ public final class FeatureOuterClass {
           }
         }
         if (featureCase_ == 5) {
+          if (discreteBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = discreteBuilder_.build();
+          }
+        }
+        if (featureCase_ == 6) {
           if (counterBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = counterBuilder_.build();
           }
         }
-        if (featureCase_ == 6) {
+        if (featureCase_ == 7) {
           if (monotonicBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = monotonicBuilder_.build();
           }
         }
-        if (featureCase_ == 7) {
+        if (featureCase_ == 8) {
           if (distanceBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = distanceBuilder_.build();
           }
         }
-        if (featureCase_ == 8) {
+        if (featureCase_ == 9) {
           if (durationBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = durationBuilder_.build();
           }
         }
-        if (featureCase_ == 9) {
+        if (featureCase_ == 10) {
           if (timestampBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = timestampBuilder_.build();
           }
         }
-        if (featureCase_ == 10) {
+        if (featureCase_ == 11) {
           if (setBuilder_ == null) {
             result.feature_ = feature_;
           } else {
             result.feature_ = setBuilder_.build();
           }
         }
-        if (featureCase_ == 11) {
+        if (featureCase_ == 12) {
           if (ephemeralBuilder_ == null) {
             result.feature_ = feature_;
           } else {
@@ -7815,6 +8317,10 @@ public final class FeatureOuterClass {
           }
           case GAUGE: {
             mergeGauge(other.getGauge());
+            break;
+          }
+          case DISCRETE: {
+            mergeDiscrete(other.getDiscrete());
             break;
           }
           case COUNTER: {
@@ -8458,35 +8964,176 @@ public final class FeatureOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder> discreteBuilder_;
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       * @return Whether the discrete field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiscrete() {
+        return featureCase_ == 5;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       * @return The discrete.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete getDiscrete() {
+        if (discreteBuilder_ == null) {
+          if (featureCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+        } else {
+          if (featureCase_ == 5) {
+            return discreteBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      public Builder setDiscrete(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete value) {
+        if (discreteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          discreteBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      public Builder setDiscrete(
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder builderForValue) {
+        if (discreteBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          discreteBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      public Builder mergeDiscrete(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete value) {
+        if (discreteBuilder_ == null) {
+          if (featureCase_ == 5 &&
+              feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance()) {
+            feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 5) {
+            discreteBuilder_.mergeFrom(value);
+          }
+          discreteBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      public Builder clearDiscrete() {
+        if (discreteBuilder_ == null) {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          discreteBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder getDiscreteBuilder() {
+        return getDiscreteFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder getDiscreteOrBuilder() {
+        if ((featureCase_ == 5) && (discreteBuilder_ != null)) {
+          return discreteBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_;
+          }
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Discrete discrete = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder> 
+          getDiscreteFieldBuilder() {
+        if (discreteBuilder_ == null) {
+          if (!(featureCase_ == 5)) {
+            feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.getDefaultInstance();
+          }
+          discreteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DiscreteOrBuilder>(
+                  (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Discrete) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 5;
+        onChanged();;
+        return discreteBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.CounterOrBuilder> counterBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        * @return Whether the counter field is set.
        */
       @java.lang.Override
       public boolean hasCounter() {
-        return featureCase_ == 5;
+        return featureCase_ == 6;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        * @return The counter.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter getCounter() {
         if (counterBuilder_ == null) {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
         } else {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             return counterBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       public Builder setCounter(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter value) {
         if (counterBuilder_ == null) {
@@ -8498,11 +9145,11 @@ public final class FeatureOuterClass {
         } else {
           counterBuilder_.setMessage(value);
         }
-        featureCase_ = 5;
+        featureCase_ = 6;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       public Builder setCounter(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder builderForValue) {
@@ -8512,15 +9159,15 @@ public final class FeatureOuterClass {
         } else {
           counterBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 5;
+        featureCase_ = 6;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       public Builder mergeCounter(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter value) {
         if (counterBuilder_ == null) {
-          if (featureCase_ == 5 &&
+          if (featureCase_ == 6 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_)
                 .mergeFrom(value).buildPartial();
@@ -8529,26 +9176,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             counterBuilder_.mergeFrom(value);
           }
           counterBuilder_.setMessage(value);
         }
-        featureCase_ = 5;
+        featureCase_ = 6;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       public Builder clearCounter() {
         if (counterBuilder_ == null) {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -8557,33 +9204,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder getCounterBuilder() {
         return getCounterFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.CounterOrBuilder getCounterOrBuilder() {
-        if ((featureCase_ == 5) && (counterBuilder_ != null)) {
+        if ((featureCase_ == 6) && (counterBuilder_ != null)) {
           return counterBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 5) {
+          if (featureCase_ == 6) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 5;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Counter counter = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.CounterOrBuilder> 
           getCounterFieldBuilder() {
         if (counterBuilder_ == null) {
-          if (!(featureCase_ == 5)) {
+          if (!(featureCase_ == 6)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Counter.getDefaultInstance();
           }
           counterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -8593,7 +9240,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 5;
+        featureCase_ = 6;
         onChanged();;
         return counterBuilder_;
       }
@@ -8601,33 +9248,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.MonotonicOrBuilder> monotonicBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        * @return Whether the monotonic field is set.
        */
       @java.lang.Override
       public boolean hasMonotonic() {
-        return featureCase_ == 6;
+        return featureCase_ == 7;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        * @return The monotonic.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic getMonotonic() {
         if (monotonicBuilder_ == null) {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
         } else {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             return monotonicBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       public Builder setMonotonic(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic value) {
         if (monotonicBuilder_ == null) {
@@ -8639,11 +9286,11 @@ public final class FeatureOuterClass {
         } else {
           monotonicBuilder_.setMessage(value);
         }
-        featureCase_ = 6;
+        featureCase_ = 7;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       public Builder setMonotonic(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.Builder builderForValue) {
@@ -8653,15 +9300,15 @@ public final class FeatureOuterClass {
         } else {
           monotonicBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 6;
+        featureCase_ = 7;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       public Builder mergeMonotonic(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic value) {
         if (monotonicBuilder_ == null) {
-          if (featureCase_ == 6 &&
+          if (featureCase_ == 7 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_)
                 .mergeFrom(value).buildPartial();
@@ -8670,26 +9317,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             monotonicBuilder_.mergeFrom(value);
           }
           monotonicBuilder_.setMessage(value);
         }
-        featureCase_ = 6;
+        featureCase_ = 7;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       public Builder clearMonotonic() {
         if (monotonicBuilder_ == null) {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -8698,33 +9345,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.Builder getMonotonicBuilder() {
         return getMonotonicFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.MonotonicOrBuilder getMonotonicOrBuilder() {
-        if ((featureCase_ == 6) && (monotonicBuilder_ != null)) {
+        if ((featureCase_ == 7) && (monotonicBuilder_ != null)) {
           return monotonicBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 6) {
+          if (featureCase_ == 7) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Monotonic monotonic = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.MonotonicOrBuilder> 
           getMonotonicFieldBuilder() {
         if (monotonicBuilder_ == null) {
-          if (!(featureCase_ == 6)) {
+          if (!(featureCase_ == 7)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Monotonic.getDefaultInstance();
           }
           monotonicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -8734,7 +9381,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 6;
+        featureCase_ = 7;
         onChanged();;
         return monotonicBuilder_;
       }
@@ -8742,33 +9389,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DistanceOrBuilder> distanceBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        * @return Whether the distance field is set.
        */
       @java.lang.Override
       public boolean hasDistance() {
-        return featureCase_ == 7;
+        return featureCase_ == 8;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        * @return The distance.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance getDistance() {
         if (distanceBuilder_ == null) {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
         } else {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             return distanceBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       public Builder setDistance(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance value) {
         if (distanceBuilder_ == null) {
@@ -8780,11 +9427,11 @@ public final class FeatureOuterClass {
         } else {
           distanceBuilder_.setMessage(value);
         }
-        featureCase_ = 7;
+        featureCase_ = 8;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       public Builder setDistance(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.Builder builderForValue) {
@@ -8794,15 +9441,15 @@ public final class FeatureOuterClass {
         } else {
           distanceBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 7;
+        featureCase_ = 8;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       public Builder mergeDistance(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance value) {
         if (distanceBuilder_ == null) {
-          if (featureCase_ == 7 &&
+          if (featureCase_ == 8 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_)
                 .mergeFrom(value).buildPartial();
@@ -8811,26 +9458,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             distanceBuilder_.mergeFrom(value);
           }
           distanceBuilder_.setMessage(value);
         }
-        featureCase_ = 7;
+        featureCase_ = 8;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       public Builder clearDistance() {
         if (distanceBuilder_ == null) {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -8839,33 +9486,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.Builder getDistanceBuilder() {
         return getDistanceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DistanceOrBuilder getDistanceOrBuilder() {
-        if ((featureCase_ == 7) && (distanceBuilder_ != null)) {
+        if ((featureCase_ == 8) && (distanceBuilder_ != null)) {
           return distanceBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 7) {
+          if (featureCase_ == 8) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Distance distance = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DistanceOrBuilder> 
           getDistanceFieldBuilder() {
         if (distanceBuilder_ == null) {
-          if (!(featureCase_ == 7)) {
+          if (!(featureCase_ == 8)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Distance.getDefaultInstance();
           }
           distanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -8875,7 +9522,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 7;
+        featureCase_ = 8;
         onChanged();;
         return distanceBuilder_;
       }
@@ -8883,33 +9530,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DurationOrBuilder> durationBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        * @return Whether the duration field is set.
        */
       @java.lang.Override
       public boolean hasDuration() {
-        return featureCase_ == 8;
+        return featureCase_ == 9;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        * @return The duration.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration getDuration() {
         if (durationBuilder_ == null) {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
         } else {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             return durationBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       public Builder setDuration(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration value) {
         if (durationBuilder_ == null) {
@@ -8921,11 +9568,11 @@ public final class FeatureOuterClass {
         } else {
           durationBuilder_.setMessage(value);
         }
-        featureCase_ = 8;
+        featureCase_ = 9;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       public Builder setDuration(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.Builder builderForValue) {
@@ -8935,15 +9582,15 @@ public final class FeatureOuterClass {
         } else {
           durationBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 8;
+        featureCase_ = 9;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       public Builder mergeDuration(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration value) {
         if (durationBuilder_ == null) {
-          if (featureCase_ == 8 &&
+          if (featureCase_ == 9 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_)
                 .mergeFrom(value).buildPartial();
@@ -8952,26 +9599,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             durationBuilder_.mergeFrom(value);
           }
           durationBuilder_.setMessage(value);
         }
-        featureCase_ = 8;
+        featureCase_ = 9;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       public Builder clearDuration() {
         if (durationBuilder_ == null) {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -8980,33 +9627,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.Builder getDurationBuilder() {
         return getDurationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DurationOrBuilder getDurationOrBuilder() {
-        if ((featureCase_ == 8) && (durationBuilder_ != null)) {
+        if ((featureCase_ == 9) && (durationBuilder_ != null)) {
           return durationBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 8) {
+          if (featureCase_ == 9) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 8;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Duration duration = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.DurationOrBuilder> 
           getDurationFieldBuilder() {
         if (durationBuilder_ == null) {
-          if (!(featureCase_ == 8)) {
+          if (!(featureCase_ == 9)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Duration.getDefaultInstance();
           }
           durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -9016,7 +9663,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 8;
+        featureCase_ = 9;
         onChanged();;
         return durationBuilder_;
       }
@@ -9024,33 +9671,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.TimestampOrBuilder> timestampBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        * @return Whether the timestamp field is set.
        */
       @java.lang.Override
       public boolean hasTimestamp() {
-        return featureCase_ == 9;
+        return featureCase_ == 10;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        * @return The timestamp.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
         } else {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             return timestampBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       public Builder setTimestamp(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp value) {
         if (timestampBuilder_ == null) {
@@ -9062,11 +9709,11 @@ public final class FeatureOuterClass {
         } else {
           timestampBuilder_.setMessage(value);
         }
-        featureCase_ = 9;
+        featureCase_ = 10;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       public Builder setTimestamp(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.Builder builderForValue) {
@@ -9076,15 +9723,15 @@ public final class FeatureOuterClass {
         } else {
           timestampBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 9;
+        featureCase_ = 10;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       public Builder mergeTimestamp(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp value) {
         if (timestampBuilder_ == null) {
-          if (featureCase_ == 9 &&
+          if (featureCase_ == 10 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_)
                 .mergeFrom(value).buildPartial();
@@ -9093,26 +9740,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             timestampBuilder_.mergeFrom(value);
           }
           timestampBuilder_.setMessage(value);
         }
-        featureCase_ = 9;
+        featureCase_ = 10;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       public Builder clearTimestamp() {
         if (timestampBuilder_ == null) {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -9121,33 +9768,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.Builder getTimestampBuilder() {
         return getTimestampFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.TimestampOrBuilder getTimestampOrBuilder() {
-        if ((featureCase_ == 9) && (timestampBuilder_ != null)) {
+        if ((featureCase_ == 10) && (timestampBuilder_ != null)) {
           return timestampBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 9) {
+          if (featureCase_ == 10) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 9;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Timestamp timestamp = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.TimestampOrBuilder> 
           getTimestampFieldBuilder() {
         if (timestampBuilder_ == null) {
-          if (!(featureCase_ == 9)) {
+          if (!(featureCase_ == 10)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Timestamp.getDefaultInstance();
           }
           timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -9157,7 +9804,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 9;
+        featureCase_ = 10;
         onChanged();;
         return timestampBuilder_;
       }
@@ -9165,33 +9812,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.SetOrBuilder> setBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        * @return Whether the set field is set.
        */
       @java.lang.Override
       public boolean hasSet() {
-        return featureCase_ == 10;
+        return featureCase_ == 11;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        * @return The set.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set getSet() {
         if (setBuilder_ == null) {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
         } else {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             return setBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       public Builder setSet(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set value) {
         if (setBuilder_ == null) {
@@ -9203,11 +9850,11 @@ public final class FeatureOuterClass {
         } else {
           setBuilder_.setMessage(value);
         }
-        featureCase_ = 10;
+        featureCase_ = 11;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       public Builder setSet(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.Builder builderForValue) {
@@ -9217,15 +9864,15 @@ public final class FeatureOuterClass {
         } else {
           setBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 10;
+        featureCase_ = 11;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       public Builder mergeSet(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set value) {
         if (setBuilder_ == null) {
-          if (featureCase_ == 10 &&
+          if (featureCase_ == 11 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_)
                 .mergeFrom(value).buildPartial();
@@ -9234,26 +9881,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             setBuilder_.mergeFrom(value);
           }
           setBuilder_.setMessage(value);
         }
-        featureCase_ = 10;
+        featureCase_ = 11;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       public Builder clearSet() {
         if (setBuilder_ == null) {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -9262,33 +9909,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.Builder getSetBuilder() {
         return getSetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.SetOrBuilder getSetOrBuilder() {
-        if ((featureCase_ == 10) && (setBuilder_ != null)) {
+        if ((featureCase_ == 11) && (setBuilder_ != null)) {
           return setBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 10) {
+          if (featureCase_ == 11) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 10;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Set set = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.SetOrBuilder> 
           getSetFieldBuilder() {
         if (setBuilder_ == null) {
-          if (!(featureCase_ == 10)) {
+          if (!(featureCase_ == 11)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Set.getDefaultInstance();
           }
           setBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -9298,7 +9945,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 10;
+        featureCase_ = 11;
         onChanged();;
         return setBuilder_;
       }
@@ -9306,33 +9953,33 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.EphemeralOrBuilder> ephemeralBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        * @return Whether the ephemeral field is set.
        */
       @java.lang.Override
       public boolean hasEphemeral() {
-        return featureCase_ == 11;
+        return featureCase_ == 12;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        * @return The ephemeral.
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral getEphemeral() {
         if (ephemeralBuilder_ == null) {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
         } else {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             return ephemeralBuilder_.getMessage();
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       public Builder setEphemeral(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral value) {
         if (ephemeralBuilder_ == null) {
@@ -9344,11 +9991,11 @@ public final class FeatureOuterClass {
         } else {
           ephemeralBuilder_.setMessage(value);
         }
-        featureCase_ = 11;
+        featureCase_ = 12;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       public Builder setEphemeral(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.Builder builderForValue) {
@@ -9358,15 +10005,15 @@ public final class FeatureOuterClass {
         } else {
           ephemeralBuilder_.setMessage(builderForValue.build());
         }
-        featureCase_ = 11;
+        featureCase_ = 12;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       public Builder mergeEphemeral(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral value) {
         if (ephemeralBuilder_ == null) {
-          if (featureCase_ == 11 &&
+          if (featureCase_ == 12 &&
               feature_ != com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance()) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.newBuilder((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_)
                 .mergeFrom(value).buildPartial();
@@ -9375,26 +10022,26 @@ public final class FeatureOuterClass {
           }
           onChanged();
         } else {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             ephemeralBuilder_.mergeFrom(value);
           }
           ephemeralBuilder_.setMessage(value);
         }
-        featureCase_ = 11;
+        featureCase_ = 12;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       public Builder clearEphemeral() {
         if (ephemeralBuilder_ == null) {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             featureCase_ = 0;
             feature_ = null;
             onChanged();
           }
         } else {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             featureCase_ = 0;
             feature_ = null;
           }
@@ -9403,33 +10050,33 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.Builder getEphemeralBuilder() {
         return getEphemeralFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.EphemeralOrBuilder getEphemeralOrBuilder() {
-        if ((featureCase_ == 11) && (ephemeralBuilder_ != null)) {
+        if ((featureCase_ == 12) && (ephemeralBuilder_ != null)) {
           return ephemeralBuilder_.getMessageOrBuilder();
         } else {
-          if (featureCase_ == 11) {
+          if (featureCase_ == 12) {
             return (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral) feature_;
           }
           return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 11;</code>
+       * <code>.hilo.protobufs.structure.feature.FeatureClass.Ephemeral ephemeral = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.EphemeralOrBuilder> 
           getEphemeralFieldBuilder() {
         if (ephemeralBuilder_ == null) {
-          if (!(featureCase_ == 11)) {
+          if (!(featureCase_ == 12)) {
             feature_ = com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.FeatureClass.Ephemeral.getDefaultInstance();
           }
           ephemeralBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -9439,7 +10086,7 @@ public final class FeatureOuterClass {
                   isClean());
           feature_ = null;
         }
-        featureCase_ = 11;
+        featureCase_ = 12;
         onChanged();;
         return ephemeralBuilder_;
       }
@@ -12520,76 +13167,64 @@ public final class FeatureOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 count = 1;</code>
-     * @return The count.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+     * @return Whether the valueStats field is set.
      */
-    long getCount();
+    boolean hasValueStats();
+    /**
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+     * @return The valueStats.
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getValueStats();
+    /**
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getValueStatsOrBuilder();
 
     /**
-     * <code>double min = 2;</code>
-     * @return The min.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     * @return Whether the continuityStats field is set.
      */
-    double getMin();
+    boolean hasContinuityStats();
+    /**
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     * @return The continuityStats.
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getContinuityStats();
+    /**
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getContinuityStatsOrBuilder();
 
     /**
-     * <code>double max = 3;</code>
-     * @return The max.
-     */
-    double getMax();
-
-    /**
-     * <code>double mean = 4;</code>
-     * @return The mean.
-     */
-    double getMean();
-
-    /**
-     * <code>double standard_deviation = 5;</code>
-     * @return The standardDeviation.
-     */
-    double getStandardDeviation();
-
-    /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      * @return Whether the valueHistogram field is set.
      */
     boolean hasValueHistogram();
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      * @return The valueHistogram.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram getValueHistogram();
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getValueHistogramOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      * @return Whether the differentialHistogram field is set.
      */
     boolean hasDifferentialHistogram();
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      * @return The differentialHistogram.
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram getDifferentialHistogram();
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      */
     com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getDifferentialHistogramOrBuilder();
-
-    /**
-     * <code>string base64_stats_repr = 8;</code>
-     * @return The base64StatsRepr.
-     */
-    java.lang.String getBase64StatsRepr();
-    /**
-     * <code>string base64_stats_repr = 8;</code>
-     * @return The bytes for base64StatsRepr.
-     */
-    com.google.protobuf.ByteString
-        getBase64StatsReprBytes();
   }
   /**
    * Protobuf type {@code hilo.protobufs.structure.feature.NumericStats}
@@ -12604,7 +13239,6 @@ public final class FeatureOuterClass {
       super(builder);
     }
     private NumericStats() {
-      base64StatsRepr_ = "";
     }
 
     @java.lang.Override
@@ -12637,32 +13271,33 @@ public final class FeatureOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder subBuilder = null;
+              if (valueStats_ != null) {
+                subBuilder = valueStats_.toBuilder();
+              }
+              valueStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(valueStats_);
+                valueStats_ = subBuilder.buildPartial();
+              }
 
-              count_ = input.readInt64();
               break;
             }
-            case 17: {
+            case 18: {
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder subBuilder = null;
+              if (continuityStats_ != null) {
+                subBuilder = continuityStats_.toBuilder();
+              }
+              continuityStats_ = input.readMessage(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(continuityStats_);
+                continuityStats_ = subBuilder.buildPartial();
+              }
 
-              min_ = input.readDouble();
               break;
             }
-            case 25: {
-
-              max_ = input.readDouble();
-              break;
-            }
-            case 33: {
-
-              mean_ = input.readDouble();
-              break;
-            }
-            case 41: {
-
-              standardDeviation_ = input.readDouble();
-              break;
-            }
-            case 50: {
+            case 26: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder subBuilder = null;
               if (valueHistogram_ != null) {
                 subBuilder = valueHistogram_.toBuilder();
@@ -12675,7 +13310,7 @@ public final class FeatureOuterClass {
 
               break;
             }
-            case 58: {
+            case 34: {
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder subBuilder = null;
               if (differentialHistogram_ != null) {
                 subBuilder = differentialHistogram_.toBuilder();
@@ -12686,12 +13321,6 @@ public final class FeatureOuterClass {
                 differentialHistogram_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              base64StatsRepr_ = s;
               break;
             }
             default: {
@@ -12724,6 +13353,1005 @@ public final class FeatureOuterClass {
       return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.class, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.Builder.class);
+    }
+
+    public interface ValueStatsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.structure.feature.NumericStats.ValueStats)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int64 count = 1;</code>
+       * @return The count.
+       */
+      long getCount();
+
+      /**
+       * <code>double min = 2;</code>
+       * @return The min.
+       */
+      double getMin();
+
+      /**
+       * <code>double max = 3;</code>
+       * @return The max.
+       */
+      double getMax();
+
+      /**
+       * <code>double mean = 4;</code>
+       * @return The mean.
+       */
+      double getMean();
+
+      /**
+       * <code>double standard_deviation = 5;</code>
+       * @return The standardDeviation.
+       */
+      double getStandardDeviation();
+
+      /**
+       * <code>double continuityScore = 6;</code>
+       * @return The continuityScore.
+       */
+      double getContinuityScore();
+
+      /**
+       * <code>string base64_stats_repr = 9;</code>
+       * @return The base64StatsRepr.
+       */
+      java.lang.String getBase64StatsRepr();
+      /**
+       * <code>string base64_stats_repr = 9;</code>
+       * @return The bytes for base64StatsRepr.
+       */
+      com.google.protobuf.ByteString
+          getBase64StatsReprBytes();
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.structure.feature.NumericStats.ValueStats}
+     */
+    public static final class ValueStats extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.structure.feature.NumericStats.ValueStats)
+        ValueStatsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ValueStats.newBuilder() to construct.
+      private ValueStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ValueStats() {
+        base64StatsRepr_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ValueStats();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ValueStats(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                count_ = input.readInt64();
+                break;
+              }
+              case 17: {
+
+                min_ = input.readDouble();
+                break;
+              }
+              case 25: {
+
+                max_ = input.readDouble();
+                break;
+              }
+              case 33: {
+
+                mean_ = input.readDouble();
+                break;
+              }
+              case 41: {
+
+                standardDeviation_ = input.readDouble();
+                break;
+              }
+              case 49: {
+
+                continuityScore_ = input.readDouble();
+                break;
+              }
+              case 74: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                base64StatsRepr_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.class, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder.class);
+      }
+
+      public static final int COUNT_FIELD_NUMBER = 1;
+      private long count_;
+      /**
+       * <code>int64 count = 1;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+
+      public static final int MIN_FIELD_NUMBER = 2;
+      private double min_;
+      /**
+       * <code>double min = 2;</code>
+       * @return The min.
+       */
+      @java.lang.Override
+      public double getMin() {
+        return min_;
+      }
+
+      public static final int MAX_FIELD_NUMBER = 3;
+      private double max_;
+      /**
+       * <code>double max = 3;</code>
+       * @return The max.
+       */
+      @java.lang.Override
+      public double getMax() {
+        return max_;
+      }
+
+      public static final int MEAN_FIELD_NUMBER = 4;
+      private double mean_;
+      /**
+       * <code>double mean = 4;</code>
+       * @return The mean.
+       */
+      @java.lang.Override
+      public double getMean() {
+        return mean_;
+      }
+
+      public static final int STANDARD_DEVIATION_FIELD_NUMBER = 5;
+      private double standardDeviation_;
+      /**
+       * <code>double standard_deviation = 5;</code>
+       * @return The standardDeviation.
+       */
+      @java.lang.Override
+      public double getStandardDeviation() {
+        return standardDeviation_;
+      }
+
+      public static final int CONTINUITYSCORE_FIELD_NUMBER = 6;
+      private double continuityScore_;
+      /**
+       * <code>double continuityScore = 6;</code>
+       * @return The continuityScore.
+       */
+      @java.lang.Override
+      public double getContinuityScore() {
+        return continuityScore_;
+      }
+
+      public static final int BASE64_STATS_REPR_FIELD_NUMBER = 9;
+      private volatile java.lang.Object base64StatsRepr_;
+      /**
+       * <code>string base64_stats_repr = 9;</code>
+       * @return The base64StatsRepr.
+       */
+      @java.lang.Override
+      public java.lang.String getBase64StatsRepr() {
+        java.lang.Object ref = base64StatsRepr_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          base64StatsRepr_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string base64_stats_repr = 9;</code>
+       * @return The bytes for base64StatsRepr.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBase64StatsReprBytes() {
+        java.lang.Object ref = base64StatsRepr_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          base64StatsRepr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (count_ != 0L) {
+          output.writeInt64(1, count_);
+        }
+        if (min_ != 0D) {
+          output.writeDouble(2, min_);
+        }
+        if (max_ != 0D) {
+          output.writeDouble(3, max_);
+        }
+        if (mean_ != 0D) {
+          output.writeDouble(4, mean_);
+        }
+        if (standardDeviation_ != 0D) {
+          output.writeDouble(5, standardDeviation_);
+        }
+        if (continuityScore_ != 0D) {
+          output.writeDouble(6, continuityScore_);
+        }
+        if (!getBase64StatsReprBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 9, base64StatsRepr_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (count_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, count_);
+        }
+        if (min_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, min_);
+        }
+        if (max_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, max_);
+        }
+        if (mean_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, mean_);
+        }
+        if (standardDeviation_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(5, standardDeviation_);
+        }
+        if (continuityScore_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(6, continuityScore_);
+        }
+        if (!getBase64StatsReprBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, base64StatsRepr_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats other = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats) obj;
+
+        if (getCount()
+            != other.getCount()) return false;
+        if (java.lang.Double.doubleToLongBits(getMin())
+            != java.lang.Double.doubleToLongBits(
+                other.getMin())) return false;
+        if (java.lang.Double.doubleToLongBits(getMax())
+            != java.lang.Double.doubleToLongBits(
+                other.getMax())) return false;
+        if (java.lang.Double.doubleToLongBits(getMean())
+            != java.lang.Double.doubleToLongBits(
+                other.getMean())) return false;
+        if (java.lang.Double.doubleToLongBits(getStandardDeviation())
+            != java.lang.Double.doubleToLongBits(
+                other.getStandardDeviation())) return false;
+        if (java.lang.Double.doubleToLongBits(getContinuityScore())
+            != java.lang.Double.doubleToLongBits(
+                other.getContinuityScore())) return false;
+        if (!getBase64StatsRepr()
+            .equals(other.getBase64StatsRepr())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCount());
+        hash = (37 * hash) + MIN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMin()));
+        hash = (37 * hash) + MAX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMax()));
+        hash = (37 * hash) + MEAN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMean()));
+        hash = (37 * hash) + STANDARD_DEVIATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getStandardDeviation()));
+        hash = (37 * hash) + CONTINUITYSCORE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getContinuityScore()));
+        hash = (37 * hash) + BASE64_STATS_REPR_FIELD_NUMBER;
+        hash = (53 * hash) + getBase64StatsRepr().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.structure.feature.NumericStats.ValueStats}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.structure.feature.NumericStats.ValueStats)
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.class, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          count_ = 0L;
+
+          min_ = 0D;
+
+          max_ = 0D;
+
+          mean_ = 0D;
+
+          standardDeviation_ = 0D;
+
+          continuityScore_ = 0D;
+
+          base64StatsRepr_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats build() {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats buildPartial() {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats result = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats(this);
+          result.count_ = count_;
+          result.min_ = min_;
+          result.max_ = max_;
+          result.mean_ = mean_;
+          result.standardDeviation_ = standardDeviation_;
+          result.continuityScore_ = continuityScore_;
+          result.base64StatsRepr_ = base64StatsRepr_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats) {
+            return mergeFrom((com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats other) {
+          if (other == com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance()) return this;
+          if (other.getCount() != 0L) {
+            setCount(other.getCount());
+          }
+          if (other.getMin() != 0D) {
+            setMin(other.getMin());
+          }
+          if (other.getMax() != 0D) {
+            setMax(other.getMax());
+          }
+          if (other.getMean() != 0D) {
+            setMean(other.getMean());
+          }
+          if (other.getStandardDeviation() != 0D) {
+            setStandardDeviation(other.getStandardDeviation());
+          }
+          if (other.getContinuityScore() != 0D) {
+            setContinuityScore(other.getContinuityScore());
+          }
+          if (!other.getBase64StatsRepr().isEmpty()) {
+            base64StatsRepr_ = other.base64StatsRepr_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long count_ ;
+        /**
+         * <code>int64 count = 1;</code>
+         * @return The count.
+         */
+        @java.lang.Override
+        public long getCount() {
+          return count_;
+        }
+        /**
+         * <code>int64 count = 1;</code>
+         * @param value The count to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCount(long value) {
+          
+          count_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int64 count = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCount() {
+          
+          count_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private double min_ ;
+        /**
+         * <code>double min = 2;</code>
+         * @return The min.
+         */
+        @java.lang.Override
+        public double getMin() {
+          return min_;
+        }
+        /**
+         * <code>double min = 2;</code>
+         * @param value The min to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMin(double value) {
+          
+          min_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double min = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMin() {
+          
+          min_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double max_ ;
+        /**
+         * <code>double max = 3;</code>
+         * @return The max.
+         */
+        @java.lang.Override
+        public double getMax() {
+          return max_;
+        }
+        /**
+         * <code>double max = 3;</code>
+         * @param value The max to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMax(double value) {
+          
+          max_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double max = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMax() {
+          
+          max_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double mean_ ;
+        /**
+         * <code>double mean = 4;</code>
+         * @return The mean.
+         */
+        @java.lang.Override
+        public double getMean() {
+          return mean_;
+        }
+        /**
+         * <code>double mean = 4;</code>
+         * @param value The mean to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMean(double value) {
+          
+          mean_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double mean = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMean() {
+          
+          mean_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double standardDeviation_ ;
+        /**
+         * <code>double standard_deviation = 5;</code>
+         * @return The standardDeviation.
+         */
+        @java.lang.Override
+        public double getStandardDeviation() {
+          return standardDeviation_;
+        }
+        /**
+         * <code>double standard_deviation = 5;</code>
+         * @param value The standardDeviation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStandardDeviation(double value) {
+          
+          standardDeviation_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double standard_deviation = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStandardDeviation() {
+          
+          standardDeviation_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double continuityScore_ ;
+        /**
+         * <code>double continuityScore = 6;</code>
+         * @return The continuityScore.
+         */
+        @java.lang.Override
+        public double getContinuityScore() {
+          return continuityScore_;
+        }
+        /**
+         * <code>double continuityScore = 6;</code>
+         * @param value The continuityScore to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContinuityScore(double value) {
+          
+          continuityScore_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double continuityScore = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContinuityScore() {
+          
+          continuityScore_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object base64StatsRepr_ = "";
+        /**
+         * <code>string base64_stats_repr = 9;</code>
+         * @return The base64StatsRepr.
+         */
+        public java.lang.String getBase64StatsRepr() {
+          java.lang.Object ref = base64StatsRepr_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            base64StatsRepr_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string base64_stats_repr = 9;</code>
+         * @return The bytes for base64StatsRepr.
+         */
+        public com.google.protobuf.ByteString
+            getBase64StatsReprBytes() {
+          java.lang.Object ref = base64StatsRepr_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            base64StatsRepr_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string base64_stats_repr = 9;</code>
+         * @param value The base64StatsRepr to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBase64StatsRepr(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          base64StatsRepr_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string base64_stats_repr = 9;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBase64StatsRepr() {
+          
+          base64StatsRepr_ = getDefaultInstance().getBase64StatsRepr();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string base64_stats_repr = 9;</code>
+         * @param value The bytes for base64StatsRepr to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBase64StatsReprBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          base64StatsRepr_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.structure.feature.NumericStats.ValueStats)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.structure.feature.NumericStats.ValueStats)
+      private static final com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats();
+      }
+
+      public static com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ValueStats>
+          PARSER = new com.google.protobuf.AbstractParser<ValueStats>() {
+        @java.lang.Override
+        public ValueStats parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ValueStats(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ValueStats> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ValueStats> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public interface PercentileHistogramOrBuilder extends
@@ -14415,65 +16043,62 @@ public final class FeatureOuterClass {
 
     }
 
-    public static final int COUNT_FIELD_NUMBER = 1;
-    private long count_;
+    public static final int VALUE_STATS_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats valueStats_;
     /**
-     * <code>int64 count = 1;</code>
-     * @return The count.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+     * @return Whether the valueStats field is set.
      */
     @java.lang.Override
-    public long getCount() {
-      return count_;
+    public boolean hasValueStats() {
+      return valueStats_ != null;
     }
-
-    public static final int MIN_FIELD_NUMBER = 2;
-    private double min_;
     /**
-     * <code>double min = 2;</code>
-     * @return The min.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+     * @return The valueStats.
      */
     @java.lang.Override
-    public double getMin() {
-      return min_;
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getValueStats() {
+      return valueStats_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : valueStats_;
     }
-
-    public static final int MAX_FIELD_NUMBER = 3;
-    private double max_;
     /**
-     * <code>double max = 3;</code>
-     * @return The max.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
      */
     @java.lang.Override
-    public double getMax() {
-      return max_;
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getValueStatsOrBuilder() {
+      return getValueStats();
     }
 
-    public static final int MEAN_FIELD_NUMBER = 4;
-    private double mean_;
+    public static final int CONTINUITY_STATS_FIELD_NUMBER = 2;
+    private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats continuityStats_;
     /**
-     * <code>double mean = 4;</code>
-     * @return The mean.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     * @return Whether the continuityStats field is set.
      */
     @java.lang.Override
-    public double getMean() {
-      return mean_;
+    public boolean hasContinuityStats() {
+      return continuityStats_ != null;
     }
-
-    public static final int STANDARD_DEVIATION_FIELD_NUMBER = 5;
-    private double standardDeviation_;
     /**
-     * <code>double standard_deviation = 5;</code>
-     * @return The standardDeviation.
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     * @return The continuityStats.
      */
     @java.lang.Override
-    public double getStandardDeviation() {
-      return standardDeviation_;
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getContinuityStats() {
+      return continuityStats_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : continuityStats_;
+    }
+    /**
+     * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getContinuityStatsOrBuilder() {
+      return getContinuityStats();
     }
 
-    public static final int VALUE_HISTOGRAM_FIELD_NUMBER = 6;
+    public static final int VALUE_HISTOGRAM_FIELD_NUMBER = 3;
     private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram valueHistogram_;
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      * @return Whether the valueHistogram field is set.
      */
     @java.lang.Override
@@ -14481,7 +16106,7 @@ public final class FeatureOuterClass {
       return valueHistogram_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      * @return The valueHistogram.
      */
     @java.lang.Override
@@ -14489,17 +16114,17 @@ public final class FeatureOuterClass {
       return valueHistogram_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.getDefaultInstance() : valueHistogram_;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getValueHistogramOrBuilder() {
       return getValueHistogram();
     }
 
-    public static final int DIFFERENTIAL_HISTOGRAM_FIELD_NUMBER = 7;
+    public static final int DIFFERENTIAL_HISTOGRAM_FIELD_NUMBER = 4;
     private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram differentialHistogram_;
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      * @return Whether the differentialHistogram field is set.
      */
     @java.lang.Override
@@ -14507,7 +16132,7 @@ public final class FeatureOuterClass {
       return differentialHistogram_ != null;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      * @return The differentialHistogram.
      */
     @java.lang.Override
@@ -14515,49 +16140,11 @@ public final class FeatureOuterClass {
       return differentialHistogram_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.getDefaultInstance() : differentialHistogram_;
     }
     /**
-     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+     * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
      */
     @java.lang.Override
     public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getDifferentialHistogramOrBuilder() {
       return getDifferentialHistogram();
-    }
-
-    public static final int BASE64_STATS_REPR_FIELD_NUMBER = 8;
-    private volatile java.lang.Object base64StatsRepr_;
-    /**
-     * <code>string base64_stats_repr = 8;</code>
-     * @return The base64StatsRepr.
-     */
-    @java.lang.Override
-    public java.lang.String getBase64StatsRepr() {
-      java.lang.Object ref = base64StatsRepr_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        base64StatsRepr_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string base64_stats_repr = 8;</code>
-     * @return The bytes for base64StatsRepr.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getBase64StatsReprBytes() {
-      java.lang.Object ref = base64StatsRepr_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        base64StatsRepr_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14574,29 +16161,17 @@ public final class FeatureOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (count_ != 0L) {
-        output.writeInt64(1, count_);
+      if (valueStats_ != null) {
+        output.writeMessage(1, getValueStats());
       }
-      if (min_ != 0D) {
-        output.writeDouble(2, min_);
-      }
-      if (max_ != 0D) {
-        output.writeDouble(3, max_);
-      }
-      if (mean_ != 0D) {
-        output.writeDouble(4, mean_);
-      }
-      if (standardDeviation_ != 0D) {
-        output.writeDouble(5, standardDeviation_);
+      if (continuityStats_ != null) {
+        output.writeMessage(2, getContinuityStats());
       }
       if (valueHistogram_ != null) {
-        output.writeMessage(6, getValueHistogram());
+        output.writeMessage(3, getValueHistogram());
       }
       if (differentialHistogram_ != null) {
-        output.writeMessage(7, getDifferentialHistogram());
-      }
-      if (!getBase64StatsReprBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, base64StatsRepr_);
+        output.writeMessage(4, getDifferentialHistogram());
       }
       unknownFields.writeTo(output);
     }
@@ -14607,36 +16182,21 @@ public final class FeatureOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (count_ != 0L) {
+      if (valueStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, count_);
+          .computeMessageSize(1, getValueStats());
       }
-      if (min_ != 0D) {
+      if (continuityStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, min_);
-      }
-      if (max_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, max_);
-      }
-      if (mean_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, mean_);
-      }
-      if (standardDeviation_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, standardDeviation_);
+          .computeMessageSize(2, getContinuityStats());
       }
       if (valueHistogram_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getValueHistogram());
+          .computeMessageSize(3, getValueHistogram());
       }
       if (differentialHistogram_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getDifferentialHistogram());
-      }
-      if (!getBase64StatsReprBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, base64StatsRepr_);
+          .computeMessageSize(4, getDifferentialHistogram());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14653,20 +16213,16 @@ public final class FeatureOuterClass {
       }
       com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats other = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats) obj;
 
-      if (getCount()
-          != other.getCount()) return false;
-      if (java.lang.Double.doubleToLongBits(getMin())
-          != java.lang.Double.doubleToLongBits(
-              other.getMin())) return false;
-      if (java.lang.Double.doubleToLongBits(getMax())
-          != java.lang.Double.doubleToLongBits(
-              other.getMax())) return false;
-      if (java.lang.Double.doubleToLongBits(getMean())
-          != java.lang.Double.doubleToLongBits(
-              other.getMean())) return false;
-      if (java.lang.Double.doubleToLongBits(getStandardDeviation())
-          != java.lang.Double.doubleToLongBits(
-              other.getStandardDeviation())) return false;
+      if (hasValueStats() != other.hasValueStats()) return false;
+      if (hasValueStats()) {
+        if (!getValueStats()
+            .equals(other.getValueStats())) return false;
+      }
+      if (hasContinuityStats() != other.hasContinuityStats()) return false;
+      if (hasContinuityStats()) {
+        if (!getContinuityStats()
+            .equals(other.getContinuityStats())) return false;
+      }
       if (hasValueHistogram() != other.hasValueHistogram()) return false;
       if (hasValueHistogram()) {
         if (!getValueHistogram()
@@ -14677,8 +16233,6 @@ public final class FeatureOuterClass {
         if (!getDifferentialHistogram()
             .equals(other.getDifferentialHistogram())) return false;
       }
-      if (!getBase64StatsRepr()
-          .equals(other.getBase64StatsRepr())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14690,21 +16244,14 @@ public final class FeatureOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCount());
-      hash = (37 * hash) + MIN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getMin()));
-      hash = (37 * hash) + MAX_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getMax()));
-      hash = (37 * hash) + MEAN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getMean()));
-      hash = (37 * hash) + STANDARD_DEVIATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getStandardDeviation()));
+      if (hasValueStats()) {
+        hash = (37 * hash) + VALUE_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getValueStats().hashCode();
+      }
+      if (hasContinuityStats()) {
+        hash = (37 * hash) + CONTINUITY_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getContinuityStats().hashCode();
+      }
       if (hasValueHistogram()) {
         hash = (37 * hash) + VALUE_HISTOGRAM_FIELD_NUMBER;
         hash = (53 * hash) + getValueHistogram().hashCode();
@@ -14713,8 +16260,6 @@ public final class FeatureOuterClass {
         hash = (37 * hash) + DIFFERENTIAL_HISTOGRAM_FIELD_NUMBER;
         hash = (53 * hash) + getDifferentialHistogram().hashCode();
       }
-      hash = (37 * hash) + BASE64_STATS_REPR_FIELD_NUMBER;
-      hash = (53 * hash) + getBase64StatsRepr().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14848,16 +16393,18 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        count_ = 0L;
-
-        min_ = 0D;
-
-        max_ = 0D;
-
-        mean_ = 0D;
-
-        standardDeviation_ = 0D;
-
+        if (valueStatsBuilder_ == null) {
+          valueStats_ = null;
+        } else {
+          valueStats_ = null;
+          valueStatsBuilder_ = null;
+        }
+        if (continuityStatsBuilder_ == null) {
+          continuityStats_ = null;
+        } else {
+          continuityStats_ = null;
+          continuityStatsBuilder_ = null;
+        }
         if (valueHistogramBuilder_ == null) {
           valueHistogram_ = null;
         } else {
@@ -14870,8 +16417,6 @@ public final class FeatureOuterClass {
           differentialHistogram_ = null;
           differentialHistogramBuilder_ = null;
         }
-        base64StatsRepr_ = "";
-
         return this;
       }
 
@@ -14898,11 +16443,16 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats buildPartial() {
         com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats result = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats(this);
-        result.count_ = count_;
-        result.min_ = min_;
-        result.max_ = max_;
-        result.mean_ = mean_;
-        result.standardDeviation_ = standardDeviation_;
+        if (valueStatsBuilder_ == null) {
+          result.valueStats_ = valueStats_;
+        } else {
+          result.valueStats_ = valueStatsBuilder_.build();
+        }
+        if (continuityStatsBuilder_ == null) {
+          result.continuityStats_ = continuityStats_;
+        } else {
+          result.continuityStats_ = continuityStatsBuilder_.build();
+        }
         if (valueHistogramBuilder_ == null) {
           result.valueHistogram_ = valueHistogram_;
         } else {
@@ -14913,7 +16463,6 @@ public final class FeatureOuterClass {
         } else {
           result.differentialHistogram_ = differentialHistogramBuilder_.build();
         }
-        result.base64StatsRepr_ = base64StatsRepr_;
         onBuilt();
         return result;
       }
@@ -14962,30 +16511,17 @@ public final class FeatureOuterClass {
 
       public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats other) {
         if (other == com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.getDefaultInstance()) return this;
-        if (other.getCount() != 0L) {
-          setCount(other.getCount());
+        if (other.hasValueStats()) {
+          mergeValueStats(other.getValueStats());
         }
-        if (other.getMin() != 0D) {
-          setMin(other.getMin());
-        }
-        if (other.getMax() != 0D) {
-          setMax(other.getMax());
-        }
-        if (other.getMean() != 0D) {
-          setMean(other.getMean());
-        }
-        if (other.getStandardDeviation() != 0D) {
-          setStandardDeviation(other.getStandardDeviation());
+        if (other.hasContinuityStats()) {
+          mergeContinuityStats(other.getContinuityStats());
         }
         if (other.hasValueHistogram()) {
           mergeValueHistogram(other.getValueHistogram());
         }
         if (other.hasDifferentialHistogram()) {
           mergeDifferentialHistogram(other.getDifferentialHistogram());
-        }
-        if (!other.getBase64StatsRepr().isEmpty()) {
-          base64StatsRepr_ = other.base64StatsRepr_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15016,173 +16552,256 @@ public final class FeatureOuterClass {
         return this;
       }
 
-      private long count_ ;
+      private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats valueStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder> valueStatsBuilder_;
       /**
-       * <code>int64 count = 1;</code>
-       * @return The count.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       * @return Whether the valueStats field is set.
        */
-      @java.lang.Override
-      public long getCount() {
-        return count_;
+      public boolean hasValueStats() {
+        return valueStatsBuilder_ != null || valueStats_ != null;
       }
       /**
-       * <code>int64 count = 1;</code>
-       * @param value The count to set.
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       * @return The valueStats.
        */
-      public Builder setCount(long value) {
-        
-        count_ = value;
-        onChanged();
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getValueStats() {
+        if (valueStatsBuilder_ == null) {
+          return valueStats_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : valueStats_;
+        } else {
+          return valueStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      public Builder setValueStats(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats value) {
+        if (valueStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valueStats_ = value;
+          onChanged();
+        } else {
+          valueStatsBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>int64 count = 1;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
        */
-      public Builder clearCount() {
-        
-        count_ = 0L;
-        onChanged();
+      public Builder setValueStats(
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder builderForValue) {
+        if (valueStatsBuilder_ == null) {
+          valueStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueStatsBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      public Builder mergeValueStats(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats value) {
+        if (valueStatsBuilder_ == null) {
+          if (valueStats_ != null) {
+            valueStats_ =
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.newBuilder(valueStats_).mergeFrom(value).buildPartial();
+          } else {
+            valueStats_ = value;
+          }
+          onChanged();
+        } else {
+          valueStatsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      public Builder clearValueStats() {
+        if (valueStatsBuilder_ == null) {
+          valueStats_ = null;
+          onChanged();
+        } else {
+          valueStats_ = null;
+          valueStatsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder getValueStatsBuilder() {
+        
+        onChanged();
+        return getValueStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getValueStatsOrBuilder() {
+        if (valueStatsBuilder_ != null) {
+          return valueStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return valueStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : valueStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats value_stats = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder> 
+          getValueStatsFieldBuilder() {
+        if (valueStatsBuilder_ == null) {
+          valueStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder>(
+                  getValueStats(),
+                  getParentForChildren(),
+                  isClean());
+          valueStats_ = null;
+        }
+        return valueStatsBuilder_;
       }
 
-      private double min_ ;
+      private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats continuityStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder> continuityStatsBuilder_;
       /**
-       * <code>double min = 2;</code>
-       * @return The min.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+       * @return Whether the continuityStats field is set.
        */
-      @java.lang.Override
-      public double getMin() {
-        return min_;
+      public boolean hasContinuityStats() {
+        return continuityStatsBuilder_ != null || continuityStats_ != null;
       }
       /**
-       * <code>double min = 2;</code>
-       * @param value The min to set.
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+       * @return The continuityStats.
        */
-      public Builder setMin(double value) {
-        
-        min_ = value;
-        onChanged();
-        return this;
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats getContinuityStats() {
+        if (continuityStatsBuilder_ == null) {
+          return continuityStats_ == null ? com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : continuityStats_;
+        } else {
+          return continuityStatsBuilder_.getMessage();
+        }
       }
       /**
-       * <code>double min = 2;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
        */
-      public Builder clearMin() {
-        
-        min_ = 0D;
-        onChanged();
-        return this;
-      }
+      public Builder setContinuityStats(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats value) {
+        if (continuityStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          continuityStats_ = value;
+          onChanged();
+        } else {
+          continuityStatsBuilder_.setMessage(value);
+        }
 
-      private double max_ ;
-      /**
-       * <code>double max = 3;</code>
-       * @return The max.
-       */
-      @java.lang.Override
-      public double getMax() {
-        return max_;
-      }
-      /**
-       * <code>double max = 3;</code>
-       * @param value The max to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMax(double value) {
-        
-        max_ = value;
-        onChanged();
         return this;
       }
       /**
-       * <code>double max = 3;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
        */
-      public Builder clearMax() {
-        
-        max_ = 0D;
-        onChanged();
-        return this;
-      }
+      public Builder setContinuityStats(
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder builderForValue) {
+        if (continuityStatsBuilder_ == null) {
+          continuityStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          continuityStatsBuilder_.setMessage(builderForValue.build());
+        }
 
-      private double mean_ ;
-      /**
-       * <code>double mean = 4;</code>
-       * @return The mean.
-       */
-      @java.lang.Override
-      public double getMean() {
-        return mean_;
-      }
-      /**
-       * <code>double mean = 4;</code>
-       * @param value The mean to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMean(double value) {
-        
-        mean_ = value;
-        onChanged();
         return this;
       }
       /**
-       * <code>double mean = 4;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
        */
-      public Builder clearMean() {
-        
-        mean_ = 0D;
-        onChanged();
-        return this;
-      }
+      public Builder mergeContinuityStats(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats value) {
+        if (continuityStatsBuilder_ == null) {
+          if (continuityStats_ != null) {
+            continuityStats_ =
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.newBuilder(continuityStats_).mergeFrom(value).buildPartial();
+          } else {
+            continuityStats_ = value;
+          }
+          onChanged();
+        } else {
+          continuityStatsBuilder_.mergeFrom(value);
+        }
 
-      private double standardDeviation_ ;
-      /**
-       * <code>double standard_deviation = 5;</code>
-       * @return The standardDeviation.
-       */
-      @java.lang.Override
-      public double getStandardDeviation() {
-        return standardDeviation_;
-      }
-      /**
-       * <code>double standard_deviation = 5;</code>
-       * @param value The standardDeviation to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStandardDeviation(double value) {
-        
-        standardDeviation_ = value;
-        onChanged();
         return this;
       }
       /**
-       * <code>double standard_deviation = 5;</code>
-       * @return This builder for chaining.
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
        */
-      public Builder clearStandardDeviation() {
-        
-        standardDeviation_ = 0D;
-        onChanged();
+      public Builder clearContinuityStats() {
+        if (continuityStatsBuilder_ == null) {
+          continuityStats_ = null;
+          onChanged();
+        } else {
+          continuityStats_ = null;
+          continuityStatsBuilder_ = null;
+        }
+
         return this;
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder getContinuityStatsBuilder() {
+        
+        onChanged();
+        return getContinuityStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder getContinuityStatsOrBuilder() {
+        if (continuityStatsBuilder_ != null) {
+          return continuityStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return continuityStats_ == null ?
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.getDefaultInstance() : continuityStats_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.structure.feature.NumericStats.ValueStats continuity_stats = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder> 
+          getContinuityStatsFieldBuilder() {
+        if (continuityStatsBuilder_ == null) {
+          continuityStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStats.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.ValueStatsOrBuilder>(
+                  getContinuityStats(),
+                  getParentForChildren(),
+                  isClean());
+          continuityStats_ = null;
+        }
+        return continuityStatsBuilder_;
       }
 
       private com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram valueHistogram_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder> valueHistogramBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        * @return Whether the valueHistogram field is set.
        */
       public boolean hasValueHistogram() {
         return valueHistogramBuilder_ != null || valueHistogram_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        * @return The valueHistogram.
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram getValueHistogram() {
@@ -15193,7 +16812,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public Builder setValueHistogram(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram value) {
         if (valueHistogramBuilder_ == null) {
@@ -15209,7 +16828,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public Builder setValueHistogram(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder builderForValue) {
@@ -15223,7 +16842,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public Builder mergeValueHistogram(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram value) {
         if (valueHistogramBuilder_ == null) {
@@ -15241,7 +16860,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public Builder clearValueHistogram() {
         if (valueHistogramBuilder_ == null) {
@@ -15255,7 +16874,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder getValueHistogramBuilder() {
         
@@ -15263,7 +16882,7 @@ public final class FeatureOuterClass {
         return getValueHistogramFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getValueHistogramOrBuilder() {
         if (valueHistogramBuilder_ != null) {
@@ -15274,7 +16893,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 6;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram value_histogram = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder> 
@@ -15294,14 +16913,14 @@ public final class FeatureOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder> differentialHistogramBuilder_;
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        * @return Whether the differentialHistogram field is set.
        */
       public boolean hasDifferentialHistogram() {
         return differentialHistogramBuilder_ != null || differentialHistogram_ != null;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        * @return The differentialHistogram.
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram getDifferentialHistogram() {
@@ -15312,7 +16931,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public Builder setDifferentialHistogram(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram value) {
         if (differentialHistogramBuilder_ == null) {
@@ -15328,7 +16947,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public Builder setDifferentialHistogram(
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder builderForValue) {
@@ -15342,7 +16961,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public Builder mergeDifferentialHistogram(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram value) {
         if (differentialHistogramBuilder_ == null) {
@@ -15360,7 +16979,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public Builder clearDifferentialHistogram() {
         if (differentialHistogramBuilder_ == null) {
@@ -15374,7 +16993,7 @@ public final class FeatureOuterClass {
         return this;
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder getDifferentialHistogramBuilder() {
         
@@ -15382,7 +17001,7 @@ public final class FeatureOuterClass {
         return getDifferentialHistogramFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder getDifferentialHistogramOrBuilder() {
         if (differentialHistogramBuilder_ != null) {
@@ -15393,7 +17012,7 @@ public final class FeatureOuterClass {
         }
       }
       /**
-       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 7;</code>
+       * <code>.hilo.protobufs.structure.feature.NumericStats.PercentileHistogram differential_histogram = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogram.Builder, com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.NumericStats.PercentileHistogramOrBuilder> 
@@ -15407,82 +17026,6 @@ public final class FeatureOuterClass {
           differentialHistogram_ = null;
         }
         return differentialHistogramBuilder_;
-      }
-
-      private java.lang.Object base64StatsRepr_ = "";
-      /**
-       * <code>string base64_stats_repr = 8;</code>
-       * @return The base64StatsRepr.
-       */
-      public java.lang.String getBase64StatsRepr() {
-        java.lang.Object ref = base64StatsRepr_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          base64StatsRepr_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string base64_stats_repr = 8;</code>
-       * @return The bytes for base64StatsRepr.
-       */
-      public com.google.protobuf.ByteString
-          getBase64StatsReprBytes() {
-        java.lang.Object ref = base64StatsRepr_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          base64StatsRepr_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string base64_stats_repr = 8;</code>
-       * @param value The base64StatsRepr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBase64StatsRepr(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        base64StatsRepr_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string base64_stats_repr = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBase64StatsRepr() {
-        
-        base64StatsRepr_ = getDefaultInstance().getBase64StatsRepr();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string base64_stats_repr = 8;</code>
-       * @param value The bytes for base64StatsRepr to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBase64StatsReprBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        base64StatsRepr_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27486,6 +29029,11 @@ public final class FeatureOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_feature_FeatureClass_Ephemeral_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_feature_Feature_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -27510,6 +29058,11 @@ public final class FeatureOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_structure_feature_NumericStats_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_structure_feature_NumericStats_PercentileHistogram_descriptor;
   private static final 
@@ -27603,7 +29156,7 @@ public final class FeatureOuterClass {
       "ature/feature.proto\022 hilo.protobufs.stru" +
       "cture.feature\"L\n\020FeaturesMetadata\022\021\n\tsch" +
       "ema_id\030\001 \001(\t\022\021\n\tsource_id\030\002 \001(\t\022\022\n\nproje" +
-      "ct_id\030\003 \001(\t\"\303\010\n\014FeatureClass\022O\n\tbool_enu" +
+      "ct_id\030\003 \001(\t\"\234\t\n\014FeatureClass\022O\n\tbool_enu" +
       "m\030\001 \001(\0132:.hilo.protobufs.structure.featu" +
       "re.FeatureClass.BooleanEnumH\000\022J\n\010int_enu" +
       "m\030\002 \001(\01326.hilo.protobufs.structure.featu" +
@@ -27611,105 +29164,112 @@ public final class FeatureOuterClass {
       "\030\003 \001(\01329.hilo.protobufs.structure.featur" +
       "e.FeatureClass.StringEnumH\000\022E\n\005gauge\030\004 \001" +
       "(\01324.hilo.protobufs.structure.feature.Fe" +
-      "atureClass.GaugeH\000\022I\n\007counter\030\005 \001(\01326.hi" +
-      "lo.protobufs.structure.feature.FeatureCl" +
-      "ass.CounterH\000\022M\n\tmonotonic\030\006 \001(\01328.hilo." +
+      "atureClass.GaugeH\000\022K\n\010discrete\030\005 \001(\01327.h" +
+      "ilo.protobufs.structure.feature.FeatureC" +
+      "lass.DiscreteH\000\022I\n\007counter\030\006 \001(\01326.hilo." +
       "protobufs.structure.feature.FeatureClass" +
-      ".MonotonicH\000\022K\n\010distance\030\007 \001(\01327.hilo.pr" +
-      "otobufs.structure.feature.FeatureClass.D" +
-      "istanceH\000\022K\n\010duration\030\010 \001(\01327.hilo.proto" +
-      "bufs.structure.feature.FeatureClass.Dura" +
-      "tionH\000\022M\n\ttimestamp\030\t \001(\01328.hilo.protobu" +
-      "fs.structure.feature.FeatureClass.Timest" +
-      "ampH\000\022A\n\003set\030\n \001(\01322.hilo.protobufs.stru" +
-      "cture.feature.FeatureClass.SetH\000\022M\n\tephe" +
-      "meral\030\013 \001(\01328.hilo.protobufs.structure.f" +
-      "eature.FeatureClass.EphemeralH\000\032\031\n\007IntEn" +
-      "um\022\016\n\006values\030\001 \003(\003\032\r\n\013BooleanEnum\032\034\n\nStr" +
-      "ingEnum\022\016\n\006values\030\001 \003(\t\032\026\n\005Gauge\022\r\n\005scal" +
-      "e\030\001 \001(\003\032\t\n\007Counter\032\013\n\tMonotonic\032\031\n\010Dista" +
-      "nce\022\r\n\005units\030\001 \001(\t\032\031\n\010Duration\022\r\n\005units\030" +
-      "\001 \001(\t\032\013\n\tTimestamp\032\025\n\003Set\022\016\n\006values\030\001 \003(" +
-      "\t\032\013\n\tEphemeralB\t\n\007feature\"\234\001\n\007Feature\022\013\n" +
-      "\003key\030\001 \001(\t\022E\n\rfeature_class\030\002 \001(\0132..hilo" +
-      ".protobufs.structure.feature.FeatureClas" +
-      "s\022=\n\005stats\030\003 \001(\0132..hilo.protobufs.struct" +
-      "ure.feature.FeatureStats\"\362\001\n\014BooleanStat" +
-      "s\022\r\n\005count\030\001 \001(\003\022K\n\thistogram\030\002 \001(\01328.hi" +
-      "lo.protobufs.structure.feature.BooleanSt" +
-      "ats.Histogram\032\205\001\n\tHistogram\022P\n\007buckets\030\001" +
-      " \003(\0132?.hilo.protobufs.structure.feature." +
-      "BooleanStats.Histogram.Bucket\032&\n\006Bucket\022" +
-      "\r\n\005value\030\001 \001(\010\022\r\n\005count\030\002 \001(\003\"\212\004\n\014Numeri" +
-      "cStats\022\r\n\005count\030\001 \001(\003\022\013\n\003min\030\002 \001(\001\022\013\n\003ma" +
-      "x\030\003 \001(\001\022\014\n\004mean\030\004 \001(\001\022\032\n\022standard_deviat" +
-      "ion\030\005 \001(\001\022[\n\017value_histogram\030\006 \001(\0132B.hil" +
-      "o.protobufs.structure.feature.NumericSta" +
-      "ts.PercentileHistogram\022b\n\026differential_h" +
-      "istogram\030\007 \001(\0132B.hilo.protobufs.structur" +
-      "e.feature.NumericStats.PercentileHistogr" +
-      "am\022\031\n\021base64_stats_repr\030\010 \001(\t\032\312\001\n\023Percen" +
-      "tileHistogram\022Z\n\007buckets\030\001 \003(\0132I.hilo.pr" +
-      "otobufs.structure.feature.NumericStats.P" +
-      "ercentileHistogram.Bucket\022\022\n\nboundaries\030" +
-      "\002 \003(\001\032C\n\006Bucket\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(" +
-      "\001\022\r\n\005count\030\003 \001(\003\022\020\n\010boundary\030\004 \001(\001\"\357\001\n\013S" +
-      "tringStats\022\r\n\005count\030\001 \001(\003\022J\n\thistogram\030\002" +
-      " \001(\01327.hilo.protobufs.structure.feature." +
-      "StringStats.Histogram\032\204\001\n\tHistogram\022O\n\007b" +
-      "uckets\030\002 \003(\0132>.hilo.protobufs.structure." +
-      "feature.StringStats.Histogram.Bucket\032&\n\006" +
-      "Bucket\022\r\n\005value\030\001 \001(\t\022\r\n\005count\030\002 \001(\003\"\360\003\n" +
-      "\014FeatureStats\022E\n\rboolean_stats\030\001 \001(\0132..h" +
-      "ilo.protobufs.structure.feature.BooleanS" +
-      "tats\022A\n\tint_stats\030\002 \001(\0132..hilo.protobufs" +
-      ".structure.feature.NumericStats\022B\n\nlong_" +
-      "stats\030\003 \001(\0132..hilo.protobufs.structure.f" +
-      "eature.NumericStats\022C\n\013float_stats\030\004 \001(\013" +
-      "2..hilo.protobufs.structure.feature.Nume" +
-      "ricStats\022D\n\014double_stats\030\005 \001(\0132..hilo.pr" +
-      "otobufs.structure.feature.NumericStats\022C" +
-      "\n\014string_stats\030\006 \001(\0132-.hilo.protobufs.st" +
-      "ructure.feature.StringStats\022B\n\013bytes_sta" +
-      "ts\030\007 \001(\0132-.hilo.protobufs.structure.feat" +
-      "ure.StringStats\"`\n\nStatsEvent\022\013\n\003key\030\001 \001" +
-      "(\t\022E\n\rfeature_stats\030\002 \001(\0132..hilo.protobu" +
-      "fs.structure.feature.FeatureStats\"\235\001\n\rFe" +
-      "aturesEvent\022D\n\010metadata\030\001 \001(\01322.hilo.pro" +
-      "tobufs.structure.feature.FeaturesMetadat" +
-      "a\022=\n\005stats\030\020 \001(\0132,.hilo.protobufs.struct" +
-      "ure.feature.StatsEventH\000B\007\n\005event\"c\n\rFea" +
-      "tureCreate\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_class" +
-      "\030\002 \001(\0132..hilo.protobufs.structure.featur" +
-      "e.FeatureClass\"\377\001\n\rFeatureUpdate\022G\n\006befo" +
-      "re\030\001 \001(\01327.hilo.protobufs.structure.feat" +
-      "ure.FeatureUpdate.Feature\022F\n\005after\030\002 \001(\013" +
-      "27.hilo.protobufs.structure.feature.Feat" +
-      "ureUpdate.Feature\032]\n\007Feature\022\013\n\003key\030\001 \001(" +
-      "\t\022E\n\rfeature_class\030\002 \001(\0132..hilo.protobuf" +
-      "s.structure.feature.FeatureClass\"\251\001\n\nFea" +
-      "tureLog\022I\n\016feature_create\030\001 \001(\0132/.hilo.p" +
-      "rotobufs.structure.feature.FeatureCreate" +
-      "H\000\022I\n\016feature_update\030\002 \001(\0132/.hilo.protob" +
-      "ufs.structure.feature.FeatureUpdateH\000B\005\n" +
-      "\003log\"\333\001\n\016FeaturesUpdate\022D\n\010metadata\030\001 \001(" +
-      "\01322.hilo.protobufs.structure.feature.Fea" +
-      "turesMetadata\022;\n\003log\030\020 \001(\0132,.hilo.protob" +
-      "ufs.structure.feature.FeatureLogH\000\022<\n\007fe" +
-      "ature\030\021 \001(\0132).hilo.protobufs.structure.f" +
-      "eature.FeatureH\000B\010\n\006update\"\224\001\n\020FeatureLo" +
-      "gsModel\022D\n\010metadata\030\001 \001(\01322.hilo.protobu" +
-      "fs.structure.feature.FeaturesMetadata\022:\n" +
-      "\004logs\030\002 \001(\0132,.hilo.protobufs.structure.f" +
-      "eature.FeatureLog\"\202\002\n\rFeaturesModel\022D\n\010m" +
-      "etadata\030\001 \001(\01322.hilo.protobufs.structure" +
-      ".feature.FeaturesMetadata\022O\n\010features\030\002 " +
-      "\003(\0132=.hilo.protobufs.structure.feature.F" +
-      "eaturesModel.FeaturesEntry\032Z\n\rFeaturesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).hilo.p" +
-      "rotobufs.structure.feature.Feature:\0028\001B-" +
-      "\n+com.hilohq.hilo.protobufs.structure.fe" +
-      "atureb\006proto3"
+      ".CounterH\000\022M\n\tmonotonic\030\007 \001(\01328.hilo.pro" +
+      "tobufs.structure.feature.FeatureClass.Mo" +
+      "notonicH\000\022K\n\010distance\030\010 \001(\01327.hilo.proto" +
+      "bufs.structure.feature.FeatureClass.Dist" +
+      "anceH\000\022K\n\010duration\030\t \001(\01327.hilo.protobuf" +
+      "s.structure.feature.FeatureClass.Duratio" +
+      "nH\000\022M\n\ttimestamp\030\n \001(\01328.hilo.protobufs." +
+      "structure.feature.FeatureClass.Timestamp" +
+      "H\000\022A\n\003set\030\013 \001(\01322.hilo.protobufs.structu" +
+      "re.feature.FeatureClass.SetH\000\022M\n\tephemer" +
+      "al\030\014 \001(\01328.hilo.protobufs.structure.feat" +
+      "ure.FeatureClass.EphemeralH\000\032\031\n\007IntEnum\022" +
+      "\016\n\006values\030\001 \003(\003\032\r\n\013BooleanEnum\032\034\n\nString" +
+      "Enum\022\016\n\006values\030\001 \003(\t\032\026\n\005Gauge\022\r\n\005scale\030\001" +
+      " \001(\003\032\t\n\007Counter\032\013\n\tMonotonic\032\031\n\010Distance" +
+      "\022\r\n\005units\030\001 \001(\t\032\031\n\010Duration\022\r\n\005units\030\001 \001" +
+      "(\t\032\013\n\tTimestamp\032\025\n\003Set\022\016\n\006values\030\001 \003(\t\032\013" +
+      "\n\tEphemeral\032\n\n\010DiscreteB\t\n\007feature\"\234\001\n\007F" +
+      "eature\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_class\030\002 \001" +
+      "(\0132..hilo.protobufs.structure.feature.Fe" +
+      "atureClass\022=\n\005stats\030\003 \001(\0132..hilo.protobu" +
+      "fs.structure.feature.FeatureStats\"\362\001\n\014Bo" +
+      "oleanStats\022\r\n\005count\030\001 \001(\003\022K\n\thistogram\030\002" +
+      " \001(\01328.hilo.protobufs.structure.feature." +
+      "BooleanStats.Histogram\032\205\001\n\tHistogram\022P\n\007" +
+      "buckets\030\001 \003(\0132?.hilo.protobufs.structure" +
+      ".feature.BooleanStats.Histogram.Bucket\032&" +
+      "\n\006Bucket\022\r\n\005value\030\001 \001(\010\022\r\n\005count\030\002 \001(\003\"\327" +
+      "\005\n\014NumericStats\022N\n\013value_stats\030\001 \001(\01329.h" +
+      "ilo.protobufs.structure.feature.NumericS" +
+      "tats.ValueStats\022S\n\020continuity_stats\030\002 \001(" +
+      "\01329.hilo.protobufs.structure.feature.Num" +
+      "ericStats.ValueStats\022[\n\017value_histogram\030" +
+      "\003 \001(\0132B.hilo.protobufs.structure.feature" +
+      ".NumericStats.PercentileHistogram\022b\n\026dif" +
+      "ferential_histogram\030\004 \001(\0132B.hilo.protobu" +
+      "fs.structure.feature.NumericStats.Percen" +
+      "tileHistogram\032\223\001\n\nValueStats\022\r\n\005count\030\001 " +
+      "\001(\003\022\013\n\003min\030\002 \001(\001\022\013\n\003max\030\003 \001(\001\022\014\n\004mean\030\004 " +
+      "\001(\001\022\032\n\022standard_deviation\030\005 \001(\001\022\027\n\017conti" +
+      "nuityScore\030\006 \001(\001\022\031\n\021base64_stats_repr\030\t " +
+      "\001(\t\032\312\001\n\023PercentileHistogram\022Z\n\007buckets\030\001" +
+      " \003(\0132I.hilo.protobufs.structure.feature." +
+      "NumericStats.PercentileHistogram.Bucket\022" +
+      "\022\n\nboundaries\030\002 \003(\001\032C\n\006Bucket\022\013\n\003min\030\001 \001" +
+      "(\001\022\013\n\003max\030\002 \001(\001\022\r\n\005count\030\003 \001(\003\022\020\n\010bounda" +
+      "ry\030\004 \001(\001\"\357\001\n\013StringStats\022\r\n\005count\030\001 \001(\003\022" +
+      "J\n\thistogram\030\002 \001(\01327.hilo.protobufs.stru" +
+      "cture.feature.StringStats.Histogram\032\204\001\n\t" +
+      "Histogram\022O\n\007buckets\030\002 \003(\0132>.hilo.protob" +
+      "ufs.structure.feature.StringStats.Histog" +
+      "ram.Bucket\032&\n\006Bucket\022\r\n\005value\030\001 \001(\t\022\r\n\005c" +
+      "ount\030\002 \001(\003\"\360\003\n\014FeatureStats\022E\n\rboolean_s" +
+      "tats\030\001 \001(\0132..hilo.protobufs.structure.fe" +
+      "ature.BooleanStats\022A\n\tint_stats\030\002 \001(\0132.." +
+      "hilo.protobufs.structure.feature.Numeric" +
+      "Stats\022B\n\nlong_stats\030\003 \001(\0132..hilo.protobu" +
+      "fs.structure.feature.NumericStats\022C\n\013flo" +
+      "at_stats\030\004 \001(\0132..hilo.protobufs.structur" +
+      "e.feature.NumericStats\022D\n\014double_stats\030\005" +
+      " \001(\0132..hilo.protobufs.structure.feature." +
+      "NumericStats\022C\n\014string_stats\030\006 \001(\0132-.hil" +
+      "o.protobufs.structure.feature.StringStat" +
+      "s\022B\n\013bytes_stats\030\007 \001(\0132-.hilo.protobufs." +
+      "structure.feature.StringStats\"`\n\nStatsEv" +
+      "ent\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_stats\030\002 \001(\0132" +
+      "..hilo.protobufs.structure.feature.Featu" +
+      "reStats\"\235\001\n\rFeaturesEvent\022D\n\010metadata\030\001 " +
+      "\001(\01322.hilo.protobufs.structure.feature.F" +
+      "eaturesMetadata\022=\n\005stats\030\020 \001(\0132,.hilo.pr" +
+      "otobufs.structure.feature.StatsEventH\000B\007" +
+      "\n\005event\"c\n\rFeatureCreate\022\013\n\003key\030\001 \001(\t\022E\n" +
+      "\rfeature_class\030\002 \001(\0132..hilo.protobufs.st" +
+      "ructure.feature.FeatureClass\"\377\001\n\rFeature" +
+      "Update\022G\n\006before\030\001 \001(\01327.hilo.protobufs." +
+      "structure.feature.FeatureUpdate.Feature\022" +
+      "F\n\005after\030\002 \001(\01327.hilo.protobufs.structur" +
+      "e.feature.FeatureUpdate.Feature\032]\n\007Featu" +
+      "re\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_class\030\002 \001(\0132." +
+      ".hilo.protobufs.structure.feature.Featur" +
+      "eClass\"\251\001\n\nFeatureLog\022I\n\016feature_create\030" +
+      "\001 \001(\0132/.hilo.protobufs.structure.feature" +
+      ".FeatureCreateH\000\022I\n\016feature_update\030\002 \001(\013" +
+      "2/.hilo.protobufs.structure.feature.Feat" +
+      "ureUpdateH\000B\005\n\003log\"\333\001\n\016FeaturesUpdate\022D\n" +
+      "\010metadata\030\001 \001(\01322.hilo.protobufs.structu" +
+      "re.feature.FeaturesMetadata\022;\n\003log\030\020 \001(\013" +
+      "2,.hilo.protobufs.structure.feature.Feat" +
+      "ureLogH\000\022<\n\007feature\030\021 \001(\0132).hilo.protobu" +
+      "fs.structure.feature.FeatureH\000B\010\n\006update" +
+      "\"\224\001\n\020FeatureLogsModel\022D\n\010metadata\030\001 \001(\0132" +
+      "2.hilo.protobufs.structure.feature.Featu" +
+      "resMetadata\022:\n\004logs\030\002 \001(\0132,.hilo.protobu" +
+      "fs.structure.feature.FeatureLog\"\202\002\n\rFeat" +
+      "uresModel\022D\n\010metadata\030\001 \001(\01322.hilo.proto" +
+      "bufs.structure.feature.FeaturesMetadata\022" +
+      "O\n\010features\030\002 \003(\0132=.hilo.protobufs.struc" +
+      "ture.feature.FeaturesModel.FeaturesEntry" +
+      "\032Z\n\rFeaturesEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030" +
+      "\002 \001(\0132).hilo.protobufs.structure.feature" +
+      ".Feature:\0028\001B-\n+com.hilohq.hilo.protobuf" +
+      "s.structure.featureb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27726,7 +29286,7 @@ public final class FeatureOuterClass {
     internal_static_hilo_protobufs_structure_feature_FeatureClass_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_feature_FeatureClass_descriptor,
-        new java.lang.String[] { "BoolEnum", "IntEnum", "StringEnum", "Gauge", "Counter", "Monotonic", "Distance", "Duration", "Timestamp", "Set", "Ephemeral", "Feature", });
+        new java.lang.String[] { "BoolEnum", "IntEnum", "StringEnum", "Gauge", "Discrete", "Counter", "Monotonic", "Distance", "Duration", "Timestamp", "Set", "Ephemeral", "Feature", });
     internal_static_hilo_protobufs_structure_feature_FeatureClass_IntEnum_descriptor =
       internal_static_hilo_protobufs_structure_feature_FeatureClass_descriptor.getNestedTypes().get(0);
     internal_static_hilo_protobufs_structure_feature_FeatureClass_IntEnum_fieldAccessorTable = new
@@ -27793,6 +29353,12 @@ public final class FeatureOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_feature_FeatureClass_Ephemeral_descriptor,
         new java.lang.String[] { });
+    internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor =
+      internal_static_hilo_protobufs_structure_feature_FeatureClass_descriptor.getNestedTypes().get(11);
+    internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_feature_FeatureClass_Discrete_descriptor,
+        new java.lang.String[] { });
     internal_static_hilo_protobufs_structure_feature_Feature_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_hilo_protobufs_structure_feature_Feature_fieldAccessorTable = new
@@ -27822,9 +29388,15 @@ public final class FeatureOuterClass {
     internal_static_hilo_protobufs_structure_feature_NumericStats_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_feature_NumericStats_descriptor,
-        new java.lang.String[] { "Count", "Min", "Max", "Mean", "StandardDeviation", "ValueHistogram", "DifferentialHistogram", "Base64StatsRepr", });
-    internal_static_hilo_protobufs_structure_feature_NumericStats_PercentileHistogram_descriptor =
+        new java.lang.String[] { "ValueStats", "ContinuityStats", "ValueHistogram", "DifferentialHistogram", });
+    internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor =
       internal_static_hilo_protobufs_structure_feature_NumericStats_descriptor.getNestedTypes().get(0);
+    internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_structure_feature_NumericStats_ValueStats_descriptor,
+        new java.lang.String[] { "Count", "Min", "Max", "Mean", "StandardDeviation", "ContinuityScore", "Base64StatsRepr", });
+    internal_static_hilo_protobufs_structure_feature_NumericStats_PercentileHistogram_descriptor =
+      internal_static_hilo_protobufs_structure_feature_NumericStats_descriptor.getNestedTypes().get(1);
     internal_static_hilo_protobufs_structure_feature_NumericStats_PercentileHistogram_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_feature_NumericStats_PercentileHistogram_descriptor,

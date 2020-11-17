@@ -36,7 +36,7 @@ task integrationTest(type: Test) {
 }
 
 tasks.integrationTest.dependsOn("shadowJar", "startDockerCompose")
-tasks.integrationTest.finalizedBy("stopDockerCompose")
+//tasks.integrationTest.finalizedBy("stopDockerCompose")
 
 dependencies {
     compile project(":connectors")

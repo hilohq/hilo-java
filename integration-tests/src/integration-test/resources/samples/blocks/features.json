@@ -54,11 +54,23 @@
     "totalDifficulty": {
       "stats": {
         "longStats": {
-          "count": "100",
-          "min": 7135202464334938000,
-          "max": 7136447246072126000,
-          "mean": 7135824559021881000,
-          "standardDeviation": 364804137707569.94,
+          "valueStats": {
+            "count": "100",
+            "min": 7135202464334938000,
+            "max": 7136447246072126000,
+            "mean": 7135824559021881000,
+            "standardDeviation": 364804137707569.94,
+            "base64StatsRepr": "ZAAAAAAAAAB+AEWo4sHYQ5saAeBjyWRGQMuXNVXB2ENnHG09cMLYQw=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.5,
+            "max": 0.9330357142857143,
+            "mean": 0.9183764577259476,
+            "standardDeviation": 0.0590765800553933,
+            "continuityScore": 0.9774530377813408,
+            "base64StatsRepr": "YgAAAAAAAAA7LWsGV2PtPyOwf/KKqtU/AAAAAAAA4D+3bdu2bdvtPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -264,170 +276,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": 12555460112384,
-                "max": 12555460112384,
+                "min": 12549275670528,
+                "max": 12549275670528,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": 25104789630976,
-                "max": 25104789630976,
+                "min": 12549281653760,
+                "max": 12549281653760,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": 37660246751232,
-                "max": 37660246751232,
+                "min": 12549287636992,
+                "max": 12549287636992,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": 50209573276672,
-                "max": 50209573276672,
+                "min": 12549314561024,
+                "max": 12549314561024,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": 62765027404800,
-                "max": 62765027404800,
+                "min": 12549317551104,
+                "max": 12549317551104,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": 75326612124672,
-                "max": 75326612124672,
+                "min": 12549326525440,
+                "max": 12549326525440,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": 87882063259648,
-                "max": 87882063259648,
+                "min": 12549329518592,
+                "max": 12549329518592,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": 100443644985344,
-                "max": 100443644985344,
+                "min": 12555400254464,
+                "max": 12555400254464,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": 112999093127168,
-                "max": 138103855826944,
+                "min": 12555403247616,
+                "max": 12555409233920,
                 "count": "3",
                 "boundary": 5
               },
               {
-                "min": 150653170387968,
-                "max": 188325624449024,
+                "min": 12555412226048,
+                "max": 12555439163392,
                 "count": "4",
                 "boundary": 10
               },
               {
-                "min": 200887194196992,
-                "max": 238584164611072,
+                "min": 12555442155520,
+                "max": 12555451134976,
                 "count": "4",
                 "boundary": 15
               },
               {
-                "min": 251158001515520,
-                "max": 288904070504448,
+                "min": 12555454128128,
+                "max": 12561515848704,
                 "count": "4",
                 "boundary": 20
               },
               {
-                "min": 301477901413376,
-                "max": 401982606794752,
+                "min": 12561530821632,
+                "max": 12561581725696,
                 "count": "9",
                 "boundary": 30
               },
               {
-                "min": 414538019020800,
-                "max": 514981268941824,
+                "min": 12561584719872,
+                "max": 12567700332544,
                 "count": "9",
                 "boundary": 40
               },
               {
-                "min": 527542799763456,
-                "max": 628182323665920,
+                "min": 12567703327744,
+                "max": 12573791944704,
                 "count": "9",
                 "boundary": 50
               },
               {
-                "min": 640749976064000,
-                "max": 741364833819648,
+                "min": 12573800936448,
+                "max": 12579895505920,
                 "count": "9",
                 "boundary": 60
               },
               {
-                "min": 753950895855616,
-                "max": 854651635209216,
+                "min": 12579898505216,
+                "max": 12579970476032,
                 "count": "9",
                 "boundary": 70
               },
               {
-                "min": 867231539712000,
-                "max": 1018202570853376,
+                "min": 12579973475328,
+                "max": 12586062035968,
                 "count": "13",
                 "boundary": 80
               },
               {
-                "min": 1030788599886848,
-                "max": 1068583572124672,
+                "min": 12586065036288,
+                "max": 12586119040000,
                 "count": "4",
                 "boundary": 85
               },
               {
-                "min": 1081181892199424,
-                "max": 1119001458519040,
+                "min": 12592162548736,
+                "max": 12592201571328,
                 "count": "4",
                 "boundary": 90
               },
               {
-                "min": 1131599772588032,
-                "max": 1156777949168640,
+                "min": 12592207574016,
+                "max": 12592228585472,
                 "count": "3",
                 "boundary": 95
               },
               {
-                "min": 1169357817687040,
-                "max": 1169357817687040,
+                "min": 12598314068992,
+                "max": 12598314068992,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 1181931543690240,
-                "max": 1181931543690240,
+                "min": 12598320074752,
+                "max": 12598320074752,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 1194499130180608,
-                "max": 1194499130180608,
+                "min": 12598323079168,
+                "max": 12598323079168,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 1207072853186560,
-                "max": 1207072853186560,
+                "min": 12604468593664,
+                "max": 12604468593664,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 1219640436680704,
-                "max": 1219640436680704,
+                "min": 12604471599104,
+                "max": 12604471599104,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 1232214156690432,
-                "max": 1232214156690432,
+                "min": 12604474603520,
+                "max": 12604474603520,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 1244781737188352,
-                "max": 1244781737188352,
+                "min": 12610626126848,
+                "max": 12610626126848,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -462,8 +474,7 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAAB+AEWo4sHYQ5saAeBjyWRGQMuXNVXB2ENnHG09cMLYQw=="
+          }
         }
       },
       "featureClass": {
@@ -1317,11 +1328,23 @@
     "difficulty": {
       "stats": {
         "longStats": {
-          "count": "100",
-          "min": 12549275671181,
-          "max": 12610626126397,
-          "mean": 12573310696974.945,
-          "standardDeviation": 15252136062.73164,
+          "valueStats": {
+            "count": "100",
+            "min": 12549275671181,
+            "max": 12610626126397,
+            "mean": 12573310696974.945,
+            "standardDeviation": 15252136062.73164,
+            "base64StatsRepr": "ZAAAAAAAAADkHXxv596mQsPQP3bdgZNEABq1PLbTpkIAegTIR/CmQg=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.25,
+            "max": 0.8705357142857143,
+            "mean": 0.5599337949465502,
+            "standardDeviation": 0.08748250215049526,
+            "continuityScore": 0.6474162970970454,
+            "base64StatsRepr": "YgAAAAAAAAAuDydH+urhP1RHkTFowec/AAAAAAAA0D+3bdu2bdvrPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -1527,170 +1550,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -56838046,
-                "max": -56838046,
+                "min": -6157532032,
+                "max": -6157532032,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -50855106,
-                "max": -50855106,
+                "min": -6154528359,
+                "max": -6154528359,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -44872164,
-                "max": -44872164,
+                "min": -6154525424,
+                "max": -6154525424,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -17948884,
-                "max": -17948884,
+                "min": -6151520285,
+                "max": -6151520285,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": -14957405,
-                "max": -14957405,
+                "min": -6148548858,
+                "max": -6148548858,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -5982964,
-                "max": -5982964,
+                "min": -6148540064,
+                "max": -6148540064,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": -2991482,
-                "max": -2991482,
+                "min": -6148538598,
+                "max": -6148538598,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": 6067745291,
-                "max": 6067745291,
+                "min": -6148535667,
+                "max": -6148535667,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": 6070738221,
-                "max": 6076724082,
+                "min": -6148534201,
+                "max": -6145565681,
                 "count": "3",
                 "boundary": 5
               },
               {
-                "min": 6079717014,
-                "max": 6106653434,
+                "min": -6145546637,
+                "max": -6145530522,
                 "count": "4",
                 "boundary": 10
               },
               {
-                "min": 6109646372,
-                "max": 6118625192,
+                "min": -6145529057,
+                "max": -6145514408,
                 "count": "4",
                 "boundary": 15
               },
               {
-                "min": 6121618134,
-                "max": 12183340129,
+                "min": -6142564917,
+                "max": -6142541489,
                 "count": "4",
                 "boundary": 20
               },
               {
-                "min": 12198312077,
-                "max": 12249216822,
+                "min": -6142528311,
+                "max": -6136573634,
                 "count": "9",
                 "boundary": 30
               },
               {
-                "min": 12252211225,
-                "max": 18367822590,
+                "min": -6136566320,
+                "max": -6133561177,
                 "count": "9",
                 "boundary": 40
               },
               {
-                "min": 18370818452,
-                "max": 24459435487,
+                "min": -6130595502,
+                "max": 6127579188,
                 "count": "9",
                 "boundary": 50
               },
               {
-                "min": 24468427433,
-                "max": 30562997306,
+                "min": 6127582110,
+                "max": 6130571170,
                 "count": "9",
                 "boundary": 60
               },
               {
-                "min": 30565996076,
-                "max": 30637966754,
+                "min": 6130574093,
+                "max": 6133579234,
                 "count": "9",
                 "boundary": 70
               },
               {
-                "min": 30640965542,
-                "max": 36729526556,
+                "min": 6136515633,
+                "max": 6142522966,
                 "count": "13",
                 "boundary": 80
               },
               {
-                "min": 36732526796,
-                "max": 36786531223,
+                "min": 6142525894,
+                "max": 6142531751,
                 "count": "4",
                 "boundary": 85
               },
               {
-                "min": 42830039429,
-                "max": 42869061508,
+                "min": 6142536144,
+                "max": 6142566893,
                 "count": "4",
                 "boundary": 90
               },
               {
-                "min": 42875064915,
-                "max": 42896076863,
+                "min": 6145522244,
+                "max": 6145535429,
                 "count": "3",
                 "boundary": 95
               },
               {
-                "min": 48981559714,
-                "max": 48981559714,
+                "min": 6145538359,
+                "max": 6145538359,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 48987566037,
-                "max": 48987566037,
+                "min": 6145539824,
+                "max": 6145539824,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 48990569200,
-                "max": 48990569200,
+                "min": 6145548614,
+                "max": 6145548614,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 55136085138,
-                "max": 55136085138,
+                "min": 6148522988,
+                "max": 6148522988,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 55139089767,
-                "max": 55139089767,
+                "min": 6151523730,
+                "max": 6151523730,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 55142094396,
-                "max": 55142094396,
+                "min": 6151525196,
+                "max": 6151525196,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 61293617170,
-                "max": 61293617170,
+                "min": 6154527403,
+                "max": 6154527403,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -1725,21 +1748,32 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAADkHXxv596mQsPQP3bdgZNEABq1PLbTpkIAegTIR/CmQg=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "gasLimit": {
       "stats": {
         "intStats": {
-          "count": "100",
-          "min": 3141592,
-          "max": 3141592,
-          "mean": 3141592,
+          "valueStats": {
+            "count": "100",
+            "min": 3141592,
+            "max": 3141592,
+            "mean": 3141592,
+            "base64StatsRepr": "ZAAAAAAAAAAAAAAA7PdHQQAAAAAAAAAAAAAAAOz3R0EAAAAA7PdHQQ=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.06696428571428571,
+            "max": 0.5,
+            "mean": 0.08162354227405244,
+            "standardDeviation": 0.05907658005539326,
+            "continuityScore": 0.1407001223294457,
+            "base64StatsRepr": "YgAAAAAAAAAolqbMR+W0Pxywf/KKqtU/SZIkSZIksT8AAAAAAADgPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -1817,22 +1851,33 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAAAAAAAA7PdHQQAAAAAAAAAAAAAAAOz3R0EAAAAA7PdHQQ=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "number": {
       "stats": {
         "intStats": {
-          "count": "100",
-          "min": 1000000,
-          "max": 1000099,
-          "mean": 1000049.5,
-          "standardDeviation": 29.011491975882016,
+          "valueStats": {
+            "count": "100",
+            "min": 1000000,
+            "max": 1000099,
+            "mean": 1000049.5,
+            "standardDeviation": 29.011491975882016,
+            "base64StatsRepr": "ZAAAAAAAAAAAAAAA44QuQQAAAADQV/RAAAAAAICELkEAAAAARoUuQQ=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.5,
+            "max": 0.9330357142857143,
+            "mean": 0.9183764577259476,
+            "standardDeviation": 0.0590765800553933,
+            "continuityScore": 0.9774530377813408,
+            "base64StatsRepr": "YgAAAAAAAAA7LWsGV2PtPyOwf/KKqtU/AAAAAAAA4D+3bdu2bdvtPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -2042,168 +2087,6 @@
                 "max": 1,
                 "count": "1",
                 "boundary": 1e-7
-              },
-              {
-                "min": 2,
-                "max": 2,
-                "count": "1",
-                "boundary": 0.000001
-              },
-              {
-                "min": 3,
-                "max": 3,
-                "count": "1",
-                "boundary": 0.00001
-              },
-              {
-                "min": 4,
-                "max": 4,
-                "count": "1",
-                "boundary": 0.0001
-              },
-              {
-                "min": 5,
-                "max": 5,
-                "count": "1",
-                "boundary": 0.001
-              },
-              {
-                "min": 6,
-                "max": 6,
-                "count": "1",
-                "boundary": 0.01
-              },
-              {
-                "min": 7,
-                "max": 7,
-                "count": "1",
-                "boundary": 0.1
-              },
-              {
-                "min": 8,
-                "max": 8,
-                "count": "1",
-                "boundary": 1
-              },
-              {
-                "min": 9,
-                "max": 11,
-                "count": "3",
-                "boundary": 5
-              },
-              {
-                "min": 12,
-                "max": 15,
-                "count": "4",
-                "boundary": 10
-              },
-              {
-                "min": 16,
-                "max": 19,
-                "count": "4",
-                "boundary": 15
-              },
-              {
-                "min": 20,
-                "max": 23,
-                "count": "4",
-                "boundary": 20
-              },
-              {
-                "min": 24,
-                "max": 32,
-                "count": "9",
-                "boundary": 30
-              },
-              {
-                "min": 33,
-                "max": 41,
-                "count": "9",
-                "boundary": 40
-              },
-              {
-                "min": 42,
-                "max": 50,
-                "count": "9",
-                "boundary": 50
-              },
-              {
-                "min": 51,
-                "max": 59,
-                "count": "9",
-                "boundary": 60
-              },
-              {
-                "min": 60,
-                "max": 68,
-                "count": "9",
-                "boundary": 70
-              },
-              {
-                "min": 69,
-                "max": 81,
-                "count": "13",
-                "boundary": 80
-              },
-              {
-                "min": 82,
-                "max": 85,
-                "count": "4",
-                "boundary": 85
-              },
-              {
-                "min": 86,
-                "max": 89,
-                "count": "4",
-                "boundary": 90
-              },
-              {
-                "min": 90,
-                "max": 92,
-                "count": "3",
-                "boundary": 95
-              },
-              {
-                "min": 93,
-                "max": 93,
-                "count": "1",
-                "boundary": 99
-              },
-              {
-                "min": 94,
-                "max": 94,
-                "count": "1",
-                "boundary": 99.9
-              },
-              {
-                "min": 95,
-                "max": 95,
-                "count": "1",
-                "boundary": 99.99
-              },
-              {
-                "min": 96,
-                "max": 96,
-                "count": "1",
-                "boundary": 99.999
-              },
-              {
-                "min": 97,
-                "max": 97,
-                "count": "1",
-                "boundary": 99.9999
-              },
-              {
-                "min": 98,
-                "max": 98,
-                "count": "1",
-                "boundary": 99.99999
-              },
-              {
-                "min": 99,
-                "max": 99,
-                "count": "1",
-                "boundary": 99.999999
               }
             ],
             "boundaries": [
@@ -2236,21 +2119,32 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAAAAAAAA44QuQQAAAADQV/RAAAAAAICELkEAAAAARoUuQQ=="
+          }
         }
       },
       "featureClass": {
-        "monotonic": {}
+        "counter": {}
       }
     },
     "gasUsed": {
       "stats": {
         "intStats": {
-          "count": "100",
-          "max": 599373,
-          "mean": 66213.16000000002,
-          "standardDeviation": 102674.79504832996,
+          "valueStats": {
+            "count": "100",
+            "max": 599373,
+            "mean": 66213.16000000002,
+            "standardDeviation": 102674.79504832996,
+            "base64StatsRepr": "ZAAAAAAAAAD3KFyPUirwQBJuOxnxX25CAAAAAAAAAAAAAAAAmkoiQQ=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.20089285714285715,
+            "max": 0.6651785714285714,
+            "mean": 0.39214346452866844,
+            "standardDeviation": 0.08679154942077069,
+            "continuityScore": 0.47893501394943916,
+            "base64StatsRepr": "YgAAAAAAAAC6aN/m4BjZP1iljuW4Yec/btu2bdu2yT+SJEmSJEnlPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -2436,120 +2330,121 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -50244,
-                "max": -50244,
+                "min": -527199,
+                "max": -527199,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -29244,
-                "max": -29244,
+                "min": -514862,
+                "max": -514862,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -8244,
-                "max": -8244,
+                "min": -239244,
+                "max": -239244,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -7700,
-                "max": -7700,
+                "min": -238829,
+                "max": -238829,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
+                "min": -231000,
+                "max": -231000,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": 12756,
-                "max": 12756,
+                "min": -221976,
+                "max": -221976,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": 33756,
-                "max": 33756,
+                "min": -221888,
+                "max": -221888,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": 34267,
-                "max": 34267,
+                "min": -205911,
+                "max": -205911,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": 42000,
-                "max": 42000,
+                "min": -147000,
+                "max": -147000,
                 "count": "1",
                 "boundary": 5
               },
               {
-                "min": 46791,
-                "max": 46791,
-                "count": "1",
+                "min": -99794,
+                "max": -97035,
+                "count": "2",
                 "boundary": 10
               },
               {
-                "min": 54756,
-                "max": 54756,
-                "count": "1",
+                "min": -92244,
+                "max": -84000,
+                "count": "2",
                 "boundary": 15
               },
               {
-                "min": 75756,
-                "max": 75756,
-                "count": "1",
+                "min": -63511,
+                "max": -63000,
+                "count": "2",
                 "boundary": 20
               },
               {
-                "min": 88791,
-                "max": 88791,
-                "count": "1",
+                "min": -62456,
+                "max": -42544,
+                "count": "4",
                 "boundary": 30
               },
               {
-                "min": 96756,
-                "max": 96756,
-                "count": "1",
+                "min": -42000,
+                "max": -21000,
+                "count": "4",
                 "boundary": 40
               },
               {
-                "min": 138756,
-                "max": 138756,
-                "count": "1",
+                "max": 33756,
+                "count": "4",
                 "boundary": 50
               },
               {
-                "min": 155667,
-                "max": 155667,
-                "count": "1",
+                "min": 42000,
+                "max": 92244,
+                "count": "4",
                 "boundary": 60
               },
               {
-                "min": 171644,
-                "max": 171644,
+                "min": 97035,
+                "max": 97035,
                 "count": "1",
                 "boundary": 70
               },
               {
-                "min": 171732,
-                "max": 171732,
+                "min": 105000,
+                "max": 105000,
                 "count": "1",
                 "boundary": 80
               },
               {
-                "min": 180756,
-                "max": 180756,
+                "min": 147000,
+                "max": 147000,
                 "count": "1",
                 "boundary": 85
               },
               {
-                "min": 188585,
-                "max": 188585,
+                "min": 179888,
+                "max": 179888,
                 "count": "1",
                 "boundary": 90
               },
@@ -2560,28 +2455,46 @@
                 "boundary": 95
               },
               {
-                "min": 213393,
-                "max": 213393,
+                "min": 200637,
+                "max": 200637,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 234329,
-                "max": 234329,
+                "min": 205911,
+                "max": 205911,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 518955,
-                "max": 518955,
+                "min": 221976,
+                "max": 221976,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 549129,
-                "max": 549129,
+                "min": 239244,
+                "max": 239244,
                 "count": "1",
                 "boundary": 99.999
+              },
+              {
+                "min": 242573,
+                "max": 242573,
+                "count": "1",
+                "boundary": 99.9999
+              },
+              {
+                "min": 548199,
+                "max": 548199,
+                "count": "1",
+                "boundary": 99.99999
+              },
+              {
+                "min": 599373,
+                "max": 599373,
+                "count": "1",
+                "boundary": 99.999999
               }
             ],
             "boundaries": [
@@ -2614,12 +2527,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAAD3KFyPUirwQBJuOxnxX25CAAAAAAAAAAAAAAAAmkoiQQ=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "sha3Uncles": {
@@ -2675,11 +2587,23 @@
     "size": {
       "stats": {
         "intStats": {
-          "count": "100",
-          "min": 541,
-          "max": 4469,
-          "mean": 947.22,
-          "standardDeviation": 613.5570833634428,
+          "valueStats": {
+            "count": "100",
+            "min": 541,
+            "max": 4469,
+            "mean": 947.22,
+            "standardDeviation": 613.5570833634428,
+            "base64StatsRepr": "ZAAAAAAAAAD2KFyPwpmNQBauR0lpxYFBAAAAAADogEAAAAAAAHWxQA=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.25,
+            "max": 0.7276785714285714,
+            "mean": 0.46949404761904767,
+            "standardDeviation": 0.08919784018502352,
+            "continuityScore": 0.5586918878040712,
+            "base64StatsRepr": "YgAAAAAAAADEMAzDMAzeP5CLNR47sug/AAAAAAAA0D+SJEmSJEnnPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -2885,169 +2809,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": -227,
-                "max": -227,
+                "min": -3555,
+                "max": -3555,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": -225,
-                "max": -225,
+                "min": -2577,
+                "max": -2577,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": -114,
-                "max": -114,
+                "min": -1852,
+                "max": -1852,
                 "count": "1",
                 "boundary": 0.00001
               },
               {
-                "min": -113,
-                "max": -113,
+                "min": -1598,
+                "max": -1598,
                 "count": "1",
                 "boundary": 0.0001
               },
               {
-                "min": -112,
-                "max": -112,
+                "min": -1421,
+                "max": -1421,
                 "count": "1",
                 "boundary": 0.001
               },
               {
-                "min": -111,
-                "max": -111,
+                "min": -1251,
+                "max": -1251,
                 "count": "1",
                 "boundary": 0.01
               },
               {
-                "min": -110,
-                "max": -110,
+                "min": -1217,
+                "max": -1217,
                 "count": "1",
                 "boundary": 0.1
               },
               {
-                "min": -109,
-                "max": -109,
+                "min": -1018,
+                "max": -1018,
                 "count": "1",
                 "boundary": 1
               },
               {
-                "min": -108,
-                "max": -5,
-                "count": "2",
+                "min": -872,
+                "max": -593,
+                "count": "3",
                 "boundary": 5
               },
               {
-                "min": -4,
-                "max": -2,
-                "count": "2",
+                "min": -541,
+                "max": -458,
+                "count": "4",
                 "boundary": 10
               },
               {
-                "max": 1,
-                "count": "2",
+                "min": -455,
+                "max": -388,
+                "count": "4",
                 "boundary": 15
               },
               {
-                "min": 3,
-                "max": 4,
-                "count": "2",
+                "min": -338,
+                "max": -233,
+                "count": "4",
                 "boundary": 20
               },
               {
-                "min": 6,
-                "max": 118,
-                "count": "5",
+                "min": -231,
+                "max": -114,
+                "count": "8",
                 "boundary": 30
               },
               {
-                "min": 146,
-                "max": 234,
-                "count": "5",
+                "min": -113,
+                "max": -2,
+                "count": "8",
                 "boundary": 40
               },
               {
-                "min": 314,
-                "max": 348,
-                "count": "5",
+                "min": -1,
+                "max": 114,
+                "count": "8",
                 "boundary": 50
               },
               {
-                "min": 366,
-                "max": 462,
-                "count": "5",
+                "min": 115,
+                "max": 225,
+                "count": "8",
                 "boundary": 60
               },
               {
-                "min": 544,
-                "max": 784,
-                "count": "5",
+                "min": 228,
+                "max": 431,
+                "count": "8",
                 "boundary": 70
               },
               {
-                "min": 791,
-                "max": 791,
-                "count": "1",
+                "min": 454,
+                "max": 654,
+                "count": "8",
                 "boundary": 80
               },
               {
-                "min": 849,
-                "max": 849,
-                "count": "1",
+                "min": 787,
+                "max": 874,
+                "count": "2",
                 "boundary": 85
               },
               {
-                "min": 990,
-                "max": 990,
+                "min": 957,
+                "max": 957,
                 "count": "1",
                 "boundary": 90
               },
               {
-                "min": 1026,
-                "max": 1026,
+                "min": 1001,
+                "max": 1001,
                 "count": "1",
                 "boundary": 95
               },
               {
-                "min": 1281,
-                "max": 1281,
+                "min": 1076,
+                "max": 1076,
                 "count": "1",
                 "boundary": 99
               },
               {
-                "min": 1371,
-                "max": 1371,
+                "min": 1163,
+                "max": 1163,
                 "count": "1",
                 "boundary": 99.9
               },
               {
-                "min": 1393,
-                "max": 1393,
+                "min": 1253,
+                "max": 1253,
                 "count": "1",
                 "boundary": 99.99
               },
               {
-                "min": 1810,
-                "max": 1810,
+                "min": 1373,
+                "max": 1373,
                 "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 1852,
-                "max": 1852,
+                "min": 1389,
+                "max": 1389,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 2350,
-                "max": 2350,
+                "min": 1962,
+                "max": 1962,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 3701,
-                "max": 3701,
+                "min": 3928,
+                "max": 3928,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -3082,12 +3007,11 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAAD2KFyPwpmNQBauR0lpxYFBAAAAAADogEAAAAAAAHWxQA=="
+          }
         }
       },
       "featureClass": {
-        "gauge": {}
+        "discrete": {}
       }
     },
     "transactionsRoot": {
@@ -5051,11 +4975,23 @@
     "timestamp": {
       "stats": {
         "intStats": {
-          "count": "100",
-          "min": 1455404053,
-          "max": 1455405668,
-          "mean": 1455404850.6999998,
-          "standardDeviation": 453.0924610205362,
+          "valueStats": {
+            "count": "100",
+            "min": 1455404053,
+            "max": 1455405668,
+            "mean": 1455404850.6999998,
+            "standardDeviation": 453.0924610205362,
+            "base64StatsRepr": "ZAAAAAAAAADMzKzM7a/VQT/buBDpYXNBAABABe2v1UEAAACZ7q/VQQ=="
+          },
+          "continuityStats": {
+            "count": "98",
+            "min": 0.5,
+            "max": 0.9330357142857143,
+            "mean": 0.9183764577259476,
+            "standardDeviation": 0.0590765800553933,
+            "continuityScore": 0.9774530377813408,
+            "base64StatsRepr": "YgAAAAAAAAA7LWsGV2PtPyOwf/KKqtU/AAAAAAAA4D+3bdu2bdvtPw=="
+          },
           "valueHistogram": {
             "buckets": [
               {
@@ -5261,170 +5197,170 @@
           "differentialHistogram": {
             "buckets": [
               {
-                "min": 5,
-                "max": 5,
+                "min": 1,
+                "max": 1,
                 "count": "1",
                 "boundary": 1e-7
               },
               {
-                "min": 25,
-                "max": 25,
+                "min": 2,
+                "max": 2,
                 "count": "1",
                 "boundary": 0.000001
               },
               {
-                "min": 27,
-                "max": 27,
+                "min": 3,
+                "max": 3,
                 "count": "1",
                 "boundary": 0.00001
+              },
+              {
+                "min": 4,
+                "max": 4,
+                "count": "1",
+                "boundary": 0.0001
+              },
+              {
+                "min": 5,
+                "max": 5,
+                "count": "1",
+                "boundary": 0.001
+              },
+              {
+                "min": 6,
+                "max": 6,
+                "count": "1",
+                "boundary": 0.01
+              },
+              {
+                "min": 7,
+                "max": 7,
+                "count": "1",
+                "boundary": 0.1
+              },
+              {
+                "min": 8,
+                "max": 8,
+                "count": "1",
+                "boundary": 1
+              },
+              {
+                "min": 9,
+                "max": 9,
+                "count": "1",
+                "boundary": 5
+              },
+              {
+                "min": 10,
+                "max": 10,
+                "count": "1",
+                "boundary": 10
+              },
+              {
+                "min": 11,
+                "max": 11,
+                "count": "1",
+                "boundary": 15
+              },
+              {
+                "min": 12,
+                "max": 12,
+                "count": "1",
+                "boundary": 20
+              },
+              {
+                "min": 13,
+                "max": 15,
+                "count": "3",
+                "boundary": 30
+              },
+              {
+                "min": 17,
+                "max": 19,
+                "count": "3",
+                "boundary": 40
+              },
+              {
+                "min": 20,
+                "max": 22,
+                "count": "3",
+                "boundary": 50
+              },
+              {
+                "min": 23,
+                "max": 25,
+                "count": "3",
+                "boundary": 60
+              },
+              {
+                "min": 26,
+                "max": 27,
+                "count": "2",
+                "boundary": 70
+              },
+              {
+                "min": 28,
+                "max": 28,
+                "count": "1",
+                "boundary": 80
+              },
+              {
+                "min": 29,
+                "max": 29,
+                "count": "1",
+                "boundary": 85
+              },
+              {
+                "min": 30,
+                "max": 30,
+                "count": "1",
+                "boundary": 90
+              },
+              {
+                "min": 31,
+                "max": 31,
+                "count": "1",
+                "boundary": 95
+              },
+              {
+                "min": 33,
+                "max": 33,
+                "count": "1",
+                "boundary": 99
+              },
+              {
+                "min": 34,
+                "max": 34,
+                "count": "1",
+                "boundary": 99.9
+              },
+              {
+                "min": 42,
+                "max": 42,
+                "count": "1",
+                "boundary": 99.99
               },
               {
                 "min": 47,
                 "max": 47,
                 "count": "1",
-                "boundary": 0.0001
-              },
-              {
-                "min": 55,
-                "max": 55,
-                "count": "1",
-                "boundary": 0.001
-              },
-              {
-                "min": 57,
-                "max": 57,
-                "count": "1",
-                "boundary": 0.01
-              },
-              {
-                "min": 104,
-                "max": 104,
-                "count": "1",
-                "boundary": 0.1
-              },
-              {
-                "min": 107,
-                "max": 107,
-                "count": "1",
-                "boundary": 1
-              },
-              {
-                "min": 121,
-                "max": 216,
-                "count": "3",
-                "boundary": 5
-              },
-              {
-                "min": 247,
-                "max": 282,
-                "count": "4",
-                "boundary": 10
-              },
-              {
-                "min": 288,
-                "max": 318,
-                "count": "4",
-                "boundary": 15
-              },
-              {
-                "min": 330,
-                "max": 363,
-                "count": "4",
-                "boundary": 20
-              },
-              {
-                "min": 380,
-                "max": 541,
-                "count": "9",
-                "boundary": 30
-              },
-              {
-                "min": 563,
-                "max": 728,
-                "count": "9",
-                "boundary": 40
-              },
-              {
-                "min": 739,
-                "max": 837,
-                "count": "9",
-                "boundary": 50
-              },
-              {
-                "min": 856,
-                "max": 939,
-                "count": "9",
-                "boundary": 60
-              },
-              {
-                "min": 956,
-                "max": 1064,
-                "count": "9",
-                "boundary": 70
-              },
-              {
-                "min": 1085,
-                "max": 1269,
-                "count": "13",
-                "boundary": 80
-              },
-              {
-                "min": 1281,
-                "max": 1297,
-                "count": "4",
-                "boundary": 85
-              },
-              {
-                "min": 1339,
-                "max": 1386,
-                "count": "4",
-                "boundary": 90
-              },
-              {
-                "min": 1408,
-                "max": 1463,
-                "count": "3",
-                "boundary": 95
-              },
-              {
-                "min": 1488,
-                "max": 1488,
-                "count": "1",
-                "boundary": 99
-              },
-              {
-                "min": 1516,
-                "max": 1516,
-                "count": "1",
-                "boundary": 99.9
-              },
-              {
-                "min": 1539,
-                "max": 1539,
-                "count": "1",
-                "boundary": 99.99
-              },
-              {
-                "min": 1550,
-                "max": 1550,
-                "count": "1",
                 "boundary": 99.999
               },
               {
-                "min": 1592,
-                "max": 1592,
+                "min": 50,
+                "max": 50,
                 "count": "1",
                 "boundary": 99.9999
               },
               {
-                "min": 1596,
-                "max": 1596,
+                "min": 52,
+                "max": 52,
                 "count": "1",
                 "boundary": 99.99999
               },
               {
-                "min": 1615,
-                "max": 1615,
+                "min": 85,
+                "max": 85,
                 "count": "1",
                 "boundary": 99.999999
               }
@@ -5459,8 +5395,7 @@
               99.99999,
               99.999999
             ]
-          },
-          "base64StatsRepr": "ZAAAAAAAAADMzKzM7a/VQT/buBDpYXNBAABABe2v1UEAAACZ7q/VQQ=="
+          }
         }
       },
       "featureClass": {
