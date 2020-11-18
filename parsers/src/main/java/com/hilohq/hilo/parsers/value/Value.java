@@ -29,6 +29,10 @@ public interface Value {
     return false;
   }
 
+  default boolean isNumeric() {
+    return isInt() || isLong() || isFloat() || isDouble();
+  }
+
   default boolean booleanValue() {
     throw new UnsupportedOperationException("not a boolean");
   }
@@ -47,6 +51,10 @@ public interface Value {
 
   default double doubleValue() {
     throw new UnsupportedOperationException("not a double");
+  }
+
+  default double numericValue() {
+    throw new UnsupportedOperationException("not a number");
   }
 
   default String stringValue() {

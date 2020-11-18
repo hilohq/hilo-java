@@ -23,6 +23,11 @@ public final class DoubleValue implements Value {
   }
 
   @Override
+  public double numericValue() {
+    return value;
+  }
+
+  @Override
   public ValueType type() {
     return ValueType.Double;
   }

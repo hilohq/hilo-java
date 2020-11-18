@@ -1,7 +1,8 @@
 rootProject.name = 'hilo'
 
 include 'protobufs'
-include 'connectors'
+include 'connector-mongo'
+include 'connector-prometheus'
 include 'parsers'
 include 'features'
 include 'structure-learning'

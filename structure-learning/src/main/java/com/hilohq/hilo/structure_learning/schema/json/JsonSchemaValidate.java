@@ -14,15 +14,19 @@ import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.schema_service.service.MongoSchemaStore;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
-import org.apache.flink.api.common.functions.RichGroupReduceFunction;
+import org.apache.flink.api.common.functions.AbstractRichFunction;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.util.Collector;
 
-public final class JsonSchemaValidate extends RichGroupReduceFunction<String, Fields<FieldKey>> {
+public final class JsonSchemaValidate extends AbstractRichFunction {
+
   private final String schemaId;
   private final String mongoUrl;
   private TypeInfo<JsonFieldKey, JsonType> typeInfo;
   private Schema.SchemaFieldsModel schema;
+  private Schema.SchemaMetadata metadata;
+  private JsonValidator validator;
+  private JsonParser parser;
 
   public JsonSchemaValidate(final String mongoUrl, final String schemaId) {
     this.mongoUrl = mongoUrl;
@@ -46,24 +50,19 @@ public final class JsonSchemaValidate extends RichGroupReduceFunction<String, Fi
     }
 
     typeInfo = new TypeInfo<>(types);
+    parser = new JsonParser();
+    validator = new JsonValidator(typeInfo);
+    metadata = schema.getMetadata();
   }
 
-  @Override
-  public void reduce(final Iterable<String> values, final Collector<Fields<FieldKey>> out)
-      throws Exception {
-    final var parser = new JsonParser();
-    final var validator = new JsonValidator(typeInfo);
-    final var metadata = schema.getMetadata();
-
-    for (final var line : values) {
-      final var fields = parser.parse(line);
-      final var validatedFields = validator.validate(fields);
-      final var result = new FieldsMap<>();
-      for (final var entry : validatedFields.entrySet()) {
-        result.put(entry.getKey(), entry.getValue());
-      }
-      out.collect(new Fields<>(metadata, result));
+  public void processElement(final String value, final Collector<Fields<FieldKey>> out) {
+    final var fields = parser.parse(value);
+    final var validatedFields = validator.validate(fields);
+    final var result = new FieldsMap<>();
+    for (final var entry : validatedFields.entrySet()) {
+      result.put(entry.getKey(), entry.getValue());
     }
+    out.collect(new Fields<>(metadata, result));
   }
 
   @Override

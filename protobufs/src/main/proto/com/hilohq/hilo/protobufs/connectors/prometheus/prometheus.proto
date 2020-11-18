@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package hilo.protobufs.connectors.prometheus;
+
+option java_package = "com.hilohq.hilo.protobufs.connectors.prometheus";
+
+message PrometheusMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message PrometheusMetric {
+  message Gauge {
+    string name = 1;
+  }
+
+  oneof metric {
+    Gauge gauge = 1;
+  }
+}
+
+message PrometheusValue {
+  message Gauge {
+    string name = 1;
+    string help = 2;
+    double value = 3;
+  }
+
+  message Histogram {
+    string name = 1;
+    string help = 2;
+    double value = 3;
+  }
+
+  oneof value {
+    Gauge gauge = 1;
+    Histogram histogram = 2;
+  }
+}

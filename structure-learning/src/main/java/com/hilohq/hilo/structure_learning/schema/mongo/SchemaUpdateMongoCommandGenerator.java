@@ -1,9 +1,9 @@
 package com.hilohq.hilo.structure_learning.schema.mongo;
 
-import com.hilohq.hilo.connectors.mongodb.flink.MongoCommand;
-import com.hilohq.hilo.connectors.mongodb.flink.MongoCommandGenerator;
-import com.hilohq.hilo.connectors.mongodb.flink.MongoInsert;
-import com.hilohq.hilo.connectors.mongodb.flink.MongoUpdate;
+import com.hilohq.hilo.connectors_mongo.sink.MongoCommand;
+import com.hilohq.hilo.connectors_mongo.sink.MongoCommandGenerator;
+import com.hilohq.hilo.connectors_mongo.sink.MongoInsert;
+import com.hilohq.hilo.connectors_mongo.sink.MongoUpdate;
 import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.structure_learning.schema.json.JsonMongoUtils;
 import com.hilohq.hilo.structure_learning.serializer.ProtobufMessageToDocumentSerializer;

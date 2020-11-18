@@ -6,7 +6,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
 public final class ResourceUtils {
@@ -47,29 +47,35 @@ public final class ResourceUtils {
   }
 
   public static String readStringResource(final String resourcePath) throws Exception {
+    return readStringResource(resourcePath, Collections.emptyMap());
+  }
+
+  public static String readStringResource(
+      final String resourcePath, final Map<String, String> substitutions) throws Exception {
     final var resource = ResourceUtils.class.getClassLoader().getResource(resourcePath);
     if (resource == null) {
       throw new IllegalArgumentException("invalid resource " + resourcePath);
     }
 
     final var path = Paths.get(resource.toURI()).toAbsolutePath();
-    return Files.readString(path);
+    var stringResource = Files.readString(path);
+    for (final var entry : substitutions.entrySet()) {
+      stringResource = stringResource.replace(entry.getKey(), entry.getValue());
+    }
+
+    return stringResource;
   }
 
   public static <T extends Message> T readFromResource(final String resourcePath, final T type)
       throws Exception {
-    return readFromResource(resourcePath, type, new HashMap<>());
+    return readFromResource(resourcePath, type, Collections.emptyMap());
   }
 
   public static <T extends Message> T readFromResource(
       final String resourcePath, final T type, final Map<String, String> substitutions)
       throws Exception {
     final var builder = type.newBuilderForType();
-    var schemaString = readStringResource(resourcePath);
-    for (final var entry : substitutions.entrySet()) {
-      schemaString = schemaString.replace(entry.getKey(), entry.getValue());
-    }
-
+    var schemaString = readStringResource(resourcePath, substitutions);
     JsonFormat.parser().merge(schemaString, builder);
     return (T) builder.build();
   }

@@ -23,6 +23,11 @@ public final class FloatValue implements Value {
   }
 
   @Override
+  public double numericValue() {
+    return value;
+  }
+
+  @Override
   public ValueType type() {
     return ValueType.Float;
   }

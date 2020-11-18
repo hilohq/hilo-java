@@ -39,7 +39,7 @@ tasks.integrationTest.dependsOn("shadowJar", "startDockerCompose")
 //tasks.integrationTest.finalizedBy("stopDockerCompose")
 
 dependencies {
-    compile project(":connectors")
+    compile project(":connector-mongo")
     compile project(":protobufs")
     compile project(":schema-service")
     compile project(":features-service")

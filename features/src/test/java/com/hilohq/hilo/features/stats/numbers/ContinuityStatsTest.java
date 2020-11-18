@@ -25,6 +25,23 @@ public final class ContinuityStatsTest {
   }
 
   @Test
+  public void testObserveDiscreteNumbers() {
+    final var values = TestSamples.numbers();
+
+    final var stats = new ContinuityStats();
+    for (final var value : values) {
+      stats.observe(value);
+    }
+
+    final var snapshot = stats.snapshot();
+    assertEquals(98, snapshot.getCount());
+    assertTrue(Math.abs(0.5 - snapshot.getMin()) < 0.01);
+    assertTrue(Math.abs(0.93 - snapshot.getMax()) < 0.1);
+    assertTrue(Math.abs(0.91 - snapshot.getMean()) < 0.1);
+    assertTrue(Math.abs(0.05 - snapshot.getStandardDeviation()) < 0.1);
+  }
+
+  @Test
   public void testObserveDiscreteSizes() {
     final var values = TestSamples.sizes();
 

@@ -1,8 +1,8 @@
 package com.hilohq.hilo.schema_service.service;
 
-import com.hilohq.hilo.connectors.mongodb.client.MongoClient;
-import com.hilohq.hilo.connectors.mongodb.client.MongoClients;
-import com.hilohq.hilo.connectors.mongodb.codec.MongoProtobufCodec;
+import com.hilohq.hilo.connectors_mongo.client.MongoClient;
+import com.hilohq.hilo.connectors_mongo.client.MongoClients;
+import com.hilohq.hilo.connectors_mongo.codec.MongoProtobufCodec;
 import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
