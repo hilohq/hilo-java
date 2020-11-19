@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package hilo.protobufs.integrations.prometheus;
+
+option java_package = "com.hilohq.hilo.protobufs.integrations.prometheus";
+
+message PrometheusMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message PrometheusMetric {
+  message Gauge {
+    string name = 1;
+    string help = 2;
+    repeated string labels = 3;
+  }
+
+  string key = 1;
+
+  oneof metric {
+    Gauge gauge = 16;
+  }
+}
+
+message PrometheusUpdate {
+  PrometheusMetadata metadata = 1;
+
+  oneof event {
+    PrometheusMetric metric = 16;
+  }
+}
+
+message PrometheusValue {
+  message Gauge {
+    string name = 1;
+    double value = 2;
+    repeated string labels = 3;
+  }
+
+  string key = 1;
+
+  oneof value {
+    Gauge gauge = 16;
+  }
+}
+
+message PrometheusValues {
+  repeated PrometheusValue values = 1;
+}
+
+message PrometheusMetricsModel {
+  PrometheusMetadata metadata = 1;
+  map<string, PrometheusMetric> metrics = 2;
+}

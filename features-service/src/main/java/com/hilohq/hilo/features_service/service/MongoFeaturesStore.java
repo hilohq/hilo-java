@@ -12,7 +12,7 @@ import org.bson.BsonDocument;
 import org.bson.BsonString;
 import org.bson.codecs.configuration.CodecRegistries;
 
-public final class MongoFeaturesStore implements SchemaStore {
+public final class MongoFeaturesStore implements FeaturesStore {
   private final MongoClient client;
 
   public MongoFeaturesStore(final MongoClient client) {

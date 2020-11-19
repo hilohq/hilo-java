@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "schemaId": "$SCHEMA_ID",
+    "sourceId": "$SOURCE_ID",
+    "projectId": "$PROJECT_ID"
+  },
+  "metrics": {
+    "blockNumber": {
+      "key": "blockNumber",
+      "gauge": {
+        "name": "blockNumber",
+        "help": "blockNumber"
+      }
+    },
+    "gas": {
+      "key": "gas",
+      "gauge": {
+        "name": "gas",
+        "help": "gas"
+      }
+    },
+    "transactionIndex": {
+      "key": "transactionIndex",
+      "gauge": {
+        "name": "transactionIndex",
+        "help": "transactionIndex"
+      }
+    },
+    "nonce": {
+      "key": "nonce",
+      "gauge": {
+        "name": "nonce",
+        "help": "nonce"
+      }
+    },
+    "value": {
+      "key": "value",
+      "gauge": {
+        "name": "value",
+        "help": "value"
+      }
+    },
+    "gasPrice": {
+      "key": "gasPrice",
+      "gauge": {
+        "name": "gasPrice",
+        "help": "gasPrice"
+      }
+    }
+  }
+}

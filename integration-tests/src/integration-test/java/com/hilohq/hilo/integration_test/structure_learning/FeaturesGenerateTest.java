@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
 import com.hilohq.hilo.features_service.client.FeaturesClient;
+import com.hilohq.hilo.pipelines.BatchPipelineExecutor;
+import com.hilohq.hilo.pipelines.JsonFeaturesGenerateBatchPipelineBuilder;
 import com.hilohq.hilo.protobufs.structure.feature.Api;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import com.hilohq.hilo.structure_learning.features.mongo.FeaturesUpdateMongoCommandGenerator;
-import com.hilohq.integration_tests.pipelines.BatchPipelineExecutor;
-import com.hilohq.integration_tests.pipelines.JsonFeaturesGenerateBatchPipelineBuilder;
 import io.grpc.testing.GrpcCleanupRule;
 import java.util.HashMap;
 import java.util.Map;
