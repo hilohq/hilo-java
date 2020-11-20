@@ -32,11 +32,9 @@ public final class FeaturesUpdateMongoCommandGenerator
       final String database,
       final FeatureOuterClass.FeaturesMetadata metadata,
       final FeatureOuterClass.Feature feature) {
-    System.out.println("READ FEATURE " + feature);
     final var document = FeaturesMongoUtils.featureToUpdateDocument(metadata, feature);
     final var filter = new BsonDocument();
     filter.append("metadata.schemaId", new BsonString(metadata.getSchemaId()));
-    System.out.println("WRITE FEATURE " + document.toJson());
     return new MongoUpdate(database, "features", filter, document);
   }
 

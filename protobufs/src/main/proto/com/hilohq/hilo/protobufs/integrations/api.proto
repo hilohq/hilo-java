@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hilo.protobufs.integrations;
+
+option java_package = "com.hilohq.hilo.protobufs.integrations";
+
+import "com/hilohq/hilo/protobufs/integrations/prometheus/prometheus.proto";
+
+message GetPrometheusMetricsRequest {
+  string schemaId = 1;
+}
+
+message GetPrometheusMetricsResponse {
+  map<string, prometheus.PrometheusMetric> metrics = 1;
+}
+
+service Integrations {
+  rpc GetPrometheusMetrics(GetPrometheusMetricsRequest) returns (GetPrometheusMetricsResponse) { }
+}

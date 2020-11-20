@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "schemaId": "$SCHEMA_ID",
+    "sourceId": "$SOURCE_ID",
+    "projectId": "$PROJECT_ID"
+  },
+  "metrics": {
+    "totalDifficulty": {
+      "key": "totalDifficulty",
+      "gauge": {
+        "name": "totalDifficulty",
+        "help": "totalDifficulty"
+      }
+    },
+    "number": {
+      "key": "number",
+      "gauge": {
+        "name": "number",
+        "help": "number"
+      }
+    }
+  }
+}

@@ -3,6 +3,9 @@ package com.hilohq.integration_tests.services;
 import com.hilohq.hilo.features_service.client.FeaturesClient;
 import com.hilohq.hilo.features_service.service.FeaturesService;
 import com.hilohq.hilo.features_service.service.MongoFeaturesStore;
+import com.hilohq.hilo.integrations_service.client.IntegrationsClient;
+import com.hilohq.hilo.integrations_service.service.IntegrationsService;
+import com.hilohq.hilo.integrations_service.service.MongoIntegrationsStore;
 import com.hilohq.hilo.schema_service.client.SchemaClient;
 import com.hilohq.hilo.schema_service.service.MongoSchemaStore;
 import com.hilohq.hilo.schema_service.service.SchemaService;
@@ -35,6 +38,20 @@ public final class ServiceUtils {
     final var service = new FeaturesService(store);
     final var channel = InProcessChannelBuilder.forName("schema").directExecutor().build();
     final var client = new FeaturesClient(channel);
+    final var server =
+        InProcessServerBuilder.forName("schema").directExecutor().addService(service).build();
+    grpcCleanupRule.register(server);
+    grpcCleanupRule.register(channel);
+
+    return new ClientServer<>(client, server);
+  }
+
+  public static ClientServer<IntegrationsClient, Server> createIntegrationsService(
+      final GrpcCleanupRule grpcCleanupRule) {
+    final var store = MongoIntegrationsStore.open("mongodb://root:example@localhost:27017/admin");
+    final var service = new IntegrationsService(store);
+    final var channel = InProcessChannelBuilder.forName("schema").directExecutor().build();
+    final var client = new IntegrationsClient(channel);
     final var server =
         InProcessServerBuilder.forName("schema").directExecutor().addService(service).build();
     grpcCleanupRule.register(server);

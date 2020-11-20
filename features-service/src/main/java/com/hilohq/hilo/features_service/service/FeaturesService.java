@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 
 public final class FeaturesService extends FeaturesGrpc.FeaturesImplBase {
 
-  private final SchemaStore store;
+  private final FeaturesStore store;
 
-  public FeaturesService(final SchemaStore store) {
+  public FeaturesService(final FeaturesStore store) {
     this.store = store;
   }
 

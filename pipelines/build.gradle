@@ -1,0 +1,21 @@
+plugins {
+    id 'com.github.sherter.google-java-format' version '0.8'
+}
+
+apply plugin: 'com.github.sherter.google-java-format'
+
+dependencies {
+    compile project(":connector-mongo")
+    compile project(":integration-prometheus")
+    compile project(":protobufs")
+    compile project(":schema-service")
+    compile project(":features-service")
+    compile project(":structure-learning")
+
+    compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.0.0-beta-1'
+    compile group: 'org.apache.flink', name: 'flink-clients_2.12', version: '1.11.2'
+    compile group: 'org.apache.flink', name: 'flink-connector-kafka_2.12', version: '1.11.2'
+    compile group: 'de.javakaffee', name: 'kryo-serializers', version: '0.45'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
