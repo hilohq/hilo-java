@@ -127,13 +127,4 @@ public final class PrometheusMetricsGenerateTest {
             .get(5, TimeUnit.SECONDS);
     assertEquals(expectedMetrics.getMetricsMap(), response.getMetricsMap());
   }
-
-  public void testPushData() throws Exception {
-    insertResource("samples/blocks/schema.json", "schemas", substitutions);
-    insertResource("samples/blocks/features.json", "features", substitutions);
-    insertResource("samples/blocks/prometheus.json", "prometheus", substitutions);
-    copyResource("samples/blocks/logs.txt", "/tmp/blocks/logs.txt");
-
-    pushToPrometheus("/tmp/blocks/logs.txt");
-  }
 }
