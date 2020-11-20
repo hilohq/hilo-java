@@ -5,13 +5,11 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.*;
 import static com.hilohq.integration_tests.services.ServiceUtils.createFeaturesService;
 import static org.junit.Assert.assertEquals;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
 import com.hilohq.hilo.features_service.client.FeaturesClient;
-import com.hilohq.hilo.pipelines.BatchPipelineExecutor;
-import com.hilohq.hilo.pipelines.JsonFeaturesGenerateBatchPipelineBuilder;
+import com.hilohq.hilo.pipelines.DefaultBatchExecutor;
+import com.hilohq.hilo.pipelines.JsonFeaturesGeneratePipeline;
 import com.hilohq.hilo.protobufs.structure.feature.Api;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
-import com.hilohq.hilo.structure_learning.features.mongo.FeaturesUpdateMongoCommandGenerator;
 import io.grpc.testing.GrpcCleanupRule;
 import java.util.HashMap;
 import java.util.Map;
@@ -48,18 +46,15 @@ public final class FeaturesGenerateTest {
   }
 
   private void generateFeatures(final String filePath) throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new FeaturesUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
+    final var executor = DefaultBatchExecutor.newBuilder().jarModule("integration-tests").build();
 
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonFeaturesGenerateBatchPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
+    executor.execute(
+        JsonFeaturesGeneratePipeline.newBuilder()
+            .database("test")
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .schemaId(schemaId)
+            .inputPath(filePath)
+            .build());
   }
 
   @Test

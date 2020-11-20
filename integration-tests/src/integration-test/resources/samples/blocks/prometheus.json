@@ -5,6 +5,13 @@
     "projectId": "$PROJECT_ID"
   },
   "metrics": {
+    "difficulty": {
+      "key": "difficulty",
+      "gauge": {
+        "name": "difficulty",
+        "help": "difficulty"
+      }
+    },
     "totalDifficulty": {
       "key": "totalDifficulty",
       "gauge": {
@@ -12,11 +19,32 @@
         "help": "totalDifficulty"
       }
     },
+    "gasLimit": {
+      "key": "gasLimit",
+      "gauge": {
+        "name": "gasLimit",
+        "help": "gasLimit"
+      }
+    },
     "number": {
       "key": "number",
       "gauge": {
         "name": "number",
         "help": "number"
+      }
+    },
+    "gasUsed": {
+      "key": "gasUsed",
+      "gauge": {
+        "name": "gasUsed",
+        "help": "gasUsed"
+      }
+    },
+    "size": {
+      "key": "size",
+      "gauge": {
+        "name": "size",
+        "help": "size"
       }
     }
   }

@@ -5,13 +5,11 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.readFromResou
 import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
 import static org.junit.Assert.assertEquals;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
-import com.hilohq.hilo.pipelines.BatchPipelineExecutor;
-import com.hilohq.hilo.pipelines.JsonSchemaGenerateBatchPipelineBuilder;
+import com.hilohq.hilo.pipelines.DefaultBatchExecutor;
+import com.hilohq.hilo.pipelines.JsonSchemaGeneratePipeline;
 import com.hilohq.hilo.protobufs.structure.schema.Api;
 import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.schema_service.client.SchemaClient;
-import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
 import io.grpc.testing.GrpcCleanupRule;
 import java.io.IOException;
 import java.util.HashMap;
@@ -49,17 +47,17 @@ public final class JsonSchemaGenerateTest {
   }
 
   private void generateSchema(final String filePath) throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new SchemaUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
+    final var executor = DefaultBatchExecutor.newBuilder().jarModule("integration-tests").build();
 
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonSchemaGenerateBatchPipelineBuilder(projectId, sourceId, schemaId);
-    executor.execute(filePath, pipelineBuilder);
+    executor.execute(
+        JsonSchemaGeneratePipeline.newBuilder()
+            .database("test")
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .projectId(projectId)
+            .schemaId(schemaId)
+            .sourceId(sourceId)
+            .inputPath(filePath)
+            .build());
   }
 
   @Test

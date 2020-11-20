@@ -2,13 +2,8 @@ package com.hilohq.hilo.hilo_tool.commands;
 
 import static com.hilohq.hilo.hilo_tool.cmd.PrintUtils.printErrorAndExit;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
 import com.hilohq.hilo.hilo_tool.cmd.ActionCommand;
-import com.hilohq.hilo.integration_prometheus.converter.PrometheusMetricUpdateMongoCommandGenerator;
-import com.hilohq.hilo.integration_prometheus.sink.PrometheusSink;
 import com.hilohq.hilo.pipelines.*;
-import com.hilohq.hilo.structure_learning.features.mongo.FeaturesUpdateMongoCommandGenerator;
-import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -60,76 +55,47 @@ public class ExecutePipelineCommand extends ActionCommand {
     final var targetPath = Path.of("/tmp/", Path.of(input).getFileName().toString());
     final var inputPath = Path.of(input);
     if (targetPath.toFile().exists()) {
-      targetPath.toFile().delete();
+      final var okDelete = targetPath.toFile().delete();
+      if (!okDelete) {
+        printErrorAndExit(
+            name(), "could not delete already existing file `" + targetPath.toString() + "`");
+      }
     }
 
     Files.copy(inputPath, targetPath);
     final var target = targetPath.toString();
-    generateSchema(target, projectId, sourceId, schemaId);
-    generateFeatures(target, schemaId);
-    generatePrometheusMetrics(target, schemaId);
-    pushToPrometheus(target, schemaId);
-  }
+    final var batchExecutor = DefaultBatchExecutor.newBuilder().jarModule("hilo-tool").build();
+    final var streamExecutor = DefaultStreamExecutor.newBuilder().jarModule("hilo-tool").build();
 
-  private void generateSchema(
-      final String filePath, final String projectId, final String sourceId, final String schemaId)
-      throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new SchemaUpdateMongoCommandGenerator())
+    batchExecutor.execute(
+        JsonSchemaGeneratePipeline.newBuilder()
             .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonSchemaGenerateBatchPipelineBuilder(projectId, sourceId, schemaId);
-    executor.execute(filePath, pipelineBuilder);
-  }
-
-  private void generateFeatures(final String filePath, final String schemaId) throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new FeaturesUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonFeaturesGenerateBatchPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
-  }
-
-  private void generatePrometheusMetrics(final String filePath, final String schemaId)
-      throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new PrometheusMetricUpdateMongoCommandGenerator())
-            .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new PrometheusGenerateMetricsPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
-  }
-
-  private void pushToPrometheus(final String filePath, final String schemaId) throws Exception {
-    final var sink =
-        PrometheusSink.newBuilder()
-            .address("172.20.0.1:9091")
-            .tag("test")
-            .schemaId(schemaId)
             .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .build();
-    final var executor =
-        StreamPipelineExecutor.newBuilder(sink).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonPrometheusPushPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
+            .inputPath(target)
+            .schemaId(schemaId)
+            .sourceId(sourceId)
+            .projectId(projectId)
+            .build());
+    batchExecutor.execute(
+        JsonFeaturesGeneratePipeline.newBuilder()
+            .database("test")
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .inputPath(target)
+            .schemaId(schemaId)
+            .build());
+    batchExecutor.execute(
+        PrometheusGenerateMetricsPipeline.newBuilder()
+            .database("test")
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .inputPath(target)
+            .schemaId(schemaId)
+            .build());
+    streamExecutor.execute(
+        JsonPrometheusPushPipeline.newBuilder()
+            .inputPath(target)
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .schemaId(schemaId)
+            .prometheusAddress("172.20.0.1:9091")
+            .build());
   }
 }

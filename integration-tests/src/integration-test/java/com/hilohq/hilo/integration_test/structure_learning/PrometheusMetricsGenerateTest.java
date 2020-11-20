@@ -6,9 +6,6 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.readFromResou
 import static com.hilohq.integration_tests.services.ServiceUtils.createIntegrationsService;
 import static org.junit.Assert.assertEquals;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
-import com.hilohq.hilo.integration_prometheus.converter.PrometheusMetricUpdateMongoCommandGenerator;
-import com.hilohq.hilo.integration_prometheus.sink.PrometheusSink;
 import com.hilohq.hilo.integrations_service.client.IntegrationsClient;
 import com.hilohq.hilo.pipelines.*;
 import com.hilohq.hilo.protobufs.integrations.Api;
@@ -50,34 +47,16 @@ public final class PrometheusMetricsGenerateTest {
     pair.server().start();
   }
 
-  private void pushToPrometheus(final String filePath) throws Exception {
-    final var sink =
-        PrometheusSink.newBuilder()
-            .address("172.20.0.1:9091")
-            .tag("test")
-            .schemaId(schemaId)
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .build();
-    final var executor =
-        StreamPipelineExecutor.newBuilder(sink).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new JsonPrometheusPushPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
-  }
-
   private void generatePrometheusMetrics(final String filePath) throws Exception {
-    final var output =
-        MongoOutputFormat.newBuilder(new PrometheusMetricUpdateMongoCommandGenerator())
+    final var executor = DefaultBatchExecutor.newBuilder().jarModule("integration-tests").build();
+
+    executor.execute(
+        PrometheusGenerateMetricsPipeline.newBuilder()
             .database("test")
-            .url("mongodb://root:example@mongodb:27017/admin")
-            .build();
-    final var executor =
-        BatchPipelineExecutor.newBuilder(output).jarModule("integration-tests").build();
-    final var pipelineBuilder =
-        new PrometheusGenerateMetricsPipelineBuilder(
-            schemaId, "mongodb://root:example@mongodb:27017/admin");
-    executor.execute(filePath, pipelineBuilder);
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .schemaId(schemaId)
+            .inputPath(filePath)
+            .build());
   }
 
   @Test
