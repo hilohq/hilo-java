@@ -15,7 +15,7 @@ public final class BooleanHistogram {
   }
 
   private BooleanHistogram(final Map<Boolean, Long> histogram) {
-    this.histogram = new DiscreteHistogram<>(histogram);
+    this.histogram = new DiscreteHistogram<>(true, histogram);
   }
 
   public void observe(final Boolean value) {

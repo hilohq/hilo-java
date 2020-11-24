@@ -120,6 +120,7 @@ message StringStats {
       int64 count = 2;
     }
 
+    bool keeps_track = 1;
     repeated Bucket buckets = 2;
   }
 
