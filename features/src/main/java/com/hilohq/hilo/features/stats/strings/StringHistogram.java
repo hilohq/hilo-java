@@ -39,15 +39,15 @@ public final class StringHistogram {
   }
 
   public FeatureOuterClass.StringStats.Histogram snapshot() {
-    final var histogramBuilder = FeatureOuterClass.StringStats.Histogram.newBuilder()
-            .setKeepsTrack(histogram.keepsTrack());
+    final var histogramBuilder =
+        FeatureOuterClass.StringStats.Histogram.newBuilder().setKeepsTrack(histogram.keepsTrack());
 
     if (histogram.keepsTrack()) {
       for (final var entry : histogram.entrySet()) {
         final var bucket =
-                FeatureOuterClass.StringStats.Histogram.Bucket.newBuilder()
-                        .setCount(entry.getValue())
-                        .setValue(entry.getKey());
+            FeatureOuterClass.StringStats.Histogram.Bucket.newBuilder()
+                .setCount(entry.getValue())
+                .setValue(entry.getKey());
         histogramBuilder.addBuckets(bucket);
       }
     }

@@ -2,7 +2,7 @@ package com.hilohq.hilo.stages;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
-import com.hilohq.hilo.integration_prometheus.converter.PrometheusFeaturesConverter;
+import com.hilohq.hilo.integration_prometheus.stages.PrometheusMetricsGenerate;
 import com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaBatchValidate;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
@@ -55,6 +55,6 @@ public final class PrometheusGenerateMetricsStages
 
     return input
         .reduceGroup(new JsonSchemaBatchValidate(mongoUrl, schemaId))
-        .reduceGroup(new PrometheusFeaturesConverter(mongoUrl, schemaId));
+        .reduceGroup(new PrometheusMetricsGenerate(mongoUrl, schemaId));
   }
 }

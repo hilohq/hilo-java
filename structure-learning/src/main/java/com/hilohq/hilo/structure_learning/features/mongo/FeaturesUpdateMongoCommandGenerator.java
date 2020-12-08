@@ -1,9 +1,9 @@
 package com.hilohq.hilo.structure_learning.features.mongo;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoCommand;
-import com.hilohq.hilo.connectors_mongo.sink.MongoCommandGenerator;
-import com.hilohq.hilo.connectors_mongo.sink.MongoInsert;
-import com.hilohq.hilo.connectors_mongo.sink.MongoUpdate;
+import com.hilohq.hilo.connectors_mongo.output.MongoCommand;
+import com.hilohq.hilo.connectors_mongo.output.MongoCommandGenerator;
+import com.hilohq.hilo.connectors_mongo.output.MongoInsert;
+import com.hilohq.hilo.connectors_mongo.output.MongoUpdate;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import com.hilohq.hilo.structure_learning.serializer.ProtobufMessageToDocumentSerializer;
 import org.bson.BsonDocument;

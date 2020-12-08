@@ -1,13 +1,12 @@
 package com.hilohq.hilo.integration_grafana.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public final class DashboardPanel {
+public final class GrafanaDashboardPanel {
   private final Map<String, String> aliasColors;
   private final boolean bars;
   private final int dashLength;
@@ -64,13 +63,13 @@ public final class DashboardPanel {
     private int spaceLength;
     private boolean stack;
     private boolean steppedLine;
-    private List<PanelTarget> targets;
-    private List<String> thresholds;
+    private final List<PanelTarget> targets = new ArrayList<>();
+    private final List<String> thresholds = new ArrayList<>();
     private String title;
     private PanelTooltip tooltip;
     private String type;
     private XAxis xAxis;
-    private List<YAxisFormat> yAxes;
+    private final List<YAxisFormat> yAxes = new ArrayList<>();
     private YAxis yAxis;
 
     public Builder aliasColors(Map<String, String> aliasColors) {
@@ -188,13 +187,18 @@ public final class DashboardPanel {
       return this;
     }
 
-    public Builder targets(List<PanelTarget> targets) {
-      this.targets = targets;
+    public Builder target(final PanelTarget target) {
+      this.targets.add(target);
+      return this;
+    }
+
+    public Builder targets(final List<PanelTarget> targets) {
+      this.targets.addAll(targets);
       return this;
     }
 
     public Builder thresholds(List<String> thresholds) {
-      this.thresholds = thresholds;
+      this.thresholds.addAll(thresholds);
       return this;
     }
 
@@ -219,7 +223,7 @@ public final class DashboardPanel {
     }
 
     public Builder yAxes(List<YAxisFormat> yAxes) {
-      this.yAxes = yAxes;
+      this.yAxes.addAll(yAxes);
       return this;
     }
 
@@ -228,8 +232,8 @@ public final class DashboardPanel {
       return this;
     }
 
-    public DashboardPanel build() {
-      return new DashboardPanel(
+    public GrafanaDashboardPanel build() {
+      return new GrafanaDashboardPanel(
           aliasColors,
           bars,
           dashLength,
@@ -268,7 +272,7 @@ public final class DashboardPanel {
     return new Builder();
   }
 
-  public DashboardPanel(
+  public GrafanaDashboardPanel(
       @JsonProperty("aliasColors") final Map<String, String> aliasColors,
       @JsonProperty("bars") final boolean bars,
       @JsonProperty("dashLength") final int dashLength,

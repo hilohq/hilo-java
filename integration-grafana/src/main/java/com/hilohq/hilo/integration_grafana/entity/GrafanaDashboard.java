@@ -1,41 +1,40 @@
 package com.hilohq.hilo.integration_grafana.entity;
 
+import static com.google.common.base.Verify.verifyNotNull;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.google.common.base.Verify.verifyNotNull;
-
-public class Dashboard {
-  private final DashboardAnnotations annotations;
+public class GrafanaDashboard {
+  private final GrafanaDashboardAnnotations annotations;
   private final boolean editable;
   private final Long gnetId;
   private final long graphTooltip;
-  private final List<DashboardPanel> panels;
+  private final List<GrafanaDashboardPanel> panels;
   private final long schemaVersion;
   private final String style;
-  private final DashboardTime time;
-  private final DashboardTimePicker timePicker;
+  private final GrafanaDashboardTime time;
+  private final GrafanaDashboardTimePicker timePicker;
   private final String timezone;
   private final String title;
 
   public static class Builder {
-    private DashboardAnnotations annotations =
-        DashboardAnnotations.newBuilder().build();
+    private GrafanaDashboardAnnotations annotations =
+        GrafanaDashboardAnnotations.newBuilder().build();
     private boolean editable = false;
     private Long gnetId = null;
     private long graphTooltip = 0;
-    private final List<DashboardPanel> panels = new ArrayList<>();
+    private final List<GrafanaDashboardPanel> panels = new ArrayList<>();
     private long schemaVersion = 0;
     private String style = "dark";
-    private DashboardTime time = DashboardTime.newBuilder().build();
-    private DashboardTimePicker timePicker = DashboardTimePicker.newBuilder().build();
+    private GrafanaDashboardTime time = GrafanaDashboardTime.newBuilder().build();
+    private GrafanaDashboardTimePicker timePicker = GrafanaDashboardTimePicker.newBuilder().build();
     private String timezone = "";
     private String title = "";
 
-    public Builder annotations(final DashboardAnnotations annotations) {
+    public Builder annotations(final GrafanaDashboardAnnotations annotations) {
       verifyNotNull(annotations);
       this.annotations = annotations;
       return this;
@@ -56,7 +55,12 @@ public class Dashboard {
       return this;
     }
 
-    public Builder panels(final List<DashboardPanel> panels) {
+    public Builder panel(final GrafanaDashboardPanel panel) {
+      this.panels.add(panel);
+      return this;
+    }
+
+    public Builder panels(final List<GrafanaDashboardPanel> panels) {
       this.panels.addAll(panels);
       return this;
     }
@@ -71,13 +75,13 @@ public class Dashboard {
       return this;
     }
 
-    public Builder time(final DashboardTime time) {
+    public Builder time(final GrafanaDashboardTime time) {
       verifyNotNull(time);
       this.time = time;
       return this;
     }
 
-    public Builder timePicker(final DashboardTimePicker timePicker) {
+    public Builder timePicker(final GrafanaDashboardTimePicker timePicker) {
       verifyNotNull(timePicker);
       this.timePicker = timePicker;
       return this;
@@ -93,8 +97,8 @@ public class Dashboard {
       return this;
     }
 
-    public Dashboard build() {
-      return new Dashboard(
+    public GrafanaDashboard build() {
+      return new GrafanaDashboard(
           annotations,
           editable,
           gnetId,
@@ -114,16 +118,16 @@ public class Dashboard {
   }
 
   @JsonCreator
-  public Dashboard(
-      @JsonProperty("annotations") final DashboardAnnotations annotations,
+  public GrafanaDashboard(
+      @JsonProperty("annotations") final GrafanaDashboardAnnotations annotations,
       @JsonProperty("editable") final boolean editable,
       @JsonProperty("gnetId") final Long gnetId,
       @JsonProperty("graphTooltip") final long graphTooltip,
-      @JsonProperty("panels") final List<DashboardPanel> panels,
+      @JsonProperty("panels") final List<GrafanaDashboardPanel> panels,
       @JsonProperty("schemaVersion") final long schemaVersion,
       @JsonProperty("style") final String style,
-      @JsonProperty("time") final DashboardTime time,
-      @JsonProperty("timepicker") final DashboardTimePicker timePicker,
+      @JsonProperty("time") final GrafanaDashboardTime time,
+      @JsonProperty("timepicker") final GrafanaDashboardTimePicker timePicker,
       @JsonProperty("timezone") final String timezone,
       @JsonProperty("title") final String title) {
     this.annotations = annotations;
@@ -140,7 +144,7 @@ public class Dashboard {
   }
 
   @JsonProperty("annotations")
-  public DashboardAnnotations annotations() {
+  public GrafanaDashboardAnnotations annotations() {
     return annotations;
   }
 
@@ -160,7 +164,7 @@ public class Dashboard {
   }
 
   @JsonProperty("panels")
-  public List<DashboardPanel> panels() {
+  public List<GrafanaDashboardPanel> panels() {
     return panels;
   }
 
@@ -175,12 +179,12 @@ public class Dashboard {
   }
 
   @JsonProperty("time")
-  public DashboardTime time() {
+  public GrafanaDashboardTime time() {
     return time;
   }
 
   @JsonProperty("timepicker")
-  public DashboardTimePicker timePicker() {
+  public GrafanaDashboardTimePicker timePicker() {
     return timePicker;
   }
 

@@ -1,4 +1,4 @@
-package com.hilohq.hilo.connectors_mongo.sink;
+package com.hilohq.hilo.connectors_mongo.output;
 
 import com.hilohq.hilo.connectors_mongo.client.MongoClient;
 import java.util.concurrent.CompletableFuture;

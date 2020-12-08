@@ -1,4 +1,4 @@
-package com.hilohq.hilo.integration_prometheus.converter;
+package com.hilohq.hilo.integration_prometheus.stages;
 
 import com.hilohq.hilo.features_service.service.MongoFeaturesStore;
 import com.hilohq.hilo.parsers.field.FieldKey;
@@ -12,13 +12,13 @@ import org.apache.flink.api.common.functions.RichGroupReduceFunction;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.util.Collector;
 
-public final class PrometheusFeaturesConverter
+public final class PrometheusMetricsGenerate
     extends RichGroupReduceFunction<Fields<FieldKey>, Prometheus.PrometheusUpdate> {
   private final String mongoUrl;
   private final String schemaId;
   private Map<String, FeatureOuterClass.Feature> features;
 
-  public PrometheusFeaturesConverter(final String mongoUrl, final String schemaId) {
+  public PrometheusMetricsGenerate(final String mongoUrl, final String schemaId) {
     this.mongoUrl = mongoUrl;
     this.schemaId = schemaId;
   }

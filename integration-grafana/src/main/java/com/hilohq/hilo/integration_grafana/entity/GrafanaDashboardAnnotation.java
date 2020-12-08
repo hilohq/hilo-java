@@ -1,11 +1,11 @@
 package com.hilohq.hilo.integration_grafana.entity;
 
+import static com.google.common.base.Verify.verifyNotNull;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import static com.google.common.base.Verify.verifyNotNull;
-
-public final class DashboardAnnotation {
+public final class GrafanaDashboardAnnotation {
   private final long builtIn;
   private final String datasource;
   private final boolean enable;
@@ -62,8 +62,9 @@ public final class DashboardAnnotation {
       return this;
     }
 
-    public DashboardAnnotation build() {
-      return new DashboardAnnotation(builtIn, datasource, enable, hide, iconColor, name, type);
+    public GrafanaDashboardAnnotation build() {
+      return new GrafanaDashboardAnnotation(
+          builtIn, datasource, enable, hide, iconColor, name, type);
     }
   }
 
@@ -72,7 +73,7 @@ public final class DashboardAnnotation {
   }
 
   @JsonCreator
-  public DashboardAnnotation(
+  public GrafanaDashboardAnnotation(
       @JsonProperty("builtIn") final long builtIn,
       @JsonProperty("datasource") final String datasource,
       @JsonProperty("enable") final boolean enable,
