@@ -90,6 +90,15 @@ public class ExecutePipelineCommand extends ActionCommand {
             .inputPath(target)
             .schemaId(schemaId)
             .build());
+    batchExecutor.execute(
+        GrafanaDashboardGeneratePipeline.newBuilder()
+            .database("test")
+            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .schemaId(schemaId)
+            .grafanaUrl("http://172.20.0.1:3000")
+            .bearerToken(
+                "eyJrIjoiSDA0aGM0YXhNTTBZNkVPYURQTDF1aENVMTNpaUN1b2YiLCJuIjoiYWRtaW4iLCJpZCI6MX0=")
+            .build());
     streamExecutor.execute(
         JsonPrometheusPushPipeline.newBuilder()
             .inputPath(target)

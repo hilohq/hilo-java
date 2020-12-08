@@ -1,4 +1,4 @@
-package com.hilohq.hilo.integration_prometheus.converter;
+package com.hilohq.hilo.integration_prometheus.stages;
 
 import com.hilohq.hilo.integrations_service.service.MongoIntegrationsStore;
 import com.hilohq.hilo.parsers.field.FieldKey;
@@ -12,7 +12,7 @@ import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 
-public final class PrometheusFieldsConverter
+public final class PrometheusValueGenerate
     extends ProcessFunction<Fields<FieldKey>, Prometheus.PrometheusValues> {
 
   private final String mongoUrl;
@@ -20,7 +20,7 @@ public final class PrometheusFieldsConverter
   private final StringParser parser;
   private Map<String, Prometheus.PrometheusMetric> metrics;
 
-  public PrometheusFieldsConverter(final String mongoUrl, final String schemaId) {
+  public PrometheusValueGenerate(final String mongoUrl, final String schemaId) {
     this.mongoUrl = mongoUrl;
     this.schemaId = schemaId;
     this.parser = new StringParser();

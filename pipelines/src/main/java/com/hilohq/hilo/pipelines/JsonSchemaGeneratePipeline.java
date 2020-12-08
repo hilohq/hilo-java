@@ -2,7 +2,7 @@ package com.hilohq.hilo.pipelines;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoOutputFormat;
+import com.hilohq.hilo.connectors_mongo.output.MongoOutputFormat;
 import com.hilohq.hilo.protobufs.structure.schema.Schema;
 import com.hilohq.hilo.stages.JsonSchemaGenerateStages;
 import com.hilohq.hilo.structure_learning.schema.mongo.SchemaUpdateMongoCommandGenerator;
@@ -10,10 +10,11 @@ import java.util.UUID;
 import org.apache.flink.api.common.io.FileInputFormat;
 import org.apache.flink.api.common.io.OutputFormat;
 import org.apache.flink.api.java.io.TextInputFormat;
+import org.apache.flink.core.fs.FileInputSplit;
 import org.apache.flink.core.fs.Path;
 
 public final class JsonSchemaGeneratePipeline
-    extends DefaultBatchPipeline<String, Schema.SchemaUpdate> {
+    extends DefaultBatchPipeline<String, FileInputSplit, Schema.SchemaUpdate> {
   public static final class Builder {
     private String inputPath;
     private String mongoUrl;

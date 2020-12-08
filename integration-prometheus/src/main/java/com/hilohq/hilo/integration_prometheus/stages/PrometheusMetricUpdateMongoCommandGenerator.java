@@ -1,8 +1,8 @@
-package com.hilohq.hilo.integration_prometheus.converter;
+package com.hilohq.hilo.integration_prometheus.stages;
 
-import com.hilohq.hilo.connectors_mongo.sink.MongoCommand;
-import com.hilohq.hilo.connectors_mongo.sink.MongoCommandGenerator;
-import com.hilohq.hilo.connectors_mongo.sink.MongoUpdate;
+import com.hilohq.hilo.connectors_mongo.output.MongoCommand;
+import com.hilohq.hilo.connectors_mongo.output.MongoCommandGenerator;
+import com.hilohq.hilo.connectors_mongo.output.MongoUpdate;
 import com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus;
 import com.hilohq.hilo.structure_learning.serializer.ProtobufMessageToDocumentSerializer;
 import org.bson.BsonDocument;

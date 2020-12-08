@@ -2,7 +2,7 @@ package com.hilohq.hilo.structure_learning.serializer;
 
 import com.google.protobuf.Message;
 import com.google.protobuf.util.JsonFormat;
-import com.hilohq.hilo.connectors_mongo.sink.MongoIntoDocumentSerializer;
+import com.hilohq.hilo.connectors_mongo.output.MongoIntoDocumentSerializer;
 import org.bson.Document;
 
 public final class ProtobufMessageToDocumentSerializer

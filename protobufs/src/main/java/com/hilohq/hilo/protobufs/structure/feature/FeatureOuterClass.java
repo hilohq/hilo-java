@@ -17205,6 +17205,12 @@ public final class FeatureOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <code>bool keeps_track = 1;</code>
+       * @return The keepsTrack.
+       */
+      boolean getKeepsTrack();
+
+      /**
        * <code>repeated .hilo.protobufs.structure.feature.StringStats.Histogram.Bucket buckets = 2;</code>
        */
       java.util.List<com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram.Bucket> 
@@ -17275,6 +17281,11 @@ public final class FeatureOuterClass {
               case 0:
                 done = true;
                 break;
+              case 8: {
+
+                keepsTrack_ = input.readBool();
+                break;
+              }
               case 18: {
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   buckets_ = new java.util.ArrayList<com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram.Bucket>();
@@ -17958,6 +17969,17 @@ public final class FeatureOuterClass {
 
       }
 
+      public static final int KEEPS_TRACK_FIELD_NUMBER = 1;
+      private boolean keepsTrack_;
+      /**
+       * <code>bool keeps_track = 1;</code>
+       * @return The keepsTrack.
+       */
+      @java.lang.Override
+      public boolean getKeepsTrack() {
+        return keepsTrack_;
+      }
+
       public static final int BUCKETS_FIELD_NUMBER = 2;
       private java.util.List<com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram.Bucket> buckets_;
       /**
@@ -18012,6 +18034,9 @@ public final class FeatureOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        if (keepsTrack_ != false) {
+          output.writeBool(1, keepsTrack_);
+        }
         for (int i = 0; i < buckets_.size(); i++) {
           output.writeMessage(2, buckets_.get(i));
         }
@@ -18024,6 +18049,10 @@ public final class FeatureOuterClass {
         if (size != -1) return size;
 
         size = 0;
+        if (keepsTrack_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, keepsTrack_);
+        }
         for (int i = 0; i < buckets_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, buckets_.get(i));
@@ -18043,6 +18072,8 @@ public final class FeatureOuterClass {
         }
         com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram other = (com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram) obj;
 
+        if (getKeepsTrack()
+            != other.getKeepsTrack()) return false;
         if (!getBucketsList()
             .equals(other.getBucketsList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
@@ -18056,6 +18087,9 @@ public final class FeatureOuterClass {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + KEEPS_TRACK_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getKeepsTrack());
         if (getBucketsCount() > 0) {
           hash = (37 * hash) + BUCKETS_FIELD_NUMBER;
           hash = (53 * hash) + getBucketsList().hashCode();
@@ -18194,6 +18228,8 @@ public final class FeatureOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          keepsTrack_ = false;
+
           if (bucketsBuilder_ == null) {
             buckets_ = java.util.Collections.emptyList();
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -18227,6 +18263,7 @@ public final class FeatureOuterClass {
         public com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram buildPartial() {
           com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram result = new com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram(this);
           int from_bitField0_ = bitField0_;
+          result.keepsTrack_ = keepsTrack_;
           if (bucketsBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0)) {
               buckets_ = java.util.Collections.unmodifiableList(buckets_);
@@ -18284,6 +18321,9 @@ public final class FeatureOuterClass {
 
         public Builder mergeFrom(com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram other) {
           if (other == com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram.getDefaultInstance()) return this;
+          if (other.getKeepsTrack() != false) {
+            setKeepsTrack(other.getKeepsTrack());
+          }
           if (bucketsBuilder_ == null) {
             if (!other.buckets_.isEmpty()) {
               if (buckets_.isEmpty()) {
@@ -18339,6 +18379,37 @@ public final class FeatureOuterClass {
           return this;
         }
         private int bitField0_;
+
+        private boolean keepsTrack_ ;
+        /**
+         * <code>bool keeps_track = 1;</code>
+         * @return The keepsTrack.
+         */
+        @java.lang.Override
+        public boolean getKeepsTrack() {
+          return keepsTrack_;
+        }
+        /**
+         * <code>bool keeps_track = 1;</code>
+         * @param value The keepsTrack to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKeepsTrack(boolean value) {
+          
+          keepsTrack_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool keeps_track = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearKeepsTrack() {
+          
+          keepsTrack_ = false;
+          onChanged();
+          return this;
+        }
 
         private java.util.List<com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass.StringStats.Histogram.Bucket> buckets_ =
           java.util.Collections.emptyList();
@@ -29214,62 +29285,63 @@ public final class FeatureOuterClass {
       "NumericStats.PercentileHistogram.Bucket\022" +
       "\022\n\nboundaries\030\002 \003(\001\032C\n\006Bucket\022\013\n\003min\030\001 \001" +
       "(\001\022\013\n\003max\030\002 \001(\001\022\r\n\005count\030\003 \001(\003\022\020\n\010bounda" +
-      "ry\030\004 \001(\001\"\357\001\n\013StringStats\022\r\n\005count\030\001 \001(\003\022" +
+      "ry\030\004 \001(\001\"\204\002\n\013StringStats\022\r\n\005count\030\001 \001(\003\022" +
       "J\n\thistogram\030\002 \001(\01327.hilo.protobufs.stru" +
-      "cture.feature.StringStats.Histogram\032\204\001\n\t" +
-      "Histogram\022O\n\007buckets\030\002 \003(\0132>.hilo.protob" +
-      "ufs.structure.feature.StringStats.Histog" +
-      "ram.Bucket\032&\n\006Bucket\022\r\n\005value\030\001 \001(\t\022\r\n\005c" +
-      "ount\030\002 \001(\003\"\360\003\n\014FeatureStats\022E\n\rboolean_s" +
-      "tats\030\001 \001(\0132..hilo.protobufs.structure.fe" +
-      "ature.BooleanStats\022A\n\tint_stats\030\002 \001(\0132.." +
-      "hilo.protobufs.structure.feature.Numeric" +
-      "Stats\022B\n\nlong_stats\030\003 \001(\0132..hilo.protobu" +
-      "fs.structure.feature.NumericStats\022C\n\013flo" +
-      "at_stats\030\004 \001(\0132..hilo.protobufs.structur" +
-      "e.feature.NumericStats\022D\n\014double_stats\030\005" +
-      " \001(\0132..hilo.protobufs.structure.feature." +
-      "NumericStats\022C\n\014string_stats\030\006 \001(\0132-.hil" +
-      "o.protobufs.structure.feature.StringStat" +
-      "s\022B\n\013bytes_stats\030\007 \001(\0132-.hilo.protobufs." +
-      "structure.feature.StringStats\"`\n\nStatsEv" +
-      "ent\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_stats\030\002 \001(\0132" +
-      "..hilo.protobufs.structure.feature.Featu" +
-      "reStats\"\235\001\n\rFeaturesEvent\022D\n\010metadata\030\001 " +
-      "\001(\01322.hilo.protobufs.structure.feature.F" +
-      "eaturesMetadata\022=\n\005stats\030\020 \001(\0132,.hilo.pr" +
-      "otobufs.structure.feature.StatsEventH\000B\007" +
-      "\n\005event\"c\n\rFeatureCreate\022\013\n\003key\030\001 \001(\t\022E\n" +
-      "\rfeature_class\030\002 \001(\0132..hilo.protobufs.st" +
-      "ructure.feature.FeatureClass\"\377\001\n\rFeature" +
-      "Update\022G\n\006before\030\001 \001(\01327.hilo.protobufs." +
-      "structure.feature.FeatureUpdate.Feature\022" +
-      "F\n\005after\030\002 \001(\01327.hilo.protobufs.structur" +
-      "e.feature.FeatureUpdate.Feature\032]\n\007Featu" +
-      "re\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_class\030\002 \001(\0132." +
+      "cture.feature.StringStats.Histogram\032\231\001\n\t" +
+      "Histogram\022\023\n\013keeps_track\030\001 \001(\010\022O\n\007bucket" +
+      "s\030\002 \003(\0132>.hilo.protobufs.structure.featu" +
+      "re.StringStats.Histogram.Bucket\032&\n\006Bucke" +
+      "t\022\r\n\005value\030\001 \001(\t\022\r\n\005count\030\002 \001(\003\"\360\003\n\014Feat" +
+      "ureStats\022E\n\rboolean_stats\030\001 \001(\0132..hilo.p" +
+      "rotobufs.structure.feature.BooleanStats\022" +
+      "A\n\tint_stats\030\002 \001(\0132..hilo.protobufs.stru" +
+      "cture.feature.NumericStats\022B\n\nlong_stats" +
+      "\030\003 \001(\0132..hilo.protobufs.structure.featur" +
+      "e.NumericStats\022C\n\013float_stats\030\004 \001(\0132..hi" +
+      "lo.protobufs.structure.feature.NumericSt" +
+      "ats\022D\n\014double_stats\030\005 \001(\0132..hilo.protobu" +
+      "fs.structure.feature.NumericStats\022C\n\014str" +
+      "ing_stats\030\006 \001(\0132-.hilo.protobufs.structu" +
+      "re.feature.StringStats\022B\n\013bytes_stats\030\007 " +
+      "\001(\0132-.hilo.protobufs.structure.feature.S" +
+      "tringStats\"`\n\nStatsEvent\022\013\n\003key\030\001 \001(\t\022E\n" +
+      "\rfeature_stats\030\002 \001(\0132..hilo.protobufs.st" +
+      "ructure.feature.FeatureStats\"\235\001\n\rFeature" +
+      "sEvent\022D\n\010metadata\030\001 \001(\01322.hilo.protobuf" +
+      "s.structure.feature.FeaturesMetadata\022=\n\005" +
+      "stats\030\020 \001(\0132,.hilo.protobufs.structure.f" +
+      "eature.StatsEventH\000B\007\n\005event\"c\n\rFeatureC" +
+      "reate\022\013\n\003key\030\001 \001(\t\022E\n\rfeature_class\030\002 \001(" +
+      "\0132..hilo.protobufs.structure.feature.Fea" +
+      "tureClass\"\377\001\n\rFeatureUpdate\022G\n\006before\030\001 " +
+      "\001(\01327.hilo.protobufs.structure.feature.F" +
+      "eatureUpdate.Feature\022F\n\005after\030\002 \001(\01327.hi" +
+      "lo.protobufs.structure.feature.FeatureUp" +
+      "date.Feature\032]\n\007Feature\022\013\n\003key\030\001 \001(\t\022E\n\r" +
+      "feature_class\030\002 \001(\0132..hilo.protobufs.str" +
+      "ucture.feature.FeatureClass\"\251\001\n\nFeatureL" +
+      "og\022I\n\016feature_create\030\001 \001(\0132/.hilo.protob" +
+      "ufs.structure.feature.FeatureCreateH\000\022I\n" +
+      "\016feature_update\030\002 \001(\0132/.hilo.protobufs.s" +
+      "tructure.feature.FeatureUpdateH\000B\005\n\003log\"" +
+      "\333\001\n\016FeaturesUpdate\022D\n\010metadata\030\001 \001(\01322.h" +
+      "ilo.protobufs.structure.feature.Features" +
+      "Metadata\022;\n\003log\030\020 \001(\0132,.hilo.protobufs.s" +
+      "tructure.feature.FeatureLogH\000\022<\n\007feature" +
+      "\030\021 \001(\0132).hilo.protobufs.structure.featur" +
+      "e.FeatureH\000B\010\n\006update\"\224\001\n\020FeatureLogsMod" +
+      "el\022D\n\010metadata\030\001 \001(\01322.hilo.protobufs.st" +
+      "ructure.feature.FeaturesMetadata\022:\n\004logs" +
+      "\030\002 \001(\0132,.hilo.protobufs.structure.featur" +
+      "e.FeatureLog\"\202\002\n\rFeaturesModel\022D\n\010metada" +
+      "ta\030\001 \001(\01322.hilo.protobufs.structure.feat" +
+      "ure.FeaturesMetadata\022O\n\010features\030\002 \003(\0132=" +
       ".hilo.protobufs.structure.feature.Featur" +
-      "eClass\"\251\001\n\nFeatureLog\022I\n\016feature_create\030" +
-      "\001 \001(\0132/.hilo.protobufs.structure.feature" +
-      ".FeatureCreateH\000\022I\n\016feature_update\030\002 \001(\013" +
-      "2/.hilo.protobufs.structure.feature.Feat" +
-      "ureUpdateH\000B\005\n\003log\"\333\001\n\016FeaturesUpdate\022D\n" +
-      "\010metadata\030\001 \001(\01322.hilo.protobufs.structu" +
-      "re.feature.FeaturesMetadata\022;\n\003log\030\020 \001(\013" +
-      "2,.hilo.protobufs.structure.feature.Feat" +
-      "ureLogH\000\022<\n\007feature\030\021 \001(\0132).hilo.protobu" +
-      "fs.structure.feature.FeatureH\000B\010\n\006update" +
-      "\"\224\001\n\020FeatureLogsModel\022D\n\010metadata\030\001 \001(\0132" +
-      "2.hilo.protobufs.structure.feature.Featu" +
-      "resMetadata\022:\n\004logs\030\002 \001(\0132,.hilo.protobu" +
-      "fs.structure.feature.FeatureLog\"\202\002\n\rFeat" +
-      "uresModel\022D\n\010metadata\030\001 \001(\01322.hilo.proto" +
-      "bufs.structure.feature.FeaturesMetadata\022" +
-      "O\n\010features\030\002 \003(\0132=.hilo.protobufs.struc" +
-      "ture.feature.FeaturesModel.FeaturesEntry" +
-      "\032Z\n\rFeaturesEntry\022\013\n\003key\030\001 \001(\t\0228\n\005value\030" +
-      "\002 \001(\0132).hilo.protobufs.structure.feature" +
-      ".Feature:\0028\001B-\n+com.hilohq.hilo.protobuf" +
-      "s.structure.featureb\006proto3"
+      "esModel.FeaturesEntry\032Z\n\rFeaturesEntry\022\013" +
+      "\n\003key\030\001 \001(\t\0228\n\005value\030\002 \001(\0132).hilo.protob" +
+      "ufs.structure.feature.Feature:\0028\001B-\n+com" +
+      ".hilohq.hilo.protobufs.structure.feature" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29418,7 +29490,7 @@ public final class FeatureOuterClass {
     internal_static_hilo_protobufs_structure_feature_StringStats_Histogram_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_structure_feature_StringStats_Histogram_descriptor,
-        new java.lang.String[] { "Buckets", });
+        new java.lang.String[] { "KeepsTrack", "Buckets", });
     internal_static_hilo_protobufs_structure_feature_StringStats_Histogram_Bucket_descriptor =
       internal_static_hilo_protobufs_structure_feature_StringStats_Histogram_descriptor.getNestedTypes().get(0);
     internal_static_hilo_protobufs_structure_feature_StringStats_Histogram_Bucket_fieldAccessorTable = new

@@ -2,7 +2,7 @@ package com.hilohq.hilo.stages;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
-import com.hilohq.hilo.integration_prometheus.converter.PrometheusFieldsConverter;
+import com.hilohq.hilo.integration_prometheus.stages.PrometheusValueGenerate;
 import com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaStreamValidate;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
@@ -55,6 +55,6 @@ public final class JsonPrometheusPushStages
 
     return input
         .process(new JsonSchemaStreamValidate(mongoUrl, schemaId))
-        .process(new PrometheusFieldsConverter(mongoUrl, schemaId));
+        .process(new PrometheusValueGenerate(mongoUrl, schemaId));
   }
 }

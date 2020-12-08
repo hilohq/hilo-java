@@ -1,4 +1,4 @@
-package com.hilohq.hilo.connectors_mongo.sink;
+package com.hilohq.hilo.connectors_mongo.output;
 
 import java.io.Serializable;
 import org.bson.Document;

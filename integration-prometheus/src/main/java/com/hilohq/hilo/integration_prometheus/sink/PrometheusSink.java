@@ -88,6 +88,7 @@ public final class PrometheusSink extends RichSinkFunction<Prometheus.Prometheus
   @Override
   public void invoke(final Prometheus.PrometheusValues values, final Context context)
       throws Exception {
+    Thread.sleep(500);
     client.send(values);
   }
 
