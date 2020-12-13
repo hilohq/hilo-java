@@ -15,9 +15,7 @@ public final class GrafanaDashboardGenerate
   @Override
   public void reduce(final Iterable<FeaturesModel> values, final Collector<GrafanaDashboard> out)
       throws Exception {
-    System.out.println("RECEIVED VALUES " + values);
     for (final var features : values) {
-      System.out.println("RECEIVED VALUE " + features);
       final var dashboardBuilder =
           GrafanaDashboardUtils.withDefaults().title(features.getMetadata().getSchemaId());
       final var panels = new ArrayList<GrafanaDashboardPanel>();
@@ -46,7 +44,6 @@ public final class GrafanaDashboardGenerate
       }
 
       dashboardBuilder.panels(panels);
-      System.out.println("GENERATING DASHBOARD ");
       out.collect(dashboardBuilder.build());
     }
   }

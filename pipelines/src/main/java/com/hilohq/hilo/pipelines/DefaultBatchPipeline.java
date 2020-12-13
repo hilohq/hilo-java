@@ -35,4 +35,13 @@ public class DefaultBatchPipeline<I, S extends InputSplit, O> implements BatchPi
     stages.bind(executionEnvironment.getConfig(), source).output(output);
     executionEnvironment.execute();
   }
+
+  @Override
+  public String runAsync(final ExecutionEnvironment executionEnvironment) throws Exception {
+    final var typeInformation = typeInformationSupplier.of(input);
+    final var source = executionEnvironment.createInput(input, typeInformation);
+    stages.bind(executionEnvironment.getConfig(), source).output(output);
+    final var client = executionEnvironment.executeAsync();
+    return client.getJobID().toHexString();
+  }
 }

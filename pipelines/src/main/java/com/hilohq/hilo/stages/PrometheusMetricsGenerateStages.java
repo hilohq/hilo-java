@@ -10,7 +10,7 @@ import de.javakaffee.kryoserializers.protobuf.ProtobufSerializer;
 import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.api.java.DataSet;
 
-public final class PrometheusGenerateMetricsStages
+public final class PrometheusMetricsGenerateStages
     implements BatchStages<String, Prometheus.PrometheusUpdate> {
   private final String schemaId;
   private final String mongoUrl;
@@ -31,8 +31,8 @@ public final class PrometheusGenerateMetricsStages
       return this;
     }
 
-    public PrometheusGenerateMetricsStages build() {
-      return new PrometheusGenerateMetricsStages(schemaId, mongoUrl);
+    public PrometheusMetricsGenerateStages build() {
+      return new PrometheusMetricsGenerateStages(schemaId, mongoUrl);
     }
   }
 
@@ -40,7 +40,7 @@ public final class PrometheusGenerateMetricsStages
     return new Builder();
   }
 
-  PrometheusGenerateMetricsStages(final String schemaId, final String mongoUrl) {
+  PrometheusMetricsGenerateStages(final String schemaId, final String mongoUrl) {
     this.schemaId = schemaId;
     this.mongoUrl = mongoUrl;
   }

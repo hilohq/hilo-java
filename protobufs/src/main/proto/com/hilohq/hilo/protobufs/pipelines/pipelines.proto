@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package hilo.protobufs.pipelines;
+
+option java_package = "com.hilohq.hilo.protobufs.pipelines";
+
+message PrometheusMetricsGeneratePipeline {
+  string input_path = 1;
+  string schema_id = 2;
+  string mongo_url = 3;
+  string mongo_database = 4;
+}
+
+message JsonSchemaGeneratePipeline {
+  string input_path = 1;
+  string mongo_url = 2;
+  string mongo_database = 3;
+  string project_id = 4;
+  string source_id = 5;
+  string schema_id = 6;
+}
+
+message JsonFeaturesGeneratePipeline {
+  string input_path = 1;
+  string mongo_url = 2;
+  string mongo_database = 3;
+  string schema_id = 4;
+}
+
+message GrafanaDashboardGeneratePipeline {
+  string mongo_url = 1;
+  string mongo_database = 2;
+  string schema_id = 3;
+  string grafana_url = 4;
+  string grafana_bearer_token = 5;
+}
+
+message BatchPipeline {
+  oneof pipeline {
+    JsonSchemaGeneratePipeline json_schema_generate = 1;
+    JsonFeaturesGeneratePipeline json_features_generate = 2;
+    PrometheusMetricsGeneratePipeline prometheus_metrics_generate = 3;
+    GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;
+  }
+}
+
+message JsonPrometheusPushPipeline {
+  string input_path = 1;
+  string mongo_url = 2;
+  string mongo_database = 3;
+  string schema_id = 4;
+  string prometheus_url = 5;
+}
+
+message StreamPipeline {
+  oneof pipeline {
+    JsonPrometheusPushPipeline json_prometheus_push = 1;
+  }
+}

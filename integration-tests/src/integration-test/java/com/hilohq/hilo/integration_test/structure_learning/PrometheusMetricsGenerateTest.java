@@ -51,7 +51,7 @@ public final class PrometheusMetricsGenerateTest {
     final var executor = DefaultBatchExecutor.newBuilder().jarModule("integration-tests").build();
 
     executor.execute(
-        PrometheusGenerateMetricsPipeline.newBuilder()
+        PrometheusMetricsGeneratePipeline.newBuilder()
             .database("test")
             .mongoUrl("mongodb://root:example@mongodb:27017/admin")
             .schemaId(schemaId)

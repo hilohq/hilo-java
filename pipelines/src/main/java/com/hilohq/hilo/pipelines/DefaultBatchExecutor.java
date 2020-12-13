@@ -5,7 +5,7 @@ import static com.google.common.base.Verify.verifyNotNull;
 import com.hilohq.hilo.jars.JarUtils;
 import org.apache.flink.api.java.ExecutionEnvironment;
 
-public final class DefaultBatchExecutor implements BatchExecutor {
+public final class DefaultBatchExecutor implements BatchExecutor, AsyncBatchExecutor {
   public static final class Builder {
     private String jarPath;
     private String remoteHost = "127.0.0.1";
@@ -19,8 +19,7 @@ public final class DefaultBatchExecutor implements BatchExecutor {
 
     public Builder jarModule(final String module) {
       verifyNotNull(module);
-      jarPath = JarUtils.jarPathForModule(module).toString();
-      return this;
+      return jarPath(JarUtils.jarPathForModule(module).toString());
     }
 
     public Builder remoteHost(final String remoteHost) {
@@ -52,8 +51,8 @@ public final class DefaultBatchExecutor implements BatchExecutor {
 
   DefaultBatchExecutor(final String jarPath, final String remoteHost, final int remotePort) {
     this.jarPath = jarPath;
-    this.remoteHost = remoteHost;
     this.remotePort = remotePort;
+    this.remoteHost = remoteHost;
   }
 
   @Override
@@ -61,5 +60,12 @@ public final class DefaultBatchExecutor implements BatchExecutor {
     final var executionEnvironment =
         ExecutionEnvironment.createRemoteEnvironment(remoteHost, remotePort, jarPath);
     pipeline.run(executionEnvironment);
+  }
+
+  @Override
+  public String executeAsync(final BatchPipeline pipeline) throws Exception {
+    final var executionEnvironment =
+        ExecutionEnvironment.createRemoteEnvironment(remoteHost, remotePort, jarPath);
+    return pipeline.runAsync(executionEnvironment);
   }
 }
