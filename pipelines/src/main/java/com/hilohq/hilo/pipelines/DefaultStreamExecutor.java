@@ -5,7 +5,7 @@ import static com.google.common.base.Verify.verifyNotNull;
 import com.hilohq.hilo.jars.JarUtils;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-public final class DefaultStreamExecutor implements StreamExecutor {
+public final class DefaultStreamExecutor implements StreamExecutor, AsyncStreamExecutor {
   public static final class Builder {
     private String jarPath;
     private String remoteHost = "127.0.0.1";
@@ -52,8 +52,8 @@ public final class DefaultStreamExecutor implements StreamExecutor {
 
   DefaultStreamExecutor(final String jarPath, final String remoteHost, final int remotePort) {
     this.jarPath = jarPath;
-    this.remoteHost = remoteHost;
     this.remotePort = remotePort;
+    this.remoteHost = remoteHost;
   }
 
   @Override
@@ -61,5 +61,12 @@ public final class DefaultStreamExecutor implements StreamExecutor {
     final var executionEnvironment =
         StreamExecutionEnvironment.createRemoteEnvironment(remoteHost, remotePort, jarPath);
     pipeline.run(executionEnvironment);
+  }
+
+  @Override
+  public String executeAsync(StreamPipeline pipeline) throws Exception {
+    final var executionEnvironment =
+        StreamExecutionEnvironment.createRemoteEnvironment(remoteHost, remotePort, jarPath);
+    return pipeline.runAsync(executionEnvironment);
   }
 }

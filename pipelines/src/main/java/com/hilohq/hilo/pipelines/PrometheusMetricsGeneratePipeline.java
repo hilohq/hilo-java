@@ -5,14 +5,14 @@ import static com.google.common.base.Verify.verifyNotNull;
 import com.hilohq.hilo.connectors_mongo.output.MongoOutputFormat;
 import com.hilohq.hilo.integration_prometheus.stages.PrometheusMetricUpdateMongoCommandGenerator;
 import com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus;
-import com.hilohq.hilo.stages.PrometheusGenerateMetricsStages;
+import com.hilohq.hilo.stages.PrometheusMetricsGenerateStages;
 import org.apache.flink.api.common.io.FileInputFormat;
 import org.apache.flink.api.common.io.OutputFormat;
 import org.apache.flink.api.java.io.TextInputFormat;
 import org.apache.flink.core.fs.FileInputSplit;
 import org.apache.flink.core.fs.Path;
 
-public final class PrometheusGenerateMetricsPipeline
+public final class PrometheusMetricsGeneratePipeline
     extends DefaultBatchPipeline<String, FileInputSplit, Prometheus.PrometheusUpdate> {
   public static final class Builder {
     private String inputPath;
@@ -44,7 +44,7 @@ public final class PrometheusGenerateMetricsPipeline
       return this;
     }
 
-    public PrometheusGenerateMetricsPipeline build() {
+    public PrometheusMetricsGeneratePipeline build() {
       verifyNotNull(inputPath);
       verifyNotNull(mongoUrl);
       verifyNotNull(database);
@@ -52,7 +52,7 @@ public final class PrometheusGenerateMetricsPipeline
 
       final var inputFormat = new TextInputFormat(new Path(inputPath));
       final var stages =
-          PrometheusGenerateMetricsStages.newBuilder()
+          PrometheusMetricsGenerateStages.newBuilder()
               .schemaId(schemaId)
               .mongoUrl(mongoUrl)
               .build();
@@ -61,7 +61,7 @@ public final class PrometheusGenerateMetricsPipeline
               .url(mongoUrl)
               .database(database)
               .build();
-      return new PrometheusGenerateMetricsPipeline(inputFormat, stages, output);
+      return new PrometheusMetricsGeneratePipeline(inputFormat, stages, output);
     }
   }
 
@@ -69,9 +69,9 @@ public final class PrometheusGenerateMetricsPipeline
     return new Builder();
   }
 
-  PrometheusGenerateMetricsPipeline(
+  PrometheusMetricsGeneratePipeline(
       final FileInputFormat<String> input,
-      final PrometheusGenerateMetricsStages stages,
+      final PrometheusMetricsGenerateStages stages,
       final OutputFormat<Prometheus.PrometheusUpdate> output) {
     super(input, stages, output);
   }

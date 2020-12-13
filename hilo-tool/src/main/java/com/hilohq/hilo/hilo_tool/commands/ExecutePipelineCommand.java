@@ -4,13 +4,17 @@ import static com.hilohq.hilo.hilo_tool.cmd.PrintUtils.printErrorAndExit;
 
 import com.hilohq.hilo.hilo_tool.cmd.ActionCommand;
 import com.hilohq.hilo.pipelines.*;
+import com.hilohq.hilo.pipelines_service.service.FlinkClient;
+import com.hilohq.hilo.protobufs.pipelines.Pipelines;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
+import org.apache.flink.api.common.JobStatus;
 
 public class ExecutePipelineCommand extends ActionCommand {
 
@@ -36,6 +40,55 @@ public class ExecutePipelineCommand extends ActionCommand {
 
   public ExecutePipelineCommand() {
     super("execute", "execute a HiLO pipeline", createOptions());
+  }
+
+  private void verifyJobExecution(final FlinkClient client, final String jobId) throws Exception {
+    var sleepTime = 1000;
+
+    for (int i = 0; i < 100; i++) {
+      final var status = client.getPipelineStatus(jobId).get(5, TimeUnit.SECONDS);
+      if (status.isTerminalState()) {
+        break;
+      }
+
+      System.out.println("Task " + jobId + " has status " + status);
+      Thread.sleep(sleepTime);
+      sleepTime = Math.min(sleepTime + 1000, 5000);
+    }
+
+    final var status = client.getPipelineStatus(jobId).get(5, TimeUnit.SECONDS);
+    if (status.isTerminalState()) {
+      System.out.println("Task " + jobId + " finished with status " + status);
+      if (!status.equals(JobStatus.FINISHED)) {
+        throw new RuntimeException("Task failed with status " + status);
+      }
+    } else {
+      System.out.println(
+          "Task "
+              + jobId
+              + " has not terminated. Current status is "
+              + status
+              + ". Cancelling job");
+      client.cancelPipeline(jobId).get(5, TimeUnit.SECONDS);
+      final var newStatus = client.getPipelineStatus(jobId).get(5, TimeUnit.SECONDS);
+      if (!newStatus.isTerminalState()) {
+        System.out.println("Task " + jobId + " failed to cancel. Current status is " + status);
+      }
+    }
+  }
+
+  public void execute(final FlinkClient client, final Pipelines.BatchPipeline pipelineConfig)
+      throws Exception {
+    final var pipeline = BatchPipelineUtils.build(pipelineConfig);
+    final var jobId = client.executeBatchPipeline(pipeline).get(5, TimeUnit.SECONDS);
+    verifyJobExecution(client, jobId);
+  }
+
+  public void execute(final FlinkClient client, final Pipelines.StreamPipeline pipelineConfig)
+      throws Exception {
+    final var pipeline = StreamPipelineUtils.build(pipelineConfig);
+    final var jobId = client.executeStreamPipeline(pipeline).get(5, TimeUnit.SECONDS);
+    verifyJobExecution(client, jobId);
   }
 
   @Override
@@ -64,47 +117,62 @@ public class ExecutePipelineCommand extends ActionCommand {
 
     Files.copy(inputPath, targetPath);
     final var target = targetPath.toString();
-    final var batchExecutor = DefaultBatchExecutor.newBuilder().jarModule("hilo-tool").build();
-    final var streamExecutor = DefaultStreamExecutor.newBuilder().jarModule("hilo-tool").build();
+    final var flinkClient = new FlinkClient();
 
-    batchExecutor.execute(
-        JsonSchemaGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .inputPath(target)
-            .schemaId(schemaId)
-            .sourceId(sourceId)
-            .projectId(projectId)
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setJsonSchemaGenerate(
+                Pipelines.JsonSchemaGeneratePipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setSourceId(sourceId)
+                    .setProjectId(projectId)
+                    .setInputPath(target))
             .build());
-    batchExecutor.execute(
-        JsonFeaturesGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .inputPath(target)
-            .schemaId(schemaId)
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setJsonFeaturesGenerate(
+                Pipelines.JsonFeaturesGeneratePipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setInputPath(target))
             .build());
-    batchExecutor.execute(
-        PrometheusGenerateMetricsPipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .inputPath(target)
-            .schemaId(schemaId)
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setPrometheusMetricsGenerate(
+                Pipelines.PrometheusMetricsGeneratePipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setInputPath(target))
             .build());
-    batchExecutor.execute(
-        GrafanaDashboardGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .schemaId(schemaId)
-            .grafanaUrl("http://172.20.0.1:3000")
-            .bearerToken(
-                "eyJrIjoiSDA0aGM0YXhNTTBZNkVPYURQTDF1aENVMTNpaUN1b2YiLCJuIjoiYWRtaW4iLCJpZCI6MX0=")
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setGrafanaDashboardGenerate(
+                Pipelines.GrafanaDashboardGeneratePipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setGrafanaUrl("http://172.20.0.1:3000")
+                    .setGrafanaBearerToken(
+                        "eyJrIjoiU1h5QUMwVHdoa1p4eEJERkx0OVJOWFBaQjNEc0tzenoiLCJuIjoiYWRtaW4iLCJpZCI6MX0="))
             .build());
-    streamExecutor.execute(
-        JsonPrometheusPushPipeline.newBuilder()
-            .inputPath(target)
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
-            .schemaId(schemaId)
-            .prometheusAddress("172.20.0.1:9091")
+    execute(
+        flinkClient,
+        Pipelines.StreamPipeline.newBuilder()
+            .setJsonPrometheusPush(
+                Pipelines.JsonPrometheusPushPipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setInputPath(target)
+                    .setPrometheusUrl("172.20.0.1:9091"))
             .build());
   }
 }

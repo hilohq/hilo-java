@@ -23,4 +23,11 @@ public class DefaultStreamPipeline<I, O> implements StreamPipeline {
     stages.bind(executionEnvironment.getConfig(), source).addSink(sink);
     executionEnvironment.execute();
   }
+
+  @Override
+  public String runAsync(StreamExecutionEnvironment executionEnvironment) throws Exception {
+    final var source = executionEnvironment.createInput(input);
+    stages.bind(executionEnvironment.getConfig(), source).addSink(sink);
+    return executionEnvironment.executeAsync().getJobID().toHexString();
+  }
 }

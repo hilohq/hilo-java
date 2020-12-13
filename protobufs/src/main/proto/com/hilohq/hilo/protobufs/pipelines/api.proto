@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package hilo.protobufs.pipelines;
+
+option java_package = "com.hilohq.hilo.protobufs.pipelines";
+
+import "com/hilohq/hilo/protobufs/pipelines/pipelines.proto";
+
+message ExecuteBatchPipelineRequest {
+  BatchPipeline pipeline = 1;
+}
+
+message ExecuteBatchPipelineResponse {
+  string job_id = 1;
+}
+
+message GetPipelineStatusRequest {
+  string job_id = 1;
+}
+
+message GetPipelineStatusResponse {
+  string status = 1;
+}
+
+message CancelPipelineRequest {
+  string job_id = 1;
+}
+
+message CancelPipelineResponse {
+
+}
+
+message ExecuteStreamPipelineRequest {
+  StreamPipeline pipeline = 1;
+}
+
+message ExecuteStreamPipelineResponse {
+  string job_id = 1;
+}
+
+service Pipelines {
+  rpc ExecuteBatchPipeline(ExecuteBatchPipelineRequest) returns (ExecuteBatchPipelineResponse) { }
+  rpc ExecuteStreamPipeline(ExecuteStreamPipelineRequest) returns (ExecuteStreamPipelineResponse) { }
+  rpc GetPipelineStatus(GetPipelineStatusRequest) returns (GetPipelineStatusResponse) { }
+  rpc CancelPipeline(CancelPipelineRequest) returns (CancelPipelineResponse) { }
+}
