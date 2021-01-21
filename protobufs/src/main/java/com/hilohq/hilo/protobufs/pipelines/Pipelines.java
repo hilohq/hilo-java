@@ -3368,8 +3368,8 @@ public final class Pipelines {
 
   }
 
-  public interface GrafanaDashboardGeneratePipelineOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline)
+  public interface PrometheusGrafanaDashboardGeneratePipelineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3433,18 +3433,18 @@ public final class Pipelines {
         getGrafanaBearerTokenBytes();
   }
   /**
-   * Protobuf type {@code hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline}
+   * Protobuf type {@code hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline}
    */
-  public static final class GrafanaDashboardGeneratePipeline extends
+  public static final class PrometheusGrafanaDashboardGeneratePipeline extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline)
-      GrafanaDashboardGeneratePipelineOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
+      PrometheusGrafanaDashboardGeneratePipelineOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GrafanaDashboardGeneratePipeline.newBuilder() to construct.
-    private GrafanaDashboardGeneratePipeline(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PrometheusGrafanaDashboardGeneratePipeline.newBuilder() to construct.
+    private PrometheusGrafanaDashboardGeneratePipeline(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GrafanaDashboardGeneratePipeline() {
+    private PrometheusGrafanaDashboardGeneratePipeline() {
       mongoUrl_ = "";
       mongoDatabase_ = "";
       schemaId_ = "";
@@ -3456,7 +3456,7 @@ public final class Pipelines {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GrafanaDashboardGeneratePipeline();
+      return new PrometheusGrafanaDashboardGeneratePipeline();
     }
 
     @java.lang.Override
@@ -3464,7 +3464,7 @@ public final class Pipelines {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GrafanaDashboardGeneratePipeline(
+    private PrometheusGrafanaDashboardGeneratePipeline(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3533,15 +3533,15 @@ public final class Pipelines {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor;
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder.class);
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder.class);
     }
 
     public static final int MONGO_URL_FIELD_NUMBER = 1;
@@ -3797,10 +3797,10 @@ public final class Pipelines {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline other = (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) obj;
+      com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline other = (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) obj;
 
       if (!getMongoUrl()
           .equals(other.getMongoUrl())) return false;
@@ -3838,69 +3838,69 @@ public final class Pipelines {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parseFrom(
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3913,7 +3913,7 @@ public final class Pipelines {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3929,26 +3929,26 @@ public final class Pipelines {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline}
+     * Protobuf type {@code hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline)
-        com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor;
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder.class);
+                com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3982,17 +3982,17 @@ public final class Pipelines {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor;
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline build() {
-        com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline result = buildPartial();
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline build() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4000,8 +4000,8 @@ public final class Pipelines {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline buildPartial() {
-        com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline result = new com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline(this);
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline buildPartial() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline result = new com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline(this);
         result.mongoUrl_ = mongoUrl_;
         result.mongoDatabase_ = mongoDatabase_;
         result.schemaId_ = schemaId_;
@@ -4045,16 +4045,16 @@ public final class Pipelines {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) {
-          return mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline)other);
+        if (other instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) {
+          return mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline other) {
-        if (other == com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline other) {
+        if (other == com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance()) return this;
         if (!other.getMongoUrl().isEmpty()) {
           mongoUrl_ = other.mongoUrl_;
           onChanged();
@@ -4090,11 +4090,11 @@ public final class Pipelines {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline parsedMessage = null;
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4496,41 +4496,1209 @@ public final class Pipelines {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline)
-    private static final com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
+    private static final com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline();
     }
 
-    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GrafanaDashboardGeneratePipeline>
-        PARSER = new com.google.protobuf.AbstractParser<GrafanaDashboardGeneratePipeline>() {
+    private static final com.google.protobuf.Parser<PrometheusGrafanaDashboardGeneratePipeline>
+        PARSER = new com.google.protobuf.AbstractParser<PrometheusGrafanaDashboardGeneratePipeline>() {
       @java.lang.Override
-      public GrafanaDashboardGeneratePipeline parsePartialFrom(
+      public PrometheusGrafanaDashboardGeneratePipeline parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GrafanaDashboardGeneratePipeline(input, extensionRegistry);
+        return new PrometheusGrafanaDashboardGeneratePipeline(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<GrafanaDashboardGeneratePipeline> parser() {
+    public static com.google.protobuf.Parser<PrometheusGrafanaDashboardGeneratePipeline> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GrafanaDashboardGeneratePipeline> getParserForType() {
+    public com.google.protobuf.Parser<PrometheusGrafanaDashboardGeneratePipeline> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface JsonInfluxDbPushPipelineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.pipelines.JsonInfluxDbPushPipeline)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The inputPath.
+     */
+    java.lang.String getInputPath();
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The bytes for inputPath.
+     */
+    com.google.protobuf.ByteString
+        getInputPathBytes();
+
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The mongoUrl.
+     */
+    java.lang.String getMongoUrl();
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The bytes for mongoUrl.
+     */
+    com.google.protobuf.ByteString
+        getMongoUrlBytes();
+
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The mongoDatabase.
+     */
+    java.lang.String getMongoDatabase();
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The bytes for mongoDatabase.
+     */
+    com.google.protobuf.ByteString
+        getMongoDatabaseBytes();
+
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The schemaId.
+     */
+    java.lang.String getSchemaId();
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The bytes for schemaId.
+     */
+    com.google.protobuf.ByteString
+        getSchemaIdBytes();
+
+    /**
+     * <code>string influxdb_url = 5;</code>
+     * @return The influxdbUrl.
+     */
+    java.lang.String getInfluxdbUrl();
+    /**
+     * <code>string influxdb_url = 5;</code>
+     * @return The bytes for influxdbUrl.
+     */
+    com.google.protobuf.ByteString
+        getInfluxdbUrlBytes();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.pipelines.JsonInfluxDbPushPipeline}
+   */
+  public static final class JsonInfluxDbPushPipeline extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.pipelines.JsonInfluxDbPushPipeline)
+      JsonInfluxDbPushPipelineOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JsonInfluxDbPushPipeline.newBuilder() to construct.
+    private JsonInfluxDbPushPipeline(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JsonInfluxDbPushPipeline() {
+      inputPath_ = "";
+      mongoUrl_ = "";
+      mongoDatabase_ = "";
+      schemaId_ = "";
+      influxdbUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JsonInfluxDbPushPipeline();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JsonInfluxDbPushPipeline(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inputPath_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mongoUrl_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mongoDatabase_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              schemaId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              influxdbUrl_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder.class);
+    }
+
+    public static final int INPUT_PATH_FIELD_NUMBER = 1;
+    private volatile java.lang.Object inputPath_;
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The inputPath.
+     */
+    @java.lang.Override
+    public java.lang.String getInputPath() {
+      java.lang.Object ref = inputPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inputPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The bytes for inputPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInputPathBytes() {
+      java.lang.Object ref = inputPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inputPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONGO_URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object mongoUrl_;
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The mongoUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getMongoUrl() {
+      java.lang.Object ref = mongoUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mongoUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The bytes for mongoUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMongoUrlBytes() {
+      java.lang.Object ref = mongoUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mongoUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONGO_DATABASE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object mongoDatabase_;
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The mongoDatabase.
+     */
+    @java.lang.Override
+    public java.lang.String getMongoDatabase() {
+      java.lang.Object ref = mongoDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mongoDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The bytes for mongoDatabase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMongoDatabaseBytes() {
+      java.lang.Object ref = mongoDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mongoDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object schemaId_;
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The schemaId.
+     */
+    @java.lang.Override
+    public java.lang.String getSchemaId() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schemaId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The bytes for schemaId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaIdBytes() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schemaId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFLUXDB_URL_FIELD_NUMBER = 5;
+    private volatile java.lang.Object influxdbUrl_;
+    /**
+     * <code>string influxdb_url = 5;</code>
+     * @return The influxdbUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getInfluxdbUrl() {
+      java.lang.Object ref = influxdbUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        influxdbUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string influxdb_url = 5;</code>
+     * @return The bytes for influxdbUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInfluxdbUrlBytes() {
+      java.lang.Object ref = influxdbUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        influxdbUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInputPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inputPath_);
+      }
+      if (!getMongoUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mongoUrl_);
+      }
+      if (!getMongoDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mongoDatabase_);
+      }
+      if (!getSchemaIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, schemaId_);
+      }
+      if (!getInfluxdbUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, influxdbUrl_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInputPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inputPath_);
+      }
+      if (!getMongoUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mongoUrl_);
+      }
+      if (!getMongoDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mongoDatabase_);
+      }
+      if (!getSchemaIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, schemaId_);
+      }
+      if (!getInfluxdbUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, influxdbUrl_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline other = (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) obj;
+
+      if (!getInputPath()
+          .equals(other.getInputPath())) return false;
+      if (!getMongoUrl()
+          .equals(other.getMongoUrl())) return false;
+      if (!getMongoDatabase()
+          .equals(other.getMongoDatabase())) return false;
+      if (!getSchemaId()
+          .equals(other.getSchemaId())) return false;
+      if (!getInfluxdbUrl()
+          .equals(other.getInfluxdbUrl())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INPUT_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getInputPath().hashCode();
+      hash = (37 * hash) + MONGO_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getMongoUrl().hashCode();
+      hash = (37 * hash) + MONGO_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getMongoDatabase().hashCode();
+      hash = (37 * hash) + SCHEMA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSchemaId().hashCode();
+      hash = (37 * hash) + INFLUXDB_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getInfluxdbUrl().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.pipelines.JsonInfluxDbPushPipeline}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.pipelines.JsonInfluxDbPushPipeline)
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        inputPath_ = "";
+
+        mongoUrl_ = "";
+
+        mongoDatabase_ = "";
+
+        schemaId_ = "";
+
+        influxdbUrl_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline build() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline buildPartial() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline result = new com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline(this);
+        result.inputPath_ = inputPath_;
+        result.mongoUrl_ = mongoUrl_;
+        result.mongoDatabase_ = mongoDatabase_;
+        result.schemaId_ = schemaId_;
+        result.influxdbUrl_ = influxdbUrl_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) {
+          return mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline other) {
+        if (other == com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance()) return this;
+        if (!other.getInputPath().isEmpty()) {
+          inputPath_ = other.inputPath_;
+          onChanged();
+        }
+        if (!other.getMongoUrl().isEmpty()) {
+          mongoUrl_ = other.mongoUrl_;
+          onChanged();
+        }
+        if (!other.getMongoDatabase().isEmpty()) {
+          mongoDatabase_ = other.mongoDatabase_;
+          onChanged();
+        }
+        if (!other.getSchemaId().isEmpty()) {
+          schemaId_ = other.schemaId_;
+          onChanged();
+        }
+        if (!other.getInfluxdbUrl().isEmpty()) {
+          influxdbUrl_ = other.influxdbUrl_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object inputPath_ = "";
+      /**
+       * <code>string input_path = 1;</code>
+       * @return The inputPath.
+       */
+      public java.lang.String getInputPath() {
+        java.lang.Object ref = inputPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inputPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @return The bytes for inputPath.
+       */
+      public com.google.protobuf.ByteString
+          getInputPathBytes() {
+        java.lang.Object ref = inputPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inputPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @param value The inputPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        inputPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputPath() {
+        
+        inputPath_ = getDefaultInstance().getInputPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @param value The bytes for inputPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        inputPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mongoUrl_ = "";
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return The mongoUrl.
+       */
+      public java.lang.String getMongoUrl() {
+        java.lang.Object ref = mongoUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mongoUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return The bytes for mongoUrl.
+       */
+      public com.google.protobuf.ByteString
+          getMongoUrlBytes() {
+        java.lang.Object ref = mongoUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mongoUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @param value The mongoUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mongoUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMongoUrl() {
+        
+        mongoUrl_ = getDefaultInstance().getMongoUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @param value The bytes for mongoUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mongoUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mongoDatabase_ = "";
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return The mongoDatabase.
+       */
+      public java.lang.String getMongoDatabase() {
+        java.lang.Object ref = mongoDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mongoDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return The bytes for mongoDatabase.
+       */
+      public com.google.protobuf.ByteString
+          getMongoDatabaseBytes() {
+        java.lang.Object ref = mongoDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mongoDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @param value The mongoDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mongoDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMongoDatabase() {
+        
+        mongoDatabase_ = getDefaultInstance().getMongoDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @param value The bytes for mongoDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mongoDatabase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schemaId_ = "";
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return The schemaId.
+       */
+      public java.lang.String getSchemaId() {
+        java.lang.Object ref = schemaId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schemaId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return The bytes for schemaId.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaIdBytes() {
+        java.lang.Object ref = schemaId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @param value The schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaId() {
+        
+        schemaId_ = getDefaultInstance().getSchemaId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @param value The bytes for schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object influxdbUrl_ = "";
+      /**
+       * <code>string influxdb_url = 5;</code>
+       * @return The influxdbUrl.
+       */
+      public java.lang.String getInfluxdbUrl() {
+        java.lang.Object ref = influxdbUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          influxdbUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string influxdb_url = 5;</code>
+       * @return The bytes for influxdbUrl.
+       */
+      public com.google.protobuf.ByteString
+          getInfluxdbUrlBytes() {
+        java.lang.Object ref = influxdbUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          influxdbUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string influxdb_url = 5;</code>
+       * @param value The influxdbUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfluxdbUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        influxdbUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string influxdb_url = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInfluxdbUrl() {
+        
+        influxdbUrl_ = getDefaultInstance().getInfluxdbUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string influxdb_url = 5;</code>
+       * @param value The bytes for influxdbUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInfluxdbUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        influxdbUrl_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.pipelines.JsonInfluxDbPushPipeline)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.pipelines.JsonInfluxDbPushPipeline)
+    private static final com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline();
+    }
+
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JsonInfluxDbPushPipeline>
+        PARSER = new com.google.protobuf.AbstractParser<JsonInfluxDbPushPipeline>() {
+      @java.lang.Override
+      public JsonInfluxDbPushPipeline parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JsonInfluxDbPushPipeline(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JsonInfluxDbPushPipeline> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JsonInfluxDbPushPipeline> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4586,19 +5754,34 @@ public final class Pipelines {
     com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusMetricsGeneratePipelineOrBuilder getPrometheusMetricsGenerateOrBuilder();
 
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-     * @return Whether the grafanaDashboardGenerate field is set.
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+     * @return Whether the prometheusGrafanaDashboardGenerate field is set.
      */
-    boolean hasGrafanaDashboardGenerate();
+    boolean hasPrometheusGrafanaDashboardGenerate();
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-     * @return The grafanaDashboardGenerate.
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+     * @return The prometheusGrafanaDashboardGenerate.
      */
-    com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getGrafanaDashboardGenerate();
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getPrometheusGrafanaDashboardGenerate();
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
      */
-    com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder getGrafanaDashboardGenerateOrBuilder();
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder getPrometheusGrafanaDashboardGenerateOrBuilder();
+
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     * @return Whether the jsonInfluxdbPushPipeline field is set.
+     */
+    boolean hasJsonInfluxdbPushPipeline();
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     * @return The jsonInfluxdbPushPipeline.
+     */
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getJsonInfluxdbPushPipeline();
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     */
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder getJsonInfluxdbPushPipelineOrBuilder();
 
     public com.hilohq.hilo.protobufs.pipelines.Pipelines.BatchPipeline.PipelineCase getPipelineCase();
   }
@@ -4690,17 +5873,31 @@ public final class Pipelines {
               break;
             }
             case 34: {
-              com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder subBuilder = null;
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder subBuilder = null;
               if (pipelineCase_ == 4) {
-                subBuilder = ((com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_).toBuilder();
+                subBuilder = ((com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_).toBuilder();
               }
               pipeline_ =
-                  input.readMessage(com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.parser(), extensionRegistry);
+                  input.readMessage(com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_);
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_);
                 pipeline_ = subBuilder.buildPartial();
               }
               pipelineCase_ = 4;
+              break;
+            }
+            case 42: {
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder subBuilder = null;
+              if (pipelineCase_ == 5) {
+                subBuilder = ((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_).toBuilder();
+              }
+              pipeline_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_);
+                pipeline_ = subBuilder.buildPartial();
+              }
+              pipelineCase_ = 5;
               break;
             }
             default: {
@@ -4743,7 +5940,8 @@ public final class Pipelines {
       JSON_SCHEMA_GENERATE(1),
       JSON_FEATURES_GENERATE(2),
       PROMETHEUS_METRICS_GENERATE(3),
-      GRAFANA_DASHBOARD_GENERATE(4),
+      PROMETHEUS_GRAFANA_DASHBOARD_GENERATE(4),
+      JSON_INFLUXDB_PUSH_PIPELINE(5),
       PIPELINE_NOT_SET(0);
       private final int value;
       private PipelineCase(int value) {
@@ -4764,7 +5962,8 @@ public final class Pipelines {
           case 1: return JSON_SCHEMA_GENERATE;
           case 2: return JSON_FEATURES_GENERATE;
           case 3: return PROMETHEUS_METRICS_GENERATE;
-          case 4: return GRAFANA_DASHBOARD_GENERATE;
+          case 4: return PROMETHEUS_GRAFANA_DASHBOARD_GENERATE;
+          case 5: return JSON_INFLUXDB_PUSH_PIPELINE;
           case 0: return PIPELINE_NOT_SET;
           default: return null;
         }
@@ -4873,35 +6072,66 @@ public final class Pipelines {
       return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusMetricsGeneratePipeline.getDefaultInstance();
     }
 
-    public static final int GRAFANA_DASHBOARD_GENERATE_FIELD_NUMBER = 4;
+    public static final int PROMETHEUS_GRAFANA_DASHBOARD_GENERATE_FIELD_NUMBER = 4;
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-     * @return Whether the grafanaDashboardGenerate field is set.
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+     * @return Whether the prometheusGrafanaDashboardGenerate field is set.
      */
     @java.lang.Override
-    public boolean hasGrafanaDashboardGenerate() {
+    public boolean hasPrometheusGrafanaDashboardGenerate() {
       return pipelineCase_ == 4;
     }
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-     * @return The grafanaDashboardGenerate.
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+     * @return The prometheusGrafanaDashboardGenerate.
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getGrafanaDashboardGenerate() {
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getPrometheusGrafanaDashboardGenerate() {
       if (pipelineCase_ == 4) {
-         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_;
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_;
       }
-      return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
     }
     /**
-     * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+     * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
      */
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder getGrafanaDashboardGenerateOrBuilder() {
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder getPrometheusGrafanaDashboardGenerateOrBuilder() {
       if (pipelineCase_ == 4) {
-         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_;
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_;
       }
-      return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
+    }
+
+    public static final int JSON_INFLUXDB_PUSH_PIPELINE_FIELD_NUMBER = 5;
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     * @return Whether the jsonInfluxdbPushPipeline field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonInfluxdbPushPipeline() {
+      return pipelineCase_ == 5;
+    }
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     * @return The jsonInfluxdbPushPipeline.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getJsonInfluxdbPushPipeline() {
+      if (pipelineCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_;
+      }
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder getJsonInfluxdbPushPipelineOrBuilder() {
+      if (pipelineCase_ == 5) {
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_;
+      }
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4928,7 +6158,10 @@ public final class Pipelines {
         output.writeMessage(3, (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusMetricsGeneratePipeline) pipeline_);
       }
       if (pipelineCase_ == 4) {
-        output.writeMessage(4, (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_);
+        output.writeMessage(4, (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_);
+      }
+      if (pipelineCase_ == 5) {
+        output.writeMessage(5, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_);
       }
       unknownFields.writeTo(output);
     }
@@ -4953,7 +6186,11 @@ public final class Pipelines {
       }
       if (pipelineCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_);
+          .computeMessageSize(4, (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_);
+      }
+      if (pipelineCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4985,8 +6222,12 @@ public final class Pipelines {
               .equals(other.getPrometheusMetricsGenerate())) return false;
           break;
         case 4:
-          if (!getGrafanaDashboardGenerate()
-              .equals(other.getGrafanaDashboardGenerate())) return false;
+          if (!getPrometheusGrafanaDashboardGenerate()
+              .equals(other.getPrometheusGrafanaDashboardGenerate())) return false;
+          break;
+        case 5:
+          if (!getJsonInfluxdbPushPipeline()
+              .equals(other.getJsonInfluxdbPushPipeline())) return false;
           break;
         case 0:
         default:
@@ -5016,8 +6257,12 @@ public final class Pipelines {
           hash = (53 * hash) + getPrometheusMetricsGenerate().hashCode();
           break;
         case 4:
-          hash = (37 * hash) + GRAFANA_DASHBOARD_GENERATE_FIELD_NUMBER;
-          hash = (53 * hash) + getGrafanaDashboardGenerate().hashCode();
+          hash = (37 * hash) + PROMETHEUS_GRAFANA_DASHBOARD_GENERATE_FIELD_NUMBER;
+          hash = (53 * hash) + getPrometheusGrafanaDashboardGenerate().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + JSON_INFLUXDB_PUSH_PIPELINE_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonInfluxdbPushPipeline().hashCode();
           break;
         case 0:
         default:
@@ -5205,10 +6450,17 @@ public final class Pipelines {
           }
         }
         if (pipelineCase_ == 4) {
-          if (grafanaDashboardGenerateBuilder_ == null) {
+          if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
             result.pipeline_ = pipeline_;
           } else {
-            result.pipeline_ = grafanaDashboardGenerateBuilder_.build();
+            result.pipeline_ = prometheusGrafanaDashboardGenerateBuilder_.build();
+          }
+        }
+        if (pipelineCase_ == 5) {
+          if (jsonInfluxdbPushPipelineBuilder_ == null) {
+            result.pipeline_ = pipeline_;
+          } else {
+            result.pipeline_ = jsonInfluxdbPushPipelineBuilder_.build();
           }
         }
         result.pipelineCase_ = pipelineCase_;
@@ -5273,8 +6525,12 @@ public final class Pipelines {
             mergePrometheusMetricsGenerate(other.getPrometheusMetricsGenerate());
             break;
           }
-          case GRAFANA_DASHBOARD_GENERATE: {
-            mergeGrafanaDashboardGenerate(other.getGrafanaDashboardGenerate());
+          case PROMETHEUS_GRAFANA_DASHBOARD_GENERATE: {
+            mergePrometheusGrafanaDashboardGenerate(other.getPrometheusGrafanaDashboardGenerate());
+            break;
+          }
+          case JSON_INFLUXDB_PUSH_PIPELINE: {
+            mergeJsonInfluxdbPushPipeline(other.getJsonInfluxdbPushPipeline());
             break;
           }
           case PIPELINE_NOT_SET: {
@@ -5749,71 +7005,71 @@ public final class Pipelines {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder> grafanaDashboardGenerateBuilder_;
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder> prometheusGrafanaDashboardGenerateBuilder_;
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-       * @return Whether the grafanaDashboardGenerate field is set.
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+       * @return Whether the prometheusGrafanaDashboardGenerate field is set.
        */
       @java.lang.Override
-      public boolean hasGrafanaDashboardGenerate() {
+      public boolean hasPrometheusGrafanaDashboardGenerate() {
         return pipelineCase_ == 4;
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
-       * @return The grafanaDashboardGenerate.
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
+       * @return The prometheusGrafanaDashboardGenerate.
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline getGrafanaDashboardGenerate() {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline getPrometheusGrafanaDashboardGenerate() {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           if (pipelineCase_ == 4) {
-            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_;
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_;
           }
-          return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
         } else {
           if (pipelineCase_ == 4) {
-            return grafanaDashboardGenerateBuilder_.getMessage();
+            return prometheusGrafanaDashboardGenerateBuilder_.getMessage();
           }
-          return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
-      public Builder setGrafanaDashboardGenerate(com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline value) {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+      public Builder setPrometheusGrafanaDashboardGenerate(com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline value) {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           pipeline_ = value;
           onChanged();
         } else {
-          grafanaDashboardGenerateBuilder_.setMessage(value);
+          prometheusGrafanaDashboardGenerateBuilder_.setMessage(value);
         }
         pipelineCase_ = 4;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
-      public Builder setGrafanaDashboardGenerate(
-          com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder builderForValue) {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+      public Builder setPrometheusGrafanaDashboardGenerate(
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder builderForValue) {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           pipeline_ = builderForValue.build();
           onChanged();
         } else {
-          grafanaDashboardGenerateBuilder_.setMessage(builderForValue.build());
+          prometheusGrafanaDashboardGenerateBuilder_.setMessage(builderForValue.build());
         }
         pipelineCase_ = 4;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
-      public Builder mergeGrafanaDashboardGenerate(com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline value) {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+      public Builder mergePrometheusGrafanaDashboardGenerate(com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline value) {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           if (pipelineCase_ == 4 &&
-              pipeline_ != com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance()) {
-            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.newBuilder((com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_)
+              pipeline_ != com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance()) {
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.newBuilder((com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_)
                 .mergeFrom(value).buildPartial();
           } else {
             pipeline_ = value;
@@ -5821,18 +7077,18 @@ public final class Pipelines {
           onChanged();
         } else {
           if (pipelineCase_ == 4) {
-            grafanaDashboardGenerateBuilder_.mergeFrom(value);
+            prometheusGrafanaDashboardGenerateBuilder_.mergeFrom(value);
           }
-          grafanaDashboardGenerateBuilder_.setMessage(value);
+          prometheusGrafanaDashboardGenerateBuilder_.setMessage(value);
         }
         pipelineCase_ = 4;
         return this;
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
-      public Builder clearGrafanaDashboardGenerate() {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+      public Builder clearPrometheusGrafanaDashboardGenerate() {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           if (pipelineCase_ == 4) {
             pipelineCase_ = 0;
             pipeline_ = null;
@@ -5843,50 +7099,191 @@ public final class Pipelines {
             pipelineCase_ = 0;
             pipeline_ = null;
           }
-          grafanaDashboardGenerateBuilder_.clear();
+          prometheusGrafanaDashboardGenerateBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder getGrafanaDashboardGenerateBuilder() {
-        return getGrafanaDashboardGenerateFieldBuilder().getBuilder();
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder getPrometheusGrafanaDashboardGenerateBuilder() {
+        return getPrometheusGrafanaDashboardGenerateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder getGrafanaDashboardGenerateOrBuilder() {
-        if ((pipelineCase_ == 4) && (grafanaDashboardGenerateBuilder_ != null)) {
-          return grafanaDashboardGenerateBuilder_.getMessageOrBuilder();
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder getPrometheusGrafanaDashboardGenerateOrBuilder() {
+        if ((pipelineCase_ == 4) && (prometheusGrafanaDashboardGenerateBuilder_ != null)) {
+          return prometheusGrafanaDashboardGenerateBuilder_.getMessageOrBuilder();
         } else {
           if (pipelineCase_ == 4) {
-            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_;
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_;
           }
-          return com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
         }
       }
       /**
-       * <code>.hilo.protobufs.pipelines.GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;</code>
+       * <code>.hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder> 
-          getGrafanaDashboardGenerateFieldBuilder() {
-        if (grafanaDashboardGenerateBuilder_ == null) {
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder> 
+          getPrometheusGrafanaDashboardGenerateFieldBuilder() {
+        if (prometheusGrafanaDashboardGenerateBuilder_ == null) {
           if (!(pipelineCase_ == 4)) {
-            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.getDefaultInstance();
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.getDefaultInstance();
           }
-          grafanaDashboardGenerateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipelineOrBuilder>(
-                  (com.hilohq.hilo.protobufs.pipelines.Pipelines.GrafanaDashboardGeneratePipeline) pipeline_,
+          prometheusGrafanaDashboardGenerateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipelineOrBuilder>(
+                  (com.hilohq.hilo.protobufs.pipelines.Pipelines.PrometheusGrafanaDashboardGeneratePipeline) pipeline_,
                   getParentForChildren(),
                   isClean());
           pipeline_ = null;
         }
         pipelineCase_ = 4;
         onChanged();;
-        return grafanaDashboardGenerateBuilder_;
+        return prometheusGrafanaDashboardGenerateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder> jsonInfluxdbPushPipelineBuilder_;
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       * @return Whether the jsonInfluxdbPushPipeline field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonInfluxdbPushPipeline() {
+        return pipelineCase_ == 5;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       * @return The jsonInfluxdbPushPipeline.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline getJsonInfluxdbPushPipeline() {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_;
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+        } else {
+          if (pipelineCase_ == 5) {
+            return jsonInfluxdbPushPipelineBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      public Builder setJsonInfluxdbPushPipeline(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline value) {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pipeline_ = value;
+          onChanged();
+        } else {
+          jsonInfluxdbPushPipelineBuilder_.setMessage(value);
+        }
+        pipelineCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      public Builder setJsonInfluxdbPushPipeline(
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder builderForValue) {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          pipeline_ = builderForValue.build();
+          onChanged();
+        } else {
+          jsonInfluxdbPushPipelineBuilder_.setMessage(builderForValue.build());
+        }
+        pipelineCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      public Builder mergeJsonInfluxdbPushPipeline(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline value) {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 5 &&
+              pipeline_ != com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance()) {
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.newBuilder((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            pipeline_ = value;
+          }
+          onChanged();
+        } else {
+          if (pipelineCase_ == 5) {
+            jsonInfluxdbPushPipelineBuilder_.mergeFrom(value);
+          }
+          jsonInfluxdbPushPipelineBuilder_.setMessage(value);
+        }
+        pipelineCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      public Builder clearJsonInfluxdbPushPipeline() {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 5) {
+            pipelineCase_ = 0;
+            pipeline_ = null;
+            onChanged();
+          }
+        } else {
+          if (pipelineCase_ == 5) {
+            pipelineCase_ = 0;
+            pipeline_ = null;
+          }
+          jsonInfluxdbPushPipelineBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder getJsonInfluxdbPushPipelineBuilder() {
+        return getJsonInfluxdbPushPipelineFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder getJsonInfluxdbPushPipelineOrBuilder() {
+        if ((pipelineCase_ == 5) && (jsonInfluxdbPushPipelineBuilder_ != null)) {
+          return jsonInfluxdbPushPipelineBuilder_.getMessageOrBuilder();
+        } else {
+          if (pipelineCase_ == 5) {
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_;
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder> 
+          getJsonInfluxdbPushPipelineFieldBuilder() {
+        if (jsonInfluxdbPushPipelineBuilder_ == null) {
+          if (!(pipelineCase_ == 5)) {
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
+          }
+          jsonInfluxdbPushPipelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder>(
+                  (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_,
+                  getParentForChildren(),
+                  isClean());
+          pipeline_ = null;
+        }
+        pipelineCase_ = 5;
+        onChanged();;
+        return jsonInfluxdbPushPipelineBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7843,10 +9240,15 @@ public final class Pipelines {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_pipelines_JsonFeaturesGeneratePipeline_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor;
+    internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_fieldAccessorTable;
+      internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor;
   private static final 
@@ -7882,28 +9284,35 @@ public final class Pipelines {
       "ce_id\030\005 \001(\t\022\021\n\tschema_id\030\006 \001(\t\"p\n\034JsonFe" +
       "aturesGeneratePipeline\022\022\n\ninput_path\030\001 \001" +
       "(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016mongo_database\030" +
-      "\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\"\223\001\n GrafanaDash" +
-      "boardGeneratePipeline\022\021\n\tmongo_url\030\001 \001(\t" +
-      "\022\026\n\016mongo_database\030\002 \001(\t\022\021\n\tschema_id\030\003 " +
-      "\001(\t\022\023\n\013grafana_url\030\004 \001(\t\022\034\n\024grafana_bear" +
-      "er_token\030\005 \001(\t\"\221\003\n\rBatchPipeline\022T\n\024json" +
-      "_schema_generate\030\001 \001(\01324.hilo.protobufs." +
-      "pipelines.JsonSchemaGeneratePipelineH\000\022X" +
-      "\n\026json_features_generate\030\002 \001(\01326.hilo.pr" +
-      "otobufs.pipelines.JsonFeaturesGeneratePi" +
-      "pelineH\000\022b\n\033prometheus_metrics_generate\030" +
-      "\003 \001(\0132;.hilo.protobufs.pipelines.Prometh" +
-      "eusMetricsGeneratePipelineH\000\022`\n\032grafana_" +
-      "dashboard_generate\030\004 \001(\0132:.hilo.protobuf" +
-      "s.pipelines.GrafanaDashboardGeneratePipe" +
-      "lineH\000B\n\n\010pipeline\"\206\001\n\032JsonPrometheusPus" +
-      "hPipeline\022\022\n\ninput_path\030\001 \001(\t\022\021\n\tmongo_u" +
-      "rl\030\002 \001(\t\022\026\n\016mongo_database\030\003 \001(\t\022\021\n\tsche" +
-      "ma_id\030\004 \001(\t\022\026\n\016prometheus_url\030\005 \001(\t\"r\n\016S" +
-      "treamPipeline\022T\n\024json_prometheus_push\030\001 " +
-      "\001(\01324.hilo.protobufs.pipelines.JsonProme" +
-      "theusPushPipelineH\000B\n\n\010pipelineB%\n#com.h" +
-      "ilohq.hilo.protobufs.pipelinesb\006proto3"
+      "\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\"\235\001\n*PrometheusG" +
+      "rafanaDashboardGeneratePipeline\022\021\n\tmongo" +
+      "_url\030\001 \001(\t\022\026\n\016mongo_database\030\002 \001(\t\022\021\n\tsc" +
+      "hema_id\030\003 \001(\t\022\023\n\013grafana_url\030\004 \001(\t\022\034\n\024gr" +
+      "afana_bearer_token\030\005 \001(\t\"\202\001\n\030JsonInfluxD" +
+      "bPushPipeline\022\022\n\ninput_path\030\001 \001(\t\022\021\n\tmon" +
+      "go_url\030\002 \001(\t\022\026\n\016mongo_database\030\003 \001(\t\022\021\n\t" +
+      "schema_id\030\004 \001(\t\022\024\n\014influxdb_url\030\005 \001(\t\"\201\004" +
+      "\n\rBatchPipeline\022T\n\024json_schema_generate\030" +
+      "\001 \001(\01324.hilo.protobufs.pipelines.JsonSch" +
+      "emaGeneratePipelineH\000\022X\n\026json_features_g" +
+      "enerate\030\002 \001(\01326.hilo.protobufs.pipelines" +
+      ".JsonFeaturesGeneratePipelineH\000\022b\n\033prome" +
+      "theus_metrics_generate\030\003 \001(\0132;.hilo.prot" +
+      "obufs.pipelines.PrometheusMetricsGenerat" +
+      "ePipelineH\000\022u\n%prometheus_grafana_dashbo" +
+      "ard_generate\030\004 \001(\0132D.hilo.protobufs.pipe" +
+      "lines.PrometheusGrafanaDashboardGenerate" +
+      "PipelineH\000\022Y\n\033json_influxdb_push_pipelin" +
+      "e\030\005 \001(\01322.hilo.protobufs.pipelines.JsonI" +
+      "nfluxDbPushPipelineH\000B\n\n\010pipeline\"\206\001\n\032Js" +
+      "onPrometheusPushPipeline\022\022\n\ninput_path\030\001" +
+      " \001(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016mongo_databas" +
+      "e\030\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\022\026\n\016prometheus" +
+      "_url\030\005 \001(\t\"r\n\016StreamPipeline\022T\n\024json_pro" +
+      "metheus_push\030\001 \001(\01324.hilo.protobufs.pipe" +
+      "lines.JsonPrometheusPushPipelineH\000B\n\n\010pi" +
+      "pelineB%\n#com.hilohq.hilo.protobufs.pipe" +
+      "linesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7927,26 +9336,32 @@ public final class Pipelines {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_JsonFeaturesGeneratePipeline_descriptor,
         new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", });
-    internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor =
+    internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_fieldAccessorTable = new
+    internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_pipelines_GrafanaDashboardGeneratePipeline_descriptor,
+        internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor,
         new java.lang.String[] { "MongoUrl", "MongoDatabase", "SchemaId", "GrafanaUrl", "GrafanaBearerToken", });
-    internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor =
+    internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor,
+        new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", "InfluxdbUrl", });
+    internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_hilo_protobufs_pipelines_BatchPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor,
-        new java.lang.String[] { "JsonSchemaGenerate", "JsonFeaturesGenerate", "PrometheusMetricsGenerate", "GrafanaDashboardGenerate", "Pipeline", });
+        new java.lang.String[] { "JsonSchemaGenerate", "JsonFeaturesGenerate", "PrometheusMetricsGenerate", "PrometheusGrafanaDashboardGenerate", "JsonInfluxdbPushPipeline", "Pipeline", });
     internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_descriptor,
         new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", "PrometheusUrl", });
     internal_static_hilo_protobufs_pipelines_StreamPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_hilo_protobufs_pipelines_StreamPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_StreamPipeline_descriptor,

@@ -41,7 +41,7 @@ public final class PipelinesClient {
     return result;
   }
 
-  public CompletableFuture<ExecuteBatchPipelineResponse> getSchemaIdsBySource(
+  public CompletableFuture<ExecuteBatchPipelineResponse> executeBatchPipeline(
       final ExecuteBatchPipelineRequest request) {
     return toCompletableFuture(stub.executeBatchPipeline(request), executor);
   }

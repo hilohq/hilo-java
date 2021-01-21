@@ -6,6 +6,7 @@ apply plugin: 'com.github.sherter.google-java-format'
 
 dependencies {
     compile project(":connector-mongo")
+    compile project(":integration-influxdb")
     compile project(":integration-prometheus")
     compile project(":integration-grafana")
     compile project(":protobufs")

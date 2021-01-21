@@ -2,6 +2,7 @@ rootProject.name = 'hilo'
 
 include 'protobufs'
 include 'connector-mongo'
+include 'integration-influxdb'
 include 'integration-prometheus'
 include 'integration-grafana'
 include 'parsers'

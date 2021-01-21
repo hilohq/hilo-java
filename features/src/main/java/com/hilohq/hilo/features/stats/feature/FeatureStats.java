@@ -15,7 +15,7 @@ import java.util.Map;
 
 public final class FeatureStats
     implements StatsCollector, Snapshot<FeatureOuterClass.FeatureStats> {
-  private Map<ValueType, StatsCollector> stats;
+  private final Map<ValueType, StatsCollector> stats;
 
   private FeatureStats(final Map<ValueType, StatsCollector> stats) {
     this.stats = stats;

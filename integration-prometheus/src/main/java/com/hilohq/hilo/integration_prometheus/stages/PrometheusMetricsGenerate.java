@@ -3,6 +3,7 @@ package com.hilohq.hilo.integration_prometheus.stages;
 import com.hilohq.hilo.features_service.service.MongoFeaturesStore;
 import com.hilohq.hilo.parsers.field.FieldKey;
 import com.hilohq.hilo.parsers.field.Fields;
+import com.hilohq.hilo.protobufs.integrations.grafana.Grafana;
 import com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import java.util.HashMap;
@@ -29,6 +30,15 @@ public final class PrometheusMetricsGenerate
     final var featuresModel = store.getFeatures(schemaId).get(5, TimeUnit.SECONDS);
     features = featuresModel.getFeaturesMap();
     store.close();
+  }
+
+  private static String getExprForFeature(
+      final String key, final FeatureOuterClass.Feature feature) {
+    if (feature.getFeatureClass().hasMonotonic() || feature.getFeatureClass().hasCounter()) {
+      return "irate(" + key + "[1m])";
+    }
+
+    return key;
   }
 
   @Override
@@ -58,6 +68,7 @@ public final class PrometheusMetricsGenerate
         }
 
         if (!metrics.containsKey(field.getKey().key())) {
+          final var expr = getExprForFeature(field.getKey().key(), feature);
           metrics.put(
               field.getKey().key(),
               Prometheus.PrometheusMetric.newBuilder()
@@ -66,6 +77,9 @@ public final class PrometheusMetricsGenerate
                       Prometheus.PrometheusMetric.Gauge.newBuilder()
                           .setName(field.getKey().key())
                           .setHelp(field.getKey().key()))
+                  .setDashboard(
+                      Prometheus.DashboardIntegrations.newBuilder()
+                          .setGrafana(Grafana.GrafanaPanel.newBuilder().setExpr(expr)))
                   .build());
         }
       }

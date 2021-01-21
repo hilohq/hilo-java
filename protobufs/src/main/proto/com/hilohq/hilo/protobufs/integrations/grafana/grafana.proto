@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package hilo.protobufs.integrations.grafana;
+
+option java_package = "com.hilohq.hilo.protobufs.integrations.grafana";
+
+message GrafanaPanel {
+  string expr = 1;
+}
+
+message GrafanaDashboard {
+  string title = 1;
+  repeated GrafanaPanel panels = 2;
+}

@@ -14,6 +14,627 @@ public final class Prometheus {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface DashboardIntegrationsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.prometheus.DashboardIntegrations)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     * @return Whether the grafana field is set.
+     */
+    boolean hasGrafana();
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     * @return The grafana.
+     */
+    com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel getGrafana();
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     */
+    com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder getGrafanaOrBuilder();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.integrations.prometheus.DashboardIntegrations}
+   */
+  public static final class DashboardIntegrations extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.prometheus.DashboardIntegrations)
+      DashboardIntegrationsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DashboardIntegrations.newBuilder() to construct.
+    private DashboardIntegrations(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DashboardIntegrations() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DashboardIntegrations();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DashboardIntegrations(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder subBuilder = null;
+              if (grafana_ != null) {
+                subBuilder = grafana_.toBuilder();
+              }
+              grafana_ = input.readMessage(com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(grafana_);
+                grafana_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder.class);
+    }
+
+    public static final int GRAFANA_FIELD_NUMBER = 1;
+    private com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel grafana_;
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     * @return Whether the grafana field is set.
+     */
+    @java.lang.Override
+    public boolean hasGrafana() {
+      return grafana_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     * @return The grafana.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel getGrafana() {
+      return grafana_ == null ? com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.getDefaultInstance() : grafana_;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder getGrafanaOrBuilder() {
+      return getGrafana();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (grafana_ != null) {
+        output.writeMessage(1, getGrafana());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (grafana_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGrafana());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations other = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations) obj;
+
+      if (hasGrafana() != other.hasGrafana()) return false;
+      if (hasGrafana()) {
+        if (!getGrafana()
+            .equals(other.getGrafana())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGrafana()) {
+        hash = (37 * hash) + GRAFANA_FIELD_NUMBER;
+        hash = (53 * hash) + getGrafana().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.integrations.prometheus.DashboardIntegrations}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.prometheus.DashboardIntegrations)
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (grafanaBuilder_ == null) {
+          grafana_ = null;
+        } else {
+          grafana_ = null;
+          grafanaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations build() {
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations buildPartial() {
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations result = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations(this);
+        if (grafanaBuilder_ == null) {
+          result.grafana_ = grafana_;
+        } else {
+          result.grafana_ = grafanaBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations) {
+          return mergeFrom((com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations other) {
+        if (other == com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.getDefaultInstance()) return this;
+        if (other.hasGrafana()) {
+          mergeGrafana(other.getGrafana());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel grafana_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder> grafanaBuilder_;
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       * @return Whether the grafana field is set.
+       */
+      public boolean hasGrafana() {
+        return grafanaBuilder_ != null || grafana_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       * @return The grafana.
+       */
+      public com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel getGrafana() {
+        if (grafanaBuilder_ == null) {
+          return grafana_ == null ? com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.getDefaultInstance() : grafana_;
+        } else {
+          return grafanaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public Builder setGrafana(com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel value) {
+        if (grafanaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          grafana_ = value;
+          onChanged();
+        } else {
+          grafanaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public Builder setGrafana(
+          com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder builderForValue) {
+        if (grafanaBuilder_ == null) {
+          grafana_ = builderForValue.build();
+          onChanged();
+        } else {
+          grafanaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public Builder mergeGrafana(com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel value) {
+        if (grafanaBuilder_ == null) {
+          if (grafana_ != null) {
+            grafana_ =
+              com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.newBuilder(grafana_).mergeFrom(value).buildPartial();
+          } else {
+            grafana_ = value;
+          }
+          onChanged();
+        } else {
+          grafanaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public Builder clearGrafana() {
+        if (grafanaBuilder_ == null) {
+          grafana_ = null;
+          onChanged();
+        } else {
+          grafana_ = null;
+          grafanaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder getGrafanaBuilder() {
+        
+        onChanged();
+        return getGrafanaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder getGrafanaOrBuilder() {
+        if (grafanaBuilder_ != null) {
+          return grafanaBuilder_.getMessageOrBuilder();
+        } else {
+          return grafana_ == null ?
+              com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.getDefaultInstance() : grafana_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.grafana.GrafanaPanel grafana = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder> 
+          getGrafanaFieldBuilder() {
+        if (grafanaBuilder_ == null) {
+          grafanaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanel.Builder, com.hilohq.hilo.protobufs.integrations.grafana.Grafana.GrafanaPanelOrBuilder>(
+                  getGrafana(),
+                  getParentForChildren(),
+                  isClean());
+          grafana_ = null;
+        }
+        return grafanaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.prometheus.DashboardIntegrations)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.prometheus.DashboardIntegrations)
+    private static final com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations();
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DashboardIntegrations>
+        PARSER = new com.google.protobuf.AbstractParser<DashboardIntegrations>() {
+      @java.lang.Override
+      public DashboardIntegrations parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DashboardIntegrations(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DashboardIntegrations> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DashboardIntegrations> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PrometheusMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.prometheus.PrometheusMetadata)
       com.google.protobuf.MessageOrBuilder {
@@ -913,6 +1534,21 @@ public final class Prometheus {
      */
     com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetric.GaugeOrBuilder getGaugeOrBuilder();
 
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     * @return Whether the dashboard field is set.
+     */
+    boolean hasDashboard();
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     * @return The dashboard.
+     */
+    com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDashboard();
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     */
+    com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder getDashboardOrBuilder();
+
     public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetric.MetricCase getMetricCase();
   }
   /**
@@ -979,6 +1615,19 @@ public final class Prometheus {
                 metric_ = subBuilder.buildPartial();
               }
               metricCase_ = 16;
+              break;
+            }
+            case 138: {
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder subBuilder = null;
+              if (dashboard_ != null) {
+                subBuilder = dashboard_.toBuilder();
+              }
+              dashboard_ = input.readMessage(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dashboard_);
+                dashboard_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2059,6 +2708,32 @@ public final class Prometheus {
       return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetric.Gauge.getDefaultInstance();
     }
 
+    public static final int DASHBOARD_FIELD_NUMBER = 17;
+    private com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations dashboard_;
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     * @return Whether the dashboard field is set.
+     */
+    @java.lang.Override
+    public boolean hasDashboard() {
+      return dashboard_ != null;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     * @return The dashboard.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDashboard() {
+      return dashboard_ == null ? com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.getDefaultInstance() : dashboard_;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder getDashboardOrBuilder() {
+      return getDashboard();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2079,6 +2754,9 @@ public final class Prometheus {
       if (metricCase_ == 16) {
         output.writeMessage(16, (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetric.Gauge) metric_);
       }
+      if (dashboard_ != null) {
+        output.writeMessage(17, getDashboard());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2094,6 +2772,10 @@ public final class Prometheus {
       if (metricCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetric.Gauge) metric_);
+      }
+      if (dashboard_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getDashboard());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2112,6 +2794,11 @@ public final class Prometheus {
 
       if (!getKey()
           .equals(other.getKey())) return false;
+      if (hasDashboard() != other.hasDashboard()) return false;
+      if (hasDashboard()) {
+        if (!getDashboard()
+            .equals(other.getDashboard())) return false;
+      }
       if (!getMetricCase().equals(other.getMetricCase())) return false;
       switch (metricCase_) {
         case 16:
@@ -2134,6 +2821,10 @@ public final class Prometheus {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
+      if (hasDashboard()) {
+        hash = (37 * hash) + DASHBOARD_FIELD_NUMBER;
+        hash = (53 * hash) + getDashboard().hashCode();
+      }
       switch (metricCase_) {
         case 16:
           hash = (37 * hash) + GAUGE_FIELD_NUMBER;
@@ -2277,6 +2968,12 @@ public final class Prometheus {
         super.clear();
         key_ = "";
 
+        if (dashboardBuilder_ == null) {
+          dashboard_ = null;
+        } else {
+          dashboard_ = null;
+          dashboardBuilder_ = null;
+        }
         metricCase_ = 0;
         metric_ = null;
         return this;
@@ -2312,6 +3009,11 @@ public final class Prometheus {
           } else {
             result.metric_ = gaugeBuilder_.build();
           }
+        }
+        if (dashboardBuilder_ == null) {
+          result.dashboard_ = dashboard_;
+        } else {
+          result.dashboard_ = dashboardBuilder_.build();
         }
         result.metricCase_ = metricCase_;
         onBuilt();
@@ -2365,6 +3067,9 @@ public final class Prometheus {
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           onChanged();
+        }
+        if (other.hasDashboard()) {
+          mergeDashboard(other.getDashboard());
         }
         switch (other.getMetricCase()) {
           case GAUGE: {
@@ -2634,6 +3339,125 @@ public final class Prometheus {
         metricCase_ = 16;
         onChanged();;
         return gaugeBuilder_;
+      }
+
+      private com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations dashboard_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder> dashboardBuilder_;
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       * @return Whether the dashboard field is set.
+       */
+      public boolean hasDashboard() {
+        return dashboardBuilder_ != null || dashboard_ != null;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       * @return The dashboard.
+       */
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations getDashboard() {
+        if (dashboardBuilder_ == null) {
+          return dashboard_ == null ? com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.getDefaultInstance() : dashboard_;
+        } else {
+          return dashboardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public Builder setDashboard(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations value) {
+        if (dashboardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dashboard_ = value;
+          onChanged();
+        } else {
+          dashboardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public Builder setDashboard(
+          com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder builderForValue) {
+        if (dashboardBuilder_ == null) {
+          dashboard_ = builderForValue.build();
+          onChanged();
+        } else {
+          dashboardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public Builder mergeDashboard(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations value) {
+        if (dashboardBuilder_ == null) {
+          if (dashboard_ != null) {
+            dashboard_ =
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.newBuilder(dashboard_).mergeFrom(value).buildPartial();
+          } else {
+            dashboard_ = value;
+          }
+          onChanged();
+        } else {
+          dashboardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public Builder clearDashboard() {
+        if (dashboardBuilder_ == null) {
+          dashboard_ = null;
+          onChanged();
+        } else {
+          dashboard_ = null;
+          dashboardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder getDashboardBuilder() {
+        
+        onChanged();
+        return getDashboardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder getDashboardOrBuilder() {
+        if (dashboardBuilder_ != null) {
+          return dashboardBuilder_.getMessageOrBuilder();
+        } else {
+          return dashboard_ == null ?
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.getDefaultInstance() : dashboard_;
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.prometheus.DashboardIntegrations dashboard = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder> 
+          getDashboardFieldBuilder() {
+        if (dashboardBuilder_ == null) {
+          dashboardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrations.Builder, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.DashboardIntegrationsOrBuilder>(
+                  getDashboard(),
+                  getParentForChildren(),
+                  isClean());
+          dashboard_ = null;
+        }
+        return dashboardBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7072,6 +7896,11 @@ public final class Prometheus {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7127,51 +7956,64 @@ public final class Prometheus {
     java.lang.String[] descriptorData = {
       "\nBcom/hilohq/hilo/protobufs/integrations" +
       "/prometheus/prometheus.proto\022&hilo.proto" +
-      "bufs.integrations.prometheus\"N\n\022Promethe" +
-      "usMetadata\022\021\n\tschema_id\030\001 \001(\t\022\021\n\tsource_" +
-      "id\030\002 \001(\t\022\022\n\nproject_id\030\003 \001(\t\"\257\001\n\020Prometh" +
-      "eusMetric\022\013\n\003key\030\001 \001(\t\022O\n\005gauge\030\020 \001(\0132>." +
-      "hilo.protobufs.integrations.prometheus.P" +
-      "rometheusMetric.GaugeH\000\0323\n\005Gauge\022\014\n\004name" +
-      "\030\001 \001(\t\022\014\n\004help\030\002 \001(\t\022\016\n\006labels\030\003 \003(\tB\010\n\006" +
-      "metric\"\265\001\n\020PrometheusUpdate\022L\n\010metadata\030" +
-      "\001 \001(\0132:.hilo.protobufs.integrations.prom" +
-      "etheus.PrometheusMetadata\022J\n\006metric\030\020 \001(" +
-      "\01328.hilo.protobufs.integrations.promethe" +
-      "us.PrometheusMetricH\000B\007\n\005event\"\255\001\n\017Prome" +
-      "theusValue\022\013\n\003key\030\001 \001(\t\022N\n\005gauge\030\020 \001(\0132=" +
+      "bufs.integrations.prometheus\032<com/hilohq" +
+      "/hilo/protobufs/integrations/grafana/gra" +
+      "fana.proto\"[\n\025DashboardIntegrations\022B\n\007g" +
+      "rafana\030\001 \001(\01321.hilo.protobufs.integratio" +
+      "ns.grafana.GrafanaPanel\"N\n\022PrometheusMet" +
+      "adata\022\021\n\tschema_id\030\001 \001(\t\022\021\n\tsource_id\030\002 " +
+      "\001(\t\022\022\n\nproject_id\030\003 \001(\t\"\201\002\n\020PrometheusMe" +
+      "tric\022\013\n\003key\030\001 \001(\t\022O\n\005gauge\030\020 \001(\0132>.hilo." +
+      "protobufs.integrations.prometheus.Promet" +
+      "heusMetric.GaugeH\000\022P\n\tdashboard\030\021 \001(\0132=." +
+      "hilo.protobufs.integrations.prometheus.D" +
+      "ashboardIntegrations\0323\n\005Gauge\022\014\n\004name\030\001 " +
+      "\001(\t\022\014\n\004help\030\002 \001(\t\022\016\n\006labels\030\003 \003(\tB\010\n\006met" +
+      "ric\"\265\001\n\020PrometheusUpdate\022L\n\010metadata\030\001 \001" +
+      "(\0132:.hilo.protobufs.integrations.prometh" +
+      "eus.PrometheusMetadata\022J\n\006metric\030\020 \001(\01328" +
       ".hilo.protobufs.integrations.prometheus." +
-      "PrometheusValue.GaugeH\000\0324\n\005Gauge\022\014\n\004name" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\001\022\016\n\006labels\030\003 \003(\tB\007\n" +
-      "\005value\"[\n\020PrometheusValues\022G\n\006values\030\001 \003" +
-      "(\01327.hilo.protobufs.integrations.prometh" +
-      "eus.PrometheusValue\"\256\002\n\026PrometheusMetric" +
-      "sModel\022L\n\010metadata\030\001 \001(\0132:.hilo.protobuf" +
-      "s.integrations.prometheus.PrometheusMeta" +
-      "data\022\\\n\007metrics\030\002 \003(\0132K.hilo.protobufs.i" +
-      "ntegrations.prometheus.PrometheusMetrics" +
-      "Model.MetricsEntry\032h\n\014MetricsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022G\n\005value\030\002 \001(\01328.hilo.protobufs." +
-      "integrations.prometheus.PrometheusMetric" +
-      ":\0028\001B3\n1com.hilohq.hilo.protobufs.integr" +
-      "ations.prometheusb\006proto3"
+      "PrometheusMetricH\000B\007\n\005event\"\255\001\n\017Promethe" +
+      "usValue\022\013\n\003key\030\001 \001(\t\022N\n\005gauge\030\020 \001(\0132=.hi" +
+      "lo.protobufs.integrations.prometheus.Pro" +
+      "metheusValue.GaugeH\000\0324\n\005Gauge\022\014\n\004name\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\001\022\016\n\006labels\030\003 \003(\tB\007\n\005va" +
+      "lue\"[\n\020PrometheusValues\022G\n\006values\030\001 \003(\0132" +
+      "7.hilo.protobufs.integrations.prometheus" +
+      ".PrometheusValue\"\256\002\n\026PrometheusMetricsMo" +
+      "del\022L\n\010metadata\030\001 \001(\0132:.hilo.protobufs.i" +
+      "ntegrations.prometheus.PrometheusMetadat" +
+      "a\022\\\n\007metrics\030\002 \003(\0132K.hilo.protobufs.inte" +
+      "grations.prometheus.PrometheusMetricsMod" +
+      "el.MetricsEntry\032h\n\014MetricsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022G\n\005value\030\002 \001(\01328.hilo.protobufs.int" +
+      "egrations.prometheus.PrometheusMetric:\0028" +
+      "\001B3\n1com.hilohq.hilo.protobufs.integrati" +
+      "ons.prometheusb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.hilohq.hilo.protobufs.integrations.grafana.Grafana.getDescriptor(),
         });
-    internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetadata_descriptor =
+    internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_integrations_prometheus_DashboardIntegrations_descriptor,
+        new java.lang.String[] { "Grafana", });
+    internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetadata_descriptor,
         new java.lang.String[] { "SchemaId", "SourceId", "ProjectId", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_descriptor,
-        new java.lang.String[] { "Key", "Gauge", "Metric", });
+        new java.lang.String[] { "Key", "Gauge", "Dashboard", "Metric", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_Gauge_descriptor =
       internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_descriptor.getNestedTypes().get(0);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_Gauge_fieldAccessorTable = new
@@ -7179,13 +8021,13 @@ public final class Prometheus {
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_Gauge_descriptor,
         new java.lang.String[] { "Name", "Help", "Labels", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor,
         new java.lang.String[] { "Metadata", "Metric", "Event", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_descriptor,
@@ -7197,13 +8039,13 @@ public final class Prometheus {
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_Gauge_descriptor,
         new java.lang.String[] { "Name", "Value", "Labels", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValues_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusValues_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetricsModel_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetricsModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetricsModel_descriptor,
@@ -7214,6 +8056,7 @@ public final class Prometheus {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetricsModel_MetricsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    com.hilohq.hilo.protobufs.integrations.grafana.Grafana.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

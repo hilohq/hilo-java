@@ -34,14 +34,23 @@ public final class BatchPipelineUtils {
         .build();
   }
 
-  public static GrafanaDashboardGeneratePipeline build(
-      Pipelines.GrafanaDashboardGeneratePipeline pipeline) {
-    return GrafanaDashboardGeneratePipeline.newBuilder()
+  public static PrometheusGrafanaDashboardGeneratePipeline build(
+      Pipelines.PrometheusGrafanaDashboardGeneratePipeline pipeline) {
+    return PrometheusGrafanaDashboardGeneratePipeline.newBuilder()
         .schemaId(pipeline.getSchemaId())
         .mongoUrl(pipeline.getMongoUrl())
         .database(pipeline.getMongoDatabase())
         .grafanaUrl(pipeline.getGrafanaUrl())
         .bearerToken(pipeline.getGrafanaBearerToken())
+        .build();
+  }
+
+  public static JsonInfluxDbPushPipeline build(Pipelines.JsonInfluxDbPushPipeline pipeline) {
+    return JsonInfluxDbPushPipeline.newBuilder()
+        .schemaId(pipeline.getSchemaId())
+        .mongoUrl(pipeline.getMongoUrl())
+        .influxDbAddress(pipeline.getInfluxdbUrl())
+        .inputPath(pipeline.getInputPath())
         .build();
   }
 
@@ -52,11 +61,14 @@ public final class BatchPipelineUtils {
     } else if (pipeline.hasJsonFeaturesGenerate()) {
       return BatchPipelineUtils.build(pipeline.getJsonFeaturesGenerate());
 
-    } else if (pipeline.hasGrafanaDashboardGenerate()) {
-      return BatchPipelineUtils.build(pipeline.getGrafanaDashboardGenerate());
+    } else if (pipeline.hasPrometheusGrafanaDashboardGenerate()) {
+      return BatchPipelineUtils.build(pipeline.getPrometheusGrafanaDashboardGenerate());
 
     } else if (pipeline.hasPrometheusMetricsGenerate()) {
       return BatchPipelineUtils.build(pipeline.getPrometheusMetricsGenerate());
+
+    } else if (pipeline.hasJsonInfluxdbPushPipeline()) {
+      return BatchPipelineUtils.build(pipeline.getJsonInfluxdbPushPipeline());
 
     } else {
       throw new IllegalArgumentException("unknown pipeline type set");

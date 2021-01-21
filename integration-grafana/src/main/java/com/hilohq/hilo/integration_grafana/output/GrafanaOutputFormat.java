@@ -33,7 +33,6 @@ public final class GrafanaOutputFormat extends RichOutputFormat<GrafanaDashboard
   @Override
   public void writeRecord(GrafanaDashboard record) throws IOException {
     try {
-      System.out.println("WRITE RECORD " + record);
       grafanaClient
           .postDashboard(
               PostDashboardRequest.newBuilder()

@@ -4,6 +4,12 @@ package hilo.protobufs.integrations.prometheus;
 
 option java_package = "com.hilohq.hilo.protobufs.integrations.prometheus";
 
+import "com/hilohq/hilo/protobufs/integrations/grafana/grafana.proto";
+
+message DashboardIntegrations {
+  grafana.GrafanaPanel grafana = 1;
+}
+
 message PrometheusMetadata {
   string schema_id = 1;
   string source_id = 2;
@@ -22,6 +28,8 @@ message PrometheusMetric {
   oneof metric {
     Gauge gauge = 16;
   }
+
+  DashboardIntegrations dashboard = 17;
 }
 
 message PrometheusUpdate {

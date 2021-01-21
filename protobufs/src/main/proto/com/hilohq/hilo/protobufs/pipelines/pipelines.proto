@@ -27,7 +27,7 @@ message JsonFeaturesGeneratePipeline {
   string schema_id = 4;
 }
 
-message GrafanaDashboardGeneratePipeline {
+message PrometheusGrafanaDashboardGeneratePipeline {
   string mongo_url = 1;
   string mongo_database = 2;
   string schema_id = 3;
@@ -35,12 +35,21 @@ message GrafanaDashboardGeneratePipeline {
   string grafana_bearer_token = 5;
 }
 
+message JsonInfluxDbPushPipeline {
+ string input_path = 1;
+  string mongo_url = 2;
+  string mongo_database = 3;
+  string schema_id = 4;
+  string influxdb_url = 5;
+}
+
 message BatchPipeline {
   oneof pipeline {
     JsonSchemaGeneratePipeline json_schema_generate = 1;
     JsonFeaturesGeneratePipeline json_features_generate = 2;
     PrometheusMetricsGeneratePipeline prometheus_metrics_generate = 3;
-    GrafanaDashboardGeneratePipeline grafana_dashboard_generate = 4;
+    PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;
+    JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;
   }
 }
 
