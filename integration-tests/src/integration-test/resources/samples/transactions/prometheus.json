@@ -10,6 +10,11 @@
       "gauge": {
         "name": "blockNumber",
         "help": "blockNumber"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "blockNumber"
+        }
       }
     },
     "gas": {
@@ -17,6 +22,11 @@
       "gauge": {
         "name": "gas",
         "help": "gas"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "gas"
+        }
       }
     },
     "transactionIndex": {
@@ -24,6 +34,11 @@
       "gauge": {
         "name": "transactionIndex",
         "help": "transactionIndex"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "transactionIndex"
+        }
       }
     },
     "nonce": {
@@ -31,6 +46,11 @@
       "gauge": {
         "name": "nonce",
         "help": "nonce"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "nonce"
+        }
       }
     },
     "value": {
@@ -38,6 +58,11 @@
       "gauge": {
         "name": "value",
         "help": "value"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "value"
+        }
       }
     },
     "gasPrice": {
@@ -45,6 +70,11 @@
       "gauge": {
         "name": "gasPrice",
         "help": "gasPrice"
+      },
+      "dashboard": {
+        "grafana": {
+          "expr": "gasPrice"
+        }
       }
     }
   }
