@@ -21,8 +21,13 @@ message MysqlUpdate {
 }
 
 message MysqlEvent {
+  message LoadQuery {
+    string load_query = 1;
+  }
+
   oneof event {
     MysqlMetric metric = 1;
+    LoadQuery load_query = 2;
   }
 }
 

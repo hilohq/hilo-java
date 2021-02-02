@@ -29,9 +29,35 @@ public final class JdbcMysqlTableUpdateMongoCommandGenerator
     return query;
   }
 
+  private static Document loadQueryToUpdateDocument(
+      final Jdbc.JdbcMetadata metadata, final Mysql.MysqlEvent.LoadQuery loadQuery) {
+    final Document query = new Document();
+    final Document setOp = new Document();
+
+    setOp.put("loadQuery", loadQuery.getLoadQuery());
+    setOp.put(
+        "metadata",
+        Document.parse(ProtobufMessageToDocumentSerializer.serializedMessage(metadata)));
+    query.put("$set", setOp);
+
+    return query;
+  }
+
+  private Document createDocument(final Jdbc.JdbcMetadata metadata, final Mysql.MysqlEvent event) {
+    if (event.hasMetric()) {
+      return metricToUpdateDocument(metadata, event.getMetric());
+
+    } else if (event.hasLoadQuery()) {
+      return loadQueryToUpdateDocument(metadata, event.getLoadQuery());
+
+    } else {
+      throw new IllegalArgumentException("unknown mysql event type");
+    }
+  }
+
   private MongoCommand generateMysql(
       final String database, final Jdbc.JdbcMetadata metadata, final Mysql.MysqlEvent event) {
-    final var document = metricToUpdateDocument(metadata, event.getMetric());
+    final var document = createDocument(metadata, event);
     final var filter = new BsonDocument();
     filter.append("metadata.schemaId", new BsonString(metadata.getSchemaId()));
     return new MongoUpdate(database, "jdbc", filter, document);
@@ -42,7 +68,7 @@ public final class JdbcMysqlTableUpdateMongoCommandGenerator
     if (value.hasMysql()) {
       return generateMysql(database, value.getMetadata(), value.getMysql());
     } else {
-      throw new IllegalArgumentException("unknown prometheus update type");
+      throw new IllegalArgumentException("unknown jdbc event type");
     }
   }
 }

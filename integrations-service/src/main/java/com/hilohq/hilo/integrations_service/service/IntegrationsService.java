@@ -52,6 +52,10 @@ public final class IntegrationsService extends IntegrationsGrpc.IntegrationsImpl
     handle(
         store.getJdbcMetrics(request.getSchemaId()),
         responseObserver,
-        metrics -> Api.GetJdbcMetricsResponse.newBuilder().setMysql(metrics.getMysql()).build());
+        metrics ->
+            Api.GetJdbcMetricsResponse.newBuilder()
+                .setLoadQuery(metrics.getLoadQuery())
+                .setMysql(metrics.getMysql())
+                .build());
   }
 }

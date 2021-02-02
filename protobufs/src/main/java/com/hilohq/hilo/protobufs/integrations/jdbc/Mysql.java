@@ -622,6 +622,21 @@ public final class Mysql {
      */
     com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricOrBuilder getMetricOrBuilder();
 
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     * @return Whether the loadQuery field is set.
+     */
+    boolean hasLoadQuery();
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     * @return The loadQuery.
+     */
+    com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getLoadQuery();
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     */
+    com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder getLoadQueryOrBuilder();
+
     public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.EventCase getEventCase();
   }
   /**
@@ -683,6 +698,20 @@ public final class Mysql {
               eventCase_ = 1;
               break;
             }
+            case 18: {
+              com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder subBuilder = null;
+              if (eventCase_ == 2) {
+                subBuilder = ((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 2;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -715,12 +744,581 @@ public final class Mysql {
               com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.class, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.Builder.class);
     }
 
+    public interface LoadQueryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string load_query = 1;</code>
+       * @return The loadQuery.
+       */
+      java.lang.String getLoadQuery();
+      /**
+       * <code>string load_query = 1;</code>
+       * @return The bytes for loadQuery.
+       */
+      com.google.protobuf.ByteString
+          getLoadQueryBytes();
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery}
+     */
+    public static final class LoadQuery extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery)
+        LoadQueryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use LoadQuery.newBuilder() to construct.
+      private LoadQuery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private LoadQuery() {
+        loadQuery_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new LoadQuery();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private LoadQuery(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                loadQuery_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.class, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder.class);
+      }
+
+      public static final int LOAD_QUERY_FIELD_NUMBER = 1;
+      private volatile java.lang.Object loadQuery_;
+      /**
+       * <code>string load_query = 1;</code>
+       * @return The loadQuery.
+       */
+      @java.lang.Override
+      public java.lang.String getLoadQuery() {
+        java.lang.Object ref = loadQuery_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadQuery_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string load_query = 1;</code>
+       * @return The bytes for loadQuery.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLoadQueryBytes() {
+        java.lang.Object ref = loadQuery_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadQuery_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getLoadQueryBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadQuery_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getLoadQueryBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadQuery_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery)) {
+          return super.equals(obj);
+        }
+        com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery other = (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) obj;
+
+        if (!getLoadQuery()
+            .equals(other.getLoadQuery())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + LOAD_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getLoadQuery().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery)
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.class, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder.class);
+        }
+
+        // Construct using com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          loadQuery_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getDefaultInstanceForType() {
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery build() {
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery buildPartial() {
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery result = new com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery(this);
+          result.loadQuery_ = loadQuery_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) {
+            return mergeFrom((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery other) {
+          if (other == com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance()) return this;
+          if (!other.getLoadQuery().isEmpty()) {
+            loadQuery_ = other.loadQuery_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object loadQuery_ = "";
+        /**
+         * <code>string load_query = 1;</code>
+         * @return The loadQuery.
+         */
+        public java.lang.String getLoadQuery() {
+          java.lang.Object ref = loadQuery_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            loadQuery_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string load_query = 1;</code>
+         * @return The bytes for loadQuery.
+         */
+        public com.google.protobuf.ByteString
+            getLoadQueryBytes() {
+          java.lang.Object ref = loadQuery_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            loadQuery_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string load_query = 1;</code>
+         * @param value The loadQuery to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLoadQuery(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          loadQuery_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string load_query = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLoadQuery() {
+          
+          loadQuery_ = getDefaultInstance().getLoadQuery();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string load_query = 1;</code>
+         * @param value The bytes for loadQuery to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLoadQueryBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          loadQuery_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery)
+      }
+
+      // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery)
+      private static final com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery();
+      }
+
+      public static com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<LoadQuery>
+          PARSER = new com.google.protobuf.AbstractParser<LoadQuery>() {
+        @java.lang.Override
+        public LoadQuery parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LoadQuery(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<LoadQuery> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<LoadQuery> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int eventCase_ = 0;
     private java.lang.Object event_;
     public enum EventCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       METRIC(1),
+      LOAD_QUERY(2),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -739,6 +1337,7 @@ public final class Mysql {
       public static EventCase forNumber(int value) {
         switch (value) {
           case 1: return METRIC;
+          case 2: return LOAD_QUERY;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -785,6 +1384,37 @@ public final class Mysql {
       return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetric.getDefaultInstance();
     }
 
+    public static final int LOAD_QUERY_FIELD_NUMBER = 2;
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     * @return Whether the loadQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasLoadQuery() {
+      return eventCase_ == 2;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     * @return The loadQuery.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getLoadQuery() {
+      if (eventCase_ == 2) {
+         return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_;
+      }
+      return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder getLoadQueryOrBuilder() {
+      if (eventCase_ == 2) {
+         return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_;
+      }
+      return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -802,6 +1432,9 @@ public final class Mysql {
       if (eventCase_ == 1) {
         output.writeMessage(1, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetric) event_);
       }
+      if (eventCase_ == 2) {
+        output.writeMessage(2, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -814,6 +1447,10 @@ public final class Mysql {
       if (eventCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetric) event_);
+      }
+      if (eventCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -836,6 +1473,10 @@ public final class Mysql {
           if (!getMetric()
               .equals(other.getMetric())) return false;
           break;
+        case 2:
+          if (!getLoadQuery()
+              .equals(other.getLoadQuery())) return false;
+          break;
         case 0:
         default:
       }
@@ -854,6 +1495,10 @@ public final class Mysql {
         case 1:
           hash = (37 * hash) + METRIC_FIELD_NUMBER;
           hash = (53 * hash) + getMetric().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + LOAD_QUERY_FIELD_NUMBER;
+          hash = (53 * hash) + getLoadQuery().hashCode();
           break;
         case 0:
         default:
@@ -1026,6 +1671,13 @@ public final class Mysql {
             result.event_ = metricBuilder_.build();
           }
         }
+        if (eventCase_ == 2) {
+          if (loadQueryBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = loadQueryBuilder_.build();
+          }
+        }
         result.eventCase_ = eventCase_;
         onBuilt();
         return result;
@@ -1078,6 +1730,10 @@ public final class Mysql {
         switch (other.getEventCase()) {
           case METRIC: {
             mergeMetric(other.getMetric());
+            break;
+          }
+          case LOAD_QUERY: {
+            mergeLoadQuery(other.getLoadQuery());
             break;
           }
           case EVENT_NOT_SET: {
@@ -1267,6 +1923,147 @@ public final class Mysql {
         eventCase_ = 1;
         onChanged();;
         return metricBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder> loadQueryBuilder_;
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       * @return Whether the loadQuery field is set.
+       */
+      @java.lang.Override
+      public boolean hasLoadQuery() {
+        return eventCase_ == 2;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       * @return The loadQuery.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery getLoadQuery() {
+        if (loadQueryBuilder_ == null) {
+          if (eventCase_ == 2) {
+            return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_;
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+        } else {
+          if (eventCase_ == 2) {
+            return loadQueryBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      public Builder setLoadQuery(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery value) {
+        if (loadQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          loadQueryBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      public Builder setLoadQuery(
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder builderForValue) {
+        if (loadQueryBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          loadQueryBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      public Builder mergeLoadQuery(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery value) {
+        if (loadQueryBuilder_ == null) {
+          if (eventCase_ == 2 &&
+              event_ != com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance()) {
+            event_ = com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.newBuilder((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 2) {
+            loadQueryBuilder_.mergeFrom(value);
+          }
+          loadQueryBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      public Builder clearLoadQuery() {
+        if (loadQueryBuilder_ == null) {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          loadQueryBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder getLoadQueryBuilder() {
+        return getLoadQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder getLoadQueryOrBuilder() {
+        if ((eventCase_ == 2) && (loadQueryBuilder_ != null)) {
+          return loadQueryBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 2) {
+            return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_;
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlEvent.LoadQuery load_query = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder> 
+          getLoadQueryFieldBuilder() {
+        if (loadQueryBuilder_ == null) {
+          if (!(eventCase_ == 2)) {
+            event_ = com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.getDefaultInstance();
+          }
+          loadQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQueryOrBuilder>(
+                  (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlEvent.LoadQuery) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 2;
+        onChanged();;
+        return loadQueryBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3801,6 +4598,11 @@ public final class Mysql {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_integrations_jdbc_MysqlFields_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3836,22 +4638,25 @@ public final class Mysql {
     java.lang.String[] descriptorData = {
       "\n7com/hilohq/hilo/protobufs/integrations" +
       "/jdbc/mysql.proto\022 hilo.protobufs.integr" +
-      "ations.jdbc\"\r\n\013MysqlUpdate\"V\n\nMysqlEvent" +
-      "\022?\n\006metric\030\001 \001(\0132-.hilo.protobufs.integr" +
-      "ations.jdbc.MysqlMetricH\000B\007\n\005event\"\r\n\013My" +
-      "sqlFields\"\n\n\010MysqlLog\"\177\n\013MysqlMetric\022\r\n\005" +
-      "index\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\0229\n\004type\030\003 \001(\0162" +
-      "+.hilo.protobufs.integrations.jdbc.Mysql" +
-      "Type\022\030\n\020extraction_query\030\004 \001(\t\"\273\001\n\014Mysql" +
-      "Metrics\022L\n\007metrics\030\001 \003(\0132;.hilo.protobuf" +
-      "s.integrations.jdbc.MysqlMetrics.Metrics" +
-      "Entry\032]\n\014MetricsEntry\022\013\n\003key\030\001 \001(\t\022<\n\005va" +
-      "lue\030\002 \001(\0132-.hilo.protobufs.integrations." +
-      "jdbc.MysqlMetric:\0028\001*w\n\tMysqlType\022\013\n\007TIN" +
-      "YINT\020\000\022\014\n\010SMALLINT\020\001\022\r\n\tMEDIUMINT\020\002\022\007\n\003I" +
-      "NT\020\003\022\n\n\006BIGINT\020\004\022\013\n\007DECIMAL\020\005\022\t\n\005FLOAT\020\006" +
-      "\022\n\n\006DOUBLE\020\007\022\007\n\003BIT\020\010B-\n+com.hilohq.hilo" +
-      ".protobufs.integrations.jdbcb\006proto3"
+      "ations.jdbc\"\r\n\013MysqlUpdate\"\305\001\n\nMysqlEven" +
+      "t\022?\n\006metric\030\001 \001(\0132-.hilo.protobufs.integ" +
+      "rations.jdbc.MysqlMetricH\000\022L\n\nload_query" +
+      "\030\002 \001(\01326.hilo.protobufs.integrations.jdb" +
+      "c.MysqlEvent.LoadQueryH\000\032\037\n\tLoadQuery\022\022\n" +
+      "\nload_query\030\001 \001(\tB\007\n\005event\"\r\n\013MysqlField" +
+      "s\"\n\n\010MysqlLog\"\177\n\013MysqlMetric\022\r\n\005index\030\001 " +
+      "\001(\005\022\014\n\004name\030\002 \001(\t\0229\n\004type\030\003 \001(\0162+.hilo.p" +
+      "rotobufs.integrations.jdbc.MysqlType\022\030\n\020" +
+      "extraction_query\030\004 \001(\t\"\273\001\n\014MysqlMetrics\022" +
+      "L\n\007metrics\030\001 \003(\0132;.hilo.protobufs.integr" +
+      "ations.jdbc.MysqlMetrics.MetricsEntry\032]\n" +
+      "\014MetricsEntry\022\013\n\003key\030\001 \001(\t\022<\n\005value\030\002 \001(" +
+      "\0132-.hilo.protobufs.integrations.jdbc.Mys" +
+      "qlMetric:\0028\001*w\n\tMysqlType\022\013\n\007TINYINT\020\000\022\014" +
+      "\n\010SMALLINT\020\001\022\r\n\tMEDIUMINT\020\002\022\007\n\003INT\020\003\022\n\n\006" +
+      "BIGINT\020\004\022\013\n\007DECIMAL\020\005\022\t\n\005FLOAT\020\006\022\n\n\006DOUB" +
+      "LE\020\007\022\007\n\003BIT\020\010B-\n+com.hilohq.hilo.protobu" +
+      "fs.integrations.jdbcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3868,7 +4673,13 @@ public final class Mysql {
     internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_descriptor,
-        new java.lang.String[] { "Metric", "Event", });
+        new java.lang.String[] { "Metric", "LoadQuery", "Event", });
+    internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor =
+      internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_descriptor.getNestedTypes().get(0);
+    internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_integrations_jdbc_MysqlEvent_LoadQuery_descriptor,
+        new java.lang.String[] { "LoadQuery", });
     internal_static_hilo_protobufs_integrations_jdbc_MysqlFields_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_hilo_protobufs_integrations_jdbc_MysqlFields_fieldAccessorTable = new

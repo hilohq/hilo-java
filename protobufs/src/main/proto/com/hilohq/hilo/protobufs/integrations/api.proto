@@ -20,6 +20,7 @@ message GetJdbcMetricsRequest {
 }
 
 message GetJdbcMetricsResponse {
+  string load_query = 1;
   oneof metrics {
        jdbc.MysqlMetrics mysql = 16;
     }

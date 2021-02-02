@@ -4286,6 +4286,18 @@ public final class Jdbc {
     com.hilohq.hilo.protobufs.integrations.jdbc.Jdbc.JdbcMetadataOrBuilder getMetadataOrBuilder();
 
     /**
+     * <code>string load_query = 2;</code>
+     * @return The loadQuery.
+     */
+    java.lang.String getLoadQuery();
+    /**
+     * <code>string load_query = 2;</code>
+     * @return The bytes for loadQuery.
+     */
+    com.google.protobuf.ByteString
+        getLoadQueryBytes();
+
+    /**
      * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
      * @return Whether the mysql field is set.
      */
@@ -4315,6 +4327,7 @@ public final class Jdbc {
       super(builder);
     }
     private JdbcMetricsModel() {
+      loadQuery_ = "";
     }
 
     @java.lang.Override
@@ -4358,6 +4371,12 @@ public final class Jdbc {
                 metadata_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadQuery_ = s;
               break;
             }
             case 130: {
@@ -4471,6 +4490,44 @@ public final class Jdbc {
       return getMetadata();
     }
 
+    public static final int LOAD_QUERY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object loadQuery_;
+    /**
+     * <code>string load_query = 2;</code>
+     * @return The loadQuery.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadQuery() {
+      java.lang.Object ref = loadQuery_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadQuery_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string load_query = 2;</code>
+     * @return The bytes for loadQuery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadQueryBytes() {
+      java.lang.Object ref = loadQuery_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadQuery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int MYSQL_FIELD_NUMBER = 16;
     /**
      * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
@@ -4519,6 +4576,9 @@ public final class Jdbc {
       if (metadata_ != null) {
         output.writeMessage(1, getMetadata());
       }
+      if (!getLoadQueryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, loadQuery_);
+      }
       if (metricsCase_ == 16) {
         output.writeMessage(16, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_);
       }
@@ -4534,6 +4594,9 @@ public final class Jdbc {
       if (metadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
+      }
+      if (!getLoadQueryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, loadQuery_);
       }
       if (metricsCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
@@ -4559,6 +4622,8 @@ public final class Jdbc {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
+      if (!getLoadQuery()
+          .equals(other.getLoadQuery())) return false;
       if (!getMetricsCase().equals(other.getMetricsCase())) return false;
       switch (metricsCase_) {
         case 16:
@@ -4583,6 +4648,8 @@ public final class Jdbc {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
+      hash = (37 * hash) + LOAD_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadQuery().hashCode();
       switch (metricsCase_) {
         case 16:
           hash = (37 * hash) + MYSQL_FIELD_NUMBER;
@@ -4730,6 +4797,8 @@ public final class Jdbc {
           metadata_ = null;
           metadataBuilder_ = null;
         }
+        loadQuery_ = "";
+
         metricsCase_ = 0;
         metrics_ = null;
         return this;
@@ -4763,6 +4832,7 @@ public final class Jdbc {
         } else {
           result.metadata_ = metadataBuilder_.build();
         }
+        result.loadQuery_ = loadQuery_;
         if (metricsCase_ == 16) {
           if (mysqlBuilder_ == null) {
             result.metrics_ = metrics_;
@@ -4821,6 +4891,10 @@ public final class Jdbc {
         if (other == com.hilohq.hilo.protobufs.integrations.jdbc.Jdbc.JdbcMetricsModel.getDefaultInstance()) return this;
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
+        }
+        if (!other.getLoadQuery().isEmpty()) {
+          loadQuery_ = other.loadQuery_;
+          onChanged();
         }
         switch (other.getMetricsCase()) {
           case MYSQL: {
@@ -4992,6 +5066,82 @@ public final class Jdbc {
           metadata_ = null;
         }
         return metadataBuilder_;
+      }
+
+      private java.lang.Object loadQuery_ = "";
+      /**
+       * <code>string load_query = 2;</code>
+       * @return The loadQuery.
+       */
+      public java.lang.String getLoadQuery() {
+        java.lang.Object ref = loadQuery_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadQuery_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string load_query = 2;</code>
+       * @return The bytes for loadQuery.
+       */
+      public com.google.protobuf.ByteString
+          getLoadQueryBytes() {
+        java.lang.Object ref = loadQuery_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadQuery_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string load_query = 2;</code>
+       * @param value The loadQuery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadQuery(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadQuery_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string load_query = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadQuery() {
+        
+        loadQuery_ = getDefaultInstance().getLoadQuery();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string load_query = 2;</code>
+       * @param value The bytes for loadQuery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadQueryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadQuery_ = value;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5245,12 +5395,13 @@ public final class Jdbc {
       "integrations.jdbc.MysqlLogH\000B\010\n\006update\"U" +
       "\n\021JdbcMetadataModel\022@\n\010metadata\030\001 \001(\0132.." +
       "hilo.protobufs.integrations.jdbc.JdbcMet" +
-      "adata\"\240\001\n\020JdbcMetricsModel\022@\n\010metadata\030\001" +
+      "adata\"\264\001\n\020JdbcMetricsModel\022@\n\010metadata\030\001" +
       " \001(\0132..hilo.protobufs.integrations.jdbc." +
-      "JdbcMetadata\022?\n\005mysql\030\020 \001(\0132..hilo.proto" +
-      "bufs.integrations.jdbc.MysqlMetricsH\000B\t\n" +
-      "\007metricsB-\n+com.hilohq.hilo.protobufs.in" +
-      "tegrations.jdbcb\006proto3"
+      "JdbcMetadata\022\022\n\nload_query\030\002 \001(\t\022?\n\005mysq" +
+      "l\030\020 \001(\0132..hilo.protobufs.integrations.jd" +
+      "bc.MysqlMetricsH\000B\t\n\007metricsB-\n+com.hilo" +
+      "hq.hilo.protobufs.integrations.jdbcb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5292,7 +5443,7 @@ public final class Jdbc {
     internal_static_hilo_protobufs_integrations_jdbc_JdbcMetricsModel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_jdbc_JdbcMetricsModel_descriptor,
-        new java.lang.String[] { "Metadata", "Mysql", "Metrics", });
+        new java.lang.String[] { "Metadata", "LoadQuery", "Mysql", "Metrics", });
     com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.getDescriptor();
   }
 

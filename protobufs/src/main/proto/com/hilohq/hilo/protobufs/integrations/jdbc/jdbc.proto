@@ -42,6 +42,8 @@ message JdbcMetadataModel {
 
 message JdbcMetricsModel {
   JdbcMetadata metadata = 1;
+  string load_query = 2;
+
   oneof metrics {
      MysqlMetrics mysql = 16;
   }

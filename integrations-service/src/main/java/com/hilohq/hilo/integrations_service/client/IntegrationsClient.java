@@ -45,7 +45,7 @@ public final class IntegrationsClient {
     return toCompletableFuture(stub.getPrometheusMetrics(request), executor);
   }
 
-  public CompletableFuture<Api.GetJdbcMetricsResponse> getPrometheusMetrics(
+  public CompletableFuture<Api.GetJdbcMetricsResponse> getJdbcMetrics(
       final Api.GetJdbcMetricsRequest request) {
     return toCompletableFuture(stub.getJdbcMetrics(request), executor);
   }

@@ -3,6 +3,7 @@ package com.hilohq.hilo.hilo_tool.commands;
 import static com.hilohq.hilo.hilo_tool.cmd.PrintUtils.printErrorAndExit;
 
 import com.hilohq.hilo.hilo_tool.cmd.ActionCommand;
+import com.hilohq.hilo.integrations_service.service.MongoIntegrationsStore;
 import com.hilohq.hilo.pipelines.*;
 import com.hilohq.hilo.pipelines_service.service.FlinkClient;
 import com.hilohq.hilo.protobufs.pipelines.Pipelines;
@@ -108,7 +109,7 @@ public class ExecutePipelineCommand extends ActionCommand {
     }
 
     final var projectId = UUID.randomUUID().toString();
-    final var schemaId = "3510ab75-6b02-42b5-be24-6857c8bc5997"; // UUID.randomUUID().toString();
+    final var schemaId = UUID.randomUUID().toString();
     final var sourceId = UUID.randomUUID().toString();
 
     final var targetPath = Path.of("/tmp/", Path.of(input).getFileName().toString());
@@ -124,6 +125,8 @@ public class ExecutePipelineCommand extends ActionCommand {
     Files.copy(inputPath, targetPath);
     final var target = targetPath.toString();
     final var flinkClient = new FlinkClient();
+    final var integrationsStore =
+        MongoIntegrationsStore.open("mongodb://root:example@127.0.0.1:27017/admin");
 
     execute(
         flinkClient,
@@ -160,6 +163,8 @@ public class ExecutePipelineCommand extends ActionCommand {
                     .setInputPath(target))
             .build(),
         "JdbcMysqlTableGeneratePipeline");
+
+    final var metrics = integrationsStore.getJdbcMetrics(schemaId).get(5, TimeUnit.SECONDS);
     execute(
         flinkClient,
         Pipelines.BatchPipeline.newBuilder()
@@ -173,7 +178,7 @@ public class ExecutePipelineCommand extends ActionCommand {
                     .setJdbcPassword("password")
                     .setJdbcDriverName("com.mysql.jdbc.Driver")
                     .setJdbcDbUrl("jdbc:mysql://172.20.0.1:3306/database")
-                    .setJdbcQuery("INSERT INTO `" + schemaId + "` VALUES(?, ?, ?, ?, ?, ?);")
+                    .setJdbcQuery(metrics.getLoadQuery())
                     .setJdbcBatchInterval(1))
             .build(),
         "JsonJdbcPushPipeline");

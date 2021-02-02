@@ -6,6 +6,7 @@ import com.hilohq.hilo.parsers.field.Fields;
 import com.hilohq.hilo.protobufs.integrations.jdbc.Jdbc;
 import com.hilohq.hilo.protobufs.integrations.jdbc.Mysql;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -53,7 +54,8 @@ public final class JdbcMysqlTableGenerate
         if (!feature.getFeatureClass().hasGauge()
             && !feature.getFeatureClass().hasMonotonic()
             && !feature.getFeatureClass().hasCounter()
-            && !feature.getFeatureClass().hasDiscrete()) {
+            && !feature.getFeatureClass().hasDiscrete()
+            && !feature.getFeatureClass().hasTimestamp()) {
           continue;
         }
 
@@ -77,5 +79,17 @@ public final class JdbcMysqlTableGenerate
               .setMysql(Mysql.MysqlEvent.newBuilder().setMetric(metric).build())
               .build());
     }
+
+    final var list = Collections.nCopies(metrics.size(), "?");
+    final var loadQuery = "INSERT INTO `" + schemaId + "` VALUES(" + String.join(",", list) + ");";
+    out.collect(
+        Jdbc.JdbcEvent.newBuilder()
+            .setMetadata(metadata)
+            .setMysql(
+                Mysql.MysqlEvent.newBuilder()
+                    .setLoadQuery(
+                        Mysql.MysqlEvent.LoadQuery.newBuilder().setLoadQuery(loadQuery).build())
+                    .build())
+            .build());
   }
 }
