@@ -34,6 +34,16 @@ public final class BatchPipelineUtils {
         .build();
   }
 
+  public static JdbcMysqlTableGeneratePipeline build(
+      Pipelines.JdbcMysqlTableGeneratePipeline pipeline) {
+    return JdbcMysqlTableGeneratePipeline.newBuilder()
+        .inputPath(pipeline.getInputPath())
+        .schemaId(pipeline.getSchemaId())
+        .mongoUrl(pipeline.getMongoUrl())
+        .database(pipeline.getMongoDatabase())
+        .build();
+  }
+
   public static PrometheusGrafanaDashboardGeneratePipeline build(
       Pipelines.PrometheusGrafanaDashboardGeneratePipeline pipeline) {
     return PrometheusGrafanaDashboardGeneratePipeline.newBuilder()
@@ -86,6 +96,9 @@ public final class BatchPipelineUtils {
 
     } else if (pipeline.hasJsonJdbcPushPipeline()) {
       return BatchPipelineUtils.build(pipeline.getJsonJdbcPushPipeline());
+
+    } else if (pipeline.hasJdbcMysqlTableGeneratePipeline()) {
+      return BatchPipelineUtils.build(pipeline.getJdbcMysqlTableGeneratePipeline());
 
     } else {
       throw new IllegalArgumentException("unknown pipeline type set");

@@ -32,7 +32,7 @@ message PrometheusMetric {
   DashboardIntegrations dashboard = 17;
 }
 
-message PrometheusUpdate {
+message PrometheusEvent {
   PrometheusMetadata metadata = 1;
 
   oneof event {

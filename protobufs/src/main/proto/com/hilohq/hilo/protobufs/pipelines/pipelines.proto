@@ -11,6 +11,13 @@ message PrometheusMetricsGeneratePipeline {
   string mongo_database = 4;
 }
 
+message JdbcMysqlTableGeneratePipeline {
+  string input_path = 1;
+  string schema_id = 2;
+  string mongo_url = 3;
+  string mongo_database = 4;
+}
+
 message JsonSchemaGeneratePipeline {
   string input_path = 1;
   string mongo_url = 2;
@@ -64,6 +71,7 @@ message BatchPipeline {
     PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;
     JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;
     JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;
+    JdbcMysqlTableGeneratePipeline jdbc_mysql_table_generate_pipeline = 7;
   }
 }
 

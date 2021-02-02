@@ -44,4 +44,14 @@ public final class IntegrationsService extends IntegrationsGrpc.IntegrationsImpl
                 .putAllMetrics(metrics.getMetricsMap())
                 .build());
   }
+
+  @Override
+  public void getJdbcMetrics(
+      final Api.GetJdbcMetricsRequest request,
+      final StreamObserver<Api.GetJdbcMetricsResponse> responseObserver) {
+    handle(
+        store.getJdbcMetrics(request.getSchemaId()),
+        responseObserver,
+        metrics -> Api.GetJdbcMetricsResponse.newBuilder().setMysql(metrics.getMysql()).build());
+  }
 }

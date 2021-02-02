@@ -108,7 +108,7 @@ public class ExecutePipelineCommand extends ActionCommand {
     }
 
     final var projectId = UUID.randomUUID().toString();
-    final var schemaId = UUID.randomUUID().toString();
+    final var schemaId = "3510ab75-6b02-42b5-be24-6857c8bc5997"; // UUID.randomUUID().toString();
     final var sourceId = UUID.randomUUID().toString();
 
     final var targetPath = Path.of("/tmp/", Path.of(input).getFileName().toString());
@@ -149,6 +149,38 @@ public class ExecutePipelineCommand extends ActionCommand {
                     .setInputPath(target))
             .build(),
         "JsonFeaturesGeneratePipeline");
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setJdbcMysqlTableGeneratePipeline(
+                Pipelines.JdbcMysqlTableGeneratePipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setInputPath(target))
+            .build(),
+        "JdbcMysqlTableGeneratePipeline");
+    execute(
+        flinkClient,
+        Pipelines.BatchPipeline.newBuilder()
+            .setJsonJdbcPushPipeline(
+                Pipelines.JsonJdbcPushPipeline.newBuilder()
+                    .setMongoDatabase("test")
+                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setSchemaId(schemaId)
+                    .setInputPath(target)
+                    .setJdbcUsername("root")
+                    .setJdbcPassword("password")
+                    .setJdbcDriverName("com.mysql.jdbc.Driver")
+                    .setJdbcDbUrl("jdbc:mysql://172.20.0.1:3306/database")
+                    .setJdbcQuery("INSERT INTO `" + schemaId + "` VALUES(?, ?, ?, ?, ?, ?);")
+                    .setJdbcBatchInterval(1))
+            .build(),
+        "JsonJdbcPushPipeline");
+  }
+
+  void loadPrometheus(final FlinkClient flinkClient, final String schemaId, final String target)
+      throws Exception {
     execute(
         flinkClient,
         Pipelines.BatchPipeline.newBuilder()

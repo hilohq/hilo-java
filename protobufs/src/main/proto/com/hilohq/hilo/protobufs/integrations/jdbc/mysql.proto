@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package hilo.protobufs.integrations.jdbc;
+
+option java_package = "com.hilohq.hilo.protobufs.integrations.jdbc";
+
+enum MysqlType {
+ TINYINT = 0;
+ SMALLINT = 1;
+ MEDIUMINT = 2;
+ INT = 3;
+ BIGINT = 4;
+ DECIMAL = 5;
+ FLOAT = 6;
+ DOUBLE = 7;
+ BIT = 8;
+}
+
+message MysqlUpdate {
+
+}
+
+message MysqlEvent {
+  oneof event {
+    MysqlMetric metric = 1;
+  }
+}
+
+message MysqlFields {
+
+}
+
+message MysqlLog {
+
+}
+
+message MysqlMetric {
+  int32 index = 1;
+  string name = 2;
+  MysqlType type = 3;
+  string extraction_query = 4;
+}
+
+message MysqlMetrics {
+  map<string, MysqlMetric> metrics = 1;
+}

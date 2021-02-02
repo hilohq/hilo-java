@@ -13,7 +13,7 @@ import org.apache.flink.core.fs.FileInputSplit;
 import org.apache.flink.core.fs.Path;
 
 public final class PrometheusMetricsGeneratePipeline
-    extends DefaultBatchPipeline<String, FileInputSplit, Prometheus.PrometheusUpdate> {
+    extends DefaultBatchPipeline<String, FileInputSplit, Prometheus.PrometheusEvent> {
   public static final class Builder {
     private String inputPath;
     private String mongoUrl;
@@ -72,7 +72,7 @@ public final class PrometheusMetricsGeneratePipeline
   PrometheusMetricsGeneratePipeline(
       final FileInputFormat<String> input,
       final PrometheusMetricsGenerateStages stages,
-      final OutputFormat<Prometheus.PrometheusUpdate> output) {
+      final OutputFormat<Prometheus.PrometheusEvent> output) {
     super(input, stages, output);
   }
 }

@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package hilo.protobufs.integrations.jdbc;
+
+option java_package = "com.hilohq.hilo.protobufs.integrations.jdbc";
+
+import "com/hilohq/hilo/protobufs/integrations/jdbc/mysql.proto";
+
+message JdbcMetadata {
+  string schema_id = 1;
+  string source_id = 2;
+  string project_id = 3;
+}
+
+message JdbcUpdate {
+  JdbcMetadata metadata = 1;
+
+  oneof update {
+    MysqlUpdate mysql = 16;
+  }
+}
+
+message JdbcEvent {
+  JdbcMetadata metadata = 1;
+
+  oneof update {
+    MysqlEvent mysql = 16;
+  }
+}
+
+message JdbcLog {
+  JdbcMetadata metadata = 1;
+
+  oneof update {
+    MysqlLog mysql = 16;
+  }
+}
+
+message JdbcMetadataModel {
+  JdbcMetadata metadata = 1;
+}
+
+message JdbcMetricsModel {
+  JdbcMetadata metadata = 1;
+  oneof metrics {
+     MysqlMetrics mysql = 16;
+  }
+}

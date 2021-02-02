@@ -58,6 +58,37 @@ public final class IntegrationsGrpc {
     return getGetPrometheusMetricsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest,
+      com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> getGetJdbcMetricsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetJdbcMetrics",
+      requestType = com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.class,
+      responseType = com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest,
+      com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> getGetJdbcMetricsMethod() {
+    io.grpc.MethodDescriptor<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> getGetJdbcMetricsMethod;
+    if ((getGetJdbcMetricsMethod = IntegrationsGrpc.getGetJdbcMetricsMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getGetJdbcMetricsMethod = IntegrationsGrpc.getGetJdbcMetricsMethod) == null) {
+          IntegrationsGrpc.getGetJdbcMetricsMethod = getGetJdbcMetricsMethod =
+              io.grpc.MethodDescriptor.<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetJdbcMetrics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetJdbcMetrics"))
+              .build();
+        }
+      }
+    }
+    return getGetJdbcMetricsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -113,6 +144,13 @@ public final class IntegrationsGrpc {
       asyncUnimplementedUnaryCall(getGetPrometheusMetricsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getJdbcMetrics(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetJdbcMetricsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -122,6 +160,13 @@ public final class IntegrationsGrpc {
                 com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsRequest,
                 com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsResponse>(
                   this, METHODID_GET_PROMETHEUS_METRICS)))
+          .addMethod(
+            getGetJdbcMetricsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest,
+                com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse>(
+                  this, METHODID_GET_JDBC_METRICS)))
           .build();
     }
   }
@@ -147,6 +192,14 @@ public final class IntegrationsGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetPrometheusMetricsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getJdbcMetrics(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest request,
+        io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetJdbcMetricsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +221,13 @@ public final class IntegrationsGrpc {
     public com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsResponse getPrometheusMetrics(com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetPrometheusMetricsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse getJdbcMetrics(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetJdbcMetricsMethod(), getCallOptions(), request);
     }
   }
 
@@ -192,9 +252,18 @@ public final class IntegrationsGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetPrometheusMetricsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse> getJdbcMetrics(
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetJdbcMetricsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PROMETHEUS_METRICS = 0;
+  private static final int METHODID_GET_JDBC_METRICS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -216,6 +285,10 @@ public final class IntegrationsGrpc {
         case METHODID_GET_PROMETHEUS_METRICS:
           serviceImpl.getPrometheusMetrics((com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsRequest) request,
               (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.integrations.Api.GetPrometheusMetricsResponse>) responseObserver);
+          break;
+        case METHODID_GET_JDBC_METRICS:
+          serviceImpl.getJdbcMetrics((com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest) request,
+              (io.grpc.stub.StreamObserver<com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class IntegrationsGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IntegrationsFileDescriptorSupplier())
               .addMethod(getGetPrometheusMetricsMethod())
+              .addMethod(getGetJdbcMetricsMethod())
               .build();
         }
       }

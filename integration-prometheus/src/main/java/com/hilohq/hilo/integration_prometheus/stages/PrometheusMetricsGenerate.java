@@ -14,7 +14,7 @@ import org.apache.flink.configuration.Configuration;
 import org.apache.flink.util.Collector;
 
 public final class PrometheusMetricsGenerate
-    extends RichGroupReduceFunction<Fields<FieldKey>, Prometheus.PrometheusUpdate> {
+    extends RichGroupReduceFunction<Fields<FieldKey>, Prometheus.PrometheusEvent> {
   private final String mongoUrl;
   private final String schemaId;
   private Map<String, FeatureOuterClass.Feature> features;
@@ -43,7 +43,7 @@ public final class PrometheusMetricsGenerate
 
   @Override
   public void reduce(
-      final Iterable<Fields<FieldKey>> values, final Collector<Prometheus.PrometheusUpdate> out)
+      final Iterable<Fields<FieldKey>> values, final Collector<Prometheus.PrometheusEvent> out)
       throws Exception {
     final var metrics = new HashMap<String, Prometheus.PrometheusMetric>();
     final var metadataBuilder = Prometheus.PrometheusMetadata.newBuilder();
@@ -88,7 +88,7 @@ public final class PrometheusMetricsGenerate
     final var metadata = metadataBuilder.build();
     for (final var metric : metrics.values()) {
       out.collect(
-          Prometheus.PrometheusUpdate.newBuilder().setMetadata(metadata).setMetric(metric).build());
+          Prometheus.PrometheusEvent.newBuilder().setMetadata(metadata).setMetric(metric).build());
     }
   }
 }

@@ -3512,8 +3512,8 @@ public final class Prometheus {
 
   }
 
-  public interface PrometheusUpdateOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.prometheus.PrometheusUpdate)
+  public interface PrometheusEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.prometheus.PrometheusEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3546,28 +3546,28 @@ public final class Prometheus {
      */
     com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusMetricOrBuilder getMetricOrBuilder();
 
-    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.EventCase getEventCase();
+    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.EventCase getEventCase();
   }
   /**
-   * Protobuf type {@code hilo.protobufs.integrations.prometheus.PrometheusUpdate}
+   * Protobuf type {@code hilo.protobufs.integrations.prometheus.PrometheusEvent}
    */
-  public static final class PrometheusUpdate extends
+  public static final class PrometheusEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.prometheus.PrometheusUpdate)
-      PrometheusUpdateOrBuilder {
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.prometheus.PrometheusEvent)
+      PrometheusEventOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PrometheusUpdate.newBuilder() to construct.
-    private PrometheusUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PrometheusEvent.newBuilder() to construct.
+    private PrometheusEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PrometheusUpdate() {
+    private PrometheusEvent() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PrometheusUpdate();
+      return new PrometheusEvent();
     }
 
     @java.lang.Override
@@ -3575,7 +3575,7 @@ public final class Prometheus {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PrometheusUpdate(
+    private PrometheusEvent(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3641,15 +3641,15 @@ public final class Prometheus {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor;
+      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_fieldAccessorTable
+      return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.Builder.class);
+              com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.Builder.class);
     }
 
     private int eventCase_ = 0;
@@ -3795,10 +3795,10 @@ public final class Prometheus {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate)) {
+      if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent)) {
         return super.equals(obj);
       }
-      com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate other = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate) obj;
+      com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent other = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent) obj;
 
       if (hasMetadata() != other.hasMetadata()) return false;
       if (hasMetadata()) {
@@ -3842,69 +3842,69 @@ public final class Prometheus {
       return hash;
     }
 
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(byte[] data)
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseDelimitedFrom(java.io.InputStream input)
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseDelimitedFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parseFrom(
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3917,7 +3917,7 @@ public final class Prometheus {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate prototype) {
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3933,26 +3933,26 @@ public final class Prometheus {
       return builder;
     }
     /**
-     * Protobuf type {@code hilo.protobufs.integrations.prometheus.PrometheusUpdate}
+     * Protobuf type {@code hilo.protobufs.integrations.prometheus.PrometheusEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.prometheus.PrometheusUpdate)
-        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdateOrBuilder {
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.prometheus.PrometheusEvent)
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor;
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_fieldAccessorTable
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.Builder.class);
+                com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.class, com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.Builder.class);
       }
 
-      // Construct using com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.newBuilder()
+      // Construct using com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3984,17 +3984,17 @@ public final class Prometheus {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor;
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor;
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate getDefaultInstanceForType() {
-        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.getDefaultInstance();
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate build() {
-        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate result = buildPartial();
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent build() {
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4002,8 +4002,8 @@ public final class Prometheus {
       }
 
       @java.lang.Override
-      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate buildPartial() {
-        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate result = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate(this);
+      public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent buildPartial() {
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent result = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent(this);
         if (metadataBuilder_ == null) {
           result.metadata_ = metadata_;
         } else {
@@ -4055,16 +4055,16 @@ public final class Prometheus {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate) {
-          return mergeFrom((com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate)other);
+        if (other instanceof com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent) {
+          return mergeFrom((com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate other) {
-        if (other == com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent other) {
+        if (other == com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent.getDefaultInstance()) return this;
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
@@ -4092,11 +4092,11 @@ public final class Prometheus {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate parsedMessage = null;
+        com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate) e.getUnfinishedMessage();
+          parsedMessage = (com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4393,41 +4393,41 @@ public final class Prometheus {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.prometheus.PrometheusUpdate)
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.prometheus.PrometheusEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.prometheus.PrometheusUpdate)
-    private static final com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.prometheus.PrometheusEvent)
+    private static final com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate();
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent();
     }
 
-    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate getDefaultInstance() {
+    public static com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PrometheusUpdate>
-        PARSER = new com.google.protobuf.AbstractParser<PrometheusUpdate>() {
+    private static final com.google.protobuf.Parser<PrometheusEvent>
+        PARSER = new com.google.protobuf.AbstractParser<PrometheusEvent>() {
       @java.lang.Override
-      public PrometheusUpdate parsePartialFrom(
+      public PrometheusEvent parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrometheusUpdate(input, extensionRegistry);
+        return new PrometheusEvent(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PrometheusUpdate> parser() {
+    public static com.google.protobuf.Parser<PrometheusEvent> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PrometheusUpdate> getParserForType() {
+    public com.google.protobuf.Parser<PrometheusEvent> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusUpdate getDefaultInstanceForType() {
+    public com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.PrometheusEvent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7916,10 +7916,10 @@ public final class Prometheus {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_Gauge_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor;
+    internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_fieldAccessorTable;
+      internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_descriptor;
   private static final 
@@ -7969,27 +7969,27 @@ public final class Prometheus {
       "hilo.protobufs.integrations.prometheus.D" +
       "ashboardIntegrations\0323\n\005Gauge\022\014\n\004name\030\001 " +
       "\001(\t\022\014\n\004help\030\002 \001(\t\022\016\n\006labels\030\003 \003(\tB\010\n\006met" +
-      "ric\"\265\001\n\020PrometheusUpdate\022L\n\010metadata\030\001 \001" +
-      "(\0132:.hilo.protobufs.integrations.prometh" +
-      "eus.PrometheusMetadata\022J\n\006metric\030\020 \001(\01328" +
+      "ric\"\264\001\n\017PrometheusEvent\022L\n\010metadata\030\001 \001(" +
+      "\0132:.hilo.protobufs.integrations.promethe" +
+      "us.PrometheusMetadata\022J\n\006metric\030\020 \001(\01328." +
+      "hilo.protobufs.integrations.prometheus.P" +
+      "rometheusMetricH\000B\007\n\005event\"\255\001\n\017Prometheu" +
+      "sValue\022\013\n\003key\030\001 \001(\t\022N\n\005gauge\030\020 \001(\0132=.hil" +
+      "o.protobufs.integrations.prometheus.Prom" +
+      "etheusValue.GaugeH\000\0324\n\005Gauge\022\014\n\004name\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\001\022\016\n\006labels\030\003 \003(\tB\007\n\005val" +
+      "ue\"[\n\020PrometheusValues\022G\n\006values\030\001 \003(\01327" +
       ".hilo.protobufs.integrations.prometheus." +
-      "PrometheusMetricH\000B\007\n\005event\"\255\001\n\017Promethe" +
-      "usValue\022\013\n\003key\030\001 \001(\t\022N\n\005gauge\030\020 \001(\0132=.hi" +
-      "lo.protobufs.integrations.prometheus.Pro" +
-      "metheusValue.GaugeH\000\0324\n\005Gauge\022\014\n\004name\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\001\022\016\n\006labels\030\003 \003(\tB\007\n\005va" +
-      "lue\"[\n\020PrometheusValues\022G\n\006values\030\001 \003(\0132" +
-      "7.hilo.protobufs.integrations.prometheus" +
-      ".PrometheusValue\"\256\002\n\026PrometheusMetricsMo" +
-      "del\022L\n\010metadata\030\001 \001(\0132:.hilo.protobufs.i" +
-      "ntegrations.prometheus.PrometheusMetadat" +
-      "a\022\\\n\007metrics\030\002 \003(\0132K.hilo.protobufs.inte" +
-      "grations.prometheus.PrometheusMetricsMod" +
-      "el.MetricsEntry\032h\n\014MetricsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022G\n\005value\030\002 \001(\01328.hilo.protobufs.int" +
-      "egrations.prometheus.PrometheusMetric:\0028" +
-      "\001B3\n1com.hilohq.hilo.protobufs.integrati" +
-      "ons.prometheusb\006proto3"
+      "PrometheusValue\"\256\002\n\026PrometheusMetricsMod" +
+      "el\022L\n\010metadata\030\001 \001(\0132:.hilo.protobufs.in" +
+      "tegrations.prometheus.PrometheusMetadata" +
+      "\022\\\n\007metrics\030\002 \003(\0132K.hilo.protobufs.integ" +
+      "rations.prometheus.PrometheusMetricsMode" +
+      "l.MetricsEntry\032h\n\014MetricsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022G\n\005value\030\002 \001(\01328.hilo.protobufs.inte" +
+      "grations.prometheus.PrometheusMetric:\0028\001" +
+      "B3\n1com.hilohq.hilo.protobufs.integratio" +
+      "ns.prometheusb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8020,11 +8020,11 @@ public final class Prometheus {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_prometheus_PrometheusMetric_Gauge_descriptor,
         new java.lang.String[] { "Name", "Help", "Labels", });
-    internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor =
+    internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_fieldAccessorTable = new
+    internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_hilo_protobufs_integrations_prometheus_PrometheusUpdate_descriptor,
+        internal_static_hilo_protobufs_integrations_prometheus_PrometheusEvent_descriptor,
         new java.lang.String[] { "Metadata", "Metric", "Event", });
     internal_static_hilo_protobufs_integrations_prometheus_PrometheusValue_descriptor =
       getDescriptor().getMessageTypes().get(4);

@@ -1320,6 +1320,1292 @@ public final class Api {
 
   }
 
+  public interface GetJdbcMetricsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.GetJdbcMetricsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string schemaId = 1;</code>
+     * @return The schemaId.
+     */
+    java.lang.String getSchemaId();
+    /**
+     * <code>string schemaId = 1;</code>
+     * @return The bytes for schemaId.
+     */
+    com.google.protobuf.ByteString
+        getSchemaIdBytes();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.integrations.GetJdbcMetricsRequest}
+   */
+  public static final class GetJdbcMetricsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.GetJdbcMetricsRequest)
+      GetJdbcMetricsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetJdbcMetricsRequest.newBuilder() to construct.
+    private GetJdbcMetricsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetJdbcMetricsRequest() {
+      schemaId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetJdbcMetricsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetJdbcMetricsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              schemaId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.class, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.Builder.class);
+    }
+
+    public static final int SCHEMAID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object schemaId_;
+    /**
+     * <code>string schemaId = 1;</code>
+     * @return The schemaId.
+     */
+    @java.lang.Override
+    public java.lang.String getSchemaId() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schemaId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schemaId = 1;</code>
+     * @return The bytes for schemaId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaIdBytes() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schemaId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSchemaIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schemaId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSchemaIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schemaId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest other = (com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest) obj;
+
+      if (!getSchemaId()
+          .equals(other.getSchemaId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEMAID_FIELD_NUMBER;
+      hash = (53 * hash) + getSchemaId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.integrations.GetJdbcMetricsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.GetJdbcMetricsRequest)
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.class, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        schemaId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest build() {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest buildPartial() {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest result = new com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest(this);
+        result.schemaId_ = schemaId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest) {
+          return mergeFrom((com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest other) {
+        if (other == com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest.getDefaultInstance()) return this;
+        if (!other.getSchemaId().isEmpty()) {
+          schemaId_ = other.schemaId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object schemaId_ = "";
+      /**
+       * <code>string schemaId = 1;</code>
+       * @return The schemaId.
+       */
+      public java.lang.String getSchemaId() {
+        java.lang.Object ref = schemaId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schemaId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schemaId = 1;</code>
+       * @return The bytes for schemaId.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaIdBytes() {
+        java.lang.Object ref = schemaId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schemaId = 1;</code>
+       * @param value The schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schemaId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaId() {
+        
+        schemaId_ = getDefaultInstance().getSchemaId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schemaId = 1;</code>
+       * @param value The bytes for schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.GetJdbcMetricsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.GetJdbcMetricsRequest)
+    private static final com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest();
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetJdbcMetricsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetJdbcMetricsRequest>() {
+      @java.lang.Override
+      public GetJdbcMetricsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetJdbcMetricsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetJdbcMetricsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetJdbcMetricsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetJdbcMetricsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.integrations.GetJdbcMetricsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     * @return Whether the mysql field is set.
+     */
+    boolean hasMysql();
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     * @return The mysql.
+     */
+    com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics getMysql();
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     */
+    com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder getMysqlOrBuilder();
+
+    public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.MetricsCase getMetricsCase();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.integrations.GetJdbcMetricsResponse}
+   */
+  public static final class GetJdbcMetricsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.integrations.GetJdbcMetricsResponse)
+      GetJdbcMetricsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetJdbcMetricsResponse.newBuilder() to construct.
+    private GetJdbcMetricsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetJdbcMetricsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetJdbcMetricsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetJdbcMetricsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 130: {
+              com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder subBuilder = null;
+              if (metricsCase_ == 16) {
+                subBuilder = ((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_).toBuilder();
+              }
+              metrics_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_);
+                metrics_ = subBuilder.buildPartial();
+              }
+              metricsCase_ = 16;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.class, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.Builder.class);
+    }
+
+    private int metricsCase_ = 0;
+    private java.lang.Object metrics_;
+    public enum MetricsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      MYSQL(16),
+      METRICS_NOT_SET(0);
+      private final int value;
+      private MetricsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MetricsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MetricsCase forNumber(int value) {
+        switch (value) {
+          case 16: return MYSQL;
+          case 0: return METRICS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MetricsCase
+    getMetricsCase() {
+      return MetricsCase.forNumber(
+          metricsCase_);
+    }
+
+    public static final int MYSQL_FIELD_NUMBER = 16;
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     * @return Whether the mysql field is set.
+     */
+    @java.lang.Override
+    public boolean hasMysql() {
+      return metricsCase_ == 16;
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     * @return The mysql.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics getMysql() {
+      if (metricsCase_ == 16) {
+         return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_;
+      }
+      return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder getMysqlOrBuilder() {
+      if (metricsCase_ == 16) {
+         return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_;
+      }
+      return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (metricsCase_ == 16) {
+        output.writeMessage(16, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (metricsCase_ == 16) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse other = (com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse) obj;
+
+      if (!getMetricsCase().equals(other.getMetricsCase())) return false;
+      switch (metricsCase_) {
+        case 16:
+          if (!getMysql()
+              .equals(other.getMysql())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (metricsCase_) {
+        case 16:
+          hash = (37 * hash) + MYSQL_FIELD_NUMBER;
+          hash = (53 * hash) + getMysql().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.integrations.GetJdbcMetricsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.integrations.GetJdbcMetricsResponse)
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.class, com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        metricsCase_ = 0;
+        metrics_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.integrations.Api.internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse build() {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse buildPartial() {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse result = new com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse(this);
+        if (metricsCase_ == 16) {
+          if (mysqlBuilder_ == null) {
+            result.metrics_ = metrics_;
+          } else {
+            result.metrics_ = mysqlBuilder_.build();
+          }
+        }
+        result.metricsCase_ = metricsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse) {
+          return mergeFrom((com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse other) {
+        if (other == com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse.getDefaultInstance()) return this;
+        switch (other.getMetricsCase()) {
+          case MYSQL: {
+            mergeMysql(other.getMysql());
+            break;
+          }
+          case METRICS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int metricsCase_ = 0;
+      private java.lang.Object metrics_;
+      public MetricsCase
+          getMetricsCase() {
+        return MetricsCase.forNumber(
+            metricsCase_);
+      }
+
+      public Builder clearMetrics() {
+        metricsCase_ = 0;
+        metrics_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder> mysqlBuilder_;
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       * @return Whether the mysql field is set.
+       */
+      @java.lang.Override
+      public boolean hasMysql() {
+        return metricsCase_ == 16;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       * @return The mysql.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics getMysql() {
+        if (mysqlBuilder_ == null) {
+          if (metricsCase_ == 16) {
+            return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_;
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+        } else {
+          if (metricsCase_ == 16) {
+            return mysqlBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      public Builder setMysql(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics value) {
+        if (mysqlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metrics_ = value;
+          onChanged();
+        } else {
+          mysqlBuilder_.setMessage(value);
+        }
+        metricsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      public Builder setMysql(
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder builderForValue) {
+        if (mysqlBuilder_ == null) {
+          metrics_ = builderForValue.build();
+          onChanged();
+        } else {
+          mysqlBuilder_.setMessage(builderForValue.build());
+        }
+        metricsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      public Builder mergeMysql(com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics value) {
+        if (mysqlBuilder_ == null) {
+          if (metricsCase_ == 16 &&
+              metrics_ != com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance()) {
+            metrics_ = com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.newBuilder((com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            metrics_ = value;
+          }
+          onChanged();
+        } else {
+          if (metricsCase_ == 16) {
+            mysqlBuilder_.mergeFrom(value);
+          }
+          mysqlBuilder_.setMessage(value);
+        }
+        metricsCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      public Builder clearMysql() {
+        if (mysqlBuilder_ == null) {
+          if (metricsCase_ == 16) {
+            metricsCase_ = 0;
+            metrics_ = null;
+            onChanged();
+          }
+        } else {
+          if (metricsCase_ == 16) {
+            metricsCase_ = 0;
+            metrics_ = null;
+          }
+          mysqlBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder getMysqlBuilder() {
+        return getMysqlFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder getMysqlOrBuilder() {
+        if ((metricsCase_ == 16) && (mysqlBuilder_ != null)) {
+          return mysqlBuilder_.getMessageOrBuilder();
+        } else {
+          if (metricsCase_ == 16) {
+            return (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_;
+          }
+          return com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.integrations.jdbc.MysqlMetrics mysql = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder> 
+          getMysqlFieldBuilder() {
+        if (mysqlBuilder_ == null) {
+          if (!(metricsCase_ == 16)) {
+            metrics_ = com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.getDefaultInstance();
+          }
+          mysqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics.Builder, com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetricsOrBuilder>(
+                  (com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.MysqlMetrics) metrics_,
+                  getParentForChildren(),
+                  isClean());
+          metrics_ = null;
+        }
+        metricsCase_ = 16;
+        onChanged();;
+        return mysqlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.integrations.GetJdbcMetricsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.integrations.GetJdbcMetricsResponse)
+    private static final com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse();
+    }
+
+    public static com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetJdbcMetricsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetJdbcMetricsResponse>() {
+      @java.lang.Override
+      public GetJdbcMetricsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetJdbcMetricsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetJdbcMetricsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetJdbcMetricsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.integrations.Api.GetJdbcMetricsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_integrations_GetPrometheusMetricsRequest_descriptor;
   private static final 
@@ -1335,6 +2621,16 @@ public final class Api {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_integrations_GetPrometheusMetricsResponse_MetricsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1347,24 +2643,34 @@ public final class Api {
       "\n0com/hilohq/hilo/protobufs/integrations" +
       "/api.proto\022\033hilo.protobufs.integrations\032" +
       "Bcom/hilohq/hilo/protobufs/integrations/" +
-      "prometheus/prometheus.proto\"/\n\033GetPromet" +
-      "heusMetricsRequest\022\020\n\010schemaId\030\001 \001(\t\"\341\001\n" +
-      "\034GetPrometheusMetricsResponse\022W\n\007metrics" +
-      "\030\001 \003(\0132F.hilo.protobufs.integrations.Get" +
-      "PrometheusMetricsResponse.MetricsEntry\032h" +
-      "\n\014MetricsEntry\022\013\n\003key\030\001 \001(\t\022G\n\005value\030\002 \001" +
-      "(\01328.hilo.protobufs.integrations.prometh" +
-      "eus.PrometheusMetric:\0028\0012\236\001\n\014Integration" +
-      "s\022\215\001\n\024GetPrometheusMetrics\0228.hilo.protob" +
-      "ufs.integrations.GetPrometheusMetricsReq" +
-      "uest\0329.hilo.protobufs.integrations.GetPr" +
-      "ometheusMetricsResponse\"\000B(\n&com.hilohq." +
-      "hilo.protobufs.integrationsb\006proto3"
+      "prometheus/prometheus.proto\0327com/hilohq/" +
+      "hilo/protobufs/integrations/jdbc/mysql.p" +
+      "roto\"/\n\033GetPrometheusMetricsRequest\022\020\n\010s" +
+      "chemaId\030\001 \001(\t\"\341\001\n\034GetPrometheusMetricsRe" +
+      "sponse\022W\n\007metrics\030\001 \003(\0132F.hilo.protobufs" +
+      ".integrations.GetPrometheusMetricsRespon" +
+      "se.MetricsEntry\032h\n\014MetricsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022G\n\005value\030\002 \001(\01328.hilo.protobufs.int" +
+      "egrations.prometheus.PrometheusMetric:\0028" +
+      "\001\")\n\025GetJdbcMetricsRequest\022\020\n\010schemaId\030\001" +
+      " \001(\t\"d\n\026GetJdbcMetricsResponse\022?\n\005mysql\030" +
+      "\020 \001(\0132..hilo.protobufs.integrations.jdbc" +
+      ".MysqlMetricsH\000B\t\n\007metrics2\233\002\n\014Integrati" +
+      "ons\022\215\001\n\024GetPrometheusMetrics\0228.hilo.prot" +
+      "obufs.integrations.GetPrometheusMetricsR" +
+      "equest\0329.hilo.protobufs.integrations.Get" +
+      "PrometheusMetricsResponse\"\000\022{\n\016GetJdbcMe" +
+      "trics\0222.hilo.protobufs.integrations.GetJ" +
+      "dbcMetricsRequest\0323.hilo.protobufs.integ" +
+      "rations.GetJdbcMetricsResponse\"\000B(\n&com." +
+      "hilohq.hilo.protobufs.integrationsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.getDescriptor(),
+          com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.getDescriptor(),
         });
     internal_static_hilo_protobufs_integrations_GetPrometheusMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1384,7 +2690,20 @@ public final class Api {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_integrations_GetPrometheusMetricsResponse_MetricsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_integrations_GetJdbcMetricsRequest_descriptor,
+        new java.lang.String[] { "SchemaId", });
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_integrations_GetJdbcMetricsResponse_descriptor,
+        new java.lang.String[] { "Mysql", "Metrics", });
     com.hilohq.hilo.protobufs.integrations.prometheus.Prometheus.getDescriptor();
+    com.hilohq.hilo.protobufs.integrations.jdbc.Mysql.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -5,6 +5,7 @@ package hilo.protobufs.integrations;
 option java_package = "com.hilohq.hilo.protobufs.integrations";
 
 import "com/hilohq/hilo/protobufs/integrations/prometheus/prometheus.proto";
+import "com/hilohq/hilo/protobufs/integrations/jdbc/mysql.proto";
 
 message GetPrometheusMetricsRequest {
   string schemaId = 1;
@@ -14,6 +15,17 @@ message GetPrometheusMetricsResponse {
   map<string, prometheus.PrometheusMetric> metrics = 1;
 }
 
+message GetJdbcMetricsRequest {
+  string schemaId = 1;
+}
+
+message GetJdbcMetricsResponse {
+  oneof metrics {
+       jdbc.MysqlMetrics mysql = 16;
+    }
+}
+
 service Integrations {
   rpc GetPrometheusMetrics(GetPrometheusMetricsRequest) returns (GetPrometheusMetricsResponse) { }
+  rpc GetJdbcMetrics(GetJdbcMetricsRequest) returns (GetJdbcMetricsResponse) { }
 }

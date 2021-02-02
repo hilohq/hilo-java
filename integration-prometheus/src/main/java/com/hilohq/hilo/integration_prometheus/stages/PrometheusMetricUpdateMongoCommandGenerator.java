@@ -10,13 +10,7 @@ import org.bson.BsonString;
 import org.bson.Document;
 
 public final class PrometheusMetricUpdateMongoCommandGenerator
-    implements MongoCommandGenerator<Prometheus.PrometheusUpdate> {
-
-  private final ProtobufMessageToDocumentSerializer serializer;
-
-  public PrometheusMetricUpdateMongoCommandGenerator() {
-    this.serializer = new ProtobufMessageToDocumentSerializer();
-  }
+    implements MongoCommandGenerator<Prometheus.PrometheusEvent> {
 
   private static Document metricToUpdateDocument(
       final Prometheus.PrometheusMetadata metadata, final Prometheus.PrometheusMetric metric) {
@@ -45,7 +39,7 @@ public final class PrometheusMetricUpdateMongoCommandGenerator
   }
 
   @Override
-  public MongoCommand generate(final String database, final Prometheus.PrometheusUpdate value) {
+  public MongoCommand generate(final String database, final Prometheus.PrometheusEvent value) {
     if (value.hasMetric()) {
       return generateMetric(database, value.getMetadata(), value.getMetric());
     } else {

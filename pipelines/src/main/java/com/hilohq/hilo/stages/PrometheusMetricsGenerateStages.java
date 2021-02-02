@@ -11,7 +11,7 @@ import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.api.java.DataSet;
 
 public final class PrometheusMetricsGenerateStages
-    implements BatchStages<String, Prometheus.PrometheusUpdate> {
+    implements BatchStages<String, Prometheus.PrometheusEvent> {
   private final String schemaId;
   private final String mongoUrl;
 
@@ -46,7 +46,7 @@ public final class PrometheusMetricsGenerateStages
   }
 
   @Override
-  public DataSet<Prometheus.PrometheusUpdate> bind(
+  public DataSet<Prometheus.PrometheusEvent> bind(
       final ExecutionConfig executionConfig, final DataSet<String> input) throws Exception {
     final Class<?> unmodColl = Class.forName("java.util.Collections$UnmodifiableCollection");
     executionConfig.addDefaultKryoSerializer(unmodColl, UnmodifiableCollectionsSerializer.class);

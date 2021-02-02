@@ -1,0 +1,75 @@
+package com.hilohq.hilo.pipelines;
+
+import static com.google.common.base.Verify.verifyNotNull;
+
+import com.hilohq.hilo.connectors_mongo.output.MongoOutputFormat;
+import com.hilohq.hilo.integration_jdbc.stages.JdbcMysqlTableUpdateMongoCommandGenerator;
+import com.hilohq.hilo.protobufs.integrations.jdbc.Jdbc;
+import com.hilohq.hilo.stages.JdbcMysqlTableGenerateStages;
+import org.apache.flink.api.common.io.FileInputFormat;
+import org.apache.flink.api.common.io.OutputFormat;
+import org.apache.flink.api.java.io.TextInputFormat;
+import org.apache.flink.core.fs.FileInputSplit;
+import org.apache.flink.core.fs.Path;
+
+public final class JdbcMysqlTableGeneratePipeline
+    extends DefaultBatchPipeline<String, FileInputSplit, Jdbc.JdbcEvent> {
+  public static final class Builder {
+    private String inputPath;
+    private String mongoUrl;
+    private String database;
+    private String schemaId;
+
+    public Builder inputPath(final String inputPath) {
+      verifyNotNull(inputPath);
+      this.inputPath = inputPath;
+      return this;
+    }
+
+    public Builder schemaId(final String schemaId) {
+      verifyNotNull(schemaId);
+      this.schemaId = schemaId;
+      return this;
+    }
+
+    public Builder mongoUrl(final String mongoUrl) {
+      verifyNotNull(mongoUrl);
+      this.mongoUrl = mongoUrl;
+      return this;
+    }
+
+    public Builder database(final String database) {
+      verifyNotNull(database);
+      this.database = database;
+      return this;
+    }
+
+    public JdbcMysqlTableGeneratePipeline build() {
+      verifyNotNull(inputPath);
+      verifyNotNull(mongoUrl);
+      verifyNotNull(database);
+      verifyNotNull(schemaId);
+
+      final var inputFormat = new TextInputFormat(new Path(inputPath));
+      final var stages =
+          JdbcMysqlTableGenerateStages.newBuilder().schemaId(schemaId).mongoUrl(mongoUrl).build();
+      final var output =
+          MongoOutputFormat.newBuilder(new JdbcMysqlTableUpdateMongoCommandGenerator())
+              .url(mongoUrl)
+              .database(database)
+              .build();
+      return new JdbcMysqlTableGeneratePipeline(inputFormat, stages, output);
+    }
+  }
+
+  public static Builder newBuilder() {
+    return new Builder();
+  }
+
+  JdbcMysqlTableGeneratePipeline(
+      final FileInputFormat<String> input,
+      final JdbcMysqlTableGenerateStages stages,
+      final OutputFormat<Jdbc.JdbcEvent> output) {
+    super(input, stages, output);
+  }
+}

@@ -90,7 +90,13 @@ public class JsonJdbcPushPipeline extends DefaultBatchPipeline<String, FileInput
 
       final var inputFormat = new TextInputFormat(new Path(inputPath));
       final var stages =
-          JsonJdbcPushStages.newBuilder().schemaId(schemaId).mongoUrl(mongoUrl).build();
+          JsonJdbcPushStages.newBuilder()
+              .schemaId(schemaId)
+              .mongoUrl(mongoUrl)
+              .jdbcDbUrl(jdbcDbUrl)
+              .jdbcUsername(jdbcUsername)
+              .jdbcPassword(jdbcPassword)
+              .build();
       final var output =
           JDBCOutputFormat.buildJDBCOutputFormat()
               .setDrivername(jdbcDriverName)
