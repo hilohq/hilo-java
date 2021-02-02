@@ -3368,6 +3368,1844 @@ public final class Pipelines {
 
   }
 
+  public interface JsonJdbcPushPipelineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:hilo.protobufs.pipelines.JsonJdbcPushPipeline)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The inputPath.
+     */
+    java.lang.String getInputPath();
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The bytes for inputPath.
+     */
+    com.google.protobuf.ByteString
+        getInputPathBytes();
+
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The mongoUrl.
+     */
+    java.lang.String getMongoUrl();
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The bytes for mongoUrl.
+     */
+    com.google.protobuf.ByteString
+        getMongoUrlBytes();
+
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The mongoDatabase.
+     */
+    java.lang.String getMongoDatabase();
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The bytes for mongoDatabase.
+     */
+    com.google.protobuf.ByteString
+        getMongoDatabaseBytes();
+
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The schemaId.
+     */
+    java.lang.String getSchemaId();
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The bytes for schemaId.
+     */
+    com.google.protobuf.ByteString
+        getSchemaIdBytes();
+
+    /**
+     * <code>string jdbc_driver_name = 5;</code>
+     * @return The jdbcDriverName.
+     */
+    java.lang.String getJdbcDriverName();
+    /**
+     * <code>string jdbc_driver_name = 5;</code>
+     * @return The bytes for jdbcDriverName.
+     */
+    com.google.protobuf.ByteString
+        getJdbcDriverNameBytes();
+
+    /**
+     * <code>string jdbc_db_url = 6;</code>
+     * @return The jdbcDbUrl.
+     */
+    java.lang.String getJdbcDbUrl();
+    /**
+     * <code>string jdbc_db_url = 6;</code>
+     * @return The bytes for jdbcDbUrl.
+     */
+    com.google.protobuf.ByteString
+        getJdbcDbUrlBytes();
+
+    /**
+     * <code>string jdbc_username = 7;</code>
+     * @return The jdbcUsername.
+     */
+    java.lang.String getJdbcUsername();
+    /**
+     * <code>string jdbc_username = 7;</code>
+     * @return The bytes for jdbcUsername.
+     */
+    com.google.protobuf.ByteString
+        getJdbcUsernameBytes();
+
+    /**
+     * <code>string jdbc_password = 8;</code>
+     * @return The jdbcPassword.
+     */
+    java.lang.String getJdbcPassword();
+    /**
+     * <code>string jdbc_password = 8;</code>
+     * @return The bytes for jdbcPassword.
+     */
+    com.google.protobuf.ByteString
+        getJdbcPasswordBytes();
+
+    /**
+     * <code>string jdbc_query = 9;</code>
+     * @return The jdbcQuery.
+     */
+    java.lang.String getJdbcQuery();
+    /**
+     * <code>string jdbc_query = 9;</code>
+     * @return The bytes for jdbcQuery.
+     */
+    com.google.protobuf.ByteString
+        getJdbcQueryBytes();
+
+    /**
+     * <code>int32 jdbc_batch_interval = 10;</code>
+     * @return The jdbcBatchInterval.
+     */
+    int getJdbcBatchInterval();
+  }
+  /**
+   * Protobuf type {@code hilo.protobufs.pipelines.JsonJdbcPushPipeline}
+   */
+  public static final class JsonJdbcPushPipeline extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:hilo.protobufs.pipelines.JsonJdbcPushPipeline)
+      JsonJdbcPushPipelineOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use JsonJdbcPushPipeline.newBuilder() to construct.
+    private JsonJdbcPushPipeline(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private JsonJdbcPushPipeline() {
+      inputPath_ = "";
+      mongoUrl_ = "";
+      mongoDatabase_ = "";
+      schemaId_ = "";
+      jdbcDriverName_ = "";
+      jdbcDbUrl_ = "";
+      jdbcUsername_ = "";
+      jdbcPassword_ = "";
+      jdbcQuery_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new JsonJdbcPushPipeline();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private JsonJdbcPushPipeline(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inputPath_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mongoUrl_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mongoDatabase_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              schemaId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jdbcDriverName_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jdbcDbUrl_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jdbcUsername_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jdbcPassword_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jdbcQuery_ = s;
+              break;
+            }
+            case 80: {
+
+              jdbcBatchInterval_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder.class);
+    }
+
+    public static final int INPUT_PATH_FIELD_NUMBER = 1;
+    private volatile java.lang.Object inputPath_;
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The inputPath.
+     */
+    @java.lang.Override
+    public java.lang.String getInputPath() {
+      java.lang.Object ref = inputPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inputPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string input_path = 1;</code>
+     * @return The bytes for inputPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInputPathBytes() {
+      java.lang.Object ref = inputPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inputPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONGO_URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object mongoUrl_;
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The mongoUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getMongoUrl() {
+      java.lang.Object ref = mongoUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mongoUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mongo_url = 2;</code>
+     * @return The bytes for mongoUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMongoUrlBytes() {
+      java.lang.Object ref = mongoUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mongoUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONGO_DATABASE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object mongoDatabase_;
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The mongoDatabase.
+     */
+    @java.lang.Override
+    public java.lang.String getMongoDatabase() {
+      java.lang.Object ref = mongoDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mongoDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mongo_database = 3;</code>
+     * @return The bytes for mongoDatabase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMongoDatabaseBytes() {
+      java.lang.Object ref = mongoDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mongoDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object schemaId_;
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The schemaId.
+     */
+    @java.lang.Override
+    public java.lang.String getSchemaId() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schemaId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema_id = 4;</code>
+     * @return The bytes for schemaId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaIdBytes() {
+      java.lang.Object ref = schemaId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schemaId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_DRIVER_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object jdbcDriverName_;
+    /**
+     * <code>string jdbc_driver_name = 5;</code>
+     * @return The jdbcDriverName.
+     */
+    @java.lang.Override
+    public java.lang.String getJdbcDriverName() {
+      java.lang.Object ref = jdbcDriverName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jdbcDriverName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string jdbc_driver_name = 5;</code>
+     * @return The bytes for jdbcDriverName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJdbcDriverNameBytes() {
+      java.lang.Object ref = jdbcDriverName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jdbcDriverName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_DB_URL_FIELD_NUMBER = 6;
+    private volatile java.lang.Object jdbcDbUrl_;
+    /**
+     * <code>string jdbc_db_url = 6;</code>
+     * @return The jdbcDbUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getJdbcDbUrl() {
+      java.lang.Object ref = jdbcDbUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jdbcDbUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string jdbc_db_url = 6;</code>
+     * @return The bytes for jdbcDbUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJdbcDbUrlBytes() {
+      java.lang.Object ref = jdbcDbUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jdbcDbUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_USERNAME_FIELD_NUMBER = 7;
+    private volatile java.lang.Object jdbcUsername_;
+    /**
+     * <code>string jdbc_username = 7;</code>
+     * @return The jdbcUsername.
+     */
+    @java.lang.Override
+    public java.lang.String getJdbcUsername() {
+      java.lang.Object ref = jdbcUsername_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jdbcUsername_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string jdbc_username = 7;</code>
+     * @return The bytes for jdbcUsername.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJdbcUsernameBytes() {
+      java.lang.Object ref = jdbcUsername_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jdbcUsername_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_PASSWORD_FIELD_NUMBER = 8;
+    private volatile java.lang.Object jdbcPassword_;
+    /**
+     * <code>string jdbc_password = 8;</code>
+     * @return The jdbcPassword.
+     */
+    @java.lang.Override
+    public java.lang.String getJdbcPassword() {
+      java.lang.Object ref = jdbcPassword_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jdbcPassword_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string jdbc_password = 8;</code>
+     * @return The bytes for jdbcPassword.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJdbcPasswordBytes() {
+      java.lang.Object ref = jdbcPassword_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jdbcPassword_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_QUERY_FIELD_NUMBER = 9;
+    private volatile java.lang.Object jdbcQuery_;
+    /**
+     * <code>string jdbc_query = 9;</code>
+     * @return The jdbcQuery.
+     */
+    @java.lang.Override
+    public java.lang.String getJdbcQuery() {
+      java.lang.Object ref = jdbcQuery_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jdbcQuery_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string jdbc_query = 9;</code>
+     * @return The bytes for jdbcQuery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJdbcQueryBytes() {
+      java.lang.Object ref = jdbcQuery_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jdbcQuery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JDBC_BATCH_INTERVAL_FIELD_NUMBER = 10;
+    private int jdbcBatchInterval_;
+    /**
+     * <code>int32 jdbc_batch_interval = 10;</code>
+     * @return The jdbcBatchInterval.
+     */
+    @java.lang.Override
+    public int getJdbcBatchInterval() {
+      return jdbcBatchInterval_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInputPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inputPath_);
+      }
+      if (!getMongoUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mongoUrl_);
+      }
+      if (!getMongoDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mongoDatabase_);
+      }
+      if (!getSchemaIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, schemaId_);
+      }
+      if (!getJdbcDriverNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, jdbcDriverName_);
+      }
+      if (!getJdbcDbUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, jdbcDbUrl_);
+      }
+      if (!getJdbcUsernameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, jdbcUsername_);
+      }
+      if (!getJdbcPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, jdbcPassword_);
+      }
+      if (!getJdbcQueryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, jdbcQuery_);
+      }
+      if (jdbcBatchInterval_ != 0) {
+        output.writeInt32(10, jdbcBatchInterval_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInputPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inputPath_);
+      }
+      if (!getMongoUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mongoUrl_);
+      }
+      if (!getMongoDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mongoDatabase_);
+      }
+      if (!getSchemaIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, schemaId_);
+      }
+      if (!getJdbcDriverNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, jdbcDriverName_);
+      }
+      if (!getJdbcDbUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, jdbcDbUrl_);
+      }
+      if (!getJdbcUsernameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, jdbcUsername_);
+      }
+      if (!getJdbcPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, jdbcPassword_);
+      }
+      if (!getJdbcQueryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, jdbcQuery_);
+      }
+      if (jdbcBatchInterval_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, jdbcBatchInterval_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline)) {
+        return super.equals(obj);
+      }
+      com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline other = (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) obj;
+
+      if (!getInputPath()
+          .equals(other.getInputPath())) return false;
+      if (!getMongoUrl()
+          .equals(other.getMongoUrl())) return false;
+      if (!getMongoDatabase()
+          .equals(other.getMongoDatabase())) return false;
+      if (!getSchemaId()
+          .equals(other.getSchemaId())) return false;
+      if (!getJdbcDriverName()
+          .equals(other.getJdbcDriverName())) return false;
+      if (!getJdbcDbUrl()
+          .equals(other.getJdbcDbUrl())) return false;
+      if (!getJdbcUsername()
+          .equals(other.getJdbcUsername())) return false;
+      if (!getJdbcPassword()
+          .equals(other.getJdbcPassword())) return false;
+      if (!getJdbcQuery()
+          .equals(other.getJdbcQuery())) return false;
+      if (getJdbcBatchInterval()
+          != other.getJdbcBatchInterval()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INPUT_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getInputPath().hashCode();
+      hash = (37 * hash) + MONGO_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getMongoUrl().hashCode();
+      hash = (37 * hash) + MONGO_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getMongoDatabase().hashCode();
+      hash = (37 * hash) + SCHEMA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSchemaId().hashCode();
+      hash = (37 * hash) + JDBC_DRIVER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcDriverName().hashCode();
+      hash = (37 * hash) + JDBC_DB_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcDbUrl().hashCode();
+      hash = (37 * hash) + JDBC_USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcUsername().hashCode();
+      hash = (37 * hash) + JDBC_PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcPassword().hashCode();
+      hash = (37 * hash) + JDBC_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcQuery().hashCode();
+      hash = (37 * hash) + JDBC_BATCH_INTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + getJdbcBatchInterval();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code hilo.protobufs.pipelines.JsonJdbcPushPipeline}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:hilo.protobufs.pipelines.JsonJdbcPushPipeline)
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.class, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder.class);
+      }
+
+      // Construct using com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        inputPath_ = "";
+
+        mongoUrl_ = "";
+
+        mongoDatabase_ = "";
+
+        schemaId_ = "";
+
+        jdbcDriverName_ = "";
+
+        jdbcDbUrl_ = "";
+
+        jdbcUsername_ = "";
+
+        jdbcPassword_ = "";
+
+        jdbcQuery_ = "";
+
+        jdbcBatchInterval_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getDefaultInstanceForType() {
+        return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline build() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline buildPartial() {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline result = new com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline(this);
+        result.inputPath_ = inputPath_;
+        result.mongoUrl_ = mongoUrl_;
+        result.mongoDatabase_ = mongoDatabase_;
+        result.schemaId_ = schemaId_;
+        result.jdbcDriverName_ = jdbcDriverName_;
+        result.jdbcDbUrl_ = jdbcDbUrl_;
+        result.jdbcUsername_ = jdbcUsername_;
+        result.jdbcPassword_ = jdbcPassword_;
+        result.jdbcQuery_ = jdbcQuery_;
+        result.jdbcBatchInterval_ = jdbcBatchInterval_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) {
+          return mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline other) {
+        if (other == com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance()) return this;
+        if (!other.getInputPath().isEmpty()) {
+          inputPath_ = other.inputPath_;
+          onChanged();
+        }
+        if (!other.getMongoUrl().isEmpty()) {
+          mongoUrl_ = other.mongoUrl_;
+          onChanged();
+        }
+        if (!other.getMongoDatabase().isEmpty()) {
+          mongoDatabase_ = other.mongoDatabase_;
+          onChanged();
+        }
+        if (!other.getSchemaId().isEmpty()) {
+          schemaId_ = other.schemaId_;
+          onChanged();
+        }
+        if (!other.getJdbcDriverName().isEmpty()) {
+          jdbcDriverName_ = other.jdbcDriverName_;
+          onChanged();
+        }
+        if (!other.getJdbcDbUrl().isEmpty()) {
+          jdbcDbUrl_ = other.jdbcDbUrl_;
+          onChanged();
+        }
+        if (!other.getJdbcUsername().isEmpty()) {
+          jdbcUsername_ = other.jdbcUsername_;
+          onChanged();
+        }
+        if (!other.getJdbcPassword().isEmpty()) {
+          jdbcPassword_ = other.jdbcPassword_;
+          onChanged();
+        }
+        if (!other.getJdbcQuery().isEmpty()) {
+          jdbcQuery_ = other.jdbcQuery_;
+          onChanged();
+        }
+        if (other.getJdbcBatchInterval() != 0) {
+          setJdbcBatchInterval(other.getJdbcBatchInterval());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object inputPath_ = "";
+      /**
+       * <code>string input_path = 1;</code>
+       * @return The inputPath.
+       */
+      public java.lang.String getInputPath() {
+        java.lang.Object ref = inputPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inputPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @return The bytes for inputPath.
+       */
+      public com.google.protobuf.ByteString
+          getInputPathBytes() {
+        java.lang.Object ref = inputPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inputPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @param value The inputPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        inputPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputPath() {
+        
+        inputPath_ = getDefaultInstance().getInputPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input_path = 1;</code>
+       * @param value The bytes for inputPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        inputPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mongoUrl_ = "";
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return The mongoUrl.
+       */
+      public java.lang.String getMongoUrl() {
+        java.lang.Object ref = mongoUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mongoUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return The bytes for mongoUrl.
+       */
+      public com.google.protobuf.ByteString
+          getMongoUrlBytes() {
+        java.lang.Object ref = mongoUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mongoUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @param value The mongoUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mongoUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMongoUrl() {
+        
+        mongoUrl_ = getDefaultInstance().getMongoUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_url = 2;</code>
+       * @param value The bytes for mongoUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mongoUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mongoDatabase_ = "";
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return The mongoDatabase.
+       */
+      public java.lang.String getMongoDatabase() {
+        java.lang.Object ref = mongoDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mongoDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return The bytes for mongoDatabase.
+       */
+      public com.google.protobuf.ByteString
+          getMongoDatabaseBytes() {
+        java.lang.Object ref = mongoDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mongoDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @param value The mongoDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mongoDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMongoDatabase() {
+        
+        mongoDatabase_ = getDefaultInstance().getMongoDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mongo_database = 3;</code>
+       * @param value The bytes for mongoDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMongoDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mongoDatabase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schemaId_ = "";
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return The schemaId.
+       */
+      public java.lang.String getSchemaId() {
+        java.lang.Object ref = schemaId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schemaId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return The bytes for schemaId.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaIdBytes() {
+        java.lang.Object ref = schemaId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @param value The schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaId() {
+        
+        schemaId_ = getDefaultInstance().getSchemaId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_id = 4;</code>
+       * @param value The bytes for schemaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        schemaId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jdbcDriverName_ = "";
+      /**
+       * <code>string jdbc_driver_name = 5;</code>
+       * @return The jdbcDriverName.
+       */
+      public java.lang.String getJdbcDriverName() {
+        java.lang.Object ref = jdbcDriverName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jdbcDriverName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_driver_name = 5;</code>
+       * @return The bytes for jdbcDriverName.
+       */
+      public com.google.protobuf.ByteString
+          getJdbcDriverNameBytes() {
+        java.lang.Object ref = jdbcDriverName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jdbcDriverName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_driver_name = 5;</code>
+       * @param value The jdbcDriverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcDriverName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jdbcDriverName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_driver_name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcDriverName() {
+        
+        jdbcDriverName_ = getDefaultInstance().getJdbcDriverName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_driver_name = 5;</code>
+       * @param value The bytes for jdbcDriverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcDriverNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jdbcDriverName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jdbcDbUrl_ = "";
+      /**
+       * <code>string jdbc_db_url = 6;</code>
+       * @return The jdbcDbUrl.
+       */
+      public java.lang.String getJdbcDbUrl() {
+        java.lang.Object ref = jdbcDbUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jdbcDbUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_db_url = 6;</code>
+       * @return The bytes for jdbcDbUrl.
+       */
+      public com.google.protobuf.ByteString
+          getJdbcDbUrlBytes() {
+        java.lang.Object ref = jdbcDbUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jdbcDbUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_db_url = 6;</code>
+       * @param value The jdbcDbUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcDbUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jdbcDbUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_db_url = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcDbUrl() {
+        
+        jdbcDbUrl_ = getDefaultInstance().getJdbcDbUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_db_url = 6;</code>
+       * @param value The bytes for jdbcDbUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcDbUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jdbcDbUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jdbcUsername_ = "";
+      /**
+       * <code>string jdbc_username = 7;</code>
+       * @return The jdbcUsername.
+       */
+      public java.lang.String getJdbcUsername() {
+        java.lang.Object ref = jdbcUsername_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jdbcUsername_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_username = 7;</code>
+       * @return The bytes for jdbcUsername.
+       */
+      public com.google.protobuf.ByteString
+          getJdbcUsernameBytes() {
+        java.lang.Object ref = jdbcUsername_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jdbcUsername_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_username = 7;</code>
+       * @param value The jdbcUsername to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcUsername(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jdbcUsername_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_username = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcUsername() {
+        
+        jdbcUsername_ = getDefaultInstance().getJdbcUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_username = 7;</code>
+       * @param value The bytes for jdbcUsername to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jdbcUsername_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jdbcPassword_ = "";
+      /**
+       * <code>string jdbc_password = 8;</code>
+       * @return The jdbcPassword.
+       */
+      public java.lang.String getJdbcPassword() {
+        java.lang.Object ref = jdbcPassword_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jdbcPassword_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_password = 8;</code>
+       * @return The bytes for jdbcPassword.
+       */
+      public com.google.protobuf.ByteString
+          getJdbcPasswordBytes() {
+        java.lang.Object ref = jdbcPassword_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jdbcPassword_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_password = 8;</code>
+       * @param value The jdbcPassword to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jdbcPassword_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_password = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcPassword() {
+        
+        jdbcPassword_ = getDefaultInstance().getJdbcPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_password = 8;</code>
+       * @param value The bytes for jdbcPassword to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jdbcPassword_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jdbcQuery_ = "";
+      /**
+       * <code>string jdbc_query = 9;</code>
+       * @return The jdbcQuery.
+       */
+      public java.lang.String getJdbcQuery() {
+        java.lang.Object ref = jdbcQuery_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jdbcQuery_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_query = 9;</code>
+       * @return The bytes for jdbcQuery.
+       */
+      public com.google.protobuf.ByteString
+          getJdbcQueryBytes() {
+        java.lang.Object ref = jdbcQuery_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jdbcQuery_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string jdbc_query = 9;</code>
+       * @param value The jdbcQuery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcQuery(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jdbcQuery_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_query = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcQuery() {
+        
+        jdbcQuery_ = getDefaultInstance().getJdbcQuery();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string jdbc_query = 9;</code>
+       * @param value The bytes for jdbcQuery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcQueryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jdbcQuery_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int jdbcBatchInterval_ ;
+      /**
+       * <code>int32 jdbc_batch_interval = 10;</code>
+       * @return The jdbcBatchInterval.
+       */
+      @java.lang.Override
+      public int getJdbcBatchInterval() {
+        return jdbcBatchInterval_;
+      }
+      /**
+       * <code>int32 jdbc_batch_interval = 10;</code>
+       * @param value The jdbcBatchInterval to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJdbcBatchInterval(int value) {
+        
+        jdbcBatchInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 jdbc_batch_interval = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJdbcBatchInterval() {
+        
+        jdbcBatchInterval_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:hilo.protobufs.pipelines.JsonJdbcPushPipeline)
+    }
+
+    // @@protoc_insertion_point(class_scope:hilo.protobufs.pipelines.JsonJdbcPushPipeline)
+    private static final com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline();
+    }
+
+    public static com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<JsonJdbcPushPipeline>
+        PARSER = new com.google.protobuf.AbstractParser<JsonJdbcPushPipeline>() {
+      @java.lang.Override
+      public JsonJdbcPushPipeline parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new JsonJdbcPushPipeline(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<JsonJdbcPushPipeline> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<JsonJdbcPushPipeline> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PrometheusGrafanaDashboardGeneratePipelineOrBuilder extends
       // @@protoc_insertion_point(interface_extends:hilo.protobufs.pipelines.PrometheusGrafanaDashboardGeneratePipeline)
       com.google.protobuf.MessageOrBuilder {
@@ -5783,6 +7621,21 @@ public final class Pipelines {
      */
     com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipelineOrBuilder getJsonInfluxdbPushPipelineOrBuilder();
 
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     * @return Whether the jsonJdbcPushPipeline field is set.
+     */
+    boolean hasJsonJdbcPushPipeline();
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     * @return The jsonJdbcPushPipeline.
+     */
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getJsonJdbcPushPipeline();
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     */
+    com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder getJsonJdbcPushPipelineOrBuilder();
+
     public com.hilohq.hilo.protobufs.pipelines.Pipelines.BatchPipeline.PipelineCase getPipelineCase();
   }
   /**
@@ -5900,6 +7753,20 @@ public final class Pipelines {
               pipelineCase_ = 5;
               break;
             }
+            case 50: {
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder subBuilder = null;
+              if (pipelineCase_ == 6) {
+                subBuilder = ((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_).toBuilder();
+              }
+              pipeline_ =
+                  input.readMessage(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_);
+                pipeline_ = subBuilder.buildPartial();
+              }
+              pipelineCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5942,6 +7809,7 @@ public final class Pipelines {
       PROMETHEUS_METRICS_GENERATE(3),
       PROMETHEUS_GRAFANA_DASHBOARD_GENERATE(4),
       JSON_INFLUXDB_PUSH_PIPELINE(5),
+      JSON_JDBC_PUSH_PIPELINE(6),
       PIPELINE_NOT_SET(0);
       private final int value;
       private PipelineCase(int value) {
@@ -5964,6 +7832,7 @@ public final class Pipelines {
           case 3: return PROMETHEUS_METRICS_GENERATE;
           case 4: return PROMETHEUS_GRAFANA_DASHBOARD_GENERATE;
           case 5: return JSON_INFLUXDB_PUSH_PIPELINE;
+          case 6: return JSON_JDBC_PUSH_PIPELINE;
           case 0: return PIPELINE_NOT_SET;
           default: return null;
         }
@@ -6134,6 +8003,37 @@ public final class Pipelines {
       return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline.getDefaultInstance();
     }
 
+    public static final int JSON_JDBC_PUSH_PIPELINE_FIELD_NUMBER = 6;
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     * @return Whether the jsonJdbcPushPipeline field is set.
+     */
+    @java.lang.Override
+    public boolean hasJsonJdbcPushPipeline() {
+      return pipelineCase_ == 6;
+    }
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     * @return The jsonJdbcPushPipeline.
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getJsonJdbcPushPipeline() {
+      if (pipelineCase_ == 6) {
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_;
+      }
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+    }
+    /**
+     * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+     */
+    @java.lang.Override
+    public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder getJsonJdbcPushPipelineOrBuilder() {
+      if (pipelineCase_ == 6) {
+         return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_;
+      }
+      return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6163,6 +8063,9 @@ public final class Pipelines {
       if (pipelineCase_ == 5) {
         output.writeMessage(5, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_);
       }
+      if (pipelineCase_ == 6) {
+        output.writeMessage(6, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6191,6 +8094,10 @@ public final class Pipelines {
       if (pipelineCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonInfluxDbPushPipeline) pipeline_);
+      }
+      if (pipelineCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6229,6 +8136,10 @@ public final class Pipelines {
           if (!getJsonInfluxdbPushPipeline()
               .equals(other.getJsonInfluxdbPushPipeline())) return false;
           break;
+        case 6:
+          if (!getJsonJdbcPushPipeline()
+              .equals(other.getJsonJdbcPushPipeline())) return false;
+          break;
         case 0:
         default:
       }
@@ -6263,6 +8174,10 @@ public final class Pipelines {
         case 5:
           hash = (37 * hash) + JSON_INFLUXDB_PUSH_PIPELINE_FIELD_NUMBER;
           hash = (53 * hash) + getJsonInfluxdbPushPipeline().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + JSON_JDBC_PUSH_PIPELINE_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonJdbcPushPipeline().hashCode();
           break;
         case 0:
         default:
@@ -6463,6 +8378,13 @@ public final class Pipelines {
             result.pipeline_ = jsonInfluxdbPushPipelineBuilder_.build();
           }
         }
+        if (pipelineCase_ == 6) {
+          if (jsonJdbcPushPipelineBuilder_ == null) {
+            result.pipeline_ = pipeline_;
+          } else {
+            result.pipeline_ = jsonJdbcPushPipelineBuilder_.build();
+          }
+        }
         result.pipelineCase_ = pipelineCase_;
         onBuilt();
         return result;
@@ -6531,6 +8453,10 @@ public final class Pipelines {
           }
           case JSON_INFLUXDB_PUSH_PIPELINE: {
             mergeJsonInfluxdbPushPipeline(other.getJsonInfluxdbPushPipeline());
+            break;
+          }
+          case JSON_JDBC_PUSH_PIPELINE: {
+            mergeJsonJdbcPushPipeline(other.getJsonJdbcPushPipeline());
             break;
           }
           case PIPELINE_NOT_SET: {
@@ -7284,6 +9210,147 @@ public final class Pipelines {
         pipelineCase_ = 5;
         onChanged();;
         return jsonInfluxdbPushPipelineBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder> jsonJdbcPushPipelineBuilder_;
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       * @return Whether the jsonJdbcPushPipeline field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonJdbcPushPipeline() {
+        return pipelineCase_ == 6;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       * @return The jsonJdbcPushPipeline.
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline getJsonJdbcPushPipeline() {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 6) {
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_;
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+        } else {
+          if (pipelineCase_ == 6) {
+            return jsonJdbcPushPipelineBuilder_.getMessage();
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      public Builder setJsonJdbcPushPipeline(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline value) {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pipeline_ = value;
+          onChanged();
+        } else {
+          jsonJdbcPushPipelineBuilder_.setMessage(value);
+        }
+        pipelineCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      public Builder setJsonJdbcPushPipeline(
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder builderForValue) {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          pipeline_ = builderForValue.build();
+          onChanged();
+        } else {
+          jsonJdbcPushPipelineBuilder_.setMessage(builderForValue.build());
+        }
+        pipelineCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      public Builder mergeJsonJdbcPushPipeline(com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline value) {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 6 &&
+              pipeline_ != com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance()) {
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.newBuilder((com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            pipeline_ = value;
+          }
+          onChanged();
+        } else {
+          if (pipelineCase_ == 6) {
+            jsonJdbcPushPipelineBuilder_.mergeFrom(value);
+          }
+          jsonJdbcPushPipelineBuilder_.setMessage(value);
+        }
+        pipelineCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      public Builder clearJsonJdbcPushPipeline() {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          if (pipelineCase_ == 6) {
+            pipelineCase_ = 0;
+            pipeline_ = null;
+            onChanged();
+          }
+        } else {
+          if (pipelineCase_ == 6) {
+            pipelineCase_ = 0;
+            pipeline_ = null;
+          }
+          jsonJdbcPushPipelineBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder getJsonJdbcPushPipelineBuilder() {
+        return getJsonJdbcPushPipelineFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      @java.lang.Override
+      public com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder getJsonJdbcPushPipelineOrBuilder() {
+        if ((pipelineCase_ == 6) && (jsonJdbcPushPipelineBuilder_ != null)) {
+          return jsonJdbcPushPipelineBuilder_.getMessageOrBuilder();
+        } else {
+          if (pipelineCase_ == 6) {
+            return (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_;
+          }
+          return com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.hilo.protobufs.pipelines.JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder> 
+          getJsonJdbcPushPipelineFieldBuilder() {
+        if (jsonJdbcPushPipelineBuilder_ == null) {
+          if (!(pipelineCase_ == 6)) {
+            pipeline_ = com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.getDefaultInstance();
+          }
+          jsonJdbcPushPipelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline.Builder, com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipelineOrBuilder>(
+                  (com.hilohq.hilo.protobufs.pipelines.Pipelines.JsonJdbcPushPipeline) pipeline_,
+                  getParentForChildren(),
+                  isClean());
+          pipeline_ = null;
+        }
+        pipelineCase_ = 6;
+        onChanged();;
+        return jsonJdbcPushPipelineBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9240,6 +11307,11 @@ public final class Pipelines {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_hilo_protobufs_pipelines_JsonFeaturesGeneratePipeline_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9284,35 +11356,43 @@ public final class Pipelines {
       "ce_id\030\005 \001(\t\022\021\n\tschema_id\030\006 \001(\t\"p\n\034JsonFe" +
       "aturesGeneratePipeline\022\022\n\ninput_path\030\001 \001" +
       "(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016mongo_database\030" +
-      "\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\"\235\001\n*PrometheusG" +
-      "rafanaDashboardGeneratePipeline\022\021\n\tmongo" +
-      "_url\030\001 \001(\t\022\026\n\016mongo_database\030\002 \001(\t\022\021\n\tsc" +
-      "hema_id\030\003 \001(\t\022\023\n\013grafana_url\030\004 \001(\t\022\034\n\024gr" +
-      "afana_bearer_token\030\005 \001(\t\"\202\001\n\030JsonInfluxD" +
-      "bPushPipeline\022\022\n\ninput_path\030\001 \001(\t\022\021\n\tmon" +
-      "go_url\030\002 \001(\t\022\026\n\016mongo_database\030\003 \001(\t\022\021\n\t" +
-      "schema_id\030\004 \001(\t\022\024\n\014influxdb_url\030\005 \001(\t\"\201\004" +
-      "\n\rBatchPipeline\022T\n\024json_schema_generate\030" +
-      "\001 \001(\01324.hilo.protobufs.pipelines.JsonSch" +
-      "emaGeneratePipelineH\000\022X\n\026json_features_g" +
-      "enerate\030\002 \001(\01326.hilo.protobufs.pipelines" +
-      ".JsonFeaturesGeneratePipelineH\000\022b\n\033prome" +
-      "theus_metrics_generate\030\003 \001(\0132;.hilo.prot" +
-      "obufs.pipelines.PrometheusMetricsGenerat" +
-      "ePipelineH\000\022u\n%prometheus_grafana_dashbo" +
-      "ard_generate\030\004 \001(\0132D.hilo.protobufs.pipe" +
-      "lines.PrometheusGrafanaDashboardGenerate" +
-      "PipelineH\000\022Y\n\033json_influxdb_push_pipelin" +
-      "e\030\005 \001(\01322.hilo.protobufs.pipelines.JsonI" +
-      "nfluxDbPushPipelineH\000B\n\n\010pipeline\"\206\001\n\032Js" +
-      "onPrometheusPushPipeline\022\022\n\ninput_path\030\001" +
-      " \001(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016mongo_databas" +
-      "e\030\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\022\026\n\016prometheus" +
-      "_url\030\005 \001(\t\"r\n\016StreamPipeline\022T\n\024json_pro" +
-      "metheus_push\030\001 \001(\01324.hilo.protobufs.pipe" +
-      "lines.JsonPrometheusPushPipelineH\000B\n\n\010pi" +
-      "pelineB%\n#com.hilohq.hilo.protobufs.pipe" +
-      "linesb\006proto3"
+      "\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\"\366\001\n\024JsonJdbcPus" +
+      "hPipeline\022\022\n\ninput_path\030\001 \001(\t\022\021\n\tmongo_u" +
+      "rl\030\002 \001(\t\022\026\n\016mongo_database\030\003 \001(\t\022\021\n\tsche" +
+      "ma_id\030\004 \001(\t\022\030\n\020jdbc_driver_name\030\005 \001(\t\022\023\n" +
+      "\013jdbc_db_url\030\006 \001(\t\022\025\n\rjdbc_username\030\007 \001(" +
+      "\t\022\025\n\rjdbc_password\030\010 \001(\t\022\022\n\njdbc_query\030\t" +
+      " \001(\t\022\033\n\023jdbc_batch_interval\030\n \001(\005\"\235\001\n*Pr" +
+      "ometheusGrafanaDashboardGeneratePipeline" +
+      "\022\021\n\tmongo_url\030\001 \001(\t\022\026\n\016mongo_database\030\002 " +
+      "\001(\t\022\021\n\tschema_id\030\003 \001(\t\022\023\n\013grafana_url\030\004 " +
+      "\001(\t\022\034\n\024grafana_bearer_token\030\005 \001(\t\"\202\001\n\030Js" +
+      "onInfluxDbPushPipeline\022\022\n\ninput_path\030\001 \001" +
+      "(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016mongo_database\030" +
+      "\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\022\024\n\014influxdb_url" +
+      "\030\005 \001(\t\"\324\004\n\rBatchPipeline\022T\n\024json_schema_" +
+      "generate\030\001 \001(\01324.hilo.protobufs.pipeline" +
+      "s.JsonSchemaGeneratePipelineH\000\022X\n\026json_f" +
+      "eatures_generate\030\002 \001(\01326.hilo.protobufs." +
+      "pipelines.JsonFeaturesGeneratePipelineH\000" +
+      "\022b\n\033prometheus_metrics_generate\030\003 \001(\0132;." +
+      "hilo.protobufs.pipelines.PrometheusMetri" +
+      "csGeneratePipelineH\000\022u\n%prometheus_grafa" +
+      "na_dashboard_generate\030\004 \001(\0132D.hilo.proto" +
+      "bufs.pipelines.PrometheusGrafanaDashboar" +
+      "dGeneratePipelineH\000\022Y\n\033json_influxdb_pus" +
+      "h_pipeline\030\005 \001(\01322.hilo.protobufs.pipeli" +
+      "nes.JsonInfluxDbPushPipelineH\000\022Q\n\027json_j" +
+      "dbc_push_pipeline\030\006 \001(\0132..hilo.protobufs" +
+      ".pipelines.JsonJdbcPushPipelineH\000B\n\n\010pip" +
+      "eline\"\206\001\n\032JsonPrometheusPushPipeline\022\022\n\n" +
+      "input_path\030\001 \001(\t\022\021\n\tmongo_url\030\002 \001(\t\022\026\n\016m" +
+      "ongo_database\030\003 \001(\t\022\021\n\tschema_id\030\004 \001(\t\022\026" +
+      "\n\016prometheus_url\030\005 \001(\t\"r\n\016StreamPipeline" +
+      "\022T\n\024json_prometheus_push\030\001 \001(\01324.hilo.pr" +
+      "otobufs.pipelines.JsonPrometheusPushPipe" +
+      "lineH\000B\n\n\010pipelineB%\n#com.hilohq.hilo.pr" +
+      "otobufs.pipelinesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9336,32 +11416,38 @@ public final class Pipelines {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_JsonFeaturesGeneratePipeline_descriptor,
         new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", });
-    internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor =
+    internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_hilo_protobufs_pipelines_JsonJdbcPushPipeline_descriptor,
+        new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", "JdbcDriverName", "JdbcDbUrl", "JdbcUsername", "JdbcPassword", "JdbcQuery", "JdbcBatchInterval", });
+    internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_PrometheusGrafanaDashboardGeneratePipeline_descriptor,
         new java.lang.String[] { "MongoUrl", "MongoDatabase", "SchemaId", "GrafanaUrl", "GrafanaBearerToken", });
     internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_JsonInfluxDbPushPipeline_descriptor,
         new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", "InfluxdbUrl", });
     internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_hilo_protobufs_pipelines_BatchPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_BatchPipeline_descriptor,
-        new java.lang.String[] { "JsonSchemaGenerate", "JsonFeaturesGenerate", "PrometheusMetricsGenerate", "PrometheusGrafanaDashboardGenerate", "JsonInfluxdbPushPipeline", "Pipeline", });
+        new java.lang.String[] { "JsonSchemaGenerate", "JsonFeaturesGenerate", "PrometheusMetricsGenerate", "PrometheusGrafanaDashboardGenerate", "JsonInfluxdbPushPipeline", "JsonJdbcPushPipeline", "Pipeline", });
     internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_JsonPrometheusPushPipeline_descriptor,
         new java.lang.String[] { "InputPath", "MongoUrl", "MongoDatabase", "SchemaId", "PrometheusUrl", });
     internal_static_hilo_protobufs_pipelines_StreamPipeline_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_hilo_protobufs_pipelines_StreamPipeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hilo_protobufs_pipelines_StreamPipeline_descriptor,

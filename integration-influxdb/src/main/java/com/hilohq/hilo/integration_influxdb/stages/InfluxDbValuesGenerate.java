@@ -50,10 +50,7 @@ public final class InfluxDbValuesGenerate extends RichGroupReduceFunction<Fields
   }
 
   private void reduceRecord(Fields<FieldKey> record, Collector<Point> out) {
-    var time = Instant.now().getEpochSecond() - 300;
-
     for (final var entry : record.map().entrySet()) {
-      time += 1;
       if (!features.containsKey(entry.getKey().key())) {
         continue;
       }
@@ -75,7 +72,7 @@ public final class InfluxDbValuesGenerate extends RichGroupReduceFunction<Fields
       final var point =
           Point.measurement(entry.getKey().key())
               .addField("value", value.numericValue())
-              .time(time, WritePrecision.S);
+              .time(Instant.now().getEpochSecond(), WritePrecision.S);
       out.collect(point);
     }
   }

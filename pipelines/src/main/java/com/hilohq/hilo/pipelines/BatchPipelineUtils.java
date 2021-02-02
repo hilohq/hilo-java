@@ -54,6 +54,20 @@ public final class BatchPipelineUtils {
         .build();
   }
 
+  public static JsonJdbcPushPipeline build(Pipelines.JsonJdbcPushPipeline pipeline) {
+    return JsonJdbcPushPipeline.newBuilder()
+        .inputPath(pipeline.getInputPath())
+        .schemaId(pipeline.getSchemaId())
+        .mongoUrl(pipeline.getMongoUrl())
+        .jdbcDriverName(pipeline.getJdbcDriverName())
+        .jdbcDbUrl(pipeline.getJdbcDbUrl())
+        .jdbcUsername(pipeline.getJdbcUsername())
+        .jdbcPassword(pipeline.getJdbcPassword())
+        .jdbcQuery(pipeline.getJdbcQuery())
+        .jdbcBatchInterval(pipeline.getJdbcBatchInterval())
+        .build();
+  }
+
   public static BatchPipeline build(Pipelines.BatchPipeline pipeline) {
     if (pipeline.hasJsonSchemaGenerate()) {
       return BatchPipelineUtils.build(pipeline.getJsonSchemaGenerate());
@@ -69,6 +83,9 @@ public final class BatchPipelineUtils {
 
     } else if (pipeline.hasJsonInfluxdbPushPipeline()) {
       return BatchPipelineUtils.build(pipeline.getJsonInfluxdbPushPipeline());
+
+    } else if (pipeline.hasJsonJdbcPushPipeline()) {
+      return BatchPipelineUtils.build(pipeline.getJsonJdbcPushPipeline());
 
     } else {
       throw new IllegalArgumentException("unknown pipeline type set");

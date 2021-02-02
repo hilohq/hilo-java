@@ -27,6 +27,19 @@ message JsonFeaturesGeneratePipeline {
   string schema_id = 4;
 }
 
+message JsonJdbcPushPipeline {
+  string input_path = 1;
+  string mongo_url = 2;
+  string mongo_database = 3;
+  string schema_id = 4;
+  string jdbc_driver_name = 5;
+  string jdbc_db_url = 6;
+  string jdbc_username = 7;
+  string jdbc_password = 8;
+  string jdbc_query = 9;
+  int32 jdbc_batch_interval = 10;
+}
+
 message PrometheusGrafanaDashboardGeneratePipeline {
   string mongo_url = 1;
   string mongo_database = 2;
@@ -50,6 +63,7 @@ message BatchPipeline {
     PrometheusMetricsGeneratePipeline prometheus_metrics_generate = 3;
     PrometheusGrafanaDashboardGeneratePipeline prometheus_grafana_dashboard_generate = 4;
     JsonInfluxDbPushPipeline json_influxdb_push_pipeline = 5;
+    JsonJdbcPushPipeline json_jdbc_push_pipeline = 6;
   }
 }
 

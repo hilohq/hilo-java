@@ -17,7 +17,7 @@ public final class FeaturesMongoUtils {
     featureDocument.put("stats", Document.parse(serializedMessage(feature.getStats())));
     featureDocument.put(
         "featureClass", Document.parse(serializedMessage(feature.getFeatureClass())));
-
+    featureDocument.put("key", feature.getKey());
     setOp.put("features." + feature.getKey(), featureDocument);
     setOp.put("metadata", Document.parse(serializedMessage(metadata)));
     query.put("$set", setOp);

@@ -170,7 +170,7 @@ public class ExecutePipelineCommand extends ActionCommand {
                     .setSchemaId(schemaId)
                     .setGrafanaUrl("http://172.20.0.1:3000")
                     .setGrafanaBearerToken(
-                        "eyJrIjoidXNkVjhxTmxxampEdEZmVWkxWjNaMEhMQXZmQVVmdVYiLCJuIjoiYWRtaW4iLCJpZCI6MX0="))
+                        "eyJrIjoiRnJPS2Y1WFBKTzFsN21vdlZuTGVzM1lVRnVWd0F5S2EiLCJuIjoiYWRtaW4iLCJpZCI6MX0="))
             .build(),
         "PrometheusGrafanaDashboardGeneratePipeline");
     execute(
