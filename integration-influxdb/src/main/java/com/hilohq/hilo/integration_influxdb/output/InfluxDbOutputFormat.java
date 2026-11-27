@@ -1,5 +1,6 @@
 package com.hilohq.hilo.integration_influxdb.output;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.integration_influxdb.client.InfluxDbClient;
 import com.influxdb.client.write.Point;
 import java.io.IOException;
@@ -11,15 +12,34 @@ import org.apache.flink.configuration.Configuration;
 
 public final class InfluxDbOutputFormat extends RichOutputFormat<Point> {
 
-  private static final String INFLUX_TOKEN = "token";
-  private static final String INFLUX_ORG = "org";
-  private static final String INFLUX_BUCKET = "db0";
-
   private final String influxDbUrl;
+  private final String token;
+  private final String org;
+  private final String bucket;
   private InfluxDbClient influxDbClient;
 
+  /**
+   * Token, organization and bucket come from {@code HILO_INFLUXDB_TOKEN}, {@code HILO_INFLUXDB_ORG}
+   * and {@code HILO_INFLUXDB_BUCKET}, read where the pipeline is built.
+   */
   public InfluxDbOutputFormat(final String influxDbUrl) {
+    this(influxDbUrl, HiloConfig.fromEnvironment());
+  }
+
+  public InfluxDbOutputFormat(final String influxDbUrl, final HiloConfig config) {
+    this(
+        influxDbUrl,
+        config.get(HiloConfig.Setting.INFLUXDB_TOKEN),
+        config.get(HiloConfig.Setting.INFLUXDB_ORG),
+        config.get(HiloConfig.Setting.INFLUXDB_BUCKET));
+  }
+
+  public InfluxDbOutputFormat(
+      final String influxDbUrl, final String token, final String org, final String bucket) {
     this.influxDbUrl = influxDbUrl;
+    this.token = token;
+    this.org = org;
+    this.bucket = bucket;
   }
 
   @Override
@@ -30,9 +50,9 @@ public final class InfluxDbOutputFormat extends RichOutputFormat<Point> {
     this.influxDbClient =
         InfluxDbClient.newBuilder()
             .address(influxDbUrl)
-            .bucket(INFLUX_BUCKET)
-            .token(INFLUX_TOKEN)
-            .org(INFLUX_ORG)
+            .bucket(bucket)
+            .token(token)
+            .org(org)
             .build();
   }
 

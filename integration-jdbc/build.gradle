@@ -1,15 +1,9 @@
-plugins {
-    id 'com.github.sherter.google-java-format' version '0.8'
-}
-
-apply plugin: 'com.github.sherter.google-java-format'
-
 dependencies {
-    compile project(":features-service")
-    compile project(":integrations-service")
-    compile project(":parsers")
-    compile project(":structure-learning")
-    compile group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.11.2'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    api project(":features-service")
+    api project(":integrations-service")
+    api project(":parsers")
+    api project(":structure-learning")
+    api group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.11.2'
+    api group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }

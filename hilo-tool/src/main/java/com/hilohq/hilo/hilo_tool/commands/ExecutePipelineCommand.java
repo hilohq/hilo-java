@@ -2,6 +2,8 @@ package com.hilohq.hilo.hilo_tool.commands;
 
 import static com.hilohq.hilo.hilo_tool.cmd.PrintUtils.printErrorAndExit;
 
+import com.hilohq.hilo.config.HiloConfig;
+import com.hilohq.hilo.config.HiloConfig.Setting;
 import com.hilohq.hilo.hilo_tool.cmd.ActionCommand;
 import com.hilohq.hilo.integrations_service.service.MongoIntegrationsStore;
 import com.hilohq.hilo.pipelines.*;
@@ -10,8 +12,11 @@ import com.hilohq.hilo.protobufs.pipelines.Pipelines;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
@@ -20,6 +25,30 @@ import org.apache.flink.api.common.JobStatus;
 public class ExecutePipelineCommand extends ActionCommand {
 
   private static final String OPTION_INPUT = "input";
+
+  /** Settings that can be overridden on the command line, e.g. {@code --flink-port 8082}. */
+  static final List<Setting> CLI_SETTINGS =
+      List.of(
+          Setting.MONGO_URL,
+          Setting.MONGO_DATABASE,
+          Setting.PIPELINE_MONGO_URL,
+          Setting.FLINK_HOST,
+          Setting.FLINK_PORT,
+          Setting.GRAFANA_URL,
+          Setting.GRAFANA_TOKEN,
+          Setting.PUSHGATEWAY_ADDRESS,
+          Setting.JDBC_URL,
+          Setting.JDBC_USERNAME,
+          Setting.JDBC_PASSWORD,
+          Setting.JDBC_DRIVER);
+
+  /** Configuration from the environment and command-line overrides; set by {@link #run}. */
+  private HiloConfig config = HiloConfig.fromEnvironment();
+
+  /** The command-line option that overrides {@code setting}, e.g. {@code grafana-token}. */
+  static String optionName(final Setting setting) {
+    return setting.name().toLowerCase(Locale.ROOT).replace('_', '-');
+  }
 
   private static Options createOptions() {
     final var options = new Options();
@@ -30,7 +59,46 @@ public class ExecutePipelineCommand extends ActionCommand {
             .hasArg(true)
             .required()
             .build());
+    for (final var setting : CLI_SETTINGS) {
+      final var defaultValue =
+          setting.defaultValue() == null ? "no default" : "default " + setting.defaultValue();
+      options.addOption(
+          Option.builder()
+              .longOpt(optionName(setting))
+              .argName(optionName(setting))
+              .hasArg(true)
+              .desc(setting.description() + " (env " + setting.env() + ", " + defaultValue + ")")
+              .build());
+    }
     return options;
+  }
+
+  /** Applies the command-line overrides in {@code cli} on top of {@code base}. */
+  static HiloConfig configFrom(final CommandLine cli, final HiloConfig base) {
+    var result = base;
+    for (final var setting : CLI_SETTINGS) {
+      result = result.with(setting, cli.getOptionValue(optionName(setting)));
+    }
+    return result;
+  }
+
+  /**
+   * Resolves the Grafana bearer token: the {@code --grafana-token} option wins, otherwise the
+   * {@code GRAFANA_TOKEN} environment variable is used.
+   *
+   * @throws IllegalStateException if neither is set
+   */
+  static String resolveGrafanaToken(final HiloConfig config) {
+    return config
+        .find(Setting.GRAFANA_TOKEN)
+        .orElseThrow(
+            () ->
+                new IllegalStateException(
+                    "a Grafana API token is required: pass --"
+                        + optionName(Setting.GRAFANA_TOKEN)
+                        + " <token> or set the "
+                        + Setting.GRAFANA_TOKEN.env()
+                        + " environment variable"));
   }
 
   private static boolean verifyInput(final String input) {
@@ -103,6 +171,7 @@ public class ExecutePipelineCommand extends ActionCommand {
     final var parser = new DefaultParser();
     final var cli = parser.parse(options(), args);
     final var input = cli.getOptionValue(OPTION_INPUT);
+    config = configFrom(cli, HiloConfig.fromEnvironment());
     final var ok = verifyInput(input);
     if (!ok) {
       printErrorAndExit(name(), "input `" + input + "` cannot be read");
@@ -124,17 +193,17 @@ public class ExecutePipelineCommand extends ActionCommand {
 
     Files.copy(inputPath, targetPath);
     final var target = targetPath.toString();
-    final var flinkClient = new FlinkClient();
+    final var flinkClient = new FlinkClient(config);
     final var integrationsStore =
-        MongoIntegrationsStore.open("mongodb://root:example@127.0.0.1:27017/admin");
+        MongoIntegrationsStore.open(config.mongoUrl(), config.mongoDatabase());
 
     execute(
         flinkClient,
         Pipelines.BatchPipeline.newBuilder()
             .setJsonSchemaGenerate(
                 Pipelines.JsonSchemaGeneratePipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setSourceId(sourceId)
                     .setProjectId(projectId)
@@ -146,8 +215,8 @@ public class ExecutePipelineCommand extends ActionCommand {
         Pipelines.BatchPipeline.newBuilder()
             .setJsonFeaturesGenerate(
                 Pipelines.JsonFeaturesGeneratePipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setInputPath(target))
             .build(),
@@ -157,8 +226,8 @@ public class ExecutePipelineCommand extends ActionCommand {
         Pipelines.BatchPipeline.newBuilder()
             .setJdbcMysqlTableGeneratePipeline(
                 Pipelines.JdbcMysqlTableGeneratePipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setInputPath(target))
             .build(),
@@ -170,14 +239,14 @@ public class ExecutePipelineCommand extends ActionCommand {
         Pipelines.BatchPipeline.newBuilder()
             .setJsonJdbcPushPipeline(
                 Pipelines.JsonJdbcPushPipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setInputPath(target)
-                    .setJdbcUsername("root")
-                    .setJdbcPassword("password")
-                    .setJdbcDriverName("com.mysql.jdbc.Driver")
-                    .setJdbcDbUrl("jdbc:mysql://172.20.0.1:3306/database")
+                    .setJdbcUsername(config.get(Setting.JDBC_USERNAME))
+                    .setJdbcPassword(config.get(Setting.JDBC_PASSWORD))
+                    .setJdbcDriverName(config.get(Setting.JDBC_DRIVER))
+                    .setJdbcDbUrl(config.get(Setting.JDBC_URL))
                     .setJdbcQuery(metrics.getLoadQuery())
                     .setJdbcBatchInterval(1))
             .build(),
@@ -186,13 +255,15 @@ public class ExecutePipelineCommand extends ActionCommand {
 
   void loadPrometheus(final FlinkClient flinkClient, final String schemaId, final String target)
       throws Exception {
+    // Resolve the token up front so a missing token fails before any job is submitted.
+    final var grafanaToken = resolveGrafanaToken(config);
     execute(
         flinkClient,
         Pipelines.BatchPipeline.newBuilder()
             .setPrometheusMetricsGenerate(
                 Pipelines.PrometheusMetricsGeneratePipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setInputPath(target))
             .build(),
@@ -202,12 +273,11 @@ public class ExecutePipelineCommand extends ActionCommand {
         Pipelines.BatchPipeline.newBuilder()
             .setPrometheusGrafanaDashboardGenerate(
                 Pipelines.PrometheusGrafanaDashboardGeneratePipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
-                    .setGrafanaUrl("http://172.20.0.1:3000")
-                    .setGrafanaBearerToken(
-                        "eyJrIjoiRnJPS2Y1WFBKTzFsN21vdlZuTGVzM1lVRnVWd0F5S2EiLCJuIjoiYWRtaW4iLCJpZCI6MX0="))
+                    .setGrafanaUrl(config.get(Setting.GRAFANA_URL))
+                    .setGrafanaBearerToken(grafanaToken))
             .build(),
         "PrometheusGrafanaDashboardGeneratePipeline");
     execute(
@@ -215,11 +285,11 @@ public class ExecutePipelineCommand extends ActionCommand {
         Pipelines.StreamPipeline.newBuilder()
             .setJsonPrometheusPush(
                 Pipelines.JsonPrometheusPushPipeline.newBuilder()
-                    .setMongoDatabase("test")
-                    .setMongoUrl("mongodb://root:example@mongodb:27017/admin")
+                    .setMongoDatabase(config.mongoDatabase())
+                    .setMongoUrl(config.pipelineMongoUrl())
                     .setSchemaId(schemaId)
                     .setInputPath(target)
-                    .setPrometheusUrl("172.20.0.1:9091"))
+                    .setPrometheusUrl(config.get(Setting.PUSHGATEWAY_ADDRESS)))
             .build(),
         "JsonPrometheusPushPipeline");
   }

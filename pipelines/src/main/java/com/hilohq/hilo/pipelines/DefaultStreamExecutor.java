@@ -2,14 +2,16 @@ package com.hilohq.hilo.pipelines;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.jars.JarUtils;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 public final class DefaultStreamExecutor implements StreamExecutor, AsyncStreamExecutor {
   public static final class Builder {
     private String jarPath;
-    private String remoteHost = "127.0.0.1";
-    private int remotePort = 8081;
+    private final HiloConfig config = HiloConfig.fromEnvironment();
+    private String remoteHost = config.flinkHost();
+    private int remotePort = config.flinkPort();
 
     public Builder jarPath(final String jarPath) {
       verifyNotNull(jarPath);

@@ -54,9 +54,7 @@ public final class NumericPercentileHistogram {
     }
 
     final var histogramBuckets =
-        buckets
-            .entrySet()
-            .stream()
+        buckets.entrySet().stream()
             .map(new BucketFromEntryMapper(boundaries))
             .collect(Collectors.toList());
 

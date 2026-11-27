@@ -6,6 +6,7 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.readFromResou
 import static com.hilohq.integration_tests.services.ServiceUtils.createIntegrationsService;
 import static org.junit.Assert.assertEquals;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.integrations_service.client.IntegrationsClient;
 import com.hilohq.hilo.pipelines.*;
 import com.hilohq.hilo.protobufs.integrations.Api;
@@ -22,6 +23,8 @@ import org.junit.Rule;
 import org.junit.Test;
 
 public final class PrometheusMetricsGenerateTest {
+
+  private static final HiloConfig CONFIG = HiloConfig.fromEnvironment();
 
   @Rule public GrpcCleanupRule grpcCleanupRule = new GrpcCleanupRule();
 
@@ -52,8 +55,8 @@ public final class PrometheusMetricsGenerateTest {
 
     executor.execute(
         PrometheusMetricsGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .database(CONFIG.mongoDatabase())
+            .mongoUrl(CONFIG.pipelineMongoUrl())
             .schemaId(schemaId)
             .inputPath(filePath)
             .build());

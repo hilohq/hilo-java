@@ -8,13 +8,17 @@ import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 public final class StringStats implements StatsCollector, Snapshot<FeatureOuterClass.StringStats> {
 
   private final StringHistogram histogram;
+  // Kept separately from the histogram, which stops tracking (and reports no buckets) once it
+  // sees too many distinct values.
+  private long count;
 
   public StringStats() {
-    this(new StringHistogram());
+    this(new StringHistogram(), 0);
   }
 
-  private StringStats(final StringHistogram histogram) {
+  private StringStats(final StringHistogram histogram, final long count) {
     this.histogram = histogram;
+    this.count = count;
   }
 
   @Override
@@ -30,13 +34,13 @@ public final class StringStats implements StatsCollector, Snapshot<FeatureOuterC
     }
 
     final var other = (StringStats) collector;
-    for (final var entry : other.histogram.entrySet()) {
-      histogram.observe(entry.getKey(), entry.getValue());
-    }
+    histogram.merge(other.histogram);
+    count += other.count;
   }
 
   public void observe(final String value) {
     histogram.observe(value);
+    count++;
   }
 
   public static StringStats fromSnapshot(final FeatureOuterClass.FeatureStats snapshot) {
@@ -48,22 +52,15 @@ public final class StringStats implements StatsCollector, Snapshot<FeatureOuterC
   }
 
   public static StringStats fromSnapshot(final FeatureOuterClass.StringStats snapshot) {
-    return new StringStats(StringHistogram.fromSnapshot(snapshot.getHistogram()));
+    return new StringStats(
+        StringHistogram.fromSnapshot(snapshot.getHistogram()), snapshot.getCount());
   }
 
   @Override
   public FeatureOuterClass.StringStats snapshot() {
-    final var histogramSnapshot = histogram.snapshot();
-    final var count =
-        histogramSnapshot
-            .getBucketsList()
-            .stream()
-            .mapToLong(FeatureOuterClass.StringStats.Histogram.Bucket::getCount)
-            .sum();
-
     return FeatureOuterClass.StringStats.newBuilder()
         .setCount(count)
-        .setHistogram(histogramSnapshot)
+        .setHistogram(histogram.snapshot())
         .build();
   }
 }

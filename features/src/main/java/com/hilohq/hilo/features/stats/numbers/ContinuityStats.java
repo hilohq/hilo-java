@@ -29,6 +29,14 @@ public final class ContinuityStats {
     }
   }
 
+  /**
+   * Adds the window scores collected by {@code other}. Windows are not carried across, so scores
+   * spanning the boundary between the two value sequences are not computed.
+   */
+  public void merge(final ContinuityStats other) {
+    statsAccumulator.addAll(other.statsAccumulator);
+  }
+
   private static double calculateContinuityScoreForArray(final List<Double> diffs) {
     if (diffs.isEmpty()) {
       return 0;

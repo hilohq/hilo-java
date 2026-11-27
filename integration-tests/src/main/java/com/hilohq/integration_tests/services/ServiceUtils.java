@@ -1,5 +1,6 @@
 package com.hilohq.integration_tests.services;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.features_service.client.FeaturesClient;
 import com.hilohq.hilo.features_service.service.FeaturesService;
 import com.hilohq.hilo.features_service.service.MongoFeaturesStore;
@@ -16,11 +17,13 @@ import io.grpc.testing.GrpcCleanupRule;
 
 public final class ServiceUtils {
 
+  private static final HiloConfig CONFIG = HiloConfig.fromEnvironment();
+
   private ServiceUtils() {}
 
   public static ClientServer<SchemaClient, Server> createSchemaService(
       final GrpcCleanupRule grpcCleanupRule) {
-    final var store = MongoSchemaStore.open("mongodb://root:example@localhost:27017/admin");
+    final var store = MongoSchemaStore.open(CONFIG.mongoUrl(), CONFIG.mongoDatabase());
     final var service = new SchemaService(store);
     final var channel = InProcessChannelBuilder.forName("schema").directExecutor().build();
     final var client = new SchemaClient(channel);
@@ -34,7 +37,7 @@ public final class ServiceUtils {
 
   public static ClientServer<FeaturesClient, Server> createFeaturesService(
       final GrpcCleanupRule grpcCleanupRule) {
-    final var store = MongoFeaturesStore.open("mongodb://root:example@localhost:27017/admin");
+    final var store = MongoFeaturesStore.open(CONFIG.mongoUrl(), CONFIG.mongoDatabase());
     final var service = new FeaturesService(store);
     final var channel = InProcessChannelBuilder.forName("schema").directExecutor().build();
     final var client = new FeaturesClient(channel);
@@ -48,7 +51,7 @@ public final class ServiceUtils {
 
   public static ClientServer<IntegrationsClient, Server> createIntegrationsService(
       final GrpcCleanupRule grpcCleanupRule) {
-    final var store = MongoIntegrationsStore.open("mongodb://root:example@localhost:27017/admin");
+    final var store = MongoIntegrationsStore.open(CONFIG.mongoUrl(), CONFIG.mongoDatabase());
     final var service = new IntegrationsService(store);
     final var channel = InProcessChannelBuilder.forName("schema").directExecutor().build();
     final var client = new IntegrationsClient(channel);

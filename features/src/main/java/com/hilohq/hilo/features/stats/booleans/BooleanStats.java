@@ -55,9 +55,7 @@ public final class BooleanStats
   public FeatureOuterClass.BooleanStats snapshot() {
     final var histogramSnapshot = histogram.snapshot();
     final var count =
-        histogramSnapshot
-            .getBucketsList()
-            .stream()
+        histogramSnapshot.getBucketsList().stream()
             .mapToLong(FeatureOuterClass.BooleanStats.Histogram.Bucket::getCount)
             .sum();
     return FeatureOuterClass.BooleanStats.newBuilder()

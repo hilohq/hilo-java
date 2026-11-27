@@ -68,8 +68,7 @@ public final class SchemaService extends SchemaGrpc.SchemaImplBase {
         metadataModels ->
             GetSchemaIdsBySourceResponse.newBuilder()
                 .addAllSchemaId(
-                    metadataModels
-                        .stream()
+                    metadataModels.stream()
                         .map(metadata -> metadata.getMetadata().getSchemaId())
                         .collect(Collectors.toList()))
                 .build());
