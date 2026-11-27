@@ -1,12 +1,6 @@
-plugins {
-    id 'com.github.sherter.google-java-format' version '0.8'
-}
-
-apply plugin: 'com.github.sherter.google-java-format'
-
 dependencies {
-    compile project(":pipelines")
-    compile project(":protobufs")
+    api project(":pipelines")
+    api project(":protobufs")
 
-    compile group: 'org.apache.flink', name: 'flink-clients_2.12', version: '1.11.2'
+    api group: 'org.apache.flink', name: 'flink-clients_2.12', version: '1.11.2'
 }

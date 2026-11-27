@@ -50,6 +50,7 @@ public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterC
 
     final var other = (DoubleStats) collector;
     valueStatsAccumulator.addAll(other.valueStatsAccumulator);
+    continuityStats.merge(other.continuityStats);
 
     valueHistogram.merge(other.valueHistogram);
     differentialHistogram.merge(other.differentialHistogram);
@@ -80,17 +81,24 @@ public final class DoubleStats implements StatsCollector, Snapshot<FeatureOuterC
   }
 
   public FeatureOuterClass.NumericStats snapshot() {
+    final var valueStats =
+        FeatureOuterClass.NumericStats.ValueStats.newBuilder()
+            .setCount(valueStatsAccumulator.count())
+            .setBase64StatsRepr(
+                Base64.getEncoder().encodeToString(valueStatsAccumulator.snapshot().toByteArray()));
+    // Guava throws for min/max/mean of an empty sample and for the sample deviation of one value.
+    if (valueStatsAccumulator.count() > 0) {
+      valueStats
+          .setMax(valueStatsAccumulator.max())
+          .setMin(valueStatsAccumulator.min())
+          .setMean(valueStatsAccumulator.mean());
+    }
+    if (valueStatsAccumulator.count() > 1) {
+      valueStats.setStandardDeviation(valueStatsAccumulator.sampleStandardDeviation());
+    }
+
     return FeatureOuterClass.NumericStats.newBuilder()
-        .setValueStats(
-            FeatureOuterClass.NumericStats.ValueStats.newBuilder()
-                .setCount(valueStatsAccumulator.count())
-                .setMax(valueStatsAccumulator.max())
-                .setMin(valueStatsAccumulator.min())
-                .setMean(valueStatsAccumulator.mean())
-                .setStandardDeviation(valueStatsAccumulator.sampleStandardDeviation())
-                .setBase64StatsRepr(
-                    Base64.getEncoder()
-                        .encodeToString(valueStatsAccumulator.snapshot().toByteArray())))
+        .setValueStats(valueStats)
         .setContinuityStats(continuityStats.snapshot())
         .setValueHistogram(valueHistogram.snapshot())
         .setDifferentialHistogram(differentialHistogram.snapshot())

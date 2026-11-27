@@ -1,19 +1,18 @@
-plugins {
-    id 'com.github.sherter.google-java-format' version '0.8'
+dependencies {
+    api project(":connector-mongo")
+    api project(":integration-grafana")
+    api project(":integrations-service")
+    api project(":features-service")
+    api project(":parsers")
+    api project(":protobufs")
+    api project(":structure-learning")
+    api group: 'io.prometheus', name: 'simpleclient', version: '0.9.0'
+    api group: 'io.prometheus', name: 'simpleclient_pushgateway', version: '0.9.0'
+    api group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.11.2'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
-apply plugin: 'com.github.sherter.google-java-format'
-
-dependencies {
-    compile project(":connector-mongo")
-    compile project(":integration-grafana")
-    compile project(":integrations-service")
-    compile project(":features-service")
-    compile project(":parsers")
-    compile project(":protobufs")
-    compile project(":structure-learning")
-    compile group: 'io.prometheus', name: 'simpleclient', version: '0.9.0'
-    compile group: 'io.prometheus', name: 'simpleclient_pushgateway', version: '0.9.0'
-    compile group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.11.2'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+test {
+    // The golden-file unit tests read the sample datasets shared with integration-tests.
+    inputs.dir "$rootDir/integration-tests/src/integration-test/resources/samples"
 }

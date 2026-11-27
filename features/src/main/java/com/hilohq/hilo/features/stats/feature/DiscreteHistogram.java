@@ -4,13 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Counts occurrences of discrete values. Tracking stops once more than {@value #maxItems} distinct
+ * values have been seen; from then on the histogram is empty and {@link #keepsTrack()} is false.
+ */
 public final class DiscreteHistogram<T> {
   private static final int maxItems = 1024;
   private final Map<T, Long> histogram;
   private boolean keepsTrack;
 
   public DiscreteHistogram(final boolean keepsTrack, final Map<T, Long> histogram) {
+    this.keepsTrack = keepsTrack;
     this.histogram = histogram;
+    if (!keepsTrack) {
+      histogram.clear();
+    }
   }
 
   public DiscreteHistogram() {
@@ -29,6 +37,23 @@ public final class DiscreteHistogram<T> {
     histogram.put(value, histogram.get(value) + count);
     if (histogram.size() > maxItems) {
       keepsTrack = false;
+      histogram.clear();
+    }
+  }
+
+  /**
+   * Adds the counts of {@code other} to this histogram. If either side has stopped tracking, the
+   * result does not track either, since its counts would be incomplete.
+   */
+  public void merge(final DiscreteHistogram<T> other) {
+    if (!other.keepsTrack) {
+      keepsTrack = false;
+      histogram.clear();
+      return;
+    }
+
+    for (final var entry : other.histogram.entrySet()) {
+      observe(entry.getKey(), entry.getValue());
     }
   }
 

@@ -2,9 +2,11 @@ package com.hilohq.hilo.stages;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.protobufs.structure.feature.FeatureOuterClass;
 import com.hilohq.hilo.structure_learning.features.FeaturesStatsGenerate;
 import com.hilohq.hilo.structure_learning.features.FeaturesUpdateGenerate;
+import com.hilohq.hilo.structure_learning.features.MongoFeaturesLoader;
 import com.hilohq.hilo.structure_learning.schema.json.JsonSchemaBatchValidate;
 import de.javakaffee.kryoserializers.UnmodifiableCollectionsSerializer;
 import de.javakaffee.kryoserializers.protobuf.ProtobufSerializer;
@@ -15,10 +17,12 @@ public final class JsonFeaturesGenerateStages
     implements BatchStages<String, FeatureOuterClass.FeaturesUpdate> {
   private final String schemaId;
   private final String mongoUrl;
+  private final String database;
 
   public static final class Builder {
     private String schemaId = null;
     private String mongoUrl = "localhost";
+    private String database = HiloConfig.fromEnvironment().mongoDatabase();
 
     public Builder schemaId(final String schemaId) {
       verifyNotNull(schemaId);
@@ -32,8 +36,15 @@ public final class JsonFeaturesGenerateStages
       return this;
     }
 
+    /** Database the previously learned features are read from ({@code HILO_MONGO_DATABASE}). */
+    public Builder database(final String database) {
+      verifyNotNull(database);
+      this.database = database;
+      return this;
+    }
+
     public JsonFeaturesGenerateStages build() {
-      return new JsonFeaturesGenerateStages(schemaId, mongoUrl);
+      return new JsonFeaturesGenerateStages(schemaId, mongoUrl, database);
     }
   }
 
@@ -41,9 +52,10 @@ public final class JsonFeaturesGenerateStages
     return new Builder();
   }
 
-  JsonFeaturesGenerateStages(final String schemaId, final String mongoUrl) {
+  JsonFeaturesGenerateStages(final String schemaId, final String mongoUrl, final String database) {
     this.schemaId = schemaId;
     this.mongoUrl = mongoUrl;
+    this.database = database;
   }
 
   @Override
@@ -57,6 +69,6 @@ public final class JsonFeaturesGenerateStages
     return input
         .reduceGroup(new JsonSchemaBatchValidate(mongoUrl, schemaId))
         .reduceGroup(new FeaturesStatsGenerate())
-        .reduceGroup(new FeaturesUpdateGenerate());
+        .reduceGroup(new FeaturesUpdateGenerate(new MongoFeaturesLoader(mongoUrl, database)));
   }
 }

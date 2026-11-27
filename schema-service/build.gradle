@@ -1,10 +1,5 @@
-plugins {
-    id 'com.github.sherter.google-java-format' version '0.8'
-}
-
-apply plugin: 'com.github.sherter.google-java-format'
-
 dependencies {
-    compile project(":protobufs")
-    compile project(":connector-mongo")
+    api project(":config")
+    api project(":protobufs")
+    api project(":connector-mongo")
 }

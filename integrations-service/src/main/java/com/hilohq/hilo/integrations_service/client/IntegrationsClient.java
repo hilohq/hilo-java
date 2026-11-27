@@ -1,6 +1,7 @@
 package com.hilohq.hilo.integrations_service.client;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.protobufs.integrations.Api;
 import com.hilohq.hilo.protobufs.integrations.IntegrationsGrpc;
 import io.grpc.Channel;
@@ -17,7 +18,17 @@ public final class IntegrationsClient {
   }
 
   public IntegrationsClient() {
-    this(ManagedChannelBuilder.forAddress("localhost", 1235).usePlaintext().build());
+    this(HiloConfig.fromEnvironment());
+  }
+
+  /** Connects to {@code HILO_INTEGRATIONS_SERVICE_HOST}:{@code HILO_INTEGRATIONS_SERVICE_PORT}. */
+  public IntegrationsClient(final HiloConfig config) {
+    this(
+        ManagedChannelBuilder.forAddress(
+                config.get(HiloConfig.Setting.INTEGRATIONS_SERVICE_HOST),
+                config.getInt(HiloConfig.Setting.INTEGRATIONS_SERVICE_PORT))
+            .usePlaintext()
+            .build());
   }
 
   public void close() {

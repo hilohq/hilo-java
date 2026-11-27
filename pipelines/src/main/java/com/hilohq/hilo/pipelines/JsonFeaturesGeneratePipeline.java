@@ -52,7 +52,11 @@ public final class JsonFeaturesGeneratePipeline
 
       final var inputFormat = new TextInputFormat(new Path(inputPath));
       final var stages =
-          JsonFeaturesGenerateStages.newBuilder().schemaId(schemaId).mongoUrl(mongoUrl).build();
+          JsonFeaturesGenerateStages.newBuilder()
+              .schemaId(schemaId)
+              .mongoUrl(mongoUrl)
+              .database(database)
+              .build();
       final var output =
           MongoOutputFormat.newBuilder(new FeaturesUpdateMongoCommandGenerator())
               .url(mongoUrl)

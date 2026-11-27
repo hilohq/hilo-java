@@ -1,16 +1,15 @@
 plugins {
     id 'application'
-    id 'com.github.sherter.google-java-format' version '0.8'
 }
 
 version = '0.0.1'
-mainClassName = 'com.hilohq.hilo.hilo_tool.HiloTool'
-
-apply plugin: 'com.github.sherter.google-java-format'
+application {
+    mainClass = 'com.hilohq.hilo.hilo_tool.HiloTool'
+}
 
 dependencies {
-    compile project(":pipelines")
-    compile project(":pipelines-service")
-    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    api project(":pipelines")
+    api project(":pipelines-service")
+    api group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }

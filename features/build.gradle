@@ -1,10 +1,4 @@
-plugins {
-    id 'com.github.sherter.google-java-format' version '0.8'
-}
-
-apply plugin: 'com.github.sherter.google-java-format'
-
 dependencies {
-    compile project(":parsers")
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    api project(":parsers")
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }

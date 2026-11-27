@@ -25,6 +25,14 @@ public final class StringHistogram {
     observe(value, 1);
   }
 
+  public void merge(final StringHistogram other) {
+    histogram.merge(other.histogram);
+  }
+
+  public boolean keepsTrack() {
+    return histogram.keepsTrack();
+  }
+
   public Set<Map.Entry<String, Long>> entrySet() {
     return histogram.entrySet();
   }

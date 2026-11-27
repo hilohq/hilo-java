@@ -1,6 +1,7 @@
 package com.hilohq.hilo.schema_service.client;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.protobufs.structure.schema.Api;
 import com.hilohq.hilo.protobufs.structure.schema.SchemaGrpc;
 import io.grpc.Channel;
@@ -17,7 +18,17 @@ public final class SchemaClient {
   }
 
   public SchemaClient() {
-    this(ManagedChannelBuilder.forAddress("localhost", 1234).usePlaintext().build());
+    this(HiloConfig.fromEnvironment());
+  }
+
+  /** Connects to {@code HILO_SCHEMA_SERVICE_HOST}:{@code HILO_SCHEMA_SERVICE_PORT}. */
+  public SchemaClient(final HiloConfig config) {
+    this(
+        ManagedChannelBuilder.forAddress(
+                config.get(HiloConfig.Setting.SCHEMA_SERVICE_HOST),
+                config.getInt(HiloConfig.Setting.SCHEMA_SERVICE_PORT))
+            .usePlaintext()
+            .build());
   }
 
   public void close() {

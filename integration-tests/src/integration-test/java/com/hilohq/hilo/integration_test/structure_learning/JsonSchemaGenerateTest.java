@@ -5,6 +5,7 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.readFromResou
 import static com.hilohq.integration_tests.services.ServiceUtils.createSchemaService;
 import static org.junit.Assert.assertEquals;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.pipelines.DefaultBatchExecutor;
 import com.hilohq.hilo.pipelines.JsonSchemaGeneratePipeline;
 import com.hilohq.hilo.protobufs.structure.schema.Api;
@@ -21,6 +22,8 @@ import org.junit.Rule;
 import org.junit.Test;
 
 public final class JsonSchemaGenerateTest {
+
+  private static final HiloConfig CONFIG = HiloConfig.fromEnvironment();
 
   @Rule public GrpcCleanupRule grpcCleanupRule = new GrpcCleanupRule();
 
@@ -51,8 +54,8 @@ public final class JsonSchemaGenerateTest {
 
     executor.execute(
         JsonSchemaGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .database(CONFIG.mongoDatabase())
+            .mongoUrl(CONFIG.pipelineMongoUrl())
             .projectId(projectId)
             .schemaId(schemaId)
             .sourceId(sourceId)

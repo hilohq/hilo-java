@@ -5,6 +5,7 @@ import static com.hilohq.integration_tests.resources.ResourceUtils.*;
 import static com.hilohq.integration_tests.services.ServiceUtils.createFeaturesService;
 import static org.junit.Assert.assertEquals;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.hilohq.hilo.features_service.client.FeaturesClient;
 import com.hilohq.hilo.pipelines.DefaultBatchExecutor;
 import com.hilohq.hilo.pipelines.JsonFeaturesGeneratePipeline;
@@ -20,6 +21,8 @@ import org.junit.Rule;
 import org.junit.Test;
 
 public final class FeaturesGenerateTest {
+
+  private static final HiloConfig CONFIG = HiloConfig.fromEnvironment();
 
   @Rule public GrpcCleanupRule grpcCleanupRule = new GrpcCleanupRule();
 
@@ -50,8 +53,8 @@ public final class FeaturesGenerateTest {
 
     executor.execute(
         JsonFeaturesGeneratePipeline.newBuilder()
-            .database("test")
-            .mongoUrl("mongodb://root:example@mongodb:27017/admin")
+            .database(CONFIG.mongoDatabase())
+            .mongoUrl(CONFIG.pipelineMongoUrl())
             .schemaId(schemaId)
             .inputPath(filePath)
             .build());

@@ -2,6 +2,7 @@ package com.hilohq.hilo.integration_influxdb.client;
 
 import static com.google.common.base.Verify.verifyNotNull;
 
+import com.hilohq.hilo.config.HiloConfig;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.write.Point;
@@ -12,7 +13,7 @@ public final class InfluxDbClient {
   private final InfluxDBClient client;
 
   public static class Builder {
-    private String address = "127.0.0.1:8086";
+    private String address = HiloConfig.fromEnvironment().get(HiloConfig.Setting.INFLUXDB_URL);
     private String bucket;
     private String token;
     private String org;
